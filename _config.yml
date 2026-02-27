@@ -1,0 +1,40 @@
+repository: 'researchartifacts/researchartifacts.github.io'
+url: "https://vahldiek.github.io"
+baseurl: "/researchartifacts.github.io"
+
+markdown: kramdown
+remote_theme: "mmistakes/minimal-mistakes@4.27.0"
+plugins:
+  - jekyll-redirect-from
+  - jekyll-include-cache
+
+title: Research Artifacts Statistics
+subtitle: "Artifact Evaluation across Systems & Security Conferences"
+name: Research Artifacts
+
+logo: "/assets/images/logo.svg"
+masthead_title: "Research Artifacts"
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/researchartifacts"
+
+# Make stuff in _data accessible
+# Collections for organizing content
+collections:
+  pages:
+    output: true
+    permalink: /:path
+
+exclude:
+  - _data/all_results_cache.yml
+
+# Apply the default layout to all files
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "single"
+      classes: "wide"

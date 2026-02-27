@@ -1,0 +1,76 @@
+{% comment %}
+  Renders top institutions per year from institution_timeline.json
+  Uses client-side JS to fetch and render a dynamic table.
+{% endcomment %}
+
+<div id="instLoading"><em>Loading institution data…</em></div>
+
+<table id="instTable" style="display:none; font-size:0.82em; white-space:nowrap; border-collapse:collapse; width:100%;">
+<thead><tr id="instHead"></tr></thead>
+<tbody id="instBody"></tbody>
+</table>
+
+<script>
+(function() {
+  var DATA_URL = '{{ "/assets/data/institution_timeline.json" | relative_url }}';
+
+  fetch(DATA_URL)
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      var topByYear = data.top_by_year || [];
+      if (!topByYear.length) {
+        document.getElementById('instLoading').innerHTML = '<em>No institution data available.</em>';
+        return;
+      }
+
+      // Collect all years
+      var years = topByYear.map(function(d) { return d.year; }).sort(function(a,b){ return a-b; });
+
+      // Build header
+      var thead = document.getElementById('instHead');
+      thead.innerHTML = '<th>Year</th>';
+      // Top-15 columns (Rank 1..15)
+      for (var i = 1; i <= 15; i++) {
+        thead.innerHTML += '<th>#' + i + '</th>';
+      }
+
+      // Build rows
+      var tbody = document.getElementById('instBody');
+      var rows = [];
+      for (var y = 0; y < topByYear.length; y++) {
+        var entry = topByYear[y];
+        var cells = '<td><strong>' + entry.year + '</strong></td>';
+        var insts = entry.institutions || [];
+        for (var r = 0; r < 15; r++) {
+          if (r < insts.length) {
+            cells += '<td>' + escHtml(insts[r].name) + ' (' + insts[r].count + ')</td>';
+          } else {
+            cells += '<td></td>';
+          }
+        }
+        rows.push('<tr>' + cells + '</tr>');
+      }
+      tbody.innerHTML = rows.join('');
+
+      document.getElementById('instLoading').style.display = 'none';
+      document.getElementById('instTable').style.display = '';
+    })
+    .catch(function(e) {
+      document.getElementById('instLoading').innerHTML =
+        '<em>Failed to load institution data. ' + e + '</em>';
+    });
+
+  function escHtml(s) {
+    var d = document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+})();
+</script>
+
+<style>
+#instTable th, #instTable td { padding: 3px 6px; border: 1px solid #ddd; }
+#instTable th { background-color: #f2f2f2; position: sticky; top: 0; z-index: 1; }
+#instTable tr:nth-child(even) { background-color: #f9f9f9; }
+#instTable tr:hover { background-color: #e8f4f8; }
+</style>

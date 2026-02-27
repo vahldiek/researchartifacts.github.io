@@ -1,0 +1,80 @@
+main:
+  - title: "Overview"
+    url: index.html
+  - title: "Systems"
+    url: systems/
+    children:
+      - title: "Overview"
+        url: systems/
+      - title: "Artifact Ranking"
+        url: systems/combined_rankings.html
+      - title: "ATC"
+        url: systems/atc.html
+      - title: "EuroSys"
+        url: systems/eurosys.html
+      - title: "FAST"
+        url: systems/fast.html
+      - title: "OSDI"
+        url: systems/osdi.html
+      - title: "SC"
+        url: systems/sc.html
+      - title: "SOSP"
+        url: systems/sosp.html
+  - title: "Security"
+    url: security/
+    children:
+      - title: "Overview"
+        url: security/
+      - title: "Artifact Ranking"
+        url: security/combined_rankings.html
+      - title: "ACSAC"
+        url: security/acsac.html
+      - title: "CHES"
+        url: security/ches.html
+      - title: "NDSS"
+        url: security/ndss.html
+      - title: "PETS"
+        url: security/pets.html
+      - title: "SysTEX"
+        url: security/systex.html
+      - title: "USENIX Security"
+        url: security/usenixsec.html
+      - title: "WOOT"
+        url: security/woot.html
+  - title: "Combined Ranking"
+    url: combined_rankings.html
+    children:
+      - title: "Overview"
+        url: combined_rankings.html
+      - title: "Systems"
+        url: systems/combined_rankings.html
+      - title: "Security"
+        url: security/combined_rankings.html
+  - title: "AE Committees"
+    url: committee.html
+    children:
+      - title: "Overview"
+        url: committee.html
+      - title: "Total Ranking"
+        url: ae_members.html
+      - title: "Systems Statistics"
+        url: systems/committee.html
+      - title: "Systems Ranking"
+        url: systems/ae_members.html
+      - title: "Security Statistics"
+        url: security/committee.html
+      - title: "Security Ranking"
+        url: security/ae_members.html
+  - title: "Repository Stats"
+    url: repo_stats.html
+    children:
+      - title: "Overview"
+        url: repo_stats.html
+      - title: "Systems"
+        url: systems/repo_stats.html
+      - title: "Security"
+        url: security/repo_stats.html
+  - title: "Methodology"
+    url: methodology.html
+  - title: "Contribute"
+    url: about.html

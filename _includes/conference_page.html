@@ -1,0 +1,456 @@
+{% assign conf_name = page.conf_name %}
+{% assign conf_display = page.conf_display_name %}
+{% assign conf_data = false %}
+{% for c in site.data.artifacts_by_conference %}
+  {% if c.name == conf_name %}
+    {% assign conf_data = c %}
+  {% endif %}
+{% endfor %}
+
+{% if conf_data %}
+
+## Statistics
+
+<div style="width:100%; max-width:400px; margin:1em 0;">
+<canvas id="confYearChart" height="200"></canvas>
+</div>
+
+| Year | Total | Available | Functional | Reproduced | Reusable |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+{% for yd in conf_data.years reversed %}| {{ yd.year }} | **{{ yd.total }}** | {{ yd.available }} | {{ yd.functional }} | {{ yd.reproducible }} | {{ yd.reusable }} |
+{% endfor %}| **All** | {% assign _t = 0 %}{% assign _a = 0 %}{% assign _f = 0 %}{% assign _r = 0 %}{% assign _u = 0 %}{% for yd in conf_data.years %}{% assign _t = _t | plus: yd.total %}{% assign _a = _a | plus: yd.available %}{% assign _f = _f | plus: yd.functional %}{% assign _r = _r | plus: yd.reproducible %}{% assign _u = _u | plus: yd.reusable %}{% endfor %}**{{ _t }}** | **{{ _a }}** | **{{ _f }}** | **{{ _r }}** | **{{ _u }}** |
+
+{% else %}
+
+*No statistics data available for {{ conf_display }}.*
+
+{% endif %}
+
+## Repository Statistics
+
+{% assign conf_repo = false %}
+{% for cr in site.data.repo_stats.by_conference %}
+  {% if cr.name == conf_name %}
+    {% assign conf_repo = cr %}
+  {% endif %}
+{% endfor %}
+
+{% if conf_repo %}
+{% if conf_repo.github_repos > 0 %}
+
+| Metric | Value |
+|---|:---:|
+| **GitHub Repositories** | {{ conf_repo.github_repos }} |
+| **Total Stars** | {{ conf_repo.total_stars }} |
+| **Avg Stars** | {{ conf_repo.avg_stars }} |
+| **Total Forks** | {{ conf_repo.total_forks }} |
+| **Avg Forks** | {{ conf_repo.avg_forks }} |
+| **Max Stars** | {{ conf_repo.max_stars }} |
+
+{% if conf_repo.top_repos.size > 0 %}
+### Top {{ conf_repo.top_repos.size }} Repositories by Stars
+
+<table class="top-repos-table">
+<thead>
+<tr>
+<th>#</th>
+<th>Repository</th>
+<th>Authors</th>
+<th>GitHub Org</th>
+<th>Year</th>
+<th>Stars</th>
+<th>Forks</th>
+<th>Badges</th>
+<th>Last Active</th>
+</tr>
+</thead>
+<tbody>
+{% for repo in conf_repo.top_repos %}
+<tr>
+<td>{{ forloop.index }}</td>
+<td><a href="{{ repo.url }}">{{ repo.title | truncate: 55 }}</a></td>
+<td>{{ repo.authors | default: "—" }}</td>
+<td><a href="https://github.com/{{ repo.github_org }}">{{ repo.github_org }}</a></td>
+<td>{{ repo.year }}</td>
+<td>{{ repo.stars | default: 0 }}</td>
+<td>{{ repo.forks | default: 0 }}</td>
+<td>{{ repo.badges | default: "—" }}</td>
+<td>{{ repo.last_active | default: "—" }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endif %}
+
+{% else %}
+*Repository statistics not yet available for {{ conf_display }}.*
+{% endif %}
+{% else %}
+*Repository statistics not yet available for {{ conf_display }}.*
+{% endif %}
+
+## Data Files
+
+Download the underlying data as JSON for further analysis:
+
+{% assign cat = page.conf_category %}
+| Dataset | Download |
+|---|---|
+| **Artifacts** | [artifacts.json]({{ site.baseurl }}/assets/data/artifacts.json) |
+| **Authors** | [{{ cat }}_authors.json]({{ site.baseurl }}/assets/data/{{ cat }}_authors.json) |
+| **Combined Rankings** | [{{ cat }}_combined_rankings.json]({{ site.baseurl }}/assets/data/{{ cat }}_combined_rankings.json) |
+| **AE Members** | [{{ cat }}_ae_members.json]({{ site.baseurl }}/assets/data/{{ cat }}_ae_members.json) |
+| **Committee Stats** | [committee_stats.json]({{ site.baseurl }}/assets/data/committee_stats.json) |
+
+*Filter the artifacts file by `conference: "{{ conf_name }}"` for {{ conf_display }}-specific data.*
+
+## Authors
+
+Authors who contributed evaluated artifacts at {{ conf_display }}, ranked by number of artifacts at this conference.
+The total number of artifacts depends on the total number of publications—authors who publish more frequently naturally have more opportunities to contribute artifacts.
+
+<div id="conf-author-controls" class="ca-controls" style="display:none;">
+  <div class="ca-controls-row">
+    <div class="ca-control-group">
+      <label class="ca-label" for="caPageSizeSelect">Show</label>
+      <select id="caPageSizeSelect" class="ca-select">
+        <option value="25" selected>25</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+        <option value="0">All</option>
+      </select>
+      <span class="ca-label">per page</span>
+    </div>
+    <div class="ca-control-group ca-page-nav">
+      <button id="caPrevBtn" class="ca-btn" disabled>&laquo; Prev</button>
+      <span id="caPageInfo" class="ca-page-info"></span>
+      <button id="caNextBtn" class="ca-btn">Next &raquo;</button>
+    </div>
+    <span id="caTotalInfo" class="ca-total-info"></span>
+  </div>
+</div>
+
+<div id="confAuthorLoading"><em>Loading author data…</em></div>
+
+<table id="confAuthorTable" style="display:none;">
+<thead><tr id="confAuthorHead"></tr></thead>
+<tbody id="confAuthorBody"></tbody>
+</table>
+
+<div id="conf-author-controls-bottom" class="ca-controls" style="display:none;">
+  <div class="ca-controls-row">
+    <div class="ca-control-group ca-page-nav" style="margin-left:0;">
+      <button id="caPrevBtnB" class="ca-btn">&laquo; Prev</button>
+      <span id="caPageInfoB" class="ca-page-info"></span>
+      <button id="caNextBtnB" class="ca-btn">Next &raquo;</button>
+    </div>
+  </div>
+</div>
+
+{% if conf_data %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var years = [{% for yd in conf_data.years %}"{{ yd.year }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+  var totals = [{% for yd in conf_data.years %}{{ yd.total }}{% unless forloop.last %},{% endunless %}{% endfor %}];
+  var available = [{% for yd in conf_data.years %}{{ yd.available }}{% unless forloop.last %},{% endunless %}{% endfor %}];
+  var functional = [{% for yd in conf_data.years %}{{ yd.functional }}{% unless forloop.last %},{% endunless %}{% endfor %}];
+  var reproduced = [{% for yd in conf_data.years %}{{ yd.reproducible }}{% unless forloop.last %},{% endunless %}{% endfor %}];
+
+  new Chart(document.getElementById('confYearChart'), {
+    type: 'bar',
+    data: {
+      labels: years,
+      datasets: [
+        { label: 'Total', data: totals, backgroundColor: 'rgba(51,51,51,0.7)' },
+        { label: 'Available', data: available, backgroundColor: 'rgba(241,92,36,0.7)' },
+        { label: 'Functional', data: functional, backgroundColor: 'rgba(18,116,187,0.7)' },
+        { label: 'Reproduced', data: reproduced, backgroundColor: 'rgba(108,64,153,0.7)' }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: { title: { display: true, text: '{{ conf_display }}: Artifacts by Year' } },
+      scales: { y: { beginAtZero: true, title: { display: true, text: 'Count' } } }
+    }
+  });
+});
+</script>
+{% endif %}
+
+<style>
+table { font-size: 0.82em; white-space: nowrap; border-collapse: collapse; }
+table th, table td { padding: 3px 6px; border: 1px solid #ddd; }
+table th { background-color: #f2f2f2; position: sticky; top: 0; }
+table tr:nth-child(even) { background-color: #f9f9f9; }
+table tr:hover { background-color: #e8f4f8; }
+th.sortable { cursor: pointer; }
+th.sortable:after { content: ' \2195'; font-size: 0.7em; opacity: 0.4; }
+th.sorted-asc:after { content: ' \2191'; opacity: 1; }
+th.sorted-desc:after { content: ' \2193'; opacity: 1; }
+.top-repos-table { white-space: normal; }
+.top-repos-table td:nth-child(2) { max-width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.top-repos-table td:nth-child(3) { max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.top-repos-table td:nth-child(8) { text-transform: capitalize; }
+
+/* ── Conference author table controls ────────────────────────────────── */
+.ca-controls {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+}
+.ca-controls-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+.ca-control-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.ca-label {
+  font-size: 0.85em;
+  color: #495057;
+  font-weight: 500;
+}
+.ca-select {
+  appearance: auto;
+  padding: 4px 8px;
+  font-size: 0.85em;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background: #fff;
+  color: #212529;
+  cursor: pointer;
+}
+.ca-select:focus { outline: 2px solid #80bdff; border-color: #80bdff; }
+.ca-btn {
+  padding: 4px 12px;
+  font-size: 0.82em;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background: #fff;
+  color: #212529;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+.ca-btn:hover:not(:disabled) { background: #e9ecef; border-color: #adb5bd; }
+.ca-btn:disabled { opacity: 0.5; cursor: default; }
+.ca-page-info {
+  font-size: 0.82em;
+  color: #495057;
+  min-width: 100px;
+  text-align: center;
+}
+.ca-page-nav { margin-left: auto; }
+.ca-total-info { font-size: 0.8em; color: #6c757d; }
+#conf-author-controls-bottom { margin-top: 8px; }
+#conf-author-controls-bottom .ca-controls-row { justify-content: center; }
+
+#confAuthorTable {
+  font-size: 0.82em;
+  white-space: nowrap;
+  border-collapse: collapse;
+  width: 100%;
+}
+#confAuthorTable th, #confAuthorTable td {
+  padding: 3px 6px;
+  border: 1px solid #ddd;
+}
+#confAuthorTable th {
+  background-color: #f2f2f2;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+#confAuthorTable th[title] { border-bottom: 2px dotted #999; }
+#confAuthorTable tr:nth-child(even) { background-color: #f9f9f9; }
+#confAuthorTable tr:hover { background-color: #e8f4f8; }
+#confAuthorTable th.sortable:after { content: ' \2195'; font-size: 0.7em; opacity: 0.4; }
+#confAuthorTable th.sorted-asc:after { content: ' \2191'; opacity: 1; }
+#confAuthorTable th.sorted-desc:after { content: ' \2193'; opacity: 1; }
+</style>
+
+<script>
+/* --- Conference author table (JSON-driven, paginated, sortable) --- */
+(function() {
+  var CONF_DATA_URL = '{{ site.baseurl }}/assets/data/{{ conf_name | downcase }}_conf_authors.json';
+  var allAuthors = [];
+  var sortedAuthors = [];
+  var yearColumns = [];
+  var currentPage = 0;
+  var pageSize = 25;
+  var sortCol = 2; // default sort: Score
+  var sortAsc = false;
+
+  var fixedCols = [
+    {label:'Rank',              key:'rank',            type:'num'},
+    {label:'Author',            key:'name',            type:'alpha'},
+    {label:'Score',             key:'artifact_score',  type:'num',   tip:'Weighted score: Reproduced×3 + Functional×2 + Available×1'},
+    {label:'Artifacts',         key:'total',           type:'num'},
+    {label:'Papers',            key:'total_papers',    type:'num',   tip:'Total papers at this conference'},
+    {label:'Art.&nbsp;Rate',    key:'artifact_rate',   type:'num',   tip:'Artifact rate: percentage of papers with an evaluated artifact'},
+    {label:'Repro.&nbsp;Rate',  key:'repro_rate',      type:'num',   tip:'Reproducibility rate: percentage of artifacts with Reproduced badge'},
+    {label:'Func.&nbsp;Rate',   key:'functional_rate', type:'num',   tip:'Functional rate: percentage of artifacts with Functional badge'},
+    {label:'Last&nbsp;5y',      key:'last_5_years',    type:'num',   tip:'Artifacts in the last 5 years'}
+  ];
+
+  function render() {
+    var start = pageSize > 0 ? currentPage * pageSize : 0;
+    var end = pageSize > 0 ? start + pageSize : sortedAuthors.length;
+    var page = sortedAuthors.slice(start, end);
+
+    var tbody = document.getElementById('confAuthorBody');
+    var rows = [];
+    for (var i = 0; i < page.length; i++) {
+      var a = page[i];
+      var cells = [];
+      cells.push('<td>' + (start + i + 1) + '</td>');
+      cells.push('<td>' + escHtml(a.name) + '</td>');
+      cells.push('<td><strong>' + a.artifact_score + '</strong></td>');
+      cells.push('<td>' + a.total + '</td>');
+      cells.push('<td>' + (a.total_papers || '') + '</td>');
+      cells.push('<td>' + (a.total_papers > 0 ? a.artifact_rate + '%' : '') + '</td>');
+      cells.push('<td>' + a.repro_rate + '%</td>');
+      cells.push('<td>' + a.functional_rate + '%</td>');
+      cells.push('<td>' + a.last_5_years + '</td>');
+      for (var j = 0; j < yearColumns.length; j++) {
+        var cnt = (a.years || {})[yearColumns[j]] || 0;
+        cells.push('<td>' + (cnt > 0 ? cnt : '') + '</td>');
+      }
+      rows.push('<tr>' + cells.join('') + '</tr>');
+    }
+    tbody.innerHTML = rows.join('');
+    updatePageInfo();
+  }
+
+  function escHtml(s) {
+    var d = document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+
+  function sortData(colIdx, asc) {
+    var key;
+    if (colIdx < fixedCols.length) {
+      key = fixedCols[colIdx].key;
+    } else {
+      var yIdx = colIdx - fixedCols.length;
+      var yr = yearColumns[yIdx];
+      key = '_y' + yr;
+    }
+    sortedAuthors.sort(function(a, b) {
+      var av, bv;
+      if (key.indexOf('_y') === 0) {
+        var y = parseInt(key.slice(2));
+        av = (a.years || {})[y] || 0;
+        bv = (b.years || {})[y] || 0;
+      } else if (key === 'name') {
+        av = a.name.toLowerCase();
+        bv = b.name.toLowerCase();
+      } else {
+        av = a[key] || 0;
+        bv = b[key] || 0;
+      }
+      if (av < bv) return asc ? -1 : 1;
+      if (av > bv) return asc ? 1 : -1;
+      return 0;
+    });
+  }
+
+  function updatePageInfo() {
+    var total = sortedAuthors.length;
+    var start = pageSize > 0 ? currentPage * pageSize : 0;
+    var end = pageSize > 0 ? Math.min(start + pageSize, total) : total;
+    var pages = pageSize > 0 ? Math.ceil(total / pageSize) : 1;
+    var info = (start+1) + '–' + end + ' of ' + total;
+    document.getElementById('caPageInfo').textContent = info;
+    document.getElementById('caPageInfoB').textContent = info;
+    document.getElementById('caTotalInfo').textContent = total + ' authors total';
+    var atFirst = currentPage <= 0;
+    var atLast = pageSize <= 0 || currentPage >= pages - 1;
+    document.getElementById('caPrevBtn').disabled = atFirst;
+    document.getElementById('caNextBtn').disabled = atLast;
+    document.getElementById('caPrevBtnB').disabled = atFirst;
+    document.getElementById('caNextBtnB').disabled = atLast;
+  }
+
+  function buildHeader() {
+    var tr = document.getElementById('confAuthorHead');
+    tr.innerHTML = '';
+    var allCols = fixedCols.slice();
+    for (var i = 0; i < yearColumns.length; i++) {
+      allCols.push({label: '' + yearColumns[i], key:'_y' + yearColumns[i], type:'num'});
+    }
+    for (var c = 0; c < allCols.length; c++) {
+      var th = document.createElement('th');
+      th.innerHTML = allCols[c].label;
+      th.className = 'sortable';
+      th.dataset.colIdx = c;
+      th.style.cursor = 'pointer';
+      if (allCols[c].tip) th.title = allCols[c].tip;
+      if (c === sortCol) th.classList.add(sortAsc ? 'sorted-asc' : 'sorted-desc');
+      th.addEventListener('click', (function(idx) {
+        return function(e) {
+          if (sortCol === idx) { sortAsc = !sortAsc; }
+          else { sortCol = idx; sortAsc = false; }
+          sortData(sortCol, sortAsc);
+          currentPage = 0;
+          render();
+          var ths = document.getElementById('confAuthorHead').querySelectorAll('.sortable');
+          ths.forEach(function(h) { h.classList.remove('sorted-asc','sorted-desc'); });
+          e.currentTarget.classList.add(sortAsc ? 'sorted-asc' : 'sorted-desc');
+        };
+      })(c));
+      tr.appendChild(th);
+    }
+  }
+
+  function init(data) {
+    allAuthors = data;
+    sortedAuthors = data.slice();
+
+    if (data.length > 0 && data[0].years) {
+      yearColumns = Object.keys(data[0].years).map(Number).sort(function(a,b){return b-a;});
+    }
+
+    buildHeader();
+    sortData(sortCol, sortAsc);
+    render();
+
+    document.getElementById('confAuthorLoading').style.display = 'none';
+    document.getElementById('confAuthorTable').style.display = '';
+    document.getElementById('conf-author-controls').style.display = '';
+    document.getElementById('conf-author-controls-bottom').style.display = '';
+  }
+
+  // Pagination controls
+  document.getElementById('caPageSizeSelect').addEventListener('change', function() {
+    pageSize = parseInt(this.value);
+    currentPage = 0;
+    render();
+  });
+  function goPrev() { if (currentPage > 0) { currentPage--; render(); } }
+  function goNext() {
+    var pages = pageSize > 0 ? Math.ceil(sortedAuthors.length / pageSize) : 1;
+    if (currentPage < pages - 1) { currentPage++; render(); }
+  }
+  document.getElementById('caPrevBtn').addEventListener('click', goPrev);
+  document.getElementById('caNextBtn').addEventListener('click', goNext);
+  document.getElementById('caPrevBtnB').addEventListener('click', goPrev);
+  document.getElementById('caNextBtnB').addEventListener('click', goNext);
+
+  // Fetch data
+  fetch(CONF_DATA_URL)
+    .then(function(r) { return r.json(); })
+    .then(init)
+    .catch(function(e) {
+      document.getElementById('confAuthorLoading').textContent =
+        'Error loading author data: ' + e.message;
+    });
+})();
+</script>

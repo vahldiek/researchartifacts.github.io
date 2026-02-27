@@ -1,0 +1,8166 @@
+{
+  "summary": {
+    "total_members": 3351,
+    "total_systems": 1715,
+    "total_security": 1635,
+    "total_countries": 59,
+    "total_continents": 7,
+    "total_institutions": 455
+  },
+  "by_country": {
+    "overall": [
+      {
+        "name": "United States",
+        "count": 1523
+      },
+      {
+        "name": "China",
+        "count": 291
+      },
+      {
+        "name": "Germany",
+        "count": 162
+      },
+      {
+        "name": "Hong Kong",
+        "count": 129
+      },
+      {
+        "name": "United Kingdom",
+        "count": 92
+      },
+      {
+        "name": "Taiwan, Province of China",
+        "count": 68
+      },
+      {
+        "name": "Switzerland",
+        "count": 65
+      },
+      {
+        "name": "Canada",
+        "count": 52
+      },
+      {
+        "name": "Singapore",
+        "count": 51
+      },
+      {
+        "name": "Australia",
+        "count": 46
+      },
+      {
+        "name": "Japan",
+        "count": 40
+      },
+      {
+        "name": "Italy",
+        "count": 39
+      },
+      {
+        "name": "Netherlands",
+        "count": 34
+      },
+      {
+        "name": "Spain",
+        "count": 30
+      },
+      {
+        "name": "Belgium",
+        "count": 30
+      },
+      {
+        "name": "France",
+        "count": 29
+      },
+      {
+        "name": "India",
+        "count": 27
+      },
+      {
+        "name": "Nigeria",
+        "count": 22
+      },
+      {
+        "name": "Iran",
+        "count": 17
+      },
+      {
+        "name": "Finland",
+        "count": 14
+      },
+      {
+        "name": "Korea, Republic of",
+        "count": 14
+      },
+      {
+        "name": "Saudi Arabia",
+        "count": 13
+      },
+      {
+        "name": "Greece",
+        "count": 13
+      },
+      {
+        "name": "South Korea",
+        "count": 12
+      },
+      {
+        "name": "Austria",
+        "count": 12
+      },
+      {
+        "name": "Sweden",
+        "count": 9
+      },
+      {
+        "name": "Brazil",
+        "count": 8
+      },
+      {
+        "name": "Czech Republic",
+        "count": 7
+      },
+      {
+        "name": "Portugal",
+        "count": 7
+      },
+      {
+        "name": "Turkiye",
+        "count": 7
+      },
+      {
+        "name": "United Arab Emirates",
+        "count": 7
+      },
+      {
+        "name": "Ethiopia",
+        "count": 6
+      },
+      {
+        "name": "Israel",
+        "count": 5
+      },
+      {
+        "name": "Luxembourg",
+        "count": 5
+      },
+      {
+        "name": "Estonia",
+        "count": 5
+      },
+      {
+        "name": "Romania",
+        "count": 4
+      },
+      {
+        "name": "Hungary",
+        "count": 4
+      },
+      {
+        "name": "Poland",
+        "count": 4
+      },
+      {
+        "name": "Rwanda",
+        "count": 4
+      },
+      {
+        "name": "Malaysia",
+        "count": 4
+      },
+      {
+        "name": "Pakistan",
+        "count": 3
+      },
+      {
+        "name": "Russian Federation",
+        "count": 3
+      },
+      {
+        "name": "Norway",
+        "count": 2
+      },
+      {
+        "name": "Liechtenstein",
+        "count": 2
+      },
+      {
+        "name": "Bulgaria",
+        "count": 2
+      },
+      {
+        "name": "Cyprus",
+        "count": 2
+      },
+      {
+        "name": "Malta",
+        "count": 2
+      },
+      {
+        "name": "Iraq",
+        "count": 2
+      },
+      {
+        "name": "Zimbabwe",
+        "count": 2
+      },
+      {
+        "name": "Bangladesh",
+        "count": 1
+      },
+      {
+        "name": "New Zealand",
+        "count": 1
+      },
+      {
+        "name": "Uganda",
+        "count": 1
+      },
+      {
+        "name": "Ireland",
+        "count": 1
+      },
+      {
+        "name": "Syrian Arab Republic",
+        "count": 1
+      },
+      {
+        "name": "Liberia",
+        "count": 1
+      },
+      {
+        "name": "Croatia",
+        "count": 1
+      },
+      {
+        "name": "Denmark",
+        "count": 1
+      },
+      {
+        "name": "Lebanon",
+        "count": 1
+      },
+      {
+        "name": "Uzbekistan",
+        "count": 1
+      }
+    ],
+    "systems": [
+      {
+        "name": "United States",
+        "count": 892
+      },
+      {
+        "name": "China",
+        "count": 206
+      },
+      {
+        "name": "Hong Kong",
+        "count": 82
+      },
+      {
+        "name": "United Kingdom",
+        "count": 50
+      },
+      {
+        "name": "Taiwan, Province of China",
+        "count": 43
+      },
+      {
+        "name": "Switzerland",
+        "count": 39
+      },
+      {
+        "name": "Singapore",
+        "count": 31
+      },
+      {
+        "name": "Germany",
+        "count": 25
+      },
+      {
+        "name": "Spain",
+        "count": 25
+      },
+      {
+        "name": "Canada",
+        "count": 18
+      },
+      {
+        "name": "Japan",
+        "count": 15
+      },
+      {
+        "name": "Greece",
+        "count": 13
+      },
+      {
+        "name": "India",
+        "count": 12
+      },
+      {
+        "name": "France",
+        "count": 12
+      },
+      {
+        "name": "Italy",
+        "count": 12
+      },
+      {
+        "name": "Saudi Arabia",
+        "count": 11
+      },
+      {
+        "name": "Nigeria",
+        "count": 8
+      },
+      {
+        "name": "Australia",
+        "count": 7
+      },
+      {
+        "name": "Netherlands",
+        "count": 7
+      },
+      {
+        "name": "Portugal",
+        "count": 7
+      },
+      {
+        "name": "Turkiye",
+        "count": 6
+      },
+      {
+        "name": "South Korea",
+        "count": 5
+      },
+      {
+        "name": "Brazil",
+        "count": 5
+      },
+      {
+        "name": "Romania",
+        "count": 4
+      },
+      {
+        "name": "Hungary",
+        "count": 4
+      },
+      {
+        "name": "Pakistan",
+        "count": 3
+      },
+      {
+        "name": "Iran",
+        "count": 3
+      },
+      {
+        "name": "Sweden",
+        "count": 3
+      },
+      {
+        "name": "Poland",
+        "count": 3
+      },
+      {
+        "name": "Korea, Republic of",
+        "count": 3
+      },
+      {
+        "name": "Ethiopia",
+        "count": 3
+      },
+      {
+        "name": "Czech Republic",
+        "count": 2
+      },
+      {
+        "name": "Belgium",
+        "count": 2
+      },
+      {
+        "name": "Norway",
+        "count": 2
+      },
+      {
+        "name": "Austria",
+        "count": 2
+      },
+      {
+        "name": "Rwanda",
+        "count": 2
+      },
+      {
+        "name": "Zimbabwe",
+        "count": 2
+      },
+      {
+        "name": "Israel",
+        "count": 1
+      },
+      {
+        "name": "Bangladesh",
+        "count": 1
+      },
+      {
+        "name": "New Zealand",
+        "count": 1
+      },
+      {
+        "name": "Uganda",
+        "count": 1
+      },
+      {
+        "name": "Ireland",
+        "count": 1
+      },
+      {
+        "name": "Finland",
+        "count": 1
+      },
+      {
+        "name": "Luxembourg",
+        "count": 1
+      },
+      {
+        "name": "Syrian Arab Republic",
+        "count": 1
+      }
+    ],
+    "security": [
+      {
+        "name": "United States",
+        "count": 630
+      },
+      {
+        "name": "Germany",
+        "count": 137
+      },
+      {
+        "name": "China",
+        "count": 85
+      },
+      {
+        "name": "Hong Kong",
+        "count": 47
+      },
+      {
+        "name": "United Kingdom",
+        "count": 42
+      },
+      {
+        "name": "Australia",
+        "count": 39
+      },
+      {
+        "name": "Canada",
+        "count": 34
+      },
+      {
+        "name": "Belgium",
+        "count": 28
+      },
+      {
+        "name": "Italy",
+        "count": 27
+      },
+      {
+        "name": "Netherlands",
+        "count": 27
+      },
+      {
+        "name": "Switzerland",
+        "count": 26
+      },
+      {
+        "name": "Japan",
+        "count": 25
+      },
+      {
+        "name": "Taiwan, Province of China",
+        "count": 25
+      },
+      {
+        "name": "Singapore",
+        "count": 20
+      },
+      {
+        "name": "France",
+        "count": 17
+      },
+      {
+        "name": "India",
+        "count": 15
+      },
+      {
+        "name": "Nigeria",
+        "count": 14
+      },
+      {
+        "name": "Iran",
+        "count": 14
+      },
+      {
+        "name": "Finland",
+        "count": 13
+      },
+      {
+        "name": "Korea, Republic of",
+        "count": 11
+      },
+      {
+        "name": "Austria",
+        "count": 10
+      },
+      {
+        "name": "United Arab Emirates",
+        "count": 7
+      },
+      {
+        "name": "South Korea",
+        "count": 7
+      },
+      {
+        "name": "Sweden",
+        "count": 6
+      },
+      {
+        "name": "Estonia",
+        "count": 5
+      },
+      {
+        "name": "Czech Republic",
+        "count": 5
+      },
+      {
+        "name": "Spain",
+        "count": 5
+      },
+      {
+        "name": "Malaysia",
+        "count": 4
+      },
+      {
+        "name": "Luxembourg",
+        "count": 4
+      },
+      {
+        "name": "Israel",
+        "count": 4
+      },
+      {
+        "name": "Russian Federation",
+        "count": 3
+      },
+      {
+        "name": "Ethiopia",
+        "count": 3
+      },
+      {
+        "name": "Brazil",
+        "count": 3
+      },
+      {
+        "name": "Liechtenstein",
+        "count": 2
+      },
+      {
+        "name": "Rwanda",
+        "count": 2
+      },
+      {
+        "name": "Saudi Arabia",
+        "count": 2
+      },
+      {
+        "name": "Bulgaria",
+        "count": 2
+      },
+      {
+        "name": "Cyprus",
+        "count": 2
+      },
+      {
+        "name": "Malta",
+        "count": 2
+      },
+      {
+        "name": "Iraq",
+        "count": 2
+      },
+      {
+        "name": "Liberia",
+        "count": 1
+      },
+      {
+        "name": "Croatia",
+        "count": 1
+      },
+      {
+        "name": "Denmark",
+        "count": 1
+      },
+      {
+        "name": "Poland",
+        "count": 1
+      },
+      {
+        "name": "Lebanon",
+        "count": 1
+      },
+      {
+        "name": "Turkiye",
+        "count": 1
+      },
+      {
+        "name": "Uzbekistan",
+        "count": 1
+      }
+    ]
+  },
+  "by_continent": {
+    "overall": [
+      {
+        "name": "North America",
+        "count": 1575
+      },
+      {
+        "name": "Asia",
+        "count": 671
+      },
+      {
+        "name": "Europe",
+        "count": 576
+      },
+      {
+        "name": "Oceania",
+        "count": 47
+      },
+      {
+        "name": "Africa",
+        "count": 35
+      },
+      {
+        "name": "Unknown",
+        "count": 29
+      },
+      {
+        "name": "South America",
+        "count": 8
+      }
+    ],
+    "systems": [
+      {
+        "name": "North America",
+        "count": 910
+      },
+      {
+        "name": "Asia",
+        "count": 413
+      },
+      {
+        "name": "Europe",
+        "count": 215
+      },
+      {
+        "name": "Africa",
+        "count": 16
+      },
+      {
+        "name": "Unknown",
+        "count": 10
+      },
+      {
+        "name": "Oceania",
+        "count": 8
+      },
+      {
+        "name": "South America",
+        "count": 5
+      }
+    ],
+    "security": [
+      {
+        "name": "North America",
+        "count": 664
+      },
+      {
+        "name": "Europe",
+        "count": 361
+      },
+      {
+        "name": "Asia",
+        "count": 258
+      },
+      {
+        "name": "Oceania",
+        "count": 39
+      },
+      {
+        "name": "Unknown",
+        "count": 19
+      },
+      {
+        "name": "Africa",
+        "count": 19
+      },
+      {
+        "name": "South America",
+        "count": 3
+      }
+    ]
+  },
+  "by_institution": {
+    "overall": [
+      {
+        "name": "University of Illinois Urbana-Champaign",
+        "count": 97
+      },
+      {
+        "name": "Purdue University",
+        "count": 86
+      },
+      {
+        "name": "University of Wisconsin - Madison",
+        "count": 63
+      },
+      {
+        "name": "University of California, Irvine",
+        "count": 54
+      },
+      {
+        "name": "National Tsinghua University",
+        "count": 49
+      },
+      {
+        "name": "cispa helmholtz center for information security",
+        "count": 49
+      },
+      {
+        "name": "Georgia Institute of Technology",
+        "count": 48
+      },
+      {
+        "name": "institute of parallel and distributed systems, shanghai jiao tong university",
+        "count": 47
+      },
+      {
+        "name": "University of Michigan - Ann Arbor",
+        "count": 47
+      },
+      {
+        "name": "The Hong Kong University of Science and Technology",
+        "count": 44
+      },
+      {
+        "name": "computing and imaging institute - the university of utah",
+        "count": 42
+      },
+      {
+        "name": "University of Chicago",
+        "count": 38
+      },
+      {
+        "name": "Carnegie Mellon University",
+        "count": 37
+      },
+      {
+        "name": "Virginia Tech",
+        "count": 29
+      },
+      {
+        "name": "google",
+        "count": 28
+      },
+      {
+        "name": "eth zurich",
+        "count": 27
+      },
+      {
+        "name": "Huazhong University of Science and Technology",
+        "count": 26
+      },
+      {
+        "name": "imec-distrinet, ku leuven",
+        "count": 26
+      },
+      {
+        "name": "Peking University",
+        "count": 25
+      },
+      {
+        "name": "epfl",
+        "count": 24
+      },
+      {
+        "name": "imperial college london",
+        "count": 24
+      },
+      {
+        "name": "University of California, Riverside",
+        "count": 24
+      },
+      {
+        "name": "The Chinese University of Hong Kong",
+        "count": 24
+      },
+      {
+        "name": "Zhejiang University",
+        "count": 24
+      },
+      {
+        "name": "Toyo University",
+        "count": 24
+      },
+      {
+        "name": "Nanyang Technological University",
+        "count": 23
+      },
+      {
+        "name": "Ruhr-Universität Bochum",
+        "count": 23
+      },
+      {
+        "name": "The University of Texas at Austin",
+        "count": 22
+      },
+      {
+        "name": "University of California, San Diego",
+        "count": 22
+      },
+      {
+        "name": "microsoft research",
+        "count": 21
+      },
+      {
+        "name": "imdea software institute",
+        "count": 21
+      },
+      {
+        "name": "lawrence berkeley national laboratory",
+        "count": 21
+      },
+      {
+        "name": "Cornell University",
+        "count": 20
+      },
+      {
+        "name": "City University of Hong Kong",
+        "count": 20
+      },
+      {
+        "name": "University of Waterloo",
+        "count": 20
+      },
+      {
+        "name": "Northwestern University",
+        "count": 18
+      },
+      {
+        "name": "New York University",
+        "count": 18
+      },
+      {
+        "name": "Pennsylvania State University",
+        "count": 18
+      },
+      {
+        "name": "National Sun Yat-Sen University",
+        "count": 17
+      },
+      {
+        "name": "University of California, Santa Barbara",
+        "count": 17
+      },
+      {
+        "name": "National University of Singapore",
+        "count": 17
+      },
+      {
+        "name": "The University of Hong Kong",
+        "count": 17
+      },
+      {
+        "name": "Columbia University",
+        "count": 17
+      },
+      {
+        "name": "University of Virginia, Charlottesville",
+        "count": 17
+      },
+      {
+        "name": "sapienza university of rome",
+        "count": 17
+      },
+      {
+        "name": "University of North Carolina at Charlotte",
+        "count": 16
+      },
+      {
+        "name": "University of Southern California",
+        "count": 16
+      },
+      {
+        "name": "Indiana University - Bloomington",
+        "count": 16
+      },
+      {
+        "name": "Boston University",
+        "count": 16
+      },
+      {
+        "name": "University of Massachusetts at Amherst",
+        "count": 15
+      },
+      {
+        "name": "Johns Hopkins University",
+        "count": 15
+      },
+      {
+        "name": "institute of software, chinese academy of sciences",
+        "count": 14
+      },
+      {
+        "name": "University of Minnesota",
+        "count": 14
+      },
+      {
+        "name": "North Carolina State University",
+        "count": 14
+      },
+      {
+        "name": "Stanford University",
+        "count": 14
+      },
+      {
+        "name": "Stevens Institute of Technology",
+        "count": 14
+      },
+      {
+        "name": "University of Science and Technology of China",
+        "count": 14
+      },
+      {
+        "name": "University of Washington",
+        "count": 13
+      },
+      {
+        "name": "max planck institute for informatics",
+        "count": 13
+      },
+      {
+        "name": "University of Florida",
+        "count": 13
+      },
+      {
+        "name": "Northeastern University",
+        "count": 13
+      },
+      {
+        "name": "University of California, Berkeley",
+        "count": 13
+      },
+      {
+        "name": "The Hong Kong Polytechnic University",
+        "count": 13
+      },
+      {
+        "name": "bytedance",
+        "count": 12
+      },
+      {
+        "name": "West Chester University of Pennsylvania",
+        "count": 12
+      },
+      {
+        "name": "University of California, Los Angeles",
+        "count": 12
+      },
+      {
+        "name": "Princeton University",
+        "count": 12
+      },
+      {
+        "name": "University of San Diego",
+        "count": 12
+      },
+      {
+        "name": "uc irvine",
+        "count": 12
+      },
+      {
+        "name": "Baze University Abuja",
+        "count": 12
+      },
+      {
+        "name": "Duke University",
+        "count": 12
+      },
+      {
+        "name": "University of California, Davis",
+        "count": 12
+      },
+      {
+        "name": "University of Twente",
+        "count": 12
+      },
+      {
+        "name": "Anderson University",
+        "count": 12
+      },
+      {
+        "name": "Royal Holloway University of London",
+        "count": 11
+      },
+      {
+        "name": "kaist",
+        "count": 11
+      },
+      {
+        "name": "Rutgers University",
+        "count": 11
+      },
+      {
+        "name": "the ohio state university",
+        "count": 11
+      },
+      {
+        "name": "King's College London, University of London",
+        "count": 11
+      },
+      {
+        "name": "csiro's data61",
+        "count": 11
+      },
+      {
+        "name": "Louisiana State University",
+        "count": 11
+      },
+      {
+        "name": "Harvard University",
+        "count": 10
+      },
+      {
+        "name": "intel labs",
+        "count": 10
+      },
+      {
+        "name": "John Brown University",
+        "count": 10
+      },
+      {
+        "name": "George Mason University",
+        "count": 10
+      },
+      {
+        "name": "Richard Bland College of the College of William and Mary",
+        "count": 10
+      },
+      {
+        "name": "Karlsruher Institut für Technologie",
+        "count": 10
+      },
+      {
+        "name": "University of Manchester",
+        "count": 9
+      },
+      {
+        "name": "National University of Defense Technology",
+        "count": 9
+      },
+      {
+        "name": "University of British Columbia",
+        "count": 9
+      },
+      {
+        "name": "National Technical University of Athens",
+        "count": 9
+      },
+      {
+        "name": "vrije universiteit amsterdam",
+        "count": 9
+      },
+      {
+        "name": "University of Illinois Chicago",
+        "count": 9
+      },
+      {
+        "name": "Aalto University",
+        "count": 9
+      },
+      {
+        "name": "Singapore Management University",
+        "count": 9
+      },
+      {
+        "name": "Kurume Institute of Technology",
+        "count": 9
+      },
+      {
+        "name": "University of Texas at Arlington",
+        "count": 9
+      },
+      {
+        "name": "University of Fribourg",
+        "count": 9
+      },
+      {
+        "name": "University of Maryland, Baltimore",
+        "count": 9
+      },
+      {
+        "name": "microsoft",
+        "count": 8
+      },
+      {
+        "name": "Nankai University",
+        "count": 8
+      },
+      {
+        "name": "Massachusetts Institute of Technology",
+        "count": 8
+      },
+      {
+        "name": "Technische Universität München",
+        "count": 8
+      },
+      {
+        "name": "cuhk",
+        "count": 8
+      },
+      {
+        "name": "kaust",
+        "count": 8
+      },
+      {
+        "name": "amazon",
+        "count": 8
+      },
+      {
+        "name": "Syracuse University",
+        "count": 8
+      },
+      {
+        "name": "Technische Universität Carolo-Wilhelmina zu Braunschweig",
+        "count": 8
+      },
+      {
+        "name": "University of California, Santa Cruz",
+        "count": 8
+      },
+      {
+        "name": "Victoria University Toronto, University of Toronto",
+        "count": 8
+      },
+      {
+        "name": "tu wien",
+        "count": 8
+      },
+      {
+        "name": "mit csail",
+        "count": 7
+      },
+      {
+        "name": "Nanjing University",
+        "count": 7
+      },
+      {
+        "name": "West Texas A&M University",
+        "count": 7
+      },
+      {
+        "name": "netflix",
+        "count": 7
+      },
+      {
+        "name": "University of Maryland, College Park",
+        "count": 7
+      },
+      {
+        "name": "University of Cambridge",
+        "count": 7
+      },
+      {
+        "name": "uiuc",
+        "count": 7
+      },
+      {
+        "name": "University of Edinburgh",
+        "count": 7
+      },
+      {
+        "name": "Wiregrass Georgia Technical College",
+        "count": 7
+      },
+      {
+        "name": "University of California, Merced",
+        "count": 7
+      },
+      {
+        "name": "Harbin Institute of Technology",
+        "count": 7
+      },
+      {
+        "name": "tu darmstadt",
+        "count": 7
+      },
+      {
+        "name": "sandia national laboratories",
+        "count": 7
+      },
+      {
+        "name": "University of Queensland",
+        "count": 7
+      },
+      {
+        "name": "Yale University",
+        "count": 7
+      },
+      {
+        "name": "Arizona State University",
+        "count": 7
+      },
+      {
+        "name": "University of Melbourne",
+        "count": 7
+      },
+      {
+        "name": "Washington University, Saint Louis",
+        "count": 7
+      },
+      {
+        "name": "Arak University of Technology",
+        "count": 7
+      },
+      {
+        "name": "huawei technologies co.",
+        "count": 6
+      },
+      {
+        "name": "Indian Institute of Technology, Bombay",
+        "count": 6
+      },
+      {
+        "name": "akamai technologies",
+        "count": 6
+      },
+      {
+        "name": "ucla",
+        "count": 6
+      },
+      {
+        "name": "university of chinese academy of sciences",
+        "count": 6
+      },
+      {
+        "name": "Bingham University",
+        "count": 6
+      },
+      {
+        "name": "Debre Birhan University",
+        "count": 6
+      },
+      {
+        "name": "inria",
+        "count": 6
+      },
+      {
+        "name": "University of Texas at Dallas",
+        "count": 6
+      },
+      {
+        "name": "Shandong University",
+        "count": 6
+      },
+      {
+        "name": "University of Adelaide",
+        "count": 6
+      },
+      {
+        "name": "Indian Institute of Technology, Kharagpur",
+        "count": 6
+      },
+      {
+        "name": "Emory University",
+        "count": 5
+      },
+      {
+        "name": "ShanghaiTech University",
+        "count": 5
+      },
+      {
+        "name": "telefonica research",
+        "count": 5
+      },
+      {
+        "name": "Indian Institute of Technology, Madras",
+        "count": 5
+      },
+      {
+        "name": "Renmin University of China",
+        "count": 5
+      },
+      {
+        "name": "University of Luxemburg",
+        "count": 5
+      },
+      {
+        "name": "Masaryk University",
+        "count": 5
+      },
+      {
+        "name": "New York University, Abu Dhabi",
+        "count": 5
+      },
+      {
+        "name": "Southeast University",
+        "count": 5
+      },
+      {
+        "name": "Tampere University of Technology",
+        "count": 5
+      },
+      {
+        "name": "University Politehnica of Bucharest",
+        "count": 4
+      },
+      {
+        "name": "University of New South Wales",
+        "count": 4
+      },
+      {
+        "name": "East China Normal University",
+        "count": 4
+      },
+      {
+        "name": "institute of computing technology chinese academy of sciences",
+        "count": 4
+      },
+      {
+        "name": "Newcastle University",
+        "count": 4
+      },
+      {
+        "name": "tencent",
+        "count": 4
+      },
+      {
+        "name": "mpi-sws",
+        "count": 4
+      },
+      {
+        "name": "cuhk-shenzhen",
+        "count": 4
+      },
+      {
+        "name": "linkedin",
+        "count": 4
+      },
+      {
+        "name": "blackberry",
+        "count": 4
+      },
+      {
+        "name": "University of Newcastle",
+        "count": 4
+      },
+      {
+        "name": "meta",
+        "count": 4
+      },
+      {
+        "name": "Iowa State University",
+        "count": 4
+      },
+      {
+        "name": "Technische Universität Dresden",
+        "count": 4
+      },
+      {
+        "name": "Riverside City College",
+        "count": 4
+      },
+      {
+        "name": "accenture labs",
+        "count": 4
+      },
+      {
+        "name": "Friedrich-Alexander Universität Erlangen-Nürnberg",
+        "count": 4
+      },
+      {
+        "name": "ensta bretagne",
+        "count": 4
+      },
+      {
+        "name": "Kigali Independent University",
+        "count": 4
+      },
+      {
+        "name": "Dartmouth College",
+        "count": 4
+      },
+      {
+        "name": "Xiamen University",
+        "count": 4
+      },
+      {
+        "name": "Ondokuz Mayis University Samsun",
+        "count": 4
+      },
+      {
+        "name": "University of Pittsburgh",
+        "count": 4
+      },
+      {
+        "name": "Georgia State University",
+        "count": 4
+      },
+      {
+        "name": "University of Maine",
+        "count": 4
+      },
+      {
+        "name": "University College London, University of London",
+        "count": 4
+      },
+      {
+        "name": "University of Tartu",
+        "count": 4
+      },
+      {
+        "name": "University of Arizona",
+        "count": 4
+      },
+      {
+        "name": "Sharif University of Technology",
+        "count": 4
+      },
+      {
+        "name": "Yonsei University",
+        "count": 4
+      },
+      {
+        "name": "Zhengzhou University of Technology",
+        "count": 4
+      },
+      {
+        "name": "University of Oregon",
+        "count": 3
+      },
+      {
+        "name": "baidu security",
+        "count": 3
+      },
+      {
+        "name": "King Abdullah University of Science and Technology",
+        "count": 3
+      },
+      {
+        "name": "Oregon State University",
+        "count": 3
+      },
+      {
+        "name": "Monash University",
+        "count": 3
+      },
+      {
+        "name": "University of Kansas",
+        "count": 3
+      },
+      {
+        "name": "Alexandria Technical & Community College",
+        "count": 3
+      },
+      {
+        "name": "University of Nebraska, Omaha",
+        "count": 3
+      },
+      {
+        "name": "University of Iowa",
+        "count": 3
+      },
+      {
+        "name": "vu amsterdam",
+        "count": 3
+      },
+      {
+        "name": "University of South Florida",
+        "count": 3
+      },
+      {
+        "name": "Rice University",
+        "count": 3
+      },
+      {
+        "name": "inesc tec & u. minho",
+        "count": 3
+      },
+      {
+        "name": "Tianjin University",
+        "count": 3
+      },
+      {
+        "name": "uc irvine & mpi-sp",
+        "count": 3
+      },
+      {
+        "name": "Sungkyunkwan University",
+        "count": 3
+      },
+      {
+        "name": "Rochester Institute of Technology",
+        "count": 3
+      },
+      {
+        "name": "Guangzhou College of South China University of Technology",
+        "count": 3
+      },
+      {
+        "name": "Indiana University",
+        "count": 3
+      },
+      {
+        "name": "University of Minnesota - Morris",
+        "count": 3
+      },
+      {
+        "name": "Sardar Vallabhai Patel University of Agriculture Amd Technology",
+        "count": 3
+      },
+      {
+        "name": "DePaul University",
+        "count": 3
+      },
+      {
+        "name": "pnnl",
+        "count": 3
+      },
+      {
+        "name": "University of Tennessee, Knoxville",
+        "count": 3
+      },
+      {
+        "name": "The University of Texas at San Antonio",
+        "count": 3
+      },
+      {
+        "name": "tu delft",
+        "count": 3
+      },
+      {
+        "name": "Southwest University of Science and Technology",
+        "count": 3
+      },
+      {
+        "name": "rwth aachen university",
+        "count": 3
+      },
+      {
+        "name": "Penza State University",
+        "count": 3
+      },
+      {
+        "name": "cispa",
+        "count": 3
+      },
+      {
+        "name": "mpi-sp",
+        "count": 3
+      },
+      {
+        "name": "University of Connecticut",
+        "count": 3
+      },
+      {
+        "name": "Seoul National University",
+        "count": 3
+      },
+      {
+        "name": "University of Oxford",
+        "count": 3
+      },
+      {
+        "name": "Linköping University",
+        "count": 3
+      },
+      {
+        "name": "University of Calgary",
+        "count": 3
+      },
+      {
+        "name": "Bloomsburg University of Pennsylvania",
+        "count": 3
+      },
+      {
+        "name": "George Washington University",
+        "count": 3
+      },
+      {
+        "name": "University of Padua",
+        "count": 3
+      },
+      {
+        "name": "University of Wyoming",
+        "count": 3
+      },
+      {
+        "name": "Radboud University",
+        "count": 3
+      },
+      {
+        "name": "University of Missouri - Kansas City",
+        "count": 3
+      },
+      {
+        "name": "Florida International University",
+        "count": 3
+      },
+      {
+        "name": "University of Milan",
+        "count": 3
+      },
+      {
+        "name": "hewlett packard enterprise",
+        "count": 2
+      },
+      {
+        "name": "Medical University of South Carolina",
+        "count": 2
+      },
+      {
+        "name": "iit kanpur",
+        "count": 2
+      },
+      {
+        "name": "orange labs",
+        "count": 2
+      },
+      {
+        "name": "University of Pecs",
+        "count": 2
+      },
+      {
+        "name": "Institute of Space Technology",
+        "count": 2
+      },
+      {
+        "name": "Brno University of Technology",
+        "count": 2
+      },
+      {
+        "name": "University of Michigan - Dearborn",
+        "count": 2
+      },
+      {
+        "name": "hewlett packard enterprise labs",
+        "count": 2
+      },
+      {
+        "name": "Singapore University of Technology and Design",
+        "count": 2
+      },
+      {
+        "name": "New Jersey Institute of Technology",
+        "count": 2
+      },
+      {
+        "name": "university of crete & ics-forth",
+        "count": 2
+      },
+      {
+        "name": "University of Bristol",
+        "count": 2
+      },
+      {
+        "name": "University of Lincoln",
+        "count": 2
+      },
+      {
+        "name": "inesc-id & ist u. lisboa in Portugal",
+        "count": 2
+      },
+      {
+        "name": "Keio University",
+        "count": 2
+      },
+      {
+        "name": "University of Tokyo",
+        "count": 2
+      },
+      {
+        "name": "hkust",
+        "count": 2
+      },
+      {
+        "name": "Technical University of Lublin",
+        "count": 2
+      },
+      {
+        "name": "Federal University of Technology, Minna",
+        "count": 2
+      },
+      {
+        "name": "Lynn University",
+        "count": 2
+      },
+      {
+        "name": "Chalmers University of Technology",
+        "count": 2
+      },
+      {
+        "name": "University of Oslo",
+        "count": 2
+      },
+      {
+        "name": "Illinois Institute of Technology",
+        "count": 2
+      },
+      {
+        "name": "ist lisbon & inesc-id",
+        "count": 2
+      },
+      {
+        "name": "Technische Universität Dortmund",
+        "count": 2
+      },
+      {
+        "name": "imdea networks institute & uc3m",
+        "count": 2
+      },
+      {
+        "name": "Colorado School of Mines",
+        "count": 2
+      },
+      {
+        "name": "univ. toulouse iii, irit",
+        "count": 2
+      },
+      {
+        "name": "leibniz supercomputing center",
+        "count": 2
+      },
+      {
+        "name": "Power and Water Institute of Technology",
+        "count": 2
+      },
+      {
+        "name": "politecnico di milano",
+        "count": 2
+      },
+      {
+        "name": "Universidade Estadual de Santa Cruz",
+        "count": 2
+      },
+      {
+        "name": "iit madras",
+        "count": 2
+      },
+      {
+        "name": "Universität Innsbruck",
+        "count": 2
+      },
+      {
+        "name": "Florida State University",
+        "count": 2
+      },
+      {
+        "name": "Universität Liechtenstein",
+        "count": 2
+      },
+      {
+        "name": "Fudan University",
+        "count": 2
+      },
+      {
+        "name": "San Diego State University",
+        "count": 2
+      },
+      {
+        "name": "Washington State University",
+        "count": 2
+      },
+      {
+        "name": "Eindhoven University of Technology",
+        "count": 2
+      },
+      {
+        "name": "Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)",
+        "count": 2
+      },
+      {
+        "name": "KTH Royal Institute of Technology",
+        "count": 2
+      },
+      {
+        "name": "Texas A&M University - Corpus Christi",
+        "count": 2
+      },
+      {
+        "name": "Université Catholique de Louvain",
+        "count": 2
+      },
+      {
+        "name": "Freie Universität Berlin",
+        "count": 2
+      },
+      {
+        "name": "ucl",
+        "count": 2
+      },
+      {
+        "name": "Case Western Reserve University",
+        "count": 2
+      },
+      {
+        "name": "University of Missouri",
+        "count": 2
+      },
+      {
+        "name": "University of Surrey",
+        "count": 2
+      },
+      {
+        "name": "Idaho State University",
+        "count": 2
+      },
+      {
+        "name": "Islamic Azad University, Region One",
+        "count": 2
+      },
+      {
+        "name": "Johnson C. Smith University",
+        "count": 2
+      },
+      {
+        "name": "Université Paris-Saclay",
+        "count": 2
+      },
+      {
+        "name": "American Graduate School in Paris",
+        "count": 2
+      },
+      {
+        "name": "University of Colorado at Denver",
+        "count": 2
+      },
+      {
+        "name": "University of Trento",
+        "count": 2
+      },
+      {
+        "name": "Technical University of Varna",
+        "count": 2
+      },
+      {
+        "name": "Weizmann Institute of Science",
+        "count": 2
+      },
+      {
+        "name": "University of Richmond",
+        "count": 2
+      },
+      {
+        "name": "University of Cyprus",
+        "count": 2
+      },
+      {
+        "name": "Swinburne University of Technology",
+        "count": 2
+      },
+      {
+        "name": "University of Malta",
+        "count": 2
+      },
+      {
+        "name": "Michigan State University",
+        "count": 2
+      },
+      {
+        "name": "tu berlin",
+        "count": 2
+      },
+      {
+        "name": "Long Island University",
+        "count": 2
+      },
+      {
+        "name": "cnrs",
+        "count": 2
+      },
+      {
+        "name": "Université du Québec à Montréal",
+        "count": 2
+      },
+      {
+        "name": "Wuhan University",
+        "count": 2
+      },
+      {
+        "name": "Harare Institute of Technology",
+        "count": 2
+      },
+      {
+        "name": "Southwest Jiaotong University",
+        "count": 2
+      },
+      {
+        "name": "Kennesaw State University",
+        "count": 2
+      },
+      {
+        "name": "Nanjing University of Science and Technology",
+        "count": 2
+      },
+      {
+        "name": "École normale supérieure Paris-Saclay",
+        "count": 2
+      },
+      {
+        "name": "Korea Advanced Institute of Science & Technology",
+        "count": 2
+      },
+      {
+        "name": "Universität Duisburg-Essen",
+        "count": 2
+      },
+      {
+        "name": "Technische Universität Darmstadt",
+        "count": 2
+      },
+      {
+        "name": "Federal University of Technology, Akure",
+        "count": 2
+      },
+      {
+        "name": "Universidade de São Paulo",
+        "count": 2
+      },
+      {
+        "name": "KBU International College",
+        "count": 2
+      },
+      {
+        "name": "Dalhousie University",
+        "count": 2
+      },
+      {
+        "name": "Universidade Federal de Uberlândia",
+        "count": 1
+      },
+      {
+        "name": "télécom sudparis",
+        "count": 1
+      },
+      {
+        "name": "Technion - Israel Institute of Technology",
+        "count": 1
+      },
+      {
+        "name": "Amirkabir University of Technology",
+        "count": 1
+      },
+      {
+        "name": "Chengdu College of University of Electronic Science and Technology of China",
+        "count": 1
+      },
+      {
+        "name": "Brac University",
+        "count": 1
+      },
+      {
+        "name": "Umea University",
+        "count": 1
+      },
+      {
+        "name": "tu munich",
+        "count": 1
+      },
+      {
+        "name": "ics-forth",
+        "count": 1
+      },
+      {
+        "name": "Shanghai Jiaotong University",
+        "count": 1
+      },
+      {
+        "name": "Universidade Federal de Goiás",
+        "count": 1
+      },
+      {
+        "name": "Massey University",
+        "count": 1
+      },
+      {
+        "name": "Mbarara University of Science and Technology",
+        "count": 1
+      },
+      {
+        "name": "COMSATS Institute of Information Technology, Wah",
+        "count": 1
+      },
+      {
+        "name": "school of computer science, university college dublin",
+        "count": 1
+      },
+      {
+        "name": "University of Naples Federico II",
+        "count": 1
+      },
+      {
+        "name": "Eötvös Lorand University",
+        "count": 1
+      },
+      {
+        "name": "zhengqing",
+        "count": 1
+      },
+      {
+        "name": "Chongqing University",
+        "count": 1
+      },
+      {
+        "name": "Université de Pau et des Pays de l'Adour",
+        "count": 1
+      },
+      {
+        "name": "York University",
+        "count": 1
+      },
+      {
+        "name": "Universidade do Amazonas",
+        "count": 1
+      },
+      {
+        "name": "University of Roma \"Tor Vergata\"",
+        "count": 1
+      },
+      {
+        "name": "lrz",
+        "count": 1
+      },
+      {
+        "name": "unist",
+        "count": 1
+      },
+      {
+        "name": "Ecole Pour l'Informatique et les Techniques Avancees",
+        "count": 1
+      },
+      {
+        "name": "niccolò cusano university",
+        "count": 1
+      },
+      {
+        "name": "Fachhochschule Wiener Neustadt",
+        "count": 1
+      },
+      {
+        "name": "University of North Carolina at Chapel Hill",
+        "count": 1
+      },
+      {
+        "name": "university of telepegaso,rome,italy",
+        "count": 1
+      },
+      {
+        "name": "University of Basel",
+        "count": 1
+      },
+      {
+        "name": "Delft University of Technology",
+        "count": 1
+      },
+      {
+        "name": "barkhausen institut",
+        "count": 1
+      },
+      {
+        "name": "Beijing University of Posts and Telecommunications",
+        "count": 1
+      },
+      {
+        "name": "The Hang Seng University of Hong Kong",
+        "count": 1
+      },
+      {
+        "name": "Korea University",
+        "count": 1
+      },
+      {
+        "name": "IAE France",
+        "count": 1
+      },
+      {
+        "name": "Cardiff University",
+        "count": 1
+      },
+      {
+        "name": "University of Colorado at Boulder",
+        "count": 1
+      },
+      {
+        "name": "University of Central Missouri",
+        "count": 1
+      },
+      {
+        "name": "University of Florence",
+        "count": 1
+      },
+      {
+        "name": "Jiangsu University of Science and Technology",
+        "count": 1
+      },
+      {
+        "name": "Tennessee Technological University",
+        "count": 1
+      },
+      {
+        "name": "HES-SO : UAS Western Switzerland",
+        "count": 1
+      },
+      {
+        "name": "University of Public Service",
+        "count": 1
+      },
+      {
+        "name": "Koç University",
+        "count": 1
+      },
+      {
+        "name": "Bowling Green State University",
+        "count": 1
+      },
+      {
+        "name": "Waseda University",
+        "count": 1
+      },
+      {
+        "name": "University of Warsaw",
+        "count": 1
+      },
+      {
+        "name": "Technische Universität Ilmenau",
+        "count": 1
+      },
+      {
+        "name": "Johannes-Gutenberg Universität Mainz",
+        "count": 1
+      },
+      {
+        "name": "Washington State University at Vancouver",
+        "count": 1
+      },
+      {
+        "name": "University of Alabama at Huntsville",
+        "count": 1
+      },
+      {
+        "name": "Indian University",
+        "count": 1
+      },
+      {
+        "name": "Uppsala University",
+        "count": 1
+      },
+      {
+        "name": "Grace College",
+        "count": 1
+      },
+      {
+        "name": "vmware research",
+        "count": 1
+      },
+      {
+        "name": "Université de Neuchâtel",
+        "count": 1
+      },
+      {
+        "name": "Eskisehir Technical University",
+        "count": 1
+      },
+      {
+        "name": "Boise State University",
+        "count": 1
+      },
+      {
+        "name": "George Fox University",
+        "count": 1
+      },
+      {
+        "name": "University of North Florida",
+        "count": 1
+      },
+      {
+        "name": "National Taiwan University",
+        "count": 1
+      },
+      {
+        "name": "National Chung Cheng University",
+        "count": 1
+      },
+      {
+        "name": "Damascus University",
+        "count": 1
+      },
+      {
+        "name": "Technical University of Crete",
+        "count": 1
+      },
+      {
+        "name": "Augusta University",
+        "count": 1
+      },
+      {
+        "name": "Loyola University Chicago",
+        "count": 1
+      },
+      {
+        "name": "University of Bologna",
+        "count": 1
+      },
+      {
+        "name": "University of Liberia",
+        "count": 1
+      },
+      {
+        "name": "Tallinn University of Technology",
+        "count": 1
+      },
+      {
+        "name": "Kyung Hee University",
+        "count": 1
+      },
+      {
+        "name": "Foothill-De Anza Community College District",
+        "count": 1
+      },
+      {
+        "name": "Old Dominion University",
+        "count": 1
+      },
+      {
+        "name": "Universität der Bundeswehr München",
+        "count": 1
+      },
+      {
+        "name": "University of Alberta",
+        "count": 1
+      },
+      {
+        "name": "University of Verona",
+        "count": 1
+      },
+      {
+        "name": "Liberty University",
+        "count": 1
+      },
+      {
+        "name": "Athens State University",
+        "count": 1
+      },
+      {
+        "name": "Indian Institute of Technology, Kanpur",
+        "count": 1
+      },
+      {
+        "name": "University of Zagreb",
+        "count": 1
+      },
+      {
+        "name": "Universidade Federal de Minas Gerais",
+        "count": 1
+      },
+      {
+        "name": "Brock University",
+        "count": 1
+      },
+      {
+        "name": "Macquarie University",
+        "count": 1
+      },
+      {
+        "name": "CUNY City College of NY",
+        "count": 1
+      },
+      {
+        "name": "Swinburne University of Technology, Sarawak Campus",
+        "count": 1
+      },
+      {
+        "name": "Eastern Washington University",
+        "count": 1
+      },
+      {
+        "name": "Universidad Politécnica de Valencia",
+        "count": 1
+      },
+      {
+        "name": "North Carolina A&T State University",
+        "count": 1
+      },
+      {
+        "name": "University of St. Andrews",
+        "count": 1
+      },
+      {
+        "name": "University of Jammu",
+        "count": 1
+      },
+      {
+        "name": "University of New Mexico",
+        "count": 1
+      },
+      {
+        "name": "University of Maryland Eastern Shore",
+        "count": 1
+      },
+      {
+        "name": "University of Louisiana at Lafeyette",
+        "count": 1
+      },
+      {
+        "name": "Islamic University of Medinah",
+        "count": 1
+      },
+      {
+        "name": "University of Turin",
+        "count": 1
+      },
+      {
+        "name": "Zurich University of Applied Sciences Winterthur",
+        "count": 1
+      },
+      {
+        "name": "Technische Universität Wien",
+        "count": 1
+      },
+      {
+        "name": "University of Copenhagen",
+        "count": 1
+      },
+      {
+        "name": "Islamic Azad University, Qom",
+        "count": 1
+      },
+      {
+        "name": "University of Technology Sydney",
+        "count": 1
+      },
+      {
+        "name": "Kitami Institute of Technology",
+        "count": 1
+      },
+      {
+        "name": "University of Anbar",
+        "count": 1
+      },
+      {
+        "name": "Concordia University",
+        "count": 1
+      },
+      {
+        "name": "Westfälische Wilhelms-Universität Münster",
+        "count": 1
+      },
+      {
+        "name": "Université Clermont Auvergne",
+        "count": 1
+      },
+      {
+        "name": "Brigham Young University",
+        "count": 1
+      },
+      {
+        "name": "University of Northern Colorado",
+        "count": 1
+      },
+      {
+        "name": "Vrije Universiteit Brussel",
+        "count": 1
+      },
+      {
+        "name": "Wayne State University",
+        "count": 1
+      },
+      {
+        "name": "Florida Institute of Technology",
+        "count": 1
+      },
+      {
+        "name": "Ben-Gurion University of the Negev",
+        "count": 1
+      },
+      {
+        "name": "UCSI University",
+        "count": 1
+      },
+      {
+        "name": "Denison University",
+        "count": 1
+      },
+      {
+        "name": "Northwest Polytechnical University Xi'an",
+        "count": 1
+      },
+      {
+        "name": "University of Mississippi",
+        "count": 1
+      },
+      {
+        "name": "University of Salerno",
+        "count": 1
+      },
+      {
+        "name": "Université Grenoble Alpes",
+        "count": 1
+      },
+      {
+        "name": "Universität des Saarlandes",
+        "count": 1
+      },
+      {
+        "name": "Howard University",
+        "count": 1
+      },
+      {
+        "name": "Prince Sultan University",
+        "count": 1
+      },
+      {
+        "name": "University of Calabria",
+        "count": 1
+      },
+      {
+        "name": "Helena Chodkowska University of Technology and Economics",
+        "count": 1
+      },
+      {
+        "name": "International University in Germany",
+        "count": 1
+      },
+      {
+        "name": "Tulane University",
+        "count": 1
+      },
+      {
+        "name": "University of Massachusetts at Lowell",
+        "count": 1
+      },
+      {
+        "name": "Victoria University",
+        "count": 1
+      },
+      {
+        "name": "Hefei University of Technology",
+        "count": 1
+      },
+      {
+        "name": "University of Illinois Springfield",
+        "count": 1
+      },
+      {
+        "name": "Tel Aviv University",
+        "count": 1
+      },
+      {
+        "name": "University of Genoa",
+        "count": 1
+      },
+      {
+        "name": "Lebanese University",
+        "count": 1
+      },
+      {
+        "name": "University of Georgia",
+        "count": 1
+      },
+      {
+        "name": "University of Human Development (Kurdistan Region)",
+        "count": 1
+      },
+      {
+        "name": "Clemson University",
+        "count": 1
+      },
+      {
+        "name": "University of Birmingham",
+        "count": 1
+      },
+      {
+        "name": "Dokuz Eylül University",
+        "count": 1
+      },
+      {
+        "name": "Open University of the Netherlands",
+        "count": 1
+      },
+      {
+        "name": "Université de Picardie Jules-Verne",
+        "count": 1
+      },
+      {
+        "name": "Tashkent University of Information Technologies",
+        "count": 1
+      },
+      {
+        "name": "University of Pisa",
+        "count": 1
+      },
+      {
+        "name": "Medizinische Universität Lübeck",
+        "count": 1
+      },
+      {
+        "name": "Louvain School of Management",
+        "count": 1
+      },
+      {
+        "name": "Westphalian University of Applied Sciences",
+        "count": 1
+      },
+      {
+        "name": "Universitat Rovira I Virgili Tarragona",
+        "count": 1
+      },
+      {
+        "name": "Tohoku University",
+        "count": 1
+      },
+      {
+        "name": "The University of Sheffield",
+        "count": 1
+      }
+    ],
+    "systems": [
+      {
+        "name": "University of Illinois Urbana-Champaign",
+        "count": 87
+      },
+      {
+        "name": "Purdue University",
+        "count": 47
+      },
+      {
+        "name": "University of Michigan - Ann Arbor",
+        "count": 41
+      },
+      {
+        "name": "institute of parallel and distributed systems, shanghai jiao tong university",
+        "count": 40
+      },
+      {
+        "name": "University of Wisconsin - Madison",
+        "count": 38
+      },
+      {
+        "name": "computing and imaging institute - the university of utah",
+        "count": 30
+      },
+      {
+        "name": "The Hong Kong University of Science and Technology",
+        "count": 28
+      },
+      {
+        "name": "University of Chicago",
+        "count": 28
+      },
+      {
+        "name": "Georgia Institute of Technology",
+        "count": 26
+      },
+      {
+        "name": "National Tsinghua University",
+        "count": 25
+      },
+      {
+        "name": "Carnegie Mellon University",
+        "count": 24
+      },
+      {
+        "name": "Huazhong University of Science and Technology",
+        "count": 23
+      },
+      {
+        "name": "imperial college london",
+        "count": 20
+      },
+      {
+        "name": "imdea software institute",
+        "count": 20
+      },
+      {
+        "name": "Cornell University",
+        "count": 19
+      },
+      {
+        "name": "University of California, Irvine",
+        "count": 19
+      },
+      {
+        "name": "epfl",
+        "count": 18
+      },
+      {
+        "name": "microsoft research",
+        "count": 18
+      },
+      {
+        "name": "The University of Texas at Austin",
+        "count": 17
+      },
+      {
+        "name": "eth zurich",
+        "count": 17
+      },
+      {
+        "name": "National Sun Yat-Sen University",
+        "count": 16
+      },
+      {
+        "name": "lawrence berkeley national laboratory",
+        "count": 16
+      },
+      {
+        "name": "University of North Carolina at Charlotte",
+        "count": 15
+      },
+      {
+        "name": "Nanyang Technological University",
+        "count": 15
+      },
+      {
+        "name": "City University of Hong Kong",
+        "count": 15
+      },
+      {
+        "name": "The Chinese University of Hong Kong",
+        "count": 15
+      },
+      {
+        "name": "Peking University",
+        "count": 15
+      },
+      {
+        "name": "Columbia University",
+        "count": 15
+      },
+      {
+        "name": "University of California, Riverside",
+        "count": 14
+      },
+      {
+        "name": "Virginia Tech",
+        "count": 14
+      },
+      {
+        "name": "University of Massachusetts at Amherst",
+        "count": 14
+      },
+      {
+        "name": "University of California, San Diego",
+        "count": 14
+      },
+      {
+        "name": "institute of software, chinese academy of sciences",
+        "count": 14
+      },
+      {
+        "name": "The University of Hong Kong",
+        "count": 13
+      },
+      {
+        "name": "National University of Singapore",
+        "count": 12
+      },
+      {
+        "name": "Stanford University",
+        "count": 12
+      },
+      {
+        "name": "University of Virginia, Charlottesville",
+        "count": 12
+      },
+      {
+        "name": "bytedance",
+        "count": 11
+      },
+      {
+        "name": "West Chester University of Pennsylvania",
+        "count": 11
+      },
+      {
+        "name": "google",
+        "count": 11
+      },
+      {
+        "name": "University of Washington",
+        "count": 10
+      },
+      {
+        "name": "University of Minnesota",
+        "count": 10
+      },
+      {
+        "name": "New York University",
+        "count": 10
+      },
+      {
+        "name": "Boston University",
+        "count": 10
+      },
+      {
+        "name": "University of California, Santa Barbara",
+        "count": 9
+      },
+      {
+        "name": "Harvard University",
+        "count": 9
+      },
+      {
+        "name": "University of California, Los Angeles",
+        "count": 9
+      },
+      {
+        "name": "Rutgers University",
+        "count": 9
+      },
+      {
+        "name": "National Technical University of Athens",
+        "count": 9
+      },
+      {
+        "name": "University of Florida",
+        "count": 9
+      },
+      {
+        "name": "University of Science and Technology of China",
+        "count": 9
+      },
+      {
+        "name": "National University of Defense Technology",
+        "count": 8
+      },
+      {
+        "name": "University of Southern California",
+        "count": 8
+      },
+      {
+        "name": "cuhk",
+        "count": 8
+      },
+      {
+        "name": "kaust",
+        "count": 8
+      },
+      {
+        "name": "Toyo University",
+        "count": 8
+      },
+      {
+        "name": "University of California, Santa Cruz",
+        "count": 8
+      },
+      {
+        "name": "Victoria University Toronto, University of Toronto",
+        "count": 8
+      },
+      {
+        "name": "Duke University",
+        "count": 8
+      },
+      {
+        "name": "microsoft",
+        "count": 7
+      },
+      {
+        "name": "Northwestern University",
+        "count": 7
+      },
+      {
+        "name": "University of British Columbia",
+        "count": 7
+      },
+      {
+        "name": "Zhejiang University",
+        "count": 7
+      },
+      {
+        "name": "netflix",
+        "count": 7
+      },
+      {
+        "name": "Pennsylvania State University",
+        "count": 7
+      },
+      {
+        "name": "University of Cambridge",
+        "count": 7
+      },
+      {
+        "name": "uiuc",
+        "count": 7
+      },
+      {
+        "name": "University of Texas at Arlington",
+        "count": 7
+      },
+      {
+        "name": "University of California, Merced",
+        "count": 7
+      },
+      {
+        "name": "Harbin Institute of Technology",
+        "count": 7
+      },
+      {
+        "name": "huawei technologies co.",
+        "count": 6
+      },
+      {
+        "name": "Nanjing University",
+        "count": 6
+      },
+      {
+        "name": "Indian Institute of Technology, Bombay",
+        "count": 6
+      },
+      {
+        "name": "University of Manchester",
+        "count": 6
+      },
+      {
+        "name": "akamai technologies",
+        "count": 6
+      },
+      {
+        "name": "amazon",
+        "count": 6
+      },
+      {
+        "name": "Syracuse University",
+        "count": 6
+      },
+      {
+        "name": "the ohio state university",
+        "count": 6
+      },
+      {
+        "name": "uc irvine",
+        "count": 6
+      },
+      {
+        "name": "University of California, Berkeley",
+        "count": 6
+      },
+      {
+        "name": "mit csail",
+        "count": 5
+      },
+      {
+        "name": "Massachusetts Institute of Technology",
+        "count": 5
+      },
+      {
+        "name": "Royal Holloway University of London",
+        "count": 5
+      },
+      {
+        "name": "Emory University",
+        "count": 5
+      },
+      {
+        "name": "Johns Hopkins University",
+        "count": 5
+      },
+      {
+        "name": "sapienza university of rome",
+        "count": 5
+      },
+      {
+        "name": "University of Edinburgh",
+        "count": 5
+      },
+      {
+        "name": "Bingham University",
+        "count": 5
+      },
+      {
+        "name": "University Politehnica of Bucharest",
+        "count": 4
+      },
+      {
+        "name": "Nankai University",
+        "count": 4
+      },
+      {
+        "name": "institute of computing technology chinese academy of sciences",
+        "count": 4
+      },
+      {
+        "name": "tencent",
+        "count": 4
+      },
+      {
+        "name": "mpi-sws",
+        "count": 4
+      },
+      {
+        "name": "ShanghaiTech University",
+        "count": 4
+      },
+      {
+        "name": "max planck institute for informatics",
+        "count": 4
+      },
+      {
+        "name": "cuhk-shenzhen",
+        "count": 4
+      },
+      {
+        "name": "kaist",
+        "count": 4
+      },
+      {
+        "name": "North Carolina State University",
+        "count": 4
+      },
+      {
+        "name": "Princeton University",
+        "count": 4
+      },
+      {
+        "name": "vrije universiteit amsterdam",
+        "count": 4
+      },
+      {
+        "name": "University of San Diego",
+        "count": 4
+      },
+      {
+        "name": "University of Illinois Chicago",
+        "count": 4
+      },
+      {
+        "name": "intel labs",
+        "count": 4
+      },
+      {
+        "name": "Iowa State University",
+        "count": 4
+      },
+      {
+        "name": "university of chinese academy of sciences",
+        "count": 4
+      },
+      {
+        "name": "John Brown University",
+        "count": 4
+      },
+      {
+        "name": "Northeastern University",
+        "count": 4
+      },
+      {
+        "name": "Renmin University of China",
+        "count": 4
+      },
+      {
+        "name": "Xiamen University",
+        "count": 4
+      },
+      {
+        "name": "Ondokuz Mayis University Samsun",
+        "count": 4
+      },
+      {
+        "name": "Zhengzhou University of Technology",
+        "count": 4
+      },
+      {
+        "name": "University of Oregon",
+        "count": 3
+      },
+      {
+        "name": "University of New South Wales",
+        "count": 3
+      },
+      {
+        "name": "King Abdullah University of Science and Technology",
+        "count": 3
+      },
+      {
+        "name": "East China Normal University",
+        "count": 3
+      },
+      {
+        "name": "Newcastle University",
+        "count": 3
+      },
+      {
+        "name": "West Texas A&M University",
+        "count": 3
+      },
+      {
+        "name": "Alexandria Technical & Community College",
+        "count": 3
+      },
+      {
+        "name": "University of Nebraska, Omaha",
+        "count": 3
+      },
+      {
+        "name": "telefonica research",
+        "count": 3
+      },
+      {
+        "name": "University of Maryland, College Park",
+        "count": 3
+      },
+      {
+        "name": "linkedin",
+        "count": 3
+      },
+      {
+        "name": "ucla",
+        "count": 3
+      },
+      {
+        "name": "Rice University",
+        "count": 3
+      },
+      {
+        "name": "inesc tec & u. minho",
+        "count": 3
+      },
+      {
+        "name": "Debre Birhan University",
+        "count": 3
+      },
+      {
+        "name": "inria",
+        "count": 3
+      },
+      {
+        "name": "University of California, Davis",
+        "count": 3
+      },
+      {
+        "name": "Indiana University",
+        "count": 3
+      },
+      {
+        "name": "University of Minnesota - Morris",
+        "count": 3
+      },
+      {
+        "name": "DePaul University",
+        "count": 3
+      },
+      {
+        "name": "pnnl",
+        "count": 3
+      },
+      {
+        "name": "University of Maryland, Baltimore",
+        "count": 3
+      },
+      {
+        "name": "hewlett packard enterprise",
+        "count": 2
+      },
+      {
+        "name": "baidu security",
+        "count": 2
+      },
+      {
+        "name": "Medical University of South Carolina",
+        "count": 2
+      },
+      {
+        "name": "iit kanpur",
+        "count": 2
+      },
+      {
+        "name": "orange labs",
+        "count": 2
+      },
+      {
+        "name": "Technische Universität München",
+        "count": 2
+      },
+      {
+        "name": "Oregon State University",
+        "count": 2
+      },
+      {
+        "name": "University of Pecs",
+        "count": 2
+      },
+      {
+        "name": "Institute of Space Technology",
+        "count": 2
+      },
+      {
+        "name": "Monash University",
+        "count": 2
+      },
+      {
+        "name": "University of Kansas",
+        "count": 2
+      },
+      {
+        "name": "Brno University of Technology",
+        "count": 2
+      },
+      {
+        "name": "University of Michigan - Dearborn",
+        "count": 2
+      },
+      {
+        "name": "hewlett packard enterprise labs",
+        "count": 2
+      },
+      {
+        "name": "Indiana University - Bloomington",
+        "count": 2
+      },
+      {
+        "name": "University of Iowa",
+        "count": 2
+      },
+      {
+        "name": "Singapore University of Technology and Design",
+        "count": 2
+      },
+      {
+        "name": "imec-distrinet, ku leuven",
+        "count": 2
+      },
+      {
+        "name": "New Jersey Institute of Technology",
+        "count": 2
+      },
+      {
+        "name": "university of crete & ics-forth",
+        "count": 2
+      },
+      {
+        "name": "University of Lincoln",
+        "count": 2
+      },
+      {
+        "name": "inesc-id & ist u. lisboa in Portugal",
+        "count": 2
+      },
+      {
+        "name": "Keio University",
+        "count": 2
+      },
+      {
+        "name": "University of Tokyo",
+        "count": 2
+      },
+      {
+        "name": "hkust",
+        "count": 2
+      },
+      {
+        "name": "Technical University of Lublin",
+        "count": 2
+      },
+      {
+        "name": "Federal University of Technology, Minna",
+        "count": 2
+      },
+      {
+        "name": "Lynn University",
+        "count": 2
+      },
+      {
+        "name": "Technische Universität Dresden",
+        "count": 2
+      },
+      {
+        "name": "University of Oslo",
+        "count": 2
+      },
+      {
+        "name": "Stevens Institute of Technology",
+        "count": 2
+      },
+      {
+        "name": "Riverside City College",
+        "count": 2
+      },
+      {
+        "name": "Friedrich-Alexander Universität Erlangen-Nürnberg",
+        "count": 2
+      },
+      {
+        "name": "Illinois Institute of Technology",
+        "count": 2
+      },
+      {
+        "name": "ist lisbon & inesc-id",
+        "count": 2
+      },
+      {
+        "name": "Singapore Management University",
+        "count": 2
+      },
+      {
+        "name": "Technische Universität Dortmund",
+        "count": 2
+      },
+      {
+        "name": "imdea networks institute & uc3m",
+        "count": 2
+      },
+      {
+        "name": "Tianjin University",
+        "count": 2
+      },
+      {
+        "name": "Colorado School of Mines",
+        "count": 2
+      },
+      {
+        "name": "Sungkyunkwan University",
+        "count": 2
+      },
+      {
+        "name": "Kurume Institute of Technology",
+        "count": 2
+      },
+      {
+        "name": "Rochester Institute of Technology",
+        "count": 2
+      },
+      {
+        "name": "univ. toulouse iii, irit",
+        "count": 2
+      },
+      {
+        "name": "leibniz supercomputing center",
+        "count": 2
+      },
+      {
+        "name": "Power and Water Institute of Technology",
+        "count": 2
+      },
+      {
+        "name": "Kigali Independent University",
+        "count": 2
+      },
+      {
+        "name": "Wiregrass Georgia Technical College",
+        "count": 2
+      },
+      {
+        "name": "politecnico di milano",
+        "count": 2
+      },
+      {
+        "name": "Universidade Estadual de Santa Cruz",
+        "count": 2
+      },
+      {
+        "name": "University of Tennessee, Knoxville",
+        "count": 2
+      },
+      {
+        "name": "The University of Texas at San Antonio",
+        "count": 2
+      },
+      {
+        "name": "Florida State University",
+        "count": 2
+      },
+      {
+        "name": "Yale University",
+        "count": 2
+      },
+      {
+        "name": "Harare Institute of Technology",
+        "count": 2
+      },
+      {
+        "name": "Southeast University",
+        "count": 2
+      },
+      {
+        "name": "Southwest Jiaotong University",
+        "count": 2
+      },
+      {
+        "name": "Kennesaw State University",
+        "count": 2
+      },
+      {
+        "name": "University of Texas at Dallas",
+        "count": 2
+      },
+      {
+        "name": "Nanjing University of Science and Technology",
+        "count": 2
+      },
+      {
+        "name": "vu amsterdam",
+        "count": 1
+      },
+      {
+        "name": "Universidade Federal de Uberlândia",
+        "count": 1
+      },
+      {
+        "name": "télécom sudparis",
+        "count": 1
+      },
+      {
+        "name": "Technion - Israel Institute of Technology",
+        "count": 1
+      },
+      {
+        "name": "University of South Florida",
+        "count": 1
+      },
+      {
+        "name": "Amirkabir University of Technology",
+        "count": 1
+      },
+      {
+        "name": "Chengdu College of University of Electronic Science and Technology of China",
+        "count": 1
+      },
+      {
+        "name": "University of Bristol",
+        "count": 1
+      },
+      {
+        "name": "Brac University",
+        "count": 1
+      },
+      {
+        "name": "Umea University",
+        "count": 1
+      },
+      {
+        "name": "blackberry",
+        "count": 1
+      },
+      {
+        "name": "University of Newcastle",
+        "count": 1
+      },
+      {
+        "name": "tu munich",
+        "count": 1
+      },
+      {
+        "name": "meta",
+        "count": 1
+      },
+      {
+        "name": "ics-forth",
+        "count": 1
+      },
+      {
+        "name": "Technische Universität Carolo-Wilhelmina zu Braunschweig",
+        "count": 1
+      },
+      {
+        "name": "Shanghai Jiaotong University",
+        "count": 1
+      },
+      {
+        "name": "Universidade Federal de Goiás",
+        "count": 1
+      },
+      {
+        "name": "Massey University",
+        "count": 1
+      },
+      {
+        "name": "Chalmers University of Technology",
+        "count": 1
+      },
+      {
+        "name": "Mbarara University of Science and Technology",
+        "count": 1
+      },
+      {
+        "name": "Baze University Abuja",
+        "count": 1
+      },
+      {
+        "name": "COMSATS Institute of Information Technology, Wah",
+        "count": 1
+      },
+      {
+        "name": "school of computer science, university college dublin",
+        "count": 1
+      },
+      {
+        "name": "University of Naples Federico II",
+        "count": 1
+      },
+      {
+        "name": "Eötvös Lorand University",
+        "count": 1
+      },
+      {
+        "name": "Indian Institute of Technology, Madras",
+        "count": 1
+      },
+      {
+        "name": "zhengqing",
+        "count": 1
+      },
+      {
+        "name": "Chongqing University",
+        "count": 1
+      },
+      {
+        "name": "Université de Pau et des Pays de l'Adour",
+        "count": 1
+      },
+      {
+        "name": "York University",
+        "count": 1
+      },
+      {
+        "name": "Aalto University",
+        "count": 1
+      },
+      {
+        "name": "accenture labs",
+        "count": 1
+      },
+      {
+        "name": "Universidade do Amazonas",
+        "count": 1
+      },
+      {
+        "name": "University of Roma \"Tor Vergata\"",
+        "count": 1
+      },
+      {
+        "name": "lrz",
+        "count": 1
+      },
+      {
+        "name": "ensta bretagne",
+        "count": 1
+      },
+      {
+        "name": "unist",
+        "count": 1
+      },
+      {
+        "name": "Ecole Pour l'Informatique et les Techniques Avancees",
+        "count": 1
+      },
+      {
+        "name": "niccolò cusano university",
+        "count": 1
+      },
+      {
+        "name": "uc irvine & mpi-sp",
+        "count": 1
+      },
+      {
+        "name": "Fachhochschule Wiener Neustadt",
+        "count": 1
+      },
+      {
+        "name": "University of North Carolina at Chapel Hill",
+        "count": 1
+      },
+      {
+        "name": "university of telepegaso,rome,italy",
+        "count": 1
+      },
+      {
+        "name": "University of Basel",
+        "count": 1
+      },
+      {
+        "name": "Delft University of Technology",
+        "count": 1
+      },
+      {
+        "name": "barkhausen institut",
+        "count": 1
+      },
+      {
+        "name": "Beijing University of Posts and Telecommunications",
+        "count": 1
+      },
+      {
+        "name": "The Hang Seng University of Hong Kong",
+        "count": 1
+      },
+      {
+        "name": "Korea University",
+        "count": 1
+      },
+      {
+        "name": "IAE France",
+        "count": 1
+      },
+      {
+        "name": "Guangzhou College of South China University of Technology",
+        "count": 1
+      },
+      {
+        "name": "Cardiff University",
+        "count": 1
+      },
+      {
+        "name": "University of Colorado at Boulder",
+        "count": 1
+      },
+      {
+        "name": "University of Central Missouri",
+        "count": 1
+      },
+      {
+        "name": "University of Florence",
+        "count": 1
+      },
+      {
+        "name": "Jiangsu University of Science and Technology",
+        "count": 1
+      },
+      {
+        "name": "Tennessee Technological University",
+        "count": 1
+      },
+      {
+        "name": "Dartmouth College",
+        "count": 1
+      },
+      {
+        "name": "HES-SO : UAS Western Switzerland",
+        "count": 1
+      },
+      {
+        "name": "University of Public Service",
+        "count": 1
+      },
+      {
+        "name": "Koç University",
+        "count": 1
+      },
+      {
+        "name": "Bowling Green State University",
+        "count": 1
+      },
+      {
+        "name": "Waseda University",
+        "count": 1
+      },
+      {
+        "name": "University of Warsaw",
+        "count": 1
+      },
+      {
+        "name": "Technische Universität Ilmenau",
+        "count": 1
+      },
+      {
+        "name": "Johannes-Gutenberg Universität Mainz",
+        "count": 1
+      },
+      {
+        "name": "Washington State University at Vancouver",
+        "count": 1
+      },
+      {
+        "name": "University of Alabama at Huntsville",
+        "count": 1
+      },
+      {
+        "name": "Indian University",
+        "count": 1
+      },
+      {
+        "name": "Sardar Vallabhai Patel University of Agriculture Amd Technology",
+        "count": 1
+      },
+      {
+        "name": "Uppsala University",
+        "count": 1
+      },
+      {
+        "name": "University of Fribourg",
+        "count": 1
+      },
+      {
+        "name": "Grace College",
+        "count": 1
+      },
+      {
+        "name": "vmware research",
+        "count": 1
+      },
+      {
+        "name": "tu darmstadt",
+        "count": 1
+      },
+      {
+        "name": "Université de Neuchâtel",
+        "count": 1
+      },
+      {
+        "name": "iit madras",
+        "count": 1
+      },
+      {
+        "name": "Universität Innsbruck",
+        "count": 1
+      },
+      {
+        "name": "Eskisehir Technical University",
+        "count": 1
+      },
+      {
+        "name": "Boise State University",
+        "count": 1
+      },
+      {
+        "name": "sandia national laboratories",
+        "count": 1
+      },
+      {
+        "name": "University of Queensland",
+        "count": 1
+      },
+      {
+        "name": "University of Luxemburg",
+        "count": 1
+      },
+      {
+        "name": "George Fox University",
+        "count": 1
+      },
+      {
+        "name": "University of North Florida",
+        "count": 1
+      },
+      {
+        "name": "National Taiwan University",
+        "count": 1
+      },
+      {
+        "name": "National Chung Cheng University",
+        "count": 1
+      },
+      {
+        "name": "Arizona State University",
+        "count": 1
+      },
+      {
+        "name": "Damascus University",
+        "count": 1
+      },
+      {
+        "name": "Technical University of Crete",
+        "count": 1
+      },
+      {
+        "name": "Augusta University",
+        "count": 1
+      },
+      {
+        "name": "University of Pittsburgh",
+        "count": 1
+      },
+      {
+        "name": "University of Waterloo",
+        "count": 1
+      },
+      {
+        "name": "Loyola University Chicago",
+        "count": 1
+      },
+      {
+        "name": "tu delft",
+        "count": 1
+      }
+    ],
+    "security": [
+      {
+        "name": "cispa helmholtz center for information security",
+        "count": 49
+      },
+      {
+        "name": "Purdue University",
+        "count": 39
+      },
+      {
+        "name": "University of California, Irvine",
+        "count": 35
+      },
+      {
+        "name": "University of Wisconsin - Madison",
+        "count": 25
+      },
+      {
+        "name": "imec-distrinet, ku leuven",
+        "count": 24
+      },
+      {
+        "name": "National Tsinghua University",
+        "count": 24
+      },
+      {
+        "name": "Ruhr-Universität Bochum",
+        "count": 23
+      },
+      {
+        "name": "Georgia Institute of Technology",
+        "count": 22
+      },
+      {
+        "name": "University of Waterloo",
+        "count": 19
+      },
+      {
+        "name": "google",
+        "count": 17
+      },
+      {
+        "name": "Zhejiang University",
+        "count": 17
+      },
+      {
+        "name": "The Hong Kong University of Science and Technology",
+        "count": 16
+      },
+      {
+        "name": "Toyo University",
+        "count": 16
+      },
+      {
+        "name": "Virginia Tech",
+        "count": 15
+      },
+      {
+        "name": "Indiana University - Bloomington",
+        "count": 14
+      },
+      {
+        "name": "The Hong Kong Polytechnic University",
+        "count": 13
+      },
+      {
+        "name": "Carnegie Mellon University",
+        "count": 13
+      },
+      {
+        "name": "computing and imaging institute - the university of utah",
+        "count": 12
+      },
+      {
+        "name": "Stevens Institute of Technology",
+        "count": 12
+      },
+      {
+        "name": "University of Twente",
+        "count": 12
+      },
+      {
+        "name": "sapienza university of rome",
+        "count": 12
+      },
+      {
+        "name": "Anderson University",
+        "count": 12
+      },
+      {
+        "name": "King's College London, University of London",
+        "count": 11
+      },
+      {
+        "name": "csiro's data61",
+        "count": 11
+      },
+      {
+        "name": "Northwestern University",
+        "count": 11
+      },
+      {
+        "name": "Pennsylvania State University",
+        "count": 11
+      },
+      {
+        "name": "Baze University Abuja",
+        "count": 11
+      },
+      {
+        "name": "Louisiana State University",
+        "count": 11
+      },
+      {
+        "name": "University of California, Riverside",
+        "count": 10
+      },
+      {
+        "name": "Peking University",
+        "count": 10
+      },
+      {
+        "name": "George Mason University",
+        "count": 10
+      },
+      {
+        "name": "Richard Bland College of the College of William and Mary",
+        "count": 10
+      },
+      {
+        "name": "Johns Hopkins University",
+        "count": 10
+      },
+      {
+        "name": "eth zurich",
+        "count": 10
+      },
+      {
+        "name": "Karlsruher Institut für Technologie",
+        "count": 10
+      },
+      {
+        "name": "University of Chicago",
+        "count": 10
+      },
+      {
+        "name": "North Carolina State University",
+        "count": 10
+      },
+      {
+        "name": "University of Illinois Urbana-Champaign",
+        "count": 9
+      },
+      {
+        "name": "University of California, Davis",
+        "count": 9
+      },
+      {
+        "name": "The Chinese University of Hong Kong",
+        "count": 9
+      },
+      {
+        "name": "Northeastern University",
+        "count": 9
+      },
+      {
+        "name": "max planck institute for informatics",
+        "count": 9
+      },
+      {
+        "name": "University of Fribourg",
+        "count": 8
+      },
+      {
+        "name": "tu wien",
+        "count": 8
+      },
+      {
+        "name": "University of Southern California",
+        "count": 8
+      },
+      {
+        "name": "Nanyang Technological University",
+        "count": 8
+      },
+      {
+        "name": "University of California, Santa Barbara",
+        "count": 8
+      },
+      {
+        "name": "University of California, San Diego",
+        "count": 8
+      },
+      {
+        "name": "Princeton University",
+        "count": 8
+      },
+      {
+        "name": "Aalto University",
+        "count": 8
+      },
+      {
+        "name": "University of San Diego",
+        "count": 8
+      },
+      {
+        "name": "New York University",
+        "count": 8
+      },
+      {
+        "name": "Kurume Institute of Technology",
+        "count": 7
+      },
+      {
+        "name": "University of Melbourne",
+        "count": 7
+      },
+      {
+        "name": "Singapore Management University",
+        "count": 7
+      },
+      {
+        "name": "Washington University, Saint Louis",
+        "count": 7
+      },
+      {
+        "name": "Technische Universität Carolo-Wilhelmina zu Braunschweig",
+        "count": 7
+      },
+      {
+        "name": "kaist",
+        "count": 7
+      },
+      {
+        "name": "University of California, Berkeley",
+        "count": 7
+      },
+      {
+        "name": "institute of parallel and distributed systems, shanghai jiao tong university",
+        "count": 7
+      },
+      {
+        "name": "Arak University of Technology",
+        "count": 7
+      },
+      {
+        "name": "John Brown University",
+        "count": 6
+      },
+      {
+        "name": "epfl",
+        "count": 6
+      },
+      {
+        "name": "University of Queensland",
+        "count": 6
+      },
+      {
+        "name": "Royal Holloway University of London",
+        "count": 6
+      },
+      {
+        "name": "uc irvine",
+        "count": 6
+      },
+      {
+        "name": "sandia national laboratories",
+        "count": 6
+      },
+      {
+        "name": "Arizona State University",
+        "count": 6
+      },
+      {
+        "name": "tu darmstadt",
+        "count": 6
+      },
+      {
+        "name": "Shandong University",
+        "count": 6
+      },
+      {
+        "name": "Boston University",
+        "count": 6
+      },
+      {
+        "name": "University of Maryland, Baltimore",
+        "count": 6
+      },
+      {
+        "name": "Technische Universität München",
+        "count": 6
+      },
+      {
+        "name": "intel labs",
+        "count": 6
+      },
+      {
+        "name": "University of Adelaide",
+        "count": 6
+      },
+      {
+        "name": "Indian Institute of Technology, Kharagpur",
+        "count": 6
+      },
+      {
+        "name": "University of Michigan - Ann Arbor",
+        "count": 6
+      },
+      {
+        "name": "University of Virginia, Charlottesville",
+        "count": 5
+      },
+      {
+        "name": "National University of Singapore",
+        "count": 5
+      },
+      {
+        "name": "Masaryk University",
+        "count": 5
+      },
+      {
+        "name": "University of Illinois Chicago",
+        "count": 5
+      },
+      {
+        "name": "Wiregrass Georgia Technical College",
+        "count": 5
+      },
+      {
+        "name": "City University of Hong Kong",
+        "count": 5
+      },
+      {
+        "name": "Yale University",
+        "count": 5
+      },
+      {
+        "name": "lawrence berkeley national laboratory",
+        "count": 5
+      },
+      {
+        "name": "University of Science and Technology of China",
+        "count": 5
+      },
+      {
+        "name": "New York University, Abu Dhabi",
+        "count": 5
+      },
+      {
+        "name": "vrije universiteit amsterdam",
+        "count": 5
+      },
+      {
+        "name": "The University of Texas at Austin",
+        "count": 5
+      },
+      {
+        "name": "the ohio state university",
+        "count": 5
+      },
+      {
+        "name": "Tampere University of Technology",
+        "count": 5
+      },
+      {
+        "name": "University of Texas at Dallas",
+        "count": 4
+      },
+      {
+        "name": "Georgia State University",
+        "count": 4
+      },
+      {
+        "name": "Indian Institute of Technology, Madras",
+        "count": 4
+      },
+      {
+        "name": "The University of Hong Kong",
+        "count": 4
+      },
+      {
+        "name": "West Texas A&M University",
+        "count": 4
+      },
+      {
+        "name": "University of Maine",
+        "count": 4
+      },
+      {
+        "name": "University of Maryland, College Park",
+        "count": 4
+      },
+      {
+        "name": "University College London, University of London",
+        "count": 4
+      },
+      {
+        "name": "University of Tartu",
+        "count": 4
+      },
+      {
+        "name": "Duke University",
+        "count": 4
+      },
+      {
+        "name": "University of Arizona",
+        "count": 4
+      },
+      {
+        "name": "University of Luxemburg",
+        "count": 4
+      },
+      {
+        "name": "Sharif University of Technology",
+        "count": 4
+      },
+      {
+        "name": "imperial college london",
+        "count": 4
+      },
+      {
+        "name": "University of Florida",
+        "count": 4
+      },
+      {
+        "name": "University of Minnesota",
+        "count": 4
+      },
+      {
+        "name": "Yonsei University",
+        "count": 4
+      },
+      {
+        "name": "Nankai University",
+        "count": 4
+      },
+      {
+        "name": "accenture labs",
+        "count": 3
+      },
+      {
+        "name": "Southwest University of Science and Technology",
+        "count": 3
+      },
+      {
+        "name": "rwth aachen university",
+        "count": 3
+      },
+      {
+        "name": "University of Pittsburgh",
+        "count": 3
+      },
+      {
+        "name": "Penza State University",
+        "count": 3
+      },
+      {
+        "name": "cispa",
+        "count": 3
+      },
+      {
+        "name": "University of Newcastle",
+        "count": 3
+      },
+      {
+        "name": "Dartmouth College",
+        "count": 3
+      },
+      {
+        "name": "Debre Birhan University",
+        "count": 3
+      },
+      {
+        "name": "mpi-sp",
+        "count": 3
+      },
+      {
+        "name": "University of Connecticut",
+        "count": 3
+      },
+      {
+        "name": "Seoul National University",
+        "count": 3
+      },
+      {
+        "name": "University of Washington",
+        "count": 3
+      },
+      {
+        "name": "University of Oxford",
+        "count": 3
+      },
+      {
+        "name": "inria",
+        "count": 3
+      },
+      {
+        "name": "Linköping University",
+        "count": 3
+      },
+      {
+        "name": "University of Calgary",
+        "count": 3
+      },
+      {
+        "name": "Bloomsburg University of Pennsylvania",
+        "count": 3
+      },
+      {
+        "name": "ucla",
+        "count": 3
+      },
+      {
+        "name": "University of California, Los Angeles",
+        "count": 3
+      },
+      {
+        "name": "meta",
+        "count": 3
+      },
+      {
+        "name": "George Washington University",
+        "count": 3
+      },
+      {
+        "name": "University of Padua",
+        "count": 3
+      },
+      {
+        "name": "University of Manchester",
+        "count": 3
+      },
+      {
+        "name": "ensta bretagne",
+        "count": 3
+      },
+      {
+        "name": "blackberry",
+        "count": 3
+      },
+      {
+        "name": "microsoft research",
+        "count": 3
+      },
+      {
+        "name": "University of Wyoming",
+        "count": 3
+      },
+      {
+        "name": "Massachusetts Institute of Technology",
+        "count": 3
+      },
+      {
+        "name": "Huazhong University of Science and Technology",
+        "count": 3
+      },
+      {
+        "name": "Southeast University",
+        "count": 3
+      },
+      {
+        "name": "Radboud University",
+        "count": 3
+      },
+      {
+        "name": "University of Missouri - Kansas City",
+        "count": 3
+      },
+      {
+        "name": "Florida International University",
+        "count": 3
+      },
+      {
+        "name": "University of Milan",
+        "count": 3
+      },
+      {
+        "name": "Universität Liechtenstein",
+        "count": 2
+      },
+      {
+        "name": "University of Texas at Arlington",
+        "count": 2
+      },
+      {
+        "name": "Fudan University",
+        "count": 2
+      },
+      {
+        "name": "San Diego State University",
+        "count": 2
+      },
+      {
+        "name": "Washington State University",
+        "count": 2
+      },
+      {
+        "name": "University of South Florida",
+        "count": 2
+      },
+      {
+        "name": "uc irvine & mpi-sp",
+        "count": 2
+      },
+      {
+        "name": "telefonica research",
+        "count": 2
+      },
+      {
+        "name": "Riverside City College",
+        "count": 2
+      },
+      {
+        "name": "Eindhoven University of Technology",
+        "count": 2
+      },
+      {
+        "name": "Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)",
+        "count": 2
+      },
+      {
+        "name": "KTH Royal Institute of Technology",
+        "count": 2
+      },
+      {
+        "name": "Texas A&M University - Corpus Christi",
+        "count": 2
+      },
+      {
+        "name": "Université Catholique de Louvain",
+        "count": 2
+      },
+      {
+        "name": "Freie Universität Berlin",
+        "count": 2
+      },
+      {
+        "name": "tu delft",
+        "count": 2
+      },
+      {
+        "name": "University of Edinburgh",
+        "count": 2
+      },
+      {
+        "name": "Kigali Independent University",
+        "count": 2
+      },
+      {
+        "name": "mit csail",
+        "count": 2
+      },
+      {
+        "name": "ucl",
+        "count": 2
+      },
+      {
+        "name": "Case Western Reserve University",
+        "count": 2
+      },
+      {
+        "name": "University of Missouri",
+        "count": 2
+      },
+      {
+        "name": "University of Surrey",
+        "count": 2
+      },
+      {
+        "name": "Idaho State University",
+        "count": 2
+      },
+      {
+        "name": "Islamic Azad University, Region One",
+        "count": 2
+      },
+      {
+        "name": "Johnson C. Smith University",
+        "count": 2
+      },
+      {
+        "name": "Université Paris-Saclay",
+        "count": 2
+      },
+      {
+        "name": "American Graduate School in Paris",
+        "count": 2
+      },
+      {
+        "name": "University of Colorado at Denver",
+        "count": 2
+      },
+      {
+        "name": "University of Trento",
+        "count": 2
+      },
+      {
+        "name": "Technical University of Varna",
+        "count": 2
+      },
+      {
+        "name": "university of chinese academy of sciences",
+        "count": 2
+      },
+      {
+        "name": "Weizmann Institute of Science",
+        "count": 2
+      },
+      {
+        "name": "University of Richmond",
+        "count": 2
+      },
+      {
+        "name": "University of Cyprus",
+        "count": 2
+      },
+      {
+        "name": "amazon",
+        "count": 2
+      },
+      {
+        "name": "Swinburne University of Technology",
+        "count": 2
+      },
+      {
+        "name": "University of Malta",
+        "count": 2
+      },
+      {
+        "name": "Michigan State University",
+        "count": 2
+      },
+      {
+        "name": "tu berlin",
+        "count": 2
+      },
+      {
+        "name": "Long Island University",
+        "count": 2
+      },
+      {
+        "name": "cnrs",
+        "count": 2
+      },
+      {
+        "name": "Université du Québec à Montréal",
+        "count": 2
+      },
+      {
+        "name": "Syracuse University",
+        "count": 2
+      },
+      {
+        "name": "Wuhan University",
+        "count": 2
+      },
+      {
+        "name": "Technische Universität Dresden",
+        "count": 2
+      },
+      {
+        "name": "Friedrich-Alexander Universität Erlangen-Nürnberg",
+        "count": 2
+      },
+      {
+        "name": "Guangzhou College of South China University of Technology",
+        "count": 2
+      },
+      {
+        "name": "vu amsterdam",
+        "count": 2
+      },
+      {
+        "name": "Sardar Vallabhai Patel University of Agriculture Amd Technology",
+        "count": 2
+      },
+      {
+        "name": "Columbia University",
+        "count": 2
+      },
+      {
+        "name": "École normale supérieure Paris-Saclay",
+        "count": 2
+      },
+      {
+        "name": "Korea Advanced Institute of Science & Technology",
+        "count": 2
+      },
+      {
+        "name": "Stanford University",
+        "count": 2
+      },
+      {
+        "name": "University of British Columbia",
+        "count": 2
+      },
+      {
+        "name": "Universität Duisburg-Essen",
+        "count": 2
+      },
+      {
+        "name": "Technische Universität Darmstadt",
+        "count": 2
+      },
+      {
+        "name": "Rutgers University",
+        "count": 2
+      },
+      {
+        "name": "Federal University of Technology, Akure",
+        "count": 2
+      },
+      {
+        "name": "Universidade de São Paulo",
+        "count": 2
+      },
+      {
+        "name": "KBU International College",
+        "count": 2
+      },
+      {
+        "name": "Dalhousie University",
+        "count": 2
+      },
+      {
+        "name": "University of Bologna",
+        "count": 1
+      },
+      {
+        "name": "ShanghaiTech University",
+        "count": 1
+      },
+      {
+        "name": "University of Liberia",
+        "count": 1
+      },
+      {
+        "name": "Tallinn University of Technology",
+        "count": 1
+      },
+      {
+        "name": "Kyung Hee University",
+        "count": 1
+      },
+      {
+        "name": "Foothill-De Anza Community College District",
+        "count": 1
+      },
+      {
+        "name": "Old Dominion University",
+        "count": 1
+      },
+      {
+        "name": "Universität der Bundeswehr München",
+        "count": 1
+      },
+      {
+        "name": "University of Alberta",
+        "count": 1
+      },
+      {
+        "name": "University of Verona",
+        "count": 1
+      },
+      {
+        "name": "Liberty University",
+        "count": 1
+      },
+      {
+        "name": "Athens State University",
+        "count": 1
+      },
+      {
+        "name": "Indian Institute of Technology, Kanpur",
+        "count": 1
+      },
+      {
+        "name": "University of Zagreb",
+        "count": 1
+      },
+      {
+        "name": "Newcastle University",
+        "count": 1
+      },
+      {
+        "name": "University of North Carolina at Charlotte",
+        "count": 1
+      },
+      {
+        "name": "Universidade Federal de Minas Gerais",
+        "count": 1
+      },
+      {
+        "name": "Brock University",
+        "count": 1
+      },
+      {
+        "name": "Macquarie University",
+        "count": 1
+      },
+      {
+        "name": "CUNY City College of NY",
+        "count": 1
+      },
+      {
+        "name": "Swinburne University of Technology, Sarawak Campus",
+        "count": 1
+      },
+      {
+        "name": "Eastern Washington University",
+        "count": 1
+      },
+      {
+        "name": "Universidad Politécnica de Valencia",
+        "count": 1
+      },
+      {
+        "name": "North Carolina A&T State University",
+        "count": 1
+      },
+      {
+        "name": "University of St. Andrews",
+        "count": 1
+      },
+      {
+        "name": "West Chester University of Pennsylvania",
+        "count": 1
+      },
+      {
+        "name": "University of Massachusetts at Amherst",
+        "count": 1
+      },
+      {
+        "name": "University of Jammu",
+        "count": 1
+      },
+      {
+        "name": "University of New Mexico",
+        "count": 1
+      },
+      {
+        "name": "University of Maryland Eastern Shore",
+        "count": 1
+      },
+      {
+        "name": "University of Louisiana at Lafeyette",
+        "count": 1
+      },
+      {
+        "name": "Islamic University of Medinah",
+        "count": 1
+      },
+      {
+        "name": "University of Turin",
+        "count": 1
+      },
+      {
+        "name": "Zurich University of Applied Sciences Winterthur",
+        "count": 1
+      },
+      {
+        "name": "Cornell University",
+        "count": 1
+      },
+      {
+        "name": "iit madras",
+        "count": 1
+      },
+      {
+        "name": "Technische Universität Wien",
+        "count": 1
+      },
+      {
+        "name": "Chalmers University of Technology",
+        "count": 1
+      },
+      {
+        "name": "bytedance",
+        "count": 1
+      },
+      {
+        "name": "imdea software institute",
+        "count": 1
+      },
+      {
+        "name": "The University of Texas at San Antonio",
+        "count": 1
+      },
+      {
+        "name": "University of Copenhagen",
+        "count": 1
+      },
+      {
+        "name": "Renmin University of China",
+        "count": 1
+      },
+      {
+        "name": "Islamic Azad University, Qom",
+        "count": 1
+      },
+      {
+        "name": "University of Technology Sydney",
+        "count": 1
+      },
+      {
+        "name": "Kitami Institute of Technology",
+        "count": 1
+      },
+      {
+        "name": "National University of Defense Technology",
+        "count": 1
+      },
+      {
+        "name": "University of Anbar",
+        "count": 1
+      },
+      {
+        "name": "Concordia University",
+        "count": 1
+      },
+      {
+        "name": "Westfälische Wilhelms-Universität Münster",
+        "count": 1
+      },
+      {
+        "name": "Sungkyunkwan University",
+        "count": 1
+      },
+      {
+        "name": "Université Clermont Auvergne",
+        "count": 1
+      },
+      {
+        "name": "Monash University",
+        "count": 1
+      },
+      {
+        "name": "Brigham Young University",
+        "count": 1
+      },
+      {
+        "name": "National Sun Yat-Sen University",
+        "count": 1
+      },
+      {
+        "name": "University of Northern Colorado",
+        "count": 1
+      },
+      {
+        "name": "Vrije Universiteit Brussel",
+        "count": 1
+      },
+      {
+        "name": "Wayne State University",
+        "count": 1
+      },
+      {
+        "name": "Florida Institute of Technology",
+        "count": 1
+      },
+      {
+        "name": "Ben-Gurion University of the Negev",
+        "count": 1
+      },
+      {
+        "name": "UCSI University",
+        "count": 1
+      },
+      {
+        "name": "Nanjing University",
+        "count": 1
+      },
+      {
+        "name": "Denison University",
+        "count": 1
+      },
+      {
+        "name": "Northwest Polytechnical University Xi'an",
+        "count": 1
+      },
+      {
+        "name": "University of Mississippi",
+        "count": 1
+      },
+      {
+        "name": "University of Tennessee, Knoxville",
+        "count": 1
+      },
+      {
+        "name": "University of Salerno",
+        "count": 1
+      },
+      {
+        "name": "Université Grenoble Alpes",
+        "count": 1
+      },
+      {
+        "name": "Universität des Saarlandes",
+        "count": 1
+      },
+      {
+        "name": "Howard University",
+        "count": 1
+      },
+      {
+        "name": "University of New South Wales",
+        "count": 1
+      },
+      {
+        "name": "Prince Sultan University",
+        "count": 1
+      },
+      {
+        "name": "University of Calabria",
+        "count": 1
+      },
+      {
+        "name": "Helena Chodkowska University of Technology and Economics",
+        "count": 1
+      },
+      {
+        "name": "International University in Germany",
+        "count": 1
+      },
+      {
+        "name": "Bingham University",
+        "count": 1
+      },
+      {
+        "name": "microsoft",
+        "count": 1
+      },
+      {
+        "name": "Tulane University",
+        "count": 1
+      },
+      {
+        "name": "Universität Innsbruck",
+        "count": 1
+      },
+      {
+        "name": "Tianjin University",
+        "count": 1
+      },
+      {
+        "name": "University of Massachusetts at Lowell",
+        "count": 1
+      },
+      {
+        "name": "Victoria University",
+        "count": 1
+      },
+      {
+        "name": "Hefei University of Technology",
+        "count": 1
+      },
+      {
+        "name": "linkedin",
+        "count": 1
+      },
+      {
+        "name": "University of Illinois Springfield",
+        "count": 1
+      },
+      {
+        "name": "Harvard University",
+        "count": 1
+      },
+      {
+        "name": "Tel Aviv University",
+        "count": 1
+      },
+      {
+        "name": "University of Iowa",
+        "count": 1
+      },
+      {
+        "name": "Rochester Institute of Technology",
+        "count": 1
+      },
+      {
+        "name": "University of Genoa",
+        "count": 1
+      },
+      {
+        "name": "Lebanese University",
+        "count": 1
+      },
+      {
+        "name": "University of Georgia",
+        "count": 1
+      },
+      {
+        "name": "University of Human Development (Kurdistan Region)",
+        "count": 1
+      },
+      {
+        "name": "baidu security",
+        "count": 1
+      },
+      {
+        "name": "Clemson University",
+        "count": 1
+      },
+      {
+        "name": "East China Normal University",
+        "count": 1
+      },
+      {
+        "name": "University of Birmingham",
+        "count": 1
+      },
+      {
+        "name": "University of Kansas",
+        "count": 1
+      },
+      {
+        "name": "Oregon State University",
+        "count": 1
+      },
+      {
+        "name": "Dokuz Eylül University",
+        "count": 1
+      },
+      {
+        "name": "Open University of the Netherlands",
+        "count": 1
+      },
+      {
+        "name": "Université de Picardie Jules-Verne",
+        "count": 1
+      },
+      {
+        "name": "Tashkent University of Information Technologies",
+        "count": 1
+      },
+      {
+        "name": "University of Pisa",
+        "count": 1
+      },
+      {
+        "name": "Medizinische Universität Lübeck",
+        "count": 1
+      },
+      {
+        "name": "University of Bristol",
+        "count": 1
+      },
+      {
+        "name": "Louvain School of Management",
+        "count": 1
+      },
+      {
+        "name": "Westphalian University of Applied Sciences",
+        "count": 1
+      },
+      {
+        "name": "Universitat Rovira I Virgili Tarragona",
+        "count": 1
+      },
+      {
+        "name": "Tohoku University",
+        "count": 1
+      },
+      {
+        "name": "The University of Sheffield",
+        "count": 1
+      }
+    ]
+  },
+  "by_year": {
+    "country": {
+      "2020": {
+        "United States": 41,
+        "Japan": 5,
+        "China": 5,
+        "Switzerland": 4,
+        "Taiwan, Province of China": 2,
+        "Canada": 1,
+        "United Kingdom": 3,
+        "Finland": 1,
+        "Germany": 5,
+        "Belgium": 1,
+        "Cyprus": 1,
+        "France": 1,
+        "Italy": 1,
+        "Iran": 1,
+        "Korea, Republic of": 1,
+        "Hong Kong": 1
+      },
+      "2021": {
+        "Netherlands": 6,
+        "United Kingdom": 13,
+        "Brazil": 1,
+        "Greece": 3,
+        "France": 3,
+        "United States": 142,
+        "Singapore": 3,
+        "Israel": 2,
+        "Switzerland": 12,
+        "Belgium": 2,
+        "Iran": 3,
+        "China": 15,
+        "Taiwan, Province of China": 4,
+        "Spain": 1,
+        "Bangladesh": 1,
+        "Italy": 1,
+        "Sweden": 1,
+        "Canada": 5,
+        "Australia": 4,
+        "Germany": 9,
+        "Saudi Arabia": 1,
+        "India": 1,
+        "Austria": 1,
+        "Turkiye": 1,
+        "South Korea": 2,
+        "Luxembourg": 1,
+        "Hong Kong": 5,
+        "Japan": 2,
+        "Nigeria": 1,
+        "Romania": 1,
+        "Finland": 1
+      },
+      "2022": {
+        "United States": 181,
+        "Switzerland": 13,
+        "Romania": 2,
+        "China": 55,
+        "United Kingdom": 20,
+        "Taiwan, Province of China": 15,
+        "Singapore": 15,
+        "Australia": 4,
+        "Saudi Arabia": 2,
+        "Hong Kong": 28,
+        "India": 5,
+        "France": 7,
+        "Germany": 20,
+        "Hungary": 2,
+        "Belgium": 1,
+        "Japan": 6,
+        "Italy": 5,
+        "Greece": 1,
+        "Portugal": 1,
+        "Brazil": 1,
+        "Poland": 1,
+        "Nigeria": 4,
+        "New Zealand": 1,
+        "Canada": 4,
+        "Rwanda": 1,
+        "Netherlands": 5,
+        "Finland": 3,
+        "Austria": 3,
+        "Luxembourg": 1,
+        "Lebanon": 1,
+        "Korea, Republic of": 1,
+        "Iran": 1,
+        "Iraq": 1,
+        "Turkiye": 1
+      },
+      "2023": {
+        "United States": 134,
+        "China": 21,
+        "United Kingdom": 16,
+        "Italy": 7,
+        "Sweden": 2,
+        "Switzerland": 10,
+        "Uganda": 1,
+        "Singapore": 8,
+        "Spain": 3,
+        "Nigeria": 4,
+        "Taiwan, Province of China": 9,
+        "Pakistan": 1,
+        "Ireland": 1,
+        "Germany": 21,
+        "Norway": 1,
+        "Hungary": 1,
+        "India": 4,
+        "Japan": 5,
+        "Hong Kong": 13,
+        "Romania": 1,
+        "Syrian Arab Republic": 1,
+        "Netherlands": 6,
+        "Greece": 1,
+        "Canada": 4,
+        "Brazil": 3,
+        "Finland": 2,
+        "Belgium": 1,
+        "France": 5,
+        "Luxembourg": 1,
+        "South Korea": 2,
+        "Austria": 1,
+        "Bulgaria": 1,
+        "Iran": 2,
+        "Australia": 2,
+        "Israel": 1,
+        "Uzbekistan": 1,
+        "Czech Republic": 1
+      },
+      "2024": {
+        "China": 59,
+        "United States": 321,
+        "Spain": 13,
+        "Germany": 30,
+        "Hong Kong": 25,
+        "United Kingdom": 18,
+        "Pakistan": 2,
+        "Australia": 11,
+        "South Korea": 3,
+        "Switzerland": 10,
+        "Canada": 11,
+        "Saudi Arabia": 8,
+        "Czech Republic": 2,
+        "Greece": 2,
+        "Singapore": 6,
+        "Portugal": 3,
+        "France": 4,
+        "Finland": 5,
+        "Italy": 9,
+        "Brazil": 2,
+        "Taiwan, Province of China": 10,
+        "Norway": 1,
+        "Poland": 1,
+        "Liechtenstein": 1,
+        "Netherlands": 1,
+        "Liberia": 1,
+        "Austria": 2,
+        "India": 3,
+        "Belgium": 6,
+        "Sweden": 2,
+        "Rwanda": 1,
+        "Estonia": 1,
+        "Nigeria": 3,
+        "Israel": 1,
+        "United Arab Emirates": 2,
+        "Cyprus": 1,
+        "Japan": 6,
+        "Luxembourg": 2,
+        "Iran": 1,
+        "Denmark": 1
+      },
+      "2025": {
+        "Germany": 35,
+        "United Kingdom": 16,
+        "United States": 458,
+        "Spain": 10,
+        "Greece": 5,
+        "South Korea": 2,
+        "Canada": 15,
+        "Portugal": 2,
+        "Taiwan, Province of China": 18,
+        "France": 5,
+        "Hong Kong": 33,
+        "Nigeria": 6,
+        "Singapore": 12,
+        "China": 104,
+        "Italy": 7,
+        "Korea, Republic of": 7,
+        "Japan": 10,
+        "Austria": 3,
+        "Switzerland": 10,
+        "Iran": 5,
+        "Netherlands": 10,
+        "Turkiye": 4,
+        "India": 9,
+        "Sweden": 2,
+        "Liechtenstein": 1,
+        "Estonia": 3,
+        "Australia": 17,
+        "Belgium": 12,
+        "Russian Federation": 1,
+        "Czech Republic": 2,
+        "Malaysia": 3,
+        "United Arab Emirates": 1,
+        "Finland": 1,
+        "Saudi Arabia": 1,
+        "Malta": 1,
+        "Iraq": 1,
+        "Israel": 1,
+        "Ethiopia": 2,
+        "Zimbabwe": 2
+      },
+      "2026": {
+        "United States": 246,
+        "United Kingdom": 6,
+        "Rwanda": 2,
+        "Germany": 42,
+        "Portugal": 1,
+        "Spain": 3,
+        "Greece": 1,
+        "Iran": 4,
+        "Italy": 9,
+        "Nigeria": 4,
+        "Singapore": 7,
+        "Hong Kong": 24,
+        "Korea, Republic of": 5,
+        "Ethiopia": 4,
+        "France": 4,
+        "China": 32,
+        "Taiwan, Province of China": 10,
+        "Switzerland": 6,
+        "Hungary": 1,
+        "Turkiye": 1,
+        "Poland": 2,
+        "Japan": 6,
+        "Brazil": 1,
+        "Canada": 12,
+        "Netherlands": 6,
+        "Belgium": 7,
+        "Australia": 8,
+        "United Arab Emirates": 4,
+        "Czech Republic": 2,
+        "Sweden": 2,
+        "India": 5,
+        "Croatia": 1,
+        "South Korea": 3,
+        "Finland": 1,
+        "Estonia": 1,
+        "Malta": 1,
+        "Russian Federation": 2,
+        "Saudi Arabia": 1,
+        "Bulgaria": 1,
+        "Austria": 2,
+        "Malaysia": 1
+      }
+    },
+    "country_systems": {
+      "2020": {
+        "United States": 28,
+        "Japan": 3,
+        "China": 3,
+        "Switzerland": 2,
+        "Taiwan, Province of China": 2,
+        "Canada": 1
+      },
+      "2021": {
+        "Netherlands": 3,
+        "United Kingdom": 11,
+        "Brazil": 1,
+        "Greece": 3,
+        "France": 2,
+        "United States": 117,
+        "Singapore": 2,
+        "Israel": 1,
+        "Switzerland": 12,
+        "Belgium": 1,
+        "Iran": 1,
+        "China": 14,
+        "Taiwan, Province of China": 4,
+        "Spain": 1,
+        "Bangladesh": 1,
+        "Italy": 1,
+        "Sweden": 1,
+        "Canada": 1,
+        "Australia": 3,
+        "Germany": 3,
+        "Saudi Arabia": 1,
+        "India": 1,
+        "Austria": 1,
+        "Turkiye": 1,
+        "South Korea": 2,
+        "Luxembourg": 1,
+        "Hong Kong": 5,
+        "Japan": 2,
+        "Nigeria": 1,
+        "Romania": 1
+      },
+      "2022": {
+        "United States": 134,
+        "Switzerland": 12,
+        "Romania": 2,
+        "China": 51,
+        "United Kingdom": 15,
+        "Taiwan, Province of China": 15,
+        "Singapore": 14,
+        "Australia": 2,
+        "Saudi Arabia": 2,
+        "Hong Kong": 28,
+        "India": 4,
+        "France": 2,
+        "Germany": 7,
+        "Hungary": 2,
+        "Belgium": 1,
+        "Japan": 3,
+        "Italy": 1,
+        "Greece": 1,
+        "Portugal": 1,
+        "Brazil": 1,
+        "Poland": 1,
+        "Nigeria": 1,
+        "New Zealand": 1
+      },
+      "2023": {
+        "United States": 77,
+        "China": 15,
+        "United Kingdom": 5,
+        "Italy": 4,
+        "Sweden": 1,
+        "Switzerland": 7,
+        "Uganda": 1,
+        "Singapore": 7,
+        "Spain": 3,
+        "Nigeria": 1,
+        "Taiwan, Province of China": 7,
+        "Pakistan": 1,
+        "Ireland": 1,
+        "Germany": 1,
+        "Norway": 1,
+        "Hungary": 1,
+        "India": 1,
+        "Japan": 3,
+        "Hong Kong": 9,
+        "Romania": 1,
+        "Syrian Arab Republic": 1,
+        "Netherlands": 2,
+        "Greece": 1,
+        "Canada": 1,
+        "Brazil": 1
+      },
+      "2024": {
+        "China": 44,
+        "United States": 200,
+        "Spain": 10,
+        "Germany": 9,
+        "Hong Kong": 15,
+        "United Kingdom": 7,
+        "Pakistan": 2,
+        "Australia": 2,
+        "South Korea": 2,
+        "Switzerland": 2,
+        "Canada": 6,
+        "Saudi Arabia": 8,
+        "Czech Republic": 2,
+        "Greece": 2,
+        "Singapore": 3,
+        "Portugal": 3,
+        "France": 2,
+        "Finland": 1,
+        "Italy": 2,
+        "Brazil": 1,
+        "Taiwan, Province of China": 5,
+        "Norway": 1,
+        "Poland": 1
+      },
+      "2025": {
+        "Germany": 4,
+        "United Kingdom": 9,
+        "United States": 277,
+        "Spain": 8,
+        "Greece": 5,
+        "South Korea": 1,
+        "Canada": 8,
+        "Portugal": 2,
+        "Taiwan, Province of China": 8,
+        "France": 3,
+        "Hong Kong": 20,
+        "Nigeria": 4,
+        "Singapore": 4,
+        "China": 75,
+        "Italy": 2,
+        "Korea, Republic of": 2,
+        "Japan": 3,
+        "Austria": 1,
+        "Switzerland": 2,
+        "Iran": 1,
+        "Netherlands": 1,
+        "Turkiye": 4,
+        "India": 6,
+        "Sweden": 1,
+        "Ethiopia": 2,
+        "Zimbabwe": 2
+      },
+      "2026": {
+        "United Kingdom": 3,
+        "United States": 59,
+        "Rwanda": 2,
+        "Germany": 1,
+        "Portugal": 1,
+        "Spain": 3,
+        "Greece": 1,
+        "Iran": 1,
+        "Italy": 2,
+        "Nigeria": 1,
+        "Singapore": 1,
+        "Hong Kong": 5,
+        "Korea, Republic of": 1,
+        "Ethiopia": 1,
+        "France": 3,
+        "China": 4,
+        "Taiwan, Province of China": 2,
+        "Switzerland": 2,
+        "Hungary": 1,
+        "Turkiye": 1,
+        "Poland": 1,
+        "Japan": 1,
+        "Brazil": 1,
+        "Canada": 1,
+        "Netherlands": 1
+      }
+    },
+    "country_security": {
+      "2020": {
+        "United Kingdom": 3,
+        "United States": 13,
+        "Switzerland": 2,
+        "Finland": 1,
+        "Germany": 5,
+        "Belgium": 1,
+        "Japan": 2,
+        "Cyprus": 1,
+        "France": 1,
+        "Italy": 1,
+        "Iran": 1,
+        "Korea, Republic of": 1,
+        "China": 2,
+        "Hong Kong": 1
+      },
+      "2021": {
+        "Germany": 6,
+        "Canada": 4,
+        "Belgium": 1,
+        "United States": 25,
+        "Netherlands": 3,
+        "Finland": 1,
+        "United Kingdom": 2,
+        "France": 1,
+        "Israel": 1,
+        "Iran": 2,
+        "Australia": 1,
+        "Singapore": 1,
+        "China": 1
+      },
+      "2022": {
+        "Germany": 13,
+        "United States": 47,
+        "Canada": 4,
+        "Rwanda": 1,
+        "Netherlands": 5,
+        "United Kingdom": 5,
+        "Finland": 3,
+        "Japan": 3,
+        "France": 5,
+        "Austria": 3,
+        "Italy": 4,
+        "China": 4,
+        "Luxembourg": 1,
+        "Lebanon": 1,
+        "Korea, Republic of": 1,
+        "Australia": 2,
+        "Iran": 1,
+        "Iraq": 1,
+        "Switzerland": 1,
+        "Nigeria": 3,
+        "Singapore": 1,
+        "Turkiye": 1,
+        "India": 1
+      },
+      "2023": {
+        "United States": 57,
+        "Canada": 3,
+        "United Kingdom": 11,
+        "Finland": 2,
+        "Belgium": 1,
+        "Germany": 20,
+        "France": 5,
+        "Switzerland": 3,
+        "Taiwan, Province of China": 2,
+        "Italy": 3,
+        "Netherlands": 4,
+        "Nigeria": 3,
+        "Luxembourg": 1,
+        "China": 6,
+        "South Korea": 2,
+        "Austria": 1,
+        "Japan": 2,
+        "Bulgaria": 1,
+        "Sweden": 1,
+        "Iran": 2,
+        "Hong Kong": 4,
+        "Australia": 2,
+        "India": 3,
+        "Israel": 1,
+        "Uzbekistan": 1,
+        "Czech Republic": 1,
+        "Brazil": 2,
+        "Singapore": 1
+      },
+      "2024": {
+        "Liechtenstein": 1,
+        "United States": 121,
+        "Switzerland": 8,
+        "Germany": 21,
+        "Italy": 7,
+        "Netherlands": 1,
+        "Australia": 9,
+        "United Kingdom": 11,
+        "China": 15,
+        "Liberia": 1,
+        "Austria": 2,
+        "India": 3,
+        "Hong Kong": 10,
+        "Belgium": 6,
+        "Finland": 4,
+        "Brazil": 1,
+        "France": 2,
+        "Sweden": 2,
+        "Canada": 5,
+        "Rwanda": 1,
+        "Estonia": 1,
+        "Nigeria": 3,
+        "Israel": 1,
+        "Taiwan, Province of China": 5,
+        "United Arab Emirates": 2,
+        "Singapore": 3,
+        "Cyprus": 1,
+        "Japan": 6,
+        "Luxembourg": 2,
+        "Iran": 1,
+        "South Korea": 1,
+        "Spain": 3,
+        "Denmark": 1
+      },
+      "2025": {
+        "Liechtenstein": 1,
+        "Japan": 7,
+        "United States": 181,
+        "Estonia": 3,
+        "Singapore": 8,
+        "Korea, Republic of": 5,
+        "Switzerland": 8,
+        "Italy": 5,
+        "Hong Kong": 13,
+        "China": 29,
+        "Australia": 17,
+        "Belgium": 12,
+        "Russian Federation": 1,
+        "Czech Republic": 2,
+        "Netherlands": 9,
+        "Austria": 2,
+        "Spain": 2,
+        "Germany": 31,
+        "Canada": 7,
+        "Taiwan, Province of China": 10,
+        "Malaysia": 3,
+        "United Arab Emirates": 1,
+        "Finland": 1,
+        "United Kingdom": 7,
+        "Sweden": 1,
+        "Saudi Arabia": 1,
+        "Malta": 1,
+        "Iran": 4,
+        "Nigeria": 2,
+        "Iraq": 1,
+        "France": 2,
+        "India": 3,
+        "South Korea": 1,
+        "Israel": 1
+      },
+      "2026": {
+        "United States": 186,
+        "Japan": 5,
+        "Belgium": 7,
+        "Singapore": 6,
+        "Netherlands": 5,
+        "Germany": 41,
+        "Taiwan, Province of China": 8,
+        "Italy": 7,
+        "China": 28,
+        "Australia": 8,
+        "United Arab Emirates": 4,
+        "Hong Kong": 19,
+        "Czech Republic": 2,
+        "Ethiopia": 3,
+        "Nigeria": 3,
+        "Sweden": 2,
+        "India": 5,
+        "Croatia": 1,
+        "Korea, Republic of": 4,
+        "Canada": 11,
+        "South Korea": 3,
+        "Iran": 3,
+        "Finland": 1,
+        "Switzerland": 4,
+        "Estonia": 1,
+        "United Kingdom": 3,
+        "Malta": 1,
+        "Russian Federation": 2,
+        "France": 1,
+        "Saudi Arabia": 1,
+        "Poland": 1,
+        "Bulgaria": 1,
+        "Austria": 2,
+        "Malaysia": 1
+      }
+    },
+    "continent": {
+      "2020": {
+        "North America": 42,
+        "Asia": 14,
+        "Europe": 17,
+        "Unknown": 1
+      },
+      "2021": {
+        "Europe": 55,
+        "South America": 1,
+        "North America": 147,
+        "Asia": 39,
+        "Oceania": 4,
+        "Unknown": 1,
+        "Africa": 1
+      },
+      "2022": {
+        "North America": 185,
+        "Europe": 85,
+        "Asia": 129,
+        "Oceania": 5,
+        "South America": 1,
+        "Africa": 5,
+        "Unknown": 2
+      },
+      "2023": {
+        "North America": 138,
+        "Asia": 66,
+        "Europe": 82,
+        "Africa": 5,
+        "Unknown": 2,
+        "South America": 3,
+        "Oceania": 2
+      },
+      "2024": {
+        "Asia": 126,
+        "North America": 332,
+        "Europe": 114,
+        "Oceania": 11,
+        "South America": 2,
+        "Unknown": 2,
+        "Africa": 4
+      },
+      "2025": {
+        "Europe": 124,
+        "North America": 473,
+        "Asia": 200,
+        "Africa": 10,
+        "Unknown": 13,
+        "Oceania": 17
+      },
+      "2026": {
+        "North America": 258,
+        "Europe": 99,
+        "Africa": 10,
+        "Asia": 97,
+        "Unknown": 8,
+        "South America": 1,
+        "Oceania": 8
+      }
+    },
+    "continent_systems": {
+      "2020": {
+        "North America": 29,
+        "Asia": 8,
+        "Europe": 2
+      },
+      "2021": {
+        "Europe": 41,
+        "South America": 1,
+        "North America": 118,
+        "Asia": 34,
+        "Oceania": 3,
+        "Unknown": 1,
+        "Africa": 1
+      },
+      "2022": {
+        "North America": 134,
+        "Europe": 45,
+        "Asia": 117,
+        "Oceania": 3,
+        "South America": 1,
+        "Africa": 1
+      },
+      "2023": {
+        "North America": 78,
+        "Asia": 43,
+        "Europe": 28,
+        "Africa": 2,
+        "Unknown": 1,
+        "South America": 1
+      },
+      "2024": {
+        "Asia": 79,
+        "North America": 206,
+        "Europe": 42,
+        "Oceania": 2,
+        "South America": 1
+      },
+      "2025": {
+        "Europe": 38,
+        "North America": 285,
+        "Asia": 118,
+        "Africa": 8,
+        "Unknown": 6
+      },
+      "2026": {
+        "Europe": 19,
+        "North America": 60,
+        "Africa": 4,
+        "Asia": 14,
+        "Unknown": 2,
+        "South America": 1
+      }
+    },
+    "continent_security": {
+      "2020": {
+        "Europe": 15,
+        "North America": 13,
+        "Asia": 6,
+        "Unknown": 1
+      },
+      "2021": {
+        "Europe": 14,
+        "North America": 29,
+        "Asia": 5,
+        "Oceania": 1
+      },
+      "2022": {
+        "Europe": 40,
+        "North America": 51,
+        "Africa": 4,
+        "Asia": 12,
+        "Unknown": 2,
+        "Oceania": 2
+      },
+      "2023": {
+        "North America": 60,
+        "Europe": 54,
+        "Asia": 23,
+        "Africa": 3,
+        "Oceania": 2,
+        "Unknown": 1,
+        "South America": 2
+      },
+      "2024": {
+        "Unknown": 2,
+        "North America": 126,
+        "Europe": 72,
+        "Oceania": 9,
+        "Asia": 47,
+        "South America": 1,
+        "Africa": 4
+      },
+      "2025": {
+        "Unknown": 7,
+        "Asia": 82,
+        "North America": 188,
+        "Europe": 86,
+        "Oceania": 17,
+        "Africa": 2
+      },
+      "2026": {
+        "North America": 197,
+        "Asia": 83,
+        "Europe": 80,
+        "Oceania": 8,
+        "Africa": 6,
+        "Unknown": 6
+      }
+    }
+  },
+  "committee_sizes": [
+    {
+      "conference": "ATC",
+      "year": 2022,
+      "conf_year": "atc2022",
+      "area": "systems",
+      "size": 119
+    },
+    {
+      "conference": "ATC",
+      "year": 2023,
+      "conf_year": "atc2023",
+      "area": "systems",
+      "size": 4
+    },
+    {
+      "conference": "ATC",
+      "year": 2024,
+      "conf_year": "atc2024",
+      "area": "systems",
+      "size": 130
+    },
+    {
+      "conference": "ATC",
+      "year": 2025,
+      "conf_year": "atc2025",
+      "area": "systems",
+      "size": 174
+    },
+    {
+      "conference": "CAIS",
+      "year": 2026,
+      "conf_year": "cais2026",
+      "area": "unknown",
+      "size": 1
+    },
+    {
+      "conference": "CHES",
+      "year": 2022,
+      "conf_year": "ches2022",
+      "area": "security",
+      "size": 26
+    },
+    {
+      "conference": "CHES",
+      "year": 2023,
+      "conf_year": "ches2023",
+      "area": "security",
+      "size": 26
+    },
+    {
+      "conference": "CHES",
+      "year": 2024,
+      "conf_year": "ches2024",
+      "area": "security",
+      "size": 18
+    },
+    {
+      "conference": "CHES",
+      "year": 2025,
+      "conf_year": "ches2025",
+      "area": "security",
+      "size": 23
+    },
+    {
+      "conference": "CHES",
+      "year": 2026,
+      "conf_year": "ches2026",
+      "area": "security",
+      "size": 19
+    },
+    {
+      "conference": "EUROSYS",
+      "year": 2021,
+      "conf_year": "eurosys2021",
+      "area": "systems",
+      "size": 53
+    },
+    {
+      "conference": "EUROSYS",
+      "year": 2022,
+      "conf_year": "eurosys2022",
+      "area": "systems",
+      "size": 69
+    },
+    {
+      "conference": "EUROSYS",
+      "year": 2023,
+      "conf_year": "eurosys2023",
+      "area": "systems",
+      "size": 63
+    },
+    {
+      "conference": "EUROSYS",
+      "year": 2024,
+      "conf_year": "eurosys2024",
+      "area": "systems",
+      "size": 51
+    },
+    {
+      "conference": "EUROSYS",
+      "year": 2025,
+      "conf_year": "eurosys2025",
+      "area": "systems",
+      "size": 101
+    },
+    {
+      "conference": "EUROSYS",
+      "year": 2026,
+      "conf_year": "eurosys2026",
+      "area": "systems",
+      "size": 108
+    },
+    {
+      "conference": "FAST",
+      "year": 2024,
+      "conf_year": "fast2024",
+      "area": "systems",
+      "size": 33
+    },
+    {
+      "conference": "FAST",
+      "year": 2025,
+      "conf_year": "fast2025",
+      "area": "systems",
+      "size": 56
+    },
+    {
+      "conference": "NDSS",
+      "year": 2024,
+      "conf_year": "ndss2024",
+      "area": "security",
+      "size": 62
+    },
+    {
+      "conference": "NDSS",
+      "year": 2025,
+      "conf_year": "ndss2025",
+      "area": "security",
+      "size": 64
+    },
+    {
+      "conference": "NDSS",
+      "year": 2026,
+      "conf_year": "ndss2026",
+      "area": "security",
+      "size": 132
+    },
+    {
+      "conference": "OSDI",
+      "year": 2020,
+      "conf_year": "osdi2020",
+      "area": "systems",
+      "size": 43
+    },
+    {
+      "conference": "OSDI",
+      "year": 2021,
+      "conf_year": "osdi2021",
+      "area": "systems",
+      "size": 31
+    },
+    {
+      "conference": "OSDI",
+      "year": 2022,
+      "conf_year": "osdi2022",
+      "area": "systems",
+      "size": 119
+    },
+    {
+      "conference": "OSDI",
+      "year": 2023,
+      "conf_year": "osdi2023",
+      "area": "systems",
+      "size": 4
+    },
+    {
+      "conference": "OSDI",
+      "year": 2024,
+      "conf_year": "osdi2024",
+      "area": "systems",
+      "size": 130
+    },
+    {
+      "conference": "OSDI",
+      "year": 2025,
+      "conf_year": "osdi2025",
+      "area": "systems",
+      "size": 172
+    },
+    {
+      "conference": "PETS",
+      "year": 2020,
+      "conf_year": "pets2020",
+      "area": "security",
+      "size": 17
+    },
+    {
+      "conference": "PETS",
+      "year": 2021,
+      "conf_year": "pets2021",
+      "area": "security",
+      "size": 13
+    },
+    {
+      "conference": "PETS",
+      "year": 2022,
+      "conf_year": "pets2022",
+      "area": "security",
+      "size": 25
+    },
+    {
+      "conference": "PETS",
+      "year": 2023,
+      "conf_year": "pets2023",
+      "area": "security",
+      "size": 19
+    },
+    {
+      "conference": "PETS",
+      "year": 2024,
+      "conf_year": "pets2024",
+      "area": "security",
+      "size": 52
+    },
+    {
+      "conference": "PETS",
+      "year": 2025,
+      "conf_year": "pets2025",
+      "area": "security",
+      "size": 72
+    },
+    {
+      "conference": "PETS",
+      "year": 2026,
+      "conf_year": "pets2026",
+      "area": "security",
+      "size": 72
+    },
+    {
+      "conference": "SC",
+      "year": 2021,
+      "conf_year": "sc2021",
+      "area": "systems",
+      "size": 61
+    },
+    {
+      "conference": "SOSP",
+      "year": 2021,
+      "conf_year": "sosp2021",
+      "area": "systems",
+      "size": 94
+    },
+    {
+      "conference": "SOSP",
+      "year": 2023,
+      "conf_year": "sosp2023",
+      "area": "systems",
+      "size": 93
+    },
+    {
+      "conference": "SOSP",
+      "year": 2024,
+      "conf_year": "sosp2024",
+      "area": "systems",
+      "size": 2
+    },
+    {
+      "conference": "SOSP",
+      "year": 2025,
+      "conf_year": "sosp2025",
+      "area": "systems",
+      "size": 3
+    },
+    {
+      "conference": "SOSP",
+      "year": 2026,
+      "conf_year": "sosp2026",
+      "area": "systems",
+      "size": 2
+    },
+    {
+      "conference": "SYSTEX",
+      "year": 2025,
+      "conf_year": "systex2025",
+      "area": "security",
+      "size": 6
+    },
+    {
+      "conference": "USENIXSEC",
+      "year": 2020,
+      "conf_year": "usenixsec2020",
+      "area": "security",
+      "size": 37
+    },
+    {
+      "conference": "USENIXSEC",
+      "year": 2021,
+      "conf_year": "usenixsec2021",
+      "area": "security",
+      "size": 45
+    },
+    {
+      "conference": "USENIXSEC",
+      "year": 2022,
+      "conf_year": "usenixsec2022",
+      "area": "security",
+      "size": 106
+    },
+    {
+      "conference": "USENIXSEC",
+      "year": 2023,
+      "conf_year": "usenixsec2023",
+      "area": "security",
+      "size": 140
+    },
+    {
+      "conference": "USENIXSEC",
+      "year": 2024,
+      "conf_year": "usenixsec2024",
+      "area": "security",
+      "size": 143
+    },
+    {
+      "conference": "USENIXSEC",
+      "year": 2025,
+      "conf_year": "usenixsec2025",
+      "area": "security",
+      "size": 252
+    },
+    {
+      "conference": "USENIXSEC",
+      "year": 2026,
+      "conf_year": "usenixsec2026",
+      "area": "security",
+      "size": 226
+    },
+    {
+      "conference": "WOOT",
+      "year": 2024,
+      "conf_year": "woot2024",
+      "area": "security",
+      "size": 24
+    },
+    {
+      "conference": "WOOT",
+      "year": 2025,
+      "conf_year": "woot2025",
+      "area": "security",
+      "size": 16
+    }
+  ],
+  "failed_classifications": [
+    {
+      "conference": "atc2022",
+      "name": "Weikeng Chen",
+      "affiliation": "DZK Foundation and University of California, Berkeley"
+    },
+    {
+      "conference": "atc2024",
+      "name": "Tejaswi Agarwal",
+      "affiliation": "Uber Technologies, Inc."
+    },
+    {
+      "conference": "atc2024",
+      "name": "André Augusto",
+      "affiliation": "INESC-ID and Instituto Superior Técnico, University of Lisbon"
+    },
+    {
+      "conference": "atc2024",
+      "name": "Chenhao Jiang",
+      "affiliation": "University of Toronto, Vector Institute"
+    },
+    {
+      "conference": "atc2024",
+      "name": "João Oliveira",
+      "affiliation": "INESC-ID and Instituto Superior Técnico, University of Lisbon"
+    },
+    {
+      "conference": "atc2024",
+      "name": "Diogo Vaz",
+      "affiliation": "INESC-ID and Instituto Superior Técnico, University of Lisbon"
+    },
+    {
+      "conference": "eurosys2021",
+      "name": "Kornilios Kourtis",
+      "affiliation": "Isovalent"
+    },
+    {
+      "conference": "eurosys2021",
+      "name": "Shaaz Ahmed",
+      "affiliation": "Amazon Web Services / University of Oxford"
+    },
+    {
+      "conference": "eurosys2021",
+      "name": "Abhishek Chanda",
+      "affiliation": "Auth0"
+    },
+    {
+      "conference": "eurosys2021",
+      "name": "Adelbert Chang",
+      "affiliation": "OctoML"
+    },
+    {
+      "conference": "eurosys2021",
+      "name": "Rafael Lourenço de Lima Chehab",
+      "affiliation": "TU Dresden, Huawei Technologies Duesseldorf"
+    },
+    {
+      "conference": "eurosys2021",
+      "name": "Josiane Kouam",
+      "affiliation": "INRIA, Ecole Polytechnique-IPP"
+    },
+    {
+      "conference": "eurosys2021",
+      "name": "Benoit Martin",
+      "affiliation": "Sorbonne Université, CNRS, Inria, LIP6"
+    },
+    {
+      "conference": "eurosys2021",
+      "name": "Rahul Mittal",
+      "affiliation": "Adobe"
+    },
+    {
+      "conference": "eurosys2022",
+      "name": "Anderson Uchôa",
+      "affiliation": "Federal University of Ceará (UFC"
+    },
+    {
+      "conference": "eurosys2022",
+      "name": "jiawei fei",
+      "affiliation": "College of Computer Science and Technology, National University of Defense Technology"
+    },
+    {
+      "conference": "eurosys2022",
+      "name": "Sreeja Nair",
+      "affiliation": "ZettaScale Technology, Paris"
+    },
+    {
+      "conference": "eurosys2022",
+      "name": "Umar Farooq",
+      "affiliation": "ByteDance Inc."
+    },
+    {
+      "conference": "eurosys2023",
+      "name": "Arthur Vervaet",
+      "affiliation": "3DS OUTSCALE"
+    },
+    {
+      "conference": "eurosys2024",
+      "name": "Valerio Schiavoni",
+      "affiliation": "Université de Neuchâtel, Switzerland"
+    },
+    {
+      "conference": "eurosys2024",
+      "name": "Henrique Fingler",
+      "affiliation": "Exostellar"
+    },
+    {
+      "conference": "eurosys2024",
+      "name": "Souptik Sen",
+      "affiliation": "Snowflake Computing"
+    },
+    {
+      "conference": "eurosys2025",
+      "name": "Thaleia Dimitra Doudali",
+      "affiliation": "IMDEA Software Institute, Madrid, Spain"
+    },
+    {
+      "conference": "eurosys2025",
+      "name": "Christian Pinto",
+      "affiliation": "IBM Research Europe - Ireland, Dublin, Ireland"
+    },
+    {
+      "conference": "eurosys2025",
+      "name": "Georgios Portokalidis",
+      "affiliation": "IMDEA Software Institute, Madrid, Spain"
+    },
+    {
+      "conference": "eurosys2025",
+      "name": "Ajay Joshi",
+      "affiliation": "Software Engineer at Snowflake"
+    },
+    {
+      "conference": "eurosys2025",
+      "name": "Alenkruth Krishnan Murali",
+      "affiliation": "Processor Architecture Research Lab, Intel, India & The University of Virginia, USA"
+    },
+    {
+      "conference": "eurosys2025",
+      "name": "Andreas Grapentin",
+      "affiliation": "Hasso Plattner Institute, University of Potsdam"
+    },
+    {
+      "conference": "eurosys2025",
+      "name": "Wenqi Chen",
+      "affiliation": "Harvard / Apple"
+    },
+    {
+      "conference": "eurosys2025",
+      "name": "David de Andres Hernandez",
+      "affiliation": "Imdea Networks Institute, Universidad Carlos III de Madrid"
+    },
+    {
+      "conference": "eurosys2025",
+      "name": "Dmitry Ivanov",
+      "affiliation": "Huawei Dresden Research Center"
+    },
+    {
+      "conference": "eurosys2025",
+      "name": "Mamta Shukla",
+      "affiliation": "Leica Geosystems"
+    },
+    {
+      "conference": "eurosys2025",
+      "name": "Manzur Mukhitdinov",
+      "affiliation": "Cloudflare"
+    },
+    {
+      "conference": "eurosys2025",
+      "name": "Ojas Gupta",
+      "affiliation": "Juniper Networks"
+    },
+    {
+      "conference": "eurosys2025",
+      "name": "Sibendu Paul",
+      "affiliation": "Applied Scientist at Amazon Prime Video"
+    },
+    {
+      "conference": "eurosys2025",
+      "name": "Souptik Sen",
+      "affiliation": "Snowflake"
+    },
+    {
+      "conference": "eurosys2025",
+      "name": "Yanan Yang",
+      "affiliation": "China Telecom Cloud Computing Research Institute"
+    },
+    {
+      "conference": "eurosys2025",
+      "name": "Miao Yu",
+      "affiliation": "The Ohio State University / Meta Platforms"
+    },
+    {
+      "conference": "eurosys2026",
+      "name": "Bogdan Alexandru Stoica",
+      "affiliation": "University of Illinois Urbana-Champaign / University of Chicago, USA"
+    },
+    {
+      "conference": "eurosys2026",
+      "name": "Bharath Kumar Pareek",
+      "affiliation": "Salesforce.com and University of Florida"
+    },
+    {
+      "conference": "eurosys2026",
+      "name": "Kayalvizhi Rajagopal",
+      "affiliation": "Tesla Inc"
+    },
+    {
+      "conference": "eurosys2026",
+      "name": "Lana Honcharuk",
+      "affiliation": "Crusoe"
+    },
+    {
+      "conference": "eurosys2026",
+      "name": "Mamta Shukla",
+      "affiliation": "Leica Geosystems AG"
+    },
+    {
+      "conference": "eurosys2026",
+      "name": "Muzeeb Mohammad",
+      "affiliation": "JPMorgan Chase and co"
+    },
+    {
+      "conference": "eurosys2026",
+      "name": "Ojas Gupta",
+      "affiliation": "Juniper Networks"
+    },
+    {
+      "conference": "eurosys2026",
+      "name": "Tânia Esteves",
+      "affiliation": "INESC TEC & University of Minho"
+    },
+    {
+      "conference": "eurosys2026",
+      "name": "Tony Zhang",
+      "affiliation": "Databricks"
+    },
+    {
+      "conference": "eurosys2026",
+      "name": "Yuxuan Jiang",
+      "affiliation": "SambaNova Systems Inc."
+    },
+    {
+      "conference": "fast2024",
+      "name": "R. Madhava Krishnan",
+      "affiliation": "Oracle"
+    },
+    {
+      "conference": "fast2024",
+      "name": "Teng Ma",
+      "affiliation": "Alibaba Group"
+    },
+    {
+      "conference": "fast2025",
+      "name": "Pradeep Kumar Goudagunta",
+      "affiliation": "Dropbox"
+    },
+    {
+      "conference": "fast2025",
+      "name": "Utkarsh Mittal",
+      "affiliation": "BCS, IEEE, and Gap"
+    },
+    {
+      "conference": "fast2025",
+      "name": "Hariharan Ragothaman",
+      "affiliation": "Athenahealth and Northeastern University"
+    },
+    {
+      "conference": "fast2025",
+      "name": "Souptik Sen",
+      "affiliation": "Snowflake"
+    },
+    {
+      "conference": "fast2025",
+      "name": "Aakash Sharma",
+      "affiliation": "UiT The Arctic University of Norway"
+    },
+    {
+      "conference": "fast2025",
+      "name": "Amit Warke",
+      "affiliation": "Hitachi"
+    },
+    {
+      "conference": "osdi2020",
+      "name": "Ram Srivatsa Kannan",
+      "affiliation": "Uber Technologies Inc."
+    },
+    {
+      "conference": "osdi2020",
+      "name": "Wen-Chuan Lee",
+      "affiliation": "Apple Inc. and Purdue University"
+    },
+    {
+      "conference": "osdi2020",
+      "name": "Djob Mvondo",
+      "affiliation": "Laboratoire d'Informatique de Grenoble"
+    },
+    {
+      "conference": "osdi2020",
+      "name": "Alexios Voulimeneas",
+      "affiliation": "University of California, Irvine, and Katholieke Universiteit Leuven"
+    },
+    {
+      "conference": "osdi2021",
+      "name": "Aakash Sharma",
+      "affiliation": "UiT The Arctic University of Norway"
+    },
+    {
+      "conference": "osdi2022",
+      "name": "Weikeng Chen",
+      "affiliation": "DZK Foundation and University of California, Berkeley"
+    },
+    {
+      "conference": "osdi2024",
+      "name": "Tejaswi Agarwal",
+      "affiliation": "Uber Technologies, Inc."
+    },
+    {
+      "conference": "osdi2024",
+      "name": "André Augusto",
+      "affiliation": "INESC-ID and Instituto Superior Técnico, University of Lisbon"
+    },
+    {
+      "conference": "osdi2024",
+      "name": "Chenhao Jiang",
+      "affiliation": "University of Toronto, Vector Institute"
+    },
+    {
+      "conference": "osdi2024",
+      "name": "João Oliveira",
+      "affiliation": "INESC-ID and Instituto Superior Técnico, University of Lisbon"
+    },
+    {
+      "conference": "osdi2024",
+      "name": "Diogo Vaz",
+      "affiliation": "INESC-ID and Instituto Superior Técnico, University of Lisbon"
+    },
+    {
+      "conference": "sc2021",
+      "name": "Jean Luca Bez, Lawrence Berkeley National Laboratory",
+      "affiliation": "LBNL"
+    },
+    {
+      "conference": "sc2021",
+      "name": "Rocío Carratalá-Sáez",
+      "affiliation": "Jaume I University, Spain"
+    },
+    {
+      "conference": "sc2021",
+      "name": "Patrick Diehl",
+      "affiliation": "Louisiana State University, Center for Computation and Technology"
+    },
+    {
+      "conference": "sc2021",
+      "name": "Tanwi Mallick, Argonne National Laboratory",
+      "affiliation": "ANL"
+    },
+    {
+      "conference": "sc2021",
+      "name": "Addi Malviya-Thakur, Oak Ridge National Laboratory",
+      "affiliation": "ORNL"
+    },
+    {
+      "conference": "sc2021",
+      "name": "Steve Menken, National Renewable Energy Laboratory",
+      "affiliation": "NREL"
+    },
+    {
+      "conference": "sc2021",
+      "name": "Takaaki Miyajima, RIKEN Center for Computational Science",
+      "affiliation": "R-CCS"
+    },
+    {
+      "conference": "sc2021",
+      "name": "Elizabeth Ondula, University of Southern California",
+      "affiliation": "USC"
+    },
+    {
+      "conference": "sc2021",
+      "name": "Mayank Parasar",
+      "affiliation": "Samsung Electronics Inc, South Korea; Georgia Institute of Technology"
+    },
+    {
+      "conference": "sc2021",
+      "name": "Loic Pottier",
+      "affiliation": "University of Southern California, Information Sciences Institute"
+    },
+    {
+      "conference": "sc2021",
+      "name": "Antonio Sciarappa",
+      "affiliation": "Leonardo Labs, Italy"
+    },
+    {
+      "conference": "sc2021",
+      "name": "Marion Weinzierl, Durham University, England; N8 Centre of Excellence in Computationally Intensive Research",
+      "affiliation": "N8 CIR"
+    },
+    {
+      "conference": "sc2021",
+      "name": "Xiaodong Yu, Argonne National Laboratory",
+      "affiliation": "ANL"
+    },
+    {
+      "conference": "sc2021",
+      "name": "Rosa M. Badia, Barcelona Supercomputing Center",
+      "affiliation": "BSC"
+    },
+    {
+      "conference": "sc2021",
+      "name": "Rocío Carratalá-Sáez",
+      "affiliation": "Jaume I University, Spain"
+    },
+    {
+      "conference": "sc2021",
+      "name": "Stephen Lien Harrell, Texas Advanced Computing Center",
+      "affiliation": "TACC"
+    },
+    {
+      "conference": "sc2021",
+      "name": "Ivo Jimenez",
+      "affiliation": "University of California, Santa Cruz; University of Sonora"
+    },
+    {
+      "conference": "sc2021",
+      "name": "Steve Menken, National Renewable Energy Laboratory",
+      "affiliation": "NREL"
+    },
+    {
+      "conference": "sc2021",
+      "name": "Antonio Sciarappa",
+      "affiliation": "Leonardo Labs, Italy"
+    },
+    {
+      "conference": "sc2021",
+      "name": "Marion Weinzierl, Durham University, England; N8 Centre of Excellence in Computationally Intensive Research",
+      "affiliation": "N8 CIR"
+    },
+    {
+      "conference": "sosp2021",
+      "name": "Ivo Jimenez",
+      "affiliation": "UC Santa Cruz, CROSS, University of Sonora"
+    },
+    {
+      "conference": "sosp2021",
+      "name": "Dan Ports",
+      "affiliation": "Microsoft Research, University of Washington"
+    },
+    {
+      "conference": "sosp2021",
+      "name": "Amoghavarsha Suresh",
+      "affiliation": "Facebook"
+    },
+    {
+      "conference": "sosp2021",
+      "name": "David Ke Hong",
+      "affiliation": "Facebook"
+    },
+    {
+      "conference": "sosp2021",
+      "name": "Huaicheng Li",
+      "affiliation": "CMU"
+    },
+    {
+      "conference": "sosp2021",
+      "name": "Jashwant RAJ Gunasekaran",
+      "affiliation": "Penn State/ Adobe"
+    },
+    {
+      "conference": "sosp2021",
+      "name": "Lingfang Zeng",
+      "affiliation": "Zhejiang Lab"
+    },
+    {
+      "conference": "sosp2021",
+      "name": "Matthew Forshaw",
+      "affiliation": "Newcastle University / The Alan Turing Institute"
+    },
+    {
+      "conference": "sosp2021",
+      "name": "Miguel Felipe Silva Vasconcelos",
+      "affiliation": "Universidade de São Paulo/Université Grenoble Alpes"
+    },
+    {
+      "conference": "sosp2021",
+      "name": "Rodrigo Bruno",
+      "affiliation": "INESC-ID Lisbon / Técnico - University of Lisbon"
+    },
+    {
+      "conference": "sosp2021",
+      "name": "Sreeja S Nair",
+      "affiliation": "Sorbonne University and ADLINK Technology Inc., France"
+    },
+    {
+      "conference": "sosp2023",
+      "name": "Matthew Burke",
+      "affiliation": "Databricks"
+    },
+    {
+      "conference": "sosp2023",
+      "name": "Aman Goel",
+      "affiliation": "Amazon Web Services"
+    },
+    {
+      "conference": "sosp2023",
+      "name": "Anatole Lefort",
+      "affiliation": "Telecom SudParis - Institut Polytechnique de Paris"
+    },
+    {
+      "conference": "sosp2023",
+      "name": "Jing Zhang",
+      "affiliation": "IPADS, SJTU"
+    },
+    {
+      "conference": "sosp2023",
+      "name": "Souptik Sen",
+      "affiliation": "Snowflake"
+    },
+    {
+      "conference": "sosp2023",
+      "name": "Syed M. Iqbal",
+      "affiliation": "AWS"
+    },
+    {
+      "conference": "sosp2023",
+      "name": "Wanning He",
+      "affiliation": "UMich"
+    },
+    {
+      "conference": "sosp2023",
+      "name": "Yueying Li",
+      "affiliation": "Cornell / MIT"
+    },
+    {
+      "conference": "sosp2023",
+      "name": "Zhiyu Zhang",
+      "affiliation": "SKLOIS, Institute of Information Engineering, CAS"
+    },
+    {
+      "conference": "sosp2023",
+      "name": "Zizhuang Deng",
+      "affiliation": "Institute of Information Engineering, CAS, China"
+    },
+    {
+      "conference": "sosp2024",
+      "name": "Henrique Fingler",
+      "affiliation": "Exostellar"
+    },
+    {
+      "conference": "ndss2024",
+      "name": "Antonio Nappa",
+      "affiliation": "UC3M Madrid"
+    },
+    {
+      "conference": "ndss2024",
+      "name": "Gorka Abad",
+      "affiliation": "Radboud University & Ikerlan Research Centre"
+    },
+    {
+      "conference": "ndss2024",
+      "name": "Marc DAMIE",
+      "affiliation": "Inria, France"
+    },
+    {
+      "conference": "ndss2024",
+      "name": "Miel Verkerken",
+      "affiliation": "Ghent University - imec"
+    },
+    {
+      "conference": "ndss2024",
+      "name": "Sanket Goutam",
+      "affiliation": "Stony Brook University & Samsung Research America"
+    },
+    {
+      "conference": "ndss2024",
+      "name": "Yiming Zhang",
+      "affiliation": "Southern University of Science and Technology & The Hong Kong Polytechnic University"
+    },
+    {
+      "conference": "ndss2025",
+      "name": "Four members received the Distinguished Evaluator Award 🏆 from the organizers.",
+      "affiliation": ""
+    },
+    {
+      "conference": "ndss2025",
+      "name": "Ahmed Lekssays",
+      "affiliation": "Qatar Computing Research Institute"
+    },
+    {
+      "conference": "ndss2025",
+      "name": "Kelly Kaoudis",
+      "affiliation": "Trail of Bits"
+    },
+    {
+      "conference": "ndss2025",
+      "name": "Paul Staat",
+      "affiliation": "Max Planck Institute for Security and Privacy"
+    },
+    {
+      "conference": "ndss2025",
+      "name": "Rishit Saiya",
+      "affiliation": "PwC"
+    },
+    {
+      "conference": "ndss2025",
+      "name": "Shaofeng Li",
+      "affiliation": "Peng Cheng Laboratory"
+    },
+    {
+      "conference": "ndss2026",
+      "name": "Nine members received the Distinguished Evaluator Award 🏆 from the organizers.",
+      "affiliation": ""
+    },
+    {
+      "conference": "ndss2026",
+      "name": "Andrew Roberts",
+      "affiliation": "KTH Sweden"
+    },
+    {
+      "conference": "ndss2026",
+      "name": "Diksha Goel",
+      "affiliation": "CSIRO's Data61, Australia"
+    },
+    {
+      "conference": "ndss2026",
+      "name": "Enrico Bassetti",
+      "affiliation": "European Space Agency, TU Delft"
+    },
+    {
+      "conference": "ndss2026",
+      "name": "Georgio Nicolas",
+      "affiliation": "COSIC, KU Leuven"
+    },
+    {
+      "conference": "ndss2026",
+      "name": "Jacob Ginesin",
+      "affiliation": "Northeastern University / Carnegie Mellon University"
+    },
+    {
+      "conference": "ndss2026",
+      "name": "Jian Cui",
+      "affiliation": "Indiana University Bloomington/ University of Illinois Urbana-Champaign"
+    },
+    {
+      "conference": "ndss2026",
+      "name": "Kevin Bogner",
+      "affiliation": "COSIC, KU Leuven"
+    },
+    {
+      "conference": "ndss2026",
+      "name": "Michael Brown",
+      "affiliation": "Trail of Bits"
+    },
+    {
+      "conference": "ndss2026",
+      "name": "Pierre Ayoub",
+      "affiliation": "LAAS-CNRS"
+    },
+    {
+      "conference": "ndss2026",
+      "name": "Puzhuo Liu",
+      "affiliation": "Ant Group & Tsinghua University"
+    },
+    {
+      "conference": "ndss2026",
+      "name": "Rishit Saiya",
+      "affiliation": "Cyber Defense, PwC, USA"
+    },
+    {
+      "conference": "ndss2026",
+      "name": "Sofiane Azogagh",
+      "affiliation": "University of Quebec at Montreal"
+    },
+    {
+      "conference": "ndss2026",
+      "name": "Tolga Atalay",
+      "affiliation": "A2 Labs LLC, Virginia Tech"
+    },
+    {
+      "conference": "ndss2026",
+      "name": "Tommaso Sacchetti",
+      "affiliation": "EURECOM"
+    },
+    {
+      "conference": "ndss2026",
+      "name": "Zewei Shi",
+      "affiliation": "The University of Melbourne; CSIRO's Data61"
+    },
+    {
+      "conference": "ndss2026",
+      "name": "Zizhuang Deng",
+      "affiliation": "School of Cyber Science and Technology, Shandong University"
+    },
+    {
+      "conference": "ndss2026",
+      "name": "¹ Participated in one out of two review cycles.",
+      "affiliation": ""
+    },
+    {
+      "conference": "pets2020",
+      "name": "Cecylia Bocovich",
+      "affiliation": "The Tor Project"
+    },
+    {
+      "conference": "pets2020",
+      "name": "Sofia Celi",
+      "affiliation": "Centro de Autonomía Digital"
+    },
+    {
+      "conference": "pets2020",
+      "name": "Jack Grigg",
+      "affiliation": "Electric Coin Company"
+    },
+    {
+      "conference": "pets2020",
+      "name": "Nick Mathewson",
+      "affiliation": "The Tor Project"
+    },
+    {
+      "conference": "pets2020",
+      "name": "William Morland",
+      "affiliation": "Facebook"
+    },
+    {
+      "conference": "pets2020",
+      "name": "Shivan Sahib",
+      "affiliation": "Salesforce"
+    },
+    {
+      "conference": "pets2020",
+      "name": "Carolin Zöbelein",
+      "affiliation": "Independent researcher"
+    },
+    {
+      "conference": "pets2021",
+      "name": "Carolin Zöbelein",
+      "affiliation": "Independent researcher"
+    },
+    {
+      "conference": "pets2021",
+      "name": "Nick Mathewson",
+      "affiliation": "The Tor Project"
+    },
+    {
+      "conference": "pets2021",
+      "name": "Nurullah Demir",
+      "affiliation": "Institut für Internet-Sicherheit"
+    },
+    {
+      "conference": "pets2021",
+      "name": "Sofía Celi",
+      "affiliation": "Cloudflare"
+    },
+    {
+      "conference": "pets2022",
+      "name": "Carolin Zöbelein",
+      "affiliation": ""
+    },
+    {
+      "conference": "pets2022",
+      "name": "Cecylia Bocovich",
+      "affiliation": "The Tor Project"
+    },
+    {
+      "conference": "pets2022",
+      "name": "David Ke Hong",
+      "affiliation": "Facebook Inc."
+    },
+    {
+      "conference": "pets2022",
+      "name": "Jesus Diaz Vico",
+      "affiliation": "IOHK"
+    },
+    {
+      "conference": "pets2022",
+      "name": "Karoline Busse",
+      "affiliation": "University of Applied Administrative Sciences, Lower Saxony"
+    },
+    {
+      "conference": "pets2022",
+      "name": "Nick Mathewson",
+      "affiliation": "The Tor Project"
+    },
+    {
+      "conference": "pets2022",
+      "name": "Pasin Manurangsi",
+      "affiliation": "Google Research"
+    },
+    {
+      "conference": "pets2022",
+      "name": "Sofía Celi",
+      "affiliation": "Cloudflare"
+    },
+    {
+      "conference": "pets2022",
+      "name": "Straithe Robotnikoff",
+      "affiliation": ""
+    },
+    {
+      "conference": "pets2023",
+      "name": "Alexander Bajic",
+      "affiliation": ""
+    },
+    {
+      "conference": "pets2023",
+      "name": "Amin Rabinia",
+      "affiliation": ""
+    },
+    {
+      "conference": "pets2023",
+      "name": "Cecylia Bocovitch",
+      "affiliation": "The Tor Project"
+    },
+    {
+      "conference": "pets2023",
+      "name": "David Ke Hong",
+      "affiliation": "Facebook Inc"
+    },
+    {
+      "conference": "pets2023",
+      "name": "Karoline Busse",
+      "affiliation": "University of Applied Administrative Sciences, Lower Saxony"
+    },
+    {
+      "conference": "pets2023",
+      "name": "Kris Kwiatkowski",
+      "affiliation": "PQShield LTD"
+    },
+    {
+      "conference": "pets2023",
+      "name": "Loris Reiff Maaz Bin Musa",
+      "affiliation": "University of Iowa Malte Wessels, Technische Universität Braunschweig Maximilian Noppel, Karlsruhe Institute of Technology Min Chen, CISPA Helmholtz Center for Information Security Miti Mazmudar, University of Waterloo Natasha Fernandes, Macquarie University Nathan Reitinger, University of Maryland Panagiotis Chatzigiannis, Visa Research Pasin Manurangsi, Google Research Pingchuan Ma, Hong Kong University of Science and Technology Priyanka Nayakkaral, Northwestern University Qian Lou, University of Central Florida Rahmadi Trimananda, UC Irvine Rasmus Dahlberg, Karlstad University Sepideh Ghanavati, University of Maine Simon Koch, TU Braunschweig Shangqi Lai, Monash University Sofía Celi, Brave Software Tatsuya Mori, Waseda University Tushar Jois, Johns Hopkins University Yohan Beugin, University of Wisconsin-Madison Zhang Shaohu, North Carolina State University"
+    },
+    {
+      "conference": "pets2024",
+      "name": "Benjamin Mixon-Baca",
+      "affiliation": "Arizona State University/Breakpointing Bad"
+    },
+    {
+      "conference": "pets2024",
+      "name": "Carolin Zoebelein",
+      "affiliation": ""
+    },
+    {
+      "conference": "pets2024",
+      "name": "Darion Cassel",
+      "affiliation": "Amazon Web Services"
+    },
+    {
+      "conference": "pets2024",
+      "name": "Hari Venugopalan",
+      "affiliation": "UC Davis"
+    },
+    {
+      "conference": "pets2024",
+      "name": "Iyiola Emmanuel Olatunji",
+      "affiliation": "L3S Research Center, Leibniz University Hannover"
+    },
+    {
+      "conference": "pets2024",
+      "name": "Karoline Busse",
+      "affiliation": "University of Applied Administrative Sciences Lower Saxony"
+    },
+    {
+      "conference": "pets2024",
+      "name": "Kris Kwiatkowski",
+      "affiliation": "PQShield"
+    },
+    {
+      "conference": "pets2024",
+      "name": "Loris Reiff",
+      "affiliation": ""
+    },
+    {
+      "conference": "pets2024",
+      "name": "Nadim Kobeissi",
+      "affiliation": "Polygon Labs / Symbolic Software"
+    },
+    {
+      "conference": "pets2024",
+      "name": "Nurullah Demir",
+      "affiliation": "Institut for Internet Security"
+    },
+    {
+      "conference": "pets2024",
+      "name": "Panagiotis Chatzigiannis",
+      "affiliation": "Visa Research"
+    },
+    {
+      "conference": "pets2024",
+      "name": "Pasin Manurangsi",
+      "affiliation": "Google Research"
+    },
+    {
+      "conference": "pets2024",
+      "name": "Sofía Celi",
+      "affiliation": "Brave"
+    },
+    {
+      "conference": "pets2025",
+      "name": "Benjamin Mixon-Baca",
+      "affiliation": "Arizona State University/Breakpointing Bad"
+    },
+    {
+      "conference": "pets2025",
+      "name": "Carolin Zoebelein",
+      "affiliation": ""
+    },
+    {
+      "conference": "pets2025",
+      "name": "Caterina Maidhof",
+      "affiliation": "Valencian Research Institute for Artificial Intelligence (VRAIN), Universitat Politècnica de València (UPV), Spain"
+    },
+    {
+      "conference": "pets2025",
+      "name": "Darion Cassel",
+      "affiliation": "Amazon Web Services"
+    },
+    {
+      "conference": "pets2025",
+      "name": "Diksha Goel",
+      "affiliation": "Commonwealth Scientific and Industrial Research Organisation (CSIRO)"
+    },
+    {
+      "conference": "pets2025",
+      "name": "Hari Venugopalan",
+      "affiliation": "UC Davis"
+    },
+    {
+      "conference": "pets2025",
+      "name": "Harshal Bhadreshkumar Shah",
+      "affiliation": "Visa Research"
+    },
+    {
+      "conference": "pets2025",
+      "name": "Justin Tracey",
+      "affiliation": ""
+    },
+    {
+      "conference": "pets2025",
+      "name": "Kenneth Odoh",
+      "affiliation": ""
+    },
+    {
+      "conference": "pets2025",
+      "name": "Luigi D. C. Soares",
+      "affiliation": "UFMG (Brazil) / Macquarie University (Australia)"
+    },
+    {
+      "conference": "pets2025",
+      "name": "Panagiotis Chatzigiannis",
+      "affiliation": "Visa Research"
+    },
+    {
+      "conference": "pets2025",
+      "name": "Sofía Celi",
+      "affiliation": "Brave"
+    },
+    {
+      "conference": "pets2025",
+      "name": "Tejaswi Agarwal",
+      "affiliation": "Uber Technologies, Inc."
+    },
+    {
+      "conference": "pets2025",
+      "name": "Zubair Ahmad",
+      "affiliation": "Ca'Foscari University Venice Italy"
+    },
+    {
+      "conference": "pets2026",
+      "name": "Alessandro Baccarini",
+      "affiliation": "Guardian Cryptography LLC"
+    },
+    {
+      "conference": "pets2026",
+      "name": "Arnab Bag",
+      "affiliation": "Imec Belgium"
+    },
+    {
+      "conference": "pets2026",
+      "name": "Bhavani Shankar Garikapati",
+      "affiliation": "Staff Engineer, Lyft"
+    },
+    {
+      "conference": "pets2026",
+      "name": "Carolin Zoebelein",
+      "affiliation": "Hyperbedge Technologies"
+    },
+    {
+      "conference": "pets2026",
+      "name": "Daren Zheng",
+      "affiliation": "Meta Platforms Inc."
+    },
+    {
+      "conference": "pets2026",
+      "name": "Harshal Shah",
+      "affiliation": "Visa Research"
+    },
+    {
+      "conference": "pets2026",
+      "name": "Luigi D. C. Soares",
+      "affiliation": "UFMG (Brazil) & Macquarie University (Australia)"
+    },
+    {
+      "conference": "pets2026",
+      "name": "Mudita Khurana",
+      "affiliation": "Airbnb"
+    },
+    {
+      "conference": "pets2026",
+      "name": "Mugdha Khedkar",
+      "affiliation": "Heinz Nixdorf Institute, Paderborn University (Germany)"
+    },
+    {
+      "conference": "pets2026",
+      "name": "Panagiotis Chatzigiannis",
+      "affiliation": "Visa Research"
+    },
+    {
+      "conference": "pets2026",
+      "name": "Sunil Singh Rathode",
+      "affiliation": "Meta Platforms Inc."
+    },
+    {
+      "conference": "pets2026",
+      "name": "Yaxiong Lei",
+      "affiliation": "University of St Andrews & University of Essex"
+    },
+    {
+      "conference": "pets2026",
+      "name": "Zachary Espiritu",
+      "affiliation": "MongoDB Research"
+    },
+    {
+      "conference": "systex2025",
+      "name": "Gianluca Scopelliti",
+      "affiliation": "Politecnico di Torino, Dromt"
+    },
+    {
+      "conference": "systex2025",
+      "name": "Sudheendra Raghav Neela",
+      "affiliation": "TU Graz"
+    },
+    {
+      "conference": "usenixsec2023",
+      "name": "Cristiano Giuffrida",
+      "affiliation": "VUSec"
+    },
+    {
+      "conference": "usenixsec2023",
+      "name": "Alessandro Baccarini",
+      "affiliation": "University at Buffalo (SUNY"
+    },
+    {
+      "conference": "usenixsec2023",
+      "name": "Daniel De Almeida Braga",
+      "affiliation": "Université Rennes 1, CNRS, IRISA"
+    },
+    {
+      "conference": "usenixsec2023",
+      "name": "Dawei Wang",
+      "affiliation": "SKLOIS, Institute of Information Engineering, Chinese Academy of Sciences, Beijing, China"
+    },
+    {
+      "conference": "usenixsec2023",
+      "name": "Erin Avllazagaj",
+      "affiliation": "UMD, CP"
+    },
+    {
+      "conference": "usenixsec2023",
+      "name": "Grégoire Menguy",
+      "affiliation": "CEA LIST"
+    },
+    {
+      "conference": "usenixsec2023",
+      "name": "Guangke Chen",
+      "affiliation": "ShanghaiTech University, Shanghai, China"
+    },
+    {
+      "conference": "usenixsec2023",
+      "name": "Marco Casagrande",
+      "affiliation": "EURECOM"
+    },
+    {
+      "conference": "usenixsec2023",
+      "name": "Menghao Zhang",
+      "affiliation": "Tsinghua University & Kuaishou Technology"
+    },
+    {
+      "conference": "usenixsec2023",
+      "name": "Nuno Sabino",
+      "affiliation": "Carnegie Mellon University, CMU | Portugal"
+    },
+    {
+      "conference": "usenixsec2023",
+      "name": "Nurullah Demir",
+      "affiliation": "Institut für Internet-Sicherheit, Karlsruhe Institute of Technology (KIT"
+    },
+    {
+      "conference": "usenixsec2023",
+      "name": "Raounak BENABIDALLAH",
+      "affiliation": "CEA LIST, Université Paris Saclay"
+    },
+    {
+      "conference": "usenixsec2023",
+      "name": "Salwa SOUAF",
+      "affiliation": "CEA LIST, Université Paris Saclay"
+    },
+    {
+      "conference": "usenixsec2023",
+      "name": "Shouvick Mondal",
+      "affiliation": "Concordia University, Montreal, Canada"
+    },
+    {
+      "conference": "usenixsec2023",
+      "name": "Tiago Heinrich",
+      "affiliation": "Federal University of Paraná"
+    },
+    {
+      "conference": "usenixsec2023",
+      "name": "Yanmao Man",
+      "affiliation": "ByteDance, Inc"
+    },
+    {
+      "conference": "usenixsec2023",
+      "name": "Yu Nong",
+      "affiliation": "Washington State University, Pullman, WA, USA"
+    },
+    {
+      "conference": "usenixsec2023",
+      "name": "Zahra Tarkhani",
+      "affiliation": "Microsoft and University of Cambridge"
+    },
+    {
+      "conference": "usenixsec2023",
+      "name": "Alexandre Gonzalvez",
+      "affiliation": "Université Rennes, CNRS, IRISA"
+    },
+    {
+      "conference": "usenixsec2023",
+      "name": "Guilhem Lacombe",
+      "affiliation": "CEA LIST"
+    },
+    {
+      "conference": "usenixsec2023",
+      "name": "Jenni Reuben",
+      "affiliation": "Totalförsvarets Forskningsinstitut (FOI"
+    },
+    {
+      "conference": "usenixsec2023",
+      "name": "Zhiyu Zhang",
+      "affiliation": "SKLOIS, Institute of Information Engineering, Chinese Academy of Sciences, China"
+    },
+    {
+      "conference": "usenixsec2024",
+      "name": "Kevin Cheang",
+      "affiliation": "Amazon Web Services"
+    },
+    {
+      "conference": "usenixsec2024",
+      "name": "Zizhuang Deng",
+      "affiliation": "SKLOIS, Institute of Information Engineering, Chinese Academy of Sciences"
+    },
+    {
+      "conference": "usenixsec2024",
+      "name": "Tiago Heinrich",
+      "affiliation": "Federal University of Paraná"
+    },
+    {
+      "conference": "usenixsec2024",
+      "name": "Seongmin Lee",
+      "affiliation": "Max Planck Institute for Security and Privacy"
+    },
+    {
+      "conference": "usenixsec2024",
+      "name": "Jenni Reuben",
+      "affiliation": ""
+    },
+    {
+      "conference": "usenixsec2024",
+      "name": "Avinash Sudhodanan",
+      "affiliation": "HUMAN Security"
+    },
+    {
+      "conference": "usenixsec2024",
+      "name": "Shujiang Wu",
+      "affiliation": "F5"
+    },
+    {
+      "conference": "usenixsec2024",
+      "name": "Zhiyu Zhang",
+      "affiliation": "SKLOIS, Institute of Information Engineering, Chinese Academy of Sciences"
+    },
+    {
+      "conference": "usenixsec2025",
+      "name": "Adrian Herrera",
+      "affiliation": "Interrupt Labs"
+    },
+    {
+      "conference": "usenixsec2025",
+      "name": "Ahmed Lekssays",
+      "affiliation": "Qatar Computing Research Institute"
+    },
+    {
+      "conference": "usenixsec2025",
+      "name": "Elias Suvanto",
+      "affiliation": "University of Luxembourg & CryptoLab Inc."
+    },
+    {
+      "conference": "usenixsec2025",
+      "name": "Gabriel Zaid",
+      "affiliation": "Thales Group"
+    },
+    {
+      "conference": "usenixsec2025",
+      "name": "Kelly Kaoudis",
+      "affiliation": "Trail of Bits"
+    },
+    {
+      "conference": "usenixsec2025",
+      "name": "Kiho Lee",
+      "affiliation": "ETRI"
+    },
+    {
+      "conference": "usenixsec2025",
+      "name": "Michael Brown",
+      "affiliation": "Trail of Bits"
+    },
+    {
+      "conference": "usenixsec2025",
+      "name": "Paul L. R. OLIVIER",
+      "affiliation": ""
+    },
+    {
+      "conference": "usenixsec2025",
+      "name": "Shengtuo Hu",
+      "affiliation": "Palo Alto Networks"
+    },
+    {
+      "conference": "usenixsec2025",
+      "name": "Wei Song",
+      "affiliation": "UNSW Sydney"
+    },
+    {
+      "conference": "usenixsec2025",
+      "name": "Yunyi Zhang",
+      "affiliation": "National University of Defense Technology, Tsinghua University"
+    },
+    {
+      "conference": "usenixsec2025",
+      "name": "Zidong Zhang",
+      "affiliation": "Simon Fraser University, QI-ANXIN Research Institute"
+    },
+    {
+      "conference": "usenixsec2025",
+      "name": "Zizhuang Deng",
+      "affiliation": "School of Cyber Science and Technology, Shandong Universty"
+    },
+    {
+      "conference": "usenixsec2025",
+      "name": "Mingming Zhang",
+      "affiliation": "Zhongguancun Laboratory"
+    },
+    {
+      "conference": "usenixsec2025",
+      "name": "Pascal Cotret",
+      "affiliation": "Lab-STICC / ENSTA Bretagne"
+    },
+    {
+      "conference": "usenixsec2025",
+      "name": "Kyle Fredrickson",
+      "affiliation": "UCSC"
+    },
+    {
+      "conference": "usenixsec2026",
+      "name": "Aurore Fass",
+      "affiliation": "Inria Centre at Université Côte d'Azur"
+    },
+    {
+      "conference": "usenixsec2026",
+      "name": "Ahmed\tLekssays",
+      "affiliation": "Qatar Computing Research Institute"
+    },
+    {
+      "conference": "usenixsec2026",
+      "name": "Alessandro\tBaccarini",
+      "affiliation": "Input Output"
+    },
+    {
+      "conference": "usenixsec2026",
+      "name": "Arturo\tVillacañas",
+      "affiliation": "Independent researcher"
+    },
+    {
+      "conference": "usenixsec2026",
+      "name": "Atefeh\tMohseni-Ejiyeh",
+      "affiliation": "UC Santa Barbara, Harness"
+    },
+    {
+      "conference": "usenixsec2026",
+      "name": "Bernd\tGruner, _German Aerospace Center",
+      "affiliation": "DLR"
+    },
+    {
+      "conference": "usenixsec2026",
+      "name": "Daniel\tPöllmann",
+      "affiliation": "ETH Zurich & Lucerne University of Applied Sciences and Arts"
+    },
+    {
+      "conference": "usenixsec2026",
+      "name": "Eric\tGarcía Arribas",
+      "affiliation": "TU Graz"
+    },
+    {
+      "conference": "usenixsec2026",
+      "name": "Florian\tRoudot",
+      "affiliation": "Univ Rennes"
+    },
+    {
+      "conference": "usenixsec2026",
+      "name": "Hamza\tMouhcine",
+      "affiliation": "Qatar Computing Research Institute"
+    },
+    {
+      "conference": "usenixsec2026",
+      "name": "Marius\tFleischer",
+      "affiliation": "NVIDIA"
+    },
+    {
+      "conference": "usenixsec2026",
+      "name": "Nicola\tBottura",
+      "affiliation": "Prisma s.r.l."
+    },
+    {
+      "conference": "usenixsec2026",
+      "name": "Paul\tOLIVIER",
+      "affiliation": "LAAS-CNRS"
+    },
+    {
+      "conference": "usenixsec2026",
+      "name": "Peiyang\tLi",
+      "affiliation": "Ant Group & Tsinghua University"
+    },
+    {
+      "conference": "usenixsec2026",
+      "name": "Puzhuo\tLiu",
+      "affiliation": "Ant Group & Tsinghua University"
+    },
+    {
+      "conference": "usenixsec2026",
+      "name": "Shao-Yu\tChu",
+      "affiliation": "UCSD"
+    },
+    {
+      "conference": "usenixsec2026",
+      "name": "Shengtuo\tHu",
+      "affiliation": "Palo Alto Networks"
+    },
+    {
+      "conference": "usenixsec2026",
+      "name": "Shubham\tAgarwal",
+      "affiliation": "Max Planck Institute for Security and Privacy"
+    },
+    {
+      "conference": "usenixsec2026",
+      "name": "Siliang\tQin",
+      "affiliation": "Institute of Information Engineering, Chinese Academy of Sciences"
+    },
+    {
+      "conference": "usenixsec2026",
+      "name": "Thom\tWiggers",
+      "affiliation": "PQShield"
+    },
+    {
+      "conference": "usenixsec2026",
+      "name": "Tingwei\tZhang",
+      "affiliation": "Cornell Tech"
+    },
+    {
+      "conference": "usenixsec2026",
+      "name": "Xiao\tZhan",
+      "affiliation": "Universitat Politècnica de València & University of Cambridge"
+    },
+    {
+      "conference": "usenixsec2026",
+      "name": "Yi\tZhou",
+      "affiliation": "Amazon Web Serivce"
+    },
+    {
+      "conference": "usenixsec2026",
+      "name": "Yupei\tLiu",
+      "affiliation": "Penn State"
+    },
+    {
+      "conference": "usenixsec2026",
+      "name": "Zachary\tEspiritu",
+      "affiliation": "MongoDB Research"
+    },
+    {
+      "conference": "usenixsec2026",
+      "name": "Zewei\tShi",
+      "affiliation": "The University of Melbourne; CSIRO's Data61"
+    },
+    {
+      "conference": "usenixsec2026",
+      "name": "Zhiyu\tZhang",
+      "affiliation": "Institute of Information Engineering, Chinese Academy of Sciences"
+    },
+    {
+      "conference": "usenixsec2026",
+      "name": "Zihan\tWang",
+      "affiliation": "The University of Queensland and CSIRO's Data61"
+    },
+    {
+      "conference": "osdi2025",
+      "name": "Cláudia Brito",
+      "affiliation": "INESC TEC and University of Minho"
+    },
+    {
+      "conference": "osdi2025",
+      "name": "Kaihui Gao",
+      "affiliation": "Zhongguancun Laboratory"
+    },
+    {
+      "conference": "osdi2025",
+      "name": "Lana Honcharuk",
+      "affiliation": "Crusoe Cloud"
+    },
+    {
+      "conference": "osdi2025",
+      "name": "Hanchen Li",
+      "affiliation": "Stealth Startup and University of California, Berkeley"
+    },
+    {
+      "conference": "osdi2025",
+      "name": "Jiansong Li",
+      "affiliation": "Li Auto Inc"
+    },
+    {
+      "conference": "osdi2025",
+      "name": "Jing Liu",
+      "affiliation": "Max Planck Institute for Security and Privacy"
+    },
+    {
+      "conference": "osdi2025",
+      "name": "João Oliveira",
+      "affiliation": "INESC-ID and Instituto Superior Técnico, Universidade de Lisboa"
+    },
+    {
+      "conference": "osdi2025",
+      "name": "Jiaqi Pan",
+      "affiliation": "University of Illinois Urbana–Champaign and Tsinghua University"
+    },
+    {
+      "conference": "osdi2025",
+      "name": "Sibendu Paul",
+      "affiliation": "Amazon Prime Video"
+    },
+    {
+      "conference": "osdi2025",
+      "name": "Rohan Puri",
+      "affiliation": "Samsung Semiconductor"
+    },
+    {
+      "conference": "osdi2025",
+      "name": "Qingxiao Sun",
+      "affiliation": "China University of Petroleum"
+    },
+    {
+      "conference": "osdi2025",
+      "name": "Sahil Tyagi",
+      "affiliation": "Oak Ridge National Laboratory"
+    },
+    {
+      "conference": "osdi2025",
+      "name": "Diogo Vaz",
+      "affiliation": "INESC-ID and Instituto Superior Técnico, Universidade de Lisboa"
+    },
+    {
+      "conference": "osdi2025",
+      "name": "Diman Zad Tootaghaj",
+      "affiliation": "Hewlett Packard Labs"
+    },
+    {
+      "conference": "atc2025",
+      "name": "Alain Tchana",
+      "affiliation": "Grenoble INP"
+    },
+    {
+      "conference": "atc2025",
+      "name": "Cláudia Brito",
+      "affiliation": "INESC TEC and University of Minho"
+    },
+    {
+      "conference": "atc2025",
+      "name": "Kaihui Gao",
+      "affiliation": "Zhongguancun Laboratory"
+    },
+    {
+      "conference": "atc2025",
+      "name": "Lana Honcharuk",
+      "affiliation": "Crusoe Cloud"
+    },
+    {
+      "conference": "atc2025",
+      "name": "Hanchen Li",
+      "affiliation": "Stealth Startup and University of California, Berkeley"
+    },
+    {
+      "conference": "atc2025",
+      "name": "Jiansong Li",
+      "affiliation": "Li Auto Inc"
+    },
+    {
+      "conference": "atc2025",
+      "name": "Jing Liu",
+      "affiliation": "Max Planck Institute for Security and Privacy"
+    },
+    {
+      "conference": "atc2025",
+      "name": "João Oliveira",
+      "affiliation": "INESC-ID and Instituto Superior Técnico, Universidade de Lisboa"
+    },
+    {
+      "conference": "atc2025",
+      "name": "Jiaqi Pan",
+      "affiliation": "University of Illinois Urbana–Champaign and Tsinghua University"
+    },
+    {
+      "conference": "atc2025",
+      "name": "Sibendu Paul",
+      "affiliation": "Amazon Prime Video"
+    },
+    {
+      "conference": "atc2025",
+      "name": "Rohan Puri",
+      "affiliation": "Samsung Semiconductor"
+    },
+    {
+      "conference": "atc2025",
+      "name": "Qingxiao Sun",
+      "affiliation": "China University of Petroleum"
+    },
+    {
+      "conference": "atc2025",
+      "name": "Sahil Tyagi",
+      "affiliation": "Oak Ridge National Laboratory"
+    },
+    {
+      "conference": "atc2025",
+      "name": "Diogo Vaz",
+      "affiliation": "INESC-ID and Instituto Superior Técnico, Universidade de Lisboa"
+    },
+    {
+      "conference": "atc2025",
+      "name": "Diman Zad Tootaghaj",
+      "affiliation": "Hewlett Packard Labs"
+    },
+    {
+      "conference": "usenixsec2020",
+      "name": "Marcus Botacin",
+      "affiliation": "Federal University of Paraná Marcus Brinkmann, Ruhr-Universität Bochum"
+    },
+    {
+      "conference": "usenixsec2020",
+      "name": "Jason Carter",
+      "affiliation": "Oak Ridge National Laboratory"
+    },
+    {
+      "conference": "usenixsec2020",
+      "name": "Sofía Celi",
+      "affiliation": "Dyne"
+    },
+    {
+      "conference": "usenixsec2020",
+      "name": "Moritz Eckert",
+      "affiliation": "EURECOM"
+    },
+    {
+      "conference": "usenixsec2020",
+      "name": "Rob Gillen",
+      "affiliation": "Oak Ridge National Laboratory"
+    },
+    {
+      "conference": "usenixsec2020",
+      "name": "Carson Harmon",
+      "affiliation": "Trail of Bits"
+    },
+    {
+      "conference": "usenixsec2020",
+      "name": "Maryam Masoudian",
+      "affiliation": "Sharif University of Technology/The Hong Kong University of Science and Technology"
+    },
+    {
+      "conference": "usenixsec2020",
+      "name": "Blagovesta Pirelli",
+      "affiliation": "École Polytechnique Fédérale de Lausanne (EPFL)"
+    },
+    {
+      "conference": "usenixsec2020",
+      "name": "Goran Piskachev",
+      "affiliation": "Fraunhofer IEM"
+    },
+    {
+      "conference": "usenixsec2020",
+      "name": "Andrew R. Reiter",
+      "affiliation": "Veracode Applied Research Group"
+    },
+    {
+      "conference": "usenixsec2020",
+      "name": "Eyal Ronen",
+      "affiliation": "Tel Aviv University/Katholieke Universiteit Leuven"
+    },
+    {
+      "conference": "usenixsec2020",
+      "name": "Santiago Torres-Arias New York University",
+      "affiliation": ""
+    },
+    {
+      "conference": "usenixsec2021",
+      "name": "Clémentine Maurice",
+      "affiliation": "IRISA"
+    },
+    {
+      "conference": "usenixsec2021",
+      "name": "Andrew Reiter",
+      "affiliation": "Redacted"
+    },
+    {
+      "conference": "usenixsec2021",
+      "name": "Jared Carlson",
+      "affiliation": "Veracode Applied Research Group"
+    },
+    {
+      "conference": "usenixsec2021",
+      "name": "Luis Garcia",
+      "affiliation": "USC Information Sciences Institute (ISI)"
+    },
+    {
+      "conference": "usenixsec2021",
+      "name": "Sarah Zennou",
+      "affiliation": "Airbus"
+    },
+    {
+      "conference": "usenixsec2022",
+      "name": "Simone Aonzo",
+      "affiliation": "EURECOM"
+    },
+    {
+      "conference": "usenixsec2022",
+      "name": "Pierre Ayoub",
+      "affiliation": "EURECOM"
+    },
+    {
+      "conference": "usenixsec2022",
+      "name": "Fabricio Ceschin",
+      "affiliation": "Federal University of Parana"
+    },
+    {
+      "conference": "usenixsec2022",
+      "name": "Luca Degani",
+      "affiliation": "University of Trento and Istituto di Informatica e Telematica, Consiglio Nazionale delle Ricerche"
+    },
+    {
+      "conference": "usenixsec2022",
+      "name": "Romain Fouquet",
+      "affiliation": "Université de Lille, Inria, CNRS"
+    },
+    {
+      "conference": "usenixsec2022",
+      "name": "Adriaan Jacobs",
+      "affiliation": "imec-DistriNet, Katholieke Universiteit Leuven"
+    },
+    {
+      "conference": "usenixsec2022",
+      "name": "Georg Land",
+      "affiliation": "Ruhr-Universität Bochum and Deutsches Forschungszentrum für Künstliche Intelligenz"
+    },
+    {
+      "conference": "usenixsec2022",
+      "name": "Damien Marion",
+      "affiliation": "IRISA"
+    },
+    {
+      "conference": "usenixsec2022",
+      "name": "Maryam Masoudian",
+      "affiliation": "Sharif University of Technology, Hong Kong University of Science and Technology (HKUST)"
+    },
+    {
+      "conference": "usenixsec2022",
+      "name": "Guozhu Meng",
+      "affiliation": "SKLOIS, Institute of Information Engineering, Chinese Academy of Sciences"
+    },
+    {
+      "conference": "usenixsec2022",
+      "name": "Vladislav Mladenov",
+      "affiliation": "Horst Görtz Institute for IT Security"
+    },
+    {
+      "conference": "usenixsec2022",
+      "name": "Paul Olivier",
+      "affiliation": "EURECOM"
+    },
+    {
+      "conference": "usenixsec2022",
+      "name": "Duy-Phuc Pham",
+      "affiliation": "INRIA, IRISA, France"
+    },
+    {
+      "conference": "usenixsec2022",
+      "name": "Goran Piskachev",
+      "affiliation": "Fraunhofer IEM"
+    },
+    {
+      "conference": "usenixsec2022",
+      "name": "Hernan Ponce de Leon",
+      "affiliation": "Bundeswehr University Munich"
+    },
+    {
+      "conference": "usenixsec2022",
+      "name": "Andrew R. Reiter",
+      "affiliation": "Redacted"
+    },
+    {
+      "conference": "usenixsec2022",
+      "name": "Jenni Reuben",
+      "affiliation": "Totalförsvarets forskningsinstitut (FOI)"
+    },
+    {
+      "conference": "usenixsec2022",
+      "name": "Irwin Reyes",
+      "affiliation": "Two Six Technologies"
+    },
+    {
+      "conference": "usenixsec2022",
+      "name": "Guillaume Valadon",
+      "affiliation": "Quarkslab"
+    },
+    {
+      "conference": "usenixsec2022",
+      "name": "Alexios Voulimeneas",
+      "affiliation": "imec-DistriNet, Katholieke Universiteit Leuven"
+    },
+    {
+      "conference": "usenixsec2022",
+      "name": "Dawei Wang",
+      "affiliation": "SKLOIS, Institute of Information Engineering, Chinese Academy of Sciences"
+    },
+    {
+      "conference": "woot2024",
+      "name": "Aurélien Hernandez",
+      "affiliation": "EURECOM"
+    },
+    {
+      "conference": "woot2024",
+      "name": "Adrian Herrera",
+      "affiliation": "Interrupt Labs"
+    },
+    {
+      "conference": "woot2024",
+      "name": "Sabrina Manickam",
+      "affiliation": "Vellore Institute of Technology and Max Planck Institute for Security and Privacy"
+    },
+    {
+      "conference": "woot2024",
+      "name": "Paul Olivier",
+      "affiliation": "LAAS-CNRS"
+    },
+    {
+      "conference": "woot2024",
+      "name": "Samuel Pélissier",
+      "affiliation": "INSA Lyon, Inria"
+    },
+    {
+      "conference": "woot2024",
+      "name": "Nils Wiersma",
+      "affiliation": "Netherlands Forensic Institute"
+    },
+    {
+      "conference": "woot2025",
+      "name": "Jiska Classen",
+      "affiliation": "Hasso Plattner Institute, University of Potsdam"
+    },
+    {
+      "conference": "woot2025",
+      "name": "Jing Liu",
+      "affiliation": "Max Planck Institute for Security and Privacy"
+    },
+    {
+      "conference": "woot2025",
+      "name": "Sabrina Manickam",
+      "affiliation": "Ruhr University Bochum and Max Planck Institute for Security and Privacy"
+    },
+    {
+      "conference": "woot2025",
+      "name": "Paul L. R. Olivier",
+      "affiliation": ""
+    },
+    {
+      "conference": "woot2025",
+      "name": "Nils Wiersma",
+      "affiliation": "Netherlands Forensic Institute"
+    },
+    {
+      "conference": "ches2022",
+      "name": "Alejandro Cabrera Aldaya",
+      "affiliation": "Tampere University, Finland"
+    },
+    {
+      "conference": "ches2022",
+      "name": "Ben Marshall",
+      "affiliation": "PQShield, UK"
+    },
+    {
+      "conference": "ches2022",
+      "name": "Estuardo Alpirez Bock",
+      "affiliation": "Aalto University, Finland"
+    },
+    {
+      "conference": "ches2022",
+      "name": "Fabrizio De Santis",
+      "affiliation": "Siemens AG, Germany"
+    },
+    {
+      "conference": "ches2022",
+      "name": "Gaëtan Cassiers",
+      "affiliation": "UCLouvain, Belgium"
+    },
+    {
+      "conference": "ches2022",
+      "name": "James Howe",
+      "affiliation": "PQShield, UK"
+    },
+    {
+      "conference": "ches2022",
+      "name": "Jan Jancar",
+      "affiliation": "Masaryk University, Czechia"
+    },
+    {
+      "conference": "ches2022",
+      "name": "Joost Renes",
+      "affiliation": "NXP Semiconductors, The Netherlands"
+    },
+    {
+      "conference": "ches2022",
+      "name": "Lennert Wouters",
+      "affiliation": "KU Leuven, Belgium"
+    },
+    {
+      "conference": "ches2022",
+      "name": "Marc Stevens",
+      "affiliation": "CWI Cryptology Group, The Netherlands"
+    },
+    {
+      "conference": "ches2022",
+      "name": "Matthias J. Kannwischer",
+      "affiliation": "Academia Sinica, Taiwan"
+    },
+    {
+      "conference": "ches2022",
+      "name": "Norman Lahr",
+      "affiliation": "Fraunhofer SIT, Darmstadt, Germany"
+    },
+    {
+      "conference": "ches2022",
+      "name": "Olivier Bronchain",
+      "affiliation": "UCLouvain, Belgium"
+    },
+    {
+      "conference": "ches2022",
+      "name": "Pedro G. M. R. Alves",
+      "affiliation": "University of Campinas, Brazil"
+    },
+    {
+      "conference": "ches2022",
+      "name": "Peter Schwabe",
+      "affiliation": "MPI-SP & Radboud University, Germany/The Netherlands"
+    },
+    {
+      "conference": "ches2022",
+      "name": "Richard Petri",
+      "affiliation": "Fraunhofer SIT, Darmstadt, Germany"
+    },
+    {
+      "conference": "ches2023",
+      "name": "Peter Schwabe",
+      "affiliation": "Max Planck Institute for Security and Privacy, Germany, and Radboud University, the Netherlands"
+    },
+    {
+      "conference": "ches2023",
+      "name": "Fabio Campos",
+      "affiliation": "Radboud University & RheinMain University of Applied Sciences"
+    },
+    {
+      "conference": "ches2023",
+      "name": "Łukasz Chmielewski",
+      "affiliation": "Masaryk University & Radboud University"
+    },
+    {
+      "conference": "ches2023",
+      "name": "Pedro Maat Costa Massolino",
+      "affiliation": "PQShield"
+    },
+    {
+      "conference": "ches2023",
+      "name": "Catherine Easdon",
+      "affiliation": "Dynatrace Research"
+    },
+    {
+      "conference": "ches2023",
+      "name": "Vincent Hwang",
+      "affiliation": "Academia Sinica"
+    },
+    {
+      "conference": "ches2023",
+      "name": "Norman Lahr",
+      "affiliation": "Fraunhofer SIT"
+    },
+    {
+      "conference": "ches2023",
+      "name": "Lorenz Panny",
+      "affiliation": "Academia Sinica"
+    },
+    {
+      "conference": "ches2023",
+      "name": "Richard Petri",
+      "affiliation": "Fraunhofer SIT"
+    },
+    {
+      "conference": "ches2023",
+      "name": "Julian Wälde",
+      "affiliation": "Fraunhofer SIT"
+    },
+    {
+      "conference": "ches2023",
+      "name": "Ralf Zimmermann",
+      "affiliation": "Zentrale Stelle für Informationstechnik im Sicherheitsbereich"
+    },
+    {
+      "conference": "ches2024",
+      "name": "Junhao Huang",
+      "affiliation": "BNU-HKBU"
+    },
+    {
+      "conference": "ches2024",
+      "name": "Kris Kwiatkowski",
+      "affiliation": "PQShield"
+    },
+    {
+      "conference": "ches2024",
+      "name": "Robin Leander Schröder",
+      "affiliation": "Fraunhofer SIT"
+    },
+    {
+      "conference": "ches2024",
+      "name": "Alexander Nilsson",
+      "affiliation": "Advenica AB"
+    },
+    {
+      "conference": "ches2024",
+      "name": "Markku-Juhani O. Saarinen (Chair)",
+      "affiliation": "Tampere University and PQShield"
+    },
+    {
+      "conference": "ches2025",
+      "name": "Amund Askeland",
+      "affiliation": "Nasjonal Sikkerhetsmyndighet"
+    },
+    {
+      "conference": "ches2025",
+      "name": "Joppe W. Bos",
+      "affiliation": "NXP Semiconductors"
+    },
+    {
+      "conference": "ches2025",
+      "name": "Vincent Hwang",
+      "affiliation": "Max Planck Institute for Security and Privacy (MPI-SP)"
+    },
+    {
+      "conference": "ches2025",
+      "name": "Aaron Kaiser",
+      "affiliation": "Max Planck Institute for Security and Privacy (MPI-SP)"
+    },
+    {
+      "conference": "ches2025",
+      "name": "Kris Kwiatkowski",
+      "affiliation": "PQShield"
+    },
+    {
+      "conference": "ches2025",
+      "name": "Ben Marshall",
+      "affiliation": "PQShield"
+    },
+    {
+      "conference": "ches2025",
+      "name": "Fabrizio De Santis",
+      "affiliation": "Siemens AG"
+    },
+    {
+      "conference": "ches2025",
+      "name": "Philippe Teuwen",
+      "affiliation": "Quarkslab"
+    },
+    {
+      "conference": "ches2026",
+      "name": "Ileana Buhan",
+      "affiliation": "Radboud University Nijmegen"
+    },
+    {
+      "conference": "ches2026",
+      "name": "Amin Abdulrahman",
+      "affiliation": "Max Planck Institute for Security and Privacy (MPI-SP)"
+    },
+    {
+      "conference": "ches2026",
+      "name": "Dahmun Goudarzi",
+      "affiliation": "Quarkslab"
+    },
+    {
+      "conference": "ches2026",
+      "name": "Eros Camacho-Ruiz",
+      "affiliation": "Instituto de Microelectrónica de Sevilla"
+    },
+    {
+      "conference": "ches2026",
+      "name": "Fabrizio De Santis",
+      "affiliation": "Siemens AG"
+    },
+    {
+      "conference": "ches2026",
+      "name": "Joppe Bos",
+      "affiliation": "NXP Semiconductors"
+    },
+    {
+      "conference": "ches2026",
+      "name": "Kris Kwiatkowski",
+      "affiliation": "PQShield"
+    },
+    {
+      "conference": "ches2026",
+      "name": "Philippe Teuwen",
+      "affiliation": "Quarkslab"
+    },
+    {
+      "conference": "ches2026",
+      "name": "Vincent Hwang",
+      "affiliation": "Max Planck Institute for Security and Privacy (MPI-SP)"
+    },
+    {
+      "conference": "ches2026",
+      "name": "YouTang Lee",
+      "affiliation": "Qinvicta"
+    }
+  ]
+}

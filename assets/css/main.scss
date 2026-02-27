@@ -1,0 +1,100 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+// Widen the page content area to use more horizontal space
+$max-width: 1600px !default;
+$right-sidebar-width-narrow: 0px !default;
+$right-sidebar-width: 0px !default;
+
+@import "minimal-mistakes/skins/default";
+@import "minimal-mistakes";
+
+// Reduce base font size on desktop screens (theme defaults: 16px / 18px large)
+html {
+  font-size: 14px;
+  @media (min-width: 64em) {   // $large  – 1024px
+    font-size: 15px;
+  }
+  @media (min-width: 80em) {   // $x-large – 1280px
+    font-size: 16px;
+  }
+}
+
+// Make the single layout page content wider and start further left
+.page {
+  float: none;
+  width: 100%;
+  padding-right: 0;
+}
+
+.page__inner-wrap {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+// On wide screens, ensure full width is used
+.wide .page {
+  max-width: 100%;
+  padding-right: 0;
+}
+
+// Remove right sidebar space and push content left
+.sidebar__right {
+  display: none;
+}
+
+#main {
+  max-width: 100%;
+  padding-left: 0;
+}
+
+// Masthead - center like content
+.masthead__inner-wrap {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+// Dropdown submenus for masthead navigation
+// Override theme's overflow:hidden on .visible-links which clips dropdowns
+.greedy-nav .visible-links {
+  overflow: visible;
+}
+.masthead__menu-item--has-children {
+  position: relative;
+}
+.masthead__submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+  background: #fff;
+  border: 1px solid #ddd;
+  min-width: 160px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.masthead__menu-item--has-children:hover .masthead__submenu {
+  display: block;
+}
+.masthead__submenu li a {
+  display: block;
+  padding: 0.4em 1em;
+  font-size: 0.85em;
+  color: #333;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.masthead__submenu li a:hover {
+  background: #f2f2f2;
+}
+

@@ -1,0 +1,307 @@
+{% comment %}
+  Dynamic AE member table loaded from JSON with sorting and pagination.
+  Shows recurring AE committee members (≥2 memberships) including chair roles.
+
+  Required page variables:
+    page.member_data_url  — path to the JSON file (e.g., /assets/data/systems_ae_members.json)
+{% endcomment %}
+
+<div id="member-controls" class="ae-controls" style="display:none;">
+  <div class="ae-controls-row">
+    <div class="ae-control-group">
+      <label class="ae-label" for="pageSizeSelect">Show</label>
+      <select id="pageSizeSelect" class="ae-select">
+        <option value="100" selected>100</option>
+        <option value="500">500</option>
+        <option value="0">All</option>
+      </select>
+      <span class="ae-label">per page</span>
+    </div>
+    <div class="ae-control-group ae-page-nav">
+      <button id="prevBtn" class="ae-btn" disabled>&laquo; Prev</button>
+      <span id="pageInfo" class="ae-page-info"></span>
+      <button id="nextBtn" class="ae-btn">Next &raquo;</button>
+    </div>
+    <span id="totalInfo" class="ae-total-info"></span>
+  </div>
+</div>
+
+<div id="memberLoading"><em>Loading AE member data…</em></div>
+
+<table id="memberTable" style="display:none;">
+<thead><tr id="memberHead"></tr></thead>
+<tbody id="memberBody"></tbody>
+</table>
+
+<div id="member-controls-bottom" class="ae-controls" style="display:none;">
+  <div class="ae-controls-row">
+    <div class="ae-control-group ae-page-nav" style="margin-left:0;">
+      <button id="prevBtnB" class="ae-btn">&laquo; Prev</button>
+      <span id="pageInfoB" class="ae-page-info"></span>
+      <button id="nextBtnB" class="ae-btn">Next &raquo;</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  var DATA_URL = '{{ page.member_data_url | relative_url }}';
+  var allMembers = [];
+  var sortedMembers = [];
+  var yearColumns = [];
+  var currentPage = 0;
+  var pageSize = 100;
+  var sortCol = 2; // default sort: Memberships
+  var sortAsc = false;
+
+  // Column definitions
+  var fixedCols = [
+    {label:'Rank',                   key:'rank',               type:'num'},
+    {label:'Name',                   key:'name',               type:'alpha'},
+    {label:'AE&nbsp;Service&nbsp;Total', key:'total_memberships', type:'num', tip:'Total AE committee memberships for this area'},
+    {label:'Chaired&nbsp;\u2605',    key:'chair_count',        type:'num',  tip:'Times served as AE chair or co-chair'},
+    {label:'Affiliation',            key:'affiliation',        type:'alpha'},
+    {label:'Conferences',            key:'num_conferences',    type:'num',  tip:'Number of distinct conferences served'},
+    {label:'First&nbsp;Year',        key:'first_year',         type:'num'},
+    {label:'Last&nbsp;Year',         key:'last_year',          type:'num'}
+  ];
+
+  function render() {
+    var start = pageSize > 0 ? currentPage * pageSize : 0;
+    var end = pageSize > 0 ? start + pageSize : sortedMembers.length;
+    var page = sortedMembers.slice(start, end);
+
+    var tbody = document.getElementById('memberBody');
+    var rows = [];
+    for (var i = 0; i < page.length; i++) {
+      var m = page[i];
+      var cells = [];
+      cells.push('<td>' + (start + i + 1) + '</td>');
+      cells.push('<td>' + escHtml(m.name) + '</td>');
+      cells.push('<td><strong>' + m.total_memberships + '</strong></td>');
+      var chairLabel = m.chair_count > 0 ? m.chair_count + ' \u2605' : '';
+      cells.push('<td>' + chairLabel + '</td>');
+      cells.push('<td>' + escHtml(m.affiliation || '') + '</td>');
+      cells.push('<td>' + (m.conferences ? m.conferences.length : '') + '</td>');
+      cells.push('<td>' + (m.first_year || '') + '</td>');
+      cells.push('<td>' + (m.last_year || '') + '</td>');
+      for (var j = 0; j < yearColumns.length; j++) {
+        var cnt = (m.years || {})[yearColumns[j]] || 0;
+        cells.push('<td>' + (cnt > 0 ? cnt : '') + '</td>');
+      }
+      rows.push('<tr>' + cells.join('') + '</tr>');
+    }
+    tbody.innerHTML = rows.join('');
+    updatePageInfo();
+  }
+
+  function escHtml(s) {
+    var d = document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+
+  function sortData(colIdx, asc) {
+    var key;
+    if (colIdx < fixedCols.length) {
+      key = fixedCols[colIdx].key;
+    } else {
+      var yIdx = colIdx - fixedCols.length;
+      var yr = yearColumns[yIdx];
+      key = '_y' + yr;
+    }
+    sortedMembers.sort(function(a, b) {
+      var av, bv;
+      if (key.startsWith('_y')) {
+        var y = parseInt(key.slice(2));
+        av = (a.years || {})[y] || 0;
+        bv = (b.years || {})[y] || 0;
+      } else if (key === 'name' || key === 'affiliation') {
+        av = (a[key] || '').toLowerCase();
+        bv = (b[key] || '').toLowerCase();
+      } else if (key === 'num_conferences') {
+        av = a.conferences ? a.conferences.length : 0;
+        bv = b.conferences ? b.conferences.length : 0;
+      } else {
+        av = a[key] || 0;
+        bv = b[key] || 0;
+      }
+      if (av < bv) return asc ? -1 : 1;
+      if (av > bv) return asc ? 1 : -1;
+      return 0;
+    });
+  }
+
+  function updatePageInfo() {
+    var total = sortedMembers.length;
+    var start = pageSize > 0 ? currentPage * pageSize : 0;
+    var end = pageSize > 0 ? Math.min(start + pageSize, total) : total;
+    var pages = pageSize > 0 ? Math.ceil(total / pageSize) : 1;
+    var info = (start+1) + '–' + end + ' of ' + total;
+    document.getElementById('pageInfo').textContent = info;
+    document.getElementById('pageInfoB').textContent = info;
+    document.getElementById('totalInfo').textContent = total + ' recurring members total';
+    var atFirst = currentPage <= 0;
+    var atLast = pageSize <= 0 || currentPage >= pages - 1;
+    document.getElementById('prevBtn').disabled = atFirst;
+    document.getElementById('nextBtn').disabled = atLast;
+    document.getElementById('prevBtnB').disabled = atFirst;
+    document.getElementById('nextBtnB').disabled = atLast;
+  }
+
+  function buildHeader() {
+    var tr = document.getElementById('memberHead');
+    tr.innerHTML = '';
+    var allCols = fixedCols.slice();
+    for (var i = 0; i < yearColumns.length; i++) {
+      allCols.push({label: '' + yearColumns[i], key:'_y' + yearColumns[i], type:'num'});
+    }
+    for (var c = 0; c < allCols.length; c++) {
+      var th = document.createElement('th');
+      th.innerHTML = allCols[c].label;
+      th.className = 'sortable';
+      th.dataset.colIdx = c;
+      th.style.cursor = 'pointer';
+      if (allCols[c].tip) th.title = allCols[c].tip;
+      if (c === sortCol) th.classList.add(sortAsc ? 'sorted-asc' : 'sorted-desc');
+      th.addEventListener('click', (function(idx) {
+        return function(e) {
+          if (sortCol === idx) { sortAsc = !sortAsc; }
+          else { sortCol = idx; sortAsc = false; }
+          sortData(sortCol, sortAsc);
+          currentPage = 0;
+          render();
+          var ths = document.getElementById('memberHead').querySelectorAll('.sortable');
+          ths.forEach(function(h) { h.classList.remove('sorted-asc','sorted-desc'); });
+          e.currentTarget.classList.add(sortAsc ? 'sorted-asc' : 'sorted-desc');
+        };
+      })(c));
+      tr.appendChild(th);
+    }
+  }
+
+  function init(data) {
+    allMembers = data;
+    sortedMembers = data.slice();
+
+    // Extract year columns
+    var yrs = {};
+    for (var i = 0; i < data.length; i++) {
+      if (data[i].years) {
+        for (var y in data[i].years) {
+          yrs[y] = true;
+        }
+      }
+    }
+    yearColumns = Object.keys(yrs).map(Number).sort(function(a,b){return b-a;});
+
+    buildHeader();
+    sortData(sortCol, sortAsc);
+    render();
+
+    document.getElementById('memberLoading').style.display = 'none';
+    document.getElementById('memberTable').style.display = '';
+    document.getElementById('member-controls').style.display = '';
+    document.getElementById('member-controls-bottom').style.display = '';
+  }
+
+  // Pagination controls
+  document.getElementById('pageSizeSelect').addEventListener('change', function() {
+    pageSize = parseInt(this.value);
+    currentPage = 0;
+    render();
+  });
+  function goPrev() { if (currentPage > 0) { currentPage--; render(); } }
+  function goNext() {
+    var pages = pageSize > 0 ? Math.ceil(sortedMembers.length / pageSize) : 1;
+    if (currentPage < pages - 1) { currentPage++; render(); }
+  }
+  document.getElementById('prevBtn').addEventListener('click', goPrev);
+  document.getElementById('nextBtn').addEventListener('click', goNext);
+  document.getElementById('prevBtnB').addEventListener('click', goPrev);
+  document.getElementById('nextBtnB').addEventListener('click', goNext);
+
+  // Load data
+  fetch(DATA_URL)
+    .then(function(r) { return r.json(); })
+    .then(init)
+    .catch(function(e) {
+      document.getElementById('memberLoading').innerHTML =
+        '<em>Failed to load AE member data. ' + e + '</em>';
+    });
+})();
+</script>
+
+<style>
+/* ── Controls bar ────────────────────────────────────────────────────────── */
+.ae-controls {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+}
+.ae-controls-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+.ae-control-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.ae-label {
+  font-size: 0.85em;
+  color: #495057;
+  font-weight: 500;
+}
+.ae-select {
+  appearance: auto;
+  padding: 4px 8px;
+  font-size: 0.85em;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background: #fff;
+  color: #212529;
+  cursor: pointer;
+}
+.ae-select:focus { outline: 2px solid #80bdff; border-color: #80bdff; }
+.ae-btn {
+  padding: 4px 12px;
+  font-size: 0.82em;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background: #fff;
+  color: #212529;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+.ae-btn:hover:not(:disabled) { background: #e9ecef; border-color: #adb5bd; }
+.ae-btn:disabled { opacity: 0.5; cursor: default; }
+.ae-page-info {
+  font-size: 0.82em;
+  color: #495057;
+  min-width: 100px;
+  text-align: center;
+}
+.ae-page-nav { margin-left: auto; }
+.ae-total-info { font-size: 0.8em; color: #6c757d; }
+#member-controls-bottom { margin-top: 8px; }
+#member-controls-bottom .ae-controls-row { justify-content: center; }
+
+/* ── Table ───────────────────────────────────────────────────────────────── */
+#memberTable { font-size: 0.82em; white-space: nowrap; border-collapse: collapse; width: 100%; }
+#memberTable th, #memberTable td { padding: 3px 8px; border: 1px solid #ddd; }
+#memberTable th {
+  background-color: #f2f2f2;
+  position: sticky; top: 0; z-index: 1;
+}
+#memberTable th[title] { border-bottom: 2px dotted #999; }
+#memberTable tr:nth-child(even) { background-color: #f9f9f9; }
+#memberTable tr:hover { background-color: #e8f4f8; }
+.sortable::after { content: '\2195'; opacity: 0.3; margin-left: 3px; font-size: 0.8em; }
+.sorted-asc::after { content: '\2191'; opacity: 1; }
+.sorted-desc::after { content: '\2193'; opacity: 1; }
+</style>

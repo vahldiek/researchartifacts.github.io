@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <!-- Beaker / flask body -->
+  <path d="M28 12 V30 L14 62 A6 6 0 0 0 20 68 H60 A6 6 0 0 0 66 62 L52 30 V12 Z"
+        fill="none" stroke="#494e52" stroke-width="3" stroke-linejoin="round"/>
+  <!-- Beaker top rim -->
+  <line x1="24" y1="12" x2="56" y2="12" stroke="#494e52" stroke-width="3" stroke-linecap="round"/>
+  <!-- Liquid fill -->
+  <path d="M23 48 L14 62 A6 6 0 0 0 20 68 H60 A6 6 0 0 0 66 62 L57 48 Z"
+        fill="#3498db" opacity="0.3"/>
+  <!-- Badge: checkmark circle (artifact available) -->
+  <circle cx="34" cy="44" r="7" fill="#2ecc71"/>
+  <polyline points="30,44 33,47 38,41" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Badge: star (functional) -->
+  <polygon points="52,38 53.8,42 58,42.5 55,45.2 55.8,49.5 52,47.3 48.2,49.5 49,45.2 46,42.5 50.2,42"
+           fill="#f39c12"/>
+</svg>

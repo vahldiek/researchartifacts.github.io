@@ -1,0 +1,323 @@
+{% comment %}
+  Dynamic author table loaded from JSON with sorting and pagination.
+  
+  Required page variables:
+    page.author_data_url  — path to the JSON file (e.g., /assets/data/systems_authors.json)
+{% endcomment %}
+
+<div id="author-controls" class="at-controls" style="display:none;">
+  <div class="at-controls-row">
+    <div class="at-control-group">
+      <label class="at-label" for="pageSizeSelect">Show</label>
+      <select id="pageSizeSelect" class="at-select">
+        <option value="100" selected>100</option>
+        <option value="500">500</option>
+        <option value="0">All</option>
+      </select>
+      <span class="at-label">per page</span>
+    </div>
+    <div class="at-control-group at-page-nav">
+      <button id="prevBtn" class="at-btn" disabled>&laquo; Prev</button>
+      <span id="pageInfo" class="at-page-info"></span>
+      <button id="nextBtn" class="at-btn">Next &raquo;</button>
+    </div>
+    <span id="totalInfo" class="at-total-info"></span>
+  </div>
+</div>
+
+<div id="authorLoading"><em>Loading author data…</em></div>
+
+<table id="authorTable" style="display:none;">
+<thead><tr id="authorHead"></tr></thead>
+<tbody id="authorBody"></tbody>
+</table>
+
+<div id="author-controls-bottom" class="at-controls" style="display:none;">
+  <div class="at-controls-row">
+    <div class="at-control-group at-page-nav" style="margin-left:0;">
+      <button id="prevBtnB" class="at-btn">&laquo; Prev</button>
+      <span id="pageInfoB" class="at-page-info"></span>
+      <button id="nextBtnB" class="at-btn">Next &raquo;</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  var DATA_URL = '{{ page.author_data_url | relative_url }}';
+  var allAuthors = [];
+  var sortedAuthors = [];
+  var yearColumns = [];
+  var currentPage = 0;
+  var pageSize = 100;
+  var sortCol = 2; // default sort: Score
+  var sortAsc = false;
+
+  // Column definitions (index, label, key, type)
+  var fixedCols = [
+    {label:'Rank',              key:'rank',            type:'num'},
+    {label:'Author',            key:'name',            type:'alpha'},
+    {label:'Score',             key:'artifact_score',  type:'num',   tip:'Weighted score: Reproduced×3 + Functional×2 + Available×1'},
+    {label:'Artifacts',         key:'total',           type:'num'},
+    {label:'Papers',            key:'total_papers',    type:'num',   tip:'Total papers at tracked conferences'},
+    {label:'Art.&nbsp;Rate',    key:'artifact_rate',   type:'num',   tip:'Artifact rate: percentage of papers with an evaluated artifact'},
+    {label:'Repro.&nbsp;Rate',  key:'repro_rate',      type:'num',   tip:'Reproducibility rate: percentage of artifacts with Reproduced badge'},
+    {label:'Func.&nbsp;Rate',   key:'functional_rate', type:'num',   tip:'Functional rate: percentage of artifacts with Functional badge'},
+    {label:'Last&nbsp;5y',      key:'last_5_years',    type:'num',   tip:'Years active in the last 5 years'}
+  ];
+
+  function render() {
+    var start = pageSize > 0 ? currentPage * pageSize : 0;
+    var end = pageSize > 0 ? start + pageSize : sortedAuthors.length;
+    var page = sortedAuthors.slice(start, end);
+
+    var tbody = document.getElementById('authorBody');
+    var rows = [];
+    for (var i = 0; i < page.length; i++) {
+      var a = page[i];
+      var cells = [];
+      cells.push('<td>' + (start + i + 1) + '</td>');
+      cells.push('<td>' + escHtml(a.name) + '</td>');
+      cells.push('<td><strong>' + a.artifact_score + '</strong></td>');
+      cells.push('<td>' + a.total + '</td>');
+      cells.push('<td>' + (a.total_papers || '') + '</td>');
+      cells.push('<td>' + (a.total_papers > 0 ? a.artifact_rate + '%' : '') + '</td>');
+      cells.push('<td>' + a.repro_rate + '%</td>');
+      cells.push('<td>' + a.functional_rate + '%</td>');
+      cells.push('<td>' + a.last_5_years + '</td>');
+      for (var j = 0; j < yearColumns.length; j++) {
+        var cnt = (a.years || {})[yearColumns[j]] || 0;
+        cells.push('<td>' + (cnt > 0 ? cnt : '') + '</td>');
+      }
+      rows.push('<tr>' + cells.join('') + '</tr>');
+    }
+    tbody.innerHTML = rows.join('');
+    updatePageInfo();
+  }
+
+  function escHtml(s) {
+    var d = document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+
+  function sortData(colIdx, asc) {
+    var key;
+    if (colIdx < fixedCols.length) {
+      key = fixedCols[colIdx].key;
+    } else {
+      var yIdx = colIdx - fixedCols.length;
+      var yr = yearColumns[yIdx];
+      key = '_y' + yr;
+    }
+    sortedAuthors.sort(function(a, b) {
+      var av, bv;
+      if (key.startsWith('_y')) {
+        var y = parseInt(key.slice(2));
+        av = (a.years || {})[y] || 0;
+        bv = (b.years || {})[y] || 0;
+      } else if (key === 'name') {
+        av = a.name.toLowerCase();
+        bv = b.name.toLowerCase();
+      } else {
+        av = a[key] || 0;
+        bv = b[key] || 0;
+      }
+      if (av < bv) return asc ? -1 : 1;
+      if (av > bv) return asc ? 1 : -1;
+      return 0;
+    });
+  }
+
+  function updatePageInfo() {
+    var total = sortedAuthors.length;
+    var start = pageSize > 0 ? currentPage * pageSize : 0;
+    var end = pageSize > 0 ? Math.min(start + pageSize, total) : total;
+    var pages = pageSize > 0 ? Math.ceil(total / pageSize) : 1;
+    var info = (start+1) + '–' + end + ' of ' + total;
+    document.getElementById('pageInfo').textContent = info;
+    document.getElementById('pageInfoB').textContent = info;
+    document.getElementById('totalInfo').textContent = total + ' authors total';
+    var atFirst = currentPage <= 0;
+    var atLast = pageSize <= 0 || currentPage >= pages - 1;
+    document.getElementById('prevBtn').disabled = atFirst;
+    document.getElementById('nextBtn').disabled = atLast;
+    document.getElementById('prevBtnB').disabled = atFirst;
+    document.getElementById('nextBtnB').disabled = atLast;
+  }
+
+  function buildHeader() {
+    var tr = document.getElementById('authorHead');
+    tr.innerHTML = '';
+    var allCols = fixedCols.slice();
+    for (var i = 0; i < yearColumns.length; i++) {
+      allCols.push({label: '' + yearColumns[i], key:'_y' + yearColumns[i], type:'num'});
+    }
+    for (var c = 0; c < allCols.length; c++) {
+      var th = document.createElement('th');
+      th.innerHTML = allCols[c].label;
+      th.className = 'sortable';
+      th.dataset.colIdx = c;
+      th.style.cursor = 'pointer';
+      if (allCols[c].tip) th.title = allCols[c].tip;
+      if (c === sortCol) th.classList.add(sortAsc ? 'sorted-asc' : 'sorted-desc');
+      th.addEventListener('click', (function(idx) {
+        return function(e) {
+          if (sortCol === idx) { sortAsc = !sortAsc; }
+          else { sortCol = idx; sortAsc = false; }
+          sortData(sortCol, sortAsc);
+          currentPage = 0;
+          render();
+          // Update header indicators
+          var ths = document.getElementById('authorHead').querySelectorAll('.sortable');
+          ths.forEach(function(h) { h.classList.remove('sorted-asc','sorted-desc'); });
+          e.currentTarget.classList.add(sortAsc ? 'sorted-asc' : 'sorted-desc');
+        };
+      })(c));
+      tr.appendChild(th);
+    }
+  }
+
+  function init(data) {
+    allAuthors = data;
+    sortedAuthors = data.slice();
+
+    // Extract year columns from the first author's years map
+    if (data.length > 0 && data[0].years) {
+      yearColumns = Object.keys(data[0].years).map(Number).sort(function(a,b){return b-a;});
+    }
+
+    buildHeader();
+    sortData(sortCol, sortAsc);
+    render();
+
+    document.getElementById('authorLoading').style.display = 'none';
+    document.getElementById('authorTable').style.display = '';
+    document.getElementById('author-controls').style.display = '';
+    document.getElementById('author-controls-bottom').style.display = '';
+  }
+
+  // Pagination controls
+  document.getElementById('pageSizeSelect').addEventListener('change', function() {
+    pageSize = parseInt(this.value);
+    currentPage = 0;
+    render();
+  });
+  function goPrev() { if (currentPage > 0) { currentPage--; render(); } }
+  function goNext() {
+    var pages = pageSize > 0 ? Math.ceil(sortedAuthors.length / pageSize) : 1;
+    if (currentPage < pages - 1) { currentPage++; render(); }
+  }
+  document.getElementById('prevBtn').addEventListener('click', goPrev);
+  document.getElementById('nextBtn').addEventListener('click', goNext);
+  document.getElementById('prevBtnB').addEventListener('click', goPrev);
+  document.getElementById('nextBtnB').addEventListener('click', goNext);
+
+  // Fetch data
+  fetch(DATA_URL)
+    .then(function(r) { return r.json(); })
+    .then(init)
+    .catch(function(e) {
+      document.getElementById('authorLoading').textContent =
+        'Error loading author data: ' + e.message;
+    });
+})();
+</script>
+
+<style>
+/* ── Controls bar ────────────────────────────────────────────────────────── */
+.at-controls {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+}
+.at-controls-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+.at-control-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.at-label {
+  font-size: 0.85em;
+  color: #495057;
+  font-weight: 500;
+}
+.at-select {
+  appearance: auto;
+  padding: 4px 8px;
+  font-size: 0.85em;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background: #fff;
+  color: #212529;
+  cursor: pointer;
+}
+.at-select:focus { outline: 2px solid #80bdff; border-color: #80bdff; }
+.at-btn {
+  padding: 4px 12px;
+  font-size: 0.82em;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background: #fff;
+  color: #212529;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+.at-btn:hover:not(:disabled) { background: #e9ecef; border-color: #adb5bd; }
+.at-btn:disabled { opacity: 0.5; cursor: default; }
+.at-page-info {
+  font-size: 0.82em;
+  color: #495057;
+  min-width: 100px;
+  text-align: center;
+}
+.at-page-nav { margin-left: auto; }
+.at-total-info { font-size: 0.8em; color: #6c757d; }
+#author-controls-bottom { margin-top: 8px; }
+#author-controls-bottom .at-controls-row { justify-content: center; }
+
+/* ── Table ───────────────────────────────────────────────────────────────── */
+#authorTable {
+  font-size: 0.82em;
+  white-space: nowrap;
+  border-collapse: collapse;
+  width: 100%;
+}
+#authorTable th, #authorTable td {
+  padding: 3px 6px;
+  border: 1px solid #ddd;
+}
+#authorTable th {
+  background-color: #f2f2f2;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+#authorTable th[title] { border-bottom: 2px dotted #999; }
+#authorTable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+#authorTable tr:hover {
+  background-color: #e8f4f8;
+}
+#authorTable th.sortable:after {
+  content: ' \2195';
+  font-size: 0.7em;
+  opacity: 0.4;
+}
+#authorTable th.sorted-asc:after {
+  content: ' \2191';
+  opacity: 1;
+}
+#authorTable th.sorted-desc:after {
+  content: ' \2193';
+  opacity: 1;
+}
+</style>

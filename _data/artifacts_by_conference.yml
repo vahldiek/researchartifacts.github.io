@@ -1,0 +1,407 @@
+- category: security
+  name: ACSAC
+  total_artifacts: 234
+  venue_type: conference
+  years:
+  - available: 0
+    functional: 12
+    reproducible: 0
+    reusable: 0
+    total: 12
+    year: 2017
+  - available: 0
+    functional: 22
+    reproducible: 0
+    reusable: 0
+    total: 22
+    year: 2018
+  - available: 0
+    functional: 12
+    reproducible: 0
+    reusable: 8
+    total: 20
+    year: 2019
+  - available: 0
+    functional: 16
+    reproducible: 0
+    reusable: 10
+    total: 26
+    year: 2020
+  - available: 0
+    functional: 11
+    reproducible: 0
+    reusable: 9
+    total: 20
+    year: 2021
+  - available: 0
+    functional: 25
+    reproducible: 0
+    reusable: 18
+    total: 43
+    year: 2022
+  - available: 0
+    functional: 14
+    reproducible: 19
+    reusable: 23
+    total: 38
+    year: 2023
+  - available: 7
+    functional: 0
+    reproducible: 29
+    reusable: 0
+    total: 53
+    year: 2024
+- category: systems
+  name: ATC
+  total_artifacts: 141
+  venue_type: conference
+  years:
+  - available: 46
+    functional: 40
+    reproducible: 31
+    reusable: 0
+    total: 51
+    year: 2022
+  - available: 40
+    functional: 36
+    reproducible: 26
+    reusable: 0
+    total: 41
+    year: 2023
+  - available: 48
+    functional: 39
+    reproducible: 28
+    reusable: 0
+    total: 49
+    year: 2024
+- category: security
+  name: CHES
+  total_artifacts: 124
+  venue_type: conference
+  years:
+  - available: 0
+    functional: 0
+    reproducible: 0
+    reusable: 0
+    total: 20
+    year: 2021
+  - available: 0
+    functional: 0
+    reproducible: 0
+    reusable: 0
+    total: 25
+    year: 2022
+  - available: 0
+    functional: 0
+    reproducible: 0
+    reusable: 0
+    total: 18
+    year: 2023
+  - available: 0
+    functional: 0
+    reproducible: 0
+    reusable: 0
+    total: 30
+    year: 2024
+  - available: 0
+    functional: 0
+    reproducible: 0
+    reusable: 0
+    total: 31
+    year: 2025
+- category: systems
+  name: EUROSYS
+  total_artifacts: 163
+  venue_type: conference
+  years:
+  - available: 21
+    functional: 18
+    reproducible: 14
+    reusable: 0
+    total: 21
+    year: 2021
+  - available: 33
+    functional: 27
+    reproducible: 20
+    reusable: 0
+    total: 33
+    year: 2022
+  - available: 31
+    functional: 24
+    reproducible: 8
+    reusable: 0
+    total: 32
+    year: 2023
+  - available: 32
+    functional: 25
+    reproducible: 12
+    reusable: 0
+    total: 32
+    year: 2024
+  - available: 44
+    functional: 42
+    reproducible: 21
+    reusable: 0
+    total: 45
+    year: 2025
+- category: systems
+  name: FAST
+  total_artifacts: 35
+  venue_type: conference
+  years:
+  - available: 17
+    functional: 15
+    reproducible: 8
+    reusable: 0
+    total: 17
+    year: 2024
+  - available: 18
+    functional: 14
+    reproducible: 9
+    reusable: 0
+    total: 18
+    year: 2025
+- category: security
+  name: NDSS
+  total_artifacts: 215
+  venue_type: conference
+  years:
+  - available: 36
+    functional: 36
+    reproducible: 26
+    reusable: 0
+    total: 38
+    year: 2024
+  - available: 61
+    functional: 59
+    reproducible: 45
+    reusable: 0
+    total: 63
+    year: 2025
+  - available: 112
+    functional: 97
+    reproducible: 70
+    reusable: 0
+    total: 114
+    year: 2026
+- category: systems
+  name: OSDI
+  total_artifacts: 213
+  venue_type: conference
+  years:
+  - available: 47
+    functional: 46
+    reproducible: 39
+    reusable: 0
+    total: 48
+    year: 2020
+  - available: 26
+    functional: 23
+    reproducible: 20
+    reusable: 0
+    total: 26
+    year: 2021
+  - available: 33
+    functional: 31
+    reproducible: 27
+    reusable: 0
+    total: 35
+    year: 2022
+  - available: 29
+    functional: 31
+    reproducible: 27
+    reusable: 0
+    total: 32
+    year: 2023
+  - available: 34
+    functional: 31
+    reproducible: 25
+    reusable: 0
+    total: 34
+    year: 2024
+  - available: 38
+    functional: 33
+    reproducible: 22
+    reusable: 0
+    total: 38
+    year: 2025
+- category: security
+  name: PETS
+  total_artifacts: 360
+  venue_type: conference
+  years:
+  - available: 0
+    functional: 0
+    reproducible: 0
+    reusable: 0
+    total: 22
+    year: 2020
+  - available: 0
+    functional: 0
+    reproducible: 0
+    reusable: 0
+    total: 25
+    year: 2021
+  - available: 0
+    functional: 0
+    reproducible: 0
+    reusable: 0
+    total: 48
+    year: 2022
+  - available: 0
+    functional: 0
+    reproducible: 0
+    reusable: 0
+    total: 53
+    year: 2023
+  - available: 0
+    functional: 0
+    reproducible: 0
+    reusable: 0
+    total: 68
+    year: 2024
+  - available: 99
+    functional: 68
+    reproducible: 42
+    reusable: 0
+    total: 99
+    year: 2025
+  - available: 45
+    functional: 33
+    reproducible: 22
+    reusable: 0
+    total: 45
+    year: 2026
+- category: systems
+  name: SC
+  total_artifacts: 67
+  venue_type: conference
+  years:
+  - available: 66
+    functional: 52
+    reproducible: 38
+    reusable: 0
+    total: 67
+    year: 2021
+- category: systems
+  name: SOSP
+  total_artifacts: 99
+  venue_type: conference
+  years:
+  - available: 39
+    functional: 38
+    reproducible: 27
+    reusable: 0
+    total: 40
+    year: 2021
+  - available: 33
+    functional: 34
+    reproducible: 25
+    reusable: 0
+    total: 34
+    year: 2023
+  - available: 25
+    functional: 23
+    reproducible: 21
+    reusable: 0
+    total: 25
+    year: 2024
+- category: security
+  name: SYSTEX
+  total_artifacts: 12
+  venue_type: workshop
+  years:
+  - available: 7
+    functional: 6
+    reproducible: 0
+    reusable: 3
+    total: 7
+    year: 2024
+  - available: 5
+    functional: 5
+    reproducible: 0
+    reusable: 5
+    total: 5
+    year: 2025
+- category: security
+  name: USENIXSEC
+  total_artifacts: 861
+  venue_type: conference
+  years:
+  - available: 0
+    functional: 0
+    reproducible: 0
+    reusable: 0
+    total: 37
+    year: 2020
+  - available: 0
+    functional: 0
+    reproducible: 0
+    reusable: 0
+    total: 34
+    year: 2021
+  - available: 107
+    functional: 98
+    reproducible: 65
+    reusable: 0
+    total: 114
+    year: 2022
+  - available: 138
+    functional: 119
+    reproducible: 96
+    reusable: 0
+    total: 140
+    year: 2023
+  - available: 142
+    functional: 126
+    reproducible: 99
+    reusable: 0
+    total: 142
+    year: 2024
+  - available: 394
+    functional: 204
+    reproducible: 150
+    reusable: 0
+    total: 394
+    year: 2025
+- category: security
+  name: WOOT
+  total_artifacts: 52
+  venue_type: workshop
+  years:
+  - available: 0
+    functional: 0
+    reproducible: 0
+    reusable: 0
+    total: 6
+    year: 2019
+  - available: 0
+    functional: 0
+    reproducible: 0
+    reusable: 0
+    total: 4
+    year: 2021
+  - available: 0
+    functional: 0
+    reproducible: 0
+    reusable: 0
+    total: 6
+    year: 2022
+  - available: 0
+    functional: 0
+    reproducible: 0
+    reusable: 0
+    total: 9
+    year: 2023
+  - available: 9
+    functional: 9
+    reproducible: 2
+    reusable: 0
+    total: 10
+    year: 2024
+  - available: 13
+    functional: 13
+    reproducible: 3
+    reusable: 0
+    total: 17
+    year: 2025
