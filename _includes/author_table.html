@@ -50,13 +50,14 @@
   var yearColumns = [];
   var currentPage = 0;
   var pageSize = 100;
-  var sortCol = 2; // default sort: Score
+  var sortCol = 3; // default sort: Score (index shifted by Affiliation column)
   var sortAsc = false;
 
   // Column definitions (index, label, key, type)
   var fixedCols = [
     {label:'Rank',              key:'rank',            type:'num'},
     {label:'Author',            key:'name',            type:'alpha'},
+    {label:'Affiliation',       key:'affiliation',     type:'alpha'},
     {label:'Score',             key:'artifact_score',  type:'num',   tip:'Weighted score: Reproduced×3 + Functional×2 + Available×1'},
     {label:'Artifacts',         key:'total',           type:'num'},
     {label:'Papers',            key:'total_papers',    type:'num',   tip:'Total papers at tracked conferences'},
@@ -78,6 +79,7 @@
       var cells = [];
       cells.push('<td>' + (start + i + 1) + '</td>');
       cells.push('<td>' + escHtml(a.name) + '</td>');
+      cells.push('<td>' + escHtml(a.affiliation || '') + '</td>');
       cells.push('<td><strong>' + a.artifact_score + '</strong></td>');
       cells.push('<td>' + a.total + '</td>');
       cells.push('<td>' + (a.total_papers || '') + '</td>');
@@ -119,6 +121,9 @@
       } else if (key === 'name') {
         av = a.name.toLowerCase();
         bv = b.name.toLowerCase();
+      } else if (key === 'affiliation') {
+        av = (a.affiliation || '').toLowerCase();
+        bv = (b.affiliation || '').toLowerCase();
       } else {
         av = a[key] || 0;
         bv = b[key] || 0;
