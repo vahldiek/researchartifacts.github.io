@@ -2,7 +2,7 @@
   Dynamic combined ranking table loaded from JSON with sorting and pagination.
   Shows people ranked by weighted combined_score:
     Artifact Available=1pt, Functional=2pt, Reproducible=3pt
-    AE Membership=3pt, AE Chair=+3pt bonus
+    AE Membership=3pt, AE Chair=+2pt bonus
 
   Required page variables:
     page.combined_data_url  — path to the JSON file
@@ -70,9 +70,9 @@
   var fixedCols = [
     {label:'Rank',                key:'rank',              type:'num'},
     {label:'Name',                key:'name',              type:'alpha'},
-    {label:'Score',               key:'combined_score',    type:'num',  tip:'Weighted combined score: Available\u00d71 + Functional\u00d72 + Reproducible\u00d73 + AE\u00d73 + Chair bonus\u00d73'},
+    {label:'Score',               key:'combined_score',    type:'num',  tip:'Weighted combined score: Available\u00d71 + Functional\u00d72 + Reproducible\u00d73 + AE\u00d73 + Chair bonus\u00d72'},
     {label:'Art.&nbsp;Score',     key:'artifact_score',    type:'num',  tip:'Weighted artifact score: Available\u00d71 + Functional\u00d72 + Reproducible\u00d73'},
-    {label:'AE&nbsp;Score',       key:'ae_score',          type:'num',  tip:'Weighted AE score: Membership\u00d73 + Chair bonus\u00d73'},
+    {label:'AE&nbsp;Score',       key:'ae_score',          type:'num',  tip:'Weighted AE score: Membership\u00d73 + Chair bonus\u00d72'},
     {label:'Artifacts',           key:'artifacts',         type:'num',  tip:'Total evaluated artifact papers'},
     {label:'AE&nbsp;Service',     key:'ae_memberships',    type:'num',  tip:'Total AE committee memberships'},
     {label:'Chaired&nbsp;\u2605', key:'chair_count',       type:'num',  tip:'Times served as AE chair or co-chair'},

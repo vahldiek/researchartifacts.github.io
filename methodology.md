@@ -52,7 +52,7 @@ Researchers are ranked by a combined score: artifact authorship plus AE committe
 | Artifact Functional | 2 |
 | Artifact Reproducible | 3 |
 | AE committee membership | 3 |
-| AE chair (bonus) | +3 |
+| AE chair (bonus) | +2 |
 
 Only researchers with a combined score ≥ 3 are listed.
 
