@@ -52,20 +52,20 @@
   var yearColumns = [];
   var currentPage = 0;
   var pageSize = 100;
-  var sortCol = 2; // default: Combined Score
+  var sortCol = 3; // default: Combined Score
   var sortAsc = false;
   var filterMode = 'all';
 
   var fixedCols = [
     {label:'Rank',             key:'rank',              type:'num'},
     {label:'Name',             key:'name',              type:'alpha'},
+    {label:'Affiliation',      key:'affiliation',       type:'alpha'},
     {label:'Combined',         key:'combined_score',    type:'num'},
     {label:'Artifacts',        key:'artifacts',         type:'num'},
     {label:'AE&nbsp;Service',  key:'ae_memberships',    type:'num'},
     {label:'Chaired&nbsp;★',   key:'chair_count',       type:'num'},
     {label:'Papers',           key:'total_papers',      type:'num'},
     {label:'Art.&nbsp;Rate',   key:'artifact_rate',     type:'num'},
-    {label:'Affiliation',      key:'affiliation',       type:'alpha'},
     {label:'Conferences',      key:'num_conferences',   type:'num'}
   ];
 
@@ -84,6 +84,8 @@
       var displayName = c.name.replace(/\s+\d{4}$/, '').replace(/\t/g, ' ');
       var profileUrl = baseUrl + '/author.html?name=' + encodeURIComponent(c.name);
       cells.push('<td><a href="' + profileUrl + '">' + escHtml(displayName) + '</a></td>');
+      var aff = (c.affiliation || '').replace(/^_/, '');
+      cells.push('<td>' + escHtml(aff) + '</td>');
       cells.push('<td><strong>' + c.combined_score + '</strong></td>');
       cells.push('<td>' + (c.artifacts || '') + '</td>');
       cells.push('<td>' + (c.ae_memberships || '') + '</td>');
@@ -91,8 +93,6 @@
       cells.push('<td>' + chairLabel + '</td>');
       cells.push('<td>' + (c.total_papers || '') + '</td>');
       cells.push('<td>' + (c.total_papers > 0 ? c.artifact_rate + '%' : '') + '</td>');
-      var aff = (c.affiliation || '').replace(/^_/, '');
-      cells.push('<td>' + escHtml(aff) + '</td>');
       cells.push('<td>' + (c.conferences ? c.conferences.length : '') + '</td>');
       for (var j = 0; j < yearColumns.length; j++) {
         var yr = yearColumns[j];
