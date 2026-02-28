@@ -1,4 +1,4 @@
-    ---
+---
 title: "Systems: Combined Rankings"
 permalink: /systems/combined_rankings.html
 combined_data_url: /assets/data/systems_combined_rankings.json
