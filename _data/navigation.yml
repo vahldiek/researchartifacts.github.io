@@ -1,6 +1,15 @@
 main:
   - title: "Overview"
     url: index.html
+  - title: "Combined Ranking"
+    url: combined_rankings.html
+    children:
+      - title: "Overview"
+        url: combined_rankings.html
+      - title: "Systems"
+        url: systems/combined_rankings.html
+      - title: "Security"
+        url: security/combined_rankings.html
   - title: "Systems"
     url: systems/
     children:
@@ -41,15 +50,6 @@ main:
         url: security/usenixsec.html
       - title: "WOOT"
         url: security/woot.html
-  - title: "Combined Ranking"
-    url: combined_rankings.html
-    children:
-      - title: "Overview"
-        url: combined_rankings.html
-      - title: "Systems"
-        url: systems/combined_rankings.html
-      - title: "Security"
-        url: security/combined_rankings.html
   - title: "AE Committees"
     url: committee.html
     children:
