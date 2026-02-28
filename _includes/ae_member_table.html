@@ -46,6 +46,7 @@
 <script>
 (function() {
   var DATA_URL = '{{ page.member_data_url | relative_url }}';
+  var baseUrl = '{{ "" | relative_url }}';
   var allMembers = [];
   var sortedMembers = [];
   var yearColumns = [];
@@ -77,7 +78,8 @@
       var m = page[i];
       var cells = [];
       cells.push('<td>' + (start + i + 1) + '</td>');
-      cells.push('<td>' + escHtml(m.name) + '</td>');
+      var profileUrl = baseUrl + '/author.html?name=' + encodeURIComponent(m.name);
+      cells.push('<td><a href="' + profileUrl + '">' + escHtml(m.name) + '</a></td>');
       cells.push('<td><strong>' + m.total_memberships + '</strong></td>');
       var chairLabel = m.chair_count > 0 ? m.chair_count + ' \u2605' : '';
       cells.push('<td>' + chairLabel + '</td>');

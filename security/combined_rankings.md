@@ -6,7 +6,7 @@ combined_data_url: /assets/data/security_combined_rankings.json
 
 Researchers ranked by weighted contributions to security conferences ({{ site.data.summary.security_conferences | join: ", " }}): artifact authorship **plus** AE committee service.
 
-**Weighted scoring:** Artifact Available = 1 pt, Functional = 2 pts, Reproducible = 3 pts. Each AE committee membership = 3 pts, each AE chair role = +2 pts bonus. Hover over column headers for details.
+**Weighted scoring:** Each artifact badge adds 1 pt (Available = 1, +Functional = 2, +Reproducible = 3 pts max). Each AE committee membership = 3 pts, each AE chair role = +2 pts bonus. Hover over column headers for details.
 
 {% if site.data.combined_summary %}
 - **{{ site.data.combined_summary.combined_security }}** researchers with a weighted score &ge; 3

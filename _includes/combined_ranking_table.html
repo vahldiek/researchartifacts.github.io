@@ -1,40 +1,32 @@
 {% comment %}
   Dynamic combined ranking table loaded from JSON with sorting and pagination.
-  Shows people ranked by weighted combined_score:
-    Artifact Available=1pt, Functional=2pt, Reproducible=3pt
-    AE Membership=3pt, AE Chair=+2pt bonus
+  Shows people ranked by combined_score (artifacts + AE committee memberships).
 
   Required page variables:
     page.combined_data_url  — path to the JSON file
 {% endcomment %}
 
-<div id="combined-controls" class="cr-controls" style="display:none;">
-  <div class="cr-controls-row">
-    <div class="cr-control-group">
-      <label class="cr-label" for="cPageSizeSelect">Show</label>
-      <select id="cPageSizeSelect" class="cr-select">
-        <option value="100" selected>100</option>
-        <option value="500">500</option>
-        <option value="0">All</option>
-      </select>
-      <span class="cr-label">per page</span>
-    </div>
-    <div class="cr-control-group">
-      <label class="cr-label" for="cFilterSelect">Filter</label>
-      <select id="cFilterSelect" class="cr-select cr-select-wide">
-        <option value="all" selected>All Contributors</option>
-        <option value="both">Both Artifacts &amp; AE Service</option>
-        <option value="artifacts_only">Artifact Authors Only</option>
-        <option value="ae_only">AE Service Only</option>
-      </select>
-    </div>
-    <div class="cr-control-group cr-page-nav">
-      <button id="cPrevBtn" class="cr-btn" disabled>&laquo; Prev</button>
-      <span id="cPageInfo" class="cr-page-info"></span>
-      <button id="cNextBtn" class="cr-btn">Next &raquo;</button>
-    </div>
-    <span id="cTotalInfo" class="cr-total-info"></span>
-  </div>
+<div id="combined-controls" style="margin-bottom:10px; display:none;">
+  <label>Show
+    <select id="cPageSizeSelect">
+      <option value="100" selected>100</option>
+      <option value="500">500</option>
+      <option value="0">All</option>
+    </select>
+    per page
+  </label>
+  <label style="margin-left:16px;">Filter:
+    <select id="cFilterSelect">
+      <option value="all" selected>All</option>
+      <option value="both">Both Artifacts &amp; AE</option>
+      <option value="artifacts_only">Artifacts Only</option>
+      <option value="ae_only">AE Service Only</option>
+    </select>
+  </label>
+  <span id="cPageInfo" style="margin-left:16px;"></span>
+  <button id="cPrevBtn" disabled>&laquo; Prev</button>
+  <button id="cNextBtn">Next &raquo;</button>
+  <span id="cTotalInfo" style="margin-left:16px; color:#666;"></span>
 </div>
 
 <div id="combinedLoading"><em>Loading combined ranking data…</em></div>
@@ -44,19 +36,16 @@
 <tbody id="combinedBody"></tbody>
 </table>
 
-<div id="combined-controls-bottom" class="cr-controls" style="display:none;">
-  <div class="cr-controls-row">
-    <div class="cr-control-group cr-page-nav" style="margin-left:0;">
-      <button id="cPrevBtnB" class="cr-btn">&laquo; Prev</button>
-      <span id="cPageInfoB" class="cr-page-info"></span>
-      <button id="cNextBtnB" class="cr-btn">Next &raquo;</button>
-    </div>
-  </div>
+<div id="combined-controls-bottom" style="margin-top:8px; display:none;">
+  <button id="cPrevBtnB">&laquo; Prev</button>
+  <span id="cPageInfoB"></span>
+  <button id="cNextBtnB">Next &raquo;</button>
 </div>
 
 <script>
 (function() {
   var DATA_URL = '{{ page.combined_data_url | relative_url }}';
+  var baseUrl = '{{ "" | relative_url }}';
   var allData = [];
   var filteredData = [];
   var sortedData = [];
@@ -68,18 +57,16 @@
   var filterMode = 'all';
 
   var fixedCols = [
-    {label:'Rank',                key:'rank',              type:'num'},
-    {label:'Name',                key:'name',              type:'alpha'},
-    {label:'Score',               key:'combined_score',    type:'num',  tip:'Weighted combined score: Available\u00d71 + Functional\u00d72 + Reproducible\u00d73 + AE\u00d73 + Chair bonus\u00d72'},
-    {label:'Art.&nbsp;Score',     key:'artifact_score',    type:'num',  tip:'Weighted artifact score: Available\u00d71 + Functional\u00d72 + Reproducible\u00d73'},
-    {label:'AE&nbsp;Score',       key:'ae_score',          type:'num',  tip:'Weighted AE score: Membership\u00d73 + Chair bonus\u00d72'},
-    {label:'Artifacts',           key:'artifacts',         type:'num',  tip:'Total evaluated artifact papers'},
-    {label:'AE&nbsp;Service',     key:'ae_memberships',    type:'num',  tip:'Total AE committee memberships'},
-    {label:'Chaired&nbsp;\u2605', key:'chair_count',       type:'num',  tip:'Times served as AE chair or co-chair'},
-    {label:'Papers',              key:'total_papers',      type:'num',  tip:'Total papers at tracked conferences'},
-    {label:'Art.&nbsp;Rate',      key:'artifact_rate',     type:'num',  tip:'Artifact rate: percentage of papers with an evaluated artifact'},
-    {label:'Affiliation',         key:'affiliation',       type:'alpha'},
-    {label:'Conferences',         key:'num_conferences',   type:'num',  tip:'Number of distinct conferences'}
+    {label:'Rank',             key:'rank',              type:'num'},
+    {label:'Name',             key:'name',              type:'alpha'},
+    {label:'Combined',         key:'combined_score',    type:'num'},
+    {label:'Artifacts',        key:'artifacts',         type:'num'},
+    {label:'AE&nbsp;Service',  key:'ae_memberships',    type:'num'},
+    {label:'Chaired&nbsp;★',   key:'chair_count',       type:'num'},
+    {label:'Papers',           key:'total_papers',      type:'num'},
+    {label:'Art.&nbsp;Rate',   key:'artifact_rate',     type:'num'},
+    {label:'Affiliation',      key:'affiliation',       type:'alpha'},
+    {label:'Conferences',      key:'num_conferences',   type:'num'}
   ];
 
   function render() {
@@ -93,11 +80,11 @@
       var c = page[i];
       var cells = [];
       cells.push('<td>' + (start + i + 1) + '</td>');
+      // Clean DBLP suffixes and whitespace for display
       var displayName = c.name.replace(/\s+\d{4}$/, '').replace(/\t/g, ' ');
-      cells.push('<td>' + escHtml(displayName) + '</td>');
+      var profileUrl = baseUrl + '/author.html?name=' + encodeURIComponent(c.name);
+      cells.push('<td><a href="' + profileUrl + '">' + escHtml(displayName) + '</a></td>');
       cells.push('<td><strong>' + c.combined_score + '</strong></td>');
-      cells.push('<td>' + (c.artifact_score || '') + '</td>');
-      cells.push('<td>' + (c.ae_score || '') + '</td>');
       cells.push('<td>' + (c.artifacts || '') + '</td>');
       cells.push('<td>' + (c.ae_memberships || '') + '</td>');
       var chairLabel = c.chair_count > 0 ? c.chair_count + ' \u2605' : '';
@@ -184,7 +171,7 @@
     var start = pageSize > 0 ? currentPage * pageSize : 0;
     var end = pageSize > 0 ? Math.min(start + pageSize, total) : total;
     var pages = pageSize > 0 ? Math.ceil(total / pageSize) : 1;
-    var info = (start+1) + '\u2013' + end + ' of ' + total;
+    var info = (start+1) + '–' + end + ' of ' + total;
     document.getElementById('cPageInfo').textContent = info;
     document.getElementById('cPageInfoB').textContent = info;
     document.getElementById('cTotalInfo').textContent = total + ' people total';
@@ -209,7 +196,6 @@
       th.className = 'c-sortable';
       th.dataset.colIdx = ci;
       th.style.cursor = 'pointer';
-      if (allCols[ci].tip) th.title = allCols[ci].tip;
       if (ci === sortCol) th.classList.add(sortAsc ? 'c-sorted-asc' : 'c-sorted-desc');
       th.addEventListener('click', (function(idx) {
         return function(e) {
@@ -229,6 +215,7 @@
 
   function init(data) {
     allData = data;
+    // Extract year columns
     var yrs = {};
     for (var i = 0; i < data.length; i++) {
       if (data[i].years) {
@@ -284,78 +271,12 @@
 </script>
 
 <style>
-/* ── Controls bar ────────────────────────────────────────────────────────── */
-.cr-controls {
-  background: #f8f9fa;
-  border: 1px solid #dee2e6;
-  border-radius: 6px;
-  padding: 10px 14px;
-  margin-bottom: 12px;
-}
-.cr-controls-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 16px;
-}
-.cr-control-group {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.cr-label {
-  font-size: 0.85em;
-  color: #495057;
-  font-weight: 500;
-}
-.cr-select {
-  appearance: auto;
-  padding: 4px 8px;
-  font-size: 0.85em;
-  border: 1px solid #ced4da;
-  border-radius: 4px;
-  background: #fff;
-  color: #212529;
-  cursor: pointer;
-}
-.cr-select:focus { outline: 2px solid #80bdff; border-color: #80bdff; }
-.cr-select-wide { min-width: 180px; }
-.cr-btn {
-  padding: 4px 12px;
-  font-size: 0.82em;
-  border: 1px solid #ced4da;
-  border-radius: 4px;
-  background: #fff;
-  color: #212529;
-  cursor: pointer;
-  transition: background 0.15s, border-color 0.15s;
-}
-.cr-btn:hover:not(:disabled) { background: #e9ecef; border-color: #adb5bd; }
-.cr-btn:disabled { opacity: 0.5; cursor: default; }
-.cr-page-info {
-  font-size: 0.82em;
-  color: #495057;
-  min-width: 100px;
-  text-align: center;
-}
-.cr-page-nav { margin-left: auto; }
-.cr-total-info { font-size: 0.8em; color: #6c757d; }
-
-/* ── Table ───────────────────────────────────────────────────────────────── */
 #combinedTable { font-size: 0.82em; white-space: nowrap; border-collapse: collapse; width: 100%; }
 #combinedTable th, #combinedTable td { padding: 3px 8px; border: 1px solid #ddd; }
-#combinedTable th {
-  background-color: #f2f2f2;
-  position: sticky; top: 0; z-index: 1;
-}
-#combinedTable th[title] { border-bottom: 2px dotted #999; }
+#combinedTable th { background-color: #f2f2f2; position: sticky; top: 0; z-index: 1; }
 #combinedTable tr:nth-child(even) { background-color: #f9f9f9; }
 #combinedTable tr:hover { background-color: #e8f4f8; }
 .c-sortable::after { content: '\2195'; opacity: 0.3; margin-left: 3px; font-size: 0.8em; }
 .c-sorted-asc::after { content: '\2191'; opacity: 1; }
 .c-sorted-desc::after { content: '\2193'; opacity: 1; }
-
-/* ── Bottom controls ─────────────────────────────────────────────────────── */
-#combined-controls-bottom { margin-top: 8px; }
-#combined-controls-bottom .cr-controls-row { justify-content: center; }
 </style>

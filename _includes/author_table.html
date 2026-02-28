@@ -45,6 +45,7 @@
 <script>
 (function() {
   var DATA_URL = '{{ page.author_data_url | relative_url }}';
+  var baseUrl = '{{ "" | relative_url }}';
   var allAuthors = [];
   var sortedAuthors = [];
   var yearColumns = [];
@@ -78,7 +79,8 @@
       var a = page[i];
       var cells = [];
       cells.push('<td>' + (start + i + 1) + '</td>');
-      cells.push('<td>' + escHtml(a.name) + '</td>');
+      var profileUrl = baseUrl + '/author.html?name=' + encodeURIComponent(a.name);
+      cells.push('<td><a href="' + profileUrl + '">' + escHtml(a.name) + '</a></td>');
       cells.push('<td>' + escHtml(a.affiliation || '') + '</td>');
       cells.push('<td><strong>' + a.artifact_score + '</strong></td>');
       cells.push('<td>' + a.total + '</td>');
