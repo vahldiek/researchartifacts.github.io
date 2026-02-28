@@ -1,19 +1,18 @@
 ---
 title: "Recurring AE Members"
 permalink: /ae_members.html
+member_data_url: /assets/data/ae_members.json
 ---
 
-# Recurring AE Committee Members
-
-Members who have served on artifact evaluation committees at least twice, ranked by number of memberships.
+Recurring Artifact Evaluation committee members across all tracked systems and security conferences, ranked by number of committee memberships. Only members who served at least twice are listed. The **Chaired** column (★) indicates how many times the member served as AE chair or co-chair.
 
 {% if site.data.committee_stats %}
-| | |
-|---|---|
-| **Systems Recurring Members** | {{ site.data.committee_stats.recurring_members_systems }} |
-| **Security Recurring Members** | {{ site.data.committee_stats.recurring_members_security }} |
-| **Include Chair Roles** | {{ site.data.committee_stats.recurring_chairs }} |
+- **{{ site.data.committee_stats.recurring_members_systems }}** recurring members at systems conferences
+- **{{ site.data.committee_stats.recurring_members_security }}** recurring members at security conferences
+- **{{ site.data.committee_stats.recurring_chairs }}** include chairing roles (across all areas)
+- Data was processed on {{ site.data.committee_stats.last_updated }}.
 {% endif %}
 
-- [Systems AE Members]({{ '/systems_ae_members.html' | relative_url }}) — {{ site.data.committee_stats.recurring_members_systems }} recurring members at systems conferences
-- [Security AE Members]({{ '/security_ae_members.html' | relative_url }}) — {{ site.data.committee_stats.recurring_members_security }} recurring members at security conferences
+{% include ae_member_table.html %}
+
+See also: [Systems AE Members]({{ '/systems/ae_members.html' | relative_url }}) · [Security AE Members]({{ '/security/ae_members.html' | relative_url }})
