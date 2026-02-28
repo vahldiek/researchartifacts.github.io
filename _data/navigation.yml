@@ -7,7 +7,7 @@ main:
       - title: "Overview"
         url: systems/
       - title: "Artifact Ranking"
-        url: systems/combined_rankings.html
+        url: systems/authors.html
       - title: "ATC"
         url: systems/atc.html
       - title: "EuroSys"
@@ -26,7 +26,7 @@ main:
       - title: "Overview"
         url: security/
       - title: "Artifact Ranking"
-        url: security/combined_rankings.html
+        url: security/authors.html
       - title: "ACSAC"
         url: security/acsac.html
       - title: "CHES"
