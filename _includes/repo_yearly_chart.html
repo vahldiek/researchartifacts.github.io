@@ -1,0 +1,150 @@
+{% comment %}
+  Chart showing average stars and forks per year with min/max error bars.
+  Uses Chart.js with the chartjs-plugin-error-bars plugin (or manual line drawing).
+
+  Required page variables:
+    page.yearly_chart_url  — path to repo_stats_yearly.json
+    page.yearly_chart_area — 'all', 'systems', or 'security' (which area key to show)
+{% endcomment %}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+
+<div style="width:100%; max-width:700px; margin:1.5em 0;">
+  <canvas id="yearlyStarsChart" height="300"></canvas>
+</div>
+<div style="width:100%; max-width:700px; margin:1.5em 0;">
+  <canvas id="yearlyForksChart" height="300"></canvas>
+</div>
+
+<script>
+(function() {
+  var DATA_URL = '{{ page.yearly_chart_url | relative_url }}';
+  var AREA = '{{ page.yearly_chart_area | default: "all" }}';
+
+  fetch(DATA_URL)
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      var labels = [], avgStars = [], avgForks = [];
+      var minStars = [], maxStars = [], minForks = [], maxForks = [];
+
+      for (var i = 0; i < data.length; i++) {
+        var d = data[i];
+        var a = d[AREA];
+        if (!a || a.repos === 0) continue;
+        labels.push(d.year);
+        avgStars.push(a.avg_stars);
+        avgForks.push(a.avg_forks);
+        minStars.push(a.min_stars);
+        maxStars.push(a.max_stars);
+        minForks.push(a.min_forks);
+        maxForks.push(a.max_forks);
+      }
+
+      var areaLabel = AREA === 'all' ? 'All Conferences' : AREA.charAt(0).toUpperCase() + AREA.slice(1);
+
+      // Custom error-bar plugin
+      var errorBarPlugin = {
+        id: 'errorBar',
+        afterDatasetsDraw: function(chart) {
+          var meta = chart.getDatasetMeta(0);
+          var ctx = chart.ctx;
+          var yScale = chart.scales.y;
+          ctx.save();
+          ctx.strokeStyle = 'rgba(0,0,0,0.4)';
+          ctx.lineWidth = 1.5;
+          var minArr = chart.config._errorMin;
+          var maxArr = chart.config._errorMax;
+          if (!minArr || !maxArr) return;
+          for (var i = 0; i < meta.data.length; i++) {
+            var el = meta.data[i];
+            var yMin = yScale.getPixelForValue(minArr[i]);
+            var yMax = yScale.getPixelForValue(maxArr[i]);
+            var x = el.x;
+            ctx.beginPath();
+            ctx.moveTo(x, yMin);
+            ctx.lineTo(x, yMax);
+            ctx.stroke();
+            // caps
+            ctx.beginPath();
+            ctx.moveTo(x - 4, yMin);
+            ctx.lineTo(x + 4, yMin);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(x - 4, yMax);
+            ctx.lineTo(x + 4, yMax);
+            ctx.stroke();
+          }
+          ctx.restore();
+        }
+      };
+
+      // Stars chart
+      var starsConfig = {
+        type: 'bar',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'Avg Stars',
+            data: avgStars,
+            backgroundColor: 'rgba(41,128,185,0.7)',
+            borderColor: 'rgba(41,128,185,1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            title: { display: true, text: areaLabel + ': Average Stars per Repository by Year' },
+            tooltip: {
+              callbacks: {
+                afterBody: function(ctx) {
+                  var idx = ctx[0].dataIndex;
+                  return 'Min (conf avg): ' + minStars[idx] + '\nMax (conf avg): ' + maxStars[idx];
+                }
+              }
+            }
+          },
+          scales: { y: { beginAtZero: true, title: { display: true, text: 'Stars' } } }
+        },
+        plugins: [errorBarPlugin],
+        _errorMin: minStars,
+        _errorMax: maxStars
+      };
+      new Chart(document.getElementById('yearlyStarsChart'), starsConfig);
+
+      // Forks chart
+      var forksConfig = {
+        type: 'bar',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'Avg Forks',
+            data: avgForks,
+            backgroundColor: 'rgba(26,188,156,0.7)',
+            borderColor: 'rgba(26,188,156,1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            title: { display: true, text: areaLabel + ': Average Forks per Repository by Year' },
+            tooltip: {
+              callbacks: {
+                afterBody: function(ctx) {
+                  var idx = ctx[0].dataIndex;
+                  return 'Min (conf avg): ' + minForks[idx] + '\nMax (conf avg): ' + maxForks[idx];
+                }
+              }
+            }
+          },
+          scales: { y: { beginAtZero: true, title: { display: true, text: 'Forks' } } }
+        },
+        plugins: [errorBarPlugin],
+        _errorMin: minForks,
+        _errorMax: maxForks
+      };
+      new Chart(document.getElementById('yearlyForksChart'), forksConfig);
+    });
+})();
+</script>

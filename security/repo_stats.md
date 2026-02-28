@@ -1,6 +1,9 @@
 ---
 title: "Security: Repository Statistics"
 permalink: /security/repo_stats.html
+top_repos_url: /assets/data/security_top_repos.json
+yearly_chart_url: /assets/data/repo_stats_yearly.json
+yearly_chart_area: security
 ---
 
 GitHub stars and forks for artifact repositories from security conferences ({{ site.data.summary.security_conferences | join: ", " }}).
@@ -14,50 +17,16 @@ GitHub stars and forks for artifact repositories from security conferences ({{ s
 {% for c in site.data.repo_stats.by_conference %}{% assign _is_sec = false %}{% for conf in site.data.artifacts_by_conference %}{% if conf.name == c.name and conf.category == "security" %}{% assign _is_sec = true %}{% endif %}{% endfor %}{% if _is_sec %}| **{{ c.name }}** | {{ c.github_repos }} | {{ c.total_stars }} | {{ c.avg_stars }} | {{ c.total_forks }} | {{ c.avg_forks }} | {{ c.max_stars }} |
 {% endif %}{% endfor %}
 
-<div style="width:100%; max-width:400px; margin:1em 0;">
-<canvas id="secRepoChart" height="200"></canvas>
-</div>
+## Top Repositories
+
+{% include top_repos_table.html %}
+
+## Average Stars & Forks by Year
+
+{% include repo_yearly_chart.html %}
 
 {% else %}
 
 *Repository statistics have not been collected yet. Run the pipeline with `generate_repo_stats.py` to populate this data.*
 
 {% endif %}
-
-{% if site.data.repo_stats.by_conference.size > 0 %}
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  var confNames = [];
-  var confStars = [];
-  var confForks = [];
-  {% for c in site.data.repo_stats.by_conference %}{% assign _is_sec = false %}{% for conf in site.data.artifacts_by_conference %}{% if conf.name == c.name and conf.category == "security" %}{% assign _is_sec = true %}{% endif %}{% endfor %}{% if _is_sec %}
-  confNames.push("{{ c.name }}"); confStars.push({{ c.avg_stars }}); confForks.push({{ c.avg_forks }});
-  {% endif %}{% endfor %}
-
-  new Chart(document.getElementById('secRepoChart'), {
-    type: 'bar',
-    data: {
-      labels: confNames,
-      datasets: [
-        { label: 'Avg Stars', data: confStars, backgroundColor: 'rgba(192,57,43,0.7)' },
-        { label: 'Avg Forks', data: confForks, backgroundColor: 'rgba(230,126,34,0.7)' }
-      ]
-    },
-    options: {
-      responsive: true,
-      plugins: { title: { display: true, text: 'Security: Average Stars & Forks by Conference' } },
-      scales: { y: { beginAtZero: true } }
-    }
-  });
-});
-</script>
-{% endif %}
-
-<style>
-table { font-size: 0.85em; white-space: nowrap; border-collapse: collapse; }
-table th, table td { padding: 4px 8px; border: 1px solid #ddd; }
-table th { background-color: #f2f2f2; }
-table tr:nth-child(even) { background-color: #f9f9f9; }
-table tr:hover { background-color: #e8f4f8; }
-</style>

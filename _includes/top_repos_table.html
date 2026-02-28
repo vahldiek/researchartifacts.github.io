@@ -1,0 +1,188 @@
+{% comment %}
+  Dynamic top repos table loaded from JSON with sorting and pagination.
+  Shows top artifact repositories ranked by GitHub stars.
+
+  Required page variables:
+    page.top_repos_url  — path to the JSON file (e.g., /assets/data/top_repos.json)
+{% endcomment %}
+
+<div id="repo-controls" class="at-controls" style="display:none;">
+  <div class="at-controls-row">
+    <div class="at-control-group">
+      <label class="at-label" for="repoPageSizeSelect">Show</label>
+      <select id="repoPageSizeSelect" class="at-select">
+        <option value="10" selected>10</option>
+        <option value="25">25</option>
+        <option value="50">50</option>
+        <option value="0">All</option>
+      </select>
+      <span class="at-label">per page</span>
+    </div>
+    <div class="at-control-group at-page-nav">
+      <button id="repoPrevBtn" class="at-btn" disabled>&laquo; Prev</button>
+      <span id="repoPageInfo" class="at-page-info"></span>
+      <button id="repoNextBtn" class="at-btn">Next &raquo;</button>
+    </div>
+    <span id="repoTotalInfo" class="at-total-info"></span>
+  </div>
+</div>
+
+<div id="repoLoading"><em>Loading repository data…</em></div>
+
+<table id="repoTable" style="display:none;">
+<thead><tr id="repoHead"></tr></thead>
+<tbody id="repoBody"></tbody>
+</table>
+
+<div id="repo-controls-bottom" class="at-controls" style="display:none;">
+  <div class="at-controls-row">
+    <div class="at-control-group at-page-nav" style="margin-left:0;">
+      <button id="repoPrevBtnB" class="at-btn">&laquo; Prev</button>
+      <span id="repoPageInfoB" class="at-page-info"></span>
+      <button id="repoNextBtnB" class="at-btn">Next &raquo;</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  var DATA_URL = '{{ page.top_repos_url | relative_url }}';
+  var allRepos = [];
+  var sortedRepos = [];
+  var currentPage = 0;
+  var pageSize = 10;
+  var sortCol = 2; // default sort: Stars
+  var sortAsc = false;
+
+  var cols = [
+    {label:'Rank',        key:'rank',       type:'num'},
+    {label:'Title',       key:'title',      type:'alpha'},
+    {label:'Stars',       key:'stars',      type:'num',   tip:'GitHub stars'},
+    {label:'Forks',       key:'forks',      type:'num',   tip:'GitHub forks'},
+    {label:'Conference',  key:'conference', type:'alpha'},
+    {label:'Year',        key:'year',       type:'num'},
+    {label:'Badges',      key:'badges',     type:'alpha'},
+    {label:'Last Active', key:'last_active',type:'alpha', tip:'Last commit activity'}
+  ];
+
+  function render() {
+    var start = pageSize > 0 ? currentPage * pageSize : 0;
+    var end = pageSize > 0 ? start + pageSize : sortedRepos.length;
+    var page = sortedRepos.slice(start, end);
+
+    var tbody = document.getElementById('repoBody');
+    var rows = [];
+    for (var i = 0; i < page.length; i++) {
+      var r = page[i];
+      var cells = [];
+      cells.push('<td>' + (start + i + 1) + '</td>');
+      var title = escHtml(r.title || '');
+      if (r.url) {
+        title = '<a href="' + escHtml(r.url) + '" target="_blank">' + title + '</a>';
+      }
+      cells.push('<td>' + title + '</td>');
+      cells.push('<td><strong>' + (r.stars || 0) + '</strong></td>');
+      cells.push('<td>' + (r.forks || 0) + '</td>');
+      cells.push('<td>' + escHtml(r.conference || '') + '</td>');
+      cells.push('<td>' + (r.year || '') + '</td>');
+      cells.push('<td>' + escHtml(r.badges || '') + '</td>');
+      cells.push('<td>' + escHtml(r.last_active || '') + '</td>');
+      rows.push('<tr>' + cells.join('') + '</tr>');
+    }
+    tbody.innerHTML = rows.join('');
+    updatePageInfo();
+  }
+
+  function escHtml(s) {
+    var d = document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+
+  function sortData() {
+    var key = cols[sortCol].key;
+    var type = cols[sortCol].type;
+    sortedRepos = allRepos.slice();
+    sortedRepos.sort(function(a, b) {
+      var va = a[key], vb = b[key];
+      if (type === 'num') {
+        va = Number(va) || 0; vb = Number(vb) || 0;
+        return sortAsc ? va - vb : vb - va;
+      } else {
+        va = String(va || '').toLowerCase(); vb = String(vb || '').toLowerCase();
+        return sortAsc ? va.localeCompare(vb) : vb.localeCompare(va);
+      }
+    });
+  }
+
+  function buildHeader() {
+    var tr = document.getElementById('repoHead');
+    var cells = [];
+    for (var i = 0; i < cols.length; i++) {
+      var arrow = (i === sortCol) ? (sortAsc ? ' &#9650;' : ' &#9660;') : '';
+      var tip = cols[i].tip ? ' title="' + cols[i].tip + '"' : '';
+      cells.push('<th data-col="' + i + '" style="cursor:pointer;"' + tip + '>' + cols[i].label + arrow + '</th>');
+    }
+    tr.innerHTML = cells.join('');
+    tr.querySelectorAll('th').forEach(function(th) {
+      th.addEventListener('click', function() {
+        var c = parseInt(this.getAttribute('data-col'));
+        if (c === sortCol) { sortAsc = !sortAsc; } else { sortCol = c; sortAsc = false; }
+        buildHeader();
+        sortData();
+        currentPage = 0;
+        render();
+      });
+    });
+  }
+
+  function updatePageInfo() {
+    var total = sortedRepos.length;
+    var pages = pageSize > 0 ? Math.ceil(total / pageSize) : 1;
+    var info = 'Page ' + (pages > 0 ? currentPage + 1 : 0) + ' of ' + pages;
+    document.getElementById('repoPageInfo').textContent = info;
+    document.getElementById('repoPageInfoB').textContent = info;
+    document.getElementById('repoPrevBtn').disabled = currentPage <= 0;
+    document.getElementById('repoNextBtn').disabled = pageSize <= 0 || (currentPage + 1) * pageSize >= total;
+    document.getElementById('repoPrevBtnB').disabled = currentPage <= 0;
+    document.getElementById('repoNextBtnB').disabled = pageSize <= 0 || (currentPage + 1) * pageSize >= total;
+    document.getElementById('repoTotalInfo').textContent = total + ' repositories';
+  }
+
+  function changePage(delta) {
+    currentPage += delta;
+    render();
+    window.scrollTo({top: document.getElementById('repoTable').offsetTop - 60, behavior: 'smooth'});
+  }
+
+  fetch(DATA_URL)
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      allRepos = data;
+      sortData();
+      buildHeader();
+
+      document.getElementById('repoLoading').style.display = 'none';
+      document.getElementById('repoTable').style.display = '';
+      document.getElementById('repo-controls').style.display = '';
+      document.getElementById('repo-controls-bottom').style.display = '';
+
+      document.getElementById('repoPageSizeSelect').addEventListener('change', function() {
+        pageSize = parseInt(this.value);
+        currentPage = 0;
+        render();
+      });
+      ['repoPrevBtn','repoPrevBtnB'].forEach(function(id) {
+        document.getElementById(id).addEventListener('click', function() { changePage(-1); });
+      });
+      ['repoNextBtn','repoNextBtnB'].forEach(function(id) {
+        document.getElementById(id).addEventListener('click', function() { changePage(1); });
+      });
+
+      render();
+    })
+    .catch(function(err) {
+      document.getElementById('repoLoading').innerHTML = '<em>Error loading data: ' + err + '</em>';
+    });
+})();
+</script>
