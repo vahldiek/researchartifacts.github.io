@@ -739,6 +739,144 @@
     }
   },
   {
+    "affiliation": "KU Leuven",
+    "combined_score": 129,
+    "artifacts": 20,
+    "badges_functional": 17,
+    "badges_reproducible": 15,
+    "ae_memberships": 23,
+    "chair_count": 4,
+    "total_papers": 17,
+    "artifact_rate": 117.6,
+    "num_authors": 13,
+    "top_authors": [
+      {
+        "name": "Jo Van Bulck",
+        "affiliation": "KU Leuven, Belgium",
+        "combined_score": 25,
+        "artifacts": 8,
+        "ae_memberships": 1,
+        "total_papers": 8
+      },
+      {
+        "name": "Lennert Wouters",
+        "affiliation": "KU Leuven",
+        "combined_score": 18,
+        "artifacts": 2,
+        "ae_memberships": 4,
+        "total_papers": 1
+      },
+      {
+        "name": "Marton Bognar",
+        "affiliation": "DistriNet, KU Leuven",
+        "combined_score": 15,
+        "artifacts": 3,
+        "ae_memberships": 2,
+        "total_papers": 2
+      },
+      {
+        "name": "Gertjan Franken",
+        "affiliation": "DistriNet, KU Leuven",
+        "combined_score": 12,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      },
+      {
+        "name": "Jesse De Meulemeester",
+        "affiliation": "KU Leuven",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Alexios Voulimeneas",
+        "affiliation": "KU Leuven",
+        "combined_score": 8,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Jan Tobias Mhlberg",
+        "affiliation": "KU Leuven, Belgium",
+        "combined_score": 7,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Mahdi Rahimi 0003",
+        "affiliation": "KU Leuven, Leuven, Belgium",
+        "combined_score": 6,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Heloise Gollier",
+        "affiliation": "DistriNet, KU Leuven",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Jeroen Robben",
+        "affiliation": "DistriNet, KU Leuven",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Quinten Norga",
+        "affiliation": "KU Leuven",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Vik Vanderlinden",
+        "affiliation": "DistriNet, KU Leuven",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Victor Le Pochat",
+        "affiliation": "KU Leuven",
+        "combined_score": 5,
+        "artifacts": 0,
+        "ae_memberships": 1,
+        "total_papers": 0
+      }
+    ],
+    "conferences": [
+      "ACSAC",
+      "CHES",
+      "NDSS",
+      "SYSTEX",
+      "USENIXSEC",
+      "WOOT"
+    ],
+    "years": {
+      "2026": 5,
+      "2025": 16,
+      "2024": 9,
+      "2023": 5,
+      "2022": 2,
+      "2021": 0,
+      "2020": 1,
+      "2019": 0,
+      "2018": 0,
+      "2017": 2
+    }
+  },
+  {
     "affiliation": "Max Planck Institute for Security and Privacy",
     "combined_score": 127,
     "artifacts": 31,
@@ -1440,104 +1578,6 @@
       "2019": 0,
       "2018": 4,
       "2017": 0
-    }
-  },
-  {
-    "affiliation": "KU Leuven",
-    "combined_score": 84,
-    "artifacts": 16,
-    "badges_functional": 13,
-    "badges_reproducible": 11,
-    "ae_memberships": 12,
-    "chair_count": 4,
-    "total_papers": 14,
-    "artifact_rate": 114.3,
-    "num_authors": 8,
-    "top_authors": [
-      {
-        "name": "Jo Van Bulck",
-        "affiliation": "KU Leuven, Belgium",
-        "combined_score": 25,
-        "artifacts": 8,
-        "ae_memberships": 1,
-        "total_papers": 8
-      },
-      {
-        "name": "Lennert Wouters",
-        "affiliation": "KU Leuven",
-        "combined_score": 18,
-        "artifacts": 2,
-        "ae_memberships": 4,
-        "total_papers": 1
-      },
-      {
-        "name": "Jesse De Meulemeester",
-        "affiliation": "KU Leuven",
-        "combined_score": 9,
-        "artifacts": 1,
-        "ae_memberships": 2,
-        "total_papers": 1
-      },
-      {
-        "name": "Alexios Voulimeneas",
-        "affiliation": "KU Leuven",
-        "combined_score": 8,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Jan Tobias Mhlberg",
-        "affiliation": "KU Leuven, Belgium",
-        "combined_score": 7,
-        "artifacts": 3,
-        "ae_memberships": 0,
-        "total_papers": 2
-      },
-      {
-        "name": "Mahdi Rahimi 0003",
-        "affiliation": "KU Leuven, Leuven, Belgium",
-        "combined_score": 6,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 2
-      },
-      {
-        "name": "Quinten Norga",
-        "affiliation": "KU Leuven",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Victor Le Pochat",
-        "affiliation": "KU Leuven",
-        "combined_score": 5,
-        "artifacts": 0,
-        "ae_memberships": 1,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "ACSAC",
-      "CHES",
-      "NDSS",
-      "SYSTEX",
-      "USENIXSEC",
-      "WOOT"
-    ],
-    "years": {
-      "2026": 2,
-      "2025": 9,
-      "2024": 7,
-      "2023": 3,
-      "2022": 2,
-      "2021": 0,
-      "2020": 1,
-      "2019": 0,
-      "2018": 0,
-      "2017": 2
     }
   },
   {
@@ -4061,77 +4101,6 @@
       "2020": 1,
       "2019": 1,
       "2018": 1,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "DistriNet",
-    "combined_score": 45,
-    "artifacts": 4,
-    "badges_functional": 4,
-    "badges_reproducible": 4,
-    "ae_memberships": 11,
-    "chair_count": 0,
-    "total_papers": 3,
-    "artifact_rate": 133.3,
-    "num_authors": 5,
-    "top_authors": [
-      {
-        "name": "Marton Bognar",
-        "affiliation": "DistriNet, KU Leuven",
-        "combined_score": 15,
-        "artifacts": 3,
-        "ae_memberships": 2,
-        "total_papers": 2
-      },
-      {
-        "name": "Gertjan Franken",
-        "affiliation": "DistriNet, KU Leuven",
-        "combined_score": 12,
-        "artifacts": 1,
-        "ae_memberships": 3,
-        "total_papers": 1
-      },
-      {
-        "name": "Heloise Gollier",
-        "affiliation": "DistriNet, KU Leuven",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Jeroen Robben",
-        "affiliation": "DistriNet, KU Leuven",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Vik Vanderlinden",
-        "affiliation": "DistriNet, KU Leuven",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "NDSS",
-      "SYSTEX",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 3,
-      "2025": 7,
-      "2024": 2,
-      "2023": 2,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
       "2017": 0
     }
   },
