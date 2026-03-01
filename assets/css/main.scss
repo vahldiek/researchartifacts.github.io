@@ -99,45 +99,56 @@ html {
 }
 
 /* Mobile hamburger menu styling */
-.greedy-nav .hidden-links {
+/* greedy-nav must be relative so hamburger-menu can drop down absolutely */
+.greedy-nav {
+  position: relative;
+}
+#hamburger-menu {
   list-style: none;
   padding: 0;
-  margin: 1em 0 0 0;
-  background: #f9f9f9;
+  margin: 0;
+  /* Drop down below the nav bar */
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 200;
+  min-width: 220px;
+  background: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
   overflow: visible;
 }
 /* Initially hidden */
-.greedy-nav .hidden-links.hidden {
+#hamburger-menu.hidden {
   display: none;
 }
 /* Shown when toggle opens it */
-.greedy-nav .hidden-links:not(.hidden) {
+#hamburger-menu:not(.hidden) {
   display: block;
 }
-.greedy-nav .hidden-links .masthead__menu-item {
+#hamburger-menu .masthead__menu-item {
   border-bottom: 1px solid #eee;
   padding: 0;
   margin: 0;
 }
-.greedy-nav .hidden-links .masthead__menu-item:last-child {
+#hamburger-menu .masthead__menu-item:last-child {
   border-bottom: none;
 }
-.greedy-nav .hidden-links a {
+#hamburger-menu > li > a {
   display: block;
   padding: 0.7em 1em;
   font-size: 0.9em;
   color: #333;
   text-decoration: none;
 }
-.greedy-nav .hidden-links a:hover {
+#hamburger-menu > li > a:hover {
   background: #f0f0f0;
 }
 
-/* Submenus in mobile menu - stack vertically */
-.hidden-links .masthead__submenu {
-  position: static;
+/* Submenus inside hamburger: stack vertically, no absolute positioning */
+#hamburger-menu .masthead__submenu {
+  position: static !important;
   display: none;
   background: #f0f0f0;
   border: none;
@@ -145,21 +156,28 @@ html {
   box-shadow: none;
   min-width: auto;
 }
-.hidden-links .masthead__submenu li a {
+#hamburger-menu .masthead__submenu li a {
   padding: 0.5em 1em 0.5em 1.5em;
   font-size: 0.85em;
-  color: #666;
+  color: #555;
 }
-.hidden-links .masthead__submenu li a:hover {
+#hamburger-menu .masthead__submenu li a:hover {
   background: #e8e8e8;
 }
 
 // Responsive navigation: collapse last items on medium screens
 // to give more space for logo, title, and subtitle
 // On large screens (> 1400px): show all 8 items (Overview, Rankings, Systems, Security, AE, RepoStats, Methodology, Contribute + hamburger for conference details)
-// Hamburger toggle: hidden class hides it; JS removes hidden class when there are overflow items
-.greedy-nav__toggle.hidden {
-  display: none !important;
+// Hamburger toggle: always visible (there are always overflow items)
+.greedy-nav__toggle {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px 8px;
+  color: #333;
 }
 
 // Desktop (≥1000px): always hide Methodology + Contribute (last 2) — Repository Stats stays visible

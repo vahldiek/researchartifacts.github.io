@@ -14,11 +14,7 @@
         <ul class="visible-links">
           {%- for link in site.data.navigation.main -%}
             <li class="masthead__menu-item{% if link.children %} masthead__menu-item--has-children{% endif %}">
-              <a
-                href="{{ link.url | relative_url }}"
-                {% if link.description %} title="{{ link.description }}"{% endif %}
-                {% if link.target %} target="{{ link.target }}"{% endif %}
-              >{{ link.title }}</a>
+              <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}{% if link.target %} target="{{ link.target }}"{% endif %}>{{ link.title }}</a>
               {% if link.children %}
               <ul class="masthead__submenu">
                 {%- for child in link.children -%}
@@ -35,172 +31,77 @@
           <i class="fas fa-search"></i>
         </button>
         {% endif %}
-        <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
+        <button class="greedy-nav__toggle" type="button" aria-label="Toggle menu">
           <div class="navicon"></div>
         </button>
-        <ul class="hidden-links hidden"></ul>
+        <!-- Decoy for theme's greedy-nav JS (kept empty and invisible) -->
+        <ul class="hidden-links hidden" style="display:none!important;"></ul>
+        <!-- Hamburger dropdown: all items rendered server-side via Liquid -->
+        <ul id="hamburger-menu">
+          {%- for link in site.data.navigation.main -%}
+            <li class="masthead__menu-item{% if link.children %} masthead__menu-item--has-children{% endif %}">
+              <a href="{{ link.url | relative_url }}">{{ link.title }}</a>
+              {% if link.children %}
+              <ul class="masthead__submenu">
+                {%- for child in link.children -%}
+                <li><a href="{{ child.url | relative_url }}">{{ child.title }}</a></li>
+                {%- endfor -%}
+              </ul>
+              {% endif %}
+            </li>
+          {%- endfor -%}
+        </ul>
       </nav>
     </div>
   </div>
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
+(function() {
   'use strict';
-  
-  /* --- Handle submenu visibility on click/touch (for mobile) --- */
-  var menuItems = document.querySelectorAll('.masthead__menu-item--has-children');
-  var isTouch = window.matchMedia('(hover: none)').matches;
-  
-  menuItems.forEach(function (item) {
-    var link = item.querySelector(':scope > a');
+
+  /* --- Desktop: show submenus on hover (visible-links only) --- */
+  document.querySelectorAll('.visible-links .masthead__menu-item--has-children').forEach(function(item) {
     var submenu = item.querySelector('.masthead__submenu');
-    
-    if (!link || !submenu) return;
-    
-    // On desktop (hover support): show on hover
-    if (!isTouch) {
-      item.addEventListener('mouseenter', function () {
-        submenu.style.display = 'block';
-      });
-      item.addEventListener('mouseleave', function () {
-        submenu.style.display = '';
-      });
-    } else {
-      // On mobile (no hover): toggle on click
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        var isOpen = submenu.classList.contains('is-open');
-        
-        // Close all other open submenus
-        document.querySelectorAll('.masthead__submenu.is-open').forEach(function (s) {
-          s.classList.remove('is-open');
-          s.style.display = '';
-        });
-        
-        // Toggle this submenu
-        if (!isOpen) {
-          submenu.classList.add('is-open');
-          submenu.style.display = 'block';
-        } else {
-          submenu.classList.remove('is-open');
-          submenu.style.display = '';
-        }
-      });
-    }
-  });
-  
-  /* Close open submenus when clicking outside */
-  document.addEventListener('click', function (e) {
-    if (!e.target.closest('.masthead__menu-item--has-children')) {
-      document.querySelectorAll('.masthead__submenu.is-open').forEach(function (s) {
-        s.classList.remove('is-open');
-        s.style.display = '';
-      });
-    }
+    if (!submenu) return;
+    item.addEventListener('mouseenter', function() { submenu.style.display = 'block'; });
+    item.addEventListener('mouseleave', function() { submenu.style.display = ''; });
   });
 
-  /* --- Responsive navigation: populate hamburger menu --- */
-  function rebuildHamburgerMenu() {
-    var visibleContainer = document.querySelector('.greedy-nav .visible-links');
-    var hamburgerContainer = document.querySelector('.greedy-nav .hidden-links');
-    var toggleBtn = document.querySelector('.greedy-nav__toggle');
-    
-    if (!visibleContainer || !hamburgerContainer || !toggleBtn) return;
-    
-    // Clear previous items
-    hamburgerContainer.innerHTML = '';
-    var hasHiddenItems = false;
-    
-    // Get the viewport width to determine breakpoint
-    var width = window.innerWidth;
-    var itemsToHide = 0;
-    
-    // Breakpoints match CSS media queries
-    if (width < 768) itemsToHide = 5;       // Mobile: hide last 5
-    else if (width < 1000) itemsToHide = 4; // Tablet: hide last 4
-    else itemsToHide = 2;                    // Desktop: always hide Methodology + Contribute
-    
-    // Get all menu items from visible-links
-    var allItems = visibleContainer.querySelectorAll(':scope > .masthead__menu-item');
-    var totalItems = allItems.length;
-    
-    // Clone items that should be hidden
-    allItems.forEach(function(originalItem, index) {
-      var shouldHide = index >= (totalItems - itemsToHide);
-      
-      if (shouldHide) {
-        hasHiddenItems = true;
-        
-        // Clone the entire item
-        var clonedItem = originalItem.cloneNode(true);
-        
-        // Find submenu in the clone
-        var submenu = clonedItem.querySelector('.masthead__submenu');
-        if (submenu) {
-          submenu.style.position = 'static';
-          submenu.style.display = 'none';
-          
-          // Get the main link
-          var mainLink = clonedItem.querySelector(':scope > a');
-          if (mainLink) {
-            // Add click handler to toggle submenu
-            mainLink.addEventListener('click', function(e) {
-              e.preventDefault();
-              var wasOpen = submenu.style.display === 'block';
-              
-              // Close all other open submenus in hamburger
-              hamburgerContainer.querySelectorAll('.masthead__submenu').forEach(function(s) {
-                s.style.display = 'none';
-              });
-              
-              // Toggle this submenu
-              submenu.style.display = wasOpen ? 'none' : 'block';
-            });
-          }
-        }
-        
-        hamburgerContainer.appendChild(clonedItem);
-      }
+  /* --- Hamburger: submenus expand on click --- */
+  document.querySelectorAll('#hamburger-menu .masthead__menu-item--has-children').forEach(function(item) {
+    var link = item.querySelector(':scope > a');
+    var submenu = item.querySelector('.masthead__submenu');
+    if (!link || !submenu) return;
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      var open = submenu.style.display === 'block';
+      // Close all other open submenus in hamburger
+      document.querySelectorAll('#hamburger-menu .masthead__submenu').forEach(function(s) { s.style.display = 'none'; });
+      submenu.style.display = open ? 'none' : 'block';
     });
-    
-    // Show/hide toggle button
-    if (hasHiddenItems) {
-      toggleBtn.classList.remove('hidden');
-      hamburgerContainer.classList.add('hidden'); // Initially hidden, toggled by button
-    } else {
-      toggleBtn.classList.add('hidden');
-      hamburgerContainer.classList.add('hidden');
-    }
-  }
-  
-  // Build menu on page load
-  rebuildHamburgerMenu();
-  
-  // Rebuild on window resize (with debounce to avoid excessive recalculation)
-  var resizeTimer;
-  window.addEventListener('resize', function() {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(rebuildHamburgerMenu, 250);
   });
-  
-  // Toggle hamburger menu visibility
+
+  /* --- Hamburger toggle button --- */
   var toggleBtn = document.querySelector('.greedy-nav__toggle');
-  if (toggleBtn) {
+  var hamburger = document.getElementById('hamburger-menu');
+  if (toggleBtn && hamburger) {
+    // Start hidden
+    hamburger.classList.add('hidden');
     toggleBtn.addEventListener('click', function(e) {
       e.preventDefault();
-      var hamburgerContainer = document.querySelector('.greedy-nav .hidden-links');
-      if (hamburgerContainer) {
-        // Toggle the 'hidden' class to show/hide the menu
-        var isCurrentlyHidden = hamburgerContainer.classList.contains('hidden');
-        if (isCurrentlyHidden) {
-          hamburgerContainer.classList.remove('hidden');
-        } else {
-          hamburgerContainer.classList.add('hidden');
-        }
-      }
+      e.stopImmediatePropagation(); // prevent theme's greedy-nav JS from also handling
+      hamburger.classList.toggle('hidden');
     });
   }
-});
+
+  /* --- Close hamburger when clicking outside --- */
+  document.addEventListener('click', function(e) {
+    if (hamburger && !hamburger.classList.contains('hidden') &&
+        !e.target.closest('#hamburger-menu') &&
+        !e.target.closest('.greedy-nav__toggle')) {
+      hamburger.classList.add('hidden');
+    }
+  });
+})();
 </script>
