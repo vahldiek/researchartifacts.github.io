@@ -16,7 +16,7 @@ Data is collected from conferences tracked by [sysartifacts](https://sysartifact
 
 We scrape artifact evaluation results from sysartifacts/secartifacts websites, extract paper titles, authors, badges (Available, Functional, Reproducible, Reusable) and repository URLs. For USENIX conferences (ATC, FAST) we also scrape badge data from technical session pages. AE committee data is gathered from sysartifacts/secartifacts plus direct scraping (USENIX, CHES, PETS websites).
 
-Repository statistics (GitHub stars/forks, Zenodo/Figshare downloads) are collected via their public APIs. Author names are matched to [DBLP](https://dblp.org) for disambiguation and total-publication counts.
+Repository statistics (GitHub stars/forks, Zenodo/Figshare downloads) are collected via their public APIs. Author names are matched to [DBLP](https://dblp.org) for disambiguation and total-publication counts. Author affiliations are enriched using DBLP person pages and [CSRankings](http://csrankings.org) faculty data.
 
 All scripts are in the [artifact_analysis](https://github.com/researchartifacts/artifact_analysis) repository.
 

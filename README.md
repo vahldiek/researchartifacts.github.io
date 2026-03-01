@@ -116,3 +116,7 @@ MIT License — see [LICENSE](LICENSE) file for details.
 ## Acknowledgments
 
 Inspired by [Systems Circus](https://nebelwelt.net/pubstats/) and maintained by the research artifacts community.
+
+Data sources:
+- [DBLP](https://dblp.org) — Computer science bibliography
+- [CSRankings](http://csrankings.org) — Faculty affiliation data
