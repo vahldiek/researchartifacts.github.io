@@ -12,7 +12,7 @@ This page ranks institutions by their aggregate contributions to research artifa
 
 Institution scores are calculated by aggregating individual researchers' [combined ranking](combined_rankings.html) scores.
 
-**Note**: Affiliation data is sourced from artifact submissions, AE committee listings, [DBLP](https://dblp.org), and [CSRankings](http://csrankings.org). Institutions with unknown or missing affiliations are excluded from this ranking.
+**Note**: Affiliation data is sourced from artifact submissions, AE committee listings, [DBLP](https://dblp.org), and [CSRankings](http://csrankings.org). Researchers with unknown or missing institutions are excluded from this ranking.
 
 ---
 
