@@ -144,3 +144,7 @@ table tr:hover {
   background-color: #e8f4f8;
 }
 </style>
+
+---
+
+**Data:** [All Artifacts](/assets/data/artifacts.json) | [Artifacts by Conference](/assets/data/artifacts_by_conference.json) | [Rankings](/assets/data/combined_rankings.json) | [Authors](/assets/data/authors.json) | [Repository Stats](/assets/data/top_repos.json)
