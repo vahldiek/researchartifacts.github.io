@@ -9,12 +9,24 @@
 {% endcomment %}
 
 <div id="combined-controls" style="margin-bottom:6px; display:none; font-size:0.9em;">
-  <label style="font-weight:bold; margin-right:4px; white-space:nowrap;">Area:</label>
-  <select id="areaFilter" style="padding:2px 6px; font-size:0.95em;">
-    <option value="all" selected>All Conferences</option>
-    <option value="systems">Systems Only</option>
-    <option value="security">Security Only</option>
-  </select>
+  <div style="display:flex; flex-wrap:wrap; gap:8px; align-items:center;">
+    <div style="white-space:nowrap;">
+      <label style="font-weight:bold; margin-right:4px;">Area:</label>
+      <select id="areaFilter" style="padding:2px 6px; font-size:0.95em;">
+        <option value="all" selected>All Conferences</option>
+        <option value="systems">Systems Only</option>
+        <option value="security">Security Only</option>
+      </select>
+    </div>
+    <div style="white-space:nowrap;">
+      <label style="font-weight:bold; margin-right:4px;">Researcher:</label>
+      <input id="cNameSearch" type="text" placeholder="Search by name…" style="padding:2px 6px; font-size:0.95em; width:160px;">
+    </div>
+    <div style="white-space:nowrap;">
+      <label style="font-weight:bold; margin-right:4px;">Affiliation:</label>
+      <input id="cAffSearch" type="text" placeholder="Search by affiliation…" style="padding:2px 6px; font-size:0.95em; width:180px;">
+    </div>
+  </div>
 </div>
 
 <div id="combined-legend" style="margin:0 0 6px 0; display:none; font-size:0.85em; color:#555;">
@@ -53,6 +65,8 @@
   var sortCol = 3; // default: Combined Score
   var sortAsc = false;
   var filterMode = 'all';
+  var nameQuery = '';
+  var affQuery = '';
 
   var fixedCols = [
     {label:'#',                key:'rank',              type:'num',   tip:'Rank'},
@@ -126,6 +140,17 @@
     } else if (filterMode === 'ae_only') {
       filteredData = allData.filter(function(c) {
         return c.ae_memberships > 0;
+      });
+    }
+    // Text search filters
+    if (nameQuery) {
+      filteredData = filteredData.filter(function(c) {
+        return (c.name || '').toLowerCase().indexOf(nameQuery) !== -1;
+      });
+    }
+    if (affQuery) {
+      filteredData = filteredData.filter(function(c) {
+        return (c.affiliation || '').toLowerCase().indexOf(affQuery) !== -1;
       });
     }
     sortedData = filteredData.slice();
@@ -259,6 +284,20 @@
   document.getElementById('areaFilter').addEventListener('change', function() {
     loadArea(this.value);
   });
+
+  // Name / affiliation search
+  var _searchTimer = null;
+  function onSearchInput() {
+    clearTimeout(_searchTimer);
+    _searchTimer = setTimeout(function() {
+      nameQuery = (document.getElementById('cNameSearch').value || '').toLowerCase().trim();
+      affQuery  = (document.getElementById('cAffSearch').value  || '').toLowerCase().trim();
+      applyFilter();
+      render();
+    }, 200);
+  }
+  document.getElementById('cNameSearch').addEventListener('input', onSearchInput);
+  document.getElementById('cAffSearch').addEventListener('input', onSearchInput);
 
   // Controls
   function goPrev() { if (currentPage > 0) { currentPage--; render(); } }
