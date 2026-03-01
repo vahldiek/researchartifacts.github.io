@@ -210,3 +210,17 @@ html {
     font-size: 0.8em;
   }
 }
+
+// Remove footer completely
+#footer,
+.page__footer,
+.page__footer-follow,
+.page__footer-copyright,
+.page__meta {
+  display: none !important;
+}
+
+// Hide "Skip to footer" screen reader shortcut
+a[href="#footer"] {
+  display: none !important;
+}
