@@ -89,11 +89,7 @@ Statistics are being generated. Check back soon!
 
 ## Acknowledgements
 
-We thank the researchers who prepare reproducible artifacts, the AE committees who review them, and AE chairs who publish results to [sysartifacts](https://sysartifacts.github.io) and [secartifacts](https://secartifacts.github.io). Inspired by [Systems Circus](https://nebelwelt.net/pubstats/) by Mathias Payer.
-
----
-
-*[Contribute]({{ '/about.html' | relative_url }})*
+We thank the researchers who prepare reproducible artifacts, the AE committees who review them, and AE chairs who publish results to [sysartifacts](https://sysartifacts.github.io) and [secartifacts](https://secartifacts.github.io). Inspired by [Systems Circus](https://nebelwelt.net/pubstats/) and [csrankings.org](https://csrankings.org).
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
 <script>
