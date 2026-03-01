@@ -1,12 +1,12 @@
 ---
-title: Geographic Statistics
+title: Statistics
 layout: page
-permalink: /geographic_statistics/
-description: Geographic analysis of research artifacts by country and continent
+permalink: /statistics/
+description: Statistics on research artifacts by country and continent, including reproducibility rates and comparative analysis
 data_url: /assets/data/geographic_statistics.json
 ---
 
-This page presents geographic (country and continent) statistics for research artifacts, including reproducibility rates, artifact availability metrics, and comparative analysis across regions.
+This page presents statistics for research artifacts by country and continent, including reproducibility rates, artifact availability metrics, and comparative analysis across regions.
 
 <div id="stats-legend" style="margin:12px 0; padding:8px; background:#f5f5f5; border-radius:4px; font-size:0.9em; display:none;">
   <strong>Legend:</strong>
@@ -213,7 +213,7 @@ This page presents geographic (country and continent) statistics for research ar
 - China (CN) demonstrates high reproducibility at 82.9% with 572 artifacts
 - US maintains strong participation with 1,311 artifacts at 73% reproducibility
 
-**Geographic Diversity:**
+**Regional Diversity:**
 - 25 countries represented across 5 continents
 - Smallest: Oceania (1 country) and South America (1 country)
 - Largest: Europe (12 countries) and Asia (8 countries)
