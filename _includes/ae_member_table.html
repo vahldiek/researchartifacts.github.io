@@ -6,6 +6,10 @@
     page.member_data_url  — path to the JSON file (e.g., /assets/data/systems_ae_members.json)
 {% endcomment %}
 
+<div id="ae-legend" style="margin:0 0 6px 0; display:none; font-size:0.85em; color:#555;">
+  Legend: #=Rank, M=Member, E=AE Service, C=Chaired, A=Affiliation, K=Conferences, F=First Year, L=Last Year
+</div>
+
 <div id="member-controls" class="ae-controls" style="display:none;">
   <div class="ae-controls-row">
     <button id="prevBtn" class="ae-btn" disabled>&laquo; Prev</button>
@@ -46,14 +50,14 @@
 
   // Column definitions
   var fixedCols = [
-    {label:'Rank',                   key:'rank',               type:'num'},
-    {label:'Name',                   key:'name',               type:'alpha'},
-    {label:'AE&nbsp;Service&nbsp;Total', key:'total_memberships', type:'num', tip:'Total AE committee memberships for this area'},
-    {label:'Chaired&nbsp;\u2605',    key:'chair_count',        type:'num',  tip:'Times served as AE chair or co-chair'},
-    {label:'Affiliation',            key:'affiliation',        type:'alpha'},
-    {label:'Conferences',            key:'num_conferences',    type:'num',  tip:'Number of distinct conferences served'},
-    {label:'First&nbsp;Year',        key:'first_year',         type:'num'},
-    {label:'Last&nbsp;Year',         key:'last_year',          type:'num'}
+    {label:'#',                 key:'rank',               type:'num',   tip:'Rank'},
+    {label:'M',                 key:'name',               type:'alpha', tip:'Member/Name'},
+    {label:'E',                 key:'total_memberships',  type:'num',   tip:'Total AE committee memberships'},
+    {label:'C',                 key:'chair_count',        type:'num',   tip:'Times served as AE chair or co-chair (★)'},
+    {label:'A',                 key:'affiliation',        type:'alpha', tip:'Affiliation'},
+    {label:'K',                 key:'num_conferences',    type:'num',   tip:'Distinct conferences served'},
+    {label:'F',                 key:'first_year',         type:'num',   tip:'First year'},
+    {label:'L',                 key:'last_year',          type:'num',   tip:'Last year'}
   ];
 
   function render() {
@@ -191,6 +195,7 @@
     render();
 
     document.getElementById('memberLoading').style.display = 'none';
+    document.getElementById('ae-legend').style.display = '';
     document.getElementById('memberTable').style.display = '';
     document.getElementById('member-controls').style.display = '';
     document.getElementById('member-controls-bottom').style.display = '';
