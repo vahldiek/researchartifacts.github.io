@@ -14,7 +14,7 @@ This page aggregates institution ranking data by country and continent, showing 
 
 <div id="geo-content" style="display:none;">
 
-## By Continent
+<h2>By Continent</h2>
 
 <div id="continent-controls" style="margin-bottom:6px; font-size:0.9em;">
   <div style="display:flex; flex-wrap:wrap; gap:8px; align-items:center;">
@@ -47,7 +47,7 @@ This page aggregates institution ranking data by country and continent, showing 
 <tbody id="continentBody"></tbody>
 </table>
 
-## By Country
+<h2>By Country</h2>
 
 <div id="country-controls" style="margin-bottom:6px; font-size:0.9em;">
   <div style="display:flex; flex-wrap:wrap; gap:8px; align-items:center;">
