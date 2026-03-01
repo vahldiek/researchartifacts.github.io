@@ -114,7 +114,7 @@
     'chile': 'CL', 'chilean': 'CL',
     'ireland': 'IE', 'irish': 'IE', 'éire': 'IE',
     'new zealand': 'NZ', 'nz': 'NZ', 'aotearoa': 'NZ',
-    'south africa': 'ZA', 'sa': 'ZA',
+    'south africa': 'ZA',
     'russia': 'RU', 'russian': 'RU', 'soviet': 'RU',
     'ukraine': 'UA', 'ukrainian': 'UA',
     'poland': 'PL', 'polish': 'PL',
@@ -148,7 +148,9 @@
     
     // Known institutions and companies by country
     var knownInstitutions = {
-      'mit': 'US', 'stanford': 'US', 'berkeley': 'US', 'carnegie mellon': 'US',
+      'mit': 'US', 'massachusetts institute': 'US', 'mass inst of tech': 'US',
+      'university of massachusetts': 'US', 'umass': 'US', 'massachusetts': 'US',
+      'stanford': 'US', 'berkeley': 'US', 'carnegie mellon': 'US',
       'harvard': 'US', 'princeton': 'US', 'yale': 'US', 'cornell': 'US',
       'columbia': 'US', 'penn': 'US', 'upenn': 'US', 'cmu': 'US',
       'ucsd': 'US', 'ucsb': 'US', 'ucla': 'US', 'uiuc': 'US',
@@ -244,7 +246,7 @@
     }
     
     // Common US state indicators
-    if (lower.match(/\b(california|massachusetts|texas|new york|illinois|washington|colorado|utah|arizona|pennsylvania|ohio|michigan|florida)\b/)) {
+    if (lower.match(/\b(alabama|alaska|arizona|arkansas|california|colorado|connecticut|delaware|florida|georgia|hawaii|idaho|illinois|indiana|iowa|kansas|kentucky|louisiana|maine|maryland|massachusetts|michigan|minnesota|mississippi|missouri|montana|nebraska|nevada|new hampshire|new jersey|new mexico|new york|north carolina|north dakota|ohio|oklahoma|oregon|pennsylvania|rhode island|south carolina|south dakota|tennessee|texas|utah|vermont|virginia|washington|west virginia|wisconsin|wyoming)\b/)) {
       return 'US';
     }
     
