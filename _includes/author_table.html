@@ -6,7 +6,7 @@
 {% endcomment %}
 
 <div id="author-legend" style="margin:0 0 6px 0; display:none; font-size:0.85em; color:#555;">
-  Legend: #=Rank, R=Researcher, A=Affiliation, S=Score, T=Artifacts, AR%=Art. Rate, Re%=Repro. Rate, Fn%=Func. Rate, P=Papers, Y=Last 5y
+  Legend: #=Rank, R=Researcher, A=Affiliation, S=Score, Ar=Artifacts, AR%=Art. Rate, RR%=Repro. Rate, AvR%=Available Rate, P=Papers, Y=Last 5y
 </div>
 
 <div id="author-controls" class="at-controls" style="display:none;">
@@ -53,10 +53,10 @@
     {label:'R',                 key:'name',            type:'alpha', tip:'Researcher'},
     {label:'A',                 key:'affiliation',     type:'alpha', tip:'Affiliation'},
     {label:'S',                 key:'artifact_score',  type:'num',   tip:'Score: Reproduced×3 + Functional×2 + Available×1'},
-    {label:'T',                 key:'total',           type:'num',   tip:'Total artifacts'},
+    {label:'Ar',                key:'total',           type:'num',   tip:'Total artifacts'},
     {label:'AR%',               key:'artifact_rate',   type:'num',   tip:'Artifact rate: % of papers with artifact'},
-    {label:'Re%',               key:'repro_rate',      type:'num',   tip:'Reproducibility rate: % of artifacts Reproduced'},
-    {label:'Fn%',               key:'functional_rate', type:'num',   tip:'Functional rate: % of artifacts Functional'},
+    {label:'RR%',               key:'repro_rate',      type:'num',   tip:'Reproducibility rate: % of artifacts Reproduced'},
+    {label:'AvR%',              key:'functional_rate', type:'num',   tip:'Available rate: % of artifacts Available/Functional'},
     {label:'P',                 key:'total_papers',    type:'num',   tip:'Total papers at tracked conferences'},
     {label:'Y',                 key:'last_5_years',    type:'num',   tip:'Years active in last 5 years'}
   ];

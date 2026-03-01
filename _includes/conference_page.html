@@ -292,12 +292,12 @@ th.sorted-desc:after { content: ' \2193'; opacity: 1; }
     {label:'Author',            key:'name',            type:'alpha'},
     {label:'Affiliation',       key:'affiliation',     type:'alpha'},
     {label:'Score',             key:'artifact_score',  type:'num',   tip:'Weighted score: Reproduced×3 + Functional×2 + Available×1'},
-    {label:'Artifacts',         key:'total',           type:'num'},
-    {label:'Papers',            key:'total_papers',    type:'num',   tip:'Total papers at this conference'},
-    {label:'Art.&nbsp;Rate',    key:'artifact_rate',   type:'num',   tip:'Artifact rate: percentage of papers with an evaluated artifact'},
-    {label:'Repro.&nbsp;Rate',  key:'repro_rate',      type:'num',   tip:'Reproducibility rate: percentage of artifacts with Reproduced badge'},
-    {label:'Func.&nbsp;Rate',   key:'functional_rate', type:'num',   tip:'Functional rate: percentage of artifacts with Functional badge'},
-    {label:'Last&nbsp;5y',      key:'last_5_years',    type:'num',   tip:'Artifacts in the last 5 years'}
+    {label:'Ar',                key:'total',           type:'num',   tip:'Artifacts'},
+    {label:'P',                 key:'total_papers',    type:'num',   tip:'Papers at this conference'},
+    {label:'AR%',               key:'artifact_rate',   type:'num',   tip:'Artifact rate: % papers with artifact'},
+    {label:'RR%',               key:'repro_rate',      type:'num',   tip:'Reproducibility rate: % artifacts Reproduced'},
+    {label:'AvR%',              key:'functional_rate', type:'num',   tip:'Available rate: % artifacts Available/Functional'},
+    {label:'L5y',               key:'last_5_years',    type:'num',   tip:'Artifacts in last 5 years'}
   ];
 
   function render() {

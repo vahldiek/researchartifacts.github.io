@@ -20,7 +20,7 @@
 </div>
 
 <div id="institution-legend" style="margin:0 0 6px 0; display:none; font-size:0.85em; color:#555;">
-  Legend: #=Rank, I=Institution, C=Combined, R=Researchers, T=Artifacts, AR%=Art. Rate, Re%=Repro. Rate, E=AE, H=Chaired, P=Papers, Co=Conferences
+  Legend: #=Rank, I=Institution, C=Combined, R=Researchers, Ar=Artifacts, AR%=Art. Rate, RR%=Repro. Rate, AE=AE Service, Ch=Chaired, P=Papers
 </div>
 
 <div id="institutionLoading"><em>Loading institution ranking data…</em></div>
@@ -60,13 +60,12 @@
     {label:'I',                key:'affiliation',       type:'alpha', tip:'Institution'},
     {label:'C',                key:'combined_score',    type:'num',   tip:'Combined score'},
     {label:'R',                key:'num_authors',       type:'num',   tip:'Researchers'},
-    {label:'T',                key:'artifacts',         type:'num',   tip:'Total artifacts'},
+    {label:'Ar',               key:'artifacts',         type:'num',   tip:'Total artifacts'},
     {label:'AR%',              key:'artifact_rate',     type:'num',   tip:'Artifact rate: % papers with artifact'},
-    {label:'Re%',              key:'repro_rate',        type:'num',   tip:'Reproducibility rate: % artifacts Reproduced'},
-    {label:'E',                key:'ae_memberships',    type:'num',   tip:'AE memberships'},
-    {label:'H',                key:'chair_count',       type:'num',   tip:'Times chaired (★)'},
-    {label:'P',                key:'total_papers',      type:'num',   tip:'Total papers'},
-    {label:'Co',               key:'num_conferences',   type:'num',   tip:'Distinct conferences'}
+    {label:'RR%',              key:'repro_rate',        type:'num',   tip:'Reproducibility rate: % artifacts Reproduced'},
+    {label:'AE',               key:'ae_memberships',    type:'num',   tip:'AE memberships'},
+    {label:'Ch',               key:'chair_count',       type:'num',   tip:'Times chaired (★)'},
+    {label:'P',                key:'total_papers',      type:'num',   tip:'Total papers'}
   ];
 
   // Country code to flag HTML (using flag-icons CSS library)
