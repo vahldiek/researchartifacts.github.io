@@ -1,150 +1,324 @@
 {% comment %}
-  Chart showing average stars and forks per year with min/max error bars.
-  Uses Chart.js with the chartjs-plugin-error-bars plugin (or manual line drawing).
+  Combined line chart for yearly repository stats.
+  - Shows averages and medians for stars/forks.
+  - Adds percentile bands (P25-P75) around medians.
+  - On systems/security pages, adds per-conference lines.
 
   Required page variables:
-    page.yearly_chart_url  — path to repo_stats_yearly.json
-    page.yearly_chart_area — 'all', 'systems', or 'security' (which area key to show)
+    page.yearly_chart_area — 'all', 'systems', or 'security'
 {% endcomment %}
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
 
-<div style="width:100%; max-width:700px; margin:1.5em 0;">
-  <canvas id="yearlyStarsChart" height="300"></canvas>
-</div>
-<div style="width:100%; max-width:700px; margin:1.5em 0;">
-  <canvas id="yearlyForksChart" height="300"></canvas>
+<div style="width:100%; max-width:980px; margin:1.5em 0;">
+  <canvas id="yearlyRepoCombinedChart" height="360"></canvas>
 </div>
 
 <script>
 (function() {
-  var DATA_URL = '{{ page.yearly_chart_url | relative_url }}';
   var AREA = '{{ page.yearly_chart_area | default: "all" }}';
+  var repoStatsByConference = {{ site.data.repo_stats.by_conference | jsonify }};
+  var confCategory = {
+    {% for conf in site.data.artifacts_by_conference %}
+    "{{ conf.name }}": "{{ conf.category }}"{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  };
 
-  fetch(DATA_URL)
-    .then(function(r) { return r.json(); })
-    .then(function(data) {
-      var labels = [], avgStars = [], avgForks = [];
-      var minStars = [], maxStars = [], minForks = [], maxForks = [];
+  function mean(values) {
+    if (!values || values.length === 0) return null;
+    var sum = 0;
+    for (var i = 0; i < values.length; i++) sum += values[i];
+    return sum / values.length;
+  }
 
-      for (var i = 0; i < data.length; i++) {
-        var d = data[i];
-        var a = d[AREA];
-        if (!a || a.repos === 0) continue;
-        labels.push(d.year);
-        avgStars.push(a.avg_stars);
-        avgForks.push(a.avg_forks);
-        minStars.push(a.min_stars);
-        maxStars.push(a.max_stars);
-        minForks.push(a.min_forks);
-        maxForks.push(a.max_forks);
+  function percentile(values, p) {
+    if (!values || values.length === 0) return null;
+    var sorted = values.slice().sort(function(a, b) { return a - b; });
+    if (sorted.length === 1) return sorted[0];
+    var index = (sorted.length - 1) * p;
+    var lower = Math.floor(index);
+    var upper = Math.ceil(index);
+    var weight = index - lower;
+    if (upper === lower) return sorted[lower];
+    return sorted[lower] * (1 - weight) + sorted[upper] * weight;
+  }
+
+  function toFixed1(v) {
+    if (v === null || v === undefined) return null;
+    return Math.round(v * 10) / 10;
+  }
+
+  function hslColor(idx, total, saturation, lightness) {
+    var hue = Math.round((idx * 360) / Math.max(total, 1));
+    return 'hsl(' + hue + ', ' + saturation + '%, ' + lightness + '%)';
+  }
+
+  function computeSeries() {
+    var yearMap = {};
+    var conferenceYearValues = {};
+
+    for (var i = 0; i < repoStatsByConference.length; i++) {
+      var conf = repoStatsByConference[i];
+      var confName = conf.name;
+      var category = confCategory[confName];
+      if (AREA !== 'all' && category !== AREA) continue;
+
+      if (!conferenceYearValues[confName]) conferenceYearValues[confName] = {};
+      var years = conf.years || [];
+      for (var j = 0; j < years.length; j++) {
+        var yr = years[j];
+        var year = Number(yr.year);
+        if (!yearMap[year]) yearMap[year] = { stars: [], forks: [] };
+
+        var avgStars = Number(yr.avg_stars || 0);
+        var avgForks = Number(yr.avg_forks || 0);
+        yearMap[year].stars.push(avgStars);
+        yearMap[year].forks.push(avgForks);
+        conferenceYearValues[confName][year] = { stars: avgStars, forks: avgForks };
       }
+    }
 
-      var areaLabel = AREA === 'all' ? 'All Conferences' : AREA.charAt(0).toUpperCase() + AREA.slice(1);
+    var labels = Object.keys(yearMap).map(Number).sort(function(a, b) { return a - b; });
 
-      // Custom error-bar plugin
-      var errorBarPlugin = {
-        id: 'errorBar',
-        afterDatasetsDraw: function(chart) {
-          var meta = chart.getDatasetMeta(0);
-          var ctx = chart.ctx;
-          var yScale = chart.scales.y;
-          ctx.save();
-          ctx.strokeStyle = 'rgba(0,0,0,0.4)';
-          ctx.lineWidth = 1.5;
-          var minArr = chart.config._errorMin;
-          var maxArr = chart.config._errorMax;
-          if (!minArr || !maxArr) return;
-          for (var i = 0; i < meta.data.length; i++) {
-            var el = meta.data[i];
-            var yMin = yScale.getPixelForValue(minArr[i]);
-            var yMax = yScale.getPixelForValue(maxArr[i]);
-            var x = el.x;
-            ctx.beginPath();
-            ctx.moveTo(x, yMin);
-            ctx.lineTo(x, yMax);
-            ctx.stroke();
-            // caps
-            ctx.beginPath();
-            ctx.moveTo(x - 4, yMin);
-            ctx.lineTo(x + 4, yMin);
-            ctx.stroke();
-            ctx.beginPath();
-            ctx.moveTo(x - 4, yMax);
-            ctx.lineTo(x + 4, yMax);
-            ctx.stroke();
-          }
-          ctx.restore();
-        }
-      };
+    var avgStarsSeries = [], medStarsSeries = [], p25StarsSeries = [], p75StarsSeries = [];
+    var avgForksSeries = [], medForksSeries = [], p25ForksSeries = [], p75ForksSeries = [];
 
-      // Stars chart
-      var starsConfig = {
-        type: 'bar',
-        data: {
-          labels: labels,
-          datasets: [{
-            label: 'Avg Stars',
-            data: avgStars,
-            backgroundColor: 'rgba(41,128,185,0.7)',
-            borderColor: 'rgba(41,128,185,1)',
-            borderWidth: 1
-          }]
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            title: { display: true, text: areaLabel + ': Average Stars per Repository by Year' },
-            tooltip: {
-              callbacks: {
-                afterBody: function(ctx) {
-                  var idx = ctx[0].dataIndex;
-                  return 'Min (conf avg): ' + minStars[idx] + '\nMax (conf avg): ' + maxStars[idx];
-                }
-              }
-            }
-          },
-          scales: { y: { beginAtZero: true, title: { display: true, text: 'Stars' } } }
-        },
-        plugins: [errorBarPlugin],
-        _errorMin: minStars,
-        _errorMax: maxStars
-      };
-      new Chart(document.getElementById('yearlyStarsChart'), starsConfig);
+    for (var k = 0; k < labels.length; k++) {
+      var y = labels[k];
+      var starsVals = yearMap[y].stars;
+      var forksVals = yearMap[y].forks;
 
-      // Forks chart
-      var forksConfig = {
-        type: 'bar',
-        data: {
-          labels: labels,
-          datasets: [{
-            label: 'Avg Forks',
-            data: avgForks,
-            backgroundColor: 'rgba(26,188,156,0.7)',
-            borderColor: 'rgba(26,188,156,1)',
-            borderWidth: 1
-          }]
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            title: { display: true, text: areaLabel + ': Average Forks per Repository by Year' },
-            tooltip: {
-              callbacks: {
-                afterBody: function(ctx) {
-                  var idx = ctx[0].dataIndex;
-                  return 'Min (conf avg): ' + minForks[idx] + '\nMax (conf avg): ' + maxForks[idx];
-                }
-              }
-            }
-          },
-          scales: { y: { beginAtZero: true, title: { display: true, text: 'Forks' } } }
-        },
-        plugins: [errorBarPlugin],
-        _errorMin: minForks,
-        _errorMax: maxForks
-      };
-      new Chart(document.getElementById('yearlyForksChart'), forksConfig);
+      avgStarsSeries.push(toFixed1(mean(starsVals)));
+      medStarsSeries.push(toFixed1(percentile(starsVals, 0.5)));
+      p25StarsSeries.push(toFixed1(percentile(starsVals, 0.25)));
+      p75StarsSeries.push(toFixed1(percentile(starsVals, 0.75)));
+
+      avgForksSeries.push(toFixed1(mean(forksVals)));
+      medForksSeries.push(toFixed1(percentile(forksVals, 0.5)));
+      p25ForksSeries.push(toFixed1(percentile(forksVals, 0.25)));
+      p75ForksSeries.push(toFixed1(percentile(forksVals, 0.75)));
+    }
+
+    return {
+      labels: labels,
+      conferenceYearValues: conferenceYearValues,
+      avgStarsSeries: avgStarsSeries,
+      medStarsSeries: medStarsSeries,
+      p25StarsSeries: p25StarsSeries,
+      p75StarsSeries: p75StarsSeries,
+      avgForksSeries: avgForksSeries,
+      medForksSeries: medForksSeries,
+      p25ForksSeries: p25ForksSeries,
+      p75ForksSeries: p75ForksSeries
+    };
+  }
+
+  function buildDatasets(series) {
+    var datasets = [];
+
+    var starsBandHeight = series.p75StarsSeries.map(function(v, i) {
+      var lo = series.p25StarsSeries[i];
+      if (v === null || lo === null) return null;
+      return toFixed1(v - lo);
     });
+    var forksBandHeight = series.p75ForksSeries.map(function(v, i) {
+      var lo = series.p25ForksSeries[i];
+      if (v === null || lo === null) return null;
+      return toFixed1(v - lo);
+    });
+
+    datasets.push({
+      label: 'Stars P25 (hidden anchor)',
+      data: series.p25StarsSeries,
+      yAxisID: 'yStars',
+      borderColor: 'rgba(31,119,180,0)',
+      backgroundColor: 'rgba(31,119,180,0)',
+      pointRadius: 0,
+      borderWidth: 0,
+      tension: 0.25,
+      fill: false
+    });
+    datasets.push({
+      label: 'Stars P25-P75',
+      data: starsBandHeight,
+      yAxisID: 'yStars',
+      borderColor: 'rgba(31,119,180,0)',
+      backgroundColor: 'rgba(31,119,180,0.14)',
+      pointRadius: 0,
+      borderWidth: 0,
+      tension: 0.25,
+      fill: '-1'
+    });
+    datasets.push({
+      label: 'Avg Stars',
+      data: series.avgStarsSeries,
+      yAxisID: 'yStars',
+      borderColor: 'rgba(31,119,180,1)',
+      backgroundColor: 'rgba(31,119,180,1)',
+      pointRadius: 3,
+      borderWidth: 2,
+      tension: 0.25,
+      fill: false
+    });
+    datasets.push({
+      label: 'Median Stars',
+      data: series.medStarsSeries,
+      yAxisID: 'yStars',
+      borderColor: 'rgba(31,119,180,0.9)',
+      backgroundColor: 'rgba(31,119,180,0.9)',
+      borderDash: [6, 4],
+      pointRadius: 2,
+      borderWidth: 2,
+      tension: 0.25,
+      fill: false
+    });
+
+    datasets.push({
+      label: 'Forks P25 (hidden anchor)',
+      data: series.p25ForksSeries,
+      yAxisID: 'yForks',
+      borderColor: 'rgba(255,127,14,0)',
+      backgroundColor: 'rgba(255,127,14,0)',
+      pointRadius: 0,
+      borderWidth: 0,
+      tension: 0.25,
+      fill: false
+    });
+    datasets.push({
+      label: 'Forks P25-P75',
+      data: forksBandHeight,
+      yAxisID: 'yForks',
+      borderColor: 'rgba(255,127,14,0)',
+      backgroundColor: 'rgba(255,127,14,0.14)',
+      pointRadius: 0,
+      borderWidth: 0,
+      tension: 0.25,
+      fill: '-1'
+    });
+    datasets.push({
+      label: 'Avg Forks',
+      data: series.avgForksSeries,
+      yAxisID: 'yForks',
+      borderColor: 'rgba(255,127,14,1)',
+      backgroundColor: 'rgba(255,127,14,1)',
+      pointRadius: 3,
+      borderWidth: 2,
+      tension: 0.25,
+      fill: false
+    });
+    datasets.push({
+      label: 'Median Forks',
+      data: series.medForksSeries,
+      yAxisID: 'yForks',
+      borderColor: 'rgba(255,127,14,0.9)',
+      backgroundColor: 'rgba(255,127,14,0.9)',
+      borderDash: [6, 4],
+      pointRadius: 2,
+      borderWidth: 2,
+      tension: 0.25,
+      fill: false
+    });
+
+    if (AREA !== 'all') {
+      var confNames = Object.keys(series.conferenceYearValues).sort();
+      for (var i = 0; i < confNames.length; i++) {
+        var confName = confNames[i];
+        var starsData = [];
+        var forksData = [];
+        for (var j = 0; j < series.labels.length; j++) {
+          var year = series.labels[j];
+          var val = series.conferenceYearValues[confName][year];
+          starsData.push(val ? toFixed1(val.stars) : null);
+          forksData.push(val ? toFixed1(val.forks) : null);
+        }
+
+        var starsColor = hslColor(i, confNames.length, 62, 38);
+        var forksColor = hslColor(i, confNames.length, 62, 52);
+
+        datasets.push({
+          label: confName + ' Stars',
+          data: starsData,
+          yAxisID: 'yStars',
+          borderColor: starsColor,
+          backgroundColor: starsColor,
+          borderWidth: 1.5,
+          pointRadius: 2,
+          tension: 0.2,
+          fill: false
+        });
+        datasets.push({
+          label: confName + ' Forks',
+          data: forksData,
+          yAxisID: 'yForks',
+          borderColor: forksColor,
+          backgroundColor: forksColor,
+          borderWidth: 1.2,
+          borderDash: [4, 3],
+          pointRadius: 1.5,
+          tension: 0.2,
+          fill: false
+        });
+      }
+    }
+
+    return datasets;
+  }
+
+  var series = computeSeries();
+  var areaLabel = AREA === 'all' ? 'All Conferences' : AREA.charAt(0).toUpperCase() + AREA.slice(1);
+
+  new Chart(document.getElementById('yearlyRepoCombinedChart'), {
+    type: 'line',
+    data: {
+      labels: series.labels,
+      datasets: buildDatasets(series)
+    },
+    options: {
+      responsive: true,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        title: {
+          display: true,
+          text: areaLabel + ': Yearly Stars & Forks (Avg + Median with P25-P75 bands)'
+        },
+        legend: {
+          labels: {
+            filter: function(item) {
+              return item.text.indexOf('(hidden anchor)') === -1;
+            }
+          }
+        },
+        tooltip: {
+          callbacks: {
+            afterBody: function(ctx) {
+              var idx = ctx[0].dataIndex;
+              return [
+                'Stars median P25-P75: ' + series.p25StarsSeries[idx] + ' - ' + series.p75StarsSeries[idx],
+                'Forks median P25-P75: ' + series.p25ForksSeries[idx] + ' - ' + series.p75ForksSeries[idx]
+              ];
+            }
+          }
+        }
+      },
+      scales: {
+        yStars: {
+          type: 'linear',
+          position: 'left',
+          beginAtZero: true,
+          title: { display: true, text: 'Stars (avg per repo)' }
+        },
+        yForks: {
+          type: 'linear',
+          position: 'right',
+          beginAtZero: true,
+          grid: { drawOnChartArea: false },
+          title: { display: true, text: 'Forks (avg per repo)' }
+        },
+        x: {
+          title: { display: true, text: 'Year' }
+        }
+      }
+    }
+  });
 })();
 </script>
