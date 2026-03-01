@@ -120,9 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Breakpoints match CSS media queries
     if (width < 768) itemsToHide = 5;       // Mobile: hide last 5
     else if (width < 1000) itemsToHide = 4; // Tablet: hide last 4
-    else if (width < 1200) itemsToHide = 3; // Small desktop: hide last 3
-    else if (width < 1400) itemsToHide = 2; // Medium desktop: hide last 2
-    else itemsToHide = 0;                     // Large desktop: show all
+    else itemsToHide = 2;                    // Desktop: always hide Methodology + Contribute
     
     // Get all menu items from visible-links
     var allItems = visibleContainer.querySelectorAll(':scope > .masthead__menu-item');

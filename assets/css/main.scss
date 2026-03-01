@@ -157,35 +157,27 @@ html {
 // Responsive navigation: collapse last items on medium screens
 // to give more space for logo, title, and subtitle
 // On large screens (> 1400px): show all 8 items (Overview, Rankings, Systems, Security, AE, RepoStats, Methodology, Contribute + hamburger for conference details)
-@media (max-width: 1400px) {
-  // Hide last 2 items on 1200-1400px (hide Methodology, Contribute)
+// Hamburger toggle: hidden class hides it; JS removes hidden class when there are overflow items
+.greedy-nav__toggle.hidden {
+  display: none !important;
+}
+
+// Desktop (≥1000px): always hide Methodology + Contribute (last 2) — Repository Stats stays visible
+@media (min-width: 1000px) {
   .greedy-nav .visible-links > li.masthead__menu-item:nth-last-child(-n+2) {
     display: none;
   }
-  .greedy-nav__toggle {
-    display: block !important;
-  }
-  .greedy-nav__toggle.hidden {
-    display: block !important;
-  }
 }
 
-@media (max-width: 1200px) {
-  // Hide last 3 items on 1000-1200px (hide Repository Stats and beyond)
-  .greedy-nav .visible-links > li.masthead__menu-item:nth-last-child(-n+3) {
-    display: none;
-  }
-}
-
-@media (max-width: 1000px) {
-  // Hide last 4 items on smaller screens (hide AE Committees and beyond)
+@media (max-width: 999px) {
+  // Tablet: hide last 4 (AE Committees, Repository Stats, Methodology, Contribute)
   .greedy-nav .visible-links > li.masthead__menu-item:nth-last-child(-n+4) {
     display: none;
   }
 }
 
-@media (max-width: 768px) {
-  // On tablets and smaller: hide last 5 items, keep only Overview and Rankings visible
+@media (max-width: 767px) {
+  // Mobile: hide last 5 (keep only Overview + Ranking)
   .greedy-nav .visible-links > li.masthead__menu-item:nth-last-child(-n+5) {
     display: none;
   }
