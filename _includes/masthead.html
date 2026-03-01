@@ -75,5 +75,52 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
   });
+
+  /* --- Responsive navigation: move hidden visible-links items to hamburger menu --- */
+  function updateHiddenLinks() {
+    var visibleLinks = document.querySelector('.greedy-nav .visible-links');
+    var hiddenLinks = document.querySelector('.greedy-nav .hidden-links');
+    var toggle = document.querySelector('.greedy-nav__toggle');
+    
+    if (!visibleLinks || !hiddenLinks || !toggle) return;
+    
+    // Clear hidden links
+    hiddenLinks.innerHTML = '';
+    
+    // Find all visible-links items that are hidden by CSS
+    var allItems = visibleLinks.querySelectorAll('.masthead__menu-item');
+    var hasHidden = false;
+    
+    allItems.forEach(function(item) {
+      // Check if item is hidden by CSS
+      var style = window.getComputedStyle(item);
+      if (style.display === 'none') {
+        // Clone and add to hidden-links
+        var clone = item.cloneNode(true);
+        clone.style.display = ''; // Reset display
+        hiddenLinks.appendChild(clone);
+        hasHidden = true;
+      }
+    });
+    
+    // Show/hide hamburger toggle based on whether there are hidden items
+    if (hasHidden) {
+      toggle.classList.remove('hidden');
+      hiddenLinks.classList.add('hidden'); // Keep collapsed by default
+    } else {
+      toggle.classList.add('hidden');
+      hiddenLinks.classList.add('hidden');
+    }
+  }
+  
+  // Update on load and window resize
+  updateHiddenLinks();
+  window.addEventListener('resize', updateHiddenLinks);
+  
+  // Toggle hidden links visibility
+  document.querySelector('.greedy-nav__toggle').addEventListener('click', function() {
+    var hiddenLinks = document.querySelector('.greedy-nav .hidden-links');
+    hiddenLinks.classList.toggle('hidden');
+  });
 });
 </script>

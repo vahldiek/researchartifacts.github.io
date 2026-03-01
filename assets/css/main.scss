@@ -98,3 +98,32 @@ html {
   background: #f2f2f2;
 }
 
+// Responsive navigation: collapse last 2-3 menu items on medium screens
+// to give more space for logo, title, and subtitle
+@media (max-width: 1400px) {
+  // Hide last 3 navigation items on medium screens
+  .greedy-nav .visible-links > li.masthead__menu-item:nth-last-child(-n+3) {
+    display: none;
+  }
+  // Show the hamburger toggle earlier
+  .greedy-nav__toggle {
+    display: block !important;
+  }
+  .greedy-nav__toggle.hidden {
+    display: block !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  // Hide last 4 navigation items on smaller medium screens
+  .greedy-nav .visible-links > li.masthead__menu-item:nth-last-child(-n+4) {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  // Hide last 5 navigation items on small to medium screens
+  .greedy-nav .visible-links > li.masthead__menu-item:nth-last-child(-n+5) {
+    display: none;
+  }
+}
