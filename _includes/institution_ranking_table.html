@@ -18,6 +18,9 @@
     <option value="security">Security Only</option>
   </select>
   <span style="margin:0 12px;"></span>
+  <label style="font-weight:bold; margin-right:4px; white-space:nowrap;">Geo:</label>
+  <select id="geoFilter" style="padding:2px 6px; font-size:0.95em;"></select>
+  <span style="margin:0 12px;"></span>
   <label style="font-weight:bold; margin-right:4px; white-space:nowrap;">Search:</label>
   <input type="text" id="affiliationSearch" placeholder="Filter by institution name..." style="padding:2px 6px; font-size:0.95em; width:200px;">
 </div>
@@ -59,6 +62,7 @@
   var sortAsc = false;
   var expandedRows = new Set(); // Track which rows are expanded
   var searchFilter = ''; // Store current search filter
+  var geoFilter = 'world';
 
   var fixedCols = [
     {label:'#',                key:'rank',              type:'num',   tip:'Rank'},
@@ -139,6 +143,38 @@
     'colombia': 'CO', 'colombian': 'CO',
     'peru': 'PE', 'peruvian': 'PE',
     'venezuela': 'VE', 'venezuelan': 'VE'
+  };
+
+  var codeToName = {
+    'US':'United States','CN':'China','JP':'Japan','GB':'United Kingdom',
+    'DE':'Germany','FR':'France','CA':'Canada','AU':'Australia','IN':'India',
+    'SG':'Singapore','KR':'South Korea','CH':'Switzerland','NL':'Netherlands',
+    'SE':'Sweden','NO':'Norway','DK':'Denmark','FI':'Finland','BE':'Belgium',
+    'AT':'Austria','IL':'Israel','IT':'Italy','ES':'Spain','PT':'Portugal',
+    'GR':'Greece','HK':'Hong Kong','TW':'Taiwan','TH':'Thailand','BR':'Brazil',
+    'MX':'Mexico','AR':'Argentina','CL':'Chile','IE':'Ireland','NZ':'New Zealand',
+    'ZA':'South Africa','RU':'Russia','UA':'Ukraine','PL':'Poland','RO':'Romania',
+    'CZ':'Czechia','HU':'Hungary','TR':'Turkey','PK':'Pakistan','MY':'Malaysia',
+    'ID':'Indonesia','VN':'Vietnam','PH':'Philippines','BD':'Bangladesh',
+    'LK':'Sri Lanka','IR':'Iran','SA':'Saudi Arabia','AE':'UAE','EG':'Egypt',
+    'KE':'Kenya','NG':'Nigeria','MA':'Morocco','CO':'Colombia','PE':'Peru',
+    'VE':'Venezuela'
+  };
+
+  var codeToContinent = {
+    'US':'North America','CA':'North America','MX':'North America',
+    'CN':'Asia','JP':'Asia','KR':'Asia','SG':'Asia','IN':'Asia','TW':'Asia',
+    'HK':'Asia','TH':'Asia','PK':'Asia','MY':'Asia','ID':'Asia','VN':'Asia',
+    'PH':'Asia','BD':'Asia','LK':'Asia','IR':'Asia','SA':'Asia','AE':'Asia',
+    'GB':'Europe','DE':'Europe','FR':'Europe','CH':'Europe','NL':'Europe',
+    'SE':'Europe','NO':'Europe','DK':'Europe','FI':'Europe','BE':'Europe',
+    'AT':'Europe','IL':'Europe','IT':'Europe','ES':'Europe','PT':'Europe',
+    'GR':'Europe','IE':'Europe','RU':'Europe','UA':'Europe','PL':'Europe',
+    'RO':'Europe','CZ':'Europe','HU':'Europe','TR':'Europe',
+    'AU':'Oceania','NZ':'Oceania',
+    'BR':'South America','AR':'South America','CL':'South America',
+    'CO':'South America','PE':'South America','VE':'South America',
+    'ZA':'Africa','KE':'Africa','NG':'Africa','MA':'Africa','EG':'Africa'
   };
 
   // Extract country code from institution name
@@ -280,16 +316,70 @@
     return code ? countryCodeToFlagHtml(code) : '';
   }
 
+  function buildGeoFilterOptions() {
+    var select = document.getElementById('geoFilter');
+    var previous = geoFilter;
+    var countries = {};
+    var continents = {};
+
+    allData.forEach(function(inst) {
+      var code = getCountryCodeFromName(inst.affiliation || '');
+      if (!code) return;
+      countries[code] = true;
+      var continent = codeToContinent[code] || 'Unknown';
+      continents[continent] = true;
+    });
+
+    var continentList = Object.keys(continents)
+      .filter(function(c) { return c !== 'Unknown'; })
+      .sort();
+
+    var countryList = Object.keys(countries).sort(function(a, b) {
+      var an = codeToName[a] || a;
+      var bn = codeToName[b] || b;
+      return an.localeCompare(bn);
+    });
+
+    var options = [{ value: 'world', label: 'World' }];
+    continentList.forEach(function(continent) {
+      options.push({ value: 'continent:' + continent, label: continent });
+    });
+    countryList.forEach(function(code) {
+      options.push({ value: 'country:' + code, label: codeToName[code] || code });
+    });
+
+    select.innerHTML = options.map(function(option) {
+      return '<option value="' + option.value + '">' + escHtml(option.label) + '</option>';
+    }).join('');
+
+    var hasPrevious = options.some(function(option) { return option.value === previous; });
+    geoFilter = hasPrevious ? previous : 'world';
+    select.value = geoFilter;
+  }
+
   function applySearch() {
-    if (searchFilter === '') {
-      filteredData = allData.slice();
-    } else {
-      var lower = searchFilter.toLowerCase();
-      filteredData = allData.filter(function(inst) {
-        var aff = (inst.affiliation || '').toLowerCase();
-        return aff.indexOf(lower) !== -1;
-      });
-    }
+    var lower = searchFilter.toLowerCase();
+    filteredData = allData.filter(function(inst) {
+      var aff = (inst.affiliation || '');
+      var affLower = aff.toLowerCase();
+      if (lower && affLower.indexOf(lower) === -1) return false;
+
+      if (geoFilter === 'world') return true;
+
+      var code = getCountryCodeFromName(aff);
+      if (!code) return false;
+
+      if (geoFilter.indexOf('continent:') === 0) {
+        var continent = geoFilter.slice('continent:'.length);
+        return (codeToContinent[code] || 'Unknown') === continent;
+      }
+
+      if (geoFilter.indexOf('country:') === 0) {
+        return code === geoFilter.slice('country:'.length);
+      }
+
+      return true;
+    });
     sortData(sortCol, sortAsc);
     currentPage = 0;
   }
@@ -481,6 +571,7 @@
       var aff = (inst.affiliation || '').toLowerCase();
       return aff && aff !== 'unknown' && !aff.startsWith('_unknown');
     });
+    buildGeoFilterOptions();
     applySearch();
     
     // Extract year columns
@@ -533,6 +624,13 @@
   // Search filter
   document.getElementById('affiliationSearch').addEventListener('input', function() {
     searchFilter = this.value;
+    applySearch();
+    render();
+  });
+
+  // Geographic filter
+  document.getElementById('geoFilter').addEventListener('change', function() {
+    geoFilter = this.value;
     applySearch();
     render();
   });
