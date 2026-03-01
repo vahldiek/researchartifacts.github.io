@@ -32,3 +32,7 @@ For detailed information about our scoring system and data collection methodolog
 - AE chair bonus: **+2 points** (on top of membership)
 
 Institution scores are the sum of all affiliated authors' contributions. Only institutions with a combined score of 3 or higher are listed.
+
+---
+
+**Data:** [All Conferences](/assets/data/institution_rankings.json) | [Systems](/assets/data/systems_institution_rankings.json) | [Security](/assets/data/security_institution_rankings.json)

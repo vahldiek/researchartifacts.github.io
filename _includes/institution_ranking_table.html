@@ -8,16 +8,13 @@
     page.security_data_url     — path to the security JSON file
 {% endcomment %}
 
-<div id="institution-filter" style="margin-bottom:16px; display:none;">
+<div id="institution-controls" style="margin-bottom:16px; display:none;">
   <label style="font-weight:bold; margin-right:8px;">Area:</label>
-  <select id="areaFilter" style="padding:4px 8px; font-size:1em;">
+  <select id="areaFilter" style="padding:4px 8px; font-size:1em; margin-right:16px;">
     <option value="all" selected>All Conferences</option>
     <option value="systems">Systems Only</option>
     <option value="security">Security Only</option>
   </select>
-</div>
-
-<div id="institution-controls" style="margin-bottom:10px; display:none;">
   <label>Show
     <select id="iPageSizeSelect">
       <option value="100" selected>100</option>
@@ -26,10 +23,6 @@
     </select>
     per page
   </label>
-  <span id="iPageInfo" style="margin-left:16px;"></span>
-  <button id="iPrevBtn" disabled>&laquo; Prev</button>
-  <button id="iNextBtn">Next &raquo;</button>
-  <span id="iTotalInfo" style="margin-left:16px; color:#666;"></span>
 </div>
 
 <div id="institutionLoading"><em>Loading institution ranking data…</em></div>
@@ -41,8 +34,9 @@
 
 <div id="institution-controls-bottom" style="margin-top:8px; display:none;">
   <button id="iPrevBtnB">&laquo; Prev</button>
-  <span id="iPageInfoB"></span>
+  <span id="iPageInfoB" style="margin:0 8px;"></span>
   <button id="iNextBtnB">Next &raquo;</button>
+  <span id="iTotalInfo" style="margin-left:16px; color:#666;"></span>
 </div>
 
 <script>
@@ -205,13 +199,10 @@
     var end = pageSize > 0 ? Math.min(start + pageSize, total) : total;
     var pages = pageSize > 0 ? Math.ceil(total / pageSize) : 1;
     var info = (start+1) + '–' + end + ' of ' + total;
-    document.getElementById('iPageInfo').textContent = info;
     document.getElementById('iPageInfoB').textContent = info;
     document.getElementById('iTotalInfo').textContent = total + ' institutions total';
     var atFirst = currentPage <= 0;
     var atLast = pageSize <= 0 || currentPage >= pages - 1;
-    document.getElementById('iPrevBtn').disabled = atFirst;
-    document.getElementById('iNextBtn').disabled = atLast;
     document.getElementById('iPrevBtnB').disabled = atFirst;
     document.getElementById('iNextBtnB').disabled = atLast;
   }
@@ -274,7 +265,6 @@
     document.getElementById('institutionTable').style.display = '';
     document.getElementById('institution-controls').style.display = '';
     document.getElementById('institution-controls-bottom').style.display = '';
-    document.getElementById('institution-filter').style.display = '';
   }
 
   function loadArea(area) {
@@ -311,8 +301,6 @@
     var pages = pageSize > 0 ? Math.ceil(sortedData.length / pageSize) : 1;
     if (currentPage < pages - 1) { currentPage++; render(); }
   }
-  document.getElementById('iPrevBtn').addEventListener('click', goPrev);
-  document.getElementById('iNextBtn').addEventListener('click', goNext);
   document.getElementById('iPrevBtnB').addEventListener('click', goPrev);
   document.getElementById('iNextBtnB').addEventListener('click', goNext);
 
