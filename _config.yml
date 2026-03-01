@@ -8,12 +8,11 @@ plugins:
   - jekyll-redirect-from
   - jekyll-include-cache
 
-title: Research Artifacts Statistics
-subtitle: "Artifact Evaluation across Systems & Security Conferences"
-name: Research Artifacts
+title: Security & Systems Research Artifacts
+name: Security & Systems Research Artifacts
 
 logo: "/assets/images/logo.svg"
-masthead_title: "Research Artifacts"
+masthead_title: "Security & Systems Research Artifacts"
 
 # Make stuff in _data accessible
 # Collections for organizing content
