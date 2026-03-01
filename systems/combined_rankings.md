@@ -15,3 +15,7 @@ Researchers ranked by weighted contributions to systems conferences ({{ site.dat
 {% endif %}
 
 {% include combined_ranking_table.html %}
+
+---
+
+**Data:** [systems_combined_rankings.json](/assets/data/systems_combined_rankings.json)

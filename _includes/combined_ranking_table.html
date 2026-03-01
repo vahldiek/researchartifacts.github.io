@@ -6,7 +6,7 @@
     page.combined_data_url  — path to the JSON file
 {% endcomment %}
 
-<div id="combined-controls" style="margin-bottom:10px; display:none;">
+<div id="combined-controls" style="margin-bottom:16px; display:none;">
   <label>Show
     <select id="cPageSizeSelect">
       <option value="100" selected>100</option>
@@ -23,10 +23,6 @@
       <option value="ae_only">AE Service Only</option>
     </select>
   </label>
-  <span id="cPageInfo" style="margin-left:16px;"></span>
-  <button id="cPrevBtn" disabled>&laquo; Prev</button>
-  <button id="cNextBtn">Next &raquo;</button>
-  <span id="cTotalInfo" style="margin-left:16px; color:#666;"></span>
 </div>
 
 <div id="combinedLoading"><em>Loading combined ranking data…</em></div>
@@ -38,8 +34,9 @@
 
 <div id="combined-controls-bottom" style="margin-top:8px; display:none;">
   <button id="cPrevBtnB">&laquo; Prev</button>
-  <span id="cPageInfoB"></span>
+  <span id="cPageInfoB" style="margin:0 8px;"></span>
   <button id="cNextBtnB">Next &raquo;</button>
+  <span id="cTotalInfo" style="margin-left:16px; color:#666;"></span>
 </div>
 
 <script>
@@ -172,13 +169,10 @@
     var end = pageSize > 0 ? Math.min(start + pageSize, total) : total;
     var pages = pageSize > 0 ? Math.ceil(total / pageSize) : 1;
     var info = (start+1) + '–' + end + ' of ' + total;
-    document.getElementById('cPageInfo').textContent = info;
     document.getElementById('cPageInfoB').textContent = info;
     document.getElementById('cTotalInfo').textContent = total + ' people total';
     var atFirst = currentPage <= 0;
     var atLast = pageSize <= 0 || currentPage >= pages - 1;
-    document.getElementById('cPrevBtn').disabled = atFirst;
-    document.getElementById('cNextBtn').disabled = atLast;
     document.getElementById('cPrevBtnB').disabled = atFirst;
     document.getElementById('cNextBtnB').disabled = atLast;
   }
@@ -254,8 +248,6 @@
     var pages = pageSize > 0 ? Math.ceil(sortedData.length / pageSize) : 1;
     if (currentPage < pages - 1) { currentPage++; render(); }
   }
-  document.getElementById('cPrevBtn').addEventListener('click', goPrev);
-  document.getElementById('cNextBtn').addEventListener('click', goNext);
   document.getElementById('cPrevBtnB').addEventListener('click', goPrev);
   document.getElementById('cNextBtnB').addEventListener('click', goNext);
 

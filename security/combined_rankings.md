@@ -15,3 +15,7 @@ Researchers ranked by weighted contributions to security conferences ({{ site.da
 {% endif %}
 
 {% include combined_ranking_table.html %}
+
+---
+
+**Data:** [security_combined_rankings.json](/assets/data/security_combined_rankings.json)

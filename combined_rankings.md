@@ -15,3 +15,7 @@ Researchers ranked by weighted contributions across all systems and security con
 {% endif %}
 
 {% include combined_ranking_table.html %}
+
+---
+
+**Data:** [combined_rankings.json](/assets/data/combined_rankings.json)
