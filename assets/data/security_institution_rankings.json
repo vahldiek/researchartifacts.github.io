@@ -176,15 +176,15 @@
   },
   {
     "affiliation": "CISPA Helmholtz Center for Information Security",
-    "combined_score": 299,
-    "artifacts": 111,
-    "badges_functional": 70,
-    "badges_reproducible": 61,
-    "ae_memberships": 19,
+    "combined_score": 345,
+    "artifacts": 131,
+    "badges_functional": 77,
+    "badges_reproducible": 65,
+    "ae_memberships": 24,
     "chair_count": 0,
-    "total_papers": 196,
-    "artifact_rate": 56.6,
-    "num_authors": 36,
+    "total_papers": 237,
+    "artifact_rate": 55.3,
+    "num_authors": 40,
     "top_authors": [
       {
         "name": "Michael Schwarz 0001",
@@ -192,6 +192,13 @@
         "artifacts": 12,
         "ae_memberships": 0,
         "total_papers": 15
+      },
+      {
+        "name": "Yang Zhang 0016",
+        "combined_score": 19,
+        "artifacts": 13,
+        "ae_memberships": 0,
+        "total_papers": 31
       },
       {
         "name": "Nils Bars",
@@ -243,6 +250,13 @@
         "total_papers": 31
       },
       {
+        "name": "Ben Stock",
+        "combined_score": 12,
+        "artifacts": 7,
+        "ae_memberships": 0,
+        "total_papers": 10
+      },
+      {
         "name": "Ali Abbasi 0002",
         "combined_score": 12,
         "artifacts": 5,
@@ -285,6 +299,13 @@
         "total_papers": 1
       },
       {
+        "name": "Eric\tAckermann",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
         "name": "Noah\tMauthe",
         "combined_score": 9,
         "artifacts": 0,
@@ -304,44 +325,24 @@
         "artifacts": 1,
         "ae_memberships": 2,
         "total_papers": 2
-      },
-      {
-        "name": "Nils Ole Tippenhauer",
-        "combined_score": 6,
-        "artifacts": 3,
-        "ae_memberships": 0,
-        "total_papers": 5
-      },
-      {
-        "name": "Alexander Dax",
-        "combined_score": 6,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 3
-      },
-      {
-        "name": "Robert Knnemann",
-        "combined_score": 6,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 2
       }
     ],
     "conferences": [
       "ACSAC",
       "NDSS",
+      "PETS",
       "USENIXSEC",
       "WOOT"
     ],
     "years": {
-      "2026": 4,
-      "2025": 42,
-      "2024": 20,
-      "2023": 30,
-      "2022": 13,
+      "2026": 6,
+      "2025": 59,
+      "2024": 22,
+      "2023": 31,
+      "2022": 14,
       "2021": 4,
-      "2020": 9,
-      "2019": 1,
+      "2020": 10,
+      "2019": 2,
       "2018": 0,
       "2017": 0
     }
@@ -1157,6 +1158,87 @@
     }
   },
   {
+    "affiliation": "Karlsruhe Institute of Technology",
+    "combined_score": 86,
+    "artifacts": 13,
+    "badges_functional": 5,
+    "badges_reproducible": 6,
+    "ae_memberships": 20,
+    "chair_count": 1,
+    "total_papers": 10,
+    "artifact_rate": 130.0,
+    "num_authors": 7,
+    "top_authors": [
+      {
+        "name": "Christian Wressnegger",
+        "combined_score": 27,
+        "artifacts": 5,
+        "ae_memberships": 5,
+        "total_papers": 4
+      },
+      {
+        "name": "Alessandro Erba 0001",
+        "combined_score": 15,
+        "artifacts": 2,
+        "ae_memberships": 4,
+        "total_papers": 2
+      },
+      {
+        "name": "Daniel Schadt",
+        "combined_score": 12,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Maximilian Noppel",
+        "combined_score": 9,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 2
+      },
+      {
+        "name": "Julian Todt",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Yilin Ji",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Thorsten Strufe",
+        "combined_score": 5,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 2
+      }
+    ],
+    "conferences": [
+      "ACSAC",
+      "NDSS",
+      "PETS",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2026": 4,
+      "2025": 6,
+      "2024": 7,
+      "2023": 3,
+      "2022": 3,
+      "2021": 3,
+      "2020": 3,
+      "2019": 0,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
     "affiliation": "Zhejiang University",
     "combined_score": 76,
     "artifacts": 35,
@@ -1295,6 +1377,73 @@
     }
   },
   {
+    "affiliation": "Max Planck Institute for Security and Privacy",
+    "combined_score": 73,
+    "artifacts": 17,
+    "badges_functional": 2,
+    "badges_reproducible": 1,
+    "ae_memberships": 17,
+    "chair_count": 1,
+    "total_papers": 6,
+    "artifact_rate": 283.3,
+    "num_authors": 5,
+    "top_authors": [
+      {
+        "name": "Shubham Agarwal 0006",
+        "combined_score": 20,
+        "artifacts": 1,
+        "ae_memberships": 6,
+        "total_papers": 1
+      },
+      {
+        "name": "Jing Liu",
+        "combined_score": 18,
+        "artifacts": 0,
+        "ae_memberships": 6,
+        "total_papers": 0
+      },
+      {
+        "name": "Vincent Hwang",
+        "combined_score": 16,
+        "artifacts": 7,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Peter Schwabe",
+        "combined_score": 15,
+        "artifacts": 5,
+        "ae_memberships": 2,
+        "total_papers": 3
+      },
+      {
+        "name": "Gilles Barthe",
+        "combined_score": 4,
+        "artifacts": 4,
+        "ae_memberships": 0,
+        "total_papers": 2
+      }
+    ],
+    "conferences": [
+      "CHES",
+      "NDSS",
+      "USENIXSEC",
+      "WOOT"
+    ],
+    "years": {
+      "2026": 2,
+      "2025": 7,
+      "2024": 8,
+      "2023": 5,
+      "2022": 6,
+      "2021": 3,
+      "2020": 0,
+      "2019": 0,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
     "affiliation": "Northwestern University",
     "combined_score": 73,
     "artifacts": 19,
@@ -1367,6 +1516,120 @@
       "2023": 1,
       "2022": 2,
       "2021": 2,
+      "2020": 0,
+      "2019": 0,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
+    "affiliation": "Hong Kong University of Science and Technology",
+    "combined_score": 73,
+    "artifacts": 19,
+    "badges_functional": 13,
+    "badges_reproducible": 8,
+    "ae_memberships": 11,
+    "chair_count": 0,
+    "total_papers": 34,
+    "artifact_rate": 55.9,
+    "num_authors": 12,
+    "top_authors": [
+      {
+        "name": "Shuai Wang 0011",
+        "combined_score": 11,
+        "artifacts": 7,
+        "ae_memberships": 0,
+        "total_papers": 12
+      },
+      {
+        "name": "Dongwei Xiao",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Dimitrios Papadopoulos 0001",
+        "combined_score": 8,
+        "artifacts": 4,
+        "ae_memberships": 0,
+        "total_papers": 7
+      },
+      {
+        "name": "Xinlei He 0001",
+        "combined_score": 8,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 7
+      },
+      {
+        "name": "Bowen Zhang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Xiang Chen",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Yanzuo Chen",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Yibo\tJin",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Gareth Tyson",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Bo Li 0001",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Charles Zhang 0001",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 3
+      },
+      {
+        "name": "Ke Yi 0001",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      }
+    ],
+    "conferences": [
+      "NDSS",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2026": 2,
+      "2025": 14,
+      "2024": 8,
+      "2023": 5,
+      "2022": 1,
+      "2021": 0,
       "2020": 0,
       "2019": 0,
       "2018": 0,
@@ -1808,6 +2071,101 @@
     }
   },
   {
+    "affiliation": "Google",
+    "combined_score": 66,
+    "artifacts": 7,
+    "badges_functional": 5,
+    "badges_reproducible": 3,
+    "ae_memberships": 17,
+    "chair_count": 0,
+    "total_papers": 9,
+    "artifact_rate": 77.8,
+    "num_authors": 9,
+    "top_authors": [
+      {
+        "name": "Changming Liu",
+        "combined_score": 11,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 3
+      },
+      {
+        "name": "Zenong Zhang",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Loris Reiff",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Vadym Doroshenko",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Kavya Sreedhar",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Phi Hung Le",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 2
+      },
+      {
+        "name": "Yurii Sushko",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Moti Yung",
+        "combined_score": 5,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Jonathan Protzenko",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      }
+    ],
+    "conferences": [
+      "CHES",
+      "NDSS",
+      "PETS",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2026": 5,
+      "2025": 7,
+      "2024": 7,
+      "2023": 1,
+      "2022": 4,
+      "2021": 0,
+      "2020": 0,
+      "2019": 0,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
     "affiliation": "Graz University of Technology",
     "combined_score": 65,
     "artifacts": 24,
@@ -1864,6 +2222,93 @@
       "2020": 2,
       "2019": 0,
       "2018": 0,
+      "2017": 0
+    }
+  },
+  {
+    "affiliation": "Nanyang Technological University",
+    "combined_score": 64,
+    "artifacts": 23,
+    "badges_functional": 17,
+    "badges_reproducible": 12,
+    "ae_memberships": 4,
+    "chair_count": 0,
+    "total_papers": 59,
+    "artifact_rate": 39.0,
+    "num_authors": 8,
+    "top_authors": [
+      {
+        "name": "XiaoFeng Wang 0001",
+        "combined_score": 22,
+        "artifacts": 9,
+        "ae_memberships": 0,
+        "total_papers": 22
+      },
+      {
+        "name": "Tianwei Zhang 0004",
+        "combined_score": 13,
+        "artifacts": 6,
+        "ae_memberships": 0,
+        "total_papers": 14
+      },
+      {
+        "name": "Yongjun Zhao 0001",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Boheng Li",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Yang Liu 0003",
+        "combined_score": 5,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 15
+      },
+      {
+        "name": "Chip-Hong Chang",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Xiaokui Xiao",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Yi Liu 0069",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 3
+      }
+    ],
+    "conferences": [
+      "ACSAC",
+      "NDSS",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2026": 1,
+      "2025": 11,
+      "2024": 5,
+      "2023": 4,
+      "2022": 1,
+      "2021": 1,
+      "2020": 0,
+      "2019": 1,
+      "2018": 1,
       "2017": 0
     }
   },
@@ -2032,148 +2477,7 @@
     }
   },
   {
-    "affiliation": "Google",
-    "combined_score": 58,
-    "artifacts": 4,
-    "badges_functional": 2,
-    "badges_reproducible": 1,
-    "ae_memberships": 17,
-    "chair_count": 0,
-    "total_papers": 6,
-    "artifact_rate": 66.7,
-    "num_authors": 7,
-    "top_authors": [
-      {
-        "name": "Changming Liu",
-        "combined_score": 11,
-        "artifacts": 1,
-        "ae_memberships": 3,
-        "total_papers": 3
-      },
-      {
-        "name": "Zenong Zhang",
-        "combined_score": 9,
-        "artifacts": 1,
-        "ae_memberships": 2,
-        "total_papers": 1
-      },
-      {
-        "name": "Loris Reiff",
-        "combined_score": 9,
-        "artifacts": 0,
-        "ae_memberships": 3,
-        "total_papers": 0
-      },
-      {
-        "name": "Vadym Doroshenko",
-        "combined_score": 9,
-        "artifacts": 0,
-        "ae_memberships": 3,
-        "total_papers": 0
-      },
-      {
-        "name": "Kavya Sreedhar",
-        "combined_score": 7,
-        "artifacts": 1,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Phi Hung Le",
-        "combined_score": 7,
-        "artifacts": 1,
-        "ae_memberships": 2,
-        "total_papers": 2
-      },
-      {
-        "name": "Yurii Sushko",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "CHES",
-      "NDSS",
-      "PETS",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 5,
-      "2025": 7,
-      "2024": 6,
-      "2023": 0,
-      "2022": 3,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "Max Planck Institute for Security and Privacy",
-    "combined_score": 57,
-    "artifacts": 10,
-    "badges_functional": 2,
-    "badges_reproducible": 1,
-    "ae_memberships": 14,
-    "chair_count": 1,
-    "total_papers": 6,
-    "artifact_rate": 166.7,
-    "num_authors": 4,
-    "top_authors": [
-      {
-        "name": "Shubham Agarwal 0006",
-        "combined_score": 20,
-        "artifacts": 1,
-        "ae_memberships": 6,
-        "total_papers": 1
-      },
-      {
-        "name": "Jing Liu",
-        "combined_score": 18,
-        "artifacts": 0,
-        "ae_memberships": 6,
-        "total_papers": 0
-      },
-      {
-        "name": "Peter Schwabe",
-        "combined_score": 15,
-        "artifacts": 5,
-        "ae_memberships": 2,
-        "total_papers": 3
-      },
-      {
-        "name": "Gilles Barthe",
-        "combined_score": 4,
-        "artifacts": 4,
-        "ae_memberships": 0,
-        "total_papers": 2
-      }
-    ],
-    "conferences": [
-      "CHES",
-      "NDSS",
-      "USENIXSEC",
-      "WOOT"
-    ],
-    "years": {
-      "2026": 1,
-      "2025": 6,
-      "2024": 8,
-      "2023": 4,
-      "2022": 2,
-      "2021": 1,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "Washington University in St. Louis",
+    "affiliation": "Washington University in St",
     "combined_score": 56,
     "artifacts": 22,
     "badges_functional": 18,
@@ -2227,66 +2531,6 @@
       "2022": 3,
       "2021": 1,
       "2020": 2,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "Karlsruhe Institute of Technology",
-    "combined_score": 56,
-    "artifacts": 10,
-    "badges_functional": 4,
-    "badges_reproducible": 4,
-    "ae_memberships": 12,
-    "chair_count": 1,
-    "total_papers": 8,
-    "artifact_rate": 125.0,
-    "num_authors": 4,
-    "top_authors": [
-      {
-        "name": "Christian Wressnegger",
-        "combined_score": 27,
-        "artifacts": 5,
-        "ae_memberships": 5,
-        "total_papers": 4
-      },
-      {
-        "name": "Alessandro Erba 0001",
-        "combined_score": 15,
-        "artifacts": 2,
-        "ae_memberships": 4,
-        "total_papers": 2
-      },
-      {
-        "name": "Yilin Ji",
-        "combined_score": 9,
-        "artifacts": 0,
-        "ae_memberships": 3,
-        "total_papers": 0
-      },
-      {
-        "name": "Thorsten Strufe",
-        "combined_score": 5,
-        "artifacts": 3,
-        "ae_memberships": 0,
-        "total_papers": 2
-      }
-    ],
-    "conferences": [
-      "ACSAC",
-      "NDSS",
-      "PETS",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 2,
-      "2025": 4,
-      "2024": 4,
-      "2023": 3,
-      "2022": 2,
-      "2021": 2,
-      "2020": 3,
       "2019": 0,
       "2018": 0,
       "2017": 0
@@ -2745,6 +2989,113 @@
     }
   },
   {
+    "affiliation": "Chinese Academy of Sciences",
+    "combined_score": 51,
+    "artifacts": 22,
+    "badges_functional": 14,
+    "badges_reproducible": 15,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 53,
+    "artifact_rate": 41.5,
+    "num_authors": 11,
+    "top_authors": [
+      {
+        "name": "Kai Chen 0012",
+        "combined_score": 10,
+        "artifacts": 5,
+        "ae_memberships": 0,
+        "total_papers": 24
+      },
+      {
+        "name": "Yu Chen 0003",
+        "combined_score": 6,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Yang Xiao 0011",
+        "combined_score": 5,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 8
+      },
+      {
+        "name": "Dan Meng 0002",
+        "combined_score": 5,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 3
+      },
+      {
+        "name": "Wenhao Wang 0001",
+        "combined_score": 5,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 3
+      },
+      {
+        "name": "Haiming Chen 0001",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 4
+      },
+      {
+        "name": "Yanyan Zou 0002",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 3
+      },
+      {
+        "name": "Hong Huang 0004",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Jiaxu Zhao 0004",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Min Zhang 0043",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Yutong Ye 0002",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 2
+      }
+    ],
+    "conferences": [
+      "NDSS",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2026": 0,
+      "2025": 16,
+      "2024": 4,
+      "2023": 2,
+      "2022": 0,
+      "2021": 0,
+      "2020": 0,
+      "2019": 0,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
     "affiliation": "George Mason University",
     "combined_score": 50,
     "artifacts": 13,
@@ -2879,72 +3230,58 @@
     }
   },
   {
-    "affiliation": "Hong Kong University of Science and Technology",
+    "affiliation": "Hong Kong Polytechnic University",
     "combined_score": 49,
-    "artifacts": 19,
-    "badges_functional": 13,
-    "badges_reproducible": 8,
-    "ae_memberships": 3,
+    "artifacts": 12,
+    "badges_functional": 6,
+    "badges_reproducible": 4,
+    "ae_memberships": 9,
     "chair_count": 0,
-    "total_papers": 34,
-    "artifact_rate": 55.9,
-    "num_authors": 8,
+    "total_papers": 37,
+    "artifact_rate": 32.4,
+    "num_authors": 6,
     "top_authors": [
       {
-        "name": "Shuai Wang 0011",
+        "name": "Ningyu He",
+        "combined_score": 16,
+        "artifacts": 2,
+        "ae_memberships": 4,
+        "total_papers": 5
+      },
+      {
+        "name": "Xiapu Luo",
         "combined_score": 11,
         "artifacts": 7,
         "ae_memberships": 0,
-        "total_papers": 12
+        "total_papers": 28
       },
       {
-        "name": "Dongwei Xiao",
-        "combined_score": 9,
-        "artifacts": 0,
+        "name": "Kunsong Zhao",
+        "combined_score": 10,
+        "artifacts": 1,
         "ae_memberships": 3,
+        "total_papers": 1
+      },
+      {
+        "name": "Leming\tShen",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
         "total_papers": 0
       },
       {
-        "name": "Dimitrios Papadopoulos 0001",
-        "combined_score": 8,
-        "artifacts": 4,
-        "ae_memberships": 0,
-        "total_papers": 7
-      },
-      {
-        "name": "Xinlei He 0001",
-        "combined_score": 8,
-        "artifacts": 3,
-        "ae_memberships": 0,
-        "total_papers": 7
-      },
-      {
-        "name": "Gareth Tyson",
-        "combined_score": 4,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 2
-      },
-      {
-        "name": "Bo Li 0001",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 2
-      },
-      {
-        "name": "Charles Zhang 0001",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 3
-      },
-      {
-        "name": "Ke Yi 0001",
+        "name": "Lei Zhang 0006",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
         "total_papers": 1
+      },
+      {
+        "name": "Yifeng Zheng 0001",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 2
       }
     ],
     "conferences": [
@@ -2952,11 +3289,11 @@
       "USENIXSEC"
     ],
     "years": {
-      "2026": 0,
-      "2025": 12,
-      "2024": 4,
-      "2023": 5,
-      "2022": 1,
+      "2026": 4,
+      "2025": 8,
+      "2024": 3,
+      "2023": 2,
+      "2022": 2,
       "2021": 0,
       "2020": 0,
       "2019": 0,
@@ -3140,166 +3477,6 @@
     }
   },
   {
-    "affiliation": "CISPA",
-    "combined_score": 46,
-    "artifacts": 20,
-    "badges_functional": 7,
-    "badges_reproducible": 4,
-    "ae_memberships": 5,
-    "chair_count": 0,
-    "total_papers": 41,
-    "artifact_rate": 48.8,
-    "num_authors": 4,
-    "top_authors": [
-      {
-        "name": "Yang Zhang 0016",
-        "combined_score": 19,
-        "artifacts": 13,
-        "ae_memberships": 0,
-        "total_papers": 31
-      },
-      {
-        "name": "Ben Stock",
-        "combined_score": 12,
-        "artifacts": 7,
-        "ae_memberships": 0,
-        "total_papers": 10
-      },
-      {
-        "name": "Eric\tAckermann",
-        "combined_score": 9,
-        "artifacts": 0,
-        "ae_memberships": 3,
-        "total_papers": 0
-      },
-      {
-        "name": "Iyiola Emmanuel Olatunji",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "ACSAC",
-      "NDSS",
-      "PETS",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 2,
-      "2025": 17,
-      "2024": 2,
-      "2023": 1,
-      "2022": 1,
-      "2021": 0,
-      "2020": 1,
-      "2019": 1,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "Chinese Academy of Sciences",
-    "combined_score": 46,
-    "artifacts": 20,
-    "badges_functional": 13,
-    "badges_reproducible": 13,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 50,
-    "artifact_rate": 40.0,
-    "num_authors": 10,
-    "top_authors": [
-      {
-        "name": "Kai Chen 0012",
-        "combined_score": 10,
-        "artifacts": 5,
-        "ae_memberships": 0,
-        "total_papers": 24
-      },
-      {
-        "name": "Yu Chen 0003",
-        "combined_score": 6,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Yang Xiao 0011",
-        "combined_score": 5,
-        "artifacts": 3,
-        "ae_memberships": 0,
-        "total_papers": 8
-      },
-      {
-        "name": "Wenhao Wang 0001",
-        "combined_score": 5,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 3
-      },
-      {
-        "name": "Haiming Chen 0001",
-        "combined_score": 4,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 4
-      },
-      {
-        "name": "Yanyan Zou 0002",
-        "combined_score": 4,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 3
-      },
-      {
-        "name": "Hong Huang 0004",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Jiaxu Zhao 0004",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 2
-      },
-      {
-        "name": "Min Zhang 0043",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 2
-      },
-      {
-        "name": "Yutong Ye 0002",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 2
-      }
-    ],
-    "conferences": [
-      "NDSS",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 14,
-      "2024": 4,
-      "2023": 2,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
     "affiliation": "Beihang University",
     "combined_score": 45,
     "artifacts": 15,
@@ -3379,6 +3556,67 @@
       "2024": 5,
       "2023": 0,
       "2022": 0,
+      "2021": 0,
+      "2020": 0,
+      "2019": 0,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
+    "affiliation": "University of Melbourne",
+    "combined_score": 44,
+    "artifacts": 5,
+    "badges_functional": 3,
+    "badges_reproducible": 3,
+    "ae_memberships": 11,
+    "chair_count": 0,
+    "total_papers": 6,
+    "artifact_rate": 83.3,
+    "num_authors": 4,
+    "top_authors": [
+      {
+        "name": "Zhiyuan Zhang 0005",
+        "combined_score": 16,
+        "artifacts": 2,
+        "ae_memberships": 4,
+        "total_papers": 3
+      },
+      {
+        "name": "Yujin Huang",
+        "combined_score": 13,
+        "artifacts": 1,
+        "ae_memberships": 4,
+        "total_papers": 1
+      },
+      {
+        "name": "Shangqi Lai",
+        "combined_score": 12,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 2
+      },
+      {
+        "name": "Tansu Alpcan",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 0
+      }
+    ],
+    "conferences": [
+      "ACSAC",
+      "CHES",
+      "NDSS",
+      "PETS",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2026": 3,
+      "2025": 4,
+      "2024": 2,
+      "2023": 2,
+      "2022": 1,
       "2021": 0,
       "2020": 0,
       "2019": 0,
@@ -3619,86 +3857,6 @@
     }
   },
   {
-    "affiliation": "Nanyang Technological University",
-    "combined_score": 42,
-    "artifacts": 14,
-    "badges_functional": 11,
-    "badges_reproducible": 5,
-    "ae_memberships": 4,
-    "chair_count": 0,
-    "total_papers": 37,
-    "artifact_rate": 37.8,
-    "num_authors": 7,
-    "top_authors": [
-      {
-        "name": "Tianwei Zhang 0004",
-        "combined_score": 13,
-        "artifacts": 6,
-        "ae_memberships": 0,
-        "total_papers": 14
-      },
-      {
-        "name": "Yongjun Zhao 0001",
-        "combined_score": 8,
-        "artifacts": 1,
-        "ae_memberships": 2,
-        "total_papers": 1
-      },
-      {
-        "name": "Boheng Li",
-        "combined_score": 7,
-        "artifacts": 1,
-        "ae_memberships": 2,
-        "total_papers": 1
-      },
-      {
-        "name": "Yang Liu 0003",
-        "combined_score": 5,
-        "artifacts": 3,
-        "ae_memberships": 0,
-        "total_papers": 15
-      },
-      {
-        "name": "Chip-Hong Chang",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Xiaokui Xiao",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 2
-      },
-      {
-        "name": "Yi Liu 0069",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 3
-      }
-    ],
-    "conferences": [
-      "ACSAC",
-      "NDSS",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 1,
-      "2025": 7,
-      "2024": 3,
-      "2023": 1,
-      "2022": 1,
-      "2021": 1,
-      "2020": 0,
-      "2019": 1,
-      "2018": 1,
-      "2017": 0
-    }
-  },
-  {
     "affiliation": "North Carolina State University",
     "combined_score": 41,
     "artifacts": 12,
@@ -3757,6 +3915,100 @@
       "2025": 5,
       "2024": 5,
       "2023": 6,
+      "2022": 3,
+      "2021": 0,
+      "2020": 0,
+      "2019": 0,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
+    "affiliation": "Shanghai Jiao Tong University",
+    "combined_score": 41,
+    "artifacts": 14,
+    "badges_functional": 14,
+    "badges_reproducible": 13,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 19,
+    "artifact_rate": 73.7,
+    "num_authors": 9,
+    "top_authors": [
+      {
+        "name": "Chong Xiang 0001",
+        "combined_score": 6,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 3
+      },
+      {
+        "name": "Haibo Chen 0001",
+        "combined_score": 6,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 3
+      },
+      {
+        "name": "Jinyu Gu 0001",
+        "combined_score": 6,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Shi-Feng Sun 0001",
+        "combined_score": 6,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Yu Yu 0001",
+        "combined_score": 5,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 4
+      },
+      {
+        "name": "Boshi Yuan 0002",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Libo Chen 0001",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 3
+      },
+      {
+        "name": "Ning Ding 0001",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Peng Tang 0002",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 0
+      }
+    ],
+    "conferences": [
+      "NDSS",
+      "PETS",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2026": 1,
+      "2025": 4,
+      "2024": 6,
+      "2023": 0,
       "2022": 3,
       "2021": 0,
       "2020": 0,
@@ -4511,49 +4763,78 @@
     }
   },
   {
-    "affiliation": "The Hong Kong Polytechnic University",
-    "combined_score": 32,
-    "artifacts": 3,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 9,
+    "affiliation": "National University of Singapore",
+    "combined_score": 33,
+    "artifacts": 16,
+    "badges_functional": 10,
+    "badges_reproducible": 7,
+    "ae_memberships": 0,
     "chair_count": 0,
-    "total_papers": 6,
-    "artifact_rate": 50.0,
-    "num_authors": 3,
+    "total_papers": 22,
+    "artifact_rate": 72.7,
+    "num_authors": 7,
     "top_authors": [
       {
-        "name": "Ningyu He",
-        "combined_score": 16,
-        "artifacts": 2,
-        "ae_memberships": 4,
+        "name": "Pengfei Wu 0003",
+        "combined_score": 8,
+        "artifacts": 4,
+        "ae_memberships": 0,
+        "total_papers": 3
+      },
+      {
+        "name": "Abhik Roychoudhury",
+        "combined_score": 7,
+        "artifacts": 3,
+        "ae_memberships": 0,
         "total_papers": 5
       },
       {
-        "name": "Kunsong Zhao",
-        "combined_score": 10,
-        "artifacts": 1,
-        "ae_memberships": 3,
-        "total_papers": 1
+        "name": "Jin Song Dong 0001",
+        "combined_score": 5,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 7
       },
       {
-        "name": "Leming\tShen",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
+        "name": "Trevor E. Carlson",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Wenjie Qu 0001",
+        "combined_score": 3,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 3
+      },
+      {
+        "name": "Yang Yang 0138",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
         "total_papers": 0
+      },
+      {
+        "name": "Yangfan Jiang 0001",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 2
       }
     ],
     "conferences": [
       "NDSS",
+      "PETS",
       "USENIXSEC"
     ],
     "years": {
-      "2026": 4,
-      "2025": 2,
-      "2024": 3,
+      "2026": 0,
+      "2025": 11,
+      "2024": 1,
       "2023": 1,
-      "2022": 0,
+      "2022": 3,
       "2021": 0,
       "2020": 0,
       "2019": 0,
@@ -4819,57 +5100,6 @@
     }
   },
   {
-    "affiliation": "Karlsruhe Institute of Technology (KIT)",
-    "combined_score": 30,
-    "artifacts": 3,
-    "badges_functional": 1,
-    "badges_reproducible": 2,
-    "ae_memberships": 8,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 150.0,
-    "num_authors": 3,
-    "top_authors": [
-      {
-        "name": "Daniel Schadt",
-        "combined_score": 12,
-        "artifacts": 1,
-        "ae_memberships": 3,
-        "total_papers": 0
-      },
-      {
-        "name": "Maximilian Noppel",
-        "combined_score": 9,
-        "artifacts": 2,
-        "ae_memberships": 2,
-        "total_papers": 2
-      },
-      {
-        "name": "Julian Todt",
-        "combined_score": 9,
-        "artifacts": 0,
-        "ae_memberships": 3,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "ACSAC",
-      "PETS"
-    ],
-    "years": {
-      "2026": 2,
-      "2025": 2,
-      "2024": 3,
-      "2023": 0,
-      "2022": 1,
-      "2021": 1,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
     "affiliation": "University of California, Berkeley",
     "combined_score": 30,
     "artifacts": 11,
@@ -4928,125 +5158,6 @@
       "2023": 3,
       "2022": 3,
       "2021": 3,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "Shanghai Jiao Tong University",
-    "combined_score": 30,
-    "artifacts": 10,
-    "badges_functional": 10,
-    "badges_reproducible": 10,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 11,
-    "artifact_rate": 90.9,
-    "num_authors": 6,
-    "top_authors": [
-      {
-        "name": "Chong Xiang 0001",
-        "combined_score": 6,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 3
-      },
-      {
-        "name": "Haibo Chen 0001",
-        "combined_score": 6,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 3
-      },
-      {
-        "name": "Jinyu Gu 0001",
-        "combined_score": 6,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 2
-      },
-      {
-        "name": "Shi-Feng Sun 0001",
-        "combined_score": 6,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 2
-      },
-      {
-        "name": "Ning Ding 0001",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Peng Tang 0002",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "NDSS",
-      "PETS",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 1,
-      "2025": 3,
-      "2024": 3,
-      "2023": 0,
-      "2022": 3,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "The University of Melbourne",
-    "combined_score": 29,
-    "artifacts": 3,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 8,
-    "chair_count": 0,
-    "total_papers": 4,
-    "artifact_rate": 75.0,
-    "num_authors": 2,
-    "top_authors": [
-      {
-        "name": "Zhiyuan Zhang 0005",
-        "combined_score": 16,
-        "artifacts": 2,
-        "ae_memberships": 4,
-        "total_papers": 3
-      },
-      {
-        "name": "Yujin Huang",
-        "combined_score": 13,
-        "artifacts": 1,
-        "ae_memberships": 4,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "ACSAC",
-      "CHES",
-      "NDSS",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 2,
-      "2025": 2,
-      "2024": 1,
-      "2023": 2,
-      "2022": 1,
-      "2021": 0,
       "2020": 0,
       "2019": 0,
       "2018": 0,
@@ -5231,6 +5342,109 @@
     }
   },
   {
+    "affiliation": "Singapore University of Technology and Design",
+    "combined_score": 28,
+    "artifacts": 14,
+    "badges_functional": 10,
+    "badges_reproducible": 4,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 19,
+    "artifact_rate": 73.7,
+    "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Jianying Zhou 0001",
+        "combined_score": 16,
+        "artifacts": 8,
+        "ae_memberships": 0,
+        "total_papers": 12
+      },
+      {
+        "name": "Sudipta Chattopadhyay 0001",
+        "combined_score": 8,
+        "artifacts": 4,
+        "ae_memberships": 0,
+        "total_papers": 4
+      },
+      {
+        "name": "Binbin Chen 0001",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 3
+      }
+    ],
+    "conferences": [
+      "ACSAC",
+      "PETS",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2026": 0,
+      "2025": 4,
+      "2024": 2,
+      "2023": 1,
+      "2022": 3,
+      "2021": 0,
+      "2020": 1,
+      "2019": 1,
+      "2018": 1,
+      "2017": 1
+    }
+  },
+  {
+    "affiliation": "Pennsylvania State University",
+    "combined_score": 28,
+    "artifacts": 6,
+    "badges_functional": 4,
+    "badges_reproducible": 3,
+    "ae_memberships": 5,
+    "chair_count": 0,
+    "total_papers": 7,
+    "artifact_rate": 85.7,
+    "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Abdullah Al Ishtiaq",
+        "combined_score": 14,
+        "artifacts": 2,
+        "ae_memberships": 3,
+        "total_papers": 3
+      },
+      {
+        "name": "Yu-Jye Tung",
+        "combined_score": 10,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 2
+      },
+      {
+        "name": "Yuhang Wu 0003",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 2
+      }
+    ],
+    "conferences": [
+      "NDSS",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2026": 4,
+      "2025": 4,
+      "2024": 1,
+      "2023": 1,
+      "2022": 0,
+      "2021": 0,
+      "2020": 0,
+      "2019": 0,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
     "affiliation": "Singapore Management University",
     "combined_score": 28,
     "artifacts": 4,
@@ -5288,79 +5502,6 @@
       "2026": 2,
       "2023": 1,
       "2022": 0,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "National University of Singapore",
-    "combined_score": 28,
-    "artifacts": 14,
-    "badges_functional": 8,
-    "badges_reproducible": 6,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 15,
-    "artifact_rate": 93.3,
-    "num_authors": 6,
-    "top_authors": [
-      {
-        "name": "Pengfei Wu 0003",
-        "combined_score": 8,
-        "artifacts": 4,
-        "ae_memberships": 0,
-        "total_papers": 3
-      },
-      {
-        "name": "Abhik Roychoudhury",
-        "combined_score": 7,
-        "artifacts": 3,
-        "ae_memberships": 0,
-        "total_papers": 5
-      },
-      {
-        "name": "Trevor E. Carlson",
-        "combined_score": 4,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 2
-      },
-      {
-        "name": "Wenjie Qu 0001",
-        "combined_score": 3,
-        "artifacts": 3,
-        "ae_memberships": 0,
-        "total_papers": 3
-      },
-      {
-        "name": "Yang Yang 0138",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 0
-      },
-      {
-        "name": "Yangfan Jiang 0001",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 2
-      }
-    ],
-    "conferences": [
-      "NDSS",
-      "PETS",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 9,
-      "2024": 1,
-      "2023": 1,
-      "2022": 3,
       "2021": 0,
       "2020": 0,
       "2019": 0,
@@ -5447,7 +5588,7 @@
     }
   },
   {
-    "affiliation": "The Chinese University of Hong Kong",
+    "affiliation": "Chinese University of Hong Kong",
     "combined_score": 27,
     "artifacts": 7,
     "badges_functional": 4,
@@ -5494,6 +5635,85 @@
       "2021": 1,
       "2020": 0,
       "2019": 0,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
+    "affiliation": "Microsoft Research",
+    "combined_score": 27,
+    "artifacts": 10,
+    "badges_functional": 10,
+    "badges_reproducible": 7,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 17,
+    "artifact_rate": 58.8,
+    "num_authors": 7,
+    "top_authors": [
+      {
+        "name": "Cdric Fournet",
+        "combined_score": 6,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Andrew Paverd",
+        "combined_score": 5,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 5
+      },
+      {
+        "name": "Sangho Lee 0001",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 4
+      },
+      {
+        "name": "Christoph M. Wintersteiger",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Jana Hofmann",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Manuel Costa",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Sharad Agarwal",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 3
+      }
+    ],
+    "conferences": [
+      "ACSAC",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2026": 0,
+      "2025": 4,
+      "2024": 1,
+      "2023": 2,
+      "2022": 2,
+      "2021": 0,
+      "2020": 0,
+      "2019": 1,
       "2018": 0,
       "2017": 0
     }
@@ -5801,95 +6021,6 @@
     }
   },
   {
-    "affiliation": "Singapore University of Technology and Design (SUTD)",
-    "combined_score": 24,
-    "artifacts": 12,
-    "badges_functional": 8,
-    "badges_reproducible": 4,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 16,
-    "artifact_rate": 75.0,
-    "num_authors": 2,
-    "top_authors": [
-      {
-        "name": "Jianying Zhou 0001",
-        "combined_score": 16,
-        "artifacts": 8,
-        "ae_memberships": 0,
-        "total_papers": 12
-      },
-      {
-        "name": "Sudipta Chattopadhyay 0001",
-        "combined_score": 8,
-        "artifacts": 4,
-        "ae_memberships": 0,
-        "total_papers": 4
-      }
-    ],
-    "conferences": [
-      "ACSAC",
-      "PETS",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 4,
-      "2024": 2,
-      "2023": 1,
-      "2022": 2,
-      "2021": 0,
-      "2020": 1,
-      "2019": 1,
-      "2018": 1,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "The Pennsylvania State University",
-    "combined_score": 24,
-    "artifacts": 4,
-    "badges_functional": 3,
-    "badges_reproducible": 2,
-    "ae_memberships": 5,
-    "chair_count": 0,
-    "total_papers": 5,
-    "artifact_rate": 80.0,
-    "num_authors": 2,
-    "top_authors": [
-      {
-        "name": "Abdullah Al Ishtiaq",
-        "combined_score": 14,
-        "artifacts": 2,
-        "ae_memberships": 3,
-        "total_papers": 3
-      },
-      {
-        "name": "Yu-Jye Tung",
-        "combined_score": 10,
-        "artifacts": 2,
-        "ae_memberships": 2,
-        "total_papers": 2
-      }
-    ],
-    "conferences": [
-      "NDSS",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 4,
-      "2025": 3,
-      "2024": 1,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
     "affiliation": "Georgia Tech",
     "combined_score": 24,
     "artifacts": 6,
@@ -5982,57 +6113,6 @@
       "2025": 3,
       "2026": 3,
       "2024": 2
-    }
-  },
-  {
-    "affiliation": "The Hong Kong University of Science and Technology",
-    "combined_score": 24,
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 8,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 4,
-    "top_authors": [
-      {
-        "name": "Bowen Zhang",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Xiang Chen",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Yanzuo Chen",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Yibo\tJin",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "NDSS",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2024": 4,
-      "2025": 2,
-      "2026": 2
     }
   },
   {
@@ -6282,43 +6362,6 @@
     }
   },
   {
-    "affiliation": "Nanyang Technological University (NTU)",
-    "combined_score": 22,
-    "artifacts": 9,
-    "badges_functional": 6,
-    "badges_reproducible": 7,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 22,
-    "artifact_rate": 40.9,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "XiaoFeng Wang 0001",
-        "combined_score": 22,
-        "artifacts": 9,
-        "ae_memberships": 0,
-        "total_papers": 22
-      }
-    ],
-    "conferences": [
-      "NDSS",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 4,
-      "2024": 2,
-      "2023": 3,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
     "affiliation": "PQShield",
     "combined_score": 22,
     "artifacts": 1,
@@ -6464,78 +6507,6 @@
       "2022": 2,
       "2021": 0,
       "2020": 1,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "Microsoft Research",
-    "combined_score": 22,
-    "artifacts": 8,
-    "badges_functional": 8,
-    "badges_reproducible": 6,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 12,
-    "artifact_rate": 66.7,
-    "num_authors": 6,
-    "top_authors": [
-      {
-        "name": "Cdric Fournet",
-        "combined_score": 6,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 2
-      },
-      {
-        "name": "Sangho Lee 0001",
-        "combined_score": 4,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 4
-      },
-      {
-        "name": "Christoph M. Wintersteiger",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Jana Hofmann",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Manuel Costa",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Sharad Agarwal",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 3
-      }
-    ],
-    "conferences": [
-      "ACSAC",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 4,
-      "2024": 0,
-      "2023": 2,
-      "2022": 2,
-      "2021": 0,
-      "2020": 0,
       "2019": 0,
       "2018": 0,
       "2017": 0
@@ -7613,6 +7584,65 @@
     }
   },
   {
+    "affiliation": "University of Texas at Dallas",
+    "combined_score": 18,
+    "artifacts": 5,
+    "badges_functional": 3,
+    "badges_reproducible": 4,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 6,
+    "artifact_rate": 83.3,
+    "num_authors": 4,
+    "top_authors": [
+      {
+        "name": "Kunal Mukherjee",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Xinda Wang 0001",
+        "combined_score": 3,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 3
+      },
+      {
+        "name": "Tianhao Wang 0026",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Zach Patterson",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      }
+    ],
+    "conferences": [
+      "ACSAC",
+      "NDSS",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2026": 0,
+      "2025": 1,
+      "2024": 3,
+      "2023": 2,
+      "2022": 1,
+      "2021": 0,
+      "2020": 0,
+      "2019": 0,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
     "affiliation": "Brown University",
     "combined_score": 18,
     "artifacts": 1,
@@ -7664,7 +7694,7 @@
     }
   },
   {
-    "affiliation": "The Tor Project",
+    "affiliation": "Tor Project",
     "combined_score": 18,
     "artifacts": 0,
     "badges_functional": 0,
@@ -7933,6 +7963,64 @@
     }
   },
   {
+    "affiliation": "Penn State University",
+    "combined_score": 18,
+    "artifacts": 6,
+    "badges_functional": 4,
+    "badges_reproducible": 2,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 24,
+    "artifact_rate": 25.0,
+    "num_authors": 4,
+    "top_authors": [
+      {
+        "name": "Hengkai Ye",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Hong Hu 0004",
+        "combined_score": 5,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 9
+      },
+      {
+        "name": "Jinyuan Jia 0001",
+        "combined_score": 4,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 13
+      },
+      {
+        "name": "Dinghao Wu",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 2
+      }
+    ],
+    "conferences": [
+      "NDSS",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2025": 4,
+      "2026": 1,
+      "2024": 2,
+      "2023": 0,
+      "2022": 1,
+      "2021": 0,
+      "2020": 0,
+      "2019": 0,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
     "affiliation": "Ohio State University",
     "combined_score": 17,
     "artifacts": 10,
@@ -7969,56 +8057,6 @@
       "2020": 0,
       "2019": 0,
       "2018": 1,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "Hong Kong Polytechnic University",
-    "combined_score": 17,
-    "artifacts": 9,
-    "badges_functional": 5,
-    "badges_reproducible": 3,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 31,
-    "artifact_rate": 29.0,
-    "num_authors": 3,
-    "top_authors": [
-      {
-        "name": "Xiapu Luo",
-        "combined_score": 11,
-        "artifacts": 7,
-        "ae_memberships": 0,
-        "total_papers": 28
-      },
-      {
-        "name": "Lei Zhang 0006",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Yifeng Zheng 0001",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 2
-      }
-    ],
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 6,
-      "2024": 0,
-      "2023": 1,
-      "2022": 2,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
       "2017": 0
     }
   },
@@ -8187,42 +8225,6 @@
     }
   },
   {
-    "affiliation": "Max Planck Institute for Security and Privacy (MPI-SP)",
-    "combined_score": 16,
-    "artifacts": 7,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 3,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Vincent Hwang",
-        "combined_score": 16,
-        "artifacts": 7,
-        "ae_memberships": 3,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "CHES"
-    ],
-    "years": {
-      "2026": 1,
-      "2025": 1,
-      "2024": 0,
-      "2023": 1,
-      "2022": 4,
-      "2021": 2,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
     "affiliation": "Intel Labs",
     "combined_score": 16,
     "artifacts": 1,
@@ -8375,6 +8377,56 @@
       "2024": 3,
       "2023": 0,
       "2022": 0,
+      "2021": 0,
+      "2020": 0,
+      "2019": 0,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
+    "affiliation": "Hebrew University of Jerusalem",
+    "combined_score": 16,
+    "artifacts": 6,
+    "badges_functional": 5,
+    "badges_reproducible": 5,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 8,
+    "artifact_rate": 75.0,
+    "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Yossi Gilad",
+        "combined_score": 9,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 3
+      },
+      {
+        "name": "Amit Klein 0001",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 3
+      },
+      {
+        "name": "Aviv Zohar",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 2
+      }
+    ],
+    "conferences": [
+      "USENIXSEC"
+    ],
+    "years": {
+      "2026": 0,
+      "2025": 1,
+      "2024": 0,
+      "2023": 2,
+      "2022": 3,
       "2021": 0,
       "2020": 0,
       "2019": 0,
@@ -8740,50 +8792,6 @@
     }
   },
   {
-    "affiliation": "University of Melbourne",
-    "combined_score": 15,
-    "artifacts": 2,
-    "badges_functional": 2,
-    "badges_reproducible": 2,
-    "ae_memberships": 3,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 100.0,
-    "num_authors": 2,
-    "top_authors": [
-      {
-        "name": "Shangqi Lai",
-        "combined_score": 12,
-        "artifacts": 1,
-        "ae_memberships": 3,
-        "total_papers": 2
-      },
-      {
-        "name": "Tansu Alpcan",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "NDSS",
-      "PETS"
-    ],
-    "years": {
-      "2026": 1,
-      "2025": 2,
-      "2024": 1,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
     "affiliation": "Trail of Bits",
     "combined_score": 15,
     "artifacts": 1,
@@ -8914,6 +8922,59 @@
       "2022": 1,
       "2024": 1,
       "2026": 1
+    }
+  },
+  {
+    "affiliation": "Universit Catholique de Louvain",
+    "combined_score": 15,
+    "artifacts": 7,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 350.0,
+    "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Florentin Rochet",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Franois-Xavier Standaert",
+        "combined_score": 4,
+        "artifacts": 4,
+        "ae_memberships": 0,
+        "total_papers": 0
+      },
+      {
+        "name": "Etienne Rivire",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 1
+      }
+    ],
+    "conferences": [
+      "ACSAC",
+      "CHES",
+      "NDSS",
+      "PETS"
+    ],
+    "years": {
+      "2026": 0,
+      "2025": 0,
+      "2024": 2,
+      "2023": 2,
+      "2022": 1,
+      "2021": 3,
+      "2020": 1,
+      "2019": 0,
+      "2018": 0,
+      "2017": 0
     }
   },
   {
@@ -9289,6 +9350,49 @@
       "2021": 0,
       "2020": 0,
       "2019": 1,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
+    "affiliation": "University of Hong Kong",
+    "combined_score": 13,
+    "artifacts": 2,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 3,
+    "chair_count": 0,
+    "total_papers": 5,
+    "artifact_rate": 40.0,
+    "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Tian Dong",
+        "combined_score": 10,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 2
+      },
+      {
+        "name": "Yi Chen 0024",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 3
+      }
+    ],
+    "conferences": [
+      "USENIXSEC"
+    ],
+    "years": {
+      "2026": 1,
+      "2025": 1,
+      "2024": 2,
+      "2023": 0,
+      "2022": 0,
+      "2021": 0,
+      "2020": 0,
+      "2019": 0,
       "2018": 0,
       "2017": 0
     }
@@ -9996,93 +10100,6 @@
     }
   },
   {
-    "affiliation": "The Hebrew University of Jerusalem",
-    "combined_score": 12,
-    "artifacts": 4,
-    "badges_functional": 4,
-    "badges_reproducible": 4,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 5,
-    "artifact_rate": 80.0,
-    "num_authors": 2,
-    "top_authors": [
-      {
-        "name": "Yossi Gilad",
-        "combined_score": 9,
-        "artifacts": 3,
-        "ae_memberships": 0,
-        "total_papers": 3
-      },
-      {
-        "name": "Aviv Zohar",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 2
-      }
-    ],
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 0,
-      "2024": 0,
-      "2023": 1,
-      "2022": 3,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "The University of Texas at Dallas",
-    "combined_score": 12,
-    "artifacts": 2,
-    "badges_functional": 2,
-    "badges_reproducible": 2,
-    "ae_memberships": 2,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 100.0,
-    "num_authors": 2,
-    "top_authors": [
-      {
-        "name": "Kunal Mukherjee",
-        "combined_score": 9,
-        "artifacts": 1,
-        "ae_memberships": 2,
-        "total_papers": 1
-      },
-      {
-        "name": "Zach Patterson",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "NDSS",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 0,
-      "2024": 2,
-      "2023": 1,
-      "2022": 1,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
     "affiliation": "Technical University of Darmstadt",
     "combined_score": 12,
     "artifacts": 2,
@@ -10338,56 +10355,6 @@
     }
   },
   {
-    "affiliation": "Penn State University",
-    "combined_score": 12,
-    "artifacts": 6,
-    "badges_functional": 4,
-    "badges_reproducible": 2,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 24,
-    "artifact_rate": 25.0,
-    "num_authors": 3,
-    "top_authors": [
-      {
-        "name": "Hong Hu 0004",
-        "combined_score": 5,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 9
-      },
-      {
-        "name": "Jinyuan Jia 0001",
-        "combined_score": 4,
-        "artifacts": 3,
-        "ae_memberships": 0,
-        "total_papers": 13
-      },
-      {
-        "name": "Dinghao Wu",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 2
-      }
-    ],
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 3,
-      "2024": 2,
-      "2023": 0,
-      "2022": 1,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
     "affiliation": "Technische Universitt Braunschweig",
     "combined_score": 11,
     "artifacts": 8,
@@ -10622,7 +10589,7 @@
     }
   },
   {
-    "affiliation": "Xi'an Jiaotong University",
+    "affiliation": "Xi'an Jiao Tong University",
     "combined_score": 11,
     "artifacts": 4,
     "badges_functional": 4,
@@ -11025,7 +10992,7 @@
     }
   },
   {
-    "affiliation": "The University of Queensland",
+    "affiliation": "University of Queensland",
     "combined_score": 10,
     "artifacts": 1,
     "badges_functional": 0,
@@ -11161,42 +11128,6 @@
       "2025": 1,
       "2024": 1,
       "2023": 1,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "The University of Hong Kong",
-    "combined_score": 10,
-    "artifacts": 1,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 3,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 50.0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Tian Dong",
-        "combined_score": 10,
-        "artifacts": 1,
-        "ae_memberships": 3,
-        "total_papers": 2
-      }
-    ],
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 1,
-      "2025": 1,
-      "2024": 1,
-      "2023": 0,
       "2022": 0,
       "2021": 0,
       "2020": 0,
@@ -12476,6 +12407,57 @@
     }
   },
   {
+    "affiliation": "National University of Defense Technology",
+    "combined_score": 9,
+    "artifacts": 3,
+    "badges_functional": 3,
+    "badges_reproducible": 3,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 3,
+    "artifact_rate": 100.0,
+    "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Hao Yu 0017",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Lin Liu 0018",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Xinwang Liu 0002",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      }
+    ],
+    "conferences": [
+      "NDSS",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2026": 0,
+      "2025": 3,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 0,
+      "2020": 0,
+      "2019": 0,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
     "affiliation": "Korea University",
     "combined_score": 9,
     "artifacts": 3,
@@ -12950,49 +12932,6 @@
     }
   },
   {
-    "affiliation": "Google Inc.",
-    "combined_score": 8,
-    "artifacts": 3,
-    "badges_functional": 3,
-    "badges_reproducible": 2,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 3,
-    "artifact_rate": 100.0,
-    "num_authors": 2,
-    "top_authors": [
-      {
-        "name": "Moti Yung",
-        "combined_score": 5,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 2
-      },
-      {
-        "name": "Jonathan Protzenko",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 0,
-      "2024": 1,
-      "2023": 1,
-      "2022": 1,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
     "affiliation": "University of Cambridge",
     "combined_score": 8,
     "artifacts": 5,
@@ -13379,7 +13318,7 @@
     }
   },
   {
-    "affiliation": "the University of Mississippi",
+    "affiliation": "University of Mississippi",
     "combined_score": 7,
     "artifacts": 1,
     "badges_functional": 0,
@@ -13409,43 +13348,6 @@
       "2022": 0,
       "2021": 0,
       "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "Université catholique de Louvain",
-    "combined_score": 7,
-    "artifacts": 1,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 2,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Florentin Rochet",
-        "combined_score": 7,
-        "artifacts": 1,
-        "ae_memberships": 2,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "ACSAC",
-      "PETS"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 0,
-      "2024": 0,
-      "2023": 0,
-      "2022": 1,
-      "2021": 1,
-      "2020": 1,
       "2019": 0,
       "2018": 0,
       "2017": 0
@@ -13690,6 +13592,50 @@
       "2022": 2,
       "2021": 0,
       "2020": 1,
+      "2019": 0,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
+    "affiliation": "Swiss Federal Institute of Technology in Lausanne",
+    "combined_score": 7,
+    "artifacts": 5,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 250.0,
+    "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Bryan Ford",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Jean-Pierre Hubaux",
+        "combined_score": 3,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 1
+      }
+    ],
+    "conferences": [
+      "PETS",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2026": 0,
+      "2025": 0,
+      "2024": 0,
+      "2023": 1,
+      "2022": 1,
+      "2021": 1,
+      "2020": 2,
       "2019": 0,
       "2018": 0,
       "2017": 0
@@ -14462,7 +14408,7 @@
     }
   },
   {
-    "affiliation": "Facebook Inc",
+    "affiliation": "Facebook",
     "combined_score": 6,
     "artifacts": 0,
     "badges_functional": 0,
@@ -14659,35 +14605,7 @@
     }
   },
   {
-    "affiliation": "The Penn State University",
-    "combined_score": 6,
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 2,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Hengkai Ye",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "NDSS"
-    ],
-    "years": {
-      "2025": 1,
-      "2026": 1
-    }
-  },
-  {
-    "affiliation": "The University of Texas at Arlington",
+    "affiliation": "University of Texas at Arlington",
     "combined_score": 6,
     "artifacts": 0,
     "badges_functional": 0,
@@ -14857,7 +14775,7 @@
     }
   },
   {
-    "affiliation": "UFMG (Brazil) & Macquarie University (Australia)",
+    "affiliation": "UFMG (Brazil) & Macquarie University",
     "combined_score": 6,
     "artifacts": 0,
     "badges_functional": 0,
@@ -14885,7 +14803,7 @@
     }
   },
   {
-    "affiliation": "Prisma s.r.l.",
+    "affiliation": "Prisma",
     "combined_score": 6,
     "artifacts": 0,
     "badges_functional": 0,
@@ -15166,7 +15084,7 @@
     }
   },
   {
-    "affiliation": "The University of Melbourne; CSIRO's Data61",
+    "affiliation": "University of Melbourne; CSIRO's Data61",
     "combined_score": 6,
     "artifacts": 0,
     "badges_functional": 0,
@@ -15191,50 +15109,6 @@
     ],
     "years": {
       "2026": 2
-    }
-  },
-  {
-    "affiliation": "University of Texas at Dallas",
-    "combined_score": 6,
-    "artifacts": 3,
-    "badges_functional": 1,
-    "badges_reproducible": 2,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 4,
-    "artifact_rate": 75.0,
-    "num_authors": 2,
-    "top_authors": [
-      {
-        "name": "Xinda Wang 0001",
-        "combined_score": 3,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 3
-      },
-      {
-        "name": "Tianhao Wang 0026",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "ACSAC",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 1,
-      "2024": 1,
-      "2023": 1,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
     }
   },
   {
@@ -15351,50 +15225,6 @@
       }
     ],
     "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 2,
-      "2024": 0,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "National University of Defense Technology",
-    "combined_score": 6,
-    "artifacts": 2,
-    "badges_functional": 2,
-    "badges_reproducible": 2,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 100.0,
-    "num_authors": 2,
-    "top_authors": [
-      {
-        "name": "Hao Yu 0017",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Lin Liu 0018",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "NDSS",
       "USENIXSEC"
     ],
     "years": {
@@ -15615,79 +15445,6 @@
     }
   },
   {
-    "affiliation": "Microsoft Research Ltd",
-    "combined_score": 5,
-    "artifacts": 2,
-    "badges_functional": 2,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 5,
-    "artifact_rate": 40.0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Andrew Paverd",
-        "combined_score": 5,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 5
-      }
-    ],
-    "conferences": [
-      "ACSAC",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 0,
-      "2024": 1,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0,
-      "2019": 1,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "Chinese Academy of Sciences (CAS)",
-    "combined_score": 5,
-    "artifacts": 2,
-    "badges_functional": 1,
-    "badges_reproducible": 2,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 3,
-    "artifact_rate": 66.7,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Dan Meng 0002",
-        "combined_score": 5,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 3
-      }
-    ],
-    "conferences": [
-      "NDSS"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 2,
-      "2024": 0,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
     "affiliation": "Macquarie University",
     "combined_score": 5,
     "artifacts": 2,
@@ -15797,43 +15554,7 @@
     }
   },
   {
-    "affiliation": "National University of Singapore (NUS)",
-    "combined_score": 5,
-    "artifacts": 2,
-    "badges_functional": 2,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 7,
-    "artifact_rate": 28.6,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Jin Song Dong 0001",
-        "combined_score": 5,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 7
-      }
-    ],
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 2,
-      "2024": 0,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "St. Francis Xavier University",
+    "affiliation": "St",
     "combined_score": 5,
     "artifacts": 2,
     "badges_functional": 2,
@@ -15859,42 +15580,6 @@
       "2026": 0,
       "2025": 0,
       "2024": 2,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "Shanghai Jiaotong University",
-    "combined_score": 5,
-    "artifacts": 2,
-    "badges_functional": 2,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 4,
-    "artifact_rate": 50.0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Yu Yu 0001",
-        "combined_score": 5,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 4
-      }
-    ],
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 1,
-      "2024": 1,
       "2023": 0,
       "2022": 0,
       "2021": 0,
@@ -15966,42 +15651,6 @@
     ],
     "years": {
       "2026": 1
-    }
-  },
-  {
-    "affiliation": "Universit catholique de Louvain",
-    "combined_score": 4,
-    "artifacts": 4,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Franois-Xavier Standaert",
-        "combined_score": 4,
-        "artifacts": 4,
-        "ae_memberships": 0,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "CHES"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 0,
-      "2024": 1,
-      "2023": 2,
-      "2022": 0,
-      "2021": 1,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
     }
   },
   {
@@ -16077,7 +15726,7 @@
     }
   },
   {
-    "affiliation": "U.S. Naval Research Laboratory",
+    "affiliation": "U",
     "combined_score": 4,
     "artifacts": 2,
     "badges_functional": 1,
@@ -16105,42 +15754,6 @@
       "2025": 2,
       "2024": 0,
       "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "Hebrew University of Jerusalem",
-    "combined_score": 4,
-    "artifacts": 2,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 3,
-    "artifact_rate": 66.7,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Amit Klein 0001",
-        "combined_score": 4,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 3
-      }
-    ],
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 1,
-      "2024": 0,
-      "2023": 1,
       "2022": 0,
       "2021": 0,
       "2020": 0,
@@ -16181,79 +15794,6 @@
       "2022": 0,
       "2021": 0,
       "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "Singapore University of Technology and Design",
-    "combined_score": 4,
-    "artifacts": 2,
-    "badges_functional": 2,
-    "badges_reproducible": 0,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 3,
-    "artifact_rate": 66.7,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Binbin Chen 0001",
-        "combined_score": 4,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 3
-      }
-    ],
-    "conferences": [
-      "ACSAC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 0,
-      "2024": 0,
-      "2023": 0,
-      "2022": 1,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 1
-    }
-  },
-  {
-    "affiliation": "Swiss Federal Institute of Technology in Lausanne (EPFL)",
-    "combined_score": 4,
-    "artifacts": 2,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 200.0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Bryan Ford",
-        "combined_score": 4,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "PETS",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 0,
-      "2024": 0,
-      "2023": 1,
-      "2022": 0,
-      "2021": 0,
-      "2020": 1,
       "2019": 0,
       "2018": 0,
       "2017": 0
@@ -16368,43 +15908,6 @@
     }
   },
   {
-    "affiliation": "Universit Catholique de Louvain",
-    "combined_score": 4,
-    "artifacts": 2,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 200.0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Etienne Rivire",
-        "combined_score": 4,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "NDSS",
-      "PETS"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 0,
-      "2024": 1,
-      "2023": 0,
-      "2022": 0,
-      "2021": 1,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
     "affiliation": "Universit du Luxembourg",
     "combined_score": 4,
     "artifacts": 2,
@@ -16441,7 +15944,7 @@
     }
   },
   {
-    "affiliation": "University of St. Gallen (HSG)",
+    "affiliation": "University of St",
     "combined_score": 4,
     "artifacts": 2,
     "badges_functional": 1,
@@ -16879,42 +16382,6 @@
     }
   },
   {
-    "affiliation": "Pennsylvania State University",
-    "combined_score": 4,
-    "artifacts": 2,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Yuhang Wu 0003",
-        "combined_score": 4,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 2
-      }
-    ],
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 1,
-      "2024": 0,
-      "2023": 1,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
     "affiliation": "Western Sydney University",
     "combined_score": 4,
     "artifacts": 2,
@@ -17024,7 +16491,7 @@
     }
   },
   {
-    "affiliation": "King Abdullah University of Science and Technology (KAUST)",
+    "affiliation": "King Abdullah University of Science and Technology",
     "combined_score": 3,
     "artifacts": 3,
     "badges_functional": 0,
@@ -17089,42 +16556,6 @@
       "2023": 0,
       "2022": 0,
       "2021": 0,
-      "2020": 1,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "Swiss Federal Institute of Technology in Lausanne",
-    "combined_score": 3,
-    "artifacts": 3,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 300.0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Jean-Pierre Hubaux",
-        "combined_score": 3,
-        "artifacts": 3,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "PETS"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 0,
-      "2024": 0,
-      "2023": 0,
-      "2022": 1,
-      "2021": 1,
       "2020": 1,
       "2019": 0,
       "2018": 0,
@@ -17747,7 +17178,7 @@
     }
   },
   {
-    "affiliation": "University of Massachusetts Lowell (UMASS Lowell)",
+    "affiliation": "University of Massachusetts Lowell",
     "combined_score": 3,
     "artifacts": 2,
     "badges_functional": 1,
@@ -18036,42 +17467,6 @@
     }
   },
   {
-    "affiliation": "Shanghai Jiao Tong University. China",
-    "combined_score": 3,
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Boshi Yuan 0002",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 0,
-      "2024": 1,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
     "affiliation": "Indiana University",
     "combined_score": 3,
     "artifacts": 1,
@@ -18252,7 +17647,7 @@
     }
   },
   {
-    "affiliation": "Sun Yat-Sen University",
+    "affiliation": "Sun Yat-sen University",
     "combined_score": 3,
     "artifacts": 1,
     "badges_functional": 1,
@@ -18504,7 +17899,7 @@
     }
   },
   {
-    "affiliation": "IBM Thomas J. Watson Research Center",
+    "affiliation": "IBM Thomas J",
     "combined_score": 3,
     "artifacts": 1,
     "badges_functional": 1,
@@ -18900,7 +18295,7 @@
     }
   },
   {
-    "affiliation": "Beijing Jiaotong University",
+    "affiliation": "Beijing Jiao Tong University",
     "combined_score": 3,
     "artifacts": 1,
     "badges_functional": 1,
@@ -19214,42 +18609,6 @@
       "2026": 0,
       "2025": 1,
       "2024": 0,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "hanghai Jiao Tong University",
-    "combined_score": 3,
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 3,
-    "artifact_rate": 33.3,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Libo Chen 0001",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 3
-      }
-    ],
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 0,
-      "2024": 1,
       "2023": 0,
       "2022": 0,
       "2021": 0,
@@ -19656,7 +19015,7 @@
     }
   },
   {
-    "affiliation": "ByteDance Inc.",
+    "affiliation": "ByteDance",
     "combined_score": 3,
     "artifacts": 1,
     "badges_functional": 1,
@@ -19692,7 +19051,7 @@
     }
   },
   {
-    "affiliation": "Bytedance Inc.",
+    "affiliation": "Bytedance",
     "combined_score": 3,
     "artifacts": 1,
     "badges_functional": 1,
@@ -19908,7 +19267,7 @@
     }
   },
   {
-    "affiliation": "The University of Electro-Communications",
+    "affiliation": "University of Electro-Communications",
     "combined_score": 3,
     "artifacts": 1,
     "badges_functional": 1,
@@ -19980,7 +19339,7 @@
     }
   },
   {
-    "affiliation": "Virginia Polytechnic Institute and State University (Virginia Tech)",
+    "affiliation": "Virginia Polytechnic Institute and State University",
     "combined_score": 3,
     "artifacts": 1,
     "badges_functional": 1,
@@ -20340,42 +19699,6 @@
     }
   },
   {
-    "affiliation": "National University of Defense Technology (NUDT)",
-    "combined_score": 3,
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Xinwang Liu 0002",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "NDSS"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 1,
-      "2024": 0,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
     "affiliation": "Australian National University",
     "combined_score": 3,
     "artifacts": 1,
@@ -20412,43 +19735,7 @@
     }
   },
   {
-    "affiliation": "University of Hong Kong",
-    "combined_score": 3,
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 3,
-    "artifact_rate": 33.3,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Yi Chen 0024",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 3
-      }
-    ],
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 0,
-      "2024": 1,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "Intelligent Automation Inc.",
+    "affiliation": "Intelligent Automation",
     "combined_score": 3,
     "artifacts": 1,
     "badges_functional": 1,
