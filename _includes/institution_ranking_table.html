@@ -18,7 +18,7 @@
 </div>
 
 <div id="institution-legend" style="margin:0 0 6px 0; display:none; font-size:0.85em; color:#555;">
-  Legend: I=Institution, C=Combined, R=Researchers, T=Artifacts, E=AE, H=Chaired, P=Papers, R%=Art. Rate, K=Conferences
+  Legend: #=Rank, I=Institution, C=Combined, R=Researchers, T=Artifacts, AR%=Art. Rate, Re%=Repro. Rate, E=AE, H=Chaired, P=Papers, Co=Conferences
 </div>
 
 <div id="institutionLoading"><em>Loading institution ranking data…</em></div>
@@ -52,24 +52,22 @@
   var sortCol = 2; // default: Combined Score
   var sortAsc = false;
   var expandedRows = new Set(); // Track which rows are expanded
-  var countryAbbrv = {};
-  var countryReady = false;
-  var countryLoadPromise = null;
-  var countryInfoUrl = 'https://raw.githubusercontent.com/emeryberger/CSrankings/gh-pages/institutions.csv';
 
   var fixedCols = [
-    {label:'#',                key:'rank',              type:'num'},
-    {label:'I',                key:'affiliation',       type:'alpha'},
-    {label:'C',                key:'combined_score',    type:'num'},
-    {label:'R',                key:'num_authors',       type:'num'},
-    {label:'T',                key:'artifacts',         type:'num'},
-    {label:'E',                key:'ae_memberships',    type:'num'},
-    {label:'H',                key:'chair_count',       type:'num'},
-    {label:'P',                key:'total_papers',      type:'num'},
-    {label:'R%',               key:'artifact_rate',     type:'num'},
-    {label:'K',                key:'num_conferences',   type:'num'}
+    {label:'#',                key:'rank',              type:'num',   tip:'Rank'},
+    {label:'I',                key:'affiliation',       type:'alpha', tip:'Institution'},
+    {label:'C',                key:'combined_score',    type:'num',   tip:'Combined score'},
+    {label:'R',                key:'num_authors',       type:'num',   tip:'Researchers'},
+    {label:'T',                key:'artifacts',         type:'num',   tip:'Total artifacts'},
+    {label:'AR%',              key:'artifact_rate',     type:'num',   tip:'Artifact rate: % papers with artifact'},
+    {label:'Re%',              key:'repro_rate',        type:'num',   tip:'Reproducibility rate: % artifacts Reproduced'},
+    {label:'E',                key:'ae_memberships',    type:'num',   tip:'AE memberships'},
+    {label:'H',                key:'chair_count',       type:'num',   tip:'Times chaired (★)'},
+    {label:'P',                key:'total_papers',      type:'num',   tip:'Total papers'},
+    {label:'Co',               key:'num_conferences',   type:'num',   tip:'Distinct conferences'}
   ];
 
+  // Country code to flag emoji conversion
   function countryCodeToFlag(code) {
     if (!code || code.length !== 2) return '';
     var upper = code.toUpperCase();
@@ -78,70 +76,192 @@
     return first + second;
   }
 
-  function normalizeInstKey(name) {
-    return (name || '')
-      .toLowerCase()
-      .replace(/\buniv\.?\b/g, 'university')
-      .replace(/\binst\.?\b/g, 'institute')
-      .replace(/[()]/g, '')
-      .replace(/[.,]/g, '')
-      .replace(/\s-\s/g, ' ')
-      .replace(/-/g, ' ')
-      .replace(/\s+/g, ' ')
-      .trim();
-  }
+  // Country name to code mapping (comprehensive)
+  var countryNameToCode = {
+    'united states': 'US', 'usa': 'US', 'america': 'US', 'u.s.': 'US',
+    'china': 'CN', 'peoples republic of china': 'CN', 'prc': 'CN', 'chinese': 'CN',
+    'japan': 'JP', 'japan': 'JP', 
+    'united kingdom': 'GB', 'uk': 'GB', 'britain': 'GB', 'british': 'GB',
+    'germany': 'DE', 'deutsche': 'DE',
+    'france': 'FR', 'french': 'FR',
+    'canada': 'CA', 'canadian': 'CA',
+    'australia': 'AU', 'australian': 'AU',
+    'india': 'IN', 'indian': 'IN',
+    'singapore': 'SG', 'singaporean': 'SG',
+    'south korea': 'KR', 'korea': 'KR', 'korean': 'KR', 'republic of korea': 'KR',
+    'switzerland': 'CH', 'swiss': 'CH', 'schweiz': 'CH',
+    'netherlands': 'NL', 'dutch': 'NL', 'nl': 'NL',
+    'sweden': 'SE', 'swedish': 'SE', 'sverige': 'SE',
+    'norway': 'NO', 'norwegian': 'NO', 'norge': 'NO',
+    'denmark': 'DK', 'danish': 'DK', 'danmark': 'DK',
+    'finland': 'FI', 'finnish': 'FI', 'suomi': 'FI',
+    'belgium': 'BE', 'belgian': 'BE', 'belgium': 'BE',
+    'austria': 'AT', 'austrian': 'AT', 'österreich': 'AT',
+    'israel': 'IL', 'israeli': 'IL',
+    'italy': 'IT', 'italian': 'IT', 'italia': 'IT',
+    'spain': 'ES', 'spanish': 'ES', 'españa': 'ES',
+    'portugal': 'PT', 'portuguese': 'PT',
+    'greece': 'GR', 'greek': 'GR', 'hellas': 'GR',
+    'hong kong': 'HK', 'hk': 'HK',
+    'taiwan': 'TW', 'taiwanese': 'TW', 'roc': 'TW',
+    'thailand': 'TH', 'thai': 'TH',
+    'brazil': 'BR', 'brazilian': 'BR', 'brasil': 'BR',
+    'mexico': 'MX', 'mexican': 'MX', 'méxico': 'MX',
+    'argentina': 'AR', 'argentine': 'AR',
+    'chile': 'CL', 'chilean': 'CL',
+    'ireland': 'IE', 'irish': 'IE', 'éire': 'IE',
+    'new zealand': 'NZ', 'nz': 'NZ', 'aotearoa': 'NZ',
+    'south africa': 'ZA', 'sa': 'ZA',
+    'russia': 'RU', 'russian': 'RU', 'soviet': 'RU',
+    'ukraine': 'UA', 'ukrainian': 'UA',
+    'poland': 'PL', 'polish': 'PL',
+    'romania': 'RO', 'romanian': 'RO',
+    'czechia': 'CZ', 'czech republic': 'CZ', 'cz': 'CZ',
+    'hungary': 'HU', 'hungarian': 'HU', 'magyarország': 'HU',
+    'turkey': 'TR', 'turkish': 'TR', 'türkiye': 'TR',
+    'pakistan': 'PK', 'pakistani': 'PK',
+    'malaysia': 'MY', 'malaysian': 'MY',
+    'indonesia': 'ID', 'indonesian': 'ID',
+    'vietnam': 'VN', 'vietnamese': 'VN',
+    'philippines': 'PH', 'philippine': 'PH',
+    'bangladesh': 'BD', 'bangladeshi': 'BD',
+    'sri lanka': 'LK', 'ceylon': 'LK',
+    'iran': 'IR', 'iranian': 'IR', 'persia': 'IR',
+    'saudi arabia': 'SA', 'saudi': 'SA',
+    'uae': 'AE', 'emirates': 'AE', 'united arab emirates': 'AE',
+    'egypt': 'EG', 'egyptian': 'EG',
+    'kenya': 'KE', 'kenyan': 'KE',
+    'nigeria': 'NG', 'nigerian': 'NG',
+    'morocco': 'MA', 'moroccan': 'MA',
+    'colombia': 'CO', 'colombian': 'CO',
+    'peru': 'PE', 'peruvian': 'PE',
+    'venezuela': 'VE', 'venezuelan': 'VE'
+  };
 
-  function parseCsvLine(line) {
-    var out = [];
-    var cur = '';
-    var inQuotes = false;
-    for (var i = 0; i < line.length; i++) {
-      var ch = line[i];
-      if (ch === '"') {
-        if (inQuotes && line[i + 1] === '"') {
-          cur += '"';
-          i++;
-        } else {
-          inQuotes = !inQuotes;
-        }
-      } else if (ch === ',' && !inQuotes) {
-        out.push(cur);
-        cur = '';
-      } else {
-        cur += ch;
+  // Extract country code from institution name
+  function getCountryCodeFromName(name) {
+    if (!name) return '';
+    var lower = name.toLowerCase();
+    
+    // Known institutions and companies by country
+    var knownInstitutions = {
+      // US institutions
+      'mit': 'US', 'stanford': 'US', 'berkeley': 'US', 'carnegie mellon': 'US',
+      'harvard': 'US', 'princeton': 'US', 'yale': 'US', 'cornell': 'US',
+      'columbia': 'US', 'penn': 'US', 'upenn': 'US', 'cmu': 'US',
+      'ucsd': 'US', 'ucsb': 'US', 'ucla': 'US', 'uiuc': 'US',
+      'georgia tech': 'US', 'msu': 'US', 'uofm': 'US', 'michigan': 'US',
+      'caltech': 'US', 'purdue': 'US', 'texas austin': 'US', 'wisconsin': 'US',
+      'washington state': 'US', 'washington': 'US', 'utexas': 'US',
+      'google': 'US', 'microsoft': 'US', 'amazon': 'US', 'apple': 'US',
+      'meta': 'US', 'facebook': 'US', 'ibm': 'US', 'intel': 'US',
+      'cisco': 'US', 'oracle': 'US', 'vmware': 'US', 'adobe': 'US',
+      
+      // UK institutions
+      'oxford': 'GB', 'cambridge': 'GB', 'imperial college': 'GB',
+      'ucl': 'GB', 'london': 'GB', 'edinburgh': 'GB', 'manchester': 'GB',
+      'bristol': 'GB', 'warwick': 'GB',
+      
+      // Europe
+      'eth': 'CH', 'ethz': 'CH', 'zurich': 'CH', 'epfl': 'CH',
+      'delft': 'NL', 'tu delft': 'NL', 'amsterdam': 'NL',
+      'lund': 'SE', 'kth': 'SE', 'göteborg': 'SE', 'chalmers': 'SE',
+      'oslo': 'NO', 'ntnu': 'NO',
+      'aarhus': 'DK', 'copenhagen': 'DK',
+      'helsinki': 'FI', 'aalto': 'FI', 'turku': 'FI',
+      'leuven': 'BE', 'imec': 'BE', 'gent': 'BE',
+      'vienna': 'AT', 'aachen': 'DE', 'tu aachen': 'DE',
+      'rwth': 'DE', 'munich': 'DE', 'bonn': 'DE', 'heidelberg': 'DE',
+      'berlin': 'DE', 'darmstadt': 'DE', 'karlsruhe': 'DE',
+      'saarland': 'DE', 'tu darmstadt': 'DE',
+      'paris': 'FR', 'sorbonne': 'FR', 'inria': 'FR',
+      'grenoble': 'FR', 'polytechnique': 'FR',
+      'sapienza': 'IT', 'milano': 'IT', 'politecnico': 'IT', 'rome': 'IT',
+      'valencia': 'ES', 'uc3m': 'ES', 'barcelona': 'ES',
+      'universidade do porto': 'PT', 'técnico': 'PT', 'inesc': 'PT',
+      'athens': 'GR', 'patras': 'GR', 'iacs-forth': 'GR',
+      'prague': 'CZ', 'cuni': 'CZ', 'brno': 'CZ',
+      'budapest': 'HU', 'warsaw': 'PL', 'krakow': 'PL',
+      'bucharest': 'RO', 'moscow': 'RU', 'st petersburg': 'RU',
+      'tech istanbul': 'TR', 'istanbul': 'TR',
+      'tel aviv': 'IL', 'hebrew': 'IL', 'technion': 'IL',
+      'weizmann': 'IL',
+      
+      // Asia
+      'tsinghua': 'CN', 'peking': 'CN', 'fudan': 'CN', 'shanghai': 'CN',
+      'zhejiang': 'CN', 'nanjing': 'CN', 'harbin': 'CN', 'beijing': 'CN',
+      'alibaba': 'CN', 'tencent': 'CN', 'bytedance': 'CN', 'baidu': 'CN',
+      'huawei': 'CN',
+      'ntu': 'TW', 'nthu': 'TW', 'nctu': 'TW',
+      'hkust': 'HK', 'hku': 'HK', 'cuhk': 'HK',
+      'tokyo': 'JP', 'kyoto': 'JP', 'osaka': 'JP', 'tohoku': 'JP',
+      'kaist': 'KR', 'seoul': 'KR', 'postech': 'KR',
+      'nus': 'SG', 'ntu singapore': 'SG', 'sutd': 'SG',
+      'iisc': 'IN', 'iit bombay': 'IN', 'iit delhi': 'IN', 'iit kanpur': 'IN',
+      'iit madras': 'IN', 'delhi': 'IN', 'mumbai': 'IN',
+      'chula': 'TH', 'bangkok': 'TH',
+      
+      // Australia
+      'sydney': 'AU', 'unsw': 'AU', 'melbourne': 'AU', 'monash': 'AU',
+      'anu': 'AU', 'uwa': 'AU', 'uq': 'AU', 'adelaide': 'AU',
+      
+      // North America
+      'toronto': 'CA', 'british columbia': 'CA', 'mcmaster': 'CA',
+      'waterloo': 'CA', 'mcgill': 'CA', 'quebec': 'CA', 'calgary': 'CA',
+      
+      // South America
+      'campinas': 'BR', 'são paulo': 'BR', 'usp': 'BR',
+      'puc': 'BR', 'coppe': 'BR', 'ufmg': 'BR',
+      'mexico city': 'MX', 'unam': 'MX',
+      'buenos aires': 'AR', 'uba': 'AR',
+      'santiago': 'CL'
+    };
+    
+    for (var inst in knownInstitutions) {
+      if (lower.indexOf(inst) !== -1) {
+        return knownInstitutions[inst];
       }
     }
-    out.push(cur);
-    return out;
-  }
-
-  function loadCountryMap() {
-    if (countryLoadPromise) return countryLoadPromise;
-    countryLoadPromise = fetch(countryInfoUrl)
-      .then(function(r) { return r.text(); })
-      .then(function(text) {
-        var lines = text.split(/\r?\n/);
-        for (var i = 1; i < lines.length; i++) {
-          var line = lines[i].trim();
-          if (!line) continue;
-          var parts = parseCsvLine(line);
-          if (parts.length < 3) continue;
-          var inst = parts[0];
-          var code = parts[2];
-          if (!inst || !code) continue;
-          countryAbbrv[normalizeInstKey(inst)] = code;
-        }
-        countryReady = true;
-      })
-      .catch(function() {
-        countryReady = false;
-      });
-    return countryLoadPromise;
+    
+    // Check for explicit country mentions
+    for (var country in countryNameToCode) {
+      if (lower.indexOf(country) !== -1) {
+        return countryNameToCode[country];
+      }
+    }
+    
+    // Common US state indicators
+    if (lower.match(/\b(california|massachusetts|texas|new york|illinois|washington|colorado|utah|arizona|pennsylvania|ohio|michigan|florida)\b/)) {
+      return 'US';
+    }
+    
+    // Common UK patterns
+    if (lower.match(/\b(london|oxford|cambridge|edinburgh|manchester|bristol|imperial)\b/)) {
+      return 'GB';
+    }
+    
+    // Common city patterns by country  
+    var cityCountryMap = {
+      'paris': 'FR', 'munich': 'DE', 'berlin': 'DE', 'zurich': 'CH', 'geneva': 'CH',
+      'amsterdam': 'NL', 'stockholm': 'SE', 'oslo': 'NO', 'copenhagen': 'DK',
+      'tokyo': 'JP', 'beijing': 'CN', 'shanghai': 'CN', 'hong kong': 'HK',
+      'singapore': 'SG', 'toronto': 'CA', 'melbourne': 'AU', 'sydney': 'AU',
+      'delhi': 'IN', 'mumbai': 'IN', 'vancouver': 'CA',
+      'são paulo': 'BR', 'buenos aires': 'AR',
+      'tel aviv': 'IL', 'prague': 'CZ', 'budapest': 'HU', 'warsaw': 'PL'
+    };
+    
+    for (var city in cityCountryMap) {
+      if (lower.indexOf(city) !== -1) {
+        return cityCountryMap[city];
+      }
+    }
+    
+    return '';
   }
 
   function getFlagForInstitution(name) {
-    if (!countryReady) return '';
-    var code = countryAbbrv[normalizeInstKey(name)] || '';
+    var code = getCountryCodeFromName(name);
     return code ? countryCodeToFlag(code) : '';
   }
 
@@ -283,12 +403,16 @@
     document.getElementById('iNextBtnB').disabled = atLast;
   }
 
+  function shortenYear(yr) {
+    return '' + yr % 100;
+  }
+
   function buildHeader() {
     var tr = document.getElementById('institutionHead');
     tr.innerHTML = '';
     var allCols = fixedCols.slice();
     for (var i = 0; i < yearColumns.length; i++) {
-      allCols.push({label: '' + yearColumns[i], key:'_y' + yearColumns[i], type:'num'});
+      allCols.push({label: shortenYear(yearColumns[i]), key:'_y' + yearColumns[i], type:'num'});
     }
     for (var ci = 0; ci < allCols.length; ci++) {
       var th = document.createElement('th');
@@ -336,7 +460,6 @@
     buildHeader();
     sortData(sortCol, sortAsc);
     render();
-    loadCountryMap().then(function() { render(); });
 
     document.getElementById('institutionLoading').style.display = 'none';
     document.getElementById('institutionTable').style.display = '';

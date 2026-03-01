@@ -7,7 +7,7 @@
 {% endcomment %}
 
 <div id="ae-legend" style="margin:0 0 6px 0; display:none; font-size:0.85em; color:#555;">
-  Legend: #=Rank, M=Member, E=AE Service, C=Chaired, A=Affiliation, K=Conferences, F=First Year, L=Last Year
+  Legend: #=Rank, M=Member, E=AE Service, H=Chaired, A=Affiliation, Co=Conferences, F=First Year, L=Last Year
 </div>
 
 <div id="member-controls" class="ae-controls" style="display:none;">
@@ -51,11 +51,11 @@
   // Column definitions
   var fixedCols = [
     {label:'#',                 key:'rank',               type:'num',   tip:'Rank'},
-    {label:'M',                 key:'name',               type:'alpha', tip:'Member/Name'},
-    {label:'E',                 key:'total_memberships',  type:'num',   tip:'Total AE committee memberships'},
-    {label:'C',                 key:'chair_count',        type:'num',   tip:'Times served as AE chair or co-chair (★)'},
+    {label:'M',                 key:'name',               type:'alpha', tip:'Member'},
+    {label:'E',                 key:'total_memberships',  type:'num',   tip:'Total AE memberships'},
+    {label:'H',                 key:'chair_count',        type:'num',   tip:'Times chaired (★)'},
     {label:'A',                 key:'affiliation',        type:'alpha', tip:'Affiliation'},
-    {label:'K',                 key:'num_conferences',    type:'num',   tip:'Distinct conferences served'},
+    {label:'Co',                key:'num_conferences',    type:'num',   tip:'Distinct conferences'},
     {label:'F',                 key:'first_year',         type:'num',   tip:'First year'},
     {label:'L',                 key:'last_year',          type:'num',   tip:'Last year'}
   ];
@@ -78,8 +78,8 @@
       cells.push('<td>' + chairLabel + '</td>');
       cells.push('<td>' + escHtml(m.affiliation || '') + '</td>');
       cells.push('<td>' + (m.conferences ? m.conferences.length : '') + '</td>');
-      cells.push('<td>' + (m.first_year || '') + '</td>');
-      cells.push('<td>' + (m.last_year || '') + '</td>');
+      cells.push('<td>' + (m.first_year ? shortenYear(m.first_year) : '') + '</td>');
+      cells.push('<td>' + (m.last_year ? shortenYear(m.last_year) : '') + '</td>');
       for (var j = 0; j < yearColumns.length; j++) {
         var cnt = (m.years || {})[yearColumns[j]] || 0;
         cells.push('<td>' + (cnt > 0 ? cnt : '') + '</td>');
@@ -144,12 +144,16 @@
     document.getElementById('nextBtnB').disabled = atLast;
   }
 
+  function shortenYear(yr) {
+    return '' + yr % 100;
+  }
+
   function buildHeader() {
     var tr = document.getElementById('memberHead');
     tr.innerHTML = '';
     var allCols = fixedCols.slice();
     for (var i = 0; i < yearColumns.length; i++) {
-      allCols.push({label: '' + yearColumns[i], key:'_y' + yearColumns[i], type:'num'});
+      allCols.push({label: shortenYear(yearColumns[i]), key:'_y' + yearColumns[i], type:'num'});
     }
     for (var c = 0; c < allCols.length; c++) {
       var th = document.createElement('th');

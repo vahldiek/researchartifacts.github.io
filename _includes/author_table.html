@@ -6,7 +6,7 @@
 {% endcomment %}
 
 <div id="author-legend" style="margin:0 0 6px 0; display:none; font-size:0.85em; color:#555;">
-  Legend: #=Rank, R=Researcher, A=Affiliation, S=Score, T=Artifacts, P=Papers, A%=Art. Rate, Re%=Repro. Rate, F%=Func. Rate, Y=Last 5y
+  Legend: #=Rank, R=Researcher, A=Affiliation, S=Score, T=Artifacts, AR%=Art. Rate, Re%=Repro. Rate, Fn%=Func. Rate, P=Papers, Y=Last 5y
 </div>
 
 <div id="author-controls" class="at-controls" style="display:none;">
@@ -50,15 +50,15 @@
   // Column definitions (index, label, key, type)
   var fixedCols = [
     {label:'#',                 key:'rank',            type:'num',   tip:'Rank'},
-    {label:'R',                 key:'name',            type:'alpha', tip:'Researcher/Author'},
+    {label:'R',                 key:'name',            type:'alpha', tip:'Researcher'},
     {label:'A',                 key:'affiliation',     type:'alpha', tip:'Affiliation'},
     {label:'S',                 key:'artifact_score',  type:'num',   tip:'Score: Reproduced×3 + Functional×2 + Available×1'},
     {label:'T',                 key:'total',           type:'num',   tip:'Total artifacts'},
-    {label:'P',                 key:'total_papers',    type:'num',   tip:'Total papers at tracked conferences'},
-    {label:'A%',                key:'artifact_rate',   type:'num',   tip:'Artifact rate: % of papers with evaluated artifact'},
+    {label:'AR%',               key:'artifact_rate',   type:'num',   tip:'Artifact rate: % of papers with artifact'},
     {label:'Re%',               key:'repro_rate',      type:'num',   tip:'Reproducibility rate: % of artifacts Reproduced'},
-    {label:'F%',                key:'functional_rate', type:'num',   tip:'Functional rate: % of artifacts Functional'},
-    {label:'Y',                 key:'last_5_years',    type:'num',   tip:'Years active in the last 5 years'}
+    {label:'Fn%',               key:'functional_rate', type:'num',   tip:'Functional rate: % of artifacts Functional'},
+    {label:'P',                 key:'total_papers',    type:'num',   tip:'Total papers at tracked conferences'},
+    {label:'Y',                 key:'last_5_years',    type:'num',   tip:'Years active in last 5 years'}
   ];
 
   function render() {
@@ -146,12 +146,16 @@
     document.getElementById('nextBtnB').disabled = atLast;
   }
 
+  function shortenYear(yr) {
+    return '' + yr % 100;
+  }
+
   function buildHeader() {
     var tr = document.getElementById('authorHead');
     tr.innerHTML = '';
     var allCols = fixedCols.slice();
     for (var i = 0; i < yearColumns.length; i++) {
-      allCols.push({label: '' + yearColumns[i], key:'_y' + yearColumns[i], type:'num'});
+      allCols.push({label: shortenYear(yearColumns[i]), key:'_y' + yearColumns[i], type:'num'});
     }
     for (var c = 0; c < allCols.length; c++) {
       var th = document.createElement('th');
