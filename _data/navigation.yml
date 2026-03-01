@@ -1,13 +1,15 @@
 main:
   - title: "Overview"
     url: index.html
-  - title: "Combined Ranking"
+  - title: "Rankings"
     url: combined_rankings.html
     children:
-      - title: "Author Profiles"
-        url: author.html
+      - title: "Combined Ranking"
+        url: combined_rankings.html
       - title: "Institution Ranking"
         url: institution_rankings.html
+      - title: "Author Profiles"
+        url: author.html
   - title: "Systems"
     url: systems/
     children:

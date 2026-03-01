@@ -47,25 +47,48 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  /* --- Toggle dropdown submenus on click (touch / mobile support) --- */
-  var parents = document.querySelectorAll('.masthead__menu-item--has-children');
-  parents.forEach(function (item) {
+  /* --- Handle submenu visibility on click/touch (for mobile) --- */
+  var menuItems = document.querySelectorAll('.masthead__menu-item--has-children');
+  var isTouch = window.matchMedia('(hover: none)').matches;
+  
+  menuItems.forEach(function (item) {
     var link = item.querySelector(':scope > a');
-    var sub  = item.querySelector('.masthead__submenu');
-    if (!link || !sub) return;
-    link.addEventListener('click', function (e) {
-      /* If submenu is already visible, allow normal navigation */
-      if (sub.classList.contains('is-open')) return;
-      e.preventDefault();
-      /* Close any other open submenus first */
-      document.querySelectorAll('.masthead__submenu.is-open').forEach(function (s) {
-        s.classList.remove('is-open');
-        s.style.display = '';
+    var submenu = item.querySelector('.masthead__submenu');
+    
+    if (!link || !submenu) return;
+    
+    // On desktop (hover support): show on hover
+    if (!isTouch) {
+      item.addEventListener('mouseenter', function () {
+        submenu.style.display = 'block';
       });
-      sub.classList.add('is-open');
-      sub.style.display = 'block';
-    });
+      item.addEventListener('mouseleave', function () {
+        submenu.style.display = '';
+      });
+    } else {
+      // On mobile (no hover): toggle on click
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        var isOpen = submenu.classList.contains('is-open');
+        
+        // Close all other open submenus
+        document.querySelectorAll('.masthead__submenu.is-open').forEach(function (s) {
+          s.classList.remove('is-open');
+          s.style.display = '';
+        });
+        
+        // Toggle this submenu
+        if (!isOpen) {
+          submenu.classList.add('is-open');
+          submenu.style.display = 'block';
+        } else {
+          submenu.classList.remove('is-open');
+          submenu.style.display = '';
+        }
+      });
+    }
   });
+  
   /* Close open submenus when clicking outside */
   document.addEventListener('click', function (e) {
     if (!e.target.closest('.masthead__menu-item--has-children')) {
@@ -76,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  /* --- Responsive navigation: move hidden visible-links items to hamburger menu --- */
+  /* --- Responsive navigation: move overflow items to hamburger menu --- */
   function updateHiddenLinks() {
     var visibleLinks = document.querySelector('.greedy-nav .visible-links');
     var hiddenLinks = document.querySelector('.greedy-nav .hidden-links');
@@ -87,18 +110,52 @@ document.addEventListener('DOMContentLoaded', function () {
     // Clear hidden links
     hiddenLinks.innerHTML = '';
     
-    // Find all visible-links items that are hidden by CSS
-    var allItems = visibleLinks.querySelectorAll('.masthead__menu-item');
+    // Get all visible-links items
+    var allItems = visibleLinks.querySelectorAll(':scope > .masthead__menu-item');
     var hasHidden = false;
     
     allItems.forEach(function(item) {
-      // Check if item is hidden by CSS
-      var style = window.getComputedStyle(item);
-      if (style.display === 'none') {
-        // Clone and add to hidden-links
-        var clone = item.cloneNode(true);
-        clone.style.display = ''; // Reset display
-        hiddenLinks.appendChild(clone);
+      // Check if item is hidden by CSS media query
+      var isHidden = item.offsetParent === null || 
+                     window.getComputedStyle(item).display === 'none';
+      
+      if (isHidden) {
+        // Create a mobile-friendly version with collapsible submenus
+        var mobileItem = document.createElement('li');
+        mobileItem.className = 'masthead__menu-item';
+        
+        var itemLink = item.querySelector(':scope > a');
+        var itemSubmenu = item.querySelector('.masthead__submenu');
+        
+        if (itemLink) {
+          var linkClone = itemLink.cloneNode(true);
+          mobileItem.appendChild(linkClone);
+        }
+        
+        // If item has children, add submenu with toggle functionality
+        if (itemSubmenu) {
+          mobileItem.classList.add('masthead__menu-item--has-children');
+          var submenuClone = itemSubmenu.cloneNode(true);
+          submenuClone.style.position = 'static';
+          submenuClone.style.display = 'none';
+          mobileItem.appendChild(submenuClone);
+          
+          // Add toggle handler for mobile menu items
+          linkClone.addEventListener('click', function(e) {
+            e.preventDefault();
+            var isOpen = submenuClone.style.display === 'block';
+            
+            // Close other open submenus in hidden links
+            hiddenLinks.querySelectorAll('.masthead__submenu').forEach(function(s) {
+              s.style.display = 'none';
+            });
+            
+            // Toggle this submenu
+            submenuClone.style.display = isOpen ? 'none' : 'block';
+          });
+        }
+        
+        hiddenLinks.appendChild(mobileItem);
         hasHidden = true;
       }
     });
@@ -106,21 +163,23 @@ document.addEventListener('DOMContentLoaded', function () {
     // Show/hide hamburger toggle based on whether there are hidden items
     if (hasHidden) {
       toggle.classList.remove('hidden');
-      hiddenLinks.classList.add('hidden'); // Keep collapsed by default
+      hiddenLinks.classList.add('hidden');
     } else {
       toggle.classList.add('hidden');
       hiddenLinks.classList.add('hidden');
     }
   }
   
-  // Update on load and window resize
+  // Update on load and resize
   updateHiddenLinks();
   window.addEventListener('resize', updateHiddenLinks);
   
-  // Toggle hidden links visibility
-  document.querySelector('.greedy-nav__toggle').addEventListener('click', function() {
+  // Toggle hidden menu visibility
+  document.querySelector('.greedy-nav__toggle')?.addEventListener('click', function() {
     var hiddenLinks = document.querySelector('.greedy-nav .hidden-links');
-    hiddenLinks.classList.toggle('hidden');
+    if (hiddenLinks) {
+      hiddenLinks.classList.toggle('hidden');
+    }
   });
 });
 </script>

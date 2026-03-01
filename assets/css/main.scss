@@ -98,14 +98,67 @@ html {
   background: #f2f2f2;
 }
 
-// Responsive navigation: collapse last 2-3 menu items on medium screens
+/* Mobile hamburger menu styling */
+.greedy-nav .hidden-links {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0 0 0;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.greedy-nav .hidden-links.hidden {
+  max-height: 0;
+}
+.greedy-nav .hidden-links:not(.hidden) {
+  max-height: 500px;
+}
+.greedy-nav .hidden-links .masthead__menu-item {
+  border-bottom: 1px solid #eee;
+  padding: 0;
+  margin: 0;
+}
+.greedy-nav .hidden-links .masthead__menu-item:last-child {
+  border-bottom: none;
+}
+.greedy-nav .hidden-links a {
+  display: block;
+  padding: 0.7em 1em;
+  font-size: 0.9em;
+  color: #333;
+  text-decoration: none;
+}
+.greedy-nav .hidden-links a:hover {
+  background: #f0f0f0;
+}
+
+/* Submenus in mobile menu - stack vertically */
+.hidden-links .masthead__submenu {
+  position: static;
+  display: none;
+  background: #f0f0f0;
+  border: none;
+  border-left: 3px solid #ccc;
+  box-shadow: none;
+  min-width: auto;
+}
+.hidden-links .masthead__submenu li a {
+  padding: 0.5em 1em 0.5em 1.5em;
+  font-size: 0.85em;
+  color: #666;
+}
+
+// Responsive navigation: collapse last items on medium screens
 // to give more space for logo, title, and subtitle
+// On large screens (> 1400px): show all 8 items (Overview, Rankings, Systems, Security, AE, RepoStats, Methodology, Contribute + hamburger for conference details)
 @media (max-width: 1400px) {
-  // Hide last 3 navigation items on medium screens
-  .greedy-nav .visible-links > li.masthead__menu-item:nth-last-child(-n+3) {
+  // Hide last 2 items on 1200-1400px (hide Methodology, Contribute)
+  .greedy-nav .visible-links > li.masthead__menu-item:nth-last-child(-n+2) {
     display: none;
   }
-  // Show the hamburger toggle earlier
   .greedy-nav__toggle {
     display: block !important;
   }
@@ -115,15 +168,32 @@ html {
 }
 
 @media (max-width: 1200px) {
-  // Hide last 4 navigation items on smaller medium screens
-  .greedy-nav .visible-links > li.masthead__menu-item:nth-last-child(-n+4) {
+  // Hide last 3 items on 1000-1200px (hide Repository Stats and beyond)
+  .greedy-nav .visible-links > li.masthead__menu-item:nth-last-child(-n+3) {
     display: none;
   }
 }
 
 @media (max-width: 1000px) {
-  // Hide last 5 navigation items on small to medium screens
+  // Hide last 4 items on smaller screens (hide AE Committees and beyond)
+  .greedy-nav .visible-links > li.masthead__menu-item:nth-last-child(-n+4) {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  // On tablets and smaller: hide last 5 items, keep only Overview and Rankings visible
   .greedy-nav .visible-links > li.masthead__menu-item:nth-last-child(-n+5) {
     display: none;
+  }
+  
+  /* Compact hamburger menu for very small screens */
+  .greedy-nav .hidden-links a {
+    padding: 0.6em 0.8em;
+    font-size: 0.85em;
+  }
+  .hidden-links .masthead__submenu li a {
+    padding: 0.4em 0.8em 0.4em 1.2em;
+    font-size: 0.8em;
   }
 }
