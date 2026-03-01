@@ -345,6 +345,8 @@ layout: default
       // Check for ?name= parameter
       var params = new URLSearchParams(window.location.search);
       var nameParam = params.get('name');
+      // Normalise whitespace: tabs/newlines → space, collapse runs
+      if (nameParam) { nameParam = nameParam.replace(/[\t\n\r]+/g, ' ').replace(/  +/g, ' ').trim(); }
       if (nameParam && profileMap[nameParam]) {
         searchBox.value = cleanName(nameParam);
         renderProfile(profileMap[nameParam]);

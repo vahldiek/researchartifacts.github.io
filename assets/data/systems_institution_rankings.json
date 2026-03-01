@@ -1,5 +1,196 @@
 [
   {
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "combined_score": 391,
+    "artifacts": 38,
+    "badges_functional": 38,
+    "badges_reproducible": 29,
+    "ae_memberships": 94,
+    "chair_count": 2,
+    "total_papers": 55,
+    "artifact_rate": 69.1,
+    "num_authors": 48,
+    "top_authors": [
+      {
+        "name": "Tianyin Xu",
+        "affiliation": "University of Illinois Urbana-Champaign",
+        "combined_score": 33,
+        "artifacts": 9,
+        "ae_memberships": 2,
+        "total_papers": 14
+      },
+      {
+        "name": "Haoran Qiu",
+        "affiliation": "University of Illinois Urbana-Champaign",
+        "combined_score": 21,
+        "artifacts": 3,
+        "ae_memberships": 4,
+        "total_papers": 4
+      },
+      {
+        "name": "Bogdan Alexandru Stoica",
+        "affiliation": "University of Illinois Urbana-Champaign",
+        "combined_score": 20,
+        "artifacts": 0,
+        "ae_memberships": 6,
+        "total_papers": 0
+      },
+      {
+        "name": "Siyuan Chai 0001",
+        "affiliation": "University of Illinois Urbana-Champaign",
+        "combined_score": 12,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      },
+      {
+        "name": "Rahul Bothra",
+        "affiliation": "University of Illinois Urbana-Champaign",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Xinying Zheng",
+        "affiliation": "University of Illinois Urbana-Champaign",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Xudong Sun 0013",
+        "affiliation": "University of Illinois Urbana-Champaign",
+        "combined_score": 11,
+        "artifacts": 4,
+        "ae_memberships": 0,
+        "total_papers": 6
+      },
+      {
+        "name": "Jiyu Hu",
+        "affiliation": "University of Illinois Urbana-Champaign",
+        "combined_score": 11,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 2
+      },
+      {
+        "name": "Ravishankar K. Iyer",
+        "affiliation": "University of Illinois Urbana-Champaign",
+        "combined_score": 9,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 4
+      },
+      {
+        "name": "Anna Karanika",
+        "affiliation": "University of Illinois Urbana-Champaign",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Archit Patke",
+        "affiliation": "University of Illinois Urbana-Champaign",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 2
+      },
+      {
+        "name": "Tony Hong",
+        "affiliation": "University of Illinois Urbana-Champaign",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Ayush Bansal",
+        "affiliation": "University of Illinois Urbana-Champaign",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Enguang Fan",
+        "affiliation": "University of Illinois Urbana-Champaign",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Han-Ting Liang",
+        "affiliation": "University of Illinois Urbana-Champaign",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Jiankun Wang",
+        "affiliation": "University of Illinois Urbana-Champaign",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Kiran Shashi Hombal",
+        "affiliation": "University of Illinois Urbana-Champaign",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Jongyul Kim 0001",
+        "affiliation": "University of Illinois Urbana-Champaign",
+        "combined_score": 8,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 3
+      },
+      {
+        "name": "Benjamin Reidys",
+        "affiliation": "University of Illinois Urbana-Champaign",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 2
+      },
+      {
+        "name": "Yuqi Xue",
+        "affiliation": "University of Illinois Urbana-Champaign",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 2
+      }
+    ],
+    "conferences": [
+      "ATC",
+      "EUROSYS",
+      "FAST",
+      "OSDI",
+      "SC",
+      "SOSP"
+    ],
+    "years": {
+      "2025": 47,
+      "2024": 37,
+      "2023": 13,
+      "2022": 13,
+      "2021": 7,
+      "2020": 4,
+      "2026": 5
+    }
+  },
+  {
     "affiliation": "Shanghai Jiao Tong University",
     "combined_score": 289,
     "artifacts": 78,
@@ -13,7 +204,7 @@
     "top_authors": [
       {
         "name": "Haibo Chen 0001",
-        "affiliation": "Shanghai Jiao Tong University, Institute of Parallel and Distributed Systems,China",
+        "affiliation": "Shanghai Jiao Tong University",
         "combined_score": 41,
         "artifacts": 16,
         "ae_memberships": 0,
@@ -29,7 +220,7 @@
       },
       {
         "name": "Rong Chen 0001",
-        "affiliation": "Shanghai Jiao Tong University, Institute of Parallel and Distributed Systems, China",
+        "affiliation": "Shanghai Jiao Tong University",
         "combined_score": 18,
         "artifacts": 8,
         "ae_memberships": 0,
@@ -53,7 +244,7 @@
       },
       {
         "name": "Minyi Guo",
-        "affiliation": "Shanghai Jiao Tong University, Shanghai, China",
+        "affiliation": "Shanghai Jiao Tong University",
         "combined_score": 15,
         "artifacts": 7,
         "ae_memberships": 0,
@@ -61,7 +252,7 @@
       },
       {
         "name": "Quan Chen 0002",
-        "affiliation": "Shanghai Jiao Tong University, Department of Computer Science and Engineering, Shanghai Institute for Advanced Communication and Data Science, China",
+        "affiliation": "Shanghai Jiao Tong University",
         "combined_score": 15,
         "artifacts": 7,
         "ae_memberships": 0,
@@ -69,7 +260,7 @@
       },
       {
         "name": "Dong Du 0003",
-        "affiliation": "Shanghai Jiao Tong University, School of Software, China",
+        "affiliation": "Shanghai Jiao Tong University",
         "combined_score": 14,
         "artifacts": 1,
         "ae_memberships": 3,
@@ -85,7 +276,7 @@
       },
       {
         "name": "Guihai Chen",
-        "affiliation": "Shanghai Jiao Tong University, China",
+        "affiliation": "Shanghai Jiao Tong University",
         "combined_score": 9,
         "artifacts": 3,
         "ae_memberships": 0,
@@ -93,7 +284,7 @@
       },
       {
         "name": "Yun Wang 0039",
-        "affiliation": "Shanghai Jiao Tong University, Shanghai, China",
+        "affiliation": "Shanghai Jiao Tong University",
         "combined_score": 9,
         "artifacts": 1,
         "ae_memberships": 2,
@@ -109,7 +300,7 @@
       },
       {
         "name": "Chao Li 0009",
-        "affiliation": "Shanghai Jiao Tong University, Department of Computer Science and Engineering, China",
+        "affiliation": "Shanghai Jiao Tong University",
         "combined_score": 7,
         "artifacts": 3,
         "ae_memberships": 0,
@@ -117,7 +308,7 @@
       },
       {
         "name": "Xingda Wei",
-        "affiliation": "Shanghai Jiao Tong University, Institute of Parallel and Distributed Systems, China",
+        "affiliation": "Shanghai Jiao Tong University",
         "combined_score": 7,
         "artifacts": 3,
         "ae_memberships": 0,
@@ -133,7 +324,7 @@
       },
       {
         "name": "Yue Guan 0003",
-        "affiliation": "Shanghai Jiao Tong University, Department of Computer Science and Engineering, China",
+        "affiliation": "Shanghai Jiao Tong University",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -141,7 +332,7 @@
       },
       {
         "name": "Zijun Li 0001",
-        "affiliation": "Shanghai Jiao Tong University, China",
+        "affiliation": "Shanghai Jiao Tong University",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -211,7 +402,7 @@
       },
       {
         "name": "Qing Wang 0031",
-        "affiliation": "Tsinghua University, Department of Computer Science, Beijing National Research Center for Information Science and Technology (BNRist), Beijing, China",
+        "affiliation": "Tsinghua University",
         "combined_score": 18,
         "artifacts": 6,
         "ae_memberships": 0,
@@ -219,7 +410,7 @@
       },
       {
         "name": "Yongwei Wu 0001",
-        "affiliation": "Tsinghua University, Department of Computer Science and Technology, TNList, Beijing, China",
+        "affiliation": "Tsinghua University",
         "combined_score": 15,
         "artifacts": 6,
         "ae_memberships": 0,
@@ -227,7 +418,7 @@
       },
       {
         "name": "Haojie Wang 0004",
-        "affiliation": "Tsinghua University, Beijing, China",
+        "affiliation": "Tsinghua University",
         "combined_score": 9,
         "artifacts": 3,
         "ae_memberships": 0,
@@ -235,7 +426,7 @@
       },
       {
         "name": "Liyan Zheng 0001",
-        "affiliation": "Tsinghua University, Beijing, China",
+        "affiliation": "Tsinghua University",
         "combined_score": 9,
         "artifacts": 3,
         "ae_memberships": 0,
@@ -243,7 +434,7 @@
       },
       {
         "name": "Zhe Yang 0012",
-        "affiliation": "Tsinghua University, Department of Computer Science and Technology, BNRist, China",
+        "affiliation": "Tsinghua University",
         "combined_score": 9,
         "artifacts": 3,
         "ae_memberships": 0,
@@ -267,7 +458,7 @@
       },
       {
         "name": "Jing Wang 0158",
-        "affiliation": "Tsinghua University, Beijing, China",
+        "affiliation": "Tsinghua University",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -275,7 +466,7 @@
       },
       {
         "name": "Yu Chen 0004",
-        "affiliation": "Tsinghua University, Department of Computer Science and Technology, Beijing, China",
+        "affiliation": "Tsinghua University",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -283,7 +474,7 @@
       },
       {
         "name": "Yuyang Jin 0001",
-        "affiliation": "Tsinghua University, Beijing, China",
+        "affiliation": "Tsinghua University",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -291,7 +482,7 @@
       },
       {
         "name": "Zhenhua Li 0001",
-        "affiliation": "Tsinghua University, School of Software / TNLIST, Beijing, China",
+        "affiliation": "Tsinghua University",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -315,7 +506,7 @@
       },
       {
         "name": "Shengqi Chen 0001",
-        "affiliation": "Tsinghua University, China",
+        "affiliation": "Tsinghua University",
         "combined_score": 5,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -323,7 +514,7 @@
       },
       {
         "name": "Yuhao Zhang 0006",
-        "affiliation": "Tsinghua University, Department of Computer Science and Technology, Beijing, China",
+        "affiliation": "Tsinghua University",
         "combined_score": 5,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -331,7 +522,7 @@
       },
       {
         "name": "Wei Xue 0003",
-        "affiliation": "Tsinghua University, Department of Computer Science and Technology, Beijing National Research Center for Information Science and Technology (BNRist), Beijing, China",
+        "affiliation": "Tsinghua University",
         "combined_score": 3,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -339,7 +530,7 @@
       },
       {
         "name": "Bowen Yu 0003",
-        "affiliation": "Tsinghua University, Beijing, China",
+        "affiliation": "Tsinghua University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -347,7 +538,7 @@
       },
       {
         "name": "Hao Lin 0005",
-        "affiliation": "Tsinghua University, Beijing, China",
+        "affiliation": "Tsinghua University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -355,7 +546,7 @@
       },
       {
         "name": "Mingyu Gao 0001",
-        "affiliation": "Tsinghua University, Institute for Interdisciplinary Information Sciences, Beijing, China",
+        "affiliation": "Tsinghua University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -394,7 +585,7 @@
     "top_authors": [
       {
         "name": "Peng Huang 0005",
-        "affiliation": "University of Michigan, Ann Arbor, USA",
+        "affiliation": "University of Michigan",
         "combined_score": 13,
         "artifacts": 6,
         "ae_memberships": 0,
@@ -418,7 +609,7 @@
       },
       {
         "name": "Mosharaf Chowdhury",
-        "affiliation": "University of Michigan, USA",
+        "affiliation": "University of Michigan",
         "combined_score": 10,
         "artifacts": 4,
         "ae_memberships": 0,
@@ -466,7 +657,7 @@
       },
       {
         "name": "Harsha V. Madhyastha",
-        "affiliation": "University of Michigan, Ann Arbor, USA",
+        "affiliation": "University of Michigan",
         "combined_score": 7,
         "artifacts": 3,
         "ae_memberships": 0,
@@ -474,7 +665,7 @@
       },
       {
         "name": "Yuxuan Jiang 0016",
-        "affiliation": "University of Michigan, USA",
+        "affiliation": "University of Michigan",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -546,7 +737,7 @@
       },
       {
         "name": "Yiming Qiu 0001",
-        "affiliation": "University of Michigan, Ann Arbor, Michigan, USA",
+        "affiliation": "University of Michigan",
         "combined_score": 3,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -566,6 +757,557 @@
       "2022": 9,
       "2021": 7,
       "2020": 1
+    }
+  },
+  {
+    "affiliation": "University of Wisconsin-Madison",
+    "combined_score": 146,
+    "artifacts": 23,
+    "badges_functional": 23,
+    "badges_reproducible": 16,
+    "ae_memberships": 28,
+    "chair_count": 0,
+    "total_papers": 25,
+    "artifact_rate": 92.0,
+    "num_authors": 13,
+    "top_authors": [
+      {
+        "name": "Chenhao Ye",
+        "affiliation": "University of Wisconsin-Madison",
+        "combined_score": 24,
+        "artifacts": 2,
+        "ae_memberships": 6,
+        "total_papers": 2
+      },
+      {
+        "name": "Guanzhou Hu",
+        "affiliation": "University of Wisconsin-Madison",
+        "combined_score": 18,
+        "artifacts": 1,
+        "ae_memberships": 5,
+        "total_papers": 1
+      },
+      {
+        "name": "Andrea C. Arpaci-Dusseau",
+        "affiliation": "University of Wisconsin-Madison",
+        "combined_score": 17,
+        "artifacts": 6,
+        "ae_memberships": 0,
+        "total_papers": 7
+      },
+      {
+        "name": "Remzi H. Arpaci-Dusseau",
+        "affiliation": "University of Wisconsin-Madison",
+        "combined_score": 17,
+        "artifacts": 6,
+        "ae_memberships": 0,
+        "total_papers": 7
+      },
+      {
+        "name": "Shivaram Venkataraman",
+        "affiliation": "University of Wisconsin-Madison",
+        "combined_score": 16,
+        "artifacts": 7,
+        "ae_memberships": 0,
+        "total_papers": 7
+      },
+      {
+        "name": "Shawn Zhong",
+        "affiliation": "University of Wisconsin-Madison",
+        "combined_score": 15,
+        "artifacts": 0,
+        "ae_memberships": 5,
+        "total_papers": 0
+      },
+      {
+        "name": "Caeden Whitaker",
+        "affiliation": "University of Wisconsin-Madison",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Chendong Wang",
+        "affiliation": "University of Wisconsin-Madison",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Junxuan Liao",
+        "affiliation": "University of Wisconsin-Madison",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Quinn Burke",
+        "affiliation": "University of Wisconsin-Madison",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Sujay Yadalam",
+        "affiliation": "University of Wisconsin-Madison",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Suyan Qu",
+        "affiliation": "University of Wisconsin-Madison",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Yin Li 0003",
+        "affiliation": "University of Wisconsin-Madison",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      }
+    ],
+    "conferences": [
+      "ATC",
+      "EUROSYS",
+      "FAST",
+      "OSDI",
+      "SC",
+      "SOSP"
+    ],
+    "years": {
+      "2025": 23,
+      "2024": 12,
+      "2023": 2,
+      "2022": 3,
+      "2021": 8,
+      "2020": 2
+    }
+  },
+  {
+    "affiliation": "University of California, Berkeley",
+    "combined_score": 143,
+    "artifacts": 27,
+    "badges_functional": 27,
+    "badges_reproducible": 24,
+    "ae_memberships": 21,
+    "chair_count": 1,
+    "total_papers": 42,
+    "artifact_rate": 64.3,
+    "num_authors": 15,
+    "top_authors": [
+      {
+        "name": "Ion Stoica",
+        "affiliation": "University of California, Berkeley",
+        "combined_score": 23,
+        "artifacts": 8,
+        "ae_memberships": 0,
+        "total_papers": 17
+      },
+      {
+        "name": "Natacha Crooks",
+        "affiliation": "University of California, Berkeley",
+        "combined_score": 20,
+        "artifacts": 5,
+        "ae_memberships": 1,
+        "total_papers": 8
+      },
+      {
+        "name": "Raluca Ada Popa",
+        "affiliation": "University of California, Berkeley",
+        "combined_score": 18,
+        "artifacts": 6,
+        "ae_memberships": 0,
+        "total_papers": 6
+      },
+      {
+        "name": "Yichuan Wang 0002",
+        "affiliation": "University of California, Berkeley",
+        "combined_score": 12,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      },
+      {
+        "name": "Weikeng Chen",
+        "affiliation": "University of California, Berkeley",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Romil Bhardwaj",
+        "affiliation": "University of California, Berkeley",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Rishabh R. Iyer",
+        "affiliation": "University of California, Berkeley",
+        "combined_score": 8,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 4
+      },
+      {
+        "name": "Frank Sifei Luan",
+        "affiliation": "University of California, Berkeley",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Hanchen Li",
+        "affiliation": "University of California, Berkeley",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Melissa Z. Pan",
+        "affiliation": "University of California, Berkeley",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Zhifei Li",
+        "affiliation": "University of California, Berkeley",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Ziming Mao",
+        "affiliation": "University of California, Berkeley",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Zhuohan Li 0001",
+        "affiliation": "University of California, Berkeley",
+        "combined_score": 5,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 4
+      },
+      {
+        "name": "Akshay Narayan 0001",
+        "affiliation": "University of California, Berkeley",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Koushik Sen",
+        "affiliation": "University of California, Berkeley",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      }
+    ],
+    "conferences": [
+      "ATC",
+      "EUROSYS",
+      "FAST",
+      "OSDI",
+      "SOSP"
+    ],
+    "years": {
+      "2025": 11,
+      "2024": 9,
+      "2023": 7,
+      "2022": 8,
+      "2021": 8,
+      "2020": 5
+    }
+  },
+  {
+    "affiliation": "EPFL",
+    "combined_score": 138,
+    "artifacts": 31,
+    "badges_functional": 30,
+    "badges_reproducible": 24,
+    "ae_memberships": 15,
+    "chair_count": 4,
+    "total_papers": 32,
+    "artifact_rate": 96.9,
+    "num_authors": 11,
+    "top_authors": [
+      {
+        "name": "Sanidhya Kashyap",
+        "affiliation": "EPFL",
+        "combined_score": 34,
+        "artifacts": 10,
+        "ae_memberships": 1,
+        "total_papers": 11
+      },
+      {
+        "name": "Solal Pirelli",
+        "affiliation": "EPFL",
+        "combined_score": 25,
+        "artifacts": 1,
+        "ae_memberships": 6,
+        "total_papers": 1
+      },
+      {
+        "name": "Rachid Guerraoui",
+        "affiliation": "EPFL",
+        "combined_score": 15,
+        "artifacts": 6,
+        "ae_memberships": 0,
+        "total_papers": 6
+      },
+      {
+        "name": "George Candea",
+        "affiliation": "EPFL",
+        "combined_score": 14,
+        "artifacts": 5,
+        "ae_memberships": 0,
+        "total_papers": 6
+      },
+      {
+        "name": "Vojtech Aschenbrenner",
+        "affiliation": "EPFL",
+        "combined_score": 14,
+        "artifacts": 2,
+        "ae_memberships": 3,
+        "total_papers": 2
+      },
+      {
+        "name": "Zhifei Yang",
+        "affiliation": "EPFL",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Mathias Payer",
+        "affiliation": "EPFL",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 1,
+        "total_papers": 1
+      },
+      {
+        "name": "Tao Lyu 0004",
+        "affiliation": "EPFL",
+        "combined_score": 6,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Charly Castes",
+        "affiliation": "EPFL",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Jiacheng Ma 0002",
+        "affiliation": "EPFL",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Clment Pit-Claudel",
+        "affiliation": "EPFL",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      }
+    ],
+    "conferences": [
+      "ATC",
+      "EUROSYS",
+      "FAST",
+      "OSDI",
+      "SC",
+      "SOSP"
+    ],
+    "years": {
+      "2025": 1,
+      "2024": 13,
+      "2023": 8,
+      "2022": 9,
+      "2021": 6,
+      "2020": 3,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "ETH Zurich",
+    "combined_score": 121,
+    "artifacts": 35,
+    "badges_functional": 34,
+    "badges_reproducible": 23,
+    "ae_memberships": 9,
+    "chair_count": 1,
+    "total_papers": 47,
+    "artifact_rate": 74.5,
+    "num_authors": 15,
+    "top_authors": [
+      {
+        "name": "Torsten Hoefler",
+        "affiliation": "ETH Zurich",
+        "combined_score": 20,
+        "artifacts": 8,
+        "ae_memberships": 0,
+        "total_papers": 4
+      },
+      {
+        "name": "Ana Klimovic",
+        "affiliation": "ETH Zurich",
+        "combined_score": 15,
+        "artifacts": 5,
+        "ae_memberships": 0,
+        "total_papers": 10
+      },
+      {
+        "name": "Zhendong Su 0001",
+        "affiliation": "ETH Zurich",
+        "combined_score": 12,
+        "artifacts": 5,
+        "ae_memberships": 0,
+        "total_papers": 6
+      },
+      {
+        "name": "Manuel Rigger",
+        "affiliation": "ETH Zurich",
+        "combined_score": 12,
+        "artifacts": 3,
+        "ae_memberships": 1,
+        "total_papers": 4
+      },
+      {
+        "name": "Zu-Ming Jiang",
+        "affiliation": "ETH Zurich",
+        "combined_score": 11,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 2
+      },
+      {
+        "name": "Foteini Strati",
+        "affiliation": "ETH Zurich",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 3
+      },
+      {
+        "name": "Ralf Jung 0002",
+        "affiliation": "ETH Zurich",
+        "combined_score": 6,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 3
+      },
+      {
+        "name": "Timothy Roscoe",
+        "affiliation": "ETH Zurich",
+        "combined_score": 6,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 4
+      },
+      {
+        "name": "Daming Zou",
+        "affiliation": "ETH Zurich",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Michael Giardino",
+        "affiliation": "ETH Zurich",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Gustavo Alonso",
+        "affiliation": "ETH Zurich",
+        "combined_score": 5,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 6
+      },
+      {
+        "name": "Jie Zhang 0081",
+        "affiliation": "ETH Zurich",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Maciej Besta",
+        "affiliation": "ETH Zurich",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 0
+      },
+      {
+        "name": "Matthias Brun 0002",
+        "affiliation": "ETH Zurich",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Michal Friedman 0001",
+        "affiliation": "ETH Zurich",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 2
+      }
+    ],
+    "conferences": [
+      "ATC",
+      "EUROSYS",
+      "OSDI",
+      "SC",
+      "SOSP"
+    ],
+    "years": {
+      "2025": 3,
+      "2024": 10,
+      "2023": 7,
+      "2022": 7,
+      "2021": 11,
+      "2020": 4
     }
   },
   {
@@ -739,7 +1481,7 @@
     "top_authors": [
       {
         "name": "Pedro Fonseca 0001",
-        "affiliation": "Purdue University, West Lafayette, IN, USA",
+        "affiliation": "Purdue University",
         "combined_score": 13,
         "artifacts": 5,
         "ae_memberships": 0,
@@ -747,7 +1489,7 @@
       },
       {
         "name": "Pengcheng Wang 0001",
-        "affiliation": "Purdue University, School of Electrical and Computer Engineering, West Lafayette, IN, USA",
+        "affiliation": "Purdue University",
         "combined_score": 12,
         "artifacts": 1,
         "ae_memberships": 3,
@@ -771,7 +1513,7 @@
       },
       {
         "name": "Edgardo Barsallo Yi",
-        "affiliation": "Purdue University, West Lafayette, IN, USA",
+        "affiliation": "Purdue University",
         "combined_score": 9,
         "artifacts": 1,
         "ae_memberships": 2,
@@ -787,7 +1529,7 @@
       },
       {
         "name": "Muhammad Shahbaz 0001",
-        "affiliation": "Purdue University, USA",
+        "affiliation": "Purdue University",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -795,7 +1537,7 @@
       },
       {
         "name": "Saurabh Bagchi",
-        "affiliation": "Purdue University, West Lafayette, USA",
+        "affiliation": "Purdue University",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -803,7 +1545,7 @@
       },
       {
         "name": "Somali Chaterji",
-        "affiliation": "Purdue University, Department of Agricultural and Biological Engineering, West Lafayette, IN, USA",
+        "affiliation": "Purdue University",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -811,7 +1553,7 @@
       },
       {
         "name": "Yongle Zhang 0007",
-        "affiliation": "Purdue University, West Lafayette, Indiana, USA",
+        "affiliation": "Purdue University",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -843,7 +1585,7 @@
       },
       {
         "name": "Ali Imran 0005",
-        "affiliation": "Purdue University, West Lafayette, IN, USA",
+        "affiliation": "Purdue University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -851,7 +1593,7 @@
       },
       {
         "name": "Ran Xu 0003",
-        "affiliation": "Purdue University, School of Electrical and Computer Engineering, West Lafayette, IN, USA",
+        "affiliation": "Purdue University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -968,84 +1710,132 @@
     }
   },
   {
-    "affiliation": "EPFL",
-    "combined_score": 109,
-    "artifacts": 20,
-    "badges_functional": 19,
-    "badges_reproducible": 17,
-    "ae_memberships": 15,
-    "chair_count": 4,
-    "total_papers": 20,
-    "artifact_rate": 100.0,
-    "num_authors": 9,
+    "affiliation": "University of California, San Diego",
+    "combined_score": 108,
+    "artifacts": 26,
+    "badges_functional": 25,
+    "badges_reproducible": 24,
+    "ae_memberships": 11,
+    "chair_count": 0,
+    "total_papers": 33,
+    "artifact_rate": 78.8,
+    "num_authors": 15,
     "top_authors": [
       {
-        "name": "Sanidhya Kashyap",
-        "affiliation": "EPFL",
-        "combined_score": 34,
-        "artifacts": 10,
-        "ae_memberships": 1,
-        "total_papers": 11
+        "name": "Yufei Ding 0001",
+        "affiliation": "University of California, San Diego",
+        "combined_score": 21,
+        "artifacts": 7,
+        "ae_memberships": 0,
+        "total_papers": 7
       },
       {
-        "name": "Solal Pirelli",
-        "affiliation": "EPFL",
-        "combined_score": 25,
-        "artifacts": 1,
-        "ae_memberships": 6,
-        "total_papers": 1
+        "name": "Zheng Wang 0075",
+        "affiliation": "University of California, San Diego",
+        "combined_score": 15,
+        "artifacts": 3,
+        "ae_memberships": 2,
+        "total_papers": 5
       },
       {
-        "name": "Vojtech Aschenbrenner",
-        "affiliation": "EPFL",
-        "combined_score": 14,
+        "name": "Yizhou Shan",
+        "affiliation": "University of California, San Diego",
+        "combined_score": 9,
         "artifacts": 2,
-        "ae_memberships": 3,
+        "ae_memberships": 2,
         "total_papers": 2
       },
       {
-        "name": "Zhifei Yang",
-        "affiliation": "EPFL",
+        "name": "Suyash Mahar",
+        "affiliation": "University of California, San Diego",
         "combined_score": 9,
         "artifacts": 1,
         "ae_memberships": 2,
         "total_papers": 1
       },
       {
-        "name": "Mathias Payer",
-        "affiliation": "EPFL, Lausanne, Switzerland",
-        "combined_score": 8,
+        "name": "Zaifeng Pan",
+        "affiliation": "University of California, San Diego",
+        "combined_score": 9,
         "artifacts": 1,
-        "ae_memberships": 1,
+        "ae_memberships": 2,
         "total_papers": 1
       },
       {
-        "name": "Tao Lyu 0004",
-        "affiliation": "EPFL, Lausanne, Switzerland",
+        "name": "Junda Chen",
+        "affiliation": "University of California, San Diego",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Amy Ousterhout",
+        "affiliation": "University of California, San Diego",
+        "combined_score": 6,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 3
+      },
+      {
+        "name": "Hao Zhang 0025",
+        "affiliation": "University of California, San Diego",
+        "combined_score": 6,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 5
+      },
+      {
+        "name": "Yiying Zhang 0005",
+        "affiliation": "University of California, San Diego",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
         "total_papers": 2
       },
       {
-        "name": "Charly Castes",
-        "affiliation": "EPFL",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
+        "name": "Alexander Breuer",
+        "affiliation": "University of California, San Diego",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
         "total_papers": 0
       },
       {
-        "name": "Jiacheng Ma 0002",
-        "affiliation": "EPFL, Lausanne, Switzerland",
-        "combined_score": 4,
-        "artifacts": 2,
+        "name": "Fan Chung",
+        "affiliation": "University of California, San Diego",
+        "combined_score": 3,
+        "artifacts": 1,
         "ae_memberships": 0,
         "total_papers": 1
       },
       {
-        "name": "Clment Pit-Claudel",
-        "affiliation": "EPFL, Lausanne, Switzerland",
+        "name": "Nadia Polikarpova",
+        "affiliation": "University of California, San Diego",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Ranjit Jhala",
+        "affiliation": "University of California, San Diego",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Steven Swanson",
+        "affiliation": "University of California, San Diego",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Supun Nakandala",
+        "affiliation": "University of California, San Diego",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -1055,19 +1845,17 @@
     "conferences": [
       "ATC",
       "EUROSYS",
-      "FAST",
       "OSDI",
       "SC",
       "SOSP"
     ],
     "years": {
-      "2025": 1,
-      "2024": 7,
+      "2025": 8,
+      "2024": 5,
       "2023": 6,
-      "2022": 8,
-      "2021": 6,
-      "2020": 1,
-      "2026": 1
+      "2022": 5,
+      "2021": 8,
+      "2020": 3
     }
   },
   {
@@ -1084,7 +1872,7 @@
     "top_authors": [
       {
         "name": "Yibo Huang 0006",
-        "affiliation": "University of Texas at Austin, TX, USA",
+        "affiliation": "University of Texas at Austin",
         "combined_score": 18,
         "artifacts": 1,
         "ae_memberships": 5,
@@ -1092,7 +1880,7 @@
       },
       {
         "name": "Vijay Chidambaram",
-        "affiliation": "University of Texas at Austin, Department of Computer Science, TX, USA",
+        "affiliation": "University of Texas at Austin",
         "combined_score": 17,
         "artifacts": 5,
         "ae_memberships": 1,
@@ -1116,7 +1904,7 @@
       },
       {
         "name": "Lili Qiu",
-        "affiliation": "The University of Texas at Austin, Department of Computer Sciences, TX, USA",
+        "affiliation": "The University of Texas at Austin",
         "combined_score": 9,
         "artifacts": 3,
         "ae_memberships": 0,
@@ -1124,7 +1912,7 @@
       },
       {
         "name": "Lorenzo Alvisi",
-        "affiliation": "University of Texas at Austin, USA",
+        "affiliation": "University of Texas at Austin",
         "combined_score": 9,
         "artifacts": 3,
         "ae_memberships": 0,
@@ -1148,7 +1936,7 @@
       },
       {
         "name": "Aditya Akella",
-        "affiliation": "University of Texas at Austin, TX, USA",
+        "affiliation": "University of Texas at Austin",
         "combined_score": 7,
         "artifacts": 3,
         "ae_memberships": 0,
@@ -1375,7 +2163,7 @@
     "top_authors": [
       {
         "name": "Ding Yuan 0004",
-        "affiliation": "University of Toronto, Toronto, Canada",
+        "affiliation": "University of Toronto",
         "combined_score": 17,
         "artifacts": 6,
         "ae_memberships": 0,
@@ -1399,7 +2187,7 @@
       },
       {
         "name": "Ashvin Goel",
-        "affiliation": "University of Toronto, Canada",
+        "affiliation": "University of Toronto",
         "combined_score": 10,
         "artifacts": 4,
         "ae_memberships": 0,
@@ -1423,7 +2211,7 @@
       },
       {
         "name": "Angela Demke Brown",
-        "affiliation": "University of Toronto, Canada",
+        "affiliation": "University of Toronto",
         "combined_score": 4,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -1431,7 +2219,7 @@
       },
       {
         "name": "Alexey Khrabrov 0002",
-        "affiliation": "University of Toronto, ON, Canada",
+        "affiliation": "University of Toronto",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -1439,7 +2227,7 @@
       },
       {
         "name": "Dai Qin",
-        "affiliation": "University of Toronto, Canada",
+        "affiliation": "University of Toronto",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -1447,7 +2235,7 @@
       },
       {
         "name": "David Lie",
-        "affiliation": "University of Toronto, Canada",
+        "affiliation": "University of Toronto",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -1455,7 +2243,7 @@
       },
       {
         "name": "Eyal de Lara",
-        "affiliation": "University of Toronto, Canada",
+        "affiliation": "University of Toronto",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -1463,7 +2251,7 @@
       },
       {
         "name": "Hongyu Zhu 0003",
-        "affiliation": "University of Toronto, Canada",
+        "affiliation": "University of Toronto",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -1471,7 +2259,7 @@
       },
       {
         "name": "James Gleeson 0001",
-        "affiliation": "University of Toronto, Department of Computer Science, Canada",
+        "affiliation": "University of Toronto",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -1479,7 +2267,7 @@
       },
       {
         "name": "Natalie D. Enright Jerger",
-        "affiliation": "University of Toronto, Canada",
+        "affiliation": "University of Toronto",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -1487,7 +2275,7 @@
       },
       {
         "name": "Xiang (Jenny) Ren",
-        "affiliation": "University of Toronto, Canada",
+        "affiliation": "University of Toronto",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -1495,7 +2283,7 @@
       },
       {
         "name": "Yu Luo 0006",
-        "affiliation": "University of Toronto, Canada",
+        "affiliation": "University of Toronto",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -1521,6 +2309,164 @@
     }
   },
   {
+    "affiliation": "Chinese University of Hong Kong",
+    "combined_score": 100,
+    "artifacts": 10,
+    "badges_functional": 10,
+    "badges_reproducible": 8,
+    "ae_memberships": 24,
+    "chair_count": 0,
+    "total_papers": 13,
+    "artifact_rate": 76.9,
+    "num_authors": 16,
+    "top_authors": [
+      {
+        "name": "Boxi Yu",
+        "affiliation": "Chinese University of Hong Kong",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Xin Tan",
+        "affiliation": "Chinese University of Hong Kong",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Michael R. Lyu",
+        "affiliation": "Chinese University of Hong Kong",
+        "combined_score": 9,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 3
+      },
+      {
+        "name": "Qiuping Wang",
+        "affiliation": "Chinese University of Hong Kong",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 2
+      },
+      {
+        "name": "Aoyang Fang, The Chinese University of Hong Kong, Shenzhen",
+        "affiliation": "Chinese University of Hong Kong",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Boxi Yu, The Chinese University of Hong Kong, Shenzhen",
+        "affiliation": "Chinese University of Hong Kong",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Jiangfei Duan, The Chinese University of Hong Kong",
+        "affiliation": "Chinese University of Hong Kong",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Qiang Su, The Chinese University of Hong Kong",
+        "affiliation": "Chinese University of Hong Kong",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Xin Tan, The Chinese University of Hong Kong",
+        "affiliation": "Chinese University of Hong Kong",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Zhihan Jiang",
+        "affiliation": "Chinese University of Hong Kong",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Zhihan Jiang, The Chinese University of Hong Kong",
+        "affiliation": "Chinese University of Hong Kong",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Zili Shao",
+        "affiliation": "Chinese University of Hong Kong",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 3
+      },
+      {
+        "name": "Boyang Li 0016",
+        "affiliation": "Chinese University of Hong Kong",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Chao Wang 0125",
+        "affiliation": "Chinese University of Hong Kong",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Jiadong Xie 0002",
+        "affiliation": "Chinese University of Hong Kong",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Yeh-Ching Chung",
+        "affiliation": "Chinese University of Hong Kong",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      }
+    ],
+    "conferences": [
+      "ATC",
+      "EUROSYS",
+      "FAST",
+      "OSDI",
+      "SOSP"
+    ],
+    "years": {
+      "2022": 4,
+      "2025": 10,
+      "2026": 1,
+      "2024": 14,
+      "2023": 4,
+      "2021": 1,
+      "2020": 0
+    }
+  },
+  {
     "affiliation": "University of Utah",
     "combined_score": 99,
     "artifacts": 5,
@@ -1533,7 +2479,7 @@
     "num_authors": 9,
     "top_authors": [
       {
-        "name": "Amit\tSamanta",
+        "name": "Amit Samanta",
         "affiliation": "University of Utah",
         "combined_score": 39,
         "artifacts": 0,
@@ -1542,7 +2488,7 @@
       },
       {
         "name": "Ryan Stutsman",
-        "affiliation": "University of Utah, UT, USA",
+        "affiliation": "University of Utah",
         "combined_score": 14,
         "artifacts": 3,
         "ae_memberships": 1,
@@ -1557,7 +2503,7 @@
         "total_papers": 0
       },
       {
-        "name": "Sachin Kumar\tSingh",
+        "name": "Sachin Kumar Singh",
         "affiliation": "University of Utah",
         "combined_score": 9,
         "artifacts": 0,
@@ -1566,7 +2512,7 @@
       },
       {
         "name": "Robert Ricci",
-        "affiliation": "University of Utah, Salt Lake City, United States",
+        "affiliation": "University of Utah",
         "combined_score": 8,
         "artifacts": 1,
         "ae_memberships": 1,
@@ -1598,7 +2544,7 @@
       },
       {
         "name": "Chinmay Kulkarni 0002",
-        "affiliation": "University of Utah, USA",
+        "affiliation": "University of Utah",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -1619,144 +2565,6 @@
       "2025": 7,
       "2026": 1,
       "2020": 2
-    }
-  },
-  {
-    "affiliation": "University of Illinois Urbana–Champaign",
-    "combined_score": 99,
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 32,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 14,
-    "top_authors": [
-      {
-        "name": "Rahul Bothra",
-        "affiliation": "University of Illinois Urbana–Champaign",
-        "combined_score": 12,
-        "artifacts": 0,
-        "ae_memberships": 4,
-        "total_papers": 0
-      },
-      {
-        "name": "Xinying Zheng",
-        "affiliation": "University of Illinois Urbana–Champaign",
-        "combined_score": 12,
-        "artifacts": 0,
-        "ae_memberships": 4,
-        "total_papers": 0
-      },
-      {
-        "name": "Tony Hong",
-        "affiliation": "University of Illinois Urbana–Champaign",
-        "combined_score": 9,
-        "artifacts": 1,
-        "ae_memberships": 2,
-        "total_papers": 1
-      },
-      {
-        "name": "Ashish Kashinath",
-        "affiliation": "University of Illinois Urbana–Champaign",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Cathy Cai",
-        "affiliation": "University of Illinois Urbana–Champaign",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Jackson Clark",
-        "affiliation": "University of Illinois Urbana–Champaign",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Kiran Hombal",
-        "affiliation": "University of Illinois Urbana–Champaign",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Peizhe Liu",
-        "affiliation": "University of Illinois Urbana–Champaign",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Sarthak Chakraborty",
-        "affiliation": "University of Illinois Urbana–Champaign",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Shashwat Jaiswal",
-        "affiliation": "University of Illinois Urbana–Champaign",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Songhao Zhang",
-        "affiliation": "University of Illinois Urbana–Champaign",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Sriram Devata",
-        "affiliation": "University of Illinois Urbana–Champaign",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Yiming Su",
-        "affiliation": "University of Illinois Urbana–Champaign",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Yiqi Liu",
-        "affiliation": "University of Illinois Urbana–Champaign",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "OSDI"
-    ],
-    "years": {
-      "2024": 4,
-      "2025": 28,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0
     }
   },
   {
@@ -1797,7 +2605,7 @@
       },
       {
         "name": "Wei Wang 0030",
-        "affiliation": "Hong Kong University of Science and Technology, Department of Computer Science and Engineering, Hong Kong",
+        "affiliation": "Hong Kong University of Science and Technology",
         "combined_score": 7,
         "artifacts": 3,
         "ae_memberships": 0,
@@ -1821,7 +2629,7 @@
       },
       {
         "name": "Shunkang Zhang",
-        "affiliation": "The Hong Kong University of Science and Technology",
+        "affiliation": "Hong Kong University of Science and Technology",
         "combined_score": 6,
         "artifacts": 0,
         "ae_memberships": 2,
@@ -1829,7 +2637,7 @@
       },
       {
         "name": "Xiang Chen",
-        "affiliation": "The Hong Kong University of Science and Technology",
+        "affiliation": "Hong Kong University of Science and Technology",
         "combined_score": 6,
         "artifacts": 0,
         "ae_memberships": 2,
@@ -1837,7 +2645,7 @@
       },
       {
         "name": "Xiaofeng Hou",
-        "affiliation": "The Hong Kong University of Science and Technology",
+        "affiliation": "Hong Kong University of Science and Technology",
         "combined_score": 6,
         "artifacts": 0,
         "ae_memberships": 2,
@@ -1845,7 +2653,7 @@
       },
       {
         "name": "Yuanyuan Yuan",
-        "affiliation": "The Hong Kong University of Science and Technology",
+        "affiliation": "Hong Kong University of Science and Technology",
         "combined_score": 6,
         "artifacts": 0,
         "ae_memberships": 2,
@@ -1869,7 +2677,7 @@
       },
       {
         "name": "Zilong Wang 0007",
-        "affiliation": "Hong Kong University of Science and Technology, iSING Lab, Clear Water Bay, Hong Kong",
+        "affiliation": "Hong Kong University of Science and Technology",
         "combined_score": 3,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -1877,7 +2685,7 @@
       },
       {
         "name": "Liu Yang 0008",
-        "affiliation": "Hong Kong University of Science and Technology, Department of Computer Science and Engineering, Hong Kong",
+        "affiliation": "Hong Kong University of Science and Technology",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -1885,7 +2693,7 @@
       },
       {
         "name": "Qiang Yang 0001",
-        "affiliation": "Hong Kong University of Science and Technology, Department of Computer Science, Kowloon, Hong Kong",
+        "affiliation": "Hong Kong University of Science and Technology",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -1893,7 +2701,7 @@
       },
       {
         "name": "Wei Bai 0001",
-        "affiliation": "Hong Kong University of Science and Technology (HKUST)",
+        "affiliation": "Hong Kong University of Science and Technology",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -1929,7 +2737,7 @@
     "top_authors": [
       {
         "name": "Gregory R. Ganger",
-        "affiliation": "Carnegie Mellon University, Pittsburgh, USA",
+        "affiliation": "Carnegie Mellon University",
         "combined_score": 19,
         "artifacts": 7,
         "ae_memberships": 0,
@@ -1937,7 +2745,7 @@
       },
       {
         "name": "Bryan Parno",
-        "affiliation": "Carnegie Mellon University, Pittsburgh, PA, USA",
+        "affiliation": "Carnegie Mellon University",
         "combined_score": 12,
         "artifacts": 4,
         "ae_memberships": 0,
@@ -1953,7 +2761,7 @@
       },
       {
         "name": "James C. Hoe",
-        "affiliation": "Carnegie Mellon University, Pittsburgh, USA",
+        "affiliation": "Carnegie Mellon University",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -1961,7 +2769,7 @@
       },
       {
         "name": "Justine Sherry",
-        "affiliation": "Carnegie Mellon University, Pittsburgh, PA, USA",
+        "affiliation": "Carnegie Mellon University",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -1993,7 +2801,7 @@
       },
       {
         "name": "Dimitrios Skarlatos 0002",
-        "affiliation": "Carnegie Mellon University, Pittsburgh, PA, USA",
+        "affiliation": "Carnegie Mellon University",
         "combined_score": 5,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -2001,7 +2809,7 @@
       },
       {
         "name": "Anthony Rowe 0001",
-        "affiliation": "Carnegie Mellon University, Pittsburgh, PA, USA",
+        "affiliation": "Carnegie Mellon University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -2009,7 +2817,7 @@
       },
       {
         "name": "Ben L. Titzer",
-        "affiliation": "Carnegie Mellon University, USA",
+        "affiliation": "Carnegie Mellon University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -2017,7 +2825,7 @@
       },
       {
         "name": "Eric P. Xing",
-        "affiliation": "Carnegie Mellon University, School of Computer Science, Pittsburgh, PA, USA",
+        "affiliation": "Carnegie Mellon University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -2025,7 +2833,7 @@
       },
       {
         "name": "Jay Bosamiya",
-        "affiliation": "Carnegie Mellon University, PA, USA",
+        "affiliation": "Carnegie Mellon University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -2033,7 +2841,7 @@
       },
       {
         "name": "Yi Zhou 0025",
-        "affiliation": "Carnegie Mellon University, Pittsburgh, PA, USA",
+        "affiliation": "Carnegie Mellon University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -2058,135 +2866,245 @@
     }
   },
   {
-    "affiliation": "University of Illinois at Urbana–Champaign",
-    "combined_score": 90,
-    "artifacts": 4,
-    "badges_functional": 4,
-    "badges_reproducible": 1,
-    "ae_memberships": 27,
+    "affiliation": "Massachusetts Institute of Technology",
+    "combined_score": 92,
+    "artifacts": 22,
+    "badges_functional": 20,
+    "badges_reproducible": 20,
+    "ae_memberships": 10,
     "chair_count": 0,
-    "total_papers": 6,
-    "artifact_rate": 66.7,
-    "num_authors": 13,
+    "total_papers": 32,
+    "artifact_rate": 68.8,
+    "num_authors": 11,
     "top_authors": [
       {
-        "name": "Jiyu Hu",
-        "affiliation": "University of Illinois at Urbana–Champaign",
-        "combined_score": 11,
-        "artifacts": 2,
-        "ae_memberships": 2,
-        "total_papers": 2
+        "name": "Qinghao Hu 0004",
+        "affiliation": "Massachusetts Institute of Technology",
+        "combined_score": 21,
+        "artifacts": 3,
+        "ae_memberships": 4,
+        "total_papers": 3
       },
       {
-        "name": "Kiran Shashi Hombal",
-        "affiliation": "University of Illinois at Urbana–Champaign",
+        "name": "Nickolai Zeldovich",
+        "affiliation": "Massachusetts Institute of Technology",
+        "combined_score": 19,
+        "artifacts": 7,
+        "ae_memberships": 0,
+        "total_papers": 11
+      },
+      {
+        "name": "M. Frans Kaashoek",
+        "affiliation": "Massachusetts Institute of Technology",
+        "combined_score": 16,
+        "artifacts": 6,
+        "ae_memberships": 0,
+        "total_papers": 11
+      },
+      {
+        "name": "Joshua Fried",
+        "affiliation": "Massachusetts Institute of Technology",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 3
+      },
+      {
+        "name": "Kevin Liao",
+        "affiliation": "Massachusetts Institute of Technology",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Tianhao Huang",
+        "affiliation": "Massachusetts Institute of Technology",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Arvind 0001",
+        "affiliation": "Massachusetts Institute of Technology",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Benjamin Holmes 0002",
+        "affiliation": "Massachusetts Institute of Technology",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Hari Balakrishnan",
+        "affiliation": "Massachusetts Institute of Technology",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Vijay Gadepally",
+        "affiliation": "Massachusetts Institute of Technology",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 0
+      },
+      {
+        "name": "Xuhao Chen 0001",
+        "affiliation": "Massachusetts Institute of Technology",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      }
+    ],
+    "conferences": [
+      "ATC",
+      "EUROSYS",
+      "OSDI",
+      "SC",
+      "SOSP"
+    ],
+    "years": {
+      "2025": 2,
+      "2024": 2,
+      "2023": 4,
+      "2022": 13,
+      "2021": 5,
+      "2020": 4
+    }
+  },
+  {
+    "affiliation": "Georgia Institute of Technology",
+    "combined_score": 89,
+    "artifacts": 4,
+    "badges_functional": 4,
+    "badges_reproducible": 4,
+    "ae_memberships": 25,
+    "chair_count": 1,
+    "total_papers": 4,
+    "artifact_rate": 100.0,
+    "num_authors": 12,
+    "top_authors": [
+      {
+        "name": "Anirudh Sarma",
+        "affiliation": "Georgia Institute of Technology",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Jinsun Yoo",
+        "affiliation": "Georgia Institute of Technology",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Vishal Rao",
+        "affiliation": "Georgia Institute of Technology",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Jiaqi Deng",
+        "affiliation": "Georgia Institute of Technology",
         "combined_score": 9,
         "artifacts": 0,
         "ae_memberships": 3,
         "total_papers": 0
       },
       {
-        "name": "Benjamin Reidys",
-        "affiliation": "University of Illinois at Urbana–Champaign",
+        "name": "Seonjin Na",
+        "affiliation": "Georgia Institute of Technology",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Alexey Tumanov",
+        "affiliation": "Georgia Institute of Technology",
         "combined_score": 8,
         "artifacts": 1,
-        "ae_memberships": 2,
+        "ae_memberships": 1,
         "total_papers": 2
       },
       {
-        "name": "Yuqi Xue",
-        "affiliation": "University of Illinois at Urbana–Champaign",
-        "combined_score": 8,
+        "name": "Dhruv Garg",
+        "affiliation": "Georgia Institute of Technology",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Matteo Olivi",
+        "affiliation": "Georgia Institute of Technology",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Suyeon Lee",
+        "affiliation": "Georgia Institute of Technology",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Fabian Monrose",
+        "affiliation": "Georgia Institute of Technology",
+        "combined_score": 3,
         "artifacts": 1,
-        "ae_memberships": 2,
-        "total_papers": 2
+        "ae_memberships": 0,
+        "total_papers": 1
       },
       {
-        "name": "Ammar Tahir",
-        "affiliation": "University of Illinois at Urbana–Champaign",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
+        "name": "Meng Xu 0001",
+        "affiliation": "Georgia Institute of Technology",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
       },
       {
-        "name": "Boyuan Tian",
-        "affiliation": "University of Illinois at Urbana–Champaign",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Henry Zhu",
-        "affiliation": "University of Illinois at Urbana–Champaign",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Houxiang Ji",
-        "affiliation": "University of Illinois at Urbana–Champaign",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Jiawei Liu",
-        "affiliation": "University of Illinois at Urbana–Champaign",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Jinghan Huang",
-        "affiliation": "University of Illinois at Urbana–Champaign",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Ramya Bygari",
-        "affiliation": "University of Illinois at Urbana–Champaign",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Shreesha Gopalakrishna Bhat",
-        "affiliation": "University of Illinois at Urbana–Champaign",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Yihan Pang",
-        "affiliation": "University of Illinois at Urbana–Champaign",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
+        "name": "Srinivas Aluru",
+        "affiliation": "Georgia Institute of Technology",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
         "total_papers": 0
       }
     ],
     "conferences": [
       "ATC",
       "EUROSYS",
-      "FAST",
       "OSDI",
+      "SC",
       "SOSP"
     ],
     "years": {
-      "2025": 2,
-      "2024": 21,
-      "2023": 2,
-      "2022": 4,
-      "2021": 0,
+      "2024": 16,
+      "2025": 8,
+      "2026": 2,
+      "2023": 0,
+      "2022": 1,
+      "2021": 1,
       "2020": 0
     }
   },
@@ -2212,7 +3130,7 @@
       },
       {
         "name": "Matei Zaharia",
-        "affiliation": "Stanford University, CA, USA",
+        "affiliation": "Stanford University",
         "combined_score": 13,
         "artifacts": 5,
         "ae_memberships": 0,
@@ -2228,7 +3146,7 @@
       },
       {
         "name": "David Mazires",
-        "affiliation": "Stanford University, Department of Computer Science, CA, USA",
+        "affiliation": "Stanford University",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -2244,7 +3162,7 @@
       },
       {
         "name": "Alex Aiken",
-        "affiliation": "Stanford University, CA, USA",
+        "affiliation": "Stanford University",
         "combined_score": 5,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -2252,7 +3170,7 @@
       },
       {
         "name": "Ying Sheng 0007",
-        "affiliation": "Stanford University, CA, USA",
+        "affiliation": "Stanford University",
         "combined_score": 5,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -2260,7 +3178,7 @@
       },
       {
         "name": "Akshay Agrawal 0001",
-        "affiliation": "Stanford University, Department of Electrical Engineering, CA, USA",
+        "affiliation": "Stanford University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -2268,7 +3186,7 @@
       },
       {
         "name": "Christos Kozyrakis",
-        "affiliation": "Stanford University, USA",
+        "affiliation": "Stanford University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -2276,7 +3194,7 @@
       },
       {
         "name": "Deepti Raghavan",
-        "affiliation": "Stanford University, USA",
+        "affiliation": "Stanford University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -2284,7 +3202,7 @@
       },
       {
         "name": "Kunle Olukotun",
-        "affiliation": "Stanford University, USA",
+        "affiliation": "Stanford University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -2292,7 +3210,7 @@
       },
       {
         "name": "Nick McKeown",
-        "affiliation": "Stanford University, USA",
+        "affiliation": "Stanford University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -2300,7 +3218,7 @@
       },
       {
         "name": "Philip Alexander Levis",
-        "affiliation": "Stanford University, USA",
+        "affiliation": "Stanford University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -2308,7 +3226,7 @@
       },
       {
         "name": "Stephen P. Boyd",
-        "affiliation": "Stanford University, USA",
+        "affiliation": "Stanford University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -2316,7 +3234,7 @@
       },
       {
         "name": "Willie Neiswanger",
-        "affiliation": "Stanford University, USA",
+        "affiliation": "Stanford University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -2324,7 +3242,7 @@
       },
       {
         "name": "Zheng Wang 0078",
-        "affiliation": "Stanford University, Stanford, CA, USA",
+        "affiliation": "Stanford University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -2345,114 +3263,6 @@
       "2023": 6,
       "2022": 1,
       "2021": 8,
-      "2020": 3
-    }
-  },
-  {
-    "affiliation": "ETH Zurich",
-    "combined_score": 84,
-    "artifacts": 23,
-    "badges_functional": 23,
-    "badges_reproducible": 15,
-    "ae_memberships": 7,
-    "chair_count": 1,
-    "total_papers": 36,
-    "artifact_rate": 63.9,
-    "num_authors": 10,
-    "top_authors": [
-      {
-        "name": "Ana Klimovic",
-        "affiliation": "ETH Zurich, Switzerland",
-        "combined_score": 15,
-        "artifacts": 5,
-        "ae_memberships": 0,
-        "total_papers": 10
-      },
-      {
-        "name": "Zhendong Su 0001",
-        "affiliation": "ETH Zurich, Switzerland",
-        "combined_score": 12,
-        "artifacts": 5,
-        "ae_memberships": 0,
-        "total_papers": 6
-      },
-      {
-        "name": "Manuel Rigger",
-        "affiliation": "ETH Zurich",
-        "combined_score": 12,
-        "artifacts": 3,
-        "ae_memberships": 1,
-        "total_papers": 4
-      },
-      {
-        "name": "Zu-Ming Jiang",
-        "affiliation": "ETH Zurich",
-        "combined_score": 11,
-        "artifacts": 2,
-        "ae_memberships": 2,
-        "total_papers": 2
-      },
-      {
-        "name": "Foteini Strati",
-        "affiliation": "ETH Zurich",
-        "combined_score": 9,
-        "artifacts": 1,
-        "ae_memberships": 2,
-        "total_papers": 3
-      },
-      {
-        "name": "Ralf Jung 0002",
-        "affiliation": "ETH Zurich, Switzerland",
-        "combined_score": 6,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 3
-      },
-      {
-        "name": "Timothy Roscoe",
-        "affiliation": "ETH Zurich, Switzerland",
-        "combined_score": 6,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 4
-      },
-      {
-        "name": "Daming Zou",
-        "affiliation": "ETH Zurich",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Jie Zhang 0081",
-        "affiliation": "ETH Zurich, Institute of Information Security, Switzerland",
-        "combined_score": 4,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 2
-      },
-      {
-        "name": "Michal Friedman 0001",
-        "affiliation": "ETH Zurich, Switzerland",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 2
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "EUROSYS",
-      "OSDI",
-      "SOSP"
-    ],
-    "years": {
-      "2025": 2,
-      "2024": 8,
-      "2023": 6,
-      "2022": 6,
-      "2021": 3,
       "2020": 3
     }
   },
@@ -2478,7 +3288,7 @@
       },
       {
         "name": "Jason Nieh",
-        "affiliation": "Columbia University, New York City, USA",
+        "affiliation": "Columbia University",
         "combined_score": 9,
         "artifacts": 4,
         "ae_memberships": 0,
@@ -2510,7 +3320,7 @@
       },
       {
         "name": "Ronghui Gu",
-        "affiliation": "Columbia University, New York, NY, USA",
+        "affiliation": "Columbia University",
         "combined_score": 8,
         "artifacts": 3,
         "ae_memberships": 0,
@@ -2518,7 +3328,7 @@
       },
       {
         "name": "Roxana Geambasu",
-        "affiliation": "Columbia University, New York, NY, USA",
+        "affiliation": "Columbia University",
         "combined_score": 8,
         "artifacts": 3,
         "ae_memberships": 0,
@@ -2533,7 +3343,7 @@
         "total_papers": 0
       },
       {
-        "name": "Vahab  Jabrayilov",
+        "name": "Vahab Jabrayilov",
         "affiliation": "Columbia University",
         "combined_score": 6,
         "artifacts": 0,
@@ -2542,7 +3352,7 @@
       },
       {
         "name": "Baishakhi Ray",
-        "affiliation": "Columbia University, New York, NY, USA",
+        "affiliation": "Columbia University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -2550,7 +3360,7 @@
       },
       {
         "name": "Kostis Kaffes",
-        "affiliation": "Columbia University, New York, NY, USA",
+        "affiliation": "Columbia University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -2574,184 +3384,6 @@
     }
   },
   {
-    "affiliation": "University of Wisconsin–Madison",
-    "combined_score": 81,
-    "artifacts": 3,
-    "badges_functional": 3,
-    "badges_reproducible": 3,
-    "ae_memberships": 24,
-    "chair_count": 0,
-    "total_papers": 3,
-    "artifact_rate": 100.0,
-    "num_authors": 7,
-    "top_authors": [
-      {
-        "name": "Chenhao Ye",
-        "affiliation": "University of Wisconsin–Madison",
-        "combined_score": 24,
-        "artifacts": 2,
-        "ae_memberships": 6,
-        "total_papers": 2
-      },
-      {
-        "name": "Guanzhou Hu",
-        "affiliation": "University of Wisconsin–Madison",
-        "combined_score": 18,
-        "artifacts": 1,
-        "ae_memberships": 5,
-        "total_papers": 1
-      },
-      {
-        "name": "Shawn Zhong",
-        "affiliation": "University of Wisconsin–Madison",
-        "combined_score": 15,
-        "artifacts": 0,
-        "ae_memberships": 5,
-        "total_papers": 0
-      },
-      {
-        "name": "Caeden Whitaker",
-        "affiliation": "University of Wisconsin–Madison",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Junxuan Liao",
-        "affiliation": "University of Wisconsin–Madison",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Quinn Burke",
-        "affiliation": "University of Wisconsin–Madison",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Suyan Qu",
-        "affiliation": "University of Wisconsin–Madison",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "EUROSYS",
-      "FAST",
-      "OSDI",
-      "SOSP"
-    ],
-    "years": {
-      "2025": 16,
-      "2024": 8,
-      "2023": 0,
-      "2022": 0,
-      "2021": 2,
-      "2020": 0
-    }
-  },
-  {
-    "affiliation": "University of California, Berkeley",
-    "combined_score": 79,
-    "artifacts": 17,
-    "badges_functional": 17,
-    "badges_reproducible": 15,
-    "ae_memberships": 10,
-    "chair_count": 0,
-    "total_papers": 28,
-    "artifact_rate": 60.7,
-    "num_authors": 8,
-    "top_authors": [
-      {
-        "name": "Ion Stoica",
-        "affiliation": "University of California, Berkeley, USA",
-        "combined_score": 23,
-        "artifacts": 8,
-        "ae_memberships": 0,
-        "total_papers": 17
-      },
-      {
-        "name": "Raluca Ada Popa",
-        "affiliation": "University of California, Berkeley, CA, USA",
-        "combined_score": 18,
-        "artifacts": 6,
-        "ae_memberships": 0,
-        "total_papers": 6
-      },
-      {
-        "name": "Weikeng Chen",
-        "affiliation": "University of California, Berkeley",
-        "combined_score": 12,
-        "artifacts": 0,
-        "ae_memberships": 4,
-        "total_papers": 0
-      },
-      {
-        "name": "Melissa Z. Pan",
-        "affiliation": "University of California, Berkeley",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Zhifei Li",
-        "affiliation": "University of California, Berkeley",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Ziming Mao",
-        "affiliation": "University of California, Berkeley",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Zhuohan Li 0001",
-        "affiliation": "University of California, Berkeley, CA, USA",
-        "combined_score": 5,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 4
-      },
-      {
-        "name": "Koushik Sen",
-        "affiliation": "University of California, Berkeley, USA",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "EUROSYS",
-      "FAST",
-      "OSDI",
-      "SOSP"
-    ],
-    "years": {
-      "2025": 7,
-      "2024": 4,
-      "2023": 3,
-      "2022": 5,
-      "2021": 3,
-      "2020": 5
-    }
-  },
-  {
     "affiliation": "Peking University",
     "combined_score": 78,
     "artifacts": 14,
@@ -2765,7 +3397,7 @@
     "top_authors": [
       {
         "name": "Xin Jin 0008",
-        "affiliation": "Peking University, China",
+        "affiliation": "Peking University",
         "combined_score": 21,
         "artifacts": 7,
         "ae_memberships": 0,
@@ -2789,7 +3421,7 @@
       },
       {
         "name": "Zhi Yang 0001",
-        "affiliation": "Peking University, Beijing, China",
+        "affiliation": "Peking University",
         "combined_score": 8,
         "artifacts": 3,
         "ae_memberships": 0,
@@ -2829,7 +3461,7 @@
       },
       {
         "name": "Chao Yang 0002",
-        "affiliation": "Peking University, Beijing, China",
+        "affiliation": "Peking University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -2837,7 +3469,7 @@
       },
       {
         "name": "Yining Shi 0001",
-        "affiliation": "Peking University, Beijing, China",
+        "affiliation": "Peking University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -2889,7 +3521,7 @@
       },
       {
         "name": "Alex Conway 0001",
-        "affiliation": "Cornell University, New York, NY, USA",
+        "affiliation": "Cornell University",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -2897,7 +3529,7 @@
       },
       {
         "name": "Rachit Agarwal 0001",
-        "affiliation": "Cornell University, NY, USA",
+        "affiliation": "Cornell University",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -2929,7 +3561,7 @@
       },
       {
         "name": "Hakim Weatherspoon",
-        "affiliation": "Cornell University, Ithaca, USA",
+        "affiliation": "Cornell University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -2937,7 +3569,7 @@
       },
       {
         "name": "Jos F. Martnez",
-        "affiliation": "Cornell University, Ithaca, NY, USA",
+        "affiliation": "Cornell University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -2998,7 +3630,7 @@
       },
       {
         "name": "Guoqing Harry Xu",
-        "affiliation": "University of California, Los Angeles, CA, USA",
+        "affiliation": "University of California, Los Angeles",
         "combined_score": 8,
         "artifacts": 3,
         "ae_memberships": 0,
@@ -3006,7 +3638,7 @@
       },
       {
         "name": "Miryung Kim",
-        "affiliation": "University of California, Los Angeles, USA",
+        "affiliation": "University of California, Los Angeles",
         "combined_score": 8,
         "artifacts": 3,
         "ae_memberships": 0,
@@ -3014,7 +3646,7 @@
       },
       {
         "name": "Cody Hao Yu",
-        "affiliation": "University of California, Los Angeles, USA",
+        "affiliation": "University of California, Los Angeles",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -3030,7 +3662,7 @@
       },
       {
         "name": "Harry Xu 0001",
-        "affiliation": "University of California, Los Angeles, CA, USA",
+        "affiliation": "University of California, Los Angeles",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -3098,7 +3730,7 @@
       },
       {
         "name": "Georgios Portokalidis",
-        "affiliation": "IMDEA Software Institute, Madrid, Spain",
+        "affiliation": "IMDEA Software Institute",
         "combined_score": 5,
         "artifacts": 0,
         "ae_memberships": 1,
@@ -3106,7 +3738,7 @@
       },
       {
         "name": "Thaleia Dimitra Doudali",
-        "affiliation": "IMDEA Software Institute, Madrid, Spain",
+        "affiliation": "IMDEA Software Institute",
         "combined_score": 5,
         "artifacts": 0,
         "ae_memberships": 1,
@@ -3114,7 +3746,7 @@
       },
       {
         "name": "Niki Vazou",
-        "affiliation": "IMDEA Software Institute, Spain",
+        "affiliation": "IMDEA Software Institute",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -3151,7 +3783,7 @@
     "top_authors": [
       {
         "name": "Rong Gu 0001",
-        "affiliation": "Nanjing University, State Key Laboratory for Novel Software Technology, China",
+        "affiliation": "Nanjing University",
         "combined_score": 18,
         "artifacts": 2,
         "ae_memberships": 4,
@@ -3159,7 +3791,7 @@
       },
       {
         "name": "Yu Huang 0002",
-        "affiliation": "Nanjing University, Department of Computer Science and Technology, China",
+        "affiliation": "Nanjing University",
         "combined_score": 8,
         "artifacts": 1,
         "ae_memberships": 2,
@@ -3167,7 +3799,7 @@
       },
       {
         "name": "Chen Tian 0001",
-        "affiliation": "Nanjing University, State Key Laboratory for Novel Software Technology, China",
+        "affiliation": "Nanjing University",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -3175,7 +3807,7 @@
       },
       {
         "name": "Yihua Huang 0001",
-        "affiliation": "Nanjing University, State Key Laboratory for Novel Software Technology, China",
+        "affiliation": "Nanjing University",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -3191,7 +3823,7 @@
       },
       {
         "name": "Chang Xu 0001",
-        "affiliation": "Nanjing University, Department of Computer Science and Technology / State Key Laboratory for Novel Software Technology, China",
+        "affiliation": "Nanjing University",
         "combined_score": 5,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -3199,7 +3831,7 @@
       },
       {
         "name": "Yanyan Jiang 0001",
-        "affiliation": "Nanjing University, SPAR Group, Institute of Computer Software",
+        "affiliation": "Nanjing University",
         "combined_score": 5,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -3207,7 +3839,7 @@
       },
       {
         "name": "Haipeng Dai 0001",
-        "affiliation": "Nanjing University, State Key Laboratory for Novel Software Technology, China",
+        "affiliation": "Nanjing University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -3215,7 +3847,7 @@
       },
       {
         "name": "Hao Huang 0011",
-        "affiliation": "Nanjing University, Department of Computer Science and Technology, State Key Laboratory for Novel Software Technology, Nanjing, China",
+        "affiliation": "Nanjing University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -3223,7 +3855,7 @@
       },
       {
         "name": "Lei Wang 0152",
-        "affiliation": "Nanjing University, Department of Computer Science and Technology, State Key Laboratory for Novel Software Technology, China",
+        "affiliation": "Nanjing University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -3231,7 +3863,7 @@
       },
       {
         "name": "Sheng Zhong 0002",
-        "affiliation": "Nanjing University, State Key Laboratory for Novel Software Technology, China",
+        "affiliation": "Nanjing University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -3239,7 +3871,7 @@
       },
       {
         "name": "Xiaoliang Wang 0001",
-        "affiliation": "Nanjing University, National Key Laboratory for Novel Software Technology, China",
+        "affiliation": "Nanjing University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -3247,7 +3879,7 @@
       },
       {
         "name": "Zhibin Wang 0002",
-        "affiliation": "Nanjing University, Nanjing, China",
+        "affiliation": "Nanjing University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -3267,91 +3899,6 @@
       "2022": 5,
       "2021": 1,
       "2020": 0
-    }
-  },
-  {
-    "affiliation": "University of Illinois at Urbana-Champaign",
-    "combined_score": 69,
-    "artifacts": 22,
-    "badges_functional": 22,
-    "badges_reproducible": 17,
-    "ae_memberships": 2,
-    "chair_count": 1,
-    "total_papers": 32,
-    "artifact_rate": 68.8,
-    "num_authors": 7,
-    "top_authors": [
-      {
-        "name": "Tianyin Xu",
-        "affiliation": "University of Illinois at Urbana-Champaign, Department of Computer Science, Urbana, IL, USA",
-        "combined_score": 33,
-        "artifacts": 9,
-        "ae_memberships": 2,
-        "total_papers": 14
-      },
-      {
-        "name": "Xudong Sun 0013",
-        "affiliation": "University of Illinois at Urbana-Champaign, IL, USA",
-        "combined_score": 11,
-        "artifacts": 4,
-        "ae_memberships": 0,
-        "total_papers": 6
-      },
-      {
-        "name": "Ravishankar K. Iyer",
-        "affiliation": "University of Illinois at Urbana-Champaign, Center for Reliable & High Performance Computing (CRHC), IL, USA",
-        "combined_score": 9,
-        "artifacts": 3,
-        "ae_memberships": 0,
-        "total_papers": 4
-      },
-      {
-        "name": "Zbigniew T. Kalbarczyk",
-        "affiliation": "University of Illinois at Urbana-Champaign, Coordinated Science Laboratory",
-        "combined_score": 6,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 3
-      },
-      {
-        "name": "Jian Huang 0006",
-        "affiliation": "University of Illinois at Urbana-Champaign, IL, USA",
-        "combined_score": 4,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 3
-      },
-      {
-        "name": "Josep Torrellas",
-        "affiliation": "University of Illinois at Urbana-Champaign, Urbana, IL, USA",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Zbigniew Kalbarczyk",
-        "affiliation": "University of Illinois at Urbana-Champaign, Coordinated Science Laboratory",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "EUROSYS",
-      "OSDI",
-      "SC",
-      "SOSP"
-    ],
-    "years": {
-      "2025": 4,
-      "2024": 6,
-      "2023": 7,
-      "2022": 2,
-      "2021": 1,
-      "2020": 2
     }
   },
   {
@@ -3444,115 +3991,6 @@
       "2022": 5,
       "2021": 1,
       "2020": 1
-    }
-  },
-  {
-    "affiliation": "Georgia Institute of Technology",
-    "combined_score": 69,
-    "artifacts": 3,
-    "badges_functional": 3,
-    "badges_reproducible": 3,
-    "ae_memberships": 20,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 150.0,
-    "num_authors": 10,
-    "top_authors": [
-      {
-        "name": "Jinsun Yoo",
-        "affiliation": "Georgia Institute of Technology",
-        "combined_score": 12,
-        "artifacts": 0,
-        "ae_memberships": 4,
-        "total_papers": 0
-      },
-      {
-        "name": "Vishal Rao",
-        "affiliation": "Georgia Institute of Technology",
-        "combined_score": 12,
-        "artifacts": 0,
-        "ae_memberships": 4,
-        "total_papers": 0
-      },
-      {
-        "name": "Jiaqi Deng",
-        "affiliation": "Georgia Institute of Technology",
-        "combined_score": 9,
-        "artifacts": 0,
-        "ae_memberships": 3,
-        "total_papers": 0
-      },
-      {
-        "name": "Seonjin Na",
-        "affiliation": "Georgia Institute of Technology",
-        "combined_score": 9,
-        "artifacts": 0,
-        "ae_memberships": 3,
-        "total_papers": 0
-      },
-      {
-        "name": "Dhruv Garg",
-        "affiliation": "Georgia Institute of Technology",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Matteo Olivi",
-        "affiliation": "Georgia Institute of Technology",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Suyeon Lee",
-        "affiliation": "Georgia Institute of Technology",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Fabian Monrose",
-        "affiliation": "Georgia Institute of Technology, USA",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Meng Xu 0001",
-        "affiliation": "Georgia Institute of Technology, Atlanta, GA, USA",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Srinivas Aluru",
-        "affiliation": "Georgia Institute of Technology, Atlanta, GA, USA",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "EUROSYS",
-      "OSDI",
-      "SC"
-    ],
-    "years": {
-      "2024": 13,
-      "2025": 7,
-      "2026": 1,
-      "2023": 0,
-      "2022": 1,
-      "2021": 1,
-      "2020": 0
     }
   },
   {
@@ -3749,233 +4187,6 @@
     }
   },
   {
-    "affiliation": "Chinese University of Hong Kong",
-    "combined_score": 64,
-    "artifacts": 10,
-    "badges_functional": 10,
-    "badges_reproducible": 8,
-    "ae_memberships": 12,
-    "chair_count": 0,
-    "total_papers": 13,
-    "artifact_rate": 76.9,
-    "num_authors": 10,
-    "top_authors": [
-      {
-        "name": "Boxi Yu",
-        "affiliation": "Chinese University of Hong Kong",
-        "combined_score": 12,
-        "artifacts": 0,
-        "ae_memberships": 4,
-        "total_papers": 0
-      },
-      {
-        "name": "Xin Tan",
-        "affiliation": "The Chinese University of Hong Kong",
-        "combined_score": 12,
-        "artifacts": 0,
-        "ae_memberships": 4,
-        "total_papers": 0
-      },
-      {
-        "name": "Michael R. Lyu",
-        "affiliation": "Chinese University of Hong Kong, Department of Computer Science and Engineering, Hong Kong",
-        "combined_score": 9,
-        "artifacts": 3,
-        "ae_memberships": 0,
-        "total_papers": 3
-      },
-      {
-        "name": "Qiuping Wang",
-        "affiliation": "The Chinese University of Hong Kong",
-        "combined_score": 9,
-        "artifacts": 1,
-        "ae_memberships": 2,
-        "total_papers": 2
-      },
-      {
-        "name": "Zhihan Jiang",
-        "affiliation": "Chinese University of Hong Kong",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Zili Shao",
-        "affiliation": "Chinese University of Hong Kong, Department of Computer Science and Engineering, Hong Kong",
-        "combined_score": 4,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 3
-      },
-      {
-        "name": "Boyang Li 0016",
-        "affiliation": "Chinese University of Hong Kong, Hong Kong",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Chao Wang 0125",
-        "affiliation": "Chinese University of Hong Kong, Hong Kong, SAR, China",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Jiadong Xie 0002",
-        "affiliation": "Chinese University of Hong Kong, Hong Kong",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 2
-      },
-      {
-        "name": "Yeh-Ching Chung",
-        "affiliation": "The Chinese University of Hong Kong, Shenzhen, China",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "EUROSYS",
-      "FAST",
-      "OSDI",
-      "SOSP"
-    ],
-    "years": {
-      "2022": 4,
-      "2025": 10,
-      "2026": 1,
-      "2024": 2,
-      "2023": 4,
-      "2021": 1,
-      "2020": 0
-    }
-  },
-  {
-    "affiliation": "University of California, San Diego",
-    "combined_score": 63,
-    "artifacts": 15,
-    "badges_functional": 15,
-    "badges_reproducible": 15,
-    "ae_memberships": 6,
-    "chair_count": 0,
-    "total_papers": 19,
-    "artifact_rate": 78.9,
-    "num_authors": 11,
-    "top_authors": [
-      {
-        "name": "Zheng Wang 0075",
-        "affiliation": "University of California, San Diego, CA, USA",
-        "combined_score": 15,
-        "artifacts": 3,
-        "ae_memberships": 2,
-        "total_papers": 5
-      },
-      {
-        "name": "Suyash Mahar",
-        "affiliation": "University of California, San Diego",
-        "combined_score": 9,
-        "artifacts": 1,
-        "ae_memberships": 2,
-        "total_papers": 1
-      },
-      {
-        "name": "Zaifeng Pan",
-        "affiliation": "University of California, San Diego",
-        "combined_score": 9,
-        "artifacts": 1,
-        "ae_memberships": 2,
-        "total_papers": 1
-      },
-      {
-        "name": "Amy Ousterhout",
-        "affiliation": "University of California, San Diego, CA, USA",
-        "combined_score": 6,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 3
-      },
-      {
-        "name": "Yiying Zhang 0005",
-        "affiliation": "University of California, San Diego, CA, USA",
-        "combined_score": 6,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 2
-      },
-      {
-        "name": "Alexander Breuer",
-        "affiliation": "University of California, San Diego, USA",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 0
-      },
-      {
-        "name": "Fan Chung",
-        "affiliation": "University of California, San Diego, Department of Computer Science and Engineering",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Nadia Polikarpova",
-        "affiliation": "University of California, San Diego, Department of Computer Science and Engineering, CA, USA",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Ranjit Jhala",
-        "affiliation": "University of California, San Diego, USA",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 2
-      },
-      {
-        "name": "Steven Swanson",
-        "affiliation": "University of California, San Diego, USA",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 2
-      },
-      {
-        "name": "Supun Nakandala",
-        "affiliation": "University of California, San Diego, Computer Science and Engineering Department, CA, USA",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "EUROSYS",
-      "OSDI",
-      "SC",
-      "SOSP"
-    ],
-    "years": {
-      "2025": 4,
-      "2024": 3,
-      "2023": 3,
-      "2022": 4,
-      "2021": 3,
-      "2020": 2
-    }
-  },
-  {
     "affiliation": "Virginia Tech",
     "combined_score": 62,
     "artifacts": 7,
@@ -4069,99 +4280,6 @@
     }
   },
   {
-    "affiliation": "University of Illinois Urbana-Champaign",
-    "combined_score": 62,
-    "artifacts": 7,
-    "badges_functional": 7,
-    "badges_reproducible": 6,
-    "ae_memberships": 14,
-    "chair_count": 0,
-    "total_papers": 10,
-    "artifact_rate": 70.0,
-    "num_authors": 8,
-    "top_authors": [
-      {
-        "name": "Siyuan Chai 0001",
-        "affiliation": "University of Illinois Urbana-Champaign, Department of Computer Science, Urbana-Champaign, IL, USA",
-        "combined_score": 12,
-        "artifacts": 1,
-        "ae_memberships": 3,
-        "total_papers": 1
-      },
-      {
-        "name": "Anna Karanika",
-        "affiliation": "University of Illinois Urbana-Champaign",
-        "combined_score": 9,
-        "artifacts": 1,
-        "ae_memberships": 2,
-        "total_papers": 1
-      },
-      {
-        "name": "Ayush Bansal",
-        "affiliation": "University of Illinois Urbana-Champaign",
-        "combined_score": 9,
-        "artifacts": 0,
-        "ae_memberships": 3,
-        "total_papers": 0
-      },
-      {
-        "name": "Han-Ting Liang",
-        "affiliation": "University of Illinois Urbana-Champaign",
-        "combined_score": 9,
-        "artifacts": 0,
-        "ae_memberships": 3,
-        "total_papers": 0
-      },
-      {
-        "name": "Jiankun Wang",
-        "affiliation": "University of Illinois Urbana-Champaign",
-        "combined_score": 9,
-        "artifacts": 0,
-        "ae_memberships": 3,
-        "total_papers": 0
-      },
-      {
-        "name": "Jongyul Kim 0001",
-        "affiliation": "University of Illinois Urbana-Champaign, IL, USA",
-        "combined_score": 8,
-        "artifacts": 3,
-        "ae_memberships": 0,
-        "total_papers": 3
-      },
-      {
-        "name": "Fan Lai 0001",
-        "affiliation": "University of Illinois Urbana-Champaign, IL, USA",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 3
-      },
-      {
-        "name": "Jiyuan Zhang 0003",
-        "affiliation": "University of Illinois Urbana-Champaign, IL, USA",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 2
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "EUROSYS",
-      "OSDI",
-      "SOSP"
-    ],
-    "years": {
-      "2025": 7,
-      "2024": 4,
-      "2023": 1,
-      "2022": 2,
-      "2021": 3,
-      "2020": 1,
-      "2026": 3
-    }
-  },
-  {
     "affiliation": "University of California, Santa Barbara",
     "combined_score": 60,
     "artifacts": 12,
@@ -4191,7 +4309,7 @@
       },
       {
         "name": "Amr El Abbadi",
-        "affiliation": "University of California, Santa Barbara, USA",
+        "affiliation": "University of California, Santa Barbara",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -4199,7 +4317,7 @@
       },
       {
         "name": "Divyakant Agrawal",
-        "affiliation": "University of California, Santa Barbara, USA",
+        "affiliation": "University of California, Santa Barbara",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -4207,7 +4325,7 @@
       },
       {
         "name": "Liu Liu 0017",
-        "affiliation": "University of California, Santa Barbara, CA, USA",
+        "affiliation": "University of California, Santa Barbara",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -4215,7 +4333,7 @@
       },
       {
         "name": "Zheng Qu 0002",
-        "affiliation": "University of California, Santa Barbara, CA, USA",
+        "affiliation": "University of California, Santa Barbara",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -4252,7 +4370,7 @@
     "top_authors": [
       {
         "name": "Cheng Li 0001",
-        "affiliation": "University of Science and Technology of China (USTC), China",
+        "affiliation": "University of Science and Technology of China",
         "combined_score": 13,
         "artifacts": 5,
         "ae_memberships": 0,
@@ -4268,7 +4386,7 @@
       },
       {
         "name": "Yinlong Xu 0001",
-        "affiliation": "University of Science and Technology of China, Hefei, Anhui, China",
+        "affiliation": "University of Science and Technology of China",
         "combined_score": 6,
         "artifacts": 4,
         "ae_memberships": 0,
@@ -4276,7 +4394,7 @@
       },
       {
         "name": "Ping Gong 0009",
-        "affiliation": "University of Science and Technology of China, Institute of Artificial Intelligence, Hefei Comprehensive National Science Center, China",
+        "affiliation": "University of Science and Technology of China",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -4292,7 +4410,7 @@
       },
       {
         "name": "Junxue Zhang 0001",
-        "affiliation": "University of Science and Technology of China (USTC), School of Computer Science and Technology, Hefei, China",
+        "affiliation": "University of Science and Technology of China",
         "combined_score": 4,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -4300,7 +4418,7 @@
       },
       {
         "name": "Shuo Liu 0019",
-        "affiliation": "University of Science and Technology of China, School of Computer Science and Technology, Hefei, China",
+        "affiliation": "University of Science and Technology of China",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -4308,7 +4426,7 @@
       },
       {
         "name": "Yi Zhai 0005",
-        "affiliation": "University of Science and Technology of China, Hefei, Anhui, China",
+        "affiliation": "University of Science and Technology of China",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -4316,7 +4434,7 @@
       },
       {
         "name": "Yu Zhang 0086",
-        "affiliation": "University of Science and Technology of China, Lab for Intelligent Networking and Knowledge Engineering, Hefei,China",
+        "affiliation": "University of Science and Technology of China",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -4378,7 +4496,7 @@
       },
       {
         "name": "Hang Liu 0001",
-        "affiliation": "Rutgers University, New Brunswick, USA",
+        "affiliation": "Rutgers University",
         "combined_score": 5,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -4400,74 +4518,6 @@
       "2022": 0,
       "2021": 4,
       "2020": 1
-    }
-  },
-  {
-    "affiliation": "UC Berkeley",
-    "combined_score": 55,
-    "artifacts": 9,
-    "badges_functional": 9,
-    "badges_reproducible": 8,
-    "ae_memberships": 9,
-    "chair_count": 1,
-    "total_papers": 13,
-    "artifact_rate": 69.2,
-    "num_authors": 5,
-    "top_authors": [
-      {
-        "name": "Natacha Crooks",
-        "affiliation": "UC Berkeley, CA, USA",
-        "combined_score": 20,
-        "artifacts": 5,
-        "ae_memberships": 1,
-        "total_papers": 8
-      },
-      {
-        "name": "Yichuan Wang 0002",
-        "affiliation": "UC Berkeley, CA, USA",
-        "combined_score": 12,
-        "artifacts": 1,
-        "ae_memberships": 3,
-        "total_papers": 1
-      },
-      {
-        "name": "Romil Bhardwaj",
-        "affiliation": "UC Berkeley",
-        "combined_score": 9,
-        "artifacts": 0,
-        "ae_memberships": 3,
-        "total_papers": 0
-      },
-      {
-        "name": "Rishabh R. Iyer",
-        "affiliation": "UC Berkeley, CA, USA",
-        "combined_score": 8,
-        "artifacts": 3,
-        "ae_memberships": 0,
-        "total_papers": 4
-      },
-      {
-        "name": "Frank Sifei Luan",
-        "affiliation": "UC Berkeley",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "EUROSYS",
-      "OSDI",
-      "SOSP"
-    ],
-    "years": {
-      "2025": 2,
-      "2024": 5,
-      "2023": 4,
-      "2022": 3,
-      "2021": 4,
-      "2020": 0
     }
   },
   {
@@ -4500,7 +4550,7 @@
       },
       {
         "name": "Vincent Liu 0001",
-        "affiliation": "University of Pennsylvania, Philadelphia, PA, USA",
+        "affiliation": "University of Pennsylvania",
         "combined_score": 11,
         "artifacts": 4,
         "ae_memberships": 0,
@@ -4508,7 +4558,7 @@
       },
       {
         "name": "Haoran Zhang 0009",
-        "affiliation": "University of Pennsylvania, Philadelphia, PA, USA",
+        "affiliation": "University of Pennsylvania",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -4516,7 +4566,7 @@
       },
       {
         "name": "Benjamin C. Pierce",
-        "affiliation": "University of Pennsylvania, Philadelphia, PA, USA",
+        "affiliation": "University of Pennsylvania",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -4524,7 +4574,7 @@
       },
       {
         "name": "Yiping Ma 0001",
-        "affiliation": "University of Pennsylvania, PA, USA",
+        "affiliation": "University of Pennsylvania",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -4545,67 +4595,6 @@
       "2022": 2,
       "2021": 3,
       "2020": 5
-    }
-  },
-  {
-    "affiliation": "University of Wisconsin-Madison",
-    "combined_score": 53,
-    "artifacts": 20,
-    "badges_functional": 20,
-    "badges_reproducible": 13,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 22,
-    "artifact_rate": 90.9,
-    "num_authors": 4,
-    "top_authors": [
-      {
-        "name": "Andrea C. Arpaci-Dusseau",
-        "affiliation": "University of Wisconsin-Madison, Madison, WI, USA",
-        "combined_score": 17,
-        "artifacts": 6,
-        "ae_memberships": 0,
-        "total_papers": 7
-      },
-      {
-        "name": "Remzi H. Arpaci-Dusseau",
-        "affiliation": "University of Wisconsin-Madison, Madison, WI, USA",
-        "combined_score": 17,
-        "artifacts": 6,
-        "ae_memberships": 0,
-        "total_papers": 7
-      },
-      {
-        "name": "Shivaram Venkataraman",
-        "affiliation": "University of Wisconsin-Madison, WI, USA",
-        "combined_score": 16,
-        "artifacts": 7,
-        "ae_memberships": 0,
-        "total_papers": 7
-      },
-      {
-        "name": "Yin Li 0003",
-        "affiliation": "University of Wisconsin-Madison, Biostatistics & Medical Informatics, USA",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "EUROSYS",
-      "FAST",
-      "OSDI",
-      "SC",
-      "SOSP"
-    ],
-    "years": {
-      "2025": 7,
-      "2024": 2,
-      "2023": 2,
-      "2022": 1,
-      "2021": 6,
-      "2020": 2
     }
   },
   {
@@ -4678,7 +4667,7 @@
       },
       {
         "name": "Henry Hoffmann",
-        "affiliation": "University of Chicago, USA",
+        "affiliation": "University of Chicago",
         "combined_score": 4,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -4694,7 +4683,7 @@
       },
       {
         "name": "Yuhan Liu 0004",
-        "affiliation": "University of Chicago, IL, USA",
+        "affiliation": "University of Chicago",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -4738,7 +4727,7 @@
       },
       {
         "name": "Tong Sun 0006",
-        "affiliation": "Zhejiang University, College of Computer Science, State Key Laboratory of Blockchain and Data Security, China",
+        "affiliation": "Zhejiang University",
         "combined_score": 8,
         "artifacts": 1,
         "ae_memberships": 2,
@@ -4770,7 +4759,7 @@
       },
       {
         "name": "Lei Wu 0012",
-        "affiliation": "Zhejiang University, Hangzhou, Zhejiang, China",
+        "affiliation": "Zhejiang University",
         "combined_score": 5,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -4778,7 +4767,7 @@
       },
       {
         "name": "Fei Wu 0001",
-        "affiliation": "Zhejiang University, College of Computer Science and Technology, Hangzhou, China",
+        "affiliation": "Zhejiang University",
         "combined_score": 4,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -4786,7 +4775,7 @@
       },
       {
         "name": "Kui Ren 0001",
-        "affiliation": "Zhejiang University, School of Cyber Science and Technology, Hangzhou, China",
+        "affiliation": "Zhejiang University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -4794,7 +4783,7 @@
       },
       {
         "name": "Weijian Chen 0002",
-        "affiliation": "Zhejiang University, China",
+        "affiliation": "Zhejiang University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -4846,7 +4835,7 @@
       },
       {
         "name": "Hong Jiang 0001",
-        "affiliation": "University of Texas at Arlington, Department of Computer Science and Engineering, TX, USA",
+        "affiliation": "University of Texas at Arlington",
         "combined_score": 10,
         "artifacts": 5,
         "ae_memberships": 0,
@@ -4854,7 +4843,7 @@
       },
       {
         "name": "Hui Lu 0001",
-        "affiliation": "University of Texas at Arlington (UTA), Department of Computer Science and Engineering, Arlington, TX, USA",
+        "affiliation": "University of Texas at Arlington",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -4862,7 +4851,7 @@
       },
       {
         "name": "Song Jiang 0001",
-        "affiliation": "University of Texas at Arlington, TX, USA",
+        "affiliation": "University of Texas at Arlington",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -4870,7 +4859,7 @@
       },
       {
         "name": "Zhijun Wang 0001",
-        "affiliation": "University of Texas at Arlington, Department of Computer Science and Engineering, Arlington, TX, USA",
+        "affiliation": "University of Texas at Arlington",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -4891,6 +4880,91 @@
       "2022": 6,
       "2021": 2,
       "2020": 0
+    }
+  },
+  {
+    "affiliation": "University of California, Irvine",
+    "combined_score": 48,
+    "artifacts": 3,
+    "badges_functional": 3,
+    "badges_reproducible": 3,
+    "ae_memberships": 13,
+    "chair_count": 0,
+    "total_papers": 5,
+    "artifact_rate": 60.0,
+    "num_authors": 7,
+    "top_authors": [
+      {
+        "name": "Dongjoo Seo",
+        "affiliation": "University of California, Irvine",
+        "combined_score": 15,
+        "artifacts": 0,
+        "ae_memberships": 5,
+        "total_papers": 0
+      },
+      {
+        "name": "Haocheng Xu",
+        "affiliation": "University of California, Irvine",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Mengwei Yang",
+        "affiliation": "University of California, Irvine",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Zhihao Yao",
+        "affiliation": "University of California, Irvine",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Michael Franz",
+        "affiliation": "University of California, Irvine",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 3
+      },
+      {
+        "name": "Sangeetha Abdu Jyothi",
+        "affiliation": "University of California, Irvine",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Zhou Li 0001",
+        "affiliation": "University of California, Irvine",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      }
+    ],
+    "conferences": [
+      "ATC",
+      "EUROSYS",
+      "FAST",
+      "OSDI",
+      "SOSP"
+    ],
+    "years": {
+      "2024": 7,
+      "2025": 4,
+      "2021": 1,
+      "2022": 2,
+      "2023": 1,
+      "2020": 1
     }
   },
   {
@@ -4947,7 +5021,7 @@
       },
       {
         "name": "Nong Xiao 0001",
-        "affiliation": "Sun Yat-sen University, Guangdong, China",
+        "affiliation": "Sun Yat-sen University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -4955,7 +5029,7 @@
       },
       {
         "name": "Yuxin Su 0001",
-        "affiliation": "Sun Yat-Sen University, Guangzhou, Guangdong, China",
+        "affiliation": "Sun Yat-Sen University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -5160,128 +5234,6 @@
     }
   },
   {
-    "affiliation": "MIT",
-    "combined_score": 46,
-    "artifacts": 10,
-    "badges_functional": 9,
-    "badges_reproducible": 9,
-    "ae_memberships": 6,
-    "chair_count": 0,
-    "total_papers": 15,
-    "artifact_rate": 66.7,
-    "num_authors": 4,
-    "top_authors": [
-      {
-        "name": "Qinghao Hu 0004",
-        "affiliation": "MIT, Cambridge, MA, USA",
-        "combined_score": 21,
-        "artifacts": 3,
-        "ae_memberships": 4,
-        "total_papers": 3
-      },
-      {
-        "name": "M. Frans Kaashoek",
-        "affiliation": "MIT, Cambridge, USA",
-        "combined_score": 16,
-        "artifacts": 6,
-        "ae_memberships": 0,
-        "total_papers": 11
-      },
-      {
-        "name": "Kevin Liao",
-        "affiliation": "MIT",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Hari Balakrishnan",
-        "affiliation": "MIT, Cambridge, USA",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "EUROSYS",
-      "OSDI",
-      "SC",
-      "SOSP"
-    ],
-    "years": {
-      "2025": 1,
-      "2024": 1,
-      "2023": 2,
-      "2022": 5,
-      "2021": 3,
-      "2020": 2
-    }
-  },
-  {
-    "affiliation": "University of California San Diego",
-    "combined_score": 45,
-    "artifacts": 11,
-    "badges_functional": 10,
-    "badges_reproducible": 9,
-    "ae_memberships": 5,
-    "chair_count": 0,
-    "total_papers": 14,
-    "artifact_rate": 78.6,
-    "num_authors": 4,
-    "top_authors": [
-      {
-        "name": "Yufei Ding 0001",
-        "affiliation": "University of California San Diego, Department of Computer Science & Engineering, San Diego, CA, USA",
-        "combined_score": 21,
-        "artifacts": 7,
-        "ae_memberships": 0,
-        "total_papers": 7
-      },
-      {
-        "name": "Yizhou Shan",
-        "affiliation": "University of California San Diego",
-        "combined_score": 9,
-        "artifacts": 2,
-        "ae_memberships": 2,
-        "total_papers": 2
-      },
-      {
-        "name": "Junda Chen",
-        "affiliation": "University of California San Diego",
-        "combined_score": 9,
-        "artifacts": 0,
-        "ae_memberships": 3,
-        "total_papers": 0
-      },
-      {
-        "name": "Hao Zhang 0025",
-        "affiliation": "University of California San Diego, La Jolla, CA, USA",
-        "combined_score": 6,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 5
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "EUROSYS",
-      "OSDI",
-      "SC",
-      "SOSP"
-    ],
-    "years": {
-      "2025": 4,
-      "2024": 2,
-      "2023": 3,
-      "2022": 1,
-      "2021": 5,
-      "2020": 1
-    }
-  },
-  {
     "affiliation": "University of North Carolina at Charlotte",
     "combined_score": 45,
     "artifacts": 0,
@@ -5360,7 +5312,7 @@
       },
       {
         "name": "Vasiliki Kalavri",
-        "affiliation": "Boston University, USA",
+        "affiliation": "Boston University",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -5384,7 +5336,7 @@
       },
       {
         "name": "Azer Bestavros",
-        "affiliation": "Boston University, USA",
+        "affiliation": "Boston University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -5392,7 +5344,7 @@
       },
       {
         "name": "Ibrahim Matta",
-        "affiliation": "Boston University, USA",
+        "affiliation": "Boston University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -5461,7 +5413,7 @@
       },
       {
         "name": "Bingsheng He",
-        "affiliation": "National University of Singapore, Department of Computer Science, Singapore",
+        "affiliation": "National University of Singapore",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -5469,7 +5421,7 @@
       },
       {
         "name": "Jialin Li 0001",
-        "affiliation": "National University of Singapore, School of Computing",
+        "affiliation": "National University of Singapore",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -5530,7 +5482,7 @@
       },
       {
         "name": "David E. Irwin 0001",
-        "affiliation": "University of Massachusetts Amherst, Department of Computer Science, USA",
+        "affiliation": "University of Massachusetts Amherst",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -5538,7 +5490,7 @@
       },
       {
         "name": "Prashant J. Shenoy",
-        "affiliation": "University of Massachusetts Amherst, USA",
+        "affiliation": "University of Massachusetts Amherst",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -5724,7 +5676,7 @@
       },
       {
         "name": "Yue Cheng 0001",
-        "affiliation": "University of Virginia, Charlottesville, VA, USA",
+        "affiliation": "University of Virginia",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -5748,74 +5700,6 @@
     }
   },
   {
-    "affiliation": "University of California, Irvine",
-    "combined_score": 39,
-    "artifacts": 2,
-    "badges_functional": 2,
-    "badges_reproducible": 2,
-    "ae_memberships": 11,
-    "chair_count": 0,
-    "total_papers": 4,
-    "artifact_rate": 50.0,
-    "num_authors": 5,
-    "top_authors": [
-      {
-        "name": "Dongjoo Seo",
-        "affiliation": "University of California, Irvine",
-        "combined_score": 15,
-        "artifacts": 0,
-        "ae_memberships": 5,
-        "total_papers": 0
-      },
-      {
-        "name": "Haocheng Xu",
-        "affiliation": "University of California, Irvine",
-        "combined_score": 12,
-        "artifacts": 0,
-        "ae_memberships": 4,
-        "total_papers": 0
-      },
-      {
-        "name": "Mengwei Yang",
-        "affiliation": "University of California, Irvine",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Michael Franz",
-        "affiliation": "University of California, Irvine, USA",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 3
-      },
-      {
-        "name": "Sangeetha Abdu Jyothi",
-        "affiliation": "University of California, Irvine, CA, USA",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "EUROSYS",
-      "FAST",
-      "OSDI"
-    ],
-    "years": {
-      "2024": 7,
-      "2025": 4,
-      "2023": 0,
-      "2022": 1,
-      "2021": 0,
-      "2020": 1
-    }
-  },
-  {
     "affiliation": "New York University",
     "combined_score": 39,
     "artifacts": 10,
@@ -5829,7 +5713,7 @@
     "top_authors": [
       {
         "name": "Joseph Tassarotti",
-        "affiliation": "New York University, New York, USA",
+        "affiliation": "New York University",
         "combined_score": 13,
         "artifacts": 5,
         "ae_memberships": 0,
@@ -5853,7 +5737,7 @@
       },
       {
         "name": "Michael Walfish",
-        "affiliation": "New York University, Courant Institute of Mathematical Sciences, NY, USA",
+        "affiliation": "New York University",
         "combined_score": 5,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -5861,7 +5745,7 @@
       },
       {
         "name": "Jinyang Li 0001",
-        "affiliation": "New York University, Department of Computer Science, NY, USA",
+        "affiliation": "New York University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -5869,7 +5753,7 @@
       },
       {
         "name": "Martin Farach-Colton",
-        "affiliation": "New York University, NY, USA",
+        "affiliation": "New York University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -5877,7 +5761,7 @@
       },
       {
         "name": "Tao Wang 0088",
-        "affiliation": "New York University, NY, USA",
+        "affiliation": "New York University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -5897,83 +5781,6 @@
       "2022": 2,
       "2021": 3,
       "2020": 2
-    }
-  },
-  {
-    "affiliation": "Massachusetts Institute of Technology",
-    "combined_score": 37,
-    "artifacts": 11,
-    "badges_functional": 10,
-    "badges_reproducible": 10,
-    "ae_memberships": 2,
-    "chair_count": 0,
-    "total_papers": 14,
-    "artifact_rate": 78.6,
-    "num_authors": 6,
-    "top_authors": [
-      {
-        "name": "Nickolai Zeldovich",
-        "affiliation": "Massachusetts Institute of Technology, Cambridge, USA",
-        "combined_score": 19,
-        "artifacts": 7,
-        "ae_memberships": 0,
-        "total_papers": 11
-      },
-      {
-        "name": "Tianhao Huang",
-        "affiliation": "Massachusetts Institute of Technology",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Arvind 0001",
-        "affiliation": "Massachusetts Institute of Technology (MIT), Cambridge, MA, USA",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Benjamin Holmes 0002",
-        "affiliation": "Massachusetts Institute of Technology, Cambridge, MA, USA",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Vijay Gadepally",
-        "affiliation": "Massachusetts Institute of Technology, MIT, Lincoln Laboratory, Lexington, MA, USA",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 0
-      },
-      {
-        "name": "Xuhao Chen 0001",
-        "affiliation": "Massachusetts Institute of Technology, Cambridge, MA, USA",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "EUROSYS",
-      "OSDI",
-      "SC",
-      "SOSP"
-    ],
-    "years": {
-      "2025": 1,
-      "2024": 1,
-      "2023": 2,
-      "2022": 6,
-      "2021": 2,
-      "2020": 1
     }
   },
   {
@@ -6022,7 +5829,7 @@
       },
       {
         "name": "H. T. Kung 0001",
-        "affiliation": "Harvard University, Cambridge, MA, USA",
+        "affiliation": "Harvard University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -6030,7 +5837,7 @@
       },
       {
         "name": "Jin Li 0050",
-        "affiliation": "Harvard University, Cambridge, MA, USA",
+        "affiliation": "Harvard University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -6075,7 +5882,7 @@
       },
       {
         "name": "Erci Xu",
-        "affiliation": "Ohio State University, Department of Computer Science & Engineering",
+        "affiliation": "Ohio State University",
         "combined_score": 11,
         "artifacts": 4,
         "ae_memberships": 0,
@@ -6091,7 +5898,7 @@
       },
       {
         "name": "Yang Wang 0009",
-        "affiliation": "Ohio State University, Columbus, OH, USA",
+        "affiliation": "Ohio State University",
         "combined_score": 5,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -6179,7 +5986,7 @@
     "top_authors": [
       {
         "name": "Simon Peter 0001",
-        "affiliation": "University of Washington, Seattle, WA, USA",
+        "affiliation": "University of Washington",
         "combined_score": 12,
         "artifacts": 5,
         "ae_memberships": 0,
@@ -6203,7 +6010,7 @@
       },
       {
         "name": "Thomas E. Anderson",
-        "affiliation": "University of Washington, Seattle, Washington, USA",
+        "affiliation": "University of Washington",
         "combined_score": 4,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -6211,7 +6018,7 @@
       },
       {
         "name": "Arvind Krishnamurthy",
-        "affiliation": "University of Washington, Seattle, Washington, USA",
+        "affiliation": "University of Washington",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -6219,7 +6026,7 @@
       },
       {
         "name": "Ellis Michael",
-        "affiliation": "University of Washington, Seattle, WA, USA",
+        "affiliation": "University of Washington",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -6227,7 +6034,7 @@
       },
       {
         "name": "Xi Wang 0005",
-        "affiliation": "University of Washington, Seattle, WA, USA",
+        "affiliation": "University of Washington",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -6247,59 +6054,6 @@
       "2022": 3,
       "2021": 2,
       "2020": 5
-    }
-  },
-  {
-    "affiliation": "UIUC",
-    "combined_score": 36,
-    "artifacts": 3,
-    "badges_functional": 3,
-    "badges_reproducible": 3,
-    "ae_memberships": 9,
-    "chair_count": 0,
-    "total_papers": 4,
-    "artifact_rate": 75.0,
-    "num_authors": 3,
-    "top_authors": [
-      {
-        "name": "Haoran Qiu",
-        "affiliation": "UIUC",
-        "combined_score": 21,
-        "artifacts": 3,
-        "ae_memberships": 4,
-        "total_papers": 4
-      },
-      {
-        "name": "Enguang Fan",
-        "affiliation": "UIUC",
-        "combined_score": 9,
-        "artifacts": 0,
-        "ae_memberships": 3,
-        "total_papers": 0
-      },
-      {
-        "name": "Vikram Sharma Mailthody",
-        "affiliation": "UIUC",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "EUROSYS",
-      "OSDI",
-      "SOSP"
-    ],
-    "years": {
-      "2025": 2,
-      "2024": 1,
-      "2023": 2,
-      "2022": 2,
-      "2021": 2,
-      "2020": 1,
-      "2026": 1
     }
   },
   {
@@ -6332,7 +6086,7 @@
       },
       {
         "name": "Tianwei Zhang 0004",
-        "affiliation": "Nanyang Technological University, School of Computer Science and Engineering, Singapore",
+        "affiliation": "Nanyang Technological University",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -6340,7 +6094,7 @@
       },
       {
         "name": "Yonggang Wen 0001",
-        "affiliation": "Nanyang Technological University, Singapore",
+        "affiliation": "Nanyang Technological University",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -6539,67 +6293,6 @@
     }
   },
   {
-    "affiliation": "ETH Zrich",
-    "combined_score": 31,
-    "artifacts": 12,
-    "badges_functional": 11,
-    "badges_reproducible": 8,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 11,
-    "artifact_rate": 109.1,
-    "num_authors": 4,
-    "top_authors": [
-      {
-        "name": "Torsten Hoefler",
-        "affiliation": "ETH Zrich",
-        "combined_score": 20,
-        "artifacts": 8,
-        "ae_memberships": 0,
-        "total_papers": 4
-      },
-      {
-        "name": "Gustavo Alonso",
-        "affiliation": "ETH Zrich, Switzerland",
-        "combined_score": 5,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 6
-      },
-      {
-        "name": "Maciej Besta",
-        "affiliation": "ETH Zrich, Switzerland",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 0
-      },
-      {
-        "name": "Matthias Brun 0002",
-        "affiliation": "ETH Zrich, Switzerland",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "EUROSYS",
-      "OSDI",
-      "SC",
-      "SOSP"
-    ],
-    "years": {
-      "2025": 1,
-      "2024": 2,
-      "2023": 1,
-      "2022": 1,
-      "2021": 6,
-      "2020": 1
-    }
-  },
-  {
     "affiliation": "University of California, Riverside",
     "combined_score": 30,
     "artifacts": 1,
@@ -6637,7 +6330,7 @@
       },
       {
         "name": "Hung-Wei Tseng 0001",
-        "affiliation": "University of California, Riverside, CA, USA",
+        "affiliation": "University of California, Riverside",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -6658,50 +6351,6 @@
       "2022": 2,
       "2021": 1,
       "2020": 0
-    }
-  },
-  {
-    "affiliation": "Swiss Federal Institute of Technology in Lausanne",
-    "combined_score": 29,
-    "artifacts": 11,
-    "badges_functional": 11,
-    "badges_reproducible": 7,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 12,
-    "artifact_rate": 91.7,
-    "num_authors": 2,
-    "top_authors": [
-      {
-        "name": "Rachid Guerraoui",
-        "affiliation": "Swiss Federal Institute of Technology in Lausanne, Switzerland",
-        "combined_score": 15,
-        "artifacts": 6,
-        "ae_memberships": 0,
-        "total_papers": 6
-      },
-      {
-        "name": "George Candea",
-        "affiliation": "Swiss Federal Institute of Technology in Lausanne, Switzerland",
-        "combined_score": 14,
-        "artifacts": 5,
-        "ae_memberships": 0,
-        "total_papers": 6
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "EUROSYS",
-      "OSDI",
-      "SOSP"
-    ],
-    "years": {
-      "2025": 0,
-      "2024": 6,
-      "2023": 2,
-      "2022": 1,
-      "2021": 0,
-      "2020": 2
     }
   },
   {
@@ -6726,7 +6375,7 @@
       },
       {
         "name": "Xiang Li 0067",
-        "affiliation": "East China Normal University, School of Data Science and Engineering, Shanghai Engineering Research Center of Big Data Management, China",
+        "affiliation": "East China Normal University",
         "combined_score": 7,
         "artifacts": 1,
         "ae_memberships": 2,
@@ -6742,7 +6391,7 @@
       },
       {
         "name": "Chengcheng Wan 0001",
-        "affiliation": "East China Normal University, China",
+        "affiliation": "East China Normal University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -6792,7 +6441,7 @@
       },
       {
         "name": "Chuan Wu 0001",
-        "affiliation": "University of Hong Kong, Department of Computer Science, Pokfulam",
+        "affiliation": "University of Hong Kong",
         "combined_score": 6,
         "artifacts": 3,
         "ae_memberships": 0,
@@ -6800,7 +6449,7 @@
       },
       {
         "name": "Chenyu Jiang 0002",
-        "affiliation": "University of Hong Kong, Department of Computer Science, Hong Kong",
+        "affiliation": "University of Hong Kong",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -6843,7 +6492,7 @@
     "top_authors": [
       {
         "name": "Shuai Mu 0001",
-        "affiliation": "Stony Brook University, NY, USA",
+        "affiliation": "Stony Brook University",
         "combined_score": 8,
         "artifacts": 3,
         "ae_memberships": 0,
@@ -6867,7 +6516,7 @@
       },
       {
         "name": "Jun Yuan 0006",
-        "affiliation": "Stony Brook University, New York, NY, USA",
+        "affiliation": "Stony Brook University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -6875,7 +6524,7 @@
       },
       {
         "name": "Michael A. Bender",
-        "affiliation": "Stony Brook University, NY, USA",
+        "affiliation": "Stony Brook University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -6883,7 +6532,7 @@
       },
       {
         "name": "Scott A. Smolka",
-        "affiliation": "Stony Brook University, USA",
+        "affiliation": "Stony Brook University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -6986,7 +6635,7 @@
       },
       {
         "name": "Mohammad Shahrad",
-        "affiliation": "University of British Columbia, Canada",
+        "affiliation": "University of British Columbia",
         "combined_score": 6,
         "artifacts": 3,
         "ae_memberships": 0,
@@ -7002,7 +6651,7 @@
       },
       {
         "name": "Arpan Gujarati",
-        "affiliation": "University of British Columbia, Computer Science Department, Vancouver, BC, Canada",
+        "affiliation": "University of British Columbia",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -7037,7 +6686,7 @@
     "top_authors": [
       {
         "name": "Ravi Netravali",
-        "affiliation": "Princeton University, Department of Computer Science, NJ, USA",
+        "affiliation": "Princeton University",
         "combined_score": 9,
         "artifacts": 4,
         "ae_memberships": 0,
@@ -7045,7 +6694,7 @@
       },
       {
         "name": "Amit Levy",
-        "affiliation": "Princeton University, NJ, USA",
+        "affiliation": "Princeton University",
         "combined_score": 6,
         "artifacts": 3,
         "ae_memberships": 0,
@@ -7053,7 +6702,7 @@
       },
       {
         "name": "Zhen Jia 0001",
-        "affiliation": "Princeton University, Computer Science Department, NJ, USA",
+        "affiliation": "Princeton University",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -7084,6 +6733,68 @@
     }
   },
   {
+    "affiliation": "University of California, Santa Cruz",
+    "combined_score": 26,
+    "artifacts": 3,
+    "badges_functional": 3,
+    "badges_reproducible": 3,
+    "ae_memberships": 5,
+    "chair_count": 1,
+    "total_papers": 6,
+    "artifact_rate": 50.0,
+    "num_authors": 4,
+    "top_authors": [
+      {
+        "name": "Yusheng Zheng",
+        "affiliation": "University of California, Santa Cruz",
+        "combined_score": 12,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      },
+      {
+        "name": "Ivo Jimenez",
+        "affiliation": "University of California, Santa Cruz",
+        "combined_score": 8,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Andrew Quinn 0001",
+        "affiliation": "University of California, Santa Cruz",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 4
+      },
+      {
+        "name": "Yiwei Yang 0002",
+        "affiliation": "University of California, Santa Cruz",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      }
+    ],
+    "conferences": [
+      "ATC",
+      "EUROSYS",
+      "OSDI",
+      "SC",
+      "SOSP"
+    ],
+    "years": {
+      "2025": 3,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 2,
+      "2020": 1,
+      "2026": 1
+    }
+  },
+  {
     "affiliation": "Syracuse University",
     "combined_score": 25,
     "artifacts": 6,
@@ -7097,7 +6808,7 @@
     "top_authors": [
       {
         "name": "Xiangqun Zhang 0002",
-        "affiliation": "Syracuse University, NY, USA",
+        "affiliation": "Syracuse University",
         "combined_score": 14,
         "artifacts": 1,
         "ae_memberships": 4,
@@ -7105,7 +6816,7 @@
       },
       {
         "name": "Bryan S. Kim",
-        "affiliation": "Syracuse University, NY, USA",
+        "affiliation": "Syracuse University",
         "combined_score": 8,
         "artifacts": 4,
         "ae_memberships": 0,
@@ -7113,7 +6824,7 @@
       },
       {
         "name": "Kristopher K. Micinski",
-        "affiliation": "Syracuse University, NY, USA",
+        "affiliation": "Syracuse University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -7191,7 +6902,7 @@
     "num_authors": 3,
     "top_authors": [
       {
-        "name": "Malvika\tJadhav",
+        "name": "Malvika Jadhav",
         "affiliation": "University of Florida",
         "combined_score": 12,
         "artifacts": 0,
@@ -7256,7 +6967,7 @@
       },
       {
         "name": "Avani Wildani",
-        "affiliation": "Emory University, Atlanta, GA, USA",
+        "affiliation": "Emory University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -7264,7 +6975,7 @@
       },
       {
         "name": "Ymir Vigfusson",
-        "affiliation": "Emory University, Atlanta, GA, USA",
+        "affiliation": "Emory University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -7398,59 +7109,6 @@
     }
   },
   {
-    "affiliation": "CUHK",
-    "combined_score": 24,
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 8,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 4,
-    "top_authors": [
-      {
-        "name": "Jiangfei Duan, The Chinese University of Hong Kong",
-        "affiliation": "CUHK",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Qiang Su, The Chinese University of Hong Kong",
-        "affiliation": "CUHK",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Xin Tan, The Chinese University of Hong Kong",
-        "affiliation": "CUHK",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Zhihan Jiang, The Chinese University of Hong Kong",
-        "affiliation": "CUHK",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "OSDI"
-    ],
-    "years": {
-      "2024": 8
-    }
-  },
-  {
     "affiliation": "University of Maryland",
     "combined_score": 23,
     "artifacts": 3,
@@ -7472,7 +7130,7 @@
       },
       {
         "name": "Runzhou Tao 0001",
-        "affiliation": "University of Maryland, Department of Computer Science, Joint Center for Quantum Information and Computer Science, College Park, MD, USA",
+        "affiliation": "University of Maryland",
         "combined_score": 5,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -7516,7 +7174,7 @@
       },
       {
         "name": "Cheng Tan 0005",
-        "affiliation": "Northeastern University, USA",
+        "affiliation": "Northeastern University",
         "combined_score": 8,
         "artifacts": 3,
         "ae_memberships": 0,
@@ -7524,7 +7182,7 @@
       },
       {
         "name": "Baolin Li 0001",
-        "affiliation": "Northeastern University, Boston, MA, USA",
+        "affiliation": "Northeastern University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -7532,7 +7190,7 @@
       },
       {
         "name": "Jian Zhang 0102",
-        "affiliation": "Northeastern University, Boston, MA, USA",
+        "affiliation": "Northeastern University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -7657,6 +7315,74 @@
     }
   },
   {
+    "affiliation": "KAIST",
+    "combined_score": 22,
+    "artifacts": 6,
+    "badges_functional": 5,
+    "badges_reproducible": 5,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 10,
+    "artifact_rate": 60.0,
+    "num_authors": 5,
+    "top_authors": [
+      {
+        "name": "Youjip Won",
+        "affiliation": "KAIST",
+        "combined_score": 7,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 5
+      },
+      {
+        "name": "Dae R. Jeong, Korea Advanced Institute of Science and Technology",
+        "affiliation": "KAIST",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Dongsu Han",
+        "affiliation": "KAIST",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Jaehong Kim 0002",
+        "affiliation": "KAIST",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Sue Moon",
+        "affiliation": "KAIST",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 2
+      }
+    ],
+    "conferences": [
+      "ATC",
+      "EUROSYS",
+      "FAST",
+      "OSDI"
+    ],
+    "years": {
+      "2025": 2,
+      "2024": 2,
+      "2023": 3,
+      "2022": 1,
+      "2021": 0,
+      "2020": 0
+    }
+  },
+  {
     "affiliation": "Facebook",
     "combined_score": 21,
     "artifacts": 2,
@@ -7721,7 +7447,7 @@
       },
       {
         "name": "Pierre Olivier",
-        "affiliation": "The University of Manchester, UK",
+        "affiliation": "The University of Manchester",
         "combined_score": 6,
         "artifacts": 1,
         "ae_memberships": 1,
@@ -7808,7 +7534,7 @@
       },
       {
         "name": "Trent Jaeger",
-        "affiliation": "Pennsylvania State University, University Park, USA",
+        "affiliation": "Pennsylvania State University",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -7816,7 +7542,7 @@
       },
       {
         "name": "Bhuvan Urgaonkar",
-        "affiliation": "Pennsylvania State University, University Park, USA",
+        "affiliation": "Pennsylvania State University",
         "combined_score": 3,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -7882,131 +7608,6 @@
     "years": {
       "2025": 6,
       "2026": 1
-    }
-  },
-  {
-    "affiliation": "University of Illinois Urbana-Champaign / University of Chicago",
-    "combined_score": 20,
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 6,
-    "chair_count": 1,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Bogdan Alexandru Stoica",
-        "affiliation": "University of Illinois Urbana-Champaign / University of Chicago, USA",
-        "combined_score": 20,
-        "artifacts": 0,
-        "ae_memberships": 6,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "EUROSYS",
-      "OSDI",
-      "SOSP"
-    ],
-    "years": {
-      "2021": 1,
-      "2022": 3,
-      "2025": 1,
-      "2026": 1
-    }
-  },
-  {
-    "affiliation": "UC Santa Cruz",
-    "combined_score": 20,
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 5,
-    "chair_count": 1,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 2,
-    "top_authors": [
-      {
-        "name": "Yusheng Zheng",
-        "affiliation": "UC Santa Cruz",
-        "combined_score": 12,
-        "artifacts": 1,
-        "ae_memberships": 3,
-        "total_papers": 1
-      },
-      {
-        "name": "Ivo Jimenez",
-        "affiliation": "UC Santa Cruz, CROSS, University of Sonora",
-        "combined_score": 8,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "EUROSYS",
-      "OSDI",
-      "SC",
-      "SOSP"
-    ],
-    "years": {
-      "2025": 2,
-      "2024": 0,
-      "2023": 0,
-      "2022": 0,
-      "2021": 2,
-      "2020": 0,
-      "2026": 1
-    }
-  },
-  {
-    "affiliation": "Georgia Tech",
-    "combined_score": 20,
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 5,
-    "chair_count": 1,
-    "total_papers": 2,
-    "artifact_rate": 50.0,
-    "num_authors": 2,
-    "top_authors": [
-      {
-        "name": "Anirudh Sarma",
-        "affiliation": "Georgia Tech",
-        "combined_score": 12,
-        "artifacts": 0,
-        "ae_memberships": 4,
-        "total_papers": 0
-      },
-      {
-        "name": "Alexey Tumanov",
-        "affiliation": "Georgia Tech",
-        "combined_score": 8,
-        "artifacts": 1,
-        "ae_memberships": 1,
-        "total_papers": 2
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "EUROSYS",
-      "OSDI",
-      "SOSP"
-    ],
-    "years": {
-      "2024": 3,
-      "2025": 1,
-      "2026": 1,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0
     }
   },
   {
@@ -8166,7 +7767,7 @@
       },
       {
         "name": "Jian Li 0008",
-        "affiliation": "Binghamton University (SUNY), Department of Electrical and Computer Engineering, Binghamton, NY, USA",
+        "affiliation": "Binghamton University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -8244,7 +7845,7 @@
     "top_authors": [
       {
         "name": "Yangfan Zhou 0002",
-        "affiliation": "Fudan University, Shanghai, China",
+        "affiliation": "Fudan University",
         "combined_score": 9,
         "artifacts": 3,
         "ae_memberships": 0,
@@ -8252,7 +7853,7 @@
       },
       {
         "name": "Xin Wang 0002",
-        "affiliation": "Fudan University, School of Computer Science, Shanghai Key Laboratory of Intelligent Information Processing, China",
+        "affiliation": "Fudan University",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -8260,7 +7861,7 @@
       },
       {
         "name": "Zhe Zhou 0001",
-        "affiliation": "Fudan University, School of Computer Science, Shanghai, China",
+        "affiliation": "Fudan University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -8371,53 +7972,61 @@
     }
   },
   {
-    "affiliation": "KAIST",
-    "combined_score": 16,
+    "affiliation": "Max Planck Institute for Software Systems",
+    "combined_score": 17,
     "artifacts": 4,
-    "badges_functional": 3,
+    "badges_functional": 4,
     "badges_reproducible": 3,
     "ae_memberships": 2,
     "chair_count": 0,
-    "total_papers": 7,
-    "artifact_rate": 57.1,
-    "num_authors": 3,
+    "total_papers": 4,
+    "artifact_rate": 100.0,
+    "num_authors": 4,
     "top_authors": [
       {
-        "name": "Youjip Won",
-        "affiliation": "KAIST, Daejeon, Korea",
-        "combined_score": 7,
-        "artifacts": 3,
-        "ae_memberships": 0,
-        "total_papers": 5
-      },
-      {
-        "name": "Dae R. Jeong, Korea Advanced Institute of Science and Technology",
-        "affiliation": "KAIST",
+        "name": "Zhiqiang Xie, Max Planck Institute for Software Systems",
+        "affiliation": "Max Planck Institute for Software Systems",
         "combined_score": 6,
         "artifacts": 0,
         "ae_memberships": 2,
         "total_papers": 0
       },
       {
-        "name": "Sue Moon",
-        "affiliation": "KAIST, Korea",
+        "name": "Deepak Garg 0001",
+        "affiliation": "Max Planck Institute for Software Systems",
+        "combined_score": 5,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Peter Druschel",
+        "affiliation": "Max Planck Institute for Software Systems",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
-        "total_papers": 2
+        "total_papers": 1
+      },
+      {
+        "name": "Viktor Vafeiadis",
+        "affiliation": "Max Planck Institute for Software Systems",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
       }
     ],
     "conferences": [
       "ATC",
       "EUROSYS",
-      "FAST",
-      "OSDI"
+      "OSDI",
+      "SOSP"
     ],
     "years": {
-      "2025": 2,
-      "2024": 2,
-      "2023": 1,
-      "2022": 1,
+      "2022": 2,
+      "2025": 0,
+      "2024": 0,
+      "2023": 4,
       "2021": 0,
       "2020": 0
     }
@@ -8585,7 +8194,7 @@
       },
       {
         "name": "Xipeng Shen",
-        "affiliation": "North Carolina State University, USA",
+        "affiliation": "North Carolina State University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -8636,7 +8245,7 @@
       },
       {
         "name": "Feng Qian 0001",
-        "affiliation": "University of Southern California, CA, USA",
+        "affiliation": "University of Southern California",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -8688,7 +8297,7 @@
       },
       {
         "name": "Dong Li 0001",
-        "affiliation": "University of California, Merced, CA, USA",
+        "affiliation": "University of California, Merced",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -8739,7 +8348,7 @@
       },
       {
         "name": "Chen Chen 0124",
-        "affiliation": "ShanghaiTech University, School of Information Science and Technology, China",
+        "affiliation": "ShanghaiTech University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -8807,7 +8416,7 @@
     "top_authors": [
       {
         "name": "Jiangshan Yu",
-        "affiliation": "University of Sydney, School of Computer Science, Sydney, Australia",
+        "affiliation": "University of Sydney",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -8815,7 +8424,7 @@
       },
       {
         "name": "Shuaiwen Leon Song",
-        "affiliation": "University of Sydney, Australia",
+        "affiliation": "University of Sydney",
         "combined_score": 5,
         "artifacts": 3,
         "ae_memberships": 0,
@@ -8823,7 +8432,7 @@
       },
       {
         "name": "Willy Zwaenepoel",
-        "affiliation": "University of Sydney, NSW, Australia",
+        "affiliation": "University of Sydney",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -9129,7 +8738,7 @@
     "top_authors": [
       {
         "name": "Keren Zhou 0001",
-        "affiliation": "George Mason University, VA, USA",
+        "affiliation": "George Mason University",
         "combined_score": 9,
         "artifacts": 1,
         "ae_memberships": 2,
@@ -9137,7 +8746,7 @@
       },
       {
         "name": "Songqing Chen",
-        "affiliation": "George Mason University, Department of Computer Science, Fairfax, VA, USA",
+        "affiliation": "George Mason University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -9216,7 +8825,7 @@
     "top_authors": [
       {
         "name": "Suyash Gupta 0001",
-        "affiliation": "University of Oregon, Eugene, OR, USA",
+        "affiliation": "University of Oregon",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -9346,43 +8955,6 @@
     }
   },
   {
-    "affiliation": "CUHK-Shenzhen",
-    "combined_score": 12,
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 4,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 2,
-    "top_authors": [
-      {
-        "name": "Aoyang Fang, The Chinese University of Hong Kong, Shenzhen",
-        "affiliation": "CUHK-Shenzhen",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Boxi Yu, The Chinese University of Hong Kong, Shenzhen",
-        "affiliation": "CUHK-Shenzhen",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "OSDI"
-    ],
-    "years": {
-      "2024": 4
-    }
-  },
-  {
     "affiliation": "Newcastle University",
     "combined_score": 12,
     "artifacts": 0,
@@ -9404,7 +8976,7 @@
       },
       {
         "name": "Matthew Forshaw",
-        "affiliation": "Newcastle University, UK",
+        "affiliation": "Newcastle University",
         "combined_score": 6,
         "artifacts": 0,
         "ae_memberships": 2,
@@ -9420,44 +8992,6 @@
     "years": {
       "2022": 3,
       "2021": 1
-    }
-  },
-  {
-    "affiliation": "University of Wisconsin—Madison",
-    "combined_score": 12,
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 4,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 2,
-    "top_authors": [
-      {
-        "name": "Chendong Wang",
-        "affiliation": "University of Wisconsin—Madison",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Sujay Yadalam",
-        "affiliation": "University of Wisconsin—Madison",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "OSDI"
-    ],
-    "years": {
-      "2022": 2,
-      "2024": 2
     }
   },
   {
@@ -9519,7 +9053,7 @@
       },
       {
         "name": "Shriram Krishnamurthi",
-        "affiliation": "Brown University, Computer Science Department, Providence, RI, USA",
+        "affiliation": "Brown University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -9527,7 +9061,7 @@
       },
       {
         "name": "Will Crichton",
-        "affiliation": "Brown University, Providence, RI, USA",
+        "affiliation": "Brown University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -9569,7 +9103,7 @@
       },
       {
         "name": "Qiao Li 0001",
-        "affiliation": "Xiamen University, China",
+        "affiliation": "Xiamen University",
         "combined_score": 3,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -9577,7 +9111,7 @@
       },
       {
         "name": "Jiahao Lu 0003",
-        "affiliation": "Xiamen University, China",
+        "affiliation": "Xiamen University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -9717,7 +9251,7 @@
     "top_authors": [
       {
         "name": "Joseph E. Gonzalez",
-        "affiliation": "University of California at Berkeley, CA, USA",
+        "affiliation": "University of California at Berkeley",
         "combined_score": 8,
         "artifacts": 3,
         "ae_memberships": 0,
@@ -9725,7 +9259,7 @@
       },
       {
         "name": "Joseph Gonzalez 0001",
-        "affiliation": "University of California at Berkeley, CA, USA",
+        "affiliation": "University of California at Berkeley",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -9810,7 +9344,7 @@
       },
       {
         "name": "Mohammad Sadoghi",
-        "affiliation": "University of California, Davis, USA",
+        "affiliation": "University of California, Davis",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -9871,57 +9405,6 @@
       "2022": 3,
       "2021": 0,
       "2020": 1
-    }
-  },
-  {
-    "affiliation": "Max Planck Institute for Software Systems",
-    "combined_score": 11,
-    "artifacts": 4,
-    "badges_functional": 4,
-    "badges_reproducible": 3,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 4,
-    "artifact_rate": 100.0,
-    "num_authors": 3,
-    "top_authors": [
-      {
-        "name": "Deepak Garg 0001",
-        "affiliation": "Max Planck Institute for Software Systems, Saarbrcken, Germany",
-        "combined_score": 5,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 2
-      },
-      {
-        "name": "Peter Druschel",
-        "affiliation": "Max Planck Institute for Software Systems",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Viktor Vafeiadis",
-        "affiliation": "Max Planck Institute for Software Systems",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "EUROSYS",
-      "OSDI",
-      "SOSP"
-    ],
-    "years": {
-      "2025": 0,
-      "2024": 0,
-      "2023": 4,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0
     }
   },
   {
@@ -10208,41 +9691,6 @@
     }
   },
   {
-    "affiliation": "University of Illinois at Urbana Champaign",
-    "combined_score": 9,
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 2,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 50.0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Archit Patke",
-        "affiliation": "University of Illinois at Urbana Champaign",
-        "combined_score": 9,
-        "artifacts": 1,
-        "ae_memberships": 2,
-        "total_papers": 2
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "EUROSYS",
-      "SOSP"
-    ],
-    "years": {
-      "2025": 1,
-      "2024": 1,
-      "2023": 1,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0
-    }
-  },
-  {
     "affiliation": "Beijing Institute of Technology",
     "combined_score": 9,
     "artifacts": 1,
@@ -10275,40 +9723,6 @@
       "2022": 0,
       "2021": 0,
       "2020": 0
-    }
-  },
-  {
-    "affiliation": "MIT CSAIL",
-    "combined_score": 9,
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 2,
-    "chair_count": 0,
-    "total_papers": 3,
-    "artifact_rate": 33.3,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Joshua Fried",
-        "affiliation": "MIT CSAIL",
-        "combined_score": 9,
-        "artifacts": 1,
-        "ae_memberships": 2,
-        "total_papers": 3
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "OSDI"
-    ],
-    "years": {
-      "2025": 0,
-      "2024": 0,
-      "2023": 0,
-      "2022": 2,
-      "2021": 0,
-      "2020": 1
     }
   },
   {
@@ -10395,7 +9809,7 @@
     "top_authors": [
       {
         "name": "Weiwei Jia 0001",
-        "affiliation": "University of Rhode Island, Kingston, RI, USA",
+        "affiliation": "University of Rhode Island",
         "combined_score": 9,
         "artifacts": 1,
         "ae_memberships": 2,
@@ -10778,7 +10192,7 @@
     "top_authors": [
       {
         "name": "Lin Zhong 0001",
-        "affiliation": "Yale University, New Haven, CT, USA",
+        "affiliation": "Yale University",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -10786,7 +10200,7 @@
       },
       {
         "name": "Abhishek Bhattacharjee",
-        "affiliation": "Yale University, Computer Systems Lab, New Haven, CT, USA",
+        "affiliation": "Yale University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -10955,7 +10369,7 @@
       },
       {
         "name": "Md Hasanur Rahman 0001",
-        "affiliation": "University of Iowa, Iowa City, IA, USA",
+        "affiliation": "University of Iowa",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -10990,7 +10404,7 @@
     "top_authors": [
       {
         "name": "Haotian Wang 0006",
-        "affiliation": "Hunan University, China",
+        "affiliation": "Hunan University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -10998,7 +10412,7 @@
       },
       {
         "name": "Kenli Li 0001",
-        "affiliation": "Hunan University, College of Computer Science and Electronic Engineering / National Supercomputing Center, Changsha, China",
+        "affiliation": "Hunan University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -11006,7 +10420,7 @@
       },
       {
         "name": "Qinyun Tsai",
-        "affiliation": "Hunan University, College of Computer Science and Electronic Engineering, Changsha, China",
+        "affiliation": "Hunan University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -11088,7 +10502,7 @@
     "top_authors": [
       {
         "name": "Baptiste Lepers",
-        "affiliation": "University of Neuchtel, Switzerland",
+        "affiliation": "University of Neuchtel",
         "combined_score": 8,
         "artifacts": 1,
         "ae_memberships": 1,
@@ -11122,7 +10536,7 @@
     "top_authors": [
       {
         "name": "Borui Li 0001",
-        "affiliation": "Southeast University, Nanjing, China",
+        "affiliation": "Southeast University",
         "combined_score": 8,
         "artifacts": 1,
         "ae_memberships": 2,
@@ -11352,6 +10766,49 @@
     }
   },
   {
+    "affiliation": "TU Delft",
+    "combined_score": 8,
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 1,
+    "chair_count": 1,
+    "total_papers": 3,
+    "artifact_rate": 33.3,
+    "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Alex Voulimeneas",
+        "affiliation": "TU Delft",
+        "combined_score": 5,
+        "artifacts": 0,
+        "ae_memberships": 1,
+        "total_papers": 0
+      },
+      {
+        "name": "Nitinder Mohan",
+        "affiliation": "TU Delft",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 3
+      }
+    ],
+    "conferences": [
+      "ATC",
+      "SOSP"
+    ],
+    "years": {
+      "2026": 1,
+      "2025": 0,
+      "2024": 0,
+      "2023": 1,
+      "2022": 0,
+      "2021": 0,
+      "2020": 0
+    }
+  },
+  {
     "affiliation": "Technical University Munich",
     "combined_score": 8,
     "artifacts": 4,
@@ -11476,7 +10933,7 @@
     "top_authors": [
       {
         "name": "Rodrigo Rodrigues 0001",
-        "affiliation": "University of Lisbon, INESC-ID / Instituto Superior Tcnico, Portugal",
+        "affiliation": "University of Lisbon",
         "combined_score": 6,
         "artifacts": 3,
         "ae_memberships": 0,
@@ -11510,7 +10967,7 @@
     "top_authors": [
       {
         "name": "Adam Morrison 0001",
-        "affiliation": "Tel Aviv University, Israel",
+        "affiliation": "Tel Aviv University",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -11611,7 +11068,7 @@
     "top_authors": [
       {
         "name": "Jonathan Eyolfson",
-        "affiliation": "University of Waterloo, ON, Canada",
+        "affiliation": "University of Waterloo",
         "combined_score": 6,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -12099,35 +11556,6 @@
     }
   },
   {
-    "affiliation": "Stealth Startup and University of California",
-    "combined_score": 6,
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 2,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Hanchen Li",
-        "affiliation": "Stealth Startup and University of California, Berkeley",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "OSDI"
-    ],
-    "years": {
-      "2025": 2
-    }
-  },
-  {
     "affiliation": "Harare Institute of Technology",
     "combined_score": 6,
     "artifacts": 0,
@@ -12302,35 +11730,6 @@
     }
   },
   {
-    "affiliation": "University of Illinois Urbana–Champaign and Tsinghua University",
-    "combined_score": 6,
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 2,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Jiaqi Pan",
-        "affiliation": "University of Illinois Urbana–Champaign and Tsinghua University",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "OSDI"
-    ],
-    "years": {
-      "2025": 2
-    }
-  },
-  {
     "affiliation": "Orange Labs",
     "combined_score": 6,
     "artifacts": 0,
@@ -12430,7 +11829,7 @@
     "top_authors": [
       {
         "name": "Mahsa Saeidi",
-        "affiliation": "Oregon State university",
+        "affiliation": "Oregon State University",
         "combined_score": 6,
         "artifacts": 0,
         "ae_memberships": 2,
@@ -12497,35 +11896,6 @@
     ],
     "conferences": [
       "SC"
-    ],
-    "years": {
-      "2021": 2
-    }
-  },
-  {
-    "affiliation": "ETH Zürich",
-    "combined_score": 6,
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 2,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Michael Giardino",
-        "affiliation": "ETH Zürich",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "EUROSYS",
-      "SOSP"
     ],
     "years": {
       "2021": 2
@@ -12719,7 +12089,7 @@
     "top_authors": [
       {
         "name": "Rocío Carratalá-Sáez",
-        "affiliation": "Jaume I University, Spain",
+        "affiliation": "Jaume I University",
         "combined_score": 6,
         "artifacts": 0,
         "ae_memberships": 2,
@@ -13025,65 +12395,6 @@
     }
   },
   {
-    "affiliation": "UC Irvine",
-    "combined_score": 6,
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 2,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Zhihao Yao",
-        "affiliation": "UC Irvine",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "EUROSYS",
-      "SOSP"
-    ],
-    "years": {
-      "2021": 1,
-      "2022": 1
-    }
-  },
-  {
-    "affiliation": "MPI-SWS",
-    "combined_score": 6,
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 2,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Zhiqiang Xie, Max Planck Institute for Software Systems",
-        "affiliation": "MPI-SWS",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "OSDI"
-    ],
-    "years": {
-      "2022": 2
-    }
-  },
-  {
     "affiliation": "University of Texas at Dallas",
     "combined_score": 6,
     "artifacts": 0,
@@ -13155,7 +12466,7 @@
     "top_authors": [
       {
         "name": "Anne Koziolek",
-        "affiliation": "Karlsruhe Institute of Technology, Germany",
+        "affiliation": "Karlsruhe Institute of Technology",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -13163,7 +12474,7 @@
       },
       {
         "name": "Frank Bellosa",
-        "affiliation": "Karlsruhe Institute of Technology, Germany",
+        "affiliation": "Karlsruhe Institute of Technology",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -13362,7 +12673,7 @@
     "top_authors": [
       {
         "name": "Peter Wgemann",
-        "affiliation": "University of Erlangen-Nuremberg, Germany",
+        "affiliation": "University of Erlangen-Nuremberg",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -13370,7 +12681,7 @@
       },
       {
         "name": "Wolfgang Schrder-Preikschat",
-        "affiliation": "University of Erlangen-Nuremberg, Germany",
+        "affiliation": "University of Erlangen-Nuremberg",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -13403,7 +12714,7 @@
     "top_authors": [
       {
         "name": "Qiang Wang 0022",
-        "affiliation": "Hong Kong Baptist University, Kowloon Tong, Hong Kong",
+        "affiliation": "Hong Kong Baptist University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -13411,7 +12722,7 @@
       },
       {
         "name": "Xiaowen Chu 0001",
-        "affiliation": "Hong Kong Baptist University, Department of Computer Science, Hong Kong",
+        "affiliation": "Hong Kong Baptist University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -13569,7 +12880,7 @@
     "top_authors": [
       {
         "name": "Ang Chen 0001",
-        "affiliation": "University of Michigan Ann Arbor, MI, USA",
+        "affiliation": "University of Michigan Ann Arbor",
         "combined_score": 5,
         "artifacts": 3,
         "ae_memberships": 0,
@@ -13638,7 +12949,7 @@
     "top_authors": [
       {
         "name": "Kasim Sinan Yildirim",
-        "affiliation": "University of Trento, Italy",
+        "affiliation": "University of Trento",
         "combined_score": 5,
         "artifacts": 3,
         "ae_memberships": 0,
@@ -13672,7 +12983,7 @@
     "top_authors": [
       {
         "name": "Bo Zhao 0019",
-        "affiliation": "Aalto University, Finland",
+        "affiliation": "Aalto University",
         "combined_score": 5,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -13690,34 +13001,6 @@
       "2022": 0,
       "2021": 0,
       "2020": 0
-    }
-  },
-  {
-    "affiliation": "TU Delft",
-    "combined_score": 5,
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 1,
-    "chair_count": 1,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Alex Voulimeneas",
-        "affiliation": "TU Delft",
-        "combined_score": 5,
-        "artifacts": 0,
-        "ae_memberships": 1,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "SOSP"
-    ],
-    "years": {
-      "2026": 1
     }
   },
   {
@@ -13874,7 +13157,7 @@
     "top_authors": [
       {
         "name": "Valerio Schiavoni",
-        "affiliation": "Université de Neuchâtel, Switzerland",
+        "affiliation": "Université de Neuchâtel",
         "combined_score": 5,
         "artifacts": 0,
         "ae_memberships": 1,
@@ -13965,7 +13248,7 @@
     "top_authors": [
       {
         "name": "Ahmed M. Abdelmoniem",
-        "affiliation": "Ain Shams University, Cairo, Egypt",
+        "affiliation": "Ain Shams University",
         "combined_score": 4,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -14065,7 +13348,7 @@
     "top_authors": [
       {
         "name": "Feng Yan 0001",
-        "affiliation": "University of Houston, Department of Computer Science, Houston, TX, USA",
+        "affiliation": "University of Houston",
         "combined_score": 4,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -14132,7 +13415,7 @@
     "top_authors": [
       {
         "name": "T. S. Eugene Ng",
-        "affiliation": "Rice University, Houston, TX, USA",
+        "affiliation": "Rice University",
         "combined_score": 4,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -14166,7 +13449,7 @@
     "top_authors": [
       {
         "name": "Li Su 0005",
-        "affiliation": "University of Southern Denmark, Odense, Denmark",
+        "affiliation": "University of Southern Denmark",
         "combined_score": 3,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -14199,7 +13482,7 @@
     "top_authors": [
       {
         "name": "Abdel-Hameed A. Badawy",
-        "affiliation": "New Mexico State University, Las Cruces, NM, USA",
+        "affiliation": "New Mexico State University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -14208,39 +13491,6 @@
     ],
     "conferences": [
       "SC"
-    ],
-    "years": {
-      "2025": 0,
-      "2024": 0,
-      "2023": 0,
-      "2022": 0,
-      "2021": 1,
-      "2020": 0
-    }
-  },
-  {
-    "affiliation": "University of California Berkeley",
-    "combined_score": 3,
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Akshay Narayan 0001",
-        "affiliation": "University of California Berkeley, USA",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "EUROSYS"
     ],
     "years": {
       "2025": 0,
@@ -14265,7 +13515,7 @@
     "top_authors": [
       {
         "name": "Alexander Jung 0002",
-        "affiliation": "Lancaster University, School of Computing and Communications, UK",
+        "affiliation": "Lancaster University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -14298,7 +13548,7 @@
     "top_authors": [
       {
         "name": "An-I Andy Wang",
-        "affiliation": "Florida State University, Tallahassee, USA",
+        "affiliation": "Florida State University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -14318,39 +13568,6 @@
     }
   },
   {
-    "affiliation": "University of California, Santa Cruz",
-    "combined_score": 3,
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 4,
-    "artifact_rate": 25.0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Andrew Quinn 0001",
-        "affiliation": "University of California, Santa Cruz, CA, USA",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 4
-      }
-    ],
-    "conferences": [
-      "OSDI"
-    ],
-    "years": {
-      "2025": 0,
-      "2024": 0,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 1
-    }
-  },
-  {
     "affiliation": "Hohai University",
     "combined_score": 3,
     "artifacts": 1,
@@ -14364,7 +13581,7 @@
     "top_authors": [
       {
         "name": "Bin Tang 0002",
-        "affiliation": "Hohai University, College of Computer Science and Software Engineering, Nanjing, China",
+        "affiliation": "Hohai University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -14397,7 +13614,7 @@
     "top_authors": [
       {
         "name": "Bo Wang 0116",
-        "affiliation": "Central South University, Shanghai Jiao Tong University, China",
+        "affiliation": "Central South University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -14430,7 +13647,7 @@
     "top_authors": [
       {
         "name": "Deian Stefan",
-        "affiliation": "University of California at San Diego, USA",
+        "affiliation": "University of California at San Diego",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -14463,7 +13680,7 @@
     "top_authors": [
       {
         "name": "Dingwen Tao",
-        "affiliation": "Indiana University, Bloomington, IN, USA",
+        "affiliation": "Indiana University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -14496,7 +13713,7 @@
     "top_authors": [
       {
         "name": "Donald E. Porter",
-        "affiliation": "University of North Carolina at Chapel Hill, NC, USA",
+        "affiliation": "University of North Carolina at Chapel Hill",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -14516,39 +13733,6 @@
     }
   },
   {
-    "affiliation": "Korea Advanced Institute of Science and Technology",
-    "combined_score": 3,
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 50.0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Dongsu Han",
-        "affiliation": "Korea Advanced Institute of Science and Technology, Daejeon, Korea",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 2
-      }
-    ],
-    "conferences": [
-      "EUROSYS"
-    ],
-    "years": {
-      "2025": 0,
-      "2024": 0,
-      "2023": 1,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0
-    }
-  },
-  {
     "affiliation": "Boise State University",
     "combined_score": 3,
     "artifacts": 1,
@@ -14562,7 +13746,7 @@
     "top_authors": [
       {
         "name": "Edoardo Serra",
-        "affiliation": "Boise State University, ID, USA",
+        "affiliation": "Boise State University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -14595,7 +13779,7 @@
     "top_authors": [
       {
         "name": "Franck Cappello",
-        "affiliation": "University of Illinois, INRIA-Illinois Joint Laboratory on PetaScale Computing",
+        "affiliation": "University of Illinois",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -14694,7 +13878,7 @@
     "top_authors": [
       {
         "name": "Gang Yan 0002",
-        "affiliation": "Jilin University, Changchun, China",
+        "affiliation": "Jilin University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -14760,7 +13944,7 @@
     "top_authors": [
       {
         "name": "Ghadeer Alabandi",
-        "affiliation": "Texas State University, San Marcos, TX, USA",
+        "affiliation": "Texas State University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -14793,7 +13977,7 @@
     "top_authors": [
       {
         "name": "Giuseppe Bianchi 0001",
-        "affiliation": "University of Rome Tor Vergata, CNIT / Department of Electronic Engineering, Italy",
+        "affiliation": "University of Rome Tor Vergata",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -14826,7 +14010,7 @@
     "top_authors": [
       {
         "name": "Guang Yang 0020",
-        "affiliation": "Conflux - Tree-Graph Blockchain Research Institute, Shanghai, China",
+        "affiliation": "Conflux - Tree-Graph Blockchain Research Institute",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -14859,7 +14043,7 @@
     "top_authors": [
       {
         "name": "Hao Li 0011",
-        "affiliation": "Xi'an Jiaotong University, School of Computer Science and Technology, China",
+        "affiliation": "Xi'an Jiaotong University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -14892,7 +14076,7 @@
     "top_authors": [
       {
         "name": "Heng Shi 0005",
-        "affiliation": "University of Bath, Bath, UK",
+        "affiliation": "University of Bath",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -14934,39 +14118,6 @@
     ],
     "conferences": [
       "SOSP"
-    ],
-    "years": {
-      "2025": 0,
-      "2024": 0,
-      "2023": 1,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0
-    }
-  },
-  {
-    "affiliation": "Department of Electrical Engineering",
-    "combined_score": 3,
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Jaehong Kim 0002",
-        "affiliation": "Department of Electrical Engineering, Korea Advanced Institute of Science and Technology (KAIST), Daejeon, Korea",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "EUROSYS"
     ],
     "years": {
       "2025": 0,
@@ -15044,7 +14195,7 @@
     }
   },
   {
-    "affiliation": "University of California, Computer Science Department",
+    "affiliation": "University of California",
     "combined_score": 3,
     "artifacts": 1,
     "badges_functional": 1,
@@ -15057,7 +14208,7 @@
     "top_authors": [
       {
         "name": "Jie Wang 0022",
-        "affiliation": "University of California, Computer Science Department, Los Angeles, CA, USA",
+        "affiliation": "University of California",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -15156,7 +14307,7 @@
     "top_authors": [
       {
         "name": "Julia Lawall",
-        "affiliation": "Sorbonne University, LIP6, Paris",
+        "affiliation": "Sorbonne University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -15189,7 +14340,7 @@
     "top_authors": [
       {
         "name": "Kyu-Jin Cho",
-        "affiliation": "Seoul National University, Institute of Advanced Machinery and Design, South Korea",
+        "affiliation": "Seoul National University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -15255,7 +14406,7 @@
     "top_authors": [
       {
         "name": "Lei Deng 0003",
-        "affiliation": "University of California at Santa Barbara, Department of Electrical and Computer Engineering, CA, USA",
+        "affiliation": "University of California at Santa Barbara",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -15288,7 +14439,7 @@
     "top_authors": [
       {
         "name": "Luca Benini",
-        "affiliation": "University of Bologna, Italy",
+        "affiliation": "University of Bologna",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -15420,7 +14571,7 @@
     "top_authors": [
       {
         "name": "Minglu Li 0001",
-        "affiliation": "Zhejiang Normal University, Department of Computer Science, Jinhua, China",
+        "affiliation": "Zhejiang Normal University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -15453,7 +14604,7 @@
     "top_authors": [
       {
         "name": "Minh Q. Nguyen 0001",
-        "affiliation": "University of Transport, Ho Chi Minh City, Vietnam",
+        "affiliation": "University of Transport",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -15486,7 +14637,7 @@
     "top_authors": [
       {
         "name": "Minsu Kim 0004",
-        "affiliation": "Mila - Quebec Artificial Intelligence Institute, Montreal, Canada",
+        "affiliation": "Mila - Quebec Artificial Intelligence Institute",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -15501,39 +14652,6 @@
       "2024": 0,
       "2023": 0,
       "2022": 1,
-      "2021": 0,
-      "2020": 0
-    }
-  },
-  {
-    "affiliation": "Delft University of Technology",
-    "combined_score": 3,
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 3,
-    "artifact_rate": 33.3,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Nitinder Mohan",
-        "affiliation": "Delft University of Technology, The Netherlands",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 3
-      }
-    ],
-    "conferences": [
-      "ATC"
-    ],
-    "years": {
-      "2025": 0,
-      "2024": 0,
-      "2023": 1,
-      "2022": 0,
       "2021": 0,
       "2020": 0
     }
@@ -15717,7 +14835,7 @@
     "top_authors": [
       {
         "name": "Ran Ben Basat",
-        "affiliation": "University College London, UK",
+        "affiliation": "University College London",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -15783,7 +14901,7 @@
     "top_authors": [
       {
         "name": "Rong Ge 0002",
-        "affiliation": "Clemson University, School of Computing, SC, USA",
+        "affiliation": "Clemson University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -15882,7 +15000,7 @@
     "top_authors": [
       {
         "name": "Sunil Kumar 0001",
-        "affiliation": "San Diego State University, Department of Electrical and Computer Engineering, CA, USA",
+        "affiliation": "San Diego State University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -15915,7 +15033,7 @@
     "top_authors": [
       {
         "name": "Thomas Fahringer",
-        "affiliation": "University of Innsbruck, Austria",
+        "affiliation": "University of Innsbruck",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -15948,7 +15066,7 @@
     "top_authors": [
       {
         "name": "Tong Geng",
-        "affiliation": "University of Rochester, Department of Electrical and Computer Engineering, NY, USA",
+        "affiliation": "University of Rochester",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -16014,7 +15132,7 @@
     "top_authors": [
       {
         "name": "Ulrich Rckert 0001",
-        "affiliation": "University of Bielefeld, Faculty of Technology, Germany",
+        "affiliation": "University of Bielefeld",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -16146,7 +15264,7 @@
     "top_authors": [
       {
         "name": "Xiapu Luo",
-        "affiliation": "Hong Kong Polytechnic University, Hong Kong",
+        "affiliation": "Hong Kong Polytechnic University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -16179,7 +15297,7 @@
     "top_authors": [
       {
         "name": "Xuechen Zhang 0001",
-        "affiliation": "Washington State University, Vancouver, WA, USA",
+        "affiliation": "Washington State University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -16226,39 +15344,6 @@
       "2025": 0,
       "2024": 0,
       "2023": 1,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0
-    }
-  },
-  {
-    "affiliation": "University of California Santa Cruz",
-    "combined_score": 3,
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Yiwei Yang 0002",
-        "affiliation": "University of California Santa Cruz, Baskin School of Engineering, Santa Cruz, CA, USA",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "OSDI"
-    ],
-    "years": {
-      "2025": 1,
-      "2024": 0,
-      "2023": 0,
       "2022": 0,
       "2021": 0,
       "2020": 0
@@ -16328,39 +15413,6 @@
       "2022": 0,
       "2021": 0,
       "2020": 1
-    }
-  },
-  {
-    "affiliation": "University of California Irvine",
-    "combined_score": 3,
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Zhou Li 0001",
-        "affiliation": "University of California Irvine, Henry Samueli School of Engineering, CA, USA",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "OSDI"
-    ],
-    "years": {
-      "2025": 0,
-      "2024": 0,
-      "2023": 1,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0
     }
   }
 ]

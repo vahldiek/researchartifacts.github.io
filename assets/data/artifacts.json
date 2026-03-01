@@ -29304,6 +29304,18 @@
     "conference": "FAST",
     "category": "systems",
     "year": 2024,
+    "title": "The Design and Implementation of a Capacity-Variant Storage System",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "repository_url": "",
+    "artifact_url": ""
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2024,
     "title": "Symbiosis: The Art of Application and Kernel Cache Cooperation",
     "badges": [
       "available",
@@ -29316,7 +29328,7 @@
     "conference": "FAST",
     "category": "systems",
     "year": 2024,
-    "title": "The Design and Implementation of a Capacity-Variant Storage System",
+    "title": "I/O Passthru: Upstreaming a flexible and efficient I/O Path in Linux",
     "badges": [
       "available",
       "functional"
@@ -29341,31 +29353,6 @@
     "conference": "FAST",
     "category": "systems",
     "year": 2024,
-    "title": "I/O Passthru: Upstreaming a flexible and efficient I/O Path in Linux",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": ""
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2024,
-    "title": "We Ain't Afraid of No File Fragmentation: Causes and Prevention of Its Performance Impact on Modern Flash SSDs",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": ""
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2024,
     "title": "MinFlow: High-performance and Cost-efficient Data Passing for I/O-intensive Stateful Serverless Analytics",
     "badges": [
       "available"
@@ -29377,7 +29364,7 @@
     "conference": "FAST",
     "category": "systems",
     "year": 2024,
-    "title": "Metis: File System Model Checking via Versatile Input and State Exploration",
+    "title": "We Ain't Afraid of No File Fragmentation: Causes and Prevention of Its Performance Impact on Modern Flash SSDs",
     "badges": [
       "available",
       "functional",
@@ -29402,9 +29389,34 @@
     "conference": "FAST",
     "category": "systems",
     "year": 2024,
+    "title": "Metis: File System Model Checking via Versatile Input and State Exploration",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": ""
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2024,
     "title": "Combining Buffered I/O and Direct I/O in Distributed File Systems",
     "badges": [
       "available"
+    ],
+    "repository_url": "",
+    "artifact_url": ""
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2024,
+    "title": "Kosmo: Efficient Online Miss Ratio Curve Generation for Eviction Policy Evaluation",
+    "badges": [
+      "available",
+      "functional"
     ],
     "repository_url": "",
     "artifact_url": ""
@@ -29418,18 +29430,6 @@
       "available",
       "functional",
       "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": ""
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2024,
-    "title": "Kosmo: Efficient Online Miss Ratio Curve Generation for Eviction Policy Evaluation",
-    "badges": [
-      "available",
-      "functional"
     ],
     "repository_url": "",
     "artifact_url": ""
@@ -29464,18 +29464,6 @@
     "conference": "FAST",
     "category": "systems",
     "year": 2024,
-    "title": "OmniCache: Collaborative Caching for Near-storage Accelerators",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": ""
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2024,
     "title": "COLE: A Column-based Learned Storage for Blockchain Systems",
     "badges": [
       "available",
@@ -29500,10 +29488,11 @@
   {
     "conference": "FAST",
     "category": "systems",
-    "year": 2025,
-    "title": "GPHash: An Efficient Hash Index for GPU with Byte-Granularity Persistent Memory",
+    "year": 2024,
+    "title": "OmniCache: Collaborative Caching for Near-storage Accelerators",
     "badges": [
-      "available"
+      "available",
+      "functional"
     ],
     "repository_url": "",
     "artifact_url": ""
@@ -29512,7 +29501,7 @@
     "conference": "FAST",
     "category": "systems",
     "year": 2025,
-    "title": "Revisiting Network Coding for Warm Blob Storage",
+    "title": "GPHash: An Efficient Hash Index for GPU with Byte-Granularity Persistent Memory",
     "badges": [
       "available"
     ],
@@ -29540,6 +29529,17 @@
     "badges": [
       "available",
       "functional"
+    ],
+    "repository_url": "",
+    "artifact_url": ""
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2025,
+    "title": "Revisiting Network Coding for Warm Blob Storage",
+    "badges": [
+      "available"
     ],
     "repository_url": "",
     "artifact_url": ""
@@ -29625,7 +29625,7 @@
     "conference": "FAST",
     "category": "systems",
     "year": 2025,
-    "title": "PolyStore: Exploiting Combined Capabilities of Heterogeneous Storage",
+    "title": "Cloudscape: A Study of Storage Services in Modern Cloud Architectures",
     "badges": [
       "available",
       "functional",
@@ -29638,7 +29638,7 @@
     "conference": "FAST",
     "category": "systems",
     "year": 2025,
-    "title": "Cloudscape: A Study of Storage Services in Modern Cloud Architectures",
+    "title": "PolyStore: Exploiting Combined Capabilities of Heterogeneous Storage",
     "badges": [
       "available",
       "functional",
@@ -29786,29 +29786,6 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
-    "title": "QiMeng-Xpiler: Transcompiling Tensor Programs for Deep Learning Systems with a Neural-Symbolic Approach",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": ""
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "QOS: Quantum Operating System",
-    "badges": [
-      "available"
-    ],
-    "repository_url": "",
-    "artifact_url": ""
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
     "title": "Stripeless Data Placement for Erasure-Coded In-Memory Storage",
     "badges": [
       "available",
@@ -29834,7 +29811,30 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
-    "title": "Achieving Low-Latency Graph-Based Vector Search via Aligning Best-First Search Algorithm with SSD",
+    "title": "QOS: Quantum Operating System",
+    "badges": [
+      "available"
+    ],
+    "repository_url": "",
+    "artifact_url": ""
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "QiMeng-Xpiler: Transcompiling Tensor Programs for Deep Learning Systems with a Neural-Symbolic Approach",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "repository_url": "",
+    "artifact_url": ""
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Neutrino: Fine-grained GPU Kernel Profiling via Programmable Probing",
     "badges": [
       "available",
       "functional",
@@ -29847,7 +29847,7 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
-    "title": "Neutrino: Fine-grained GPU Kernel Profiling via Programmable Probing",
+    "title": "Achieving Low-Latency Graph-Based Vector Search via Aligning Best-First Search Algorithm with SSD",
     "badges": [
       "available",
       "functional",
@@ -29886,31 +29886,6 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
-    "title": "Bayesian Code Diffusion for Efficient Automatic Deep Learning Program Optimization",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": ""
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "PoWER Never Corrupts: Tool-Agnostic Verification of Crash Consistency and Corruption Detection",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": ""
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
     "title": "Training with Confidence: Catching Silent Errors in Deep Learning Training with Automated Proactive Checks",
     "badges": [
       "available",
@@ -29924,7 +29899,19 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
-    "title": "Tintin: A Unified Hardware Performance Profiling Infrastructure to Uncover and Manage Uncertainty",
+    "title": "Bayesian Code Diffusion for Efficient Automatic Deep Learning Program Optimization",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "repository_url": "",
+    "artifact_url": ""
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "PoWER Never Corrupts: Tool-Agnostic Verification of Crash Consistency and Corruption Detection",
     "badges": [
       "available",
       "functional",
@@ -29961,18 +29948,7 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
-    "title": "MettEagle: Costs and Benefits of Implementing Containers on Microkernels",
-    "badges": [
-      "available"
-    ],
-    "repository_url": "",
-    "artifact_url": ""
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Fast and Synchronous Crash Consistency with Metadata Write-Once File System",
+    "title": "Tintin: A Unified Hardware Performance Profiling Infrastructure to Uncover and Manage Uncertainty",
     "badges": [
       "available",
       "functional",
@@ -29997,7 +29973,7 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
-    "title": "Enabling Efficient GPU Communication over Multiple NICs with FuseLink",
+    "title": "MettEagle: Costs and Benefits of Implementing Containers on Microkernels",
     "badges": [
       "available"
     ],
@@ -30008,10 +29984,22 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
-    "title": "Weave: Efficient and Expressive Oblivious Analytics at Scale",
+    "title": "Fast and Synchronous Crash Consistency with Metadata Write-Once File System",
     "badges": [
       "available",
-      "functional"
+      "functional",
+      "reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": ""
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Enabling Efficient GPU Communication over Multiple NICs with FuseLink",
+    "badges": [
+      "available"
     ],
     "repository_url": "",
     "artifact_url": ""
@@ -30033,7 +30021,7 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
-    "title": "Building Bridges: Safe Interactions with Foreign Languages through Omniglot",
+    "title": "Weave: Efficient and Expressive Oblivious Analytics at Scale",
     "badges": [
       "available",
       "functional"
@@ -30045,7 +30033,7 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
-    "title": "Quantum Virtual Machines",
+    "title": "Building Bridges: Safe Interactions with Foreign Languages through Omniglot",
     "badges": [
       "available",
       "functional"
@@ -30070,9 +30058,10 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
-    "title": "FineMem: Breaking the Allocation Overhead vs. Memory Waste Dilemma in Fine-Grained Disaggregated Memory Management",
+    "title": "Quantum Virtual Machines",
     "badges": [
-      "available"
+      "available",
+      "functional"
     ],
     "repository_url": "",
     "artifact_url": ""
@@ -30081,11 +30070,9 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
-    "title": "WLB-LLM: Workload-Balanced 4D Parallelism for Large Language Model Training",
+    "title": "FineMem: Breaking the Allocation Overhead vs. Memory Waste Dilemma in Fine-Grained Disaggregated Memory Management",
     "badges": [
-      "available",
-      "functional",
-      "reproduced"
+      "available"
     ],
     "repository_url": "",
     "artifact_url": ""
@@ -30107,10 +30094,11 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
-    "title": "Decouple and Decompose: Scaling Resource Allocation with DeDe",
+    "title": "WLB-LLM: Workload-Balanced 4D Parallelism for Large Language Model Training",
     "badges": [
       "available",
-      "functional"
+      "functional",
+      "reproduced"
     ],
     "repository_url": "",
     "artifact_url": ""
@@ -30130,7 +30118,19 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
-    "title": "Compass: Encrypted Semantic Search with High Accuracy",
+    "title": "Decouple and Decompose: Scaling Resource Allocation with DeDe",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "repository_url": "",
+    "artifact_url": ""
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Basilisk: Using Provenance Invariants to Automate Proofs of Undecidable Protocols",
     "badges": [
       "available",
       "functional",
@@ -30143,7 +30143,7 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
-    "title": "KRR: Efficient and Scalable Kernel Record Replay",
+    "title": "Compass: Encrypted Semantic Search with High Accuracy",
     "badges": [
       "available",
       "functional",
@@ -30169,7 +30169,7 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
-    "title": "Basilisk: Using Provenance Invariants to Automate Proofs of Undecidable Protocols",
+    "title": "KRR: Efficient and Scalable Kernel Record Replay",
     "badges": [
       "available",
       "functional",

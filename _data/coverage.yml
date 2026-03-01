@@ -53,6 +53,11 @@
   conference: ATC
   parsed: true
   year: 2024
+- artifact_count: 0
+  category: systems
+  conference: CAIS
+  parsed: false
+  year: 2026
 - artifact_count: 20
   category: security
   conference: CHES

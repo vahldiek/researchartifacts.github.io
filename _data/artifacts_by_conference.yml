@@ -17,31 +17,31 @@
     year: 2018
   - available: 0
     functional: 12
-    reproducible: 0
+    reproducible: 8
     reusable: 8
     total: 20
     year: 2019
   - available: 0
     functional: 16
-    reproducible: 0
+    reproducible: 10
     reusable: 10
     total: 26
     year: 2020
   - available: 0
     functional: 11
-    reproducible: 0
+    reproducible: 9
     reusable: 9
     total: 20
     year: 2021
   - available: 0
     functional: 25
-    reproducible: 0
+    reproducible: 18
     reusable: 18
     total: 43
     year: 2022
   - available: 0
     functional: 14
-    reproducible: 19
+    reproducible: 42
     reusable: 23
     total: 38
     year: 2023
@@ -313,13 +313,13 @@
   years:
   - available: 7
     functional: 6
-    reproducible: 0
+    reproducible: 3
     reusable: 3
     total: 7
     year: 2024
   - available: 5
     functional: 5
-    reproducible: 0
+    reproducible: 5
     reusable: 5
     total: 5
     year: 2025
