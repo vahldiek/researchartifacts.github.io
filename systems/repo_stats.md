@@ -25,6 +25,10 @@ GitHub stars and forks for artifact repositories from systems conferences ({{ si
 
 {% include repo_yearly_chart.html %}
 
+---
+
+**Data:** [Systems](/assets/data/systems_top_repos.json) | [Yearly Stats](/assets/data/repo_stats_yearly.json)
+
 {% else %}
 
 *Repository statistics have not been collected yet. Run the pipeline with `generate_repo_stats.py` to populate this data.*

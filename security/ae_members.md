@@ -11,3 +11,7 @@ Recurring Artifact Evaluation committee members at security conferences ({{ site
 - Data was processed on {{ site.data.committee_stats.last_updated }}.
 
 {% include ae_member_table.html %}
+
+---
+
+**Data:** [Security](/assets/data/security_ae_members.json)

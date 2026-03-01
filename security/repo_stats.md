@@ -25,6 +25,10 @@ GitHub stars and forks for artifact repositories from security conferences ({{ s
 
 {% include repo_yearly_chart.html %}
 
+---
+
+**Data:** [Security](/assets/data/security_top_repos.json) | [Yearly Stats](/assets/data/repo_stats_yearly.json)
+
 {% else %}
 
 *Repository statistics have not been collected yet. Run the pipeline with `generate_repo_stats.py` to populate this data.*

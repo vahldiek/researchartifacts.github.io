@@ -39,6 +39,10 @@ GitHub stars and forks for artifact repositories across all tracked conferences.
 
 {% include repo_yearly_chart.html %}
 
+---
+
+**Data:** [All Conferences](/assets/data/top_repos.json) | [Systems](/assets/data/systems_top_repos.json) | [Security](/assets/data/security_top_repos.json) | [Yearly Stats](/assets/data/repo_stats_yearly.json)
+
 {% else %}
 
 *Repository statistics have not been collected yet. Run the pipeline with `generate_repo_stats.py` to populate this data.*

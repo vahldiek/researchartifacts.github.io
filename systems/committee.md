@@ -59,6 +59,10 @@ Geographic and institutional diversity of Artifact Evaluation Committee members 
 
 {% endif %}
 
+---
+
+**Data:** [Systems](/assets/data/committee_stats.json)
+
 <style>
 table { font-size: 0.85em; white-space: nowrap; border-collapse: collapse; }
 table th, table td { padding: 3px 8px; border: 1px solid #ddd; }

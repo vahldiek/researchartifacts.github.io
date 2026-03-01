@@ -11,3 +11,7 @@ The total number of artifacts depends on the total number of publications: autho
 - Data was processed on {{ site.data.summary.last_updated }}.
 
 {% include author_table.html %}
+
+---
+
+**Data:** [Systems](/assets/data/systems_combined_rankings.json)
