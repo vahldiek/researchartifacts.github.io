@@ -3,10 +3,18 @@
   Shows people ranked by combined_score (artifacts + AE committee memberships).
 
   Required page variables:
-    page.combined_data_url  — path to the JSON file
+    page.combined_data_url  — path to the overall JSON file
+    page.systems_data_url   — path to the systems JSON file
+    page.security_data_url  — path to the security JSON file
 {% endcomment %}
 
 <div id="combined-controls" style="margin-bottom:16px; display:none;">
+  <label style="font-weight:bold; margin-right:8px;">Area:</label>
+  <select id="areaFilter" style="padding:4px 8px; font-size:1em; margin-right:16px;">
+    <option value="all" selected>All Conferences</option>
+    <option value="systems">Systems Only</option>
+    <option value="security">Security Only</option>
+  </select>
   <label>Show
     <select id="cPageSizeSelect">
       <option value="100" selected>100</option>
@@ -41,7 +49,12 @@
 
 <script>
 (function() {
-  var DATA_URL = '{{ page.combined_data_url | relative_url }}';
+  var DATA_URLS = {
+    'all': '{{ page.combined_data_url | relative_url }}',
+    'systems': '{{ page.systems_data_url | relative_url }}',
+    'security': '{{ page.security_data_url | relative_url }}'
+  };
+  var currentArea = 'all';
   var baseUrl = '{{ "" | relative_url }}';
   var allData = [];
   var filteredData = [];
@@ -232,6 +245,28 @@
     document.getElementById('combined-controls-bottom').style.display = '';
   }
 
+  function loadArea(area) {
+    currentArea = area;
+    document.getElementById('combinedLoading').style.display = '';
+    document.getElementById('combinedLoading').innerHTML = '<em>Loading ' + area + ' combined ranking data…</em>';
+    document.getElementById('combinedTable').style.display = 'none';
+    document.getElementById('combined-controls').style.display = 'none';
+    document.getElementById('combined-controls-bottom').style.display = 'none';
+    
+    fetch(DATA_URLS[area])
+      .then(function(r) { return r.json(); })
+      .then(init)
+      .catch(function(e) {
+        document.getElementById('combinedLoading').innerHTML =
+          '<em>Failed to load ' + area + ' combined ranking data. ' + e + '</em>';
+      });
+  }
+
+  // Area filter
+  document.getElementById('areaFilter').addEventListener('change', function() {
+    loadArea(this.value);
+  });
+
   // Controls
   document.getElementById('cPageSizeSelect').addEventListener('change', function() {
     pageSize = parseInt(this.value);
@@ -251,14 +286,8 @@
   document.getElementById('cPrevBtnB').addEventListener('click', goPrev);
   document.getElementById('cNextBtnB').addEventListener('click', goNext);
 
-  // Load data
-  fetch(DATA_URL)
-    .then(function(r) { return r.json(); })
-    .then(init)
-    .catch(function(e) {
-      document.getElementById('combinedLoading').innerHTML =
-        '<em>Failed to load combined ranking data. ' + e + '</em>';
-    });
+  // Load initial data
+  loadArea(currentArea);
 })();
 </script>
 

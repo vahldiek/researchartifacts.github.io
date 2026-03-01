@@ -4,12 +4,6 @@ main:
   - title: "Combined Ranking"
     url: combined_rankings.html
     children:
-      - title: "Overview"
-        url: combined_rankings.html
-      - title: "Systems"
-        url: systems/combined_rankings.html
-      - title: "Security"
-        url: security/combined_rankings.html
       - title: "Author Profiles"
         url: author.html
       - title: "Institution Ranking"
