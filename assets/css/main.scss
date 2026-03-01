@@ -180,13 +180,13 @@ html {
   color: #333;
 }
 
-// Desktop (≥768px): show all items
+// Desktop (≥768px): show all items, keep hamburger visible
 @media (min-width: 768px) {
   .greedy-nav .visible-links > li.masthead__menu-item {
     display: inline-block;
   }
   .greedy-nav__toggle {
-    display: none !important;
+    display: flex !important;
   }
 }
 
@@ -208,7 +208,5 @@ html {
   .hidden-links .masthead__submenu li a {
     padding: 0.4em 0.8em 0.4em 1.2em;
     font-size: 0.8em;
-  }
-}
   }
 }
