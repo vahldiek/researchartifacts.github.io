@@ -61,13 +61,16 @@ Explore detailed insights across institutions, authors, and conferences:
       var top = data.slice(0, 10);
       var tbody = document.querySelector('#top10Table tbody');
       tbody.innerHTML = '';
+      var baseUrl = '{{ "" | relative_url }}';
       top.forEach(function(e, i){
         var name = (e.name || '').replace(/\t/g, ' ');
+        var displayName = name.replace(/\s+\d{4}$/, '').replace(/\t/g, ' ');
         var aff  = (e.affiliation || '').replace(/^_/, '');
+        var profileUrl = baseUrl + '/author.html?name=' + encodeURIComponent(e.name);
         var tr = document.createElement('tr');
         tr.innerHTML = '<td>' + (i+1) + '</td>'
-          + '<td>' + name + '</td>'
-          + '<td>' + aff + '</td>'
+          + '<td><a href="' + profileUrl + '" style="color:#0066cc;text-decoration:none;">' + escHtml(displayName) + '</a></td>'
+          + '<td>' + escHtml(aff) + '</td>'
           + '<td>' + (e.artifacts||0) + '</td>'
           + '<td>' + (e.ae_memberships||0) + '</td>'
           + '<td>' + (e.chair_count||0) + '</td>'
@@ -75,6 +78,11 @@ Explore detailed insights across institutions, authors, and conferences:
         tbody.appendChild(tr);
       });
     });
+  function escHtml(s) {
+    var d = document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
 })();
 </script>
 
