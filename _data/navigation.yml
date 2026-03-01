@@ -2,7 +2,7 @@ main:
   - title: "Overview"
     url: index.html
   - title: "Ranking"
-    url: "#"
+    url: combined_rankings.html
     children:
       - title: "Combined Ranking"
         url: combined_rankings.html
