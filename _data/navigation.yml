@@ -12,15 +12,8 @@ main:
         url: security/combined_rankings.html
       - title: "Author Profiles"
         url: author.html
-  - title: "Institution Rankings"
-    url: institution_rankings.html
-    children:
-      - title: "Overview"
+      - title: "Ranking"
         url: institution_rankings.html
-      - title: "Systems"
-        url: systems/institution_rankings.html
-      - title: "Security"
-        url: security/institution_rankings.html
   - title: "Systems"
     url: systems/
     children:

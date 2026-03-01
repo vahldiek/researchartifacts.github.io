@@ -1,12 +1,14 @@
 ---
 layout: default
-title: Institution Rankings
+title: Ranking
 institution_data_url: /assets/data/institution_rankings.json
+systems_data_url: /assets/data/systems_institution_rankings.json
+security_data_url: /assets/data/security_institution_rankings.json
 ---
 
-# Institution Rankings
+# Institution Ranking
 
-This page ranks institutions by their aggregate contributions to research artifact evaluation and availability across systems and security conferences. Institutions are scored by combining:
+This page ranks institutions by their aggregate contributions to research artifact evaluation and availability. Use the filter above the table to view rankings for all conferences, systems conferences only, or security conferences only. Institutions are scored by combining:
 
 - **Artifacts**: Number of papers with available artifacts by authors affiliated with the institution
 - **AE Service**: Artifact evaluation committee memberships by members of the institution  

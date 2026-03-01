@@ -3,8 +3,19 @@
   Shows institutions ranked by combined_score (aggregated artifacts + AE committee memberships).
 
   Required page variables:
-    page.institution_data_url  — path to the JSON file
+    page.institution_data_url  — path to the overall JSON file
+    page.systems_data_url      — path to the systems JSON file
+    page.security_data_url     — path to the security JSON file
 {% endcomment %}
+
+<div id="institution-filter" style="margin-bottom:16px; display:none;">
+  <label style="font-weight:bold; margin-right:8px;">Area:</label>
+  <select id="areaFilter" style="padding:4px 8px; font-size:1em;">
+    <option value="all" selected>All Conferences</option>
+    <option value="systems">Systems Only</option>
+    <option value="security">Security Only</option>
+  </select>
+</div>
 
 <div id="institution-controls" style="margin-bottom:10px; display:none;">
   <label>Show
@@ -36,7 +47,12 @@
 
 <script>
 (function() {
-  var DATA_URL = '{{ page.institution_data_url | relative_url }}';
+  var DATA_URLS = {
+    'all': '{{ page.institution_data_url | relative_url }}',
+    'systems': '{{ page.systems_data_url | relative_url }}',
+    'security': '{{ page.security_data_url | relative_url }}'
+  };
+  var currentArea = 'all';
   var baseUrl = '{{ "" | relative_url }}';
   var allData = [];
   var sortedData = [];
@@ -254,7 +270,31 @@
     document.getElementById('institutionTable').style.display = '';
     document.getElementById('institution-controls').style.display = '';
     document.getElementById('institution-controls-bottom').style.display = '';
+    document.getElementById('institution-filter').style.display = '';
   }
+
+  function loadArea(area) {
+    currentArea = area;
+    expandedRows.clear(); // Clear expanded state when switching areas
+    document.getElementById('institutionLoading').style.display = '';
+    document.getElementById('institutionLoading').innerHTML = '<em>Loading ' + area + ' institution ranking data…</em>';
+    document.getElementById('institutionTable').style.display = 'none';
+    document.getElementById('institution-controls').style.display = 'none';
+    document.getElementById('institution-controls-bottom').style.display = 'none';
+    
+    fetch(DATA_URLS[area])
+      .then(function(r) { return r.json(); })
+      .then(init)
+      .catch(function(e) {
+        document.getElementById('institutionLoading').innerHTML =
+          '<em>Failed to load ' + area + ' institution ranking data. ' + e + '</em>';
+      });
+  }
+
+  // Area filter
+  document.getElementById('areaFilter').addEventListener('change', function() {
+    loadArea(this.value);
+  });
 
   // Controls
   document.getElementById('iPageSizeSelect').addEventListener('change', function() {
@@ -272,14 +312,8 @@
   document.getElementById('iPrevBtnB').addEventListener('click', goPrev);
   document.getElementById('iNextBtnB').addEventListener('click', goNext);
 
-  // Load data
-  fetch(DATA_URL)
-    .then(function(r) { return r.json(); })
-    .then(init)
-    .catch(function(e) {
-      document.getElementById('institutionLoading').innerHTML =
-        '<em>Failed to load institution ranking data. ' + e + '</em>';
-    });
+  // Load initial data
+  loadArea(currentArea);
 })();
 </script>
 
