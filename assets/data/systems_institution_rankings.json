@@ -6320,6 +6320,66 @@
     }
   },
   {
+    "affiliation": "Technical University of Munich",
+    "combined_score": 29,
+    "artifacts": 10,
+    "badges_functional": 7,
+    "badges_reproducible": 7,
+    "ae_memberships": 1,
+    "chair_count": 1,
+    "total_papers": 10,
+    "artifact_rate": 100.0,
+    "num_authors": 4,
+    "top_authors": [
+      {
+        "name": "Pramod Bhatotia",
+        "affiliation": "Technical University of Munich, Germany",
+        "combined_score": 13,
+        "artifacts": 5,
+        "ae_memberships": 0,
+        "total_papers": 5
+      },
+      {
+        "name": "Martin Kleppmann",
+        "affiliation": "TU Munich, Germany",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 1,
+        "total_papers": 4
+      },
+      {
+        "name": "Martin Schulz 0001",
+        "affiliation": "Technical University Munich, Germany",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Michael Bader",
+        "affiliation": "Technical University Munich, Germany",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 0
+      }
+    ],
+    "conferences": [
+      "ATC",
+      "EUROSYS",
+      "OSDI",
+      "SC"
+    ],
+    "years": {
+      "2025": 2,
+      "2024": 2,
+      "2023": 0,
+      "2022": 2,
+      "2021": 5,
+      "2020": 0
+    }
+  },
+  {
     "affiliation": "East China Normal University",
     "combined_score": 29,
     "artifacts": 2,
@@ -8378,41 +8438,6 @@
     }
   },
   {
-    "affiliation": "Technical University of Munich",
-    "combined_score": 13,
-    "artifacts": 5,
-    "badges_functional": 4,
-    "badges_reproducible": 4,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 5,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Pramod Bhatotia",
-        "affiliation": "Technical University of Munich, Germany",
-        "combined_score": 13,
-        "artifacts": 5,
-        "ae_memberships": 0,
-        "total_papers": 5
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "EUROSYS",
-      "OSDI"
-    ],
-    "years": {
-      "2025": 1,
-      "2024": 1,
-      "2023": 0,
-      "2022": 2,
-      "2021": 1,
-      "2020": 0
-    }
-  },
-  {
     "affiliation": "Nankai University",
     "combined_score": 13,
     "artifacts": 1,
@@ -10408,39 +10433,6 @@
     }
   },
   {
-    "affiliation": "TU Munich",
-    "combined_score": 8,
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 1,
-    "chair_count": 1,
-    "total_papers": 4,
-    "artifact_rate": 25.0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Martin Kleppmann",
-        "affiliation": "TU Munich, Germany",
-        "combined_score": 8,
-        "artifacts": 1,
-        "ae_memberships": 1,
-        "total_papers": 4
-      }
-    ],
-    "conferences": [
-      "EUROSYS"
-    ],
-    "years": {
-      "2025": 1,
-      "2024": 0,
-      "2023": 0,
-      "2022": 0,
-      "2021": 1,
-      "2020": 0
-    }
-  },
-  {
     "affiliation": "Exostellar",
     "combined_score": 8,
     "artifacts": 0,
@@ -10621,48 +10613,6 @@
       "2023": 1,
       "2022": 0,
       "2021": 0,
-      "2020": 0
-    }
-  },
-  {
-    "affiliation": "Technical University Munich",
-    "combined_score": 8,
-    "artifacts": 4,
-    "badges_functional": 2,
-    "badges_reproducible": 2,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 400.0,
-    "num_authors": 2,
-    "top_authors": [
-      {
-        "name": "Martin Schulz 0001",
-        "affiliation": "Technical University Munich, Germany",
-        "combined_score": 4,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Michael Bader",
-        "affiliation": "Technical University Munich, Germany",
-        "combined_score": 4,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "SC"
-    ],
-    "years": {
-      "2025": 0,
-      "2024": 1,
-      "2023": 0,
-      "2022": 0,
-      "2021": 3,
       "2020": 0
     }
   },

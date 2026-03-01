@@ -389,16 +389,32 @@
   },
   {
     "affiliation": "Tsinghua University",
-    "combined_score": 343,
-    "artifacts": 93,
-    "badges_functional": 71,
-    "badges_reproducible": 56,
+    "combined_score": 419,
+    "artifacts": 120,
+    "badges_functional": 98,
+    "badges_reproducible": 78,
     "ae_memberships": 41,
     "chair_count": 0,
-    "total_papers": 327,
-    "artifact_rate": 28.4,
-    "num_authors": 48,
+    "total_papers": 420,
+    "artifact_rate": 28.6,
+    "num_authors": 51,
     "top_authors": [
+      {
+        "name": "Jiwu Shu",
+        "affiliation": "Tsinghua University",
+        "combined_score": 29,
+        "artifacts": 10,
+        "ae_memberships": 0,
+        "total_papers": 42
+      },
+      {
+        "name": "Youyou Lu",
+        "affiliation": "Tsinghua University",
+        "combined_score": 24,
+        "artifacts": 8,
+        "ae_memberships": 0,
+        "total_papers": 32
+      },
       {
         "name": "Minhui Xie",
         "affiliation": "Tsinghua University",
@@ -406,6 +422,14 @@
         "artifacts": 1,
         "ae_memberships": 7,
         "total_papers": 6
+      },
+      {
+        "name": "Kang Chen",
+        "affiliation": "Tsinghua University",
+        "combined_score": 23,
+        "artifacts": 9,
+        "ae_memberships": 0,
+        "total_papers": 19
       },
       {
         "name": "Qing Wang 0031",
@@ -534,30 +558,6 @@
         "artifacts": 0,
         "ae_memberships": 3,
         "total_papers": 0
-      },
-      {
-        "name": "Baojun Liu 0002",
-        "affiliation": "Tsinghua University",
-        "combined_score": 6,
-        "artifacts": 4,
-        "ae_memberships": 0,
-        "total_papers": 24
-      },
-      {
-        "name": "Jing Wang 0158",
-        "affiliation": "Tsinghua University",
-        "combined_score": 6,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 5
-      },
-      {
-        "name": "Mingyu Gao 0001",
-        "affiliation": "Tsinghua University",
-        "combined_score": 6,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 4
       }
     ],
     "conferences": [
@@ -574,11 +574,11 @@
       "USENIXSEC"
     ],
     "years": {
-      "2022": 15,
-      "2023": 19,
-      "2024": 22,
-      "2021": 10,
-      "2025": 33,
+      "2021": 13,
+      "2022": 17,
+      "2023": 22,
+      "2024": 25,
+      "2025": 36,
       "2026": 7,
       "2020": 3
     }
@@ -1169,6 +1169,202 @@
     }
   },
   {
+    "affiliation": "ETH Zurich",
+    "combined_score": 268,
+    "artifacts": 96,
+    "badges_functional": 74,
+    "badges_reproducible": 54,
+    "ae_memberships": 14,
+    "chair_count": 1,
+    "total_papers": 308,
+    "artifact_rate": 31.2,
+    "num_authors": 28,
+    "top_authors": [
+      {
+        "name": "Kaveh Razavi",
+        "affiliation": "ETH Zurich",
+        "combined_score": 24,
+        "artifacts": 8,
+        "ae_memberships": 0,
+        "total_papers": 23
+      },
+      {
+        "name": "Torsten Hoefler",
+        "affiliation": "ETH Zurich",
+        "combined_score": 20,
+        "artifacts": 8,
+        "ae_memberships": 0,
+        "total_papers": 16
+      },
+      {
+        "name": "David A. Basin",
+        "affiliation": "ETH Zurich",
+        "combined_score": 19,
+        "artifacts": 10,
+        "ae_memberships": 0,
+        "total_papers": 16
+      },
+      {
+        "name": "Zhendong Su 0001",
+        "affiliation": "ETH Zurich",
+        "combined_score": 16,
+        "artifacts": 7,
+        "ae_memberships": 0,
+        "total_papers": 16
+      },
+      {
+        "name": "Christof Ferreira Torres",
+        "affiliation": "ETH Zurich",
+        "combined_score": 16,
+        "artifacts": 4,
+        "ae_memberships": 3,
+        "total_papers": 4
+      },
+      {
+        "name": "Ana Klimovic",
+        "affiliation": "ETH Zurich",
+        "combined_score": 15,
+        "artifacts": 5,
+        "ae_memberships": 0,
+        "total_papers": 22
+      },
+      {
+        "name": "Patrick Jattke",
+        "affiliation": "ETH Zurich",
+        "combined_score": 15,
+        "artifacts": 3,
+        "ae_memberships": 2,
+        "total_papers": 4
+      },
+      {
+        "name": "Manuel Rigger",
+        "affiliation": "ETH Zurich",
+        "combined_score": 13,
+        "artifacts": 4,
+        "ae_memberships": 1,
+        "total_papers": 5
+      },
+      {
+        "name": "Zu-Ming Jiang",
+        "affiliation": "ETH Zurich",
+        "combined_score": 13,
+        "artifacts": 3,
+        "ae_memberships": 2,
+        "total_papers": 6
+      },
+      {
+        "name": "Flavien Solt",
+        "affiliation": "ETH Zurich",
+        "combined_score": 12,
+        "artifacts": 4,
+        "ae_memberships": 0,
+        "total_papers": 6
+      },
+      {
+        "name": "Srdjan Capkun",
+        "affiliation": "ETH Zurich",
+        "combined_score": 11,
+        "artifacts": 7,
+        "ae_memberships": 0,
+        "total_papers": 50
+      },
+      {
+        "name": "Adrian Perrig",
+        "affiliation": "ETH Zurich",
+        "combined_score": 11,
+        "artifacts": 5,
+        "ae_memberships": 0,
+        "total_papers": 36
+      },
+      {
+        "name": "Foteini Strati",
+        "affiliation": "ETH Zurich",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 4
+      },
+      {
+        "name": "Shweta Shinde",
+        "affiliation": "ETH Zurich",
+        "combined_score": 8,
+        "artifacts": 5,
+        "ae_memberships": 0,
+        "total_papers": 10
+      },
+      {
+        "name": "Karel Kubicek 0001",
+        "affiliation": "ETH Zurich",
+        "combined_score": 8,
+        "artifacts": 4,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Hao Sun 0021",
+        "affiliation": "ETH Zurich",
+        "combined_score": 6,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 8
+      },
+      {
+        "name": "Ralf Jung 0002",
+        "affiliation": "ETH Zurich",
+        "combined_score": 6,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 3
+      },
+      {
+        "name": "Timothy Roscoe",
+        "affiliation": "ETH Zurich",
+        "combined_score": 6,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 28
+      },
+      {
+        "name": "Daming Zou",
+        "affiliation": "ETH Zurich",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Michael Giardino",
+        "affiliation": "ETH Zurich",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
+    "conferences": [
+      "ACSAC",
+      "ATC",
+      "EUROSYS",
+      "NDSS",
+      "OSDI",
+      "PETS",
+      "SC",
+      "SOSP",
+      "SYSTEX",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2022": 15,
+      "2023": 14,
+      "2024": 18,
+      "2025": 14,
+      "2021": 11,
+      "2020": 5,
+      "2018": 1,
+      "2026": 1
+    }
+  },
+  {
     "affiliation": "University of Wisconsin-Madison",
     "combined_score": 250,
     "artifacts": 43,
@@ -1361,202 +1557,6 @@
       "2023": 5,
       "2020": 2,
       "2026": 8
-    }
-  },
-  {
-    "affiliation": "ETH Zurich",
-    "combined_score": 244,
-    "artifacts": 88,
-    "badges_functional": 66,
-    "badges_reproducible": 46,
-    "ae_memberships": 14,
-    "chair_count": 1,
-    "total_papers": 285,
-    "artifact_rate": 30.9,
-    "num_authors": 27,
-    "top_authors": [
-      {
-        "name": "Torsten Hoefler",
-        "affiliation": "ETH Zurich",
-        "combined_score": 20,
-        "artifacts": 8,
-        "ae_memberships": 0,
-        "total_papers": 16
-      },
-      {
-        "name": "David A. Basin",
-        "affiliation": "ETH Zurich",
-        "combined_score": 19,
-        "artifacts": 10,
-        "ae_memberships": 0,
-        "total_papers": 16
-      },
-      {
-        "name": "Zhendong Su 0001",
-        "affiliation": "ETH Zurich",
-        "combined_score": 16,
-        "artifacts": 7,
-        "ae_memberships": 0,
-        "total_papers": 16
-      },
-      {
-        "name": "Christof Ferreira Torres",
-        "affiliation": "ETH Zurich",
-        "combined_score": 16,
-        "artifacts": 4,
-        "ae_memberships": 3,
-        "total_papers": 4
-      },
-      {
-        "name": "Ana Klimovic",
-        "affiliation": "ETH Zurich",
-        "combined_score": 15,
-        "artifacts": 5,
-        "ae_memberships": 0,
-        "total_papers": 22
-      },
-      {
-        "name": "Patrick Jattke",
-        "affiliation": "ETH Zurich",
-        "combined_score": 15,
-        "artifacts": 3,
-        "ae_memberships": 2,
-        "total_papers": 4
-      },
-      {
-        "name": "Manuel Rigger",
-        "affiliation": "ETH Zurich",
-        "combined_score": 13,
-        "artifacts": 4,
-        "ae_memberships": 1,
-        "total_papers": 5
-      },
-      {
-        "name": "Zu-Ming Jiang",
-        "affiliation": "ETH Zurich",
-        "combined_score": 13,
-        "artifacts": 3,
-        "ae_memberships": 2,
-        "total_papers": 6
-      },
-      {
-        "name": "Flavien Solt",
-        "affiliation": "ETH Zurich",
-        "combined_score": 12,
-        "artifacts": 4,
-        "ae_memberships": 0,
-        "total_papers": 6
-      },
-      {
-        "name": "Srdjan Capkun",
-        "affiliation": "ETH Zurich",
-        "combined_score": 11,
-        "artifacts": 7,
-        "ae_memberships": 0,
-        "total_papers": 50
-      },
-      {
-        "name": "Adrian Perrig",
-        "affiliation": "ETH Zurich",
-        "combined_score": 11,
-        "artifacts": 5,
-        "ae_memberships": 0,
-        "total_papers": 36
-      },
-      {
-        "name": "Foteini Strati",
-        "affiliation": "ETH Zurich",
-        "combined_score": 9,
-        "artifacts": 1,
-        "ae_memberships": 2,
-        "total_papers": 4
-      },
-      {
-        "name": "Shweta Shinde",
-        "affiliation": "ETH Zurich",
-        "combined_score": 8,
-        "artifacts": 5,
-        "ae_memberships": 0,
-        "total_papers": 10
-      },
-      {
-        "name": "Karel Kubicek 0001",
-        "affiliation": "ETH Zurich",
-        "combined_score": 8,
-        "artifacts": 4,
-        "ae_memberships": 0,
-        "total_papers": 2
-      },
-      {
-        "name": "Hao Sun 0021",
-        "affiliation": "ETH Zurich",
-        "combined_score": 6,
-        "artifacts": 3,
-        "ae_memberships": 0,
-        "total_papers": 8
-      },
-      {
-        "name": "Ralf Jung 0002",
-        "affiliation": "ETH Zurich",
-        "combined_score": 6,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 3
-      },
-      {
-        "name": "Timothy Roscoe",
-        "affiliation": "ETH Zurich",
-        "combined_score": 6,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 28
-      },
-      {
-        "name": "Daming Zou",
-        "affiliation": "ETH Zurich",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Michael Giardino",
-        "affiliation": "ETH Zurich",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Gustavo Alonso",
-        "affiliation": "ETH Zurich",
-        "combined_score": 5,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 22
-      }
-    ],
-    "conferences": [
-      "ACSAC",
-      "ATC",
-      "EUROSYS",
-      "NDSS",
-      "OSDI",
-      "PETS",
-      "SC",
-      "SOSP",
-      "SYSTEX",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2021": 11,
-      "2023": 13,
-      "2024": 17,
-      "2025": 13,
-      "2020": 5,
-      "2022": 14,
-      "2018": 1,
-      "2026": 1
     }
   },
   {
@@ -2916,138 +2916,16 @@
     }
   },
   {
-    "affiliation": "University of Utah",
-    "combined_score": 148,
-    "artifacts": 12,
-    "badges_functional": 9,
-    "badges_reproducible": 10,
-    "ae_memberships": 37,
-    "chair_count": 3,
-    "total_papers": 51,
-    "artifact_rate": 23.5,
-    "num_authors": 11,
-    "top_authors": [
-      {
-        "name": "Amit Samanta",
-        "affiliation": "University of Utah",
-        "combined_score": 60,
-        "artifacts": 0,
-        "ae_memberships": 20,
-        "total_papers": 0
-      },
-      {
-        "name": "Sachin Kumar Singh",
-        "affiliation": "University of Utah",
-        "combined_score": 21,
-        "artifacts": 0,
-        "ae_memberships": 7,
-        "total_papers": 0
-      },
-      {
-        "name": "Ryan Stutsman",
-        "affiliation": "University of Utah",
-        "combined_score": 14,
-        "artifacts": 3,
-        "ae_memberships": 1,
-        "total_papers": 15
-      },
-      {
-        "name": "Jun Xu 0024",
-        "affiliation": "University of Utah",
-        "combined_score": 10,
-        "artifacts": 5,
-        "ae_memberships": 0,
-        "total_papers": 7
-      },
-      {
-        "name": "Md Ashfaqur Rahaman",
-        "affiliation": "University of Utah",
-        "combined_score": 9,
-        "artifacts": 0,
-        "ae_memberships": 3,
-        "total_papers": 0
-      },
-      {
-        "name": "Robert Ricci",
-        "affiliation": "University of Utah",
-        "combined_score": 8,
-        "artifacts": 1,
-        "ae_memberships": 1,
-        "total_papers": 16
-      },
-      {
-        "name": "Mu Zhang 0001",
-        "affiliation": "University of Utah",
-        "combined_score": 6,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 9
-      },
-      {
-        "name": "Ghazal Abdollahi",
-        "affiliation": "University of Utah",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Hamza Sheikh",
-        "affiliation": "University of Utah",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Eric Eide",
-        "affiliation": "University of Utah",
-        "combined_score": 5,
-        "artifacts": 0,
-        "ae_memberships": 1,
-        "total_papers": 0
-      },
-      {
-        "name": "Chinmay Kulkarni 0002",
-        "affiliation": "University of Utah",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 4
-      }
-    ],
-    "conferences": [
-      "ACSAC",
-      "ATC",
-      "EUROSYS",
-      "NDSS",
-      "OSDI",
-      "PETS",
-      "SOSP",
-      "USENIXSEC",
-      "WOOT"
-    ],
-    "years": {
-      "2021": 5,
-      "2022": 7,
-      "2023": 7,
-      "2024": 12,
-      "2025": 10,
-      "2026": 4,
-      "2020": 2
-    }
-  },
-  {
     "affiliation": "Zhejiang University",
-    "combined_score": 145,
-    "artifacts": 44,
-    "badges_functional": 24,
-    "badges_reproducible": 20,
+    "combined_score": 166,
+    "artifacts": 52,
+    "badges_functional": 32,
+    "badges_reproducible": 25,
     "ae_memberships": 19,
     "chair_count": 0,
-    "total_papers": 175,
-    "artifact_rate": 25.1,
-    "num_authors": 23,
+    "total_papers": 195,
+    "artifact_rate": 26.7,
+    "num_authors": 24,
     "top_authors": [
       {
         "name": "Kui Ren 0001",
@@ -3056,6 +2934,14 @@
         "artifacts": 11,
         "ae_memberships": 0,
         "total_papers": 37
+      },
+      {
+        "name": "Yajin Zhou",
+        "affiliation": "Zhejiang University",
+        "combined_score": 21,
+        "artifacts": 8,
+        "ae_memberships": 0,
+        "total_papers": 20
       },
       {
         "name": "Xia Zhou",
@@ -3200,14 +3086,6 @@
         "artifacts": 1,
         "ae_memberships": 0,
         "total_papers": 4
-      },
-      {
-        "name": "Rui Zhang 0118",
-        "affiliation": "Zhejiang University",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
       }
     ],
     "conferences": [
@@ -3218,15 +3096,139 @@
       "FAST",
       "NDSS",
       "OSDI",
+      "SOSP",
       "USENIXSEC",
       "WOOT"
     ],
     "years": {
-      "2022": 9,
-      "2024": 18,
-      "2025": 13,
-      "2023": 5,
+      "2022": 10,
+      "2024": 19,
+      "2025": 14,
+      "2021": 1,
+      "2023": 6,
       "2026": 2
+    }
+  },
+  {
+    "affiliation": "University of Utah",
+    "combined_score": 148,
+    "artifacts": 12,
+    "badges_functional": 9,
+    "badges_reproducible": 10,
+    "ae_memberships": 37,
+    "chair_count": 3,
+    "total_papers": 51,
+    "artifact_rate": 23.5,
+    "num_authors": 11,
+    "top_authors": [
+      {
+        "name": "Amit Samanta",
+        "affiliation": "University of Utah",
+        "combined_score": 60,
+        "artifacts": 0,
+        "ae_memberships": 20,
+        "total_papers": 0
+      },
+      {
+        "name": "Sachin Kumar Singh",
+        "affiliation": "University of Utah",
+        "combined_score": 21,
+        "artifacts": 0,
+        "ae_memberships": 7,
+        "total_papers": 0
+      },
+      {
+        "name": "Ryan Stutsman",
+        "affiliation": "University of Utah",
+        "combined_score": 14,
+        "artifacts": 3,
+        "ae_memberships": 1,
+        "total_papers": 15
+      },
+      {
+        "name": "Jun Xu 0024",
+        "affiliation": "University of Utah",
+        "combined_score": 10,
+        "artifacts": 5,
+        "ae_memberships": 0,
+        "total_papers": 7
+      },
+      {
+        "name": "Md Ashfaqur Rahaman",
+        "affiliation": "University of Utah",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Robert Ricci",
+        "affiliation": "University of Utah",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 1,
+        "total_papers": 16
+      },
+      {
+        "name": "Mu Zhang 0001",
+        "affiliation": "University of Utah",
+        "combined_score": 6,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 9
+      },
+      {
+        "name": "Ghazal Abdollahi",
+        "affiliation": "University of Utah",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Hamza Sheikh",
+        "affiliation": "University of Utah",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Eric Eide",
+        "affiliation": "University of Utah",
+        "combined_score": 5,
+        "artifacts": 0,
+        "ae_memberships": 1,
+        "total_papers": 0
+      },
+      {
+        "name": "Chinmay Kulkarni 0002",
+        "affiliation": "University of Utah",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 4
+      }
+    ],
+    "conferences": [
+      "ACSAC",
+      "ATC",
+      "EUROSYS",
+      "NDSS",
+      "OSDI",
+      "PETS",
+      "SOSP",
+      "USENIXSEC",
+      "WOOT"
+    ],
+    "years": {
+      "2021": 5,
+      "2022": 7,
+      "2023": 7,
+      "2024": 12,
+      "2025": 10,
+      "2026": 4,
+      "2020": 2
     }
   },
   {
@@ -3796,6 +3798,140 @@
       "2025": 13,
       "2023": 6,
       "2020": 1
+    }
+  },
+  {
+    "affiliation": "Ruhr University Bochum",
+    "combined_score": 130,
+    "artifacts": 45,
+    "badges_functional": 30,
+    "badges_reproducible": 23,
+    "ae_memberships": 10,
+    "chair_count": 1,
+    "total_papers": 110,
+    "artifact_rate": 40.9,
+    "num_authors": 13,
+    "top_authors": [
+      {
+        "name": "Jrg Schwenk",
+        "affiliation": "Ruhr University Bochum",
+        "combined_score": 27,
+        "artifacts": 9,
+        "ae_memberships": 0,
+        "total_papers": 25
+      },
+      {
+        "name": "Juraj Somorovsky",
+        "affiliation": "Ruhr University Bochum",
+        "combined_score": 21,
+        "artifacts": 9,
+        "ae_memberships": 0,
+        "total_papers": 23
+      },
+      {
+        "name": "Vladislav Mladenov",
+        "affiliation": "Ruhr University Bochum",
+        "combined_score": 13,
+        "artifacts": 3,
+        "ae_memberships": 2,
+        "total_papers": 8
+      },
+      {
+        "name": "Yuval Yarom",
+        "affiliation": "Ruhr University Bochum",
+        "combined_score": 11,
+        "artifacts": 6,
+        "ae_memberships": 0,
+        "total_papers": 26
+      },
+      {
+        "name": "Erwin Quiring",
+        "affiliation": "Ruhr University Bochum",
+        "combined_score": 10,
+        "artifacts": 5,
+        "ae_memberships": 0,
+        "total_papers": 5
+      },
+      {
+        "name": "Nicolai Müller",
+        "affiliation": "Ruhr University Bochum",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Annika Wilde",
+        "affiliation": "Ruhr University Bochum",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 2
+      },
+      {
+        "name": "Tim Gneysu",
+        "affiliation": "Ruhr University Bochum",
+        "combined_score": 6,
+        "artifacts": 6,
+        "ae_memberships": 0,
+        "total_papers": 12
+      },
+      {
+        "name": "Ghassan Karame",
+        "affiliation": "Ruhr University Bochum",
+        "combined_score": 6,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 7
+      },
+      {
+        "name": "Fabian Bäumer",
+        "affiliation": "Ruhr University Bochum",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Andreas Mller 0025",
+        "affiliation": "Ruhr University Bochum",
+        "combined_score": 5,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Pascal Sasdrich",
+        "affiliation": "Ruhr University Bochum",
+        "combined_score": 5,
+        "artifacts": 0,
+        "ae_memberships": 1,
+        "total_papers": 0
+      },
+      {
+        "name": "Fabian Bumer 0001",
+        "affiliation": "Ruhr University Bochum",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      }
+    ],
+    "conferences": [
+      "ACSAC",
+      "CHES",
+      "NDSS",
+      "PETS",
+      "USENIXSEC",
+      "WOOT"
+    ],
+    "years": {
+      "2022": 4,
+      "2023": 9,
+      "2024": 8,
+      "2025": 10,
+      "2020": 2,
+      "2026": 4
     }
   },
   {
@@ -4733,131 +4869,6 @@
       "2025": 7,
       "2021": 4,
       "2026": 3
-    }
-  },
-  {
-    "affiliation": "Ruhr University Bochum",
-    "combined_score": 109,
-    "artifacts": 36,
-    "badges_functional": 24,
-    "badges_reproducible": 17,
-    "ae_memberships": 10,
-    "chair_count": 1,
-    "total_papers": 87,
-    "artifact_rate": 41.4,
-    "num_authors": 12,
-    "top_authors": [
-      {
-        "name": "Jrg Schwenk",
-        "affiliation": "Ruhr University Bochum",
-        "combined_score": 27,
-        "artifacts": 9,
-        "ae_memberships": 0,
-        "total_papers": 25
-      },
-      {
-        "name": "Vladislav Mladenov",
-        "affiliation": "Ruhr University Bochum",
-        "combined_score": 13,
-        "artifacts": 3,
-        "ae_memberships": 2,
-        "total_papers": 8
-      },
-      {
-        "name": "Yuval Yarom",
-        "affiliation": "Ruhr University Bochum",
-        "combined_score": 11,
-        "artifacts": 6,
-        "ae_memberships": 0,
-        "total_papers": 26
-      },
-      {
-        "name": "Erwin Quiring",
-        "affiliation": "Ruhr University Bochum",
-        "combined_score": 10,
-        "artifacts": 5,
-        "ae_memberships": 0,
-        "total_papers": 5
-      },
-      {
-        "name": "Nicolai Müller",
-        "affiliation": "Ruhr University Bochum",
-        "combined_score": 9,
-        "artifacts": 0,
-        "ae_memberships": 3,
-        "total_papers": 0
-      },
-      {
-        "name": "Annika Wilde",
-        "affiliation": "Ruhr University Bochum",
-        "combined_score": 8,
-        "artifacts": 1,
-        "ae_memberships": 2,
-        "total_papers": 2
-      },
-      {
-        "name": "Tim Gneysu",
-        "affiliation": "Ruhr University Bochum",
-        "combined_score": 6,
-        "artifacts": 6,
-        "ae_memberships": 0,
-        "total_papers": 12
-      },
-      {
-        "name": "Ghassan Karame",
-        "affiliation": "Ruhr University Bochum",
-        "combined_score": 6,
-        "artifacts": 3,
-        "ae_memberships": 0,
-        "total_papers": 7
-      },
-      {
-        "name": "Fabian Bäumer",
-        "affiliation": "Ruhr University Bochum",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Andreas Mller 0025",
-        "affiliation": "Ruhr University Bochum",
-        "combined_score": 5,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Pascal Sasdrich",
-        "affiliation": "Ruhr University Bochum",
-        "combined_score": 5,
-        "artifacts": 0,
-        "ae_memberships": 1,
-        "total_papers": 0
-      },
-      {
-        "name": "Fabian Bumer 0001",
-        "affiliation": "Ruhr University Bochum",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "ACSAC",
-      "CHES",
-      "NDSS",
-      "PETS",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2022": 3,
-      "2023": 8,
-      "2024": 7,
-      "2025": 9,
-      "2020": 1,
-      "2026": 4
     }
   },
   {
@@ -6834,6 +6845,127 @@
     }
   },
   {
+    "affiliation": "Princeton University",
+    "combined_score": 86,
+    "artifacts": 37,
+    "badges_functional": 24,
+    "badges_reproducible": 19,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 118,
+    "artifact_rate": 31.4,
+    "num_authors": 11,
+    "top_authors": [
+      {
+        "name": "Prateek Mittal",
+        "affiliation": "Princeton University",
+        "combined_score": 27,
+        "artifacts": 14,
+        "ae_memberships": 0,
+        "total_papers": 30
+      },
+      {
+        "name": "Ravi Netravali",
+        "affiliation": "Princeton University",
+        "combined_score": 9,
+        "artifacts": 4,
+        "ae_memberships": 0,
+        "total_papers": 27
+      },
+      {
+        "name": "Liang Wang 0054",
+        "affiliation": "Princeton University",
+        "combined_score": 8,
+        "artifacts": 4,
+        "ae_memberships": 0,
+        "total_papers": 5
+      },
+      {
+        "name": "Jennifer Rexford",
+        "affiliation": "Princeton University",
+        "combined_score": 7,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 27
+      },
+      {
+        "name": "Amit Levy",
+        "affiliation": "Princeton University",
+        "combined_score": 6,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 11
+      },
+      {
+        "name": "Jonathan R. Mayer",
+        "affiliation": "Princeton University",
+        "combined_score": 6,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 7
+      },
+      {
+        "name": "Zhen Jia 0001",
+        "affiliation": "Princeton University",
+        "combined_score": 6,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 3
+      },
+      {
+        "name": "Murali Ramanujam",
+        "affiliation": "Princeton University",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Ruby B. Lee",
+        "affiliation": "Princeton University",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 6
+      },
+      {
+        "name": "Xinyu Tang 0003",
+        "affiliation": "Princeton University",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Jiachen T. Wang",
+        "affiliation": "Princeton University",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      }
+    ],
+    "conferences": [
+      "ACSAC",
+      "ATC",
+      "EUROSYS",
+      "OSDI",
+      "PETS",
+      "SOSP",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2021": 3,
+      "2022": 6,
+      "2023": 5,
+      "2024": 5,
+      "2025": 3,
+      "2020": 1,
+      "2018": 1,
+      "2019": 1
+    }
+  },
+  {
     "affiliation": "University of Waterloo",
     "combined_score": 86,
     "artifacts": 31,
@@ -8422,6 +8554,78 @@
     }
   },
   {
+    "affiliation": "University of Minnesota",
+    "combined_score": 65,
+    "artifacts": 9,
+    "badges_functional": 8,
+    "badges_reproducible": 6,
+    "ae_memberships": 14,
+    "chair_count": 0,
+    "total_papers": 14,
+    "artifact_rate": 64.3,
+    "num_authors": 5,
+    "top_authors": [
+      {
+        "name": "Diyu Zhou",
+        "affiliation": "University of Minnesota",
+        "combined_score": 22,
+        "artifacts": 8,
+        "ae_memberships": 0,
+        "total_papers": 14
+      },
+      {
+        "name": "Wenlong Wang",
+        "affiliation": "University of Minnesota",
+        "combined_score": 15,
+        "artifacts": 0,
+        "ae_memberships": 5,
+        "total_papers": 0
+      },
+      {
+        "name": "Huibing Dong",
+        "affiliation": "University of Minnesota",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Zhaokang Ke",
+        "affiliation": "University of Minnesota",
+        "combined_score": 10,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Weiheng Bai",
+        "affiliation": "University of Minnesota",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
+    "conferences": [
+      "ATC",
+      "EUROSYS",
+      "FAST",
+      "NDSS",
+      "OSDI",
+      "SC",
+      "SOSP",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2022": 1,
+      "2023": 1,
+      "2024": 5,
+      "2025": 10,
+      "2021": 1,
+      "2026": 1
+    }
+  },
+  {
     "affiliation": "Washington University in St",
     "combined_score": 63,
     "artifacts": 24,
@@ -8652,6 +8856,116 @@
     }
   },
   {
+    "affiliation": "Yale University",
+    "combined_score": 59,
+    "artifacts": 21,
+    "badges_functional": 19,
+    "badges_reproducible": 13,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 56,
+    "artifact_rate": 37.5,
+    "num_authors": 10,
+    "top_authors": [
+      {
+        "name": "Yinqian Zhang",
+        "affiliation": "Yale University",
+        "combined_score": 22,
+        "artifacts": 10,
+        "ae_memberships": 0,
+        "total_papers": 35
+      },
+      {
+        "name": "Lin Zhong 0001",
+        "affiliation": "Yale University",
+        "combined_score": 6,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 9
+      },
+      {
+        "name": "Caihua Li",
+        "affiliation": "Yale University",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Ning Luo 0002",
+        "affiliation": "Yale University",
+        "combined_score": 5,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Ruzica Piskac",
+        "affiliation": "Yale University",
+        "combined_score": 5,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 4
+      },
+      {
+        "name": "Abhishek Bhattacharjee",
+        "affiliation": "Yale University",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Alex Wong 0001",
+        "affiliation": "Yale University",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Ben Fisch",
+        "affiliation": "Yale University",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Katerina Sotiraki",
+        "affiliation": "Yale University",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Zeyu Liu 0004",
+        "affiliation": "Yale University",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      }
+    ],
+    "conferences": [
+      "ACSAC",
+      "EUROSYS",
+      "OSDI",
+      "SOSP",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2018": 1,
+      "2021": 3,
+      "2022": 3,
+      "2023": 4,
+      "2025": 2,
+      "2020": 1,
+      "2024": 4
+    }
+  },
+  {
     "affiliation": "Amazon Web Services",
     "combined_score": 59,
     "artifacts": 13,
@@ -8744,119 +9058,6 @@
       "2024": 3,
       "2021": 2,
       "2020": 2
-    }
-  },
-  {
-    "affiliation": "Princeton University",
-    "combined_score": 59,
-    "artifacts": 23,
-    "badges_functional": 17,
-    "badges_reproducible": 13,
-    "ae_memberships": 2,
-    "chair_count": 0,
-    "total_papers": 88,
-    "artifact_rate": 26.1,
-    "num_authors": 10,
-    "top_authors": [
-      {
-        "name": "Ravi Netravali",
-        "affiliation": "Princeton University",
-        "combined_score": 9,
-        "artifacts": 4,
-        "ae_memberships": 0,
-        "total_papers": 27
-      },
-      {
-        "name": "Liang Wang 0054",
-        "affiliation": "Princeton University",
-        "combined_score": 8,
-        "artifacts": 4,
-        "ae_memberships": 0,
-        "total_papers": 5
-      },
-      {
-        "name": "Jennifer Rexford",
-        "affiliation": "Princeton University",
-        "combined_score": 7,
-        "artifacts": 3,
-        "ae_memberships": 0,
-        "total_papers": 27
-      },
-      {
-        "name": "Amit Levy",
-        "affiliation": "Princeton University",
-        "combined_score": 6,
-        "artifacts": 3,
-        "ae_memberships": 0,
-        "total_papers": 11
-      },
-      {
-        "name": "Jonathan R. Mayer",
-        "affiliation": "Princeton University",
-        "combined_score": 6,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 7
-      },
-      {
-        "name": "Zhen Jia 0001",
-        "affiliation": "Princeton University",
-        "combined_score": 6,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 3
-      },
-      {
-        "name": "Murali Ramanujam",
-        "affiliation": "Princeton University",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Ruby B. Lee",
-        "affiliation": "Princeton University",
-        "combined_score": 4,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 6
-      },
-      {
-        "name": "Xinyu Tang 0003",
-        "affiliation": "Princeton University",
-        "combined_score": 4,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Jiachen T. Wang",
-        "affiliation": "Princeton University",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "ACSAC",
-      "ATC",
-      "EUROSYS",
-      "OSDI",
-      "PETS",
-      "SOSP",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2020": 1,
-      "2021": 2,
-      "2022": 5,
-      "2023": 4,
-      "2024": 4,
-      "2025": 2,
-      "2018": 1,
-      "2019": 1
     }
   },
   {
@@ -10722,6 +10923,93 @@
     }
   },
   {
+    "affiliation": "Technical University of Munich",
+    "combined_score": 47,
+    "artifacts": 17,
+    "badges_functional": 12,
+    "badges_reproducible": 13,
+    "ae_memberships": 1,
+    "chair_count": 1,
+    "total_papers": 52,
+    "artifact_rate": 32.7,
+    "num_authors": 7,
+    "top_authors": [
+      {
+        "name": "Pramod Bhatotia",
+        "affiliation": "Technical University of Munich, Germany",
+        "combined_score": 13,
+        "artifacts": 5,
+        "ae_memberships": 0,
+        "total_papers": 15
+      },
+      {
+        "name": "Martin Kleppmann",
+        "affiliation": "TU Munich, Germany",
+        "combined_score": 9,
+        "artifacts": 2,
+        "ae_memberships": 1,
+        "total_papers": 8
+      },
+      {
+        "name": "Georg Carle",
+        "affiliation": "Technical University Munich, Germany",
+        "combined_score": 8,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Jens Grossklags",
+        "affiliation": "Technical University Munich, Germany",
+        "combined_score": 6,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 13
+      },
+      {
+        "name": "Martin Schulz 0001",
+        "affiliation": "Technical University Munich, Germany",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 14
+      },
+      {
+        "name": "Michael Bader",
+        "affiliation": "Technical University Munich, Germany",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 0
+      },
+      {
+        "name": "Sebastian Steinhorst",
+        "affiliation": "Technical University Munich, Germany",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 0
+      }
+    ],
+    "conferences": [
+      "ACSAC",
+      "ATC",
+      "EUROSYS",
+      "NDSS",
+      "OSDI",
+      "PETS",
+      "SC",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2021": 4,
+      "2022": 1,
+      "2024": 2,
+      "2025": 5,
+      "2023": 1
+    }
+  },
+  {
     "affiliation": "TU Braunschweig",
     "combined_score": 46,
     "artifacts": 22,
@@ -11125,65 +11413,6 @@
       "2023": 2,
       "2024": 4,
       "2025": 5
-    }
-  },
-  {
-    "affiliation": "University of Minnesota",
-    "combined_score": 43,
-    "artifacts": 1,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 14,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 4,
-    "top_authors": [
-      {
-        "name": "Wenlong Wang",
-        "affiliation": "University of Minnesota",
-        "combined_score": 15,
-        "artifacts": 0,
-        "ae_memberships": 5,
-        "total_papers": 0
-      },
-      {
-        "name": "Huibing Dong",
-        "affiliation": "University of Minnesota",
-        "combined_score": 12,
-        "artifacts": 0,
-        "ae_memberships": 4,
-        "total_papers": 0
-      },
-      {
-        "name": "Zhaokang Ke",
-        "affiliation": "University of Minnesota",
-        "combined_score": 10,
-        "artifacts": 1,
-        "ae_memberships": 3,
-        "total_papers": 0
-      },
-      {
-        "name": "Weiheng Bai",
-        "affiliation": "University of Minnesota",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "FAST",
-      "OSDI",
-      "SC",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2024": 4,
-      "2025": 9,
-      "2021": 1,
-      "2026": 1
     }
   },
   {
@@ -11889,105 +12118,6 @@
     }
   },
   {
-    "affiliation": "Yale University",
-    "combined_score": 37,
-    "artifacts": 11,
-    "badges_functional": 11,
-    "badges_reproducible": 9,
-    "ae_memberships": 2,
-    "chair_count": 0,
-    "total_papers": 21,
-    "artifact_rate": 52.4,
-    "num_authors": 9,
-    "top_authors": [
-      {
-        "name": "Lin Zhong 0001",
-        "affiliation": "Yale University",
-        "combined_score": 6,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 9
-      },
-      {
-        "name": "Caihua Li",
-        "affiliation": "Yale University",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Ning Luo 0002",
-        "affiliation": "Yale University",
-        "combined_score": 5,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 2
-      },
-      {
-        "name": "Ruzica Piskac",
-        "affiliation": "Yale University",
-        "combined_score": 5,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 4
-      },
-      {
-        "name": "Abhishek Bhattacharjee",
-        "affiliation": "Yale University",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 2
-      },
-      {
-        "name": "Alex Wong 0001",
-        "affiliation": "Yale University",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Ben Fisch",
-        "affiliation": "Yale University",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Katerina Sotiraki",
-        "affiliation": "Yale University",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Zeyu Liu 0004",
-        "affiliation": "Yale University",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "OSDI",
-      "SOSP",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2020": 1,
-      "2021": 2,
-      "2023": 3,
-      "2024": 4,
-      "2022": 2,
-      "2025": 1
-    }
-  },
-  {
     "affiliation": "Singapore University of Technology and Design",
     "combined_score": 35,
     "artifacts": 14,
@@ -12611,6 +12741,51 @@
       "2026": 2,
       "2023": 3,
       "2020": 1
+    }
+  },
+  {
+    "affiliation": "Seoul National University",
+    "combined_score": 30,
+    "artifacts": 11,
+    "badges_functional": 10,
+    "badges_reproducible": 9,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 24,
+    "artifact_rate": 45.8,
+    "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Youngjin Kwon",
+        "affiliation": "Seoul National University",
+        "combined_score": 27,
+        "artifacts": 10,
+        "ae_memberships": 0,
+        "total_papers": 23
+      },
+      {
+        "name": "Kyu-Jin Cho",
+        "affiliation": "Seoul National University",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      }
+    ],
+    "conferences": [
+      "ATC",
+      "EUROSYS",
+      "FAST",
+      "OSDI",
+      "SOSP",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2020": 1,
+      "2021": 1,
+      "2022": 1,
+      "2023": 1,
+      "2024": 2
     }
   },
   {
@@ -13771,73 +13946,6 @@
       "2024": 3,
       "2025": 3,
       "2022": 1
-    }
-  },
-  {
-    "affiliation": "Technical University Munich",
-    "combined_score": 25,
-    "artifacts": 10,
-    "badges_functional": 7,
-    "badges_reproducible": 8,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 29,
-    "artifact_rate": 34.5,
-    "num_authors": 5,
-    "top_authors": [
-      {
-        "name": "Georg Carle",
-        "affiliation": "Technical University Munich, Germany",
-        "combined_score": 8,
-        "artifacts": 3,
-        "ae_memberships": 0,
-        "total_papers": 2
-      },
-      {
-        "name": "Jens Grossklags",
-        "affiliation": "Technical University Munich, Germany",
-        "combined_score": 6,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 13
-      },
-      {
-        "name": "Martin Schulz 0001",
-        "affiliation": "Technical University Munich, Germany",
-        "combined_score": 4,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 14
-      },
-      {
-        "name": "Michael Bader",
-        "affiliation": "Technical University Munich, Germany",
-        "combined_score": 4,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 0
-      },
-      {
-        "name": "Sebastian Steinhorst",
-        "affiliation": "Technical University Munich, Germany",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "ACSAC",
-      "ATC",
-      "NDSS",
-      "PETS",
-      "SC"
-    ],
-    "years": {
-      "2025": 3,
-      "2023": 1,
-      "2021": 2,
-      "2024": 1
     }
   },
   {
@@ -17065,39 +17173,6 @@
     }
   },
   {
-    "affiliation": "Technical University of Munich",
-    "combined_score": 13,
-    "artifacts": 5,
-    "badges_functional": 4,
-    "badges_reproducible": 4,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 15,
-    "artifact_rate": 33.3,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Pramod Bhatotia",
-        "affiliation": "Technical University of Munich, Germany",
-        "combined_score": 13,
-        "artifacts": 5,
-        "ae_memberships": 0,
-        "total_papers": 15
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "EUROSYS",
-      "OSDI"
-    ],
-    "years": {
-      "2021": 1,
-      "2022": 1,
-      "2024": 1,
-      "2025": 1
-    }
-  },
-  {
     "affiliation": "University of Twente / Inria",
     "combined_score": 13,
     "artifacts": 1,
@@ -19307,36 +19382,6 @@
       "2021": 1,
       "2025": 1,
       "2026": 1
-    }
-  },
-  {
-    "affiliation": "TU Munich",
-    "combined_score": 9,
-    "artifacts": 2,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 1,
-    "chair_count": 1,
-    "total_papers": 8,
-    "artifact_rate": 25.0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Martin Kleppmann",
-        "affiliation": "TU Munich, Germany",
-        "combined_score": 9,
-        "artifacts": 2,
-        "ae_memberships": 1,
-        "total_papers": 8
-      }
-    ],
-    "conferences": [
-      "EUROSYS",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2021": 1,
-      "2025": 1
     }
   },
   {
@@ -26541,34 +26586,6 @@
     ],
     "years": {
       "2025": 1
-    }
-  },
-  {
-    "affiliation": "Seoul National University",
-    "combined_score": 3,
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Kyu-Jin Cho",
-        "affiliation": "Seoul National University",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "FAST"
-    ],
-    "years": {
-      "2024": 1
     }
   },
   {
