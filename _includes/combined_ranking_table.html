@@ -18,7 +18,7 @@
 </div>
 
 <div id="combined-legend" style="margin:0 0 6px 0; display:none; font-size:0.85em; color:#555;">
-  Legend: R=Rank, N=Name, A=Affiliation, C=Combined, T=Artifacts, E=AE, H=Chaired, P=Papers, R%=Art. Rate, K=Conferences
+  Legend: R=Researcher, A=Affiliation, C=Combined, T=Artifacts, E=AE, H=Chaired, P=Papers, R%=Art. Rate, K=Conferences
 </div>
 
 <div id="combinedLoading" style="font-size:0.9em;"><em>Loading combined ranking data…</em></div>
@@ -55,8 +55,8 @@
   var filterMode = 'all';
 
   var fixedCols = [
-    {label:'R',                key:'rank',              type:'num'},
-    {label:'N',                key:'name',              type:'alpha'},
+    {label:'#',                key:'rank',              type:'num'},
+    {label:'R',                key:'name',              type:'alpha'},
     {label:'A',                key:'affiliation',       type:'alpha'},
     {label:'C',                key:'combined_score',    type:'num'},
     {label:'T',                key:'artifacts',         type:'num'},

@@ -18,7 +18,7 @@
 </div>
 
 <div id="institution-legend" style="margin:0 0 6px 0; display:none; font-size:0.85em; color:#555;">
-  Legend: R=Rank, I=Institution, C=Combined, U=Researchers, T=Artifacts, E=AE, H=Chaired, P=Papers, R%=Art. Rate, K=Conferences
+  Legend: I=Institution, C=Combined, R=Researchers, T=Artifacts, E=AE, H=Chaired, P=Papers, R%=Art. Rate, K=Conferences
 </div>
 
 <div id="institutionLoading"><em>Loading institution ranking data…</em></div>
@@ -54,10 +54,10 @@
   var expandedRows = new Set(); // Track which rows are expanded
 
   var fixedCols = [
-    {label:'R',                key:'rank',              type:'num'},
+    {label:'#',                key:'rank',              type:'num'},
     {label:'I',                key:'affiliation',       type:'alpha'},
     {label:'C',                key:'combined_score',    type:'num'},
-    {label:'U',                key:'num_authors',       type:'num'},
+    {label:'R',                key:'num_authors',       type:'num'},
     {label:'T',                key:'artifacts',         type:'num'},
     {label:'E',                key:'ae_memberships',    type:'num'},
     {label:'H',                key:'chair_count',       type:'num'},
