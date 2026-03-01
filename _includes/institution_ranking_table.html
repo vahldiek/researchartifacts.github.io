@@ -247,13 +247,17 @@
   }
 
   function init(data) {
-    allData = data;
-    sortedData = data.slice();
+    // Filter out institutions with Unknown affiliation
+    allData = data.filter(function(inst) {
+      var aff = (inst.affiliation || '').toLowerCase();
+      return aff && aff !== 'unknown' && !aff.startsWith('_unknown');
+    });
+    sortedData = allData.slice();
     
     // Extract year columns
     var yrs = {};
-    for (var i = 0; i < data.length; i++) {
-      if (data[i].years) {
+    for (var i = 0; i < allData.length; i++) {
+      if (allData[i].years) {
         for (var y in data[i].years) {
           yrs[y] = true;
         }
