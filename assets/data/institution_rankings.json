@@ -3969,6 +3969,148 @@
     }
   },
   {
+    "affiliation": "University of Texas at Austin",
+    "combined_score": 124,
+    "artifacts": 22,
+    "badges_functional": 17,
+    "badges_reproducible": 16,
+    "ae_memberships": 21,
+    "chair_count": 3,
+    "total_papers": 135,
+    "artifact_rate": 16.3,
+    "num_authors": 14,
+    "top_authors": [
+      {
+        "name": "Yibo Huang",
+        "affiliation": "University of Texas at Austin",
+        "combined_score": 18,
+        "artifacts": 0,
+        "ae_memberships": 6,
+        "total_papers": 0
+      },
+      {
+        "name": "Vijay Chidambaram",
+        "affiliation": "University of Texas at Austin",
+        "combined_score": 17,
+        "artifacts": 5,
+        "ae_memberships": 1,
+        "total_papers": 23
+      },
+      {
+        "name": "Divyanshu Saxena",
+        "affiliation": "University of Texas at Austin",
+        "combined_score": 10,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      },
+      {
+        "name": "Neeraja J. Yadwadkar",
+        "affiliation": "University of Texas at Austin",
+        "combined_score": 10,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Lili Qiu",
+        "affiliation": "University of Texas at Austin",
+        "combined_score": 9,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 8
+      },
+      {
+        "name": "Lorenzo Alvisi",
+        "affiliation": "University of Texas at Austin",
+        "combined_score": 9,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 26
+      },
+      {
+        "name": "Xiao Zhang",
+        "affiliation": "University of Texas at Austin",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 13
+      },
+      {
+        "name": "Le Xu",
+        "affiliation": "University of Texas at Austin",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Aditya Akella",
+        "affiliation": "University of Texas at Austin",
+        "combined_score": 7,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 38
+      },
+      {
+        "name": "Shaghayegh Mardani",
+        "affiliation": "University of Texas at Austin",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 2
+      },
+      {
+        "name": "David J. Wu 0001",
+        "affiliation": "University of Texas at Austin",
+        "combined_score": 6,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 3
+      },
+      {
+        "name": "Shijia Wei",
+        "affiliation": "University of Texas at Austin",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Hovav Shacham",
+        "affiliation": "University of Texas at Austin",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 19
+      },
+      {
+        "name": "Yibo Huang 0006",
+        "affiliation": "University of Texas at Austin",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 2
+      }
+    ],
+    "conferences": [
+      "ATC",
+      "EUROSYS",
+      "OSDI",
+      "SOSP",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2024": 7,
+      "2025": 7,
+      "2026": 1,
+      "2021": 4,
+      "2022": 12,
+      "2023": 4,
+      "2020": 3
+    }
+  },
+  {
     "affiliation": "Virginia Tech",
     "combined_score": 121,
     "artifacts": 25,
@@ -4135,140 +4277,6 @@
       "2026": 4,
       "2020": 2,
       "2023": 9
-    }
-  },
-  {
-    "affiliation": "University of Texas at Austin",
-    "combined_score": 118,
-    "artifacts": 22,
-    "badges_functional": 17,
-    "badges_reproducible": 16,
-    "ae_memberships": 19,
-    "chair_count": 3,
-    "total_papers": 135,
-    "artifact_rate": 16.3,
-    "num_authors": 13,
-    "top_authors": [
-      {
-        "name": "Yibo Huang",
-        "affiliation": "The University of Texas at Austin",
-        "combined_score": 18,
-        "artifacts": 0,
-        "ae_memberships": 6,
-        "total_papers": 0
-      },
-      {
-        "name": "Vijay Chidambaram",
-        "affiliation": "University of Texas at Austin",
-        "combined_score": 17,
-        "artifacts": 5,
-        "ae_memberships": 1,
-        "total_papers": 23
-      },
-      {
-        "name": "Divyanshu Saxena",
-        "affiliation": "The University of Texas at Austin",
-        "combined_score": 10,
-        "artifacts": 1,
-        "ae_memberships": 3,
-        "total_papers": 1
-      },
-      {
-        "name": "Neeraja J. Yadwadkar",
-        "affiliation": "University of Texas at Austin",
-        "combined_score": 10,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Lili Qiu",
-        "affiliation": "The University of Texas at Austin",
-        "combined_score": 9,
-        "artifacts": 3,
-        "ae_memberships": 0,
-        "total_papers": 8
-      },
-      {
-        "name": "Lorenzo Alvisi",
-        "affiliation": "University of Texas at Austin",
-        "combined_score": 9,
-        "artifacts": 3,
-        "ae_memberships": 0,
-        "total_papers": 26
-      },
-      {
-        "name": "Xiao Zhang",
-        "affiliation": "The University of Texas at Austin",
-        "combined_score": 9,
-        "artifacts": 1,
-        "ae_memberships": 2,
-        "total_papers": 13
-      },
-      {
-        "name": "Le Xu",
-        "affiliation": "The University of Texas at Austin",
-        "combined_score": 9,
-        "artifacts": 0,
-        "ae_memberships": 3,
-        "total_papers": 0
-      },
-      {
-        "name": "Aditya Akella",
-        "affiliation": "University of Texas at Austin",
-        "combined_score": 7,
-        "artifacts": 3,
-        "ae_memberships": 0,
-        "total_papers": 38
-      },
-      {
-        "name": "Shaghayegh Mardani",
-        "affiliation": "The University of Texas at Austin",
-        "combined_score": 7,
-        "artifacts": 1,
-        "ae_memberships": 2,
-        "total_papers": 2
-      },
-      {
-        "name": "David J. Wu 0001",
-        "affiliation": "University of Texas at Austin",
-        "combined_score": 6,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 3
-      },
-      {
-        "name": "Hovav Shacham",
-        "affiliation": "University of Texas at Austin",
-        "combined_score": 4,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 19
-      },
-      {
-        "name": "Yibo Huang 0006",
-        "affiliation": "University of Texas at Austin",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 2
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "EUROSYS",
-      "OSDI",
-      "SOSP",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2024": 7,
-      "2025": 7,
-      "2026": 1,
-      "2021": 4,
-      "2022": 11,
-      "2023": 3,
-      "2020": 3
     }
   },
   {
@@ -22983,35 +22991,6 @@
     ],
     "years": {
       "2025": 2
-    }
-  },
-  {
-    "affiliation": "UT Austin",
-    "combined_score": 6,
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 2,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Shijia Wei",
-        "affiliation": "UT Austin",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2022": 1,
-      "2023": 1
     }
   },
   {

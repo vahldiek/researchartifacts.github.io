@@ -9232,6 +9232,59 @@
     }
   },
   {
+    "affiliation": "University of Texas at Austin",
+    "combined_score": 16,
+    "artifacts": 4,
+    "badges_functional": 3,
+    "badges_reproducible": 3,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 8,
+    "artifact_rate": 50.0,
+    "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "David J. Wu 0001",
+        "affiliation": "University of Texas at Austin",
+        "combined_score": 6,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Shijia Wei",
+        "affiliation": "University of Texas at Austin",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Hovav Shacham",
+        "affiliation": "University of Texas at Austin",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 6
+      }
+    ],
+    "conferences": [
+      "USENIXSEC"
+    ],
+    "years": {
+      "2026": 0,
+      "2025": 0,
+      "2024": 1,
+      "2023": 2,
+      "2022": 2,
+      "2021": 0,
+      "2020": 1,
+      "2019": 0,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
     "affiliation": "University of Colorado Boulder",
     "combined_score": 15,
     "artifacts": 5,
@@ -11502,51 +11555,6 @@
       "2022": 1,
       "2021": 0,
       "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "University of Texas at Austin",
-    "combined_score": 10,
-    "artifacts": 4,
-    "badges_functional": 3,
-    "badges_reproducible": 3,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 8,
-    "artifact_rate": 50.0,
-    "num_authors": 2,
-    "top_authors": [
-      {
-        "name": "David J. Wu 0001",
-        "affiliation": "University of Texas at Austin",
-        "combined_score": 6,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 2
-      },
-      {
-        "name": "Hovav Shacham",
-        "affiliation": "University of Texas at Austin",
-        "combined_score": 4,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 6
-      }
-    ],
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 0,
-      "2024": 1,
-      "2023": 1,
-      "2022": 1,
-      "2021": 0,
-      "2020": 1,
       "2019": 0,
       "2018": 0,
       "2017": 0
@@ -15094,35 +15102,6 @@
     "years": {
       "2024": 1,
       "2025": 1
-    }
-  },
-  {
-    "affiliation": "UT Austin",
-    "combined_score": 6,
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 2,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Shijia Wei",
-        "affiliation": "UT Austin",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2022": 1,
-      "2023": 1
     }
   },
   {
