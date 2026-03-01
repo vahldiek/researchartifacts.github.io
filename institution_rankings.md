@@ -8,9 +8,7 @@ security_data_url: /assets/data/security_institution_rankings.json
 
 # Institution Ranking
 
-This page ranks institutions by their aggregate contributions to research artifact evaluation and availability. Use the filter above the table to view rankings for all conferences, systems conferences only, or security conferences only.
-
-Institution scores are calculated by aggregating individual researchers' [combined ranking](combined_rankings.html) scores.
+Institutions ranked by aggregate contributions of their researchers. Filter by conference area: all, systems, or security.
 
 **Note**: Affiliation data is sourced from artifact submissions, AE committee listings, [DBLP](https://dblp.org), and [CSRankings](http://csrankings.org). Researchers with unknown or missing institutions are excluded from this ranking.
 
