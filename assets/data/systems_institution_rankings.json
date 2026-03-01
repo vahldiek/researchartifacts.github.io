@@ -10,6 +10,148 @@
     "total_papers": 3533,
     "artifact_rate": 78.6,
     "num_authors": 1766,
+    "top_authors": [
+      {
+        "name": "Haibo Chen 0001",
+        "combined_score": 41,
+        "artifacts": 16,
+        "ae_memberships": 0,
+        "total_papers": 37
+      },
+      {
+        "name": "Fan Yang 0024",
+        "combined_score": 36,
+        "artifacts": 13,
+        "ae_memberships": 0,
+        "total_papers": 20
+      },
+      {
+        "name": "Lidong Zhou",
+        "combined_score": 32,
+        "artifacts": 11,
+        "ae_memberships": 0,
+        "total_papers": 15
+      },
+      {
+        "name": "Jiwu Shu",
+        "combined_score": 29,
+        "artifacts": 10,
+        "ae_memberships": 0,
+        "total_papers": 20
+      },
+      {
+        "name": "Youngjin Kwon",
+        "combined_score": 24,
+        "artifacts": 9,
+        "ae_memberships": 0,
+        "total_papers": 11
+      },
+      {
+        "name": "Youyou Lu",
+        "combined_score": 24,
+        "artifacts": 8,
+        "ae_memberships": 0,
+        "total_papers": 15
+      },
+      {
+        "name": "Kang Chen",
+        "combined_score": 23,
+        "artifacts": 9,
+        "ae_memberships": 0,
+        "total_papers": 12
+      },
+      {
+        "name": "Ion Stoica",
+        "combined_score": 23,
+        "artifacts": 8,
+        "ae_memberships": 0,
+        "total_papers": 17
+      },
+      {
+        "name": "Mao Yang 0004",
+        "combined_score": 21,
+        "artifacts": 7,
+        "ae_memberships": 0,
+        "total_papers": 14
+      },
+      {
+        "name": "Xin Jin 0008",
+        "combined_score": 21,
+        "artifacts": 7,
+        "ae_memberships": 0,
+        "total_papers": 13
+      },
+      {
+        "name": "Yufei Ding 0001",
+        "combined_score": 21,
+        "artifacts": 7,
+        "ae_memberships": 0,
+        "total_papers": 7
+      },
+      {
+        "name": "Torsten Hoefler",
+        "combined_score": 20,
+        "artifacts": 8,
+        "ae_memberships": 0,
+        "total_papers": 4
+      },
+      {
+        "name": "Diyu Zhou",
+        "combined_score": 20,
+        "artifacts": 7,
+        "ae_memberships": 0,
+        "total_papers": 8
+      },
+      {
+        "name": "Lingxiao Ma",
+        "combined_score": 20,
+        "artifacts": 7,
+        "ae_memberships": 0,
+        "total_papers": 13
+      },
+      {
+        "name": "Gregory R. Ganger",
+        "combined_score": 19,
+        "artifacts": 7,
+        "ae_memberships": 0,
+        "total_papers": 14
+      },
+      {
+        "name": "Nickolai Zeldovich",
+        "combined_score": 19,
+        "artifacts": 7,
+        "ae_memberships": 0,
+        "total_papers": 11
+      },
+      {
+        "name": "Yuqing Yang 0001",
+        "combined_score": 19,
+        "artifacts": 7,
+        "ae_memberships": 0,
+        "total_papers": 9
+      },
+      {
+        "name": "Rong Chen 0001",
+        "combined_score": 18,
+        "artifacts": 8,
+        "ae_memberships": 0,
+        "total_papers": 15
+      },
+      {
+        "name": "Emma Dauterman",
+        "combined_score": 18,
+        "artifacts": 6,
+        "ae_memberships": 0,
+        "total_papers": 6
+      },
+      {
+        "name": "Qing Wang 0031",
+        "combined_score": 18,
+        "artifacts": 6,
+        "ae_memberships": 0,
+        "total_papers": 9
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -38,6 +180,113 @@
     "total_papers": 15,
     "artifact_rate": 66.7,
     "num_authors": 15,
+    "top_authors": [
+      {
+        "name": "Tianyin Xu",
+        "combined_score": 33,
+        "artifacts": 9,
+        "ae_memberships": 2,
+        "total_papers": 14
+      },
+      {
+        "name": "Rahul Bothra",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Xinying Zheng",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Tony Hong",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Ashish Kashinath",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Cathy Cai",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Jackson Clark",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Kiran Hombal",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Peizhe Liu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Sarthak Chakraborty",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Shashwat Jaiswal",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Songhao Zhang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Sriram Devata",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Yiming Su",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Yiqi Liu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -64,6 +313,85 @@
     "total_papers": 20,
     "artifact_rate": 55.0,
     "num_authors": 11,
+    "top_authors": [
+      {
+        "name": "Weihao Cui",
+        "combined_score": 19,
+        "artifacts": 3,
+        "ae_memberships": 4,
+        "total_papers": 3
+      },
+      {
+        "name": "Ruiming Lu",
+        "combined_score": 17,
+        "artifacts": 2,
+        "ae_memberships": 4,
+        "total_papers": 2
+      },
+      {
+        "name": "Xiaoxiang Shi",
+        "combined_score": 17,
+        "artifacts": 1,
+        "ae_memberships": 5,
+        "total_papers": 1
+      },
+      {
+        "name": "Dong Du 0003",
+        "combined_score": 14,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 4
+      },
+      {
+        "name": "Zeyu Mi",
+        "combined_score": 12,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 7
+      },
+      {
+        "name": "Yun Wang 0039",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 2
+      },
+      {
+        "name": "Yunfei Gu",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Jiacheng Liu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Pu Pang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Shulai Zhang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Xinkai Wang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -92,6 +420,113 @@
     "total_papers": 4,
     "artifact_rate": 100.0,
     "num_authors": 15,
+    "top_authors": [
+      {
+        "name": "Ayush Goel",
+        "combined_score": 13,
+        "artifacts": 2,
+        "ae_memberships": 3,
+        "total_papers": 2
+      },
+      {
+        "name": "Syed Salauddin Mohammad Tariq",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Xiangfeng Zhu",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Wanning He",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Yi Chen",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Jonah Rosenblum",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Ryan Huang",
+        "combined_score": 8,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Archit Bhatnagar",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Jeff J. Ma",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Jiaheng Lu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Juechu Dong",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Kaiwen Xue",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Rishika Varma Kalidindi",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Sara Mahdizadeh Shahri",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Seyed Armin Vakil Ghahani",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -118,6 +553,106 @@
     "total_papers": 7,
     "artifact_rate": 71.4,
     "num_authors": 14,
+    "top_authors": [
+      {
+        "name": "Siyuan Chai 0001",
+        "combined_score": 12,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      },
+      {
+        "name": "Jiyu Hu",
+        "combined_score": 11,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 2
+      },
+      {
+        "name": "Kiran Shashi Hombal",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Benjamin Reidys",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 2
+      },
+      {
+        "name": "Yuqi Xue",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 2
+      },
+      {
+        "name": "Ammar Tahir",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Boyuan Tian",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Henry Zhu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Houxiang Ji",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Jiawei Liu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Jinghan Huang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Ramya Bygari",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Shreesha Gopalakrishna Bhat",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Yihan Pang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -145,6 +680,64 @@
     "total_papers": 4,
     "artifact_rate": 100.0,
     "num_authors": 8,
+    "top_authors": [
+      {
+        "name": "Amit\tSamanta",
+        "combined_score": 39,
+        "artifacts": 0,
+        "ae_memberships": 13,
+        "total_papers": 0
+      },
+      {
+        "name": "Ryan Stutsman",
+        "combined_score": 14,
+        "artifacts": 3,
+        "ae_memberships": 1,
+        "total_papers": 3
+      },
+      {
+        "name": "Md Ashfaqur Rahaman",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Sachin Kumar\tSingh",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Robert Ricci",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 1,
+        "total_papers": 1
+      },
+      {
+        "name": "Ghazal Abdollahi",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Hamza Sheikh",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Eric Eide",
+        "combined_score": 5,
+        "artifacts": 0,
+        "ae_memberships": 1,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -172,6 +765,50 @@
     "total_papers": 16,
     "artifact_rate": 93.8,
     "num_authors": 6,
+    "top_authors": [
+      {
+        "name": "Sanidhya Kashyap",
+        "combined_score": 34,
+        "artifacts": 10,
+        "ae_memberships": 1,
+        "total_papers": 11
+      },
+      {
+        "name": "Solal Pirelli",
+        "combined_score": 25,
+        "artifacts": 1,
+        "ae_memberships": 6,
+        "total_papers": 1
+      },
+      {
+        "name": "Vojtech Aschenbrenner",
+        "combined_score": 14,
+        "artifacts": 2,
+        "ae_memberships": 3,
+        "total_papers": 2
+      },
+      {
+        "name": "Zhifei Yang",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Mathias Payer",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 1,
+        "total_papers": 1
+      },
+      {
+        "name": "Charly Castes",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -200,6 +837,57 @@
     "total_papers": 3,
     "artifact_rate": 100.0,
     "num_authors": 7,
+    "top_authors": [
+      {
+        "name": "Chenhao Ye",
+        "combined_score": 24,
+        "artifacts": 2,
+        "ae_memberships": 6,
+        "total_papers": 2
+      },
+      {
+        "name": "Guanzhou Hu",
+        "combined_score": 18,
+        "artifacts": 1,
+        "ae_memberships": 5,
+        "total_papers": 1
+      },
+      {
+        "name": "Shawn Zhong",
+        "combined_score": 15,
+        "artifacts": 0,
+        "ae_memberships": 5,
+        "total_papers": 0
+      },
+      {
+        "name": "Caeden Whitaker",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Junxuan Liao",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Quinn Burke",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Suyan Qu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -227,6 +915,64 @@
     "total_papers": 2,
     "artifact_rate": 100.0,
     "num_authors": 8,
+    "top_authors": [
+      {
+        "name": "Pengcheng Wang 0001",
+        "combined_score": 12,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      },
+      {
+        "name": "Shangshu Qian",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Tanvi Sharma",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Edgardo Barsallo Yi",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Ke Han",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Ruihong Wang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Yanran Wu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Yongye Su",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -253,6 +999,50 @@
     "total_papers": 12,
     "artifact_rate": 75.0,
     "num_authors": 6,
+    "top_authors": [
+      {
+        "name": "Yibo Huang 0006",
+        "combined_score": 18,
+        "artifacts": 1,
+        "ae_memberships": 5,
+        "total_papers": 2
+      },
+      {
+        "name": "Vijay Chidambaram",
+        "combined_score": 17,
+        "artifacts": 5,
+        "ae_memberships": 1,
+        "total_papers": 6
+      },
+      {
+        "name": "Divyanshu Saxena",
+        "combined_score": 10,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      },
+      {
+        "name": "Xiao Zhang",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 2
+      },
+      {
+        "name": "Le Xu",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Shaghayegh Mardani",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -280,6 +1070,50 @@
     "total_papers": 5,
     "artifact_rate": 80.0,
     "num_authors": 6,
+    "top_authors": [
+      {
+        "name": "Mingyu Li",
+        "combined_score": 21,
+        "artifacts": 1,
+        "ae_memberships": 6,
+        "total_papers": 2
+      },
+      {
+        "name": "Ji Qi 0002",
+        "combined_score": 19,
+        "artifacts": 2,
+        "ae_memberships": 3,
+        "total_papers": 2
+      },
+      {
+        "name": "Chang Liu 0001",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Jiatai He",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Qinglin Pan",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Ruilin Zhao",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -306,6 +1140,36 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 4,
+    "top_authors": [
+      {
+        "name": "Konstantinos Papaioannou",
+        "combined_score": 27,
+        "artifacts": 0,
+        "ae_memberships": 9,
+        "total_papers": 0
+      },
+      {
+        "name": "Georgia Christofidi",
+        "combined_score": 18,
+        "artifacts": 0,
+        "ae_memberships": 6,
+        "total_papers": 0
+      },
+      {
+        "name": "Giannis Roumpos",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Razine Moundir Ghorab",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -330,6 +1194,36 @@
     "total_papers": 8,
     "artifact_rate": 75.0,
     "num_authors": 4,
+    "top_authors": [
+      {
+        "name": "Qinghao Hu 0004",
+        "combined_score": 21,
+        "artifacts": 3,
+        "ae_memberships": 4,
+        "total_papers": 3
+      },
+      {
+        "name": "Zheng Wang 0075",
+        "combined_score": 15,
+        "artifacts": 3,
+        "ae_memberships": 2,
+        "total_papers": 5
+      },
+      {
+        "name": "Gao Wei",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Wei Gao",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -357,6 +1251,57 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 7,
+    "top_authors": [
+      {
+        "name": "Jinsun Yoo",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Vishal Rao",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Jiaqi Deng",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Seonjin Na",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Dhruv Garg",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Matteo Olivi",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Suyeon Lee",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -379,6 +1324,64 @@
     "total_papers": 2,
     "artifact_rate": 100.0,
     "num_authors": 8,
+    "top_authors": [
+      {
+        "name": "Xiaolu Li 0002",
+        "combined_score": 12,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      },
+      {
+        "name": "Qiangyu Pei",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Zhangyu Chen",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Guanglei Xu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Ji Zhang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Jianian Zhu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Jianshun Zhang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Ziqiang Wu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "FAST",
@@ -405,6 +1408,43 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 5,
+    "top_authors": [
+      {
+        "name": "Hongzheng Chen",
+        "combined_score": 30,
+        "artifacts": 1,
+        "ae_memberships": 9,
+        "total_papers": 0
+      },
+      {
+        "name": "Yueying Li",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Mulong Luo",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Shaojie Xiang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Sowmya Dharanipragada",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -432,6 +1472,43 @@
     "total_papers": 2,
     "artifact_rate": 50.0,
     "num_authors": 5,
+    "top_authors": [
+      {
+        "name": "Minhui Xie",
+        "combined_score": 24,
+        "artifacts": 1,
+        "ae_memberships": 7,
+        "total_papers": 2
+      },
+      {
+        "name": "Ruwen Fan",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Zili Meng",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Siqi Zhu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Tuo Li",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -460,6 +1537,29 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Cesar A. Stuardo",
+        "combined_score": 32,
+        "artifacts": 0,
+        "ae_memberships": 8,
+        "total_papers": 0
+      },
+      {
+        "name": "Wenhui Zhang",
+        "combined_score": 15,
+        "artifacts": 0,
+        "ae_memberships": 5,
+        "total_papers": 0
+      },
+      {
+        "name": "Chao Peng",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -486,6 +1586,50 @@
     "total_papers": 4,
     "artifact_rate": 75.0,
     "num_authors": 6,
+    "top_authors": [
+      {
+        "name": "Xupeng Li",
+        "combined_score": 12,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 3
+      },
+      {
+        "name": "Ioannis Zarkadas",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Georgios Liargkovas",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Nikolaos Pagonas",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Teng \"Sebastian\" Jiang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Vahab  Jabrayilov",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -513,6 +1657,50 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 6,
+    "top_authors": [
+      {
+        "name": "Jinnan Guo",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Mingxuan Yang",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Carlos Segarra",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Farzad Mohammadi",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Scofield Liu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Stefanos Chaliasos",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -537,6 +1725,29 @@
     "total_papers": 9,
     "artifact_rate": 100.0,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Sudarsun Kannan",
+        "combined_score": 21,
+        "artifacts": 6,
+        "ae_memberships": 1,
+        "total_papers": 6
+      },
+      {
+        "name": "Jian Zhang",
+        "combined_score": 17,
+        "artifacts": 3,
+        "ae_memberships": 3,
+        "total_papers": 3
+      },
+      {
+        "name": "Santosh Pandey",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "FAST",
@@ -563,6 +1774,36 @@
     "total_papers": 9,
     "artifact_rate": 77.8,
     "num_authors": 4,
+    "top_authors": [
+      {
+        "name": "Haoran Ma",
+        "combined_score": 17,
+        "artifacts": 3,
+        "ae_memberships": 3,
+        "total_papers": 4
+      },
+      {
+        "name": "Shi Liu",
+        "combined_score": 17,
+        "artifacts": 3,
+        "ae_memberships": 3,
+        "total_papers": 4
+      },
+      {
+        "name": "Shan Yu",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Linghao Song",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -589,6 +1830,22 @@
     "total_papers": 11,
     "artifact_rate": 72.7,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Yuke Wang",
+        "combined_score": 27,
+        "artifacts": 4,
+        "ae_memberships": 5,
+        "total_papers": 6
+      },
+      {
+        "name": "Boyuan Feng",
+        "combined_score": 21,
+        "artifacts": 4,
+        "ae_memberships": 3,
+        "total_papers": 5
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -616,6 +1873,50 @@
     "total_papers": 2,
     "artifact_rate": 50.0,
     "num_authors": 6,
+    "top_authors": [
+      {
+        "name": "Huaicheng Li",
+        "combined_score": 13,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Hanchen Xu",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Sumit Kumar Monga",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 2
+      },
+      {
+        "name": "Jae-Won Jang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Sijia Li",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Xiaoguang Wang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "FAST",
@@ -642,6 +1943,29 @@
     "total_papers": 10,
     "artifact_rate": 100.0,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Xiangyu Zou",
+        "combined_score": 22,
+        "artifacts": 5,
+        "ae_memberships": 3,
+        "total_papers": 5
+      },
+      {
+        "name": "Yanqi Pan",
+        "combined_score": 19,
+        "artifacts": 5,
+        "ae_memberships": 2,
+        "total_papers": 5
+      },
+      {
+        "name": "Hao Huang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -668,6 +1992,36 @@
     "total_papers": 9,
     "artifact_rate": 66.7,
     "num_authors": 4,
+    "top_authors": [
+      {
+        "name": "Natacha Crooks",
+        "combined_score": 20,
+        "artifacts": 5,
+        "ae_memberships": 1,
+        "total_papers": 8
+      },
+      {
+        "name": "Yichuan Wang 0002",
+        "combined_score": 12,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      },
+      {
+        "name": "Romil Bhardwaj",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Frank Sifei Luan",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -694,6 +2048,50 @@
     "total_papers": 2,
     "artifact_rate": 100.0,
     "num_authors": 6,
+    "top_authors": [
+      {
+        "name": "Zhifeng Jiang 0001",
+        "combined_score": 10,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      },
+      {
+        "name": "Zeyu Li",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Dongwei Xiao",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Sheng Yao",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Zhibo Liu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Zongjie Li",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -720,6 +2118,29 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Abdullah Al Raqibul Islam",
+        "combined_score": 21,
+        "artifacts": 0,
+        "ae_memberships": 7,
+        "total_papers": 0
+      },
+      {
+        "name": "Saisha Kamat",
+        "combined_score": 18,
+        "artifacts": 0,
+        "ae_memberships": 6,
+        "total_papers": 0
+      },
+      {
+        "name": "Dong Dai",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI",
@@ -743,6 +2164,22 @@
     "total_papers": 3,
     "artifact_rate": 100.0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Jianyu Jiang",
+        "combined_score": 38,
+        "artifacts": 3,
+        "ae_memberships": 7,
+        "total_papers": 3
+      },
+      {
+        "name": "Haoran Cai",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -769,6 +2206,50 @@
     "total_papers": 4,
     "artifact_rate": 50.0,
     "num_authors": 6,
+    "top_authors": [
+      {
+        "name": "Yinmin Zhong",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 3
+      },
+      {
+        "name": "Zhisheng Ye",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Lichen Pan",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Naiqian Zheng",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Tiancheng Hu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Yilong Luo",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -795,6 +2276,43 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 5,
+    "top_authors": [
+      {
+        "name": "Yongfeng Wang",
+        "combined_score": 15,
+        "artifacts": 0,
+        "ae_memberships": 5,
+        "total_papers": 0
+      },
+      {
+        "name": "Xuanteng Huang",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Guangba Yu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Pengfei Chen",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Xie Zhang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -818,6 +2336,43 @@
     "total_papers": 3,
     "artifact_rate": 66.7,
     "num_authors": 5,
+    "top_authors": [
+      {
+        "name": "Pedro Henrique Penna",
+        "combined_score": 15,
+        "artifacts": 1,
+        "ae_memberships": 4,
+        "total_papers": 2
+      },
+      {
+        "name": "Weiteng Chen",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Gohar Irfan Chaudhry",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Minghua Ma",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Oleksii Oleksenko",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -844,6 +2399,36 @@
     "total_papers": 9,
     "artifact_rate": 66.7,
     "num_authors": 4,
+    "top_authors": [
+      {
+        "name": "Manuel Rigger",
+        "combined_score": 12,
+        "artifacts": 3,
+        "ae_memberships": 1,
+        "total_papers": 4
+      },
+      {
+        "name": "Zu-Ming Jiang",
+        "combined_score": 11,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 2
+      },
+      {
+        "name": "Foteini Strati",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 3
+      },
+      {
+        "name": "Daming Zou",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -869,6 +2454,29 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Wenlong Wang",
+        "combined_score": 15,
+        "artifacts": 0,
+        "ae_memberships": 5,
+        "total_papers": 0
+      },
+      {
+        "name": "Huibing Dong",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Zhaokang Ke",
+        "combined_score": 10,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "FAST",
@@ -895,6 +2503,29 @@
     "total_papers": 4,
     "artifact_rate": 75.0,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Haoran Qiu",
+        "combined_score": 21,
+        "artifacts": 3,
+        "ae_memberships": 4,
+        "total_papers": 4
+      },
+      {
+        "name": "Enguang Fan",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Vikram Sharma Mailthody",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -922,6 +2553,29 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Tianle Zhong",
+        "combined_score": 21,
+        "artifacts": 0,
+        "ae_memberships": 7,
+        "total_papers": 0
+      },
+      {
+        "name": "Sihang Liu",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Alenkruth Krishnan Murali",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -948,6 +2602,36 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 4,
+    "top_authors": [
+      {
+        "name": "Bin GAO",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Yangjie Zhou",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Ridwan Shariffdeen",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Wentao Huang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -972,6 +2656,36 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 4,
+    "top_authors": [
+      {
+        "name": "Anna Karanika",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Ayush Bansal",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Han-Ting Liang",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Jiankun Wang",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -998,6 +2712,50 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 6,
+    "top_authors": [
+      {
+        "name": "Cesar Stuardo",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Chen Zou",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Ray Sinurat",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Ruidan Li",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Siddhant Ray",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Ted Shaowang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -1019,6 +2777,15 @@
     "total_papers": 4,
     "artifact_rate": 75.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Jing Liu 0074",
+        "combined_score": 35,
+        "artifacts": 3,
+        "ae_memberships": 9,
+        "total_papers": 4
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -1046,6 +2813,43 @@
     "total_papers": 2,
     "artifact_rate": 100.0,
     "num_authors": 5,
+    "top_authors": [
+      {
+        "name": "Xia Zhou",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Tong Sun 0006",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Peisen Yao",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Yuan Li",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Ziyue Pan",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -1071,6 +2875,22 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Fadhil Kurnia",
+        "combined_score": 21,
+        "artifacts": 0,
+        "ae_memberships": 7,
+        "total_papers": 0
+      },
+      {
+        "name": "Sandeep Polisetty",
+        "combined_score": 12,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -1096,6 +2916,29 @@
     "total_papers": 3,
     "artifact_rate": 100.0,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Chenhao Jiang",
+        "combined_score": 15,
+        "artifacts": 1,
+        "ae_memberships": 4,
+        "total_papers": 1
+      },
+      {
+        "name": "Jiacheng Yang",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Zhanda Zhu",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -1123,6 +2966,29 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Dongjoo Seo",
+        "combined_score": 15,
+        "artifacts": 0,
+        "ae_memberships": 5,
+        "total_papers": 0
+      },
+      {
+        "name": "Haocheng Xu",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Mengwei Yang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -1145,6 +3011,36 @@
     "total_papers": 3,
     "artifact_rate": 66.7,
     "num_authors": 4,
+    "top_authors": [
+      {
+        "name": "Yuanli Wang",
+        "combined_score": 12,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 3
+      },
+      {
+        "name": "Lei Huang",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Qixuan Chen",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Yuhang Song",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -1172,6 +3068,29 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Michael Paper",
+        "combined_score": 15,
+        "artifacts": 0,
+        "ae_memberships": 5,
+        "total_papers": 0
+      },
+      {
+        "name": "Jungwoo Kim",
+        "combined_score": 11,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      },
+      {
+        "name": "Rajarshi Saha",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -1198,6 +3117,29 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Qiang Su",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Jiamin Li",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Yu Liang",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -1222,6 +3164,36 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 4,
+    "top_authors": [
+      {
+        "name": "Sagar Bharadwaj Kalasibail Seetharam",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Deepanjali Mishra",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Shawn Chen",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Yonghao Zhuang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -1243,6 +3215,36 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 4,
+    "top_authors": [
+      {
+        "name": "Weikeng Chen",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Melissa Z. Pan",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Zhifei Li",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Ziming Mao",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -1267,6 +3269,29 @@
     "total_papers": 5,
     "artifact_rate": 80.0,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Juncheng Yang",
+        "combined_score": 16,
+        "artifacts": 4,
+        "ae_memberships": 1,
+        "total_papers": 5
+      },
+      {
+        "name": "Junzhi Gong",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Xingyu Xiang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "FAST",
@@ -1293,6 +3318,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Diogo Vaz",
+        "combined_score": 15,
+        "artifacts": 0,
+        "ae_memberships": 5,
+        "total_papers": 0
+      },
+      {
+        "name": "João Oliveira",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -1314,6 +3355,29 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Jingyao Zhang",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Yuxin Qiu",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Vivek Jain",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -1338,6 +3402,22 @@
     "total_papers": 3,
     "artifact_rate": 100.0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Lingfeng Xiang",
+        "combined_score": 15,
+        "artifacts": 3,
+        "ae_memberships": 2,
+        "total_papers": 3
+      },
+      {
+        "name": "Jiayi Meng",
+        "combined_score": 11,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -1365,6 +3445,22 @@
     "total_papers": 3,
     "artifact_rate": 66.7,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Rong Gu 0001",
+        "combined_score": 18,
+        "artifacts": 2,
+        "ae_memberships": 4,
+        "total_papers": 3
+      },
+      {
+        "name": "Hengfeng Wei",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -1391,6 +3487,29 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Malvika\tJadhav",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Magdalena Pasternak",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Weidong Zhu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -1413,6 +3532,36 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 4,
+    "top_authors": [
+      {
+        "name": "Bo Lin",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Shangwen Wang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Yifan Xie",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Yuanliang Zhang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -1433,6 +3582,36 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 4,
+    "top_authors": [
+      {
+        "name": "Jiangfei Duan, The Chinese University of Hong Kong",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Qiang Su, The Chinese University of Hong Kong",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Xin Tan, The Chinese University of Hong Kong",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Zhihan Jiang, The Chinese University of Hong Kong",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -1452,6 +3631,36 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 4,
+    "top_authors": [
+      {
+        "name": "Shunkang Zhang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Xiang Chen",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Xiaofeng Hou",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Yuanyuan Yuan",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -1473,6 +3682,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Anjo Vahldiek-Oberwagner",
+        "combined_score": 21,
+        "artifacts": 1,
+        "ae_memberships": 4,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "EUROSYS",
       "OSDI",
@@ -1498,6 +3716,22 @@
     "total_papers": 4,
     "artifact_rate": 50.0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Matthew Burke 0001",
+        "combined_score": 15,
+        "artifacts": 2,
+        "ae_memberships": 3,
+        "total_papers": 4
+      },
+      {
+        "name": "Tony Zhang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS",
       "OSDI",
@@ -1524,6 +3758,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Swapnil Gandhi",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Raja Gond",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -1548,6 +3798,22 @@
     "total_papers": 2,
     "artifact_rate": 50.0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Xin Tan",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Qiuping Wang",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 2
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -1574,6 +3840,29 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Feng Cheng",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Chiyue Wei",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Junyao Zhang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -1595,6 +3884,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Bogdan Alexandru Stoica",
+        "combined_score": 20,
+        "artifacts": 0,
+        "ae_memberships": 6,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -1619,6 +3917,22 @@
     "total_papers": 2,
     "artifact_rate": 50.0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Anirudh Sarma",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Alexey Tumanov",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 1,
+        "total_papers": 2
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -1646,6 +3960,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Nathan Rutherford",
+        "combined_score": 19,
+        "artifacts": 0,
+        "ae_memberships": 5,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -1667,6 +3990,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Chengyu Zhang",
+        "combined_score": 13,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Changlong Li",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -1687,6 +4026,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Liangcheng Yu",
+        "combined_score": 18,
+        "artifacts": 1,
+        "ae_memberships": 5,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -1714,6 +4062,15 @@
     "total_papers": 2,
     "artifact_rate": 50.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Sudheesh Singanamalla",
+        "combined_score": 18,
+        "artifacts": 1,
+        "ae_memberships": 5,
+        "total_papers": 2
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -1740,6 +4097,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Zeying Zhu",
+        "combined_score": 18,
+        "artifacts": 1,
+        "ae_memberships": 5,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "ATC",
       "FAST",
@@ -1765,6 +4131,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Ayush Bhardwaj",
+        "combined_score": 18,
+        "artifacts": 0,
+        "ae_memberships": 6,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -1789,6 +4164,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Saheed Olayemi Bolarinwa",
+        "combined_score": 18,
+        "artifacts": 0,
+        "ae_memberships": 6,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS",
       "FAST",
@@ -1813,6 +4197,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Aditya Shah",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Chunzhi Su",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -1835,6 +4235,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Boxi Yu",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Zhihan Jiang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -1855,6 +4271,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Changyuan Lin",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Yingao Elaine Yao",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -1875,6 +4307,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Chunfeng Du",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Zeqing Wu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "FAST",
@@ -1898,6 +4346,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Zewen Jin",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Shen Fu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI",
@@ -1921,6 +4385,22 @@
     "total_papers": 2,
     "artifact_rate": 100.0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Yizhou Shan",
+        "combined_score": 9,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 2
+      },
+      {
+        "name": "Junda Chen",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -1947,6 +4427,22 @@
     "total_papers": 2,
     "artifact_rate": 100.0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Suyash Mahar",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Zaifeng Pan",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -1972,6 +4468,22 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Yazhuo Zhang",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Vishwanath Seshagiri",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI",
@@ -1997,6 +4509,29 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Binong Kiri Bey",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Saurabh Kumar",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Srinjoy Sarkar",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -2017,6 +4552,29 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Boris Radovic, King Abdullah University of Science and Technology",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Juyi Lin, King Abdullah University of Science and Technology",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Vladyslav Shumanskyy, King Abdullah University of Science and Technology",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -2036,6 +4594,29 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Zelei Cheng",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Zheng Yu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Ziyi Guo",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -2055,6 +4636,22 @@
     "total_papers": 2,
     "artifact_rate": 100.0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Songlin Huang",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Junzhe Li",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -2080,6 +4677,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Anuj Kalia",
+        "combined_score": 10,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Shail Shah",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -2100,6 +4713,15 @@
     "total_papers": 2,
     "artifact_rate": 50.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Fang Zhou",
+        "combined_score": 15,
+        "artifacts": 1,
+        "ae_memberships": 4,
+        "total_papers": 2
+      }
+    ],
     "conferences": [
       "EUROSYS",
       "OSDI"
@@ -2124,6 +4746,15 @@
     "total_papers": 3,
     "artifact_rate": 33.3,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Hugo Lefeuvre",
+        "combined_score": 15,
+        "artifacts": 1,
+        "ae_memberships": 4,
+        "total_papers": 3
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -2150,6 +4781,15 @@
     "total_papers": 2,
     "artifact_rate": 50.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Vlad-Andrei Badoiu",
+        "combined_score": 15,
+        "artifacts": 1,
+        "ae_memberships": 4,
+        "total_papers": 2
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -2176,6 +4816,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Ghadeer Almusaddar",
+        "combined_score": 15,
+        "artifacts": 0,
+        "ae_memberships": 5,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -2198,6 +4847,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Sibendu Paul",
+        "combined_score": 15,
+        "artifacts": 0,
+        "ae_memberships": 5,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -2219,6 +4877,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Stratos Psomadakis",
+        "combined_score": 15,
+        "artifacts": 0,
+        "ae_memberships": 5,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -2240,6 +4907,15 @@
     "total_papers": 3,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Lalith Suresh 0001",
+        "combined_score": 14,
+        "artifacts": 3,
+        "ae_memberships": 1,
+        "total_papers": 3
+      }
+    ],
     "conferences": [
       "OSDI"
     ],
@@ -2263,6 +4939,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Xiangqun Zhang 0002",
+        "combined_score": 14,
+        "artifacts": 1,
+        "ae_memberships": 4,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "ATC",
       "FAST",
@@ -2288,6 +4973,22 @@
     "total_papers": 4,
     "artifact_rate": 25.0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Martin Kleppmann",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 1,
+        "total_papers": 4
+      },
+      {
+        "name": "Kiril Dichev",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS",
       "SC"
@@ -2312,6 +5013,22 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Tao Li",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Cheng Gong",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "FAST",
@@ -2337,6 +5054,15 @@
     "total_papers": 3,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Miguel Matos",
+        "combined_score": 12,
+        "artifacts": 3,
+        "ae_memberships": 1,
+        "total_papers": 3
+      }
+    ],
     "conferences": [
       "EUROSYS",
       "SOSP"
@@ -2361,6 +5087,15 @@
     "total_papers": 4,
     "artifact_rate": 50.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Edo Roth",
+        "combined_score": 12,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 4
+      }
+    ],
     "conferences": [
       "EUROSYS",
       "OSDI",
@@ -2386,6 +5121,15 @@
     "total_papers": 3,
     "artifact_rate": 66.7,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Zhen Zhang 0063",
+        "combined_score": 12,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 3
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI",
@@ -2411,6 +5155,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Yusheng Zheng",
+        "combined_score": 12,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -2437,6 +5190,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Cláudia Brito",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -2458,6 +5220,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Diman Zad Tootaghaj",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -2478,6 +5249,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Moritz Lumme",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -2500,6 +5280,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Sahil Tyagi",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -2520,6 +5309,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Souptik Sen",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS",
       "FAST",
@@ -2542,6 +5340,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Wahid Uz Zaman",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -2562,6 +5369,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Amoghavarsha Suresh",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Sergey Madaminov",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS",
       "OSDI",
@@ -2584,6 +5407,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Aoyang Fang, The Chinese University of Hong Kong, Shenzhen",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Boxi Yu, The Chinese University of Hong Kong, Shenzhen",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -2603,6 +5442,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Chendong Wang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Sujay Yadalam",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -2623,6 +5478,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Federico De Marchi",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Yiming Lei",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -2642,6 +5513,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Feiran (Alex) Qin",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Zhouyu Li",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -2662,6 +5549,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Haitian Jiang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Muhammad Haseeb",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -2682,6 +5585,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Jingbo Wang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Rajrup Ghosh",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -2705,6 +5624,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Jingmei Hu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Shivani Mehendarge",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -2726,6 +5661,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Rajath Shashidhara",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Xiangyu Gao",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -2746,6 +5697,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Yuan Feng",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Yuke Li",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -2765,6 +5732,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Yuchen Ji",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Zhe Zhao",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -2785,6 +5768,15 @@
     "total_papers": 2,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Qiang Wang",
+        "combined_score": 11,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 2
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -2810,6 +5802,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Aman Goel",
+        "combined_score": 11,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI",
@@ -2835,6 +5836,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Salvatore Signorello",
+        "combined_score": 11,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -2856,6 +5866,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Neeraja J. Yadwadkar",
+        "combined_score": 10,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -2875,6 +5894,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Georgios Portokalidis",
+        "combined_score": 5,
+        "artifacts": 0,
+        "ae_memberships": 1,
+        "total_papers": 0
+      },
+      {
+        "name": "Thaleia Dimitra Doudali",
+        "combined_score": 5,
+        "artifacts": 0,
+        "ae_memberships": 1,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS"
     ],
@@ -2893,6 +5928,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Alan Wang",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -2917,6 +5961,15 @@
     "total_papers": 2,
     "artifact_rate": 50.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Archit Patke",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 2
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -2942,6 +5995,15 @@
     "total_papers": 3,
     "artifact_rate": 33.3,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Joshua Fried",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 3
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -2966,6 +6028,15 @@
     "total_papers": 2,
     "artifact_rate": 50.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Keren Zhou 0001",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 2
+      }
+    ],
     "conferences": [
       "EUROSYS",
       "OSDI",
@@ -2991,6 +6062,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Md Shahriar Iqbal",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -3016,6 +6096,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Shengjian Guo",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI",
@@ -3041,6 +6130,15 @@
     "total_papers": 3,
     "artifact_rate": 33.3,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Weiwei Jia 0001",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 3
+      }
+    ],
     "conferences": [
       "EUROSYS",
       "OSDI"
@@ -3065,6 +6163,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Chen-Yu Ho",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -3086,6 +6193,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Feiran",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI",
@@ -3107,6 +6223,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Ines Messadi",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -3127,6 +6252,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Jie Lu",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -3147,6 +6281,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Jingzong Li",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS",
       "SOSP"
@@ -3168,6 +6311,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Lana Honcharuk",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -3189,6 +6341,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Ravikiran R",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS"
     ],
@@ -3209,6 +6370,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Rohan Puri",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "FAST",
@@ -3229,6 +6399,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Tejaswi Agarwal",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -3250,6 +6429,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Tingjia Cao",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -3271,6 +6459,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Umar Farooq",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS",
       "OSDI",
@@ -3292,6 +6489,15 @@
     "total_papers": 7,
     "artifact_rate": 14.3,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Baptiste Lepers",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 1,
+        "total_papers": 7
+      }
+    ],
     "conferences": [
       "EUROSYS",
       "SOSP"
@@ -3316,6 +6522,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Borui Li 0001",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -3340,6 +6555,15 @@
     "total_papers": 2,
     "artifact_rate": 50.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Djob Mvondo",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 2
+      }
+    ],
     "conferences": [
       "EUROSYS",
       "OSDI",
@@ -3365,6 +6589,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Shaokang Xie",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -3390,6 +6623,15 @@
     "total_papers": 2,
     "artifact_rate": 50.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Yu Huang 0002",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 2
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -3415,6 +6657,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Henrique Fingler",
+        "combined_score": 8,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS",
       "SOSP"
@@ -3434,6 +6685,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Ivo Jimenez",
+        "combined_score": 8,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "SC",
       "SOSP"
@@ -3453,6 +6713,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Tanu Malik",
+        "combined_score": 8,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "SC"
     ],
@@ -3471,6 +6740,15 @@
     "total_papers": 3,
     "artifact_rate": 33.3,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Alain Tchana",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 1,
+        "total_papers": 3
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS"
@@ -3495,6 +6773,15 @@
     "total_papers": 3,
     "artifact_rate": 33.3,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Alexios Voulimeneas",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 3
+      }
+    ],
     "conferences": [
       "EUROSYS",
       "OSDI"
@@ -3519,6 +6806,15 @@
     "total_papers": 2,
     "artifact_rate": 50.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Kenta Ishiguro",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 2
+      }
+    ],
     "conferences": [
       "ATC",
       "EUROSYS",
@@ -3544,6 +6840,15 @@
     "total_papers": 2,
     "artifact_rate": 50.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Xiang Li 0067",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 2
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -3568,6 +6873,15 @@
     "total_papers": 5,
     "artifact_rate": 20.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Pierre Olivier",
+        "combined_score": 6,
+        "artifacts": 1,
+        "ae_memberships": 1,
+        "total_papers": 5
+      }
+    ],
     "conferences": [
       "EUROSYS"
     ],
@@ -3592,6 +6906,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Aakash Sharma",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "FAST",
       "OSDI"
@@ -3612,6 +6935,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Abu Bakar Siddiqur Rahman",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -3631,6 +6963,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Ajay Joshi",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS"
     ],
@@ -3650,6 +6991,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Alexander Krause",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS"
     ],
@@ -3669,6 +7019,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "André Augusto",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -3688,6 +7047,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Anh Dinh",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS"
     ],
@@ -3707,6 +7075,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Antonio Sciarappa",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "SC"
     ],
@@ -3725,6 +7102,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Arun Kp",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -3744,6 +7130,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Bin Qian",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -3763,6 +7158,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Bolarinwa Olayemi Saheed",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -3782,6 +7186,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Chao Wu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -3801,6 +7214,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Chuanqi Cong",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -3820,6 +7242,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Dae R. Jeong, Korea Advanced Institute of Science and Technology",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -3839,6 +7270,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Daniel Ritter",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS"
     ],
@@ -3858,6 +7298,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "David Ke Hong",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS",
       "SOSP"
@@ -3878,6 +7327,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "David de Andres Hernandez",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS"
     ],
@@ -3897,6 +7355,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Dongjie He",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -3916,6 +7383,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Fei Dai",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS"
     ],
@@ -3935,6 +7411,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Giovanni Farina",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS"
     ],
@@ -3954,6 +7439,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Grigoris Ntousakis",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -3973,6 +7467,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Guangyang Deng",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -3992,6 +7495,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Hanchen Li",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -4011,6 +7523,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Hao Hu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -4030,6 +7551,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Iacovos G. Kolokasis",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS",
       "OSDI"
@@ -4049,6 +7579,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Ismet Dagli",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS",
       "FAST"
@@ -4068,6 +7607,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Jaiaid Mobin",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS"
     ],
@@ -4087,6 +7635,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Jia Yin",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -4106,6 +7663,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Jiansen Song",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -4125,6 +7691,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Jiansong Li",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -4144,6 +7719,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Jiaqi Pan",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -4163,6 +7747,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Kahina Lazri",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -4182,6 +7775,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Kaihui Gao",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -4201,6 +7803,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Kevin Liao",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS",
       "OSDI"
@@ -4221,6 +7832,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Lianjie Cao",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -4240,6 +7860,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Mahsa Saeidi",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -4259,6 +7888,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Mamta Shukla",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS"
     ],
@@ -4278,6 +7916,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Marion Weinzierl, Durham University, England; N8 Centre of Excellence in Computationally Intensive Research",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "SC"
     ],
@@ -4296,6 +7943,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Matthew Forshaw",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS",
       "SOSP"
@@ -4316,6 +7972,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Michael Giardino",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS",
       "SOSP"
@@ -4335,6 +8000,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Millian Poquet",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS"
     ],
@@ -4354,6 +8028,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Murali Ramanujam",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -4373,6 +8056,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Ojas Gupta",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS"
     ],
@@ -4392,6 +8084,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Peter Ince",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -4411,6 +8112,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Peterson Yuhala",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS",
       "OSDI"
@@ -4430,6 +8140,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Qingxiao Sun",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -4449,6 +8168,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Quentin Guilloteau",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS"
     ],
@@ -4468,6 +8196,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Renzhi Xiao",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS"
     ],
@@ -4487,6 +8224,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Rocío Carratalá-Sáez",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "SC"
     ],
@@ -4505,6 +8251,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Shazibul Islam Shamim",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -4524,6 +8279,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Shenghan Zheng",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS"
     ],
@@ -4543,6 +8307,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Shengkai Li",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -4562,6 +8335,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Shouxi Luo",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -4581,6 +8363,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Shu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS",
       "SOSP"
@@ -4601,6 +8392,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Siyuan Zhang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -4620,6 +8420,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Steve Menken, National Renewable Energy Laboratory",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "SC"
     ],
@@ -4638,6 +8447,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Tianhao Huang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -4657,6 +8475,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Tânia Esteves",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS"
     ],
@@ -4676,6 +8503,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Xianzhong Ding",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -4695,6 +8531,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Yebo Feng",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -4714,6 +8559,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Yihua Wei",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -4733,6 +8587,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Yunhong Xu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -4752,6 +8615,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Zeyan Liu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -4771,6 +8643,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Zhihao Yao",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS",
       "SOSP"
@@ -4791,6 +8672,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Zhiqiang Xie, Max Planck Institute for Software Systems",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -4810,6 +8700,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Zihe Song",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ATC",
       "OSDI"
@@ -4829,6 +8728,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "juyi lin",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS"
     ],
@@ -4848,6 +8756,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Alex Voulimeneas",
+        "combined_score": 5,
+        "artifacts": 0,
+        "ae_memberships": 1,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "SOSP"
     ],
@@ -4866,6 +8783,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Christian Pinto",
+        "combined_score": 5,
+        "artifacts": 0,
+        "ae_memberships": 1,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS"
     ],
@@ -4884,6 +8810,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Cristiano Giuffrida",
+        "combined_score": 5,
+        "artifacts": 0,
+        "ae_memberships": 1,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS"
     ],
@@ -4902,6 +8837,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Dan Ports",
+        "combined_score": 5,
+        "artifacts": 0,
+        "ae_memberships": 1,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "SOSP"
     ],
@@ -4920,6 +8864,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Daniele Cono D'Elia",
+        "combined_score": 5,
+        "artifacts": 0,
+        "ae_memberships": 1,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS"
     ],
@@ -4938,6 +8891,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Guyue",
+        "combined_score": 5,
+        "artifacts": 0,
+        "ae_memberships": 1,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "OSDI"
     ],
@@ -4956,6 +8918,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Haryadi Gunawi",
+        "combined_score": 5,
+        "artifacts": 0,
+        "ae_memberships": 1,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "FAST"
     ],
@@ -4974,6 +8945,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Kornilios Kourtis",
+        "combined_score": 5,
+        "artifacts": 0,
+        "ae_memberships": 1,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS"
     ],
@@ -4992,6 +8972,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Valerio Schiavoni",
+        "combined_score": 5,
+        "artifacts": 0,
+        "ae_memberships": 1,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS"
     ],
@@ -5010,6 +8999,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Vincenzo Gulisano",
+        "combined_score": 5,
+        "artifacts": 0,
+        "ae_memberships": 1,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "EUROSYS"
     ],

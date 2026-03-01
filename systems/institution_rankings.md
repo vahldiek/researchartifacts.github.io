@@ -18,6 +18,8 @@ Each artifact earns 1 point (Available), plus 1 additional point for each higher
 
 **Note**: Affiliation data is sourced from artifact submissions and AE committee listings. Some entries may have missing or outdated affiliations labeled as "Unknown".
 
+**Tip**: Click on any institution row to expand and see the top 20 researchers from that institution.
+
 ---
 
 {% include institution_ranking_table.html %}

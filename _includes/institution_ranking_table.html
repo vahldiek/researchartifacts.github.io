@@ -37,6 +37,7 @@
 <script>
 (function() {
   var DATA_URL = '{{ page.institution_data_url | relative_url }}';
+  var baseUrl = '{{ "" | relative_url }}';
   var allData = [];
   var sortedData = [];
   var yearColumns = [];
@@ -44,6 +45,7 @@
   var pageSize = 100;
   var sortCol = 2; // default: Combined Score
   var sortAsc = false;
+  var expandedRows = new Set(); // Track which rows are expanded
 
   var fixedCols = [
     {label:'Rank',             key:'rank',              type:'num'},
@@ -65,10 +67,20 @@
 
     var tbody = document.getElementById('institutionBody');
     var rows = [];
+    var numCols = fixedCols.length + yearColumns.length;
+    
     for (var i = 0; i < page.length; i++) {
       var inst = page[i];
+      var instId = 'inst-' + (start + i);
+      var isExpanded = expandedRows.has(instId);
       var cells = [];
-      cells.push('<td>' + (start + i + 1) + '</td>');
+      
+      // Rank column with expand button
+      var expandIcon = inst.top_authors && inst.top_authors.length > 0 
+        ? '<span class="expand-btn" style="cursor:pointer;margin-right:4px;">' + (isExpanded ? '▼' : '▶') + '</span>'
+        : '<span style="margin-right:12px;"></span>';
+      cells.push('<td>' + expandIcon + (start + i + 1) + '</td>');
+      
       var aff = (inst.affiliation || 'Unknown').replace(/^_/, '');
       cells.push('<td>' + escHtml(aff) + '</td>');
       cells.push('<td><strong>' + inst.combined_score + '</strong></td>');
@@ -88,9 +100,49 @@
         }
         cells.push('<td>' + (cnt > 0 ? cnt : '') + '</td>');
       }
-      rows.push('<tr>' + cells.join('') + '</tr>');
+      
+      rows.push('<tr class="inst-row" data-inst-id="' + instId + '" style="cursor:pointer;">' + cells.join('') + '</tr>');
+      
+      // Add expanded row if needed
+      if (isExpanded && inst.top_authors && inst.top_authors.length > 0) {
+        var expandedContent = '<td colspan="' + numCols + '" style="padding:8px 16px; background-color:#f9f9f9;">';
+        expandedContent += '<div style="margin-left:20px;"><strong>Top ' + inst.top_authors.length + ' Researchers:</strong><br>';
+        expandedContent += '<table style="margin-top:8px; font-size:0.9em; border-collapse:collapse; width:auto;">';
+        expandedContent += '<thead><tr style="background-color:#e8e8e8;"><th style="padding:4px 8px;border:1px solid #ccc;">Name</th><th style="padding:4px 8px;border:1px solid #ccc;">Combined</th><th style="padding:4px 8px;border:1px solid #ccc;">Artifacts</th><th style="padding:4px 8px;border:1px solid #ccc;">AE Service</th><th style="padding:4px 8px;border:1px solid #ccc;">Papers</th></tr></thead><tbody>';
+        
+        for (var k = 0; k < inst.top_authors.length; k++) {
+          var author = inst.top_authors[k];
+          var displayName = author.name.replace(/\s+\d{4}$/, '').replace(/\t/g, ' ');
+          var profileUrl = baseUrl + '/author.html?name=' + encodeURIComponent(author.name);
+          expandedContent += '<tr style="' + (k % 2 === 0 ? 'background-color:#fff;' : 'background-color:#f5f5f5;') + '">';
+          expandedContent += '<td style="padding:4px 8px;border:1px solid #ccc;"><a href="' + profileUrl + '">' + escHtml(displayName) + '</a></td>';
+          expandedContent += '<td style="padding:4px 8px;border:1px solid #ccc;text-align:center;"><strong>' + author.combined_score + '</strong></td>';
+          expandedContent += '<td style="padding:4px 8px;border:1px solid #ccc;text-align:center;">' + (author.artifacts || 0) + '</td>';
+          expandedContent += '<td style="padding:4px 8px;border:1px solid #ccc;text-align:center;">' + (author.ae_memberships || 0) + '</td>';
+          expandedContent += '<td style="padding:4px 8px;border:1px solid #ccc;text-align:center;">' + (author.total_papers || 0) + '</td>';
+          expandedContent += '</tr>';
+        }
+        
+        expandedContent += '</tbody></table></div></td>';
+        rows.push('<tr class="expanded-row" data-inst-id="' + instId + '">' + expandedContent + '</tr>');
+      }
     }
     tbody.innerHTML = rows.join('');
+    
+    // Add click handlers for expand/collapse
+    var instRows = document.querySelectorAll('.inst-row');
+    instRows.forEach(function(row) {
+      row.addEventListener('click', function(e) {
+        var instId = row.dataset.instId;
+        if (expandedRows.has(instId)) {
+          expandedRows.delete(instId);
+        } else {
+          expandedRows.add(instId);
+        }
+        render();
+      });
+    });
+    
     updatePageInfo();
   }
 
@@ -236,8 +288,12 @@
 #institutionTable th, #institutionTable td { padding: 3px 8px; border: 1px solid #ddd; }
 #institutionTable th { background-color: #f2f2f2; position: sticky; top: 0; z-index: 1; }
 #institutionTable tr:nth-child(even) { background-color: #f9f9f9; }
-#institutionTable tr:hover { background-color: #e8f4f8; }
+#institutionTable .inst-row:hover { background-color: #e8f4f8; }
+#institutionTable .expanded-row { background-color: #f9f9f9 !important; }
+#institutionTable .expanded-row:hover { background-color: #f9f9f9 !important; }
 .i-sortable::after { content: '\2195'; opacity: 0.3; margin-left: 3px; font-size: 0.8em; }
 .i-sorted-asc::after { content: '\2191'; opacity: 1; }
 .i-sorted-desc::after { content: '\2193'; opacity: 1; }
+.expand-btn { display: inline-block; font-size: 0.8em; color: #666; }
+.expand-btn:hover { color: #000; }
 </style>

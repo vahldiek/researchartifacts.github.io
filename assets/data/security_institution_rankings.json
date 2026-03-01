@@ -10,6 +10,148 @@
     "total_papers": 6176,
     "artifact_rate": 70.6,
     "num_authors": 2217,
+    "top_authors": [
+      {
+        "name": "Mathias Payer",
+        "combined_score": 42,
+        "artifacts": 17,
+        "ae_memberships": 0,
+        "total_papers": 27
+      },
+      {
+        "name": "Herbert Bos",
+        "combined_score": 30,
+        "artifacts": 12,
+        "ae_memberships": 0,
+        "total_papers": 17
+      },
+      {
+        "name": "Prateek Mittal",
+        "combined_score": 27,
+        "artifacts": 14,
+        "ae_memberships": 0,
+        "total_papers": 11
+      },
+      {
+        "name": "Ning Zhang 0017",
+        "combined_score": 27,
+        "artifacts": 13,
+        "ae_memberships": 0,
+        "total_papers": 15
+      },
+      {
+        "name": "Michael Schwarz 0001",
+        "combined_score": 27,
+        "artifacts": 12,
+        "ae_memberships": 0,
+        "total_papers": 15
+      },
+      {
+        "name": "Daniel Gruss",
+        "combined_score": 27,
+        "artifacts": 11,
+        "ae_memberships": 0,
+        "total_papers": 19
+      },
+      {
+        "name": "Jrg Schwenk",
+        "combined_score": 27,
+        "artifacts": 9,
+        "ae_memberships": 0,
+        "total_papers": 12
+      },
+      {
+        "name": "Stefan Mangard",
+        "combined_score": 25,
+        "artifacts": 12,
+        "ae_memberships": 0,
+        "total_papers": 16
+      },
+      {
+        "name": "Kaveh Razavi",
+        "combined_score": 24,
+        "artifacts": 8,
+        "ae_memberships": 0,
+        "total_papers": 12
+      },
+      {
+        "name": "XiaoFeng Wang 0001",
+        "combined_score": 22,
+        "artifacts": 9,
+        "ae_memberships": 0,
+        "total_papers": 22
+      },
+      {
+        "name": "Juraj Somorovsky",
+        "combined_score": 21,
+        "artifacts": 9,
+        "ae_memberships": 0,
+        "total_papers": 11
+      },
+      {
+        "name": "Adam Doup",
+        "combined_score": 21,
+        "artifacts": 8,
+        "ae_memberships": 0,
+        "total_papers": 18
+      },
+      {
+        "name": "Amir Houmansadr",
+        "combined_score": 21,
+        "artifacts": 8,
+        "ae_memberships": 0,
+        "total_papers": 13
+      },
+      {
+        "name": "Yang Zhang 0016",
+        "combined_score": 19,
+        "artifacts": 13,
+        "ae_memberships": 0,
+        "total_papers": 31
+      },
+      {
+        "name": "David A. Basin",
+        "combined_score": 19,
+        "artifacts": 10,
+        "ae_memberships": 0,
+        "total_papers": 13
+      },
+      {
+        "name": "Matthias Hollick",
+        "combined_score": 19,
+        "artifacts": 10,
+        "ae_memberships": 0,
+        "total_papers": 12
+      },
+      {
+        "name": "Yinzhi Cao",
+        "combined_score": 19,
+        "artifacts": 10,
+        "ae_memberships": 0,
+        "total_papers": 13
+      },
+      {
+        "name": "Yan Shoshitaishvili",
+        "combined_score": 19,
+        "artifacts": 7,
+        "ae_memberships": 0,
+        "total_papers": 16
+      },
+      {
+        "name": "Martin Johns",
+        "combined_score": 18,
+        "artifacts": 13,
+        "ae_memberships": 0,
+        "total_papers": 10
+      },
+      {
+        "name": "Min Yang 0002",
+        "combined_score": 18,
+        "artifacts": 13,
+        "ae_memberships": 0,
+        "total_papers": 34
+      }
+    ],
     "conferences": [
       "ACSAC",
       "CHES",
@@ -43,6 +185,99 @@
     "total_papers": 10,
     "artifact_rate": 120.0,
     "num_authors": 13,
+    "top_authors": [
+      {
+        "name": "Jessy Ayala",
+        "combined_score": 19,
+        "artifacts": 2,
+        "ae_memberships": 5,
+        "total_papers": 2
+      },
+      {
+        "name": "Xuesong Bai",
+        "combined_score": 17,
+        "artifacts": 1,
+        "ae_memberships": 5,
+        "total_papers": 1
+      },
+      {
+        "name": "Hieu Le 0003",
+        "combined_score": 16,
+        "artifacts": 3,
+        "ae_memberships": 3,
+        "total_papers": 2
+      },
+      {
+        "name": "Christoph Sendner",
+        "combined_score": 15,
+        "artifacts": 0,
+        "ae_memberships": 5,
+        "total_papers": 0
+      },
+      {
+        "name": "Ismat Jarin",
+        "combined_score": 13,
+        "artifacts": 1,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Jiacen Xu",
+        "combined_score": 11,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 2
+      },
+      {
+        "name": "Qifan Zhang 0002",
+        "combined_score": 11,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 3
+      },
+      {
+        "name": "Hao Cui 0004",
+        "combined_score": 10,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Halima Bouzidi",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Luca Baldesi",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Steven Ngo",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Tu Le",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Yirui He",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "PETS",
@@ -72,6 +307,64 @@
     "total_papers": 13,
     "artifact_rate": 69.2,
     "num_authors": 8,
+    "top_authors": [
+      {
+        "name": "Nils Bars",
+        "combined_score": 18,
+        "artifacts": 3,
+        "ae_memberships": 3,
+        "total_papers": 5
+      },
+      {
+        "name": "Keno Hassler",
+        "combined_score": 14,
+        "artifacts": 2,
+        "ae_memberships": 3,
+        "total_papers": 2
+      },
+      {
+        "name": "Ruiyi Zhang 0001",
+        "combined_score": 12,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 3
+      },
+      {
+        "name": "Nico Schiller",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Noah\tMauthe",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Ziqing Yang 0002",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 2
+      },
+      {
+        "name": "Aneet Kumar Dutta",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Till Schlüter",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -100,6 +393,78 @@
     "total_papers": 17,
     "artifact_rate": 52.9,
     "num_authors": 10,
+    "top_authors": [
+      {
+        "name": "Imtiaz Karim",
+        "combined_score": 13,
+        "artifacts": 4,
+        "ae_memberships": 2,
+        "total_papers": 4
+      },
+      {
+        "name": "Mirza Masfiqur Rahman",
+        "combined_score": 11,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      },
+      {
+        "name": "Xiaoqi Chen",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Yongming Fan",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Hyungsub Kim",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 4
+      },
+      {
+        "name": "Ruoyu Wu",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 6
+      },
+      {
+        "name": "Huiyun\tPeng",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Jiwon\tKim",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Kelechi\tKalu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Sungwoo\tKim",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ACSAC",
       "NDSS",
@@ -130,6 +495,50 @@
     "total_papers": 11,
     "artifact_rate": 109.1,
     "num_authors": 6,
+    "top_authors": [
+      {
+        "name": "Jo Van Bulck",
+        "combined_score": 22,
+        "artifacts": 8,
+        "ae_memberships": 1,
+        "total_papers": 8
+      },
+      {
+        "name": "Marton Bognar",
+        "combined_score": 14,
+        "artifacts": 3,
+        "ae_memberships": 2,
+        "total_papers": 2
+      },
+      {
+        "name": "Gertjan Franken",
+        "combined_score": 12,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      },
+      {
+        "name": "Heloise Gollier",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Jeroen Robben",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Vik Vanderlinden",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ACSAC",
       "NDSS",
@@ -160,6 +569,57 @@
     "total_papers": 9,
     "artifact_rate": 22.2,
     "num_authors": 7,
+    "top_authors": [
+      {
+        "name": "Yiming Zhang 0009",
+        "combined_score": 16,
+        "artifacts": 1,
+        "ae_memberships": 5,
+        "total_papers": 7
+      },
+      {
+        "name": "Chuanpu Fu",
+        "combined_score": 13,
+        "artifacts": 1,
+        "ae_memberships": 4,
+        "total_papers": 2
+      },
+      {
+        "name": "Jiahao\tCao",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Gwihwan\tGo",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Jialuo Du",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Menghao Zhang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Yuxiang Yang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "PETS",
@@ -189,6 +649,57 @@
     "total_papers": 6,
     "artifact_rate": 66.7,
     "num_authors": 7,
+    "top_authors": [
+      {
+        "name": "Changming Liu",
+        "combined_score": 11,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 3
+      },
+      {
+        "name": "Zenong Zhang",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Loris Reiff",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Vadym Doroshenko",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Kavya Sreedhar",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Phi Hung Le",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 2
+      },
+      {
+        "name": "Yurii Sushko",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "CHES",
       "NDSS",
@@ -219,6 +730,29 @@
     "total_papers": 6,
     "artifact_rate": 116.7,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Christian Wressnegger",
+        "combined_score": 27,
+        "artifacts": 5,
+        "ae_memberships": 5,
+        "total_papers": 4
+      },
+      {
+        "name": "Alessandro Erba 0001",
+        "combined_score": 15,
+        "artifacts": 2,
+        "ae_memberships": 4,
+        "total_papers": 2
+      },
+      {
+        "name": "Yilin Ji",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ACSAC",
       "NDSS",
@@ -249,6 +783,36 @@
     "total_papers": 1,
     "artifact_rate": 300.0,
     "num_authors": 4,
+    "top_authors": [
+      {
+        "name": "Yohan Beugin",
+        "combined_score": 23,
+        "artifacts": 3,
+        "ae_memberships": 6,
+        "total_papers": 1
+      },
+      {
+        "name": "Jean-Charles\tNoirot Ferrand",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Kunyang\tLi",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Guruprasad\tViswanathan Ramesh",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "PETS",
@@ -278,6 +842,15 @@
     "total_papers": 20,
     "artifact_rate": 70.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Cristiano Giuffrida",
+        "combined_score": 46,
+        "artifacts": 14,
+        "ae_memberships": 2,
+        "total_papers": 20
+      }
+    ],
     "conferences": [
       "ACSAC",
       "USENIXSEC"
@@ -306,6 +879,43 @@
     "total_papers": 2,
     "artifact_rate": 150.0,
     "num_authors": 5,
+    "top_authors": [
+      {
+        "name": "Lennert Wouters",
+        "combined_score": 18,
+        "artifacts": 2,
+        "ae_memberships": 4,
+        "total_papers": 1
+      },
+      {
+        "name": "Jesse De Meulemeester",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Alexios Voulimeneas",
+        "combined_score": 8,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Quinten Norga",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Victor Le Pochat",
+        "combined_score": 5,
+        "artifacts": 0,
+        "ae_memberships": 1,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "CHES",
       "USENIXSEC",
@@ -335,6 +945,29 @@
     "total_papers": 3,
     "artifact_rate": 100.0,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Johnny So",
+        "combined_score": 18,
+        "artifacts": 2,
+        "ae_memberships": 4,
+        "total_papers": 2
+      },
+      {
+        "name": "Sanket Goutam",
+        "combined_score": 18,
+        "artifacts": 1,
+        "ae_memberships": 5,
+        "total_papers": 1
+      },
+      {
+        "name": "Billy Tsouvalas",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC",
@@ -364,6 +997,36 @@
     "total_papers": 11,
     "artifact_rate": 63.6,
     "num_authors": 4,
+    "top_authors": [
+      {
+        "name": "Zheng Yu 0003",
+        "combined_score": 16,
+        "artifacts": 3,
+        "ae_memberships": 3,
+        "total_papers": 4
+      },
+      {
+        "name": "Ziyi Guo",
+        "combined_score": 13,
+        "artifacts": 3,
+        "ae_memberships": 2,
+        "total_papers": 3
+      },
+      {
+        "name": "Jiahao Yu 0001",
+        "combined_score": 10,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 4
+      },
+      {
+        "name": "Xiangmin Shen",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -392,6 +1055,36 @@
     "total_papers": 5,
     "artifact_rate": 80.0,
     "num_authors": 4,
+    "top_authors": [
+      {
+        "name": "Yu Nong",
+        "combined_score": 14,
+        "artifacts": 1,
+        "ae_memberships": 4,
+        "total_papers": 1
+      },
+      {
+        "name": "Feng Wei",
+        "combined_score": 13,
+        "artifacts": 1,
+        "ae_memberships": 4,
+        "total_papers": 1
+      },
+      {
+        "name": "Keyan Guo",
+        "combined_score": 12,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 3
+      },
+      {
+        "name": "Qiqing Huang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -420,6 +1113,43 @@
     "total_papers": 7,
     "artifact_rate": 42.9,
     "num_authors": 5,
+    "top_authors": [
+      {
+        "name": "Runze Zhang",
+        "combined_score": 10,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 3
+      },
+      {
+        "name": "Cen Zhang",
+        "combined_score": 10,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 4
+      },
+      {
+        "name": "Fabian\tFleischer",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Mingyi\tLiu",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Muhammad Ibrahim",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -448,6 +1178,15 @@
     "total_papers": 27,
     "artifact_rate": 51.9,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Thorsten Holz",
+        "combined_score": 42,
+        "artifacts": 14,
+        "ae_memberships": 2,
+        "total_papers": 27
+      }
+    ],
     "conferences": [
       "ACSAC",
       "NDSS",
@@ -478,6 +1217,43 @@
     "total_papers": 6,
     "artifact_rate": 66.7,
     "num_authors": 5,
+    "top_authors": [
+      {
+        "name": "Vladislav Mladenov",
+        "combined_score": 13,
+        "artifacts": 3,
+        "ae_memberships": 2,
+        "total_papers": 4
+      },
+      {
+        "name": "Nicolai Müller",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Annika Wilde",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 2
+      },
+      {
+        "name": "Fabian\tBäumer",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Pascal Sasdrich",
+        "combined_score": 5,
+        "artifacts": 0,
+        "ae_memberships": 1,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ACSAC",
       "CHES",
@@ -508,6 +1284,22 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Shubham Agarwal 0006",
+        "combined_score": 20,
+        "artifacts": 1,
+        "ae_memberships": 6,
+        "total_papers": 1
+      },
+      {
+        "name": "Jing Liu",
+        "combined_score": 18,
+        "artifacts": 0,
+        "ae_memberships": 6,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC",
@@ -537,6 +1329,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Amit\tSamanta",
+        "combined_score": 21,
+        "artifacts": 0,
+        "ae_memberships": 7,
+        "total_papers": 0
+      },
+      {
+        "name": "Sachin Kumar\tSingh",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC",
@@ -560,6 +1368,29 @@
     "total_papers": 6,
     "artifact_rate": 50.0,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Ningyu He",
+        "combined_score": 16,
+        "artifacts": 2,
+        "ae_memberships": 4,
+        "total_papers": 5
+      },
+      {
+        "name": "Kunsong Zhao",
+        "combined_score": 10,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      },
+      {
+        "name": "Leming\tShen",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -588,6 +1419,22 @@
     "total_papers": 7,
     "artifact_rate": 100.0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Christof Ferreira Torres",
+        "combined_score": 16,
+        "artifacts": 4,
+        "ae_memberships": 3,
+        "total_papers": 3
+      },
+      {
+        "name": "Patrick Jattke",
+        "combined_score": 15,
+        "artifacts": 3,
+        "ae_memberships": 2,
+        "total_papers": 4
+      }
+    ],
     "conferences": [
       "ACSAC",
       "SYSTEX",
@@ -617,6 +1464,29 @@
     "total_papers": 2,
     "artifact_rate": 150.0,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Daniel Schadt",
+        "combined_score": 12,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Maximilian Noppel",
+        "combined_score": 9,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 2
+      },
+      {
+        "name": "Julian Todt",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ACSAC",
       "PETS"
@@ -645,6 +1515,22 @@
     "total_papers": 4,
     "artifact_rate": 75.0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Zhiyuan Zhang 0005",
+        "combined_score": 16,
+        "artifacts": 2,
+        "ae_memberships": 4,
+        "total_papers": 3
+      },
+      {
+        "name": "Yujin Huang",
+        "combined_score": 13,
+        "artifacts": 1,
+        "ae_memberships": 4,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "ACSAC",
       "CHES",
@@ -675,6 +1561,29 @@
     "total_papers": 8,
     "artifact_rate": 75.0,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Bailey Kacsmar",
+        "combined_score": 13,
+        "artifacts": 3,
+        "ae_memberships": 3,
+        "total_papers": 4
+      },
+      {
+        "name": "Miti Mazmudar",
+        "combined_score": 8,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Lipeng He",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 3
+      }
+    ],
     "conferences": [
       "ACSAC",
       "PETS",
@@ -704,6 +1613,29 @@
     "total_papers": 5,
     "artifact_rate": 60.0,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Xu He",
+        "combined_score": 13,
+        "artifacts": 2,
+        "ae_memberships": 3,
+        "total_papers": 3
+      },
+      {
+        "name": "Xiaoyue Ma",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 2
+      },
+      {
+        "name": "Xiang\tLi",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ACSAC",
       "NDSS",
@@ -733,6 +1665,36 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 4,
+    "top_authors": [
+      {
+        "name": "Felix\tLange",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Jost Rossel",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Nico Heitmann",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Niklas\tNiere",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -761,6 +1723,22 @@
     "total_papers": 2,
     "artifact_rate": 100.0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Zhengyao Lin",
+        "combined_score": 15,
+        "artifacts": 2,
+        "ae_memberships": 3,
+        "total_papers": 2
+      },
+      {
+        "name": "Alexandra Nisenoff",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "PETS",
@@ -790,6 +1768,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Anna Lorimer",
+        "combined_score": 18,
+        "artifacts": 0,
+        "ae_memberships": 6,
+        "total_papers": 0
+      },
+      {
+        "name": "Stanley Wu",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS",
       "USENIXSEC"
@@ -818,6 +1812,22 @@
     "total_papers": 1,
     "artifact_rate": 200.0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Giulio De Pasquale",
+        "combined_score": 16,
+        "artifacts": 2,
+        "ae_memberships": 4,
+        "total_papers": 1
+      },
+      {
+        "name": "Shijing He",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "PETS",
@@ -848,6 +1858,22 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Imranur Rahman",
+        "combined_score": 16,
+        "artifacts": 1,
+        "ae_memberships": 5,
+        "total_papers": 1
+      },
+      {
+        "name": "Abhinaya S.B.",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ACSAC",
       "PETS",
@@ -877,6 +1903,29 @@
     "total_papers": 5,
     "artifact_rate": 80.0,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Brendan Dolan-Gavitt",
+        "combined_score": 11,
+        "artifacts": 3,
+        "ae_memberships": 1,
+        "total_papers": 4
+      },
+      {
+        "name": "Ritik Roongta",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Zhenghao Hu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ACSAC",
       "PETS",
@@ -906,6 +1955,22 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Ayomide Akinsanya",
+        "combined_score": 15,
+        "artifacts": 1,
+        "ae_memberships": 4,
+        "total_papers": 1
+      },
+      {
+        "name": "Vidya Lakshmi Rajagopalan",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -934,6 +1999,22 @@
     "total_papers": 5,
     "artifact_rate": 80.0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Abdullah Al Ishtiaq",
+        "combined_score": 14,
+        "artifacts": 2,
+        "ae_memberships": 3,
+        "total_papers": 3
+      },
+      {
+        "name": "Yu-Jye Tung",
+        "combined_score": 10,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 2
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -962,6 +2043,29 @@
     "total_papers": 2,
     "artifact_rate": 100.0,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Haobin Hiroki Chen",
+        "combined_score": 12,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 2
+      },
+      {
+        "name": "Dongfang Zhao",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Mingming\tZha",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "PETS",
@@ -991,6 +2095,29 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Zizhuang\tDeng",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Mingda Han",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Wenhao Li",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -1012,6 +2139,29 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Cristian Assaiante",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Matteo Marini",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Giorgia Di Pietro",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -1033,6 +2183,36 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 4,
+    "top_authors": [
+      {
+        "name": "Bowen Zhang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Xiang Chen",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Yanzuo Chen",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Yibo\tJin",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -1054,6 +2234,22 @@
     "total_papers": 5,
     "artifact_rate": 160.0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Simon Koch 0001",
+        "combined_score": 17,
+        "artifacts": 8,
+        "ae_memberships": 2,
+        "total_papers": 5
+      },
+      {
+        "name": "Jan Niklas Drescher",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS",
       "USENIXSEC",
@@ -1083,6 +2279,22 @@
     "total_papers": 3,
     "artifact_rate": 66.7,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Phani Vadrevu",
+        "combined_score": 14,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 3
+      },
+      {
+        "name": "Joseph\tKhoury",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -1110,6 +2322,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Kris Kwiatkowski",
+        "combined_score": 15,
+        "artifacts": 0,
+        "ae_memberships": 5,
+        "total_papers": 0
+      },
+      {
+        "name": "Ben Marshall",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "CHES",
       "PETS"
@@ -1138,6 +2366,15 @@
     "total_papers": 1,
     "artifact_rate": 300.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Jan Jancar",
+        "combined_score": 21,
+        "artifacts": 3,
+        "ae_memberships": 6,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "CHES",
       "NDSS",
@@ -1167,6 +2404,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Kaushal Kafle",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Amit Seal Ami",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -1187,6 +2440,22 @@
     "total_papers": 2,
     "artifact_rate": 100.0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Arman Riasi",
+        "combined_score": 10,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 2
+      },
+      {
+        "name": "Zhengjie\tJi",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ACSAC",
       "NDSS",
@@ -1216,6 +2485,22 @@
     "total_papers": 1,
     "artifact_rate": 200.0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Logan Kostick",
+        "combined_score": 10,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Zhengyu Liu",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "NDSS",
       "PETS",
@@ -1245,6 +2530,15 @@
     "total_papers": 6,
     "artifact_rate": 66.7,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Charlie Jacomme",
+        "combined_score": 18,
+        "artifacts": 4,
+        "ae_memberships": 2,
+        "total_papers": 6
+      }
+    ],
     "conferences": [
       "CHES",
       "USENIXSEC"
@@ -1273,6 +2567,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Lachlan Gunn",
+        "combined_score": 18,
+        "artifacts": 0,
+        "ae_memberships": 6,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS"
     ],
@@ -1296,6 +2599,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Ryan\tVrecenar",
+        "combined_score": 18,
+        "artifacts": 0,
+        "ae_memberships": 6,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -1318,6 +2630,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Sofía Celi",
+        "combined_score": 18,
+        "artifacts": 0,
+        "ae_memberships": 6,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS",
       "USENIXSEC"
@@ -1341,6 +2662,22 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Soomin Kim 0002",
+        "combined_score": 12,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      },
+      {
+        "name": "Jinseo\tLee",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS",
       "USENIXSEC"
@@ -1369,6 +2706,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Erik Tews",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Chakshu Gupta",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -1393,6 +2746,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Jiongchi\tYu",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Mingfei Cheng",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -1414,6 +2783,22 @@
     "total_papers": 1,
     "artifact_rate": 200.0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Pierre Ayoub",
+        "combined_score": 9,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Paul\tOLIVIER",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "ACSAC",
       "CHES",
@@ -1445,6 +2830,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Cecylia Bocovich",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Nick Mathewson",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS"
     ],
@@ -1465,6 +2866,29 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Basavesh Ammanaghatta Shivakumar",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Junming\tLiu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Paul Staat",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -1487,6 +2911,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Vincent Hwang",
+        "combined_score": 16,
+        "artifacts": 7,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "CHES"
     ],
@@ -1514,6 +2947,15 @@
     "total_papers": 3,
     "artifact_rate": 166.7,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Malte Wessels",
+        "combined_score": 16,
+        "artifacts": 5,
+        "ae_memberships": 3,
+        "total_papers": 3
+      }
+    ],
     "conferences": [
       "PETS",
       "USENIXSEC"
@@ -1542,6 +2984,15 @@
     "total_papers": 2,
     "artifact_rate": 50.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Anjo Vahldiek-Oberwagner",
+        "combined_score": 16,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 2
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -1569,6 +3020,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Tiago Heinrich",
+        "combined_score": 16,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -1590,6 +3050,15 @@
     "total_papers": 3,
     "artifact_rate": 166.7,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Peter Schwabe",
+        "combined_score": 15,
+        "artifacts": 5,
+        "ae_memberships": 2,
+        "total_papers": 3
+      }
+    ],
     "conferences": [
       "CHES",
       "USENIXSEC"
@@ -1618,6 +3087,15 @@
     "total_papers": 1,
     "artifact_rate": 400.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Junhao Huang 0001",
+        "combined_score": 15,
+        "artifacts": 4,
+        "ae_memberships": 3,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "CHES",
       "USENIXSEC"
@@ -1646,6 +3124,15 @@
     "total_papers": 2,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Corban Villa",
+        "combined_score": 15,
+        "artifacts": 2,
+        "ae_memberships": 3,
+        "total_papers": 2
+      }
+    ],
     "conferences": [
       "NDSS",
       "PETS",
@@ -1675,6 +3162,15 @@
     "total_papers": 2,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Yuanhaur Chang",
+        "combined_score": 15,
+        "artifacts": 2,
+        "ae_memberships": 3,
+        "total_papers": 2
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -1703,6 +3199,15 @@
     "total_papers": 3,
     "artifact_rate": 33.3,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Jian Cui",
+        "combined_score": 15,
+        "artifacts": 1,
+        "ae_memberships": 4,
+        "total_papers": 3
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -1731,6 +3236,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Hongsheng\tHu",
+        "combined_score": 15,
+        "artifacts": 0,
+        "ae_memberships": 5,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -1752,6 +3266,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Shengtuo\tHu",
+        "combined_score": 15,
+        "artifacts": 0,
+        "ae_memberships": 5,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -1774,6 +3297,22 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Kelly Kaoudis",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Michael Brown",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -1802,6 +3341,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Alexander Gaidis",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Grigoris Ntousakis",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -1823,6 +3378,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Carolin Zöbelein",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Arturo\tVillacañas",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS",
       "USENIXSEC"
@@ -1846,6 +3417,22 @@
     "total_papers": 8,
     "artifact_rate": 37.5,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Nathan Reitinger",
+        "combined_score": 8,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 2
+      },
+      {
+        "name": "Omer Akgul",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 6
+      }
+    ],
     "conferences": [
       "PETS",
       "USENIXSEC"
@@ -1874,6 +3461,22 @@
     "total_papers": 2,
     "artifact_rate": 100.0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Yongjun Zhao 0001",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Boheng Li",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "ACSAC",
       "NDSS",
@@ -1903,6 +3506,22 @@
     "total_papers": 1,
     "artifact_rate": 200.0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Yu Zheng",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Kaixuan Luo",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -1931,6 +3550,15 @@
     "total_papers": 5,
     "artifact_rate": 80.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Yi He 0020",
+        "combined_score": 14,
+        "artifacts": 4,
+        "ae_memberships": 2,
+        "total_papers": 5
+      }
+    ],
     "conferences": [
       "CHES",
       "NDSS",
@@ -1960,6 +3588,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Sebastian Hasler",
+        "combined_score": 14,
+        "artifacts": 2,
+        "ae_memberships": 4,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS",
       "USENIXSEC"
@@ -1988,6 +3625,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Aurore Fass",
+        "combined_score": 14,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "ACSAC",
       "USENIXSEC"
@@ -2016,6 +3662,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Nathan Rutherford",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Martin Albrecht",
+        "combined_score": 5,
+        "artifacts": 0,
+        "ae_memberships": 1,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "CHES",
       "NDSS",
@@ -2038,6 +3700,15 @@
     "total_papers": 3,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Daniel Arp",
+        "combined_score": 13,
+        "artifacts": 3,
+        "ae_memberships": 2,
+        "total_papers": 3
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -2066,6 +3737,15 @@
     "total_papers": 5,
     "artifact_rate": 20.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Evangelos Bitsikas",
+        "combined_score": 13,
+        "artifacts": 1,
+        "ae_memberships": 4,
+        "total_papers": 5
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -2094,6 +3774,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Marc Damie",
+        "combined_score": 13,
+        "artifacts": 1,
+        "ae_memberships": 4,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "NDSS",
       "PETS",
@@ -2123,6 +3812,15 @@
     "total_papers": 3,
     "artifact_rate": 33.3,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Mir Masood Ali",
+        "combined_score": 13,
+        "artifacts": 1,
+        "ae_memberships": 4,
+        "total_papers": 3
+      }
+    ],
     "conferences": [
       "NDSS",
       "PETS",
@@ -2152,6 +3850,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Aikata",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Florian Hirner",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "CHES"
     ],
@@ -2179,6 +3893,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Norman Lahr",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Richard Petri",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "CHES"
     ],
@@ -2206,6 +3936,15 @@
     "total_papers": 3,
     "artifact_rate": 133.3,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Eleonora Losiouk",
+        "combined_score": 12,
+        "artifacts": 4,
+        "ae_memberships": 2,
+        "total_papers": 3
+      }
+    ],
     "conferences": [
       "ACSAC",
       "CHES",
@@ -2235,6 +3974,15 @@
     "total_papers": 1,
     "artifact_rate": 200.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Darion Cassel",
+        "combined_score": 12,
+        "artifacts": 2,
+        "ae_memberships": 3,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "NDSS",
       "PETS"
@@ -2263,6 +4011,15 @@
     "total_papers": 2,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Jayakrishna Menon Vadayath",
+        "combined_score": 12,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 2
+      }
+    ],
     "conferences": [
       "USENIXSEC",
       "WOOT"
@@ -2291,6 +4048,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Killian Davitt",
+        "combined_score": 12,
+        "artifacts": 2,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS"
     ],
@@ -2318,6 +4084,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Nurullah Demir",
+        "combined_score": 12,
+        "artifacts": 2,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS",
       "USENIXSEC"
@@ -2346,6 +4121,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Aolin Ding",
+        "combined_score": 12,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -2374,6 +4158,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Diksha Goel",
+        "combined_score": 12,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "NDSS",
       "PETS",
@@ -2403,6 +4196,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Pedro Bernardo",
+        "combined_score": 12,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -2431,6 +4233,15 @@
     "total_papers": 2,
     "artifact_rate": 50.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Shangqi Lai",
+        "combined_score": 12,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 2
+      }
+    ],
     "conferences": [
       "PETS"
     ],
@@ -2458,6 +4269,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Sofiane Azogagh",
+        "combined_score": 12,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "PETS",
@@ -2487,6 +4307,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Zilong Lin 0001",
+        "combined_score": 12,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -2515,6 +4344,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Alessandro\tBaccarini",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS",
       "USENIXSEC"
@@ -2536,6 +4374,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Erin Avllazagaj",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS",
       "USENIXSEC"
@@ -2557,6 +4404,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Hongyan\tCHANG",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -2577,6 +4433,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Pascal Cotret",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -2598,6 +4463,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Prajwal Panzade",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "PETS"
@@ -2618,6 +4492,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Solmaz Salimi",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -2639,6 +4522,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Tolga Atalay",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC",
@@ -2661,6 +4553,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Torsten Krauß",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -2681,6 +4582,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Vijayanta Jain",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "PETS",
@@ -2703,6 +4613,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Xia\tZhou",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -2724,6 +4643,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Abdun Nihaal",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Sai Venkata Krishnan V",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -2744,6 +4679,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Dipsy Desai",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Rajrup Ghosh",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS"
     ],
@@ -2764,6 +4715,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Feiyang Yu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Qisheng\tJiang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS",
       "USENIXSEC"
@@ -2784,6 +4751,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Junqi\tZhang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Xuanbo Huang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -2804,6 +4787,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Minjun (Elena) Long",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Xugui Zhou",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS",
       "USENIXSEC"
@@ -2826,6 +4825,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Peiyang\tLi",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Puzhuo\tLiu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -2846,6 +4861,22 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
+    "top_authors": [
+      {
+        "name": "Tillson Galloway",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Vinny Adjibi",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS"
     ],
@@ -2865,6 +4896,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Ahmed Lekssays",
+        "combined_score": 11,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -2893,6 +4933,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Yash Vekaria",
+        "combined_score": 11,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "NDSS",
       "PETS",
@@ -2922,6 +4971,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Ying Li 0104",
+        "combined_score": 11,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "PETS",
       "USENIXSEC"
@@ -2950,6 +5008,15 @@
     "total_papers": 2,
     "artifact_rate": 50.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Zhiyu Zhang 0017",
+        "combined_score": 11,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 2
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -2977,6 +5044,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Minh-Ha Le",
+        "combined_score": 10,
+        "artifacts": 3,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS"
     ],
@@ -3004,6 +5080,15 @@
     "total_papers": 5,
     "artifact_rate": 40.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Andrea Continella",
+        "combined_score": 10,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 5
+      }
+    ],
     "conferences": [
       "ACSAC",
       "PETS",
@@ -3033,6 +5118,15 @@
     "total_papers": 3,
     "artifact_rate": 66.7,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Eric Pauley",
+        "combined_score": 10,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 3
+      }
+    ],
     "conferences": [
       "NDSS",
       "PETS",
@@ -3062,6 +5156,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Alexander Bajic",
+        "combined_score": 10,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS"
     ],
@@ -3089,6 +5192,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Arnab Bag",
+        "combined_score": 10,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS"
     ],
@@ -3116,6 +5228,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Fuman Xie",
+        "combined_score": 10,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "PETS"
@@ -3144,6 +5265,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Monika Trimoska",
+        "combined_score": 10,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "CHES"
     ],
@@ -3171,6 +5301,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Panagiotis Chatzigiannis",
+        "combined_score": 10,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "PETS"
     ],
@@ -3198,6 +5337,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Preston Haffey",
+        "combined_score": 10,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS"
     ],
@@ -3225,6 +5373,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Shubhi Shukla 0001",
+        "combined_score": 10,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "CHES"
     ],
@@ -3252,6 +5409,15 @@
     "total_papers": 2,
     "artifact_rate": 50.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Tian Dong",
+        "combined_score": 10,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 2
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -3279,6 +5445,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Clémentine Maurice",
+        "combined_score": 10,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -3298,6 +5473,15 @@
     "total_papers": 8,
     "artifact_rate": 25.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Ding Wang 0002",
+        "combined_score": 9,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 8
+      }
+    ],
     "conferences": [
       "ACSAC",
       "USENIXSEC"
@@ -3326,6 +5510,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Boru Chen",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -3353,6 +5546,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Guilhem Lacombe",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -3380,6 +5582,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Jingyao Zhang",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -3408,6 +5619,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Kunal Mukherjee",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -3436,6 +5656,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Mohammad Hammas Saeed",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -3463,6 +5692,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Nikolaos Alexopoulos",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -3490,6 +5728,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Qiming Guo",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -3518,6 +5765,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Wanning Ding",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -3545,6 +5801,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Alyssa Milburn",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "CHES",
       "USENIXSEC",
@@ -3566,6 +5831,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Arul Thileeban Sagayam",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS",
       "SYSTEX"
@@ -3586,6 +5860,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Avinash Sudhodanan",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -3606,6 +5889,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Carolin Zoebelein",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS"
     ],
@@ -3626,6 +5918,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "David Balash",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -3646,6 +5947,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Dongwei Xiao",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -3666,6 +5976,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Eric\tAckermann",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -3686,6 +6005,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Fabrizio De Santis",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "CHES"
     ],
@@ -3706,6 +6034,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Jakob Bleier",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -3726,6 +6063,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Jenni Reuben",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -3746,6 +6092,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Johannes Becker",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS"
     ],
@@ -3766,6 +6121,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Karoline Busse",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS"
     ],
@@ -3786,6 +6150,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Kevin Borgolte",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS",
       "USENIXSEC"
@@ -3806,6 +6179,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Leonhard\tBalduf",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -3826,6 +6208,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Long\tHuang",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -3846,6 +6237,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Paul\tChung",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS",
       "USENIXSEC"
@@ -3866,6 +6266,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Shay Berkovich",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -3886,6 +6295,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Shenghan Zheng",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -3906,6 +6324,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Sindhu Reddy Kalathur Gopal",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -3926,6 +6353,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Xin\tZhang",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -3946,6 +6382,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Yi\tZhou",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -3966,6 +6411,15 @@
     "total_papers": 2,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Alejandro Cabrera Aldaya",
+        "combined_score": 8,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 2
+      }
+    ],
     "conferences": [
       "CHES",
       "USENIXSEC"
@@ -3994,6 +6448,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Georges-Axel Jaloyan",
+        "combined_score": 8,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC",
       "WOOT"
@@ -4022,6 +6485,15 @@
     "total_papers": 1,
     "artifact_rate": 200.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Zachary Espiritu",
+        "combined_score": 8,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "PETS",
       "USENIXSEC"
@@ -4050,6 +6522,15 @@
     "total_papers": 2,
     "artifact_rate": 50.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Dawei Wang 0021",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 2
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -4077,6 +6558,15 @@
     "total_papers": 4,
     "artifact_rate": 25.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Yupei Liu",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 4
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -4104,6 +6594,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Benjamin Mixon-Baca",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS"
     ],
@@ -4131,6 +6630,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Bocheng Chen",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -4158,6 +6666,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Florentin Rochet",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "ACSAC",
       "PETS"
@@ -4186,6 +6703,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Marco Casagrande",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "CHES",
       "NDSS",
@@ -4215,6 +6741,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Pasin Manurangsi",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS"
     ],
@@ -4242,6 +6777,15 @@
     "total_papers": 3,
     "artifact_rate": 33.3,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Shenao Yan",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 3
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -4270,6 +6814,15 @@
     "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Xiao Zhan",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      }
+    ],
     "conferences": [
       "PETS",
       "USENIXSEC"
@@ -4298,6 +6851,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Yuzhou Jiang",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS"
     ],
@@ -4325,6 +6887,15 @@
     "total_papers": 2,
     "artifact_rate": 50.0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Deepak Kumar 0006",
+        "combined_score": 6,
+        "artifacts": 1,
+        "ae_memberships": 1,
+        "total_papers": 2
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -4352,6 +6923,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Markku-Juhani O. Saarinen",
+        "combined_score": 6,
+        "artifacts": 1,
+        "ae_memberships": 1,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "CHES"
     ],
@@ -4379,6 +6959,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Adrian Herrera",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC",
       "WOOT"
@@ -4399,6 +6988,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Advije Rizvani",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS"
     ],
@@ -4418,6 +7016,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Andrew R. Reiter",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -4437,6 +7044,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Andrew Roberts",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS"
     ],
@@ -4456,6 +7072,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Antonio\tMuñoz",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -4475,6 +7100,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Bishnu Bhusal",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS"
     ],
@@ -4494,6 +7128,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Caihua Li",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -4513,6 +7156,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Clemens-Alexander Brust",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -4532,6 +7184,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "David Ke Hong",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS"
     ],
@@ -4551,6 +7212,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Eman Maali",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -4570,6 +7240,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Gaëtan Cassiers",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "CHES"
     ],
@@ -4589,6 +7268,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Goran Piskachev",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -4608,6 +7296,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Grégoire Menguy",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -4627,6 +7324,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Guangjing Wang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS"
     ],
@@ -4646,6 +7352,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Guangke Chen",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -4666,6 +7381,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Guillaume\tDIDIER",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -4685,6 +7409,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Hailong Hu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -4704,6 +7437,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Hari Venugopalan",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS"
     ],
@@ -4723,6 +7465,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Hengkai Ye",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS"
     ],
@@ -4742,6 +7493,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Huadi Zhu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -4762,6 +7522,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Iyiola Emmanuel Olatunji",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS"
     ],
@@ -4781,6 +7550,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Jafar Haadi Jafarian",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -4800,6 +7578,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Jie\tMa",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -4819,6 +7606,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Jingmei Hu",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC",
       "WOOT"
@@ -4838,6 +7634,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "John Kressel",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -4857,6 +7662,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Julian\tFunk",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC",
       "WOOT"
@@ -4877,6 +7691,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Kenneth Odoh",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS"
     ],
@@ -4896,6 +7719,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Kevin Liao",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS",
       "USENIXSEC"
@@ -4916,6 +7748,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Luca Arnaboldi",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS"
     ],
@@ -4935,6 +7776,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Luca Degani",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -4954,6 +7804,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Luigi D. C. Soares",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS"
     ],
@@ -4973,6 +7832,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Maryam Masoudian",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -4992,6 +7860,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Michael Rodler",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -5011,6 +7888,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Michele\tGuerra",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -5030,6 +7916,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Nicola\tBottura",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -5049,6 +7944,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Nils Wiersma",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "WOOT"
     ],
@@ -5068,6 +7972,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Philippe Teuwen",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "CHES"
     ],
@@ -5087,6 +8000,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Rahul Kande",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -5107,6 +8029,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Rishit Saiya",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS"
     ],
@@ -5126,6 +8057,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Sabrina Manickam",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "WOOT"
     ],
@@ -5145,6 +8085,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Saiful Islam Salim",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -5164,6 +8113,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Salvatore Signorello",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -5184,6 +8142,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Shijia Wei",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -5203,6 +8170,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Vaishnavi\tRaghavajosyula",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -5222,6 +8198,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Vinod Khandkar",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS"
     ],
@@ -5241,6 +8226,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Weiheng\tBai",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -5260,6 +8254,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Yaxiong Lei",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "PETS"
     ],
@@ -5279,6 +8282,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Yongliang Chen",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -5299,6 +8311,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Yusi Feng",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "USENIXSEC"
     ],
@@ -5318,6 +8339,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Zewei\tShi",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "NDSS",
       "USENIXSEC"
@@ -5337,6 +8367,15 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Ileana Buhan",
+        "combined_score": 5,
+        "artifacts": 0,
+        "ae_memberships": 1,
+        "total_papers": 0
+      }
+    ],
     "conferences": [
       "CHES"
     ],
