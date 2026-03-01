@@ -47,6 +47,8 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
+  'use strict';
+  
   /* --- Handle submenu visibility on click/touch (for mobile) --- */
   var menuItems = document.querySelectorAll('.masthead__menu-item--has-children');
   var isTouch = window.matchMedia('(hover: none)').matches;
@@ -99,87 +101,108 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  /* --- Responsive navigation: move overflow items to hamburger menu --- */
-  function updateHiddenLinks() {
-    var visibleLinks = document.querySelector('.greedy-nav .visible-links');
-    var hiddenLinks = document.querySelector('.greedy-nav .hidden-links');
-    var toggle = document.querySelector('.greedy-nav__toggle');
+  /* --- Responsive navigation: populate hamburger menu --- */
+  function rebuildHamburgerMenu() {
+    var visibleContainer = document.querySelector('.greedy-nav .visible-links');
+    var hamburgerContainer = document.querySelector('.greedy-nav .hidden-links');
+    var toggleBtn = document.querySelector('.greedy-nav__toggle');
     
-    if (!visibleLinks || !hiddenLinks || !toggle) return;
+    if (!visibleContainer || !hamburgerContainer || !toggleBtn) return;
     
-    // Clear hidden links
-    hiddenLinks.innerHTML = '';
+    // Clear previous items
+    hamburgerContainer.innerHTML = '';
+    var hasHiddenItems = false;
     
-    // Get all visible-links items
-    var allItems = visibleLinks.querySelectorAll(':scope > .masthead__menu-item');
-    var hasHidden = false;
+    // Get the viewport width to determine breakpoint
+    var width = window.innerWidth;
+    var itemsToHide = 0;
     
-    allItems.forEach(function(item) {
-      // Check if item is hidden by CSS media query
-      var isHidden = item.offsetParent === null || 
-                     window.getComputedStyle(item).display === 'none';
+    // Breakpoints match CSS media queries
+    if (width < 768) itemsToHide = 5;       // Mobile: hide last 5
+    else if (width < 1000) itemsToHide = 4; // Tablet: hide last 4
+    else if (width < 1200) itemsToHide = 3; // Small desktop: hide last 3
+    else if (width < 1400) itemsToHide = 2; // Medium desktop: hide last 2
+    else itemsToHide = 0;                     // Large desktop: show all
+    
+    // Get all menu items from visible-links
+    var allItems = visibleContainer.querySelectorAll(':scope > .masthead__menu-item');
+    var totalItems = allItems.length;
+    
+    // Clone items that should be hidden
+    allItems.forEach(function(originalItem, index) {
+      var shouldHide = index >= (totalItems - itemsToHide);
       
-      if (isHidden) {
-        // Create a mobile-friendly version with collapsible submenus
-        var mobileItem = document.createElement('li');
-        mobileItem.className = 'masthead__menu-item';
+      if (shouldHide) {
+        hasHiddenItems = true;
         
-        var itemLink = item.querySelector(':scope > a');
-        var itemSubmenu = item.querySelector('.masthead__submenu');
+        // Clone the entire item
+        var clonedItem = originalItem.cloneNode(true);
         
-        if (itemLink) {
-          var linkClone = itemLink.cloneNode(true);
-          mobileItem.appendChild(linkClone);
-        }
-        
-        // If item has children, add submenu with toggle functionality
-        if (itemSubmenu) {
-          mobileItem.classList.add('masthead__menu-item--has-children');
-          var submenuClone = itemSubmenu.cloneNode(true);
-          submenuClone.style.position = 'static';
-          submenuClone.style.display = 'none';
-          mobileItem.appendChild(submenuClone);
+        // Find submenu in the clone
+        var submenu = clonedItem.querySelector('.masthead__submenu');
+        if (submenu) {
+          submenu.style.position = 'static';
+          submenu.style.display = 'none';
           
-          // Add toggle handler for mobile menu items
-          linkClone.addEventListener('click', function(e) {
-            e.preventDefault();
-            var isOpen = submenuClone.style.display === 'block';
-            
-            // Close other open submenus in hidden links
-            hiddenLinks.querySelectorAll('.masthead__submenu').forEach(function(s) {
-              s.style.display = 'none';
+          // Get the main link
+          var mainLink = clonedItem.querySelector(':scope > a');
+          if (mainLink) {
+            // Add click handler to toggle submenu
+            mainLink.addEventListener('click', function(e) {
+              e.preventDefault();
+              var wasOpen = submenu.style.display === 'block';
+              
+              // Close all other open submenus in hamburger
+              hamburgerContainer.querySelectorAll('.masthead__submenu').forEach(function(s) {
+                s.style.display = 'none';
+              });
+              
+              // Toggle this submenu
+              submenu.style.display = wasOpen ? 'none' : 'block';
             });
-            
-            // Toggle this submenu
-            submenuClone.style.display = isOpen ? 'none' : 'block';
-          });
+          }
         }
         
-        hiddenLinks.appendChild(mobileItem);
-        hasHidden = true;
+        hamburgerContainer.appendChild(clonedItem);
       }
     });
     
-    // Show/hide hamburger toggle based on whether there are hidden items
-    if (hasHidden) {
-      toggle.classList.remove('hidden');
-      hiddenLinks.classList.add('hidden');
+    // Show/hide toggle button
+    if (hasHiddenItems) {
+      toggleBtn.classList.remove('hidden');
+      hamburgerContainer.classList.add('hidden'); // Initially hidden, toggled by button
     } else {
-      toggle.classList.add('hidden');
-      hiddenLinks.classList.add('hidden');
+      toggleBtn.classList.add('hidden');
+      hamburgerContainer.classList.add('hidden');
     }
   }
   
-  // Update on load and resize
-  updateHiddenLinks();
-  window.addEventListener('resize', updateHiddenLinks);
+  // Build menu on page load
+  rebuildHamburgerMenu();
   
-  // Toggle hidden menu visibility
-  document.querySelector('.greedy-nav__toggle')?.addEventListener('click', function() {
-    var hiddenLinks = document.querySelector('.greedy-nav .hidden-links');
-    if (hiddenLinks) {
-      hiddenLinks.classList.toggle('hidden');
-    }
+  // Rebuild on window resize (with debounce to avoid excessive recalculation)
+  var resizeTimer;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(rebuildHamburgerMenu, 250);
   });
+  
+  // Toggle hamburger menu visibility
+  var toggleBtn = document.querySelector('.greedy-nav__toggle');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      var hamburgerContainer = document.querySelector('.greedy-nav .hidden-links');
+      if (hamburgerContainer) {
+        // Toggle the 'hidden' class to show/hide the menu
+        var isCurrentlyHidden = hamburgerContainer.classList.contains('hidden');
+        if (isCurrentlyHidden) {
+          hamburgerContainer.classList.remove('hidden');
+        } else {
+          hamburgerContainer.classList.add('hidden');
+        }
+      }
+    });
+  }
 });
 </script>

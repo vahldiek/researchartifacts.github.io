@@ -106,15 +106,15 @@ html {
   background: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 4px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
+  overflow: visible;
 }
+/* Initially hidden */
 .greedy-nav .hidden-links.hidden {
-  max-height: 0;
+  display: none;
 }
+/* Shown when toggle opens it */
 .greedy-nav .hidden-links:not(.hidden) {
-  max-height: 500px;
+  display: block;
 }
 .greedy-nav .hidden-links .masthead__menu-item {
   border-bottom: 1px solid #eee;
@@ -149,6 +149,9 @@ html {
   padding: 0.5em 1em 0.5em 1.5em;
   font-size: 0.85em;
   color: #666;
+}
+.hidden-links .masthead__submenu li a:hover {
+  background: #e8e8e8;
 }
 
 // Responsive navigation: collapse last items on medium screens
