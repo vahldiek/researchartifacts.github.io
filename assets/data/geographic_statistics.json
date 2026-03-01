@@ -1,0 +1,697 @@
+{
+  "generated": true,
+  "by_country": {
+    "AT": {
+      "continent": "Europe",
+      "num_institutions": 1,
+      "num_authors": 1,
+      "num_artifacts": 3,
+      "num_papers": 5,
+      "papers_with_artifacts": 3,
+      "reproducibility": {
+        "median": 0,
+        "mean": 0,
+        "min": 0,
+        "max": 0,
+        "institutions_in_top_50": 0
+      },
+      "functionality": {
+        "median": 66.7,
+        "mean": 66.7
+      },
+      "artifact_availability": {
+        "median": 60.0,
+        "mean": 60.0
+      }
+    },
+    "AU": {
+      "continent": "Oceania",
+      "num_institutions": 11,
+      "num_authors": 27,
+      "num_artifacts": 57,
+      "num_papers": 129,
+      "papers_with_artifacts": 78,
+      "reproducibility": {
+        "median": 50.0,
+        "mean": 61.2,
+        "min": 20.0,
+        "max": 100.0,
+        "institutions_in_top_50": 5
+      },
+      "functionality": {
+        "median": 91.7,
+        "mean": 81.5
+      },
+      "artifact_availability": {
+        "median": 71.4,
+        "mean": 67.0
+      }
+    },
+    "BE": {
+      "continent": "Europe",
+      "num_institutions": 1,
+      "num_authors": 1,
+      "num_artifacts": 1,
+      "num_papers": 0,
+      "papers_with_artifacts": 0,
+      "reproducibility": {
+        "median": 0,
+        "mean": 0,
+        "min": 0,
+        "max": 0,
+        "institutions_in_top_50": 0
+      },
+      "functionality": {
+        "median": 0,
+        "mean": 0
+      },
+      "artifact_availability": {
+        "median": 0,
+        "mean": 0
+      }
+    },
+    "BR": {
+      "continent": "South America",
+      "num_institutions": 1,
+      "num_authors": 1,
+      "num_artifacts": 0,
+      "num_papers": 0,
+      "papers_with_artifacts": 0,
+      "reproducibility": {
+        "median": 0,
+        "mean": 0,
+        "min": 0,
+        "max": 0,
+        "institutions_in_top_50": 0
+      },
+      "functionality": {
+        "median": 0,
+        "mean": 0
+      },
+      "artifact_availability": {
+        "median": 0,
+        "mean": 0
+      }
+    },
+    "CA": {
+      "continent": "North America",
+      "num_institutions": 3,
+      "num_authors": 34,
+      "num_artifacts": 84,
+      "num_papers": 238,
+      "papers_with_artifacts": 136,
+      "reproducibility": {
+        "median": 36.1,
+        "mean": 50.6,
+        "min": 33.3,
+        "max": 82.2,
+        "institutions_in_top_50": 1
+      },
+      "functionality": {
+        "median": 52.8,
+        "mean": 58.3
+      },
+      "artifact_availability": {
+        "median": 42.4,
+        "mean": 57.5
+      }
+    },
+    "CH": {
+      "continent": "Europe",
+      "num_institutions": 8,
+      "num_authors": 47,
+      "num_artifacts": 155,
+      "num_papers": 449,
+      "papers_with_artifacts": 129,
+      "reproducibility": {
+        "median": 60.7,
+        "mean": 74.1,
+        "min": 52.2,
+        "max": 100.0,
+        "institutions_in_top_50": 5
+      },
+      "functionality": {
+        "median": 77.9,
+        "mean": 80.4
+      },
+      "artifact_availability": {
+        "median": 39.1,
+        "mean": 38.6
+      }
+    },
+    "CN": {
+      "continent": "Asia",
+      "num_institutions": 38,
+      "num_authors": 282,
+      "num_artifacts": 572,
+      "num_papers": 1730,
+      "papers_with_artifacts": 953,
+      "reproducibility": {
+        "median": 82.9,
+        "mean": 79.4,
+        "min": 25.0,
+        "max": 100.0,
+        "institutions_in_top_50": 31
+      },
+      "functionality": {
+        "median": 100.0,
+        "mean": 87.6
+      },
+      "artifact_availability": {
+        "median": 50.0,
+        "mean": 61.6
+      }
+    },
+    "DE": {
+      "continent": "Europe",
+      "num_institutions": 15,
+      "num_authors": 37,
+      "num_artifacts": 84,
+      "num_papers": 272,
+      "papers_with_artifacts": 137,
+      "reproducibility": {
+        "median": 80.0,
+        "mean": 71.1,
+        "min": 20.0,
+        "max": 100.0,
+        "institutions_in_top_50": 9
+      },
+      "functionality": {
+        "median": 90.0,
+        "mean": 76.8
+      },
+      "artifact_availability": {
+        "median": 34.5,
+        "mean": 58.2
+      }
+    },
+    "DK": {
+      "continent": "Europe",
+      "num_institutions": 2,
+      "num_authors": 3,
+      "num_artifacts": 4,
+      "num_papers": 4,
+      "papers_with_artifacts": 4,
+      "reproducibility": {
+        "median": 100.0,
+        "mean": 100.0,
+        "min": 100.0,
+        "max": 100.0,
+        "institutions_in_top_50": 1
+      },
+      "functionality": {
+        "median": 75.0,
+        "mean": 75.0
+      },
+      "artifact_availability": {
+        "median": 100.0,
+        "mean": 100.0
+      }
+    },
+    "ES": {
+      "continent": "Europe",
+      "num_institutions": 1,
+      "num_authors": 1,
+      "num_artifacts": 0,
+      "num_papers": 0,
+      "papers_with_artifacts": 0,
+      "reproducibility": {
+        "median": 0,
+        "mean": 0,
+        "min": 0,
+        "max": 0,
+        "institutions_in_top_50": 0
+      },
+      "functionality": {
+        "median": 0,
+        "mean": 0
+      },
+      "artifact_availability": {
+        "median": 0,
+        "mean": 0
+      }
+    },
+    "FR": {
+      "continent": "Europe",
+      "num_institutions": 12,
+      "num_authors": 15,
+      "num_artifacts": 22,
+      "num_papers": 74,
+      "papers_with_artifacts": 37,
+      "reproducibility": {
+        "median": 100.0,
+        "mean": 91.7,
+        "min": 50.0,
+        "max": 100.0,
+        "institutions_in_top_50": 9
+      },
+      "functionality": {
+        "median": 100.0,
+        "mean": 92.5
+      },
+      "artifact_availability": {
+        "median": 36.6,
+        "mean": 50.1
+      }
+    },
+    "GB": {
+      "continent": "Europe",
+      "num_institutions": 14,
+      "num_authors": 55,
+      "num_artifacts": 84,
+      "num_papers": 286,
+      "papers_with_artifacts": 135,
+      "reproducibility": {
+        "median": 46.4,
+        "mean": 53.3,
+        "min": 19.0,
+        "max": 100.0,
+        "institutions_in_top_50": 5
+      },
+      "functionality": {
+        "median": 65.5,
+        "mean": 67.9
+      },
+      "artifact_availability": {
+        "median": 36.6,
+        "mean": 55.2
+      }
+    },
+    "HK": {
+      "continent": "Asia",
+      "num_institutions": 10,
+      "num_authors": 86,
+      "num_artifacts": 122,
+      "num_papers": 362,
+      "papers_with_artifacts": 89,
+      "reproducibility": {
+        "median": 54.5,
+        "mean": 65.9,
+        "min": 38.5,
+        "max": 100.0,
+        "institutions_in_top_50": 5
+      },
+      "functionality": {
+        "median": 85.3,
+        "mean": 82.6
+      },
+      "artifact_availability": {
+        "median": 33.3,
+        "mean": 35.4
+      }
+    },
+    "IL": {
+      "continent": "Asia",
+      "num_institutions": 1,
+      "num_authors": 5,
+      "num_artifacts": 10,
+      "num_papers": 30,
+      "papers_with_artifacts": 9,
+      "reproducibility": {
+        "median": 80.0,
+        "mean": 80.0,
+        "min": 80.0,
+        "max": 80.0,
+        "institutions_in_top_50": 1
+      },
+      "functionality": {
+        "median": 90.0,
+        "mean": 90.0
+      },
+      "artifact_availability": {
+        "median": 33.3,
+        "mean": 33.3
+      }
+    },
+    "IN": {
+      "continent": "Asia",
+      "num_institutions": 10,
+      "num_authors": 23,
+      "num_artifacts": 21,
+      "num_papers": 44,
+      "papers_with_artifacts": 28,
+      "reproducibility": {
+        "median": 100.0,
+        "mean": 83.9,
+        "min": 50.0,
+        "max": 100.0,
+        "institutions_in_top_50": 9
+      },
+      "functionality": {
+        "median": 100.0,
+        "mean": 86.7
+      },
+      "artifact_availability": {
+        "median": 50.0,
+        "mean": 71.6
+      }
+    },
+    "JP": {
+      "continent": "Asia",
+      "num_institutions": 3,
+      "num_authors": 3,
+      "num_artifacts": 4,
+      "num_papers": 6,
+      "papers_with_artifacts": 5,
+      "reproducibility": {
+        "median": 100.0,
+        "mean": 100.0,
+        "min": 100.0,
+        "max": 100.0,
+        "institutions_in_top_50": 2
+      },
+      "functionality": {
+        "median": 100.0,
+        "mean": 100.0
+      },
+      "artifact_availability": {
+        "median": 100.0,
+        "mean": 83.3
+      }
+    },
+    "KR": {
+      "continent": "Asia",
+      "num_institutions": 6,
+      "num_authors": 31,
+      "num_artifacts": 68,
+      "num_papers": 273,
+      "papers_with_artifacts": 88,
+      "reproducibility": {
+        "median": 77.1,
+        "mean": 78.2,
+        "min": 54.5,
+        "max": 100.0,
+        "institutions_in_top_50": 6
+      },
+      "functionality": {
+        "median": 86.4,
+        "mean": 84.5
+      },
+      "artifact_availability": {
+        "median": 24.6,
+        "mean": 32.3
+      }
+    },
+    "MX": {
+      "continent": "North America",
+      "num_institutions": 1,
+      "num_authors": 1,
+      "num_artifacts": 1,
+      "num_papers": 4,
+      "papers_with_artifacts": 1,
+      "reproducibility": {
+        "median": 100.0,
+        "mean": 100.0,
+        "min": 100.0,
+        "max": 100.0,
+        "institutions_in_top_50": 1
+      },
+      "functionality": {
+        "median": 100.0,
+        "mean": 100.0
+      },
+      "artifact_availability": {
+        "median": 25.0,
+        "mean": 25.0
+      }
+    },
+    "NL": {
+      "continent": "Europe",
+      "num_institutions": 4,
+      "num_authors": 15,
+      "num_artifacts": 44,
+      "num_papers": 123,
+      "papers_with_artifacts": 71,
+      "reproducibility": {
+        "median": 58.1,
+        "mean": 52.5,
+        "min": 22.2,
+        "max": 71.4,
+        "institutions_in_top_50": 3
+      },
+      "functionality": {
+        "median": 76.8,
+        "mean": 69.5
+      },
+      "artifact_availability": {
+        "median": 47.9,
+        "mean": 58.0
+      }
+    },
+    "NO": {
+      "continent": "Europe",
+      "num_institutions": 1,
+      "num_authors": 1,
+      "num_artifacts": 0,
+      "num_papers": 0,
+      "papers_with_artifacts": 0,
+      "reproducibility": {
+        "median": 0,
+        "mean": 0,
+        "min": 0,
+        "max": 0,
+        "institutions_in_top_50": 0
+      },
+      "functionality": {
+        "median": 0,
+        "mean": 0
+      },
+      "artifact_availability": {
+        "median": 0,
+        "mean": 0
+      }
+    },
+    "PL": {
+      "continent": "Europe",
+      "num_institutions": 1,
+      "num_authors": 2,
+      "num_artifacts": 2,
+      "num_papers": 3,
+      "papers_with_artifacts": 2,
+      "reproducibility": {
+        "median": 100.0,
+        "mean": 100.0,
+        "min": 100.0,
+        "max": 100.0,
+        "institutions_in_top_50": 1
+      },
+      "functionality": {
+        "median": 100.0,
+        "mean": 100.0
+      },
+      "artifact_availability": {
+        "median": 66.7,
+        "mean": 66.7
+      }
+    },
+    "SE": {
+      "continent": "Europe",
+      "num_institutions": 5,
+      "num_authors": 8,
+      "num_artifacts": 10,
+      "num_papers": 36,
+      "papers_with_artifacts": 14,
+      "reproducibility": {
+        "median": 50.0,
+        "mean": 62.5,
+        "min": 50.0,
+        "max": 100.0,
+        "institutions_in_top_50": 4
+      },
+      "functionality": {
+        "median": 87.5,
+        "mean": 81.2
+      },
+      "artifact_availability": {
+        "median": 39.3,
+        "mean": 49.0
+      }
+    },
+    "SG": {
+      "continent": "Asia",
+      "num_institutions": 4,
+      "num_authors": 30,
+      "num_artifacts": 59,
+      "num_papers": 168,
+      "papers_with_artifacts": 59,
+      "reproducibility": {
+        "median": 51.9,
+        "mean": 58.1,
+        "min": 28.6,
+        "max": 100.0,
+        "institutions_in_top_50": 2
+      },
+      "functionality": {
+        "median": 69.0,
+        "mean": 73.1
+      },
+      "artifact_availability": {
+        "median": 30.0,
+        "mean": 35.2
+      }
+    },
+    "TW": {
+      "continent": "Asia",
+      "num_institutions": 3,
+      "num_authors": 5,
+      "num_artifacts": 11,
+      "num_papers": 20,
+      "papers_with_artifacts": 13,
+      "reproducibility": {
+        "median": 60.0,
+        "mean": 61.7,
+        "min": 25.0,
+        "max": 100.0,
+        "institutions_in_top_50": 2
+      },
+      "functionality": {
+        "median": 100.0,
+        "mean": 80.0
+      },
+      "artifact_availability": {
+        "median": 66.7,
+        "mean": 69.5
+      }
+    },
+    "US": {
+      "continent": "North America",
+      "num_institutions": 122,
+      "num_authors": 731,
+      "num_artifacts": 1311,
+      "num_papers": 5504,
+      "papers_with_artifacts": 2152,
+      "reproducibility": {
+        "median": 73.0,
+        "mean": 73.2,
+        "min": 25.0,
+        "max": 100.0,
+        "institutions_in_top_50": 84
+      },
+      "functionality": {
+        "median": 87.9,
+        "mean": 84.6
+      },
+      "artifact_availability": {
+        "median": 29.6,
+        "mean": 43.8
+      }
+    }
+  },
+  "by_continent": {
+    "Asia": {
+      "num_countries": 8,
+      "num_institutions": 75,
+      "num_authors": 465,
+      "num_artifacts": 867,
+      "num_papers": 2633,
+      "papers_with_artifacts": 1338,
+      "reproducibility": {
+        "median": 80.0,
+        "mean": 77.0,
+        "min": 25.0,
+        "max": 100.0,
+        "institutions_in_top_50": 58
+      },
+      "functionality": {
+        "median": 100.0,
+        "mean": 86.0
+      },
+      "artifact_availability": {
+        "median": 50.0,
+        "mean": 56.9
+      }
+    },
+    "Europe": {
+      "num_countries": 12,
+      "num_institutions": 65,
+      "num_authors": 186,
+      "num_artifacts": 409,
+      "num_papers": 1252,
+      "papers_with_artifacts": 578,
+      "reproducibility": {
+        "median": 73.2,
+        "mean": 70.5,
+        "min": 19.0,
+        "max": 100.0,
+        "institutions_in_top_50": 37
+      },
+      "functionality": {
+        "median": 79.3,
+        "mean": 78.1
+      },
+      "artifact_availability": {
+        "median": 37.8,
+        "mean": 54.7
+      }
+    },
+    "North America": {
+      "num_countries": 3,
+      "num_institutions": 126,
+      "num_authors": 766,
+      "num_artifacts": 1396,
+      "num_papers": 5746,
+      "papers_with_artifacts": 2265,
+      "reproducibility": {
+        "median": 73.0,
+        "mean": 72.8,
+        "min": 25.0,
+        "max": 100.0,
+        "institutions_in_top_50": 86
+      },
+      "functionality": {
+        "median": 87.9,
+        "mean": 84.0
+      },
+      "artifact_availability": {
+        "median": 30.0,
+        "mean": 44.0
+      }
+    },
+    "Oceania": {
+      "num_countries": 1,
+      "num_institutions": 11,
+      "num_authors": 27,
+      "num_artifacts": 57,
+      "num_papers": 129,
+      "papers_with_artifacts": 78,
+      "reproducibility": {
+        "median": 50.0,
+        "mean": 61.2,
+        "min": 20.0,
+        "max": 100.0,
+        "institutions_in_top_50": 5
+      },
+      "functionality": {
+        "median": 91.7,
+        "mean": 81.5
+      },
+      "artifact_availability": {
+        "median": 71.4,
+        "mean": 67.0
+      }
+    },
+    "South America": {
+      "num_countries": 1,
+      "num_institutions": 1,
+      "num_authors": 1,
+      "num_artifacts": 0,
+      "num_papers": 0,
+      "papers_with_artifacts": 0,
+      "reproducibility": {
+        "median": 0,
+        "mean": 0,
+        "min": 0,
+        "max": 0,
+        "institutions_in_top_50": 0
+      },
+      "functionality": {
+        "median": 0,
+        "mean": 0
+      },
+      "artifact_availability": {
+        "median": 0,
+        "mean": 0
+      }
+    }
+  }
+}

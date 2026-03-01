@@ -8,6 +8,8 @@ main:
         url: combined_rankings.html
       - title: "Institution Ranking"
         url: institution_rankings.html
+      - title: "Geographic Statistics"
+        url: geographic_statistics.html
       - title: "Author Profiles"
         url: author.html
   - title: "Systems"
