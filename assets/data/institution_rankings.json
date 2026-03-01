@@ -181,184 +181,6 @@
     }
   },
   {
-    "affiliation": "University of California",
-    "combined_score": 702,
-    "artifacts": 154,
-    "badges_functional": 118,
-    "badges_reproducible": 88,
-    "ae_memberships": 114,
-    "chair_count": 0,
-    "total_papers": 686,
-    "artifact_rate": 22.4,
-    "num_authors": 82,
-    "top_authors": [
-      {
-        "name": "Yuke Wang",
-        "combined_score": 30,
-        "artifacts": 4,
-        "ae_memberships": 6,
-        "total_papers": 10
-      },
-      {
-        "name": "Ion Stoica",
-        "combined_score": 24,
-        "artifacts": 9,
-        "ae_memberships": 0,
-        "total_papers": 89
-      },
-      {
-        "name": "Raluca Ada Popa",
-        "combined_score": 23,
-        "artifacts": 9,
-        "ae_memberships": 0,
-        "total_papers": 29
-      },
-      {
-        "name": "Jessy Ayala",
-        "combined_score": 22,
-        "artifacts": 2,
-        "ae_memberships": 6,
-        "total_papers": 2
-      },
-      {
-        "name": "Boyuan Feng",
-        "combined_score": 21,
-        "artifacts": 4,
-        "ae_memberships": 3,
-        "total_papers": 7
-      },
-      {
-        "name": "Jingyao Zhang",
-        "combined_score": 21,
-        "artifacts": 1,
-        "ae_memberships": 6,
-        "total_papers": 1
-      },
-      {
-        "name": "Xuesong Bai",
-        "combined_score": 20,
-        "artifacts": 1,
-        "ae_memberships": 6,
-        "total_papers": 2
-      },
-      {
-        "name": "Weikeng Chen",
-        "combined_score": 19,
-        "artifacts": 2,
-        "ae_memberships": 5,
-        "total_papers": 4
-      },
-      {
-        "name": "Haoran Ma",
-        "combined_score": 17,
-        "artifacts": 3,
-        "ae_memberships": 3,
-        "total_papers": 6
-      },
-      {
-        "name": "Shi Liu",
-        "combined_score": 17,
-        "artifacts": 3,
-        "ae_memberships": 3,
-        "total_papers": 6
-      },
-      {
-        "name": "Hieu Le 0003",
-        "combined_score": 16,
-        "artifacts": 3,
-        "ae_memberships": 3,
-        "total_papers": 3
-      },
-      {
-        "name": "Zubair Shafiq",
-        "combined_score": 15,
-        "artifacts": 8,
-        "ae_memberships": 0,
-        "total_papers": 9
-      },
-      {
-        "name": "Christoph Sendner",
-        "combined_score": 15,
-        "artifacts": 0,
-        "ae_memberships": 5,
-        "total_papers": 0
-      },
-      {
-        "name": "Dongjoo Seo",
-        "combined_score": 15,
-        "artifacts": 0,
-        "ae_memberships": 5,
-        "total_papers": 0
-      },
-      {
-        "name": "Christopher Kruegel",
-        "combined_score": 14,
-        "artifacts": 7,
-        "ae_memberships": 0,
-        "total_papers": 79
-      },
-      {
-        "name": "Giovanni Vigna",
-        "combined_score": 14,
-        "artifacts": 7,
-        "ae_memberships": 0,
-        "total_papers": 90
-      },
-      {
-        "name": "Gene Tsudik",
-        "combined_score": 13,
-        "artifacts": 7,
-        "ae_memberships": 0,
-        "total_papers": 25
-      },
-      {
-        "name": "Ismat Jarin",
-        "combined_score": 13,
-        "artifacts": 1,
-        "ae_memberships": 4,
-        "total_papers": 0
-      },
-      {
-        "name": "Haocheng Xu",
-        "combined_score": 12,
-        "artifacts": 0,
-        "ae_memberships": 4,
-        "total_papers": 0
-      },
-      {
-        "name": "Jiacen Xu",
-        "combined_score": 11,
-        "artifacts": 1,
-        "ae_memberships": 3,
-        "total_papers": 2
-      }
-    ],
-    "conferences": [
-      "ACSAC",
-      "ATC",
-      "CHES",
-      "EUROSYS",
-      "FAST",
-      "NDSS",
-      "OSDI",
-      "PETS",
-      "SC",
-      "SOSP",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2021": 22,
-      "2022": 31,
-      "2023": 28,
-      "2020": 20,
-      "2024": 56,
-      "2025": 52,
-      "2026": 10,
-      "2019": 1,
-      "2018": 1
-    }
-  },
-  {
     "affiliation": "Tsinghua University",
     "combined_score": 477,
     "artifacts": 149,
@@ -1565,6 +1387,179 @@
       "2021": 6,
       "2018": 1,
       "2026": 1
+    }
+  },
+  {
+    "affiliation": "University of California, Irvine",
+    "combined_score": 205,
+    "artifacts": 24,
+    "badges_functional": 14,
+    "badges_reproducible": 8,
+    "ae_memberships": 53,
+    "chair_count": 0,
+    "total_papers": 68,
+    "artifact_rate": 35.3,
+    "num_authors": 20,
+    "top_authors": [
+      {
+        "name": "Jessy Ayala",
+        "combined_score": 22,
+        "artifacts": 2,
+        "ae_memberships": 6,
+        "total_papers": 2
+      },
+      {
+        "name": "Xuesong Bai",
+        "combined_score": 20,
+        "artifacts": 1,
+        "ae_memberships": 6,
+        "total_papers": 2
+      },
+      {
+        "name": "Hieu Le 0003",
+        "combined_score": 16,
+        "artifacts": 3,
+        "ae_memberships": 3,
+        "total_papers": 3
+      },
+      {
+        "name": "Christoph Sendner",
+        "combined_score": 15,
+        "artifacts": 0,
+        "ae_memberships": 5,
+        "total_papers": 0
+      },
+      {
+        "name": "Dongjoo Seo",
+        "combined_score": 15,
+        "artifacts": 0,
+        "ae_memberships": 5,
+        "total_papers": 0
+      },
+      {
+        "name": "Gene Tsudik",
+        "combined_score": 13,
+        "artifacts": 7,
+        "ae_memberships": 0,
+        "total_papers": 25
+      },
+      {
+        "name": "Ismat Jarin",
+        "combined_score": 13,
+        "artifacts": 1,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Haocheng Xu",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Jiacen Xu",
+        "combined_score": 11,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 2
+      },
+      {
+        "name": "Qifan Zhang 0002",
+        "combined_score": 11,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 4
+      },
+      {
+        "name": "Hao Cui 0004",
+        "combined_score": 10,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Halima Bouzidi",
+        "combined_score": 7,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Luca Baldesi",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Mengwei Yang",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Steven Ngo",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Tu Le",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Yirui He",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Michael Franz",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 22
+      },
+      {
+        "name": "Mohammad Abdullah Al Faruque",
+        "combined_score": 3,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 4
+      },
+      {
+        "name": "Sangeetha Abdu Jyothi",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 4
+      }
+    ],
+    "conferences": [
+      "ACSAC",
+      "ATC",
+      "EUROSYS",
+      "FAST",
+      "NDSS",
+      "OSDI",
+      "PETS",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2025": 21,
+      "2023": 6,
+      "2024": 21,
+      "2026": 8,
+      "2020": 4,
+      "2022": 4,
+      "2019": 1
     }
   },
   {
@@ -4100,6 +4095,122 @@
     }
   },
   {
+    "affiliation": "University of California, Berkeley",
+    "combined_score": 118,
+    "artifacts": 32,
+    "badges_functional": 25,
+    "badges_reproducible": 22,
+    "ae_memberships": 13,
+    "chair_count": 0,
+    "total_papers": 186,
+    "artifact_rate": 17.2,
+    "num_authors": 12,
+    "top_authors": [
+      {
+        "name": "Ion Stoica",
+        "combined_score": 24,
+        "artifacts": 9,
+        "ae_memberships": 0,
+        "total_papers": 89
+      },
+      {
+        "name": "Raluca Ada Popa",
+        "combined_score": 23,
+        "artifacts": 9,
+        "ae_memberships": 0,
+        "total_papers": 29
+      },
+      {
+        "name": "Weikeng Chen",
+        "combined_score": 19,
+        "artifacts": 2,
+        "ae_memberships": 5,
+        "total_papers": 4
+      },
+      {
+        "name": "Boru Chen",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Christopher W. Fletcher",
+        "combined_score": 7,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 14
+      },
+      {
+        "name": "Dawn Song",
+        "combined_score": 6,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 35
+      },
+      {
+        "name": "Melissa Z. Pan",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Zhifei Li",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Ziming Mao",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Zhuohan Li 0001",
+        "combined_score": 5,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 5
+      },
+      {
+        "name": "Koushik Sen",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 5
+      },
+      {
+        "name": "Raluca A. Popa",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 4
+      }
+    ],
+    "conferences": [
+      "ATC",
+      "EUROSYS",
+      "FAST",
+      "OSDI",
+      "PETS",
+      "SOSP",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2020": 3,
+      "2021": 5,
+      "2022": 8,
+      "2023": 5,
+      "2024": 5,
+      "2025": 8,
+      "2026": 1
+    }
+  },
+  {
     "affiliation": "Nanyang Technological University",
     "combined_score": 114,
     "artifacts": 24,
@@ -4547,6 +4658,109 @@
       "2024": 8,
       "2020": 6,
       "2025": 7
+    }
+  },
+  {
+    "affiliation": "University of California, Santa Barbara",
+    "combined_score": 109,
+    "artifacts": 34,
+    "badges_functional": 22,
+    "badges_reproducible": 20,
+    "ae_memberships": 11,
+    "chair_count": 0,
+    "total_papers": 210,
+    "artifact_rate": 16.2,
+    "num_authors": 10,
+    "top_authors": [
+      {
+        "name": "Yuke Wang",
+        "combined_score": 30,
+        "artifacts": 4,
+        "ae_memberships": 6,
+        "total_papers": 10
+      },
+      {
+        "name": "Boyuan Feng",
+        "combined_score": 21,
+        "artifacts": 4,
+        "ae_memberships": 3,
+        "total_papers": 7
+      },
+      {
+        "name": "Christopher Kruegel",
+        "combined_score": 14,
+        "artifacts": 7,
+        "ae_memberships": 0,
+        "total_papers": 79
+      },
+      {
+        "name": "Giovanni Vigna",
+        "combined_score": 14,
+        "artifacts": 7,
+        "ae_memberships": 0,
+        "total_papers": 90
+      },
+      {
+        "name": "Andrea Continella",
+        "combined_score": 10,
+        "artifacts": 2,
+        "ae_memberships": 2,
+        "total_papers": 8
+      },
+      {
+        "name": "etin Kaya Ko",
+        "combined_score": 6,
+        "artifacts": 4,
+        "ae_memberships": 0,
+        "total_papers": 8
+      },
+      {
+        "name": "Amr El Abbadi",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 4
+      },
+      {
+        "name": "Divyakant Agrawal",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 4
+      },
+      {
+        "name": "Liu Liu 0017",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 0
+      },
+      {
+        "name": "Zheng Qu 0002",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 0
+      }
+    ],
+    "conferences": [
+      "ACSAC",
+      "ATC",
+      "CHES",
+      "EUROSYS",
+      "OSDI",
+      "PETS",
+      "SC",
+      "SOSP",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2021": 7,
+      "2022": 9,
+      "2023": 2,
+      "2020": 4,
+      "2024": 5,
+      "2025": 4
     }
   },
   {
@@ -5566,6 +5780,121 @@
       "2021": 1,
       "2024": 7,
       "2025": 4
+    }
+  },
+  {
+    "affiliation": "University of California, Los Angeles",
+    "combined_score": 95,
+    "artifacts": 21,
+    "badges_functional": 20,
+    "badges_reproducible": 15,
+    "ae_memberships": 13,
+    "chair_count": 0,
+    "total_papers": 46,
+    "artifact_rate": 45.7,
+    "num_authors": 12,
+    "top_authors": [
+      {
+        "name": "Haoran Ma",
+        "combined_score": 17,
+        "artifacts": 3,
+        "ae_memberships": 3,
+        "total_papers": 6
+      },
+      {
+        "name": "Shi Liu",
+        "combined_score": 17,
+        "artifacts": 3,
+        "ae_memberships": 3,
+        "total_papers": 6
+      },
+      {
+        "name": "Ying Li 0104",
+        "combined_score": 11,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      },
+      {
+        "name": "Shan Yu",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Guoqing Harry Xu",
+        "combined_score": 8,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 12
+      },
+      {
+        "name": "Miryung Kim",
+        "combined_score": 8,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 7
+      },
+      {
+        "name": "Cody Hao Yu",
+        "combined_score": 6,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Linghao Song",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Salma Elmalaki 0001",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Harry Xu 0001",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 6
+      },
+      {
+        "name": "Nader Sehatbakhsh",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Rafail Ostrovsky",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 2
+      }
+    ],
+    "conferences": [
+      "ATC",
+      "EUROSYS",
+      "OSDI",
+      "PETS",
+      "SOSP",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2020": 5,
+      "2022": 3,
+      "2024": 8,
+      "2023": 6,
+      "2025": 4,
+      "2026": 1,
+      "2021": 4
     }
   },
   {
@@ -8427,6 +8756,127 @@
     }
   },
   {
+    "affiliation": "University of California, San Diego",
+    "combined_score": 66,
+    "artifacts": 20,
+    "badges_functional": 20,
+    "badges_reproducible": 14,
+    "ae_memberships": 4,
+    "chair_count": 0,
+    "total_papers": 103,
+    "artifact_rate": 19.4,
+    "num_authors": 13,
+    "top_authors": [
+      {
+        "name": "Suyash Mahar",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Zaifeng Pan",
+        "combined_score": 9,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 4
+      },
+      {
+        "name": "Dean M. Tullsen",
+        "combined_score": 8,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 7
+      },
+      {
+        "name": "Amy Ousterhout",
+        "combined_score": 6,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 9
+      },
+      {
+        "name": "Yiying Zhang 0005",
+        "combined_score": 6,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 12
+      },
+      {
+        "name": "Steven Swanson",
+        "combined_score": 5,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 23
+      },
+      {
+        "name": "Bingyu Shen 0002",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 4
+      },
+      {
+        "name": "Yuanyuan Zhou 0001",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 34
+      },
+      {
+        "name": "Alexander Breuer",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Fan Chung",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Nadia Polikarpova",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Ranjit Jhala",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 5
+      },
+      {
+        "name": "Supun Nakandala",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      }
+    ],
+    "conferences": [
+      "ATC",
+      "EUROSYS",
+      "OSDI",
+      "SC",
+      "SOSP",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2024": 6,
+      "2022": 3,
+      "2025": 3,
+      "2023": 6,
+      "2020": 2,
+      "2021": 3
+    }
+  },
+  {
     "affiliation": "Graz University of Technology",
     "combined_score": 65,
     "artifacts": 24,
@@ -10397,6 +10847,80 @@
     }
   },
   {
+    "affiliation": "University of California, Riverside",
+    "combined_score": 51,
+    "artifacts": 9,
+    "badges_functional": 6,
+    "badges_reproducible": 3,
+    "ae_memberships": 11,
+    "chair_count": 0,
+    "total_papers": 46,
+    "artifact_rate": 19.6,
+    "num_authors": 6,
+    "top_authors": [
+      {
+        "name": "Jingyao Zhang",
+        "combined_score": 21,
+        "artifacts": 1,
+        "ae_memberships": 6,
+        "total_papers": 1
+      },
+      {
+        "name": "Yuxin Qiu",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Vivek Jain",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 3
+      },
+      {
+        "name": "Heng Yin 0001",
+        "combined_score": 7,
+        "artifacts": 4,
+        "ae_memberships": 0,
+        "total_papers": 29
+      },
+      {
+        "name": "Nael B. Abu-Ghazaleh",
+        "combined_score": 3,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 13
+      },
+      {
+        "name": "Hung-Wei Tseng 0001",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 0
+      }
+    ],
+    "conferences": [
+      "ACSAC",
+      "ATC",
+      "EUROSYS",
+      "NDSS",
+      "OSDI",
+      "SC",
+      "SOSP",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2025": 3,
+      "2023": 1,
+      "2024": 8,
+      "2018": 1,
+      "2022": 3,
+      "2021": 1
+    }
+  },
+  {
     "affiliation": "TU Darmstadt",
     "combined_score": 51,
     "artifacts": 25,
@@ -11870,6 +12394,65 @@
       "2021": 2,
       "2022": 1,
       "2023": 1
+    }
+  },
+  {
+    "affiliation": "University of California, Davis",
+    "combined_score": 37,
+    "artifacts": 11,
+    "badges_functional": 8,
+    "badges_reproducible": 3,
+    "ae_memberships": 5,
+    "chair_count": 0,
+    "total_papers": 14,
+    "artifact_rate": 78.6,
+    "num_authors": 4,
+    "top_authors": [
+      {
+        "name": "Zubair Shafiq",
+        "combined_score": 15,
+        "artifacts": 8,
+        "ae_memberships": 0,
+        "total_papers": 9
+      },
+      {
+        "name": "Yash Vekaria",
+        "combined_score": 11,
+        "artifacts": 1,
+        "ae_memberships": 3,
+        "total_papers": 1
+      },
+      {
+        "name": "Shaokang Xie",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Mohammad Sadoghi",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 3
+      }
+    ],
+    "conferences": [
+      "ACSAC",
+      "ATC",
+      "EUROSYS",
+      "NDSS",
+      "OSDI",
+      "PETS",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2020": 1,
+      "2021": 1,
+      "2022": 1,
+      "2023": 2,
+      "2024": 3,
+      "2025": 4
     }
   },
   {
@@ -18914,6 +19497,50 @@
       "2025": 2,
       "2023": 1,
       "2024": 2
+    }
+  },
+  {
+    "affiliation": "University of California, Merced",
+    "combined_score": 15,
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 4,
+    "chair_count": 0,
+    "total_papers": 6,
+    "artifact_rate": 16.7,
+    "num_authors": 3,
+    "top_authors": [
+      {
+        "name": "Yuan Feng",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Yuke Li",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Dong Li 0001",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 6
+      }
+    ],
+    "conferences": [
+      "ATC",
+      "EUROSYS",
+      "OSDI"
+    ],
+    "years": {
+      "2025": 4,
+      "2021": 1
     }
   },
   {
@@ -29949,6 +30576,33 @@
     }
   },
   {
+    "affiliation": "University of California, Santa Cruz",
+    "combined_score": 3,
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 6,
+    "artifact_rate": 16.7,
+    "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Andrew Quinn 0001",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 6
+      }
+    ],
+    "conferences": [
+      "OSDI"
+    ],
+    "years": {
+      "2020": 1
+    }
+  },
+  {
     "affiliation": "Massachusetts Institute of Technology (MIT)",
     "combined_score": 3,
     "artifacts": 1,
@@ -30972,6 +31626,33 @@
     ],
     "years": {
       "2022": 1
+    }
+  },
+  {
+    "affiliation": "University of California, Computer Science Department",
+    "combined_score": 3,
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "top_authors": [
+      {
+        "name": "Jie Wang 0022",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      }
+    ],
+    "conferences": [
+      "OSDI"
+    ],
+    "years": {
+      "2025": 1
     }
   },
   {
