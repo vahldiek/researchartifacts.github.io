@@ -8,6 +8,8 @@
     page.security_data_url     — path to the security JSON file
 {% endcomment %}
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.0.0/css/flag-icons.min.css">
+
 <div id="institution-controls" style="margin-bottom:6px; display:none; font-size:0.9em;">
   <label style="font-weight:bold; margin-right:4px; white-space:nowrap;">Area:</label>
   <select id="areaFilter" style="padding:2px 6px; font-size:0.95em;">
@@ -67,13 +69,10 @@
     {label:'Co',               key:'num_conferences',   type:'num',   tip:'Distinct conferences'}
   ];
 
-  // Country code to flag emoji conversion
-  function countryCodeToFlag(code) {
+  // Country code to flag HTML (using flag-icons CSS library)
+  function countryCodeToFlagHtml(code) {
     if (!code || code.length !== 2) return '';
-    var upper = code.toUpperCase();
-    var first = String.fromCodePoint(0x1F1E6 + upper.charCodeAt(0) - 65);
-    var second = String.fromCodePoint(0x1F1E6 + upper.charCodeAt(1) - 65);
-    return first + second;
+    return '<span class="fi fi-' + code.toLowerCase() + '" title="' + code + '" style="margin-right:4px;"></span>';
   }
 
   // Country name to code mapping (comprehensive)
@@ -262,7 +261,7 @@
 
   function getFlagForInstitution(name) {
     var code = getCountryCodeFromName(name);
-    return code ? countryCodeToFlag(code) : '';
+    return code ? countryCodeToFlagHtml(code) : '';
   }
 
   function render() {
@@ -288,7 +287,7 @@
       
       var aff = (inst.affiliation || 'Unknown').replace(/^_/, '');
       var flag = getFlagForInstitution(aff);
-      cells.push('<td>' + (flag ? '<span aria-hidden="true">' + flag + '</span> ' : '') + escHtml(aff) + '</td>');
+      cells.push('<td>' + (flag || '') + escHtml(aff) + '</td>');
       cells.push('<td><strong>' + inst.combined_score + '</strong></td>');
       cells.push('<td>' + (inst.num_authors || '') + '</td>');
       cells.push('<td>' + (inst.artifacts || '') + '</td>');
@@ -521,4 +520,6 @@
 .i-sorted-desc::after { content: '\2193'; opacity: 1; }
 .expand-btn { display: inline-block; font-size: 0.8em; color: #666; }
 .expand-btn:hover { color: #000; }
+/* Flag icons styling */
+.fi { width: 1em; height: 1em; display: inline-block; margin-right: 4px; vertical-align: -0.125em; }
 </style>
