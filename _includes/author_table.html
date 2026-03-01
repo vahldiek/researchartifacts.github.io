@@ -5,6 +5,10 @@
     page.author_data_url  — path to the JSON file (e.g., /assets/data/systems_authors.json)
 {% endcomment %}
 
+<div id="author-legend" style="margin:0 0 6px 0; display:none; font-size:0.85em; color:#555;">
+  Legend: #=Rank, R=Researcher, A=Affiliation, S=Score, T=Artifacts, P=Papers, A%=Art. Rate, Re%=Repro. Rate, F%=Func. Rate, Y=Last 5y
+</div>
+
 <div id="author-controls" class="at-controls" style="display:none;">
   <div class="at-controls-row">
     <button id="prevBtn" class="at-btn" disabled>&laquo; Prev</button>
@@ -45,16 +49,16 @@
 
   // Column definitions (index, label, key, type)
   var fixedCols = [
-    {label:'Rank',              key:'rank',            type:'num'},
-    {label:'Author',            key:'name',            type:'alpha'},
-    {label:'Affiliation',       key:'affiliation',     type:'alpha'},
-    {label:'Score',             key:'artifact_score',  type:'num',   tip:'Weighted score: Reproduced×3 + Functional×2 + Available×1'},
-    {label:'Artifacts',         key:'total',           type:'num'},
-    {label:'Papers',            key:'total_papers',    type:'num',   tip:'Total papers at tracked conferences'},
-    {label:'Art.&nbsp;Rate',    key:'artifact_rate',   type:'num',   tip:'Artifact rate: percentage of papers with an evaluated artifact'},
-    {label:'Repro.&nbsp;Rate',  key:'repro_rate',      type:'num',   tip:'Reproducibility rate: percentage of artifacts with Reproduced badge'},
-    {label:'Func.&nbsp;Rate',   key:'functional_rate', type:'num',   tip:'Functional rate: percentage of artifacts with Functional badge'},
-    {label:'Last&nbsp;5y',      key:'last_5_years',    type:'num',   tip:'Years active in the last 5 years'}
+    {label:'#',                 key:'rank',            type:'num',   tip:'Rank'},
+    {label:'R',                 key:'name',            type:'alpha', tip:'Researcher/Author'},
+    {label:'A',                 key:'affiliation',     type:'alpha', tip:'Affiliation'},
+    {label:'S',                 key:'artifact_score',  type:'num',   tip:'Score: Reproduced×3 + Functional×2 + Available×1'},
+    {label:'T',                 key:'total',           type:'num',   tip:'Total artifacts'},
+    {label:'P',                 key:'total_papers',    type:'num',   tip:'Total papers at tracked conferences'},
+    {label:'A%',                key:'artifact_rate',   type:'num',   tip:'Artifact rate: % of papers with evaluated artifact'},
+    {label:'Re%',               key:'repro_rate',      type:'num',   tip:'Reproducibility rate: % of artifacts Reproduced'},
+    {label:'F%',                key:'functional_rate', type:'num',   tip:'Functional rate: % of artifacts Functional'},
+    {label:'Y',                 key:'last_5_years',    type:'num',   tip:'Years active in the last 5 years'}
   ];
 
   function render() {
@@ -188,6 +192,7 @@
     render();
 
     document.getElementById('authorLoading').style.display = 'none';
+    document.getElementById('author-legend').style.display = '';
     document.getElementById('authorTable').style.display = '';
     document.getElementById('author-controls').style.display = '';
     document.getElementById('author-controls-bottom').style.display = '';
