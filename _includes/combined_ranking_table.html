@@ -8,15 +8,15 @@
     page.security_data_url  — path to the security JSON file
 {% endcomment %}
 
-<div id="combined-controls" style="margin-bottom:16px; display:none;">
-  <label style="font-weight:bold; margin-right:8px;">Area:</label>
-  <select id="areaFilter" style="padding:4px 8px; font-size:1em; margin-right:16px;">
+<div id="combined-controls" style="margin-bottom:8px; display:none; font-size:0.9em;">
+  <label style="font-weight:bold; margin-right:4px; white-space:nowrap;">Area:</label>
+  <select id="areaFilter" style="padding:2px 6px; font-size:0.95em; margin-right:12px;">
     <option value="all" selected>All Conferences</option>
     <option value="systems">Systems Only</option>
     <option value="security">Security Only</option>
   </select>
-  <label>Filter:
-    <select id="cFilterSelect">
+  <label style="white-space:nowrap;">Filter:
+    <select id="cFilterSelect" style="padding:2px 6px; font-size:0.95em;">
       <option value="all" selected>All</option>
       <option value="both">Both Artifacts &amp; AE</option>
       <option value="artifacts_only">Artifacts Only</option>
@@ -25,18 +25,18 @@
   </label>
 </div>
 
-<div id="combinedLoading"><em>Loading combined ranking data…</em></div>
+<div id="combinedLoading" style="font-size:0.9em;"><em>Loading combined ranking data…</em></div>
 
 <table id="combinedTable" style="display:none;">
 <thead><tr id="combinedHead"></tr></thead>
 <tbody id="combinedBody"></tbody>
 </table>
 
-<div id="combined-controls-bottom" style="margin-top:8px; display:none;">
-  <button id="cPrevBtnB">&laquo; Prev</button>
-  <span id="cPageInfoB" style="margin:0 8px;"></span>
-  <button id="cNextBtnB">Next &raquo;</button>
-  <span id="cTotalInfo" style="margin-left:16px; color:#666;"></span>
+<div id="combined-controls-bottom" style="margin-top:4px; display:none; font-size:0.9em;">
+  <button id="cPrevBtnB" style="padding:2px 6px; font-size:0.9em;">&laquo; Prev</button>
+  <span id="cPageInfoB" style="margin:0 6px;"></span>
+  <button id="cNextBtnB" style="padding:2px 6px; font-size:0.9em;">Next &raquo;</button>
+  <span id="cTotalInfo" style="margin-left:12px; color:#666;"></span>
 </div>
 
 <script>
@@ -279,12 +279,14 @@
 </script>
 
 <style>
-#combinedTable { font-size: 0.82em; white-space: nowrap; border-collapse: collapse; width: 100%; }
-#combinedTable th, #combinedTable td { padding: 3px 8px; border: 1px solid #ddd; }
+#combinedTable { font-size: 0.78em; border-collapse: collapse; width: 100%; }
+#combinedTable th, #combinedTable td { padding: 2px 4px; border: 1px solid #ddd; }
+#combinedTable th:nth-child(3), #combinedTable td:nth-child(3) { max-width: 100px; word-wrap: break-word; white-space: normal; }
+#combinedTable td { white-space: nowrap; }
 #combinedTable th { background-color: #f2f2f2; position: sticky; top: 0; z-index: 1; }
 #combinedTable tr:nth-child(even) { background-color: #f9f9f9; }
 #combinedTable tr:hover { background-color: #e8f4f8; }
-.c-sortable::after { content: '\2195'; opacity: 0.3; margin-left: 3px; font-size: 0.8em; }
+.c-sortable::after { content: '\2195'; opacity: 0.3; margin-left: 2px; font-size: 0.75em; }
 .c-sorted-asc::after { content: '\2191'; opacity: 1; }
 .c-sorted-desc::after { content: '\2193'; opacity: 1; }
 </style>
