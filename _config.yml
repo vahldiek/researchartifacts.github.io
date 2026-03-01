@@ -15,12 +15,6 @@ name: Research Artifacts
 logo: "/assets/images/logo.svg"
 masthead_title: "Research Artifacts"
 
-footer:
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/researchartifacts"
-
 # Make stuff in _data accessible
 # Collections for organizing content
 collections:
