@@ -23,7 +23,7 @@
 </div>
 
 <div id="institution-legend" style="margin:0 0 6px 0; display:none; font-size:0.85em; color:#555;">
-  Legend: #=Rank, I=Institution, C=Combined, R=Researchers, Ar=Artifacts, AR%=Art. Rate, RR%=Repro. Rate, AE=AE Service, Ch=Chaired, P=Papers
+  Legend: #=Rank, I=Institution, C=Combined, R=Researchers, Ar=Artifacts, P=Papers, AR%=Artifact Rate, RR%=Reproducibility Rate, AE=AE Service, Ch=Chaired
 </div>
 
 <div id="institutionLoading"><em>Loading institution ranking data…</em></div>
@@ -66,11 +66,11 @@
     {label:'C',                key:'combined_score',    type:'num',   tip:'Combined score'},
     {label:'R',                key:'num_authors',       type:'num',   tip:'Researchers'},
     {label:'Ar',               key:'artifacts',         type:'num',   tip:'Total artifacts'},
+    {label:'P',                key:'total_papers',      type:'num',   tip:'Total papers'},
     {label:'AR%',              key:'artifact_rate',     type:'num',   tip:'Artifact rate: % papers with artifact'},
     {label:'RR%',              key:'repro_rate',        type:'num',   tip:'Reproducibility rate: % artifacts Reproduced'},
     {label:'AE',               key:'ae_memberships',    type:'num',   tip:'AE memberships'},
-    {label:'Ch',               key:'chair_count',       type:'num',   tip:'Times chaired (★)'},
-    {label:'P',                key:'total_papers',      type:'num',   tip:'Total papers'}
+    {label:'Ch',               key:'chair_count',       type:'num',   tip:'Times chaired (★)'}
   ];
 
   // Country code to flag HTML (using flag-icons CSS library)
@@ -318,12 +318,20 @@
       cells.push('<td><strong>' + inst.combined_score + '</strong></td>');
       cells.push('<td>' + (inst.num_authors || '') + '</td>');
       cells.push('<td>' + (inst.artifacts || '') + '</td>');
-      cells.push('<td>' + (inst.ae_memberships || '') + '</td>');
-      var chairLabel = inst.chair_count > 0 ? inst.chair_count + ' \u2605' : '';
-      cells.push('<td>' + chairLabel + '</td>');
       cells.push('<td>' + (inst.total_papers || '') + '</td>');
       cells.push('<td>' + (inst.total_papers > 0 ? inst.artifact_rate + '%' : '') + '</td>');
-      cells.push('<td>' + (inst.conferences ? inst.conferences.length : '') + '</td>');
+      // Calculate repro rate from badges
+      var reproRate = 0;
+      if (inst.badges_functional > 0 || inst.badges_reproducible > 0) {
+        var total_badges = (inst.badges_functional || 0) + (inst.badges_reproducible || 0);
+        if (total_badges > 0) {
+          reproRate = Math.round((inst.badges_reproducible / total_badges) * 100);
+        }
+      }
+      cells.push('<td>' + (reproRate > 0 ? reproRate : '') + '</td>');
+      cells.push('<td>' + (inst.ae_memberships || '') + '</td>');
+      var chairLabel = inst.chair_count > 0 ? inst.chair_count + ' ★' : '';
+      cells.push('<td>' + chairLabel + '</td>');
       for (var j = 0; j < yearColumns.length; j++) {
         var yr = yearColumns[j];
         var cnt = 0;

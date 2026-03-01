@@ -18,7 +18,7 @@
 </div>
 
 <div id="combined-legend" style="margin:0 0 6px 0; display:none; font-size:0.85em; color:#555;">
-  Legend: #=Rank, R=Researcher, A=Affiliation, C=Combined Score, Ar=Artifacts, AR%=Artifact Rate, RR%=Repro Rate, AE=AE Service, Ch=Chaired, P=Papers
+  Legend: #=Rank, R=Researcher, A=Affiliation, C=Combined Score, Ar=Artifacts, P=Papers, AR%=Artifact Rate, RR%=Repro Rate, AE=AE Service, Ch=Chaired
 </div>
 
 <div id="combinedLoading" style="font-size:0.9em;"><em>Loading combined ranking data…</em></div>
@@ -60,11 +60,11 @@
     {label:'A',                key:'affiliation',       type:'alpha', tip:'Affiliation'},
     {label:'C',                key:'combined_score',    type:'num',   tip:'Combined score'},
     {label:'Ar',               key:'artifacts',         type:'num',   tip:'Total artifacts'},
+    {label:'P',                key:'total_papers',      type:'num',   tip:'Total papers'},
     {label:'AR%',              key:'artifact_rate',     type:'num',   tip:'Artifact rate: % papers with artifact'},
     {label:'RR%',              key:'repro_rate',        type:'num',   tip:'Reproducibility rate: % artifacts Reproduced'},
     {label:'AE',               key:'ae_memberships',    type:'num',   tip:'AE memberships'},
-    {label:'Ch',               key:'chair_count',       type:'num',   tip:'Times chaired (★)'},
-    {label:'P',                key:'total_papers',      type:'num',   tip:'Total papers'}
+    {label:'Ch',               key:'chair_count',       type:'num',   tip:'Times chaired (★)'}
   ];
 
   function render() {
@@ -86,12 +86,12 @@
       cells.push('<td>' + escHtml(aff) + '</td>');
       cells.push('<td><strong>' + c.combined_score + '</strong></td>');
       cells.push('<td>' + (c.artifacts || '') + '</td>');
+      cells.push('<td>' + (c.total_papers || '') + '</td>');
       cells.push('<td>' + (c.total_papers > 0 ? c.artifact_rate + '%' : '') + '</td>');
       cells.push('<td>' + (c.repro_rate || '') + '</td>');
       cells.push('<td>' + (c.ae_memberships || '') + '</td>');
-      var chairLabel = c.chair_count > 0 ? c.chair_count + ' \u2605' : '';
+      var chairLabel = c.chair_count > 0 ? c.chair_count + ' ★' : '';
       cells.push('<td>' + chairLabel + '</td>');
-      cells.push('<td>' + (c.total_papers || '') + '</td>');
       for (var j = 0; j < yearColumns.length; j++) {
         var yr = yearColumns[j];
         var cnt = 0;
