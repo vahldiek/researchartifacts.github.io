@@ -6936,6 +6936,75 @@
     }
   },
   {
+    "affiliation": "Vrije Universiteit Amsterdam",
+    "combined_score": 98,
+    "artifacts": 33,
+    "badges_functional": 27,
+    "badges_reproducible": 23,
+    "ae_memberships": 3,
+    "chair_count": 3,
+    "total_papers": 114,
+    "artifact_rate": 28.9,
+    "num_authors": 5,
+    "top_authors": [
+      {
+        "name": "Cristiano Giuffrida",
+        "affiliation": "Vrije Universiteit Amsterdam, The Netherlands",
+        "combined_score": 51,
+        "artifacts": 14,
+        "ae_memberships": 3,
+        "total_papers": 47
+      },
+      {
+        "name": "Herbert Bos",
+        "affiliation": "Vrije Universiteit Amsterdam, The Netherlands",
+        "combined_score": 30,
+        "artifacts": 12,
+        "ae_memberships": 0,
+        "total_papers": 56
+      },
+      {
+        "name": "Erik van der Kouwe",
+        "affiliation": "Vrije Universiteit Amsterdam, The Netherlands",
+        "combined_score": 9,
+        "artifacts": 4,
+        "ae_memberships": 0,
+        "total_papers": 7
+      },
+      {
+        "name": "Klaus von Gleissenthall",
+        "affiliation": "Vrije Universiteit Amsterdam, The Netherlands",
+        "combined_score": 5,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 3
+      },
+      {
+        "name": "Tiziano De Matteis",
+        "affiliation": "Vrije Universiteit Amsterdam, The Netherlands",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      }
+    ],
+    "conferences": [
+      "ACSAC",
+      "EUROSYS",
+      "SC",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2018": 3,
+      "2020": 2,
+      "2022": 3,
+      "2023": 4,
+      "2024": 2,
+      "2025": 3,
+      "2021": 2
+    }
+  },
+  {
     "affiliation": "University of Illinois at Urbana-Champaign",
     "combined_score": 98,
     "artifacts": 34,
@@ -7673,58 +7742,6 @@
       "2024": 7,
       "2026": 2,
       "2022": 1
-    }
-  },
-  {
-    "affiliation": "Vrije Universiteit Amsterdam",
-    "combined_score": 86,
-    "artifacts": 28,
-    "badges_functional": 23,
-    "badges_reproducible": 20,
-    "ae_memberships": 3,
-    "chair_count": 3,
-    "total_papers": 106,
-    "artifact_rate": 26.4,
-    "num_authors": 3,
-    "top_authors": [
-      {
-        "name": "Cristiano Giuffrida",
-        "affiliation": "Vrije Universiteit Amsterdam, The Netherlands",
-        "combined_score": 51,
-        "artifacts": 14,
-        "ae_memberships": 3,
-        "total_papers": 47
-      },
-      {
-        "name": "Herbert Bos",
-        "affiliation": "Vrije Universiteit Amsterdam, The Netherlands",
-        "combined_score": 30,
-        "artifacts": 12,
-        "ae_memberships": 0,
-        "total_papers": 56
-      },
-      {
-        "name": "Klaus von Gleissenthall",
-        "affiliation": "Vrije Universiteit Amsterdam, The Netherlands",
-        "combined_score": 5,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 3
-      }
-    ],
-    "conferences": [
-      "ACSAC",
-      "EUROSYS",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2018": 2,
-      "2020": 2,
-      "2022": 2,
-      "2023": 3,
-      "2024": 2,
-      "2025": 3,
-      "2021": 1
     }
   },
   {
@@ -21932,47 +21949,6 @@
       "2022": 1,
       "2023": 1,
       "2025": 2
-    }
-  },
-  {
-    "affiliation": "VU Amsterdam",
-    "combined_score": 12,
-    "artifacts": 5,
-    "badges_functional": 4,
-    "badges_reproducible": 3,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 8,
-    "artifact_rate": 62.5,
-    "num_authors": 2,
-    "top_authors": [
-      {
-        "name": "Erik van der Kouwe",
-        "affiliation": "VU Amsterdam",
-        "combined_score": 9,
-        "artifacts": 4,
-        "ae_memberships": 0,
-        "total_papers": 7
-      },
-      {
-        "name": "Tiziano De Matteis",
-        "affiliation": "VU Amsterdam",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "ACSAC",
-      "SC",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2018": 1,
-      "2022": 1,
-      "2023": 1,
-      "2021": 1
     }
   },
   {
