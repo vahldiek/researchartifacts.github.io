@@ -2,7 +2,7 @@
 title: "Research Artifacts Statistics"
 ---
 
-This project analyzes artifact evaluation outcomes across major [systems]({{ '/systems/' | relative_url }}) and [security]({{ '/security/' | relative_url }}) conferences. We aggregate data published by [sysartifacts](https://sysartifacts.github.io) and [secartifacts](https://secartifacts.github.io) on which papers have evaluated artifacts, what badges they received, who contributed them, and how popular the resulting repositories are. The goal is to encourage reproducibility and recognize the effort authors invest in making their research artifacts publicly available.
+**Research Artifacts & Artifact Evaluation (AE)** drive reproducibility and scientific impact. This project tracks and analyzes artifact evaluation outcomes across major [systems]({{ '/systems/' | relative_url }}) and [security]({{ '/security/' | relative_url }}) conferences, recognizing the contributions of both artifact authors and artifact evaluation committees. We aggregate comprehensive data on artifact evaluation badges, contributor achievements, and repository engagement to promote reproducible research and celebrate the researchers advancing this critical work.
 
 {% if site.data.summary %}
 
@@ -31,14 +31,24 @@ This project analyzes artifact evaluation outcomes across major [systems]({{ '/s
 
 Each cell shows **total (available, functional, reproduced)**.
 
-## Top 10 Most Prolific Artifact (Evaluation) Contributors
+## Top Contributors: Combined Ranking
 
-Ranked by combined score (artifacts published + AE committee memberships). See the full [combined rankings]({{ '/combined_rankings.html' | relative_url }}) for more.
+Researchers contribute through artifact publication and AE committee service. The [combined ranking]({{ '/combined_rankings.html' | relative_url }}) merges both contributions into a unified score recognizing dual impact. Below are the top 10 most prolific contributors:
 
 <table id="top10Table">
-<thead><tr><th>#</th><th>Name</th><th>Affiliation</th><th>Artifacts</th><th>AE&nbsp;Memberships</th><th>AE&nbsp;Chair</th><th>Score</th><th>Conferences</th></tr></thead>
-<tbody><tr><td colspan="8"><em>Loading…</em></td></tr></tbody>
+<thead><tr><th>#</th><th>Name</th><th>Affiliation</th><th>Ar</th><th>AE</th><th>Ch</th><th>Score</th></tr></thead>
+<tbody><tr><td colspan="7"><em>Loading…</em></td></tr></tbody>
 </table>
+
+## Statistics & Analysis
+
+Explore detailed insights across institutions, authors, and conferences:
+
+- **[Combined Rankings]({{ '/combined_rankings.html' | relative_url }})** — Researchers ranked by artifact contributions + AE committee work
+- **[Institution Rankings]({{ '/institution_rankings.html' | relative_url }})** — Institutions ranked by artifact contributions and author engagement
+- **[Author Rankings]({{ '/authors.html' | relative_url }})** — Individual authors ranked by artifact evaluation impact
+- **[Geographic Statistics]({{ '/geographic_statistics.html' | relative_url }})** — Artifact evaluation trends by country and continent
+- **[Repository Statistics]({{ '/repo_stats.html' | relative_url }})** — Most popular artifact repositories by stars, forks, and citations
 
 <script>
 (function(){
@@ -52,7 +62,6 @@ Ranked by combined score (artifacts published + AE committee memberships). See t
       top.forEach(function(e, i){
         var name = (e.name || '').replace(/\t/g, ' ');
         var aff  = (e.affiliation || '').replace(/^_/, '');
-        var confs = (e.conferences || []).join(', ');
         var tr = document.createElement('tr');
         tr.innerHTML = '<td>' + (i+1) + '</td>'
           + '<td>' + name + '</td>'
@@ -60,20 +69,19 @@ Ranked by combined score (artifacts published + AE committee memberships). See t
           + '<td>' + (e.artifacts||0) + '</td>'
           + '<td>' + (e.ae_memberships||0) + '</td>'
           + '<td>' + (e.chair_count||0) + '</td>'
-          + '<td><strong>' + (e.combined_score||0) + '</strong></td>'
-          + '<td>' + confs + '</td>';
+          + '<td><strong>' + (e.combined_score||0) + '</strong></td>';
         tbody.appendChild(tr);
       });
     });
 })();
 </script>
 
-## Explore
+## Explore by Conference Area
 
-- [Systems]({{ '/systems/' | relative_url }}) — Per-conference breakdown and statistics for systems venues
-- [Security]({{ '/security/' | relative_url }}) — Per-conference breakdown and statistics for security venues
-- [Methodology]({{ '/methodology.html' | relative_url }}) — How we collect and analyze the data
-- [Contribute]({{ '/about.html' | relative_url }}) — How to help and project information
+- [Systems]({{ '/systems/' | relative_url }}) — Breakdown and rankings for systems venues (EuroSys, OSDI, SC, SOSP)
+- [Security]({{ '/security/' | relative_url }}) — Breakdown and rankings for security venues (ACSAC, CHES, NDSS, PETS, USENIX Security, WOOT)
+- [Methodology]({{ '/methodology.html' | relative_url }}) — How we collect, process, and analyze the data
+- [About]({{ '/about.html' | relative_url }}) — Project information and how to contribute
 
 {% else %}
 Statistics are being generated. Check back soon!
@@ -89,7 +97,7 @@ Statistics are being generated. Check back soon!
 
 ## Acknowledgements
 
-We thank the researchers who prepare reproducible artifacts, the AE committees who review them, and AE chairs who publish results to [sysartifacts](https://sysartifacts.github.io) and [secartifacts](https://secartifacts.github.io). Inspired by [Systems Circus](https://nebelwelt.net/pubstats/) and [csrankings.org](https://csrankings.org).
+This project celebrates the work of **artifact authors** who go the extra mile to make research reproducible, and **artifact evaluation committees** (AE chairs and members) who invest time reviewing and certifying artifacts. Their contributions strengthen our scientific record. We thank the communities maintaining [sysartifacts](https://sysartifacts.github.io) and [secartifacts](https://secartifacts.github.io) for publishing detailed evaluation results. Inspired by [Systems Circus](https://nebelwelt.net/pubstats/) and [csrankings.org](https://csrankings.org).
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
 <script>
