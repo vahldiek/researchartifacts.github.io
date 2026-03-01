@@ -8,21 +8,17 @@
     page.security_data_url     — path to the security JSON file
 {% endcomment %}
 
-<div id="institution-controls" style="margin-bottom:16px; display:none;">
-  <label style="font-weight:bold; margin-right:8px;">Area:</label>
-  <select id="areaFilter" style="padding:4px 8px; font-size:1em; margin-right:16px;">
+<div id="institution-controls" style="margin-bottom:6px; display:none; font-size:0.9em;">
+  <label style="font-weight:bold; margin-right:4px; white-space:nowrap;">Area:</label>
+  <select id="areaFilter" style="padding:2px 6px; font-size:0.95em;">
     <option value="all" selected>All Conferences</option>
     <option value="systems">Systems Only</option>
     <option value="security">Security Only</option>
   </select>
-  <label>Show
-    <select id="iPageSizeSelect">
-      <option value="100" selected>100</option>
-      <option value="500">500</option>
-      <option value="0">All</option>
-    </select>
-    per page
-  </label>
+</div>
+
+<div id="institution-legend" style="margin:0 0 6px 0; display:none; font-size:0.85em; color:#555;">
+  Legend: R=Rank, I=Institution, C=Combined, U=Researchers, T=Artifacts, E=AE, H=Chaired, P=Papers, R%=Art. Rate, K=Conferences
 </div>
 
 <div id="institutionLoading"><em>Loading institution ranking data…</em></div>
@@ -32,11 +28,11 @@
 <tbody id="institutionBody"></tbody>
 </table>
 
-<div id="institution-controls-bottom" style="margin-top:8px; display:none;">
-  <button id="iPrevBtnB">&laquo; Prev</button>
-  <span id="iPageInfoB" style="margin:0 8px;"></span>
-  <button id="iNextBtnB">Next &raquo;</button>
-  <span id="iTotalInfo" style="margin-left:16px; color:#666;"></span>
+<div id="institution-controls-bottom" style="margin-top:4px; display:none; font-size:0.9em;">
+  <button id="iPrevBtnB" style="padding:2px 6px; font-size:0.9em;">&laquo; Prev</button>
+  <span id="iPageInfoB" style="margin:0 6px;"></span>
+  <button id="iNextBtnB" style="padding:2px 6px; font-size:0.9em;">Next &raquo;</button>
+  <span id="iTotalInfo" style="margin-left:12px; color:#666;"></span>
 </div>
 
 <script>
@@ -58,16 +54,16 @@
   var expandedRows = new Set(); // Track which rows are expanded
 
   var fixedCols = [
-    {label:'Rank',             key:'rank',              type:'num'},
-    {label:'Institution',      key:'affiliation',       type:'alpha'},
-    {label:'Combined',         key:'combined_score',    type:'num'},
-    {label:'Artifacts',        key:'artifacts',         type:'num'},
-    {label:'AE&nbsp;Service',  key:'ae_memberships',    type:'num'},
-    {label:'Chaired&nbsp;★',   key:'chair_count',       type:'num'},
-    {label:'Researchers',      key:'num_authors',       type:'num'},
-    {label:'Papers',           key:'total_papers',      type:'num'},
-    {label:'Art.&nbsp;Rate',   key:'artifact_rate',     type:'num'},
-    {label:'Conferences',      key:'num_conferences',   type:'num'}
+    {label:'R',                key:'rank',              type:'num'},
+    {label:'I',                key:'affiliation',       type:'alpha'},
+    {label:'C',                key:'combined_score',    type:'num'},
+    {label:'U',                key:'num_authors',       type:'num'},
+    {label:'T',                key:'artifacts',         type:'num'},
+    {label:'E',                key:'ae_memberships',    type:'num'},
+    {label:'H',                key:'chair_count',       type:'num'},
+    {label:'P',                key:'total_papers',      type:'num'},
+    {label:'R%',               key:'artifact_rate',     type:'num'},
+    {label:'K',                key:'num_conferences',   type:'num'}
   ];
 
   function render() {
@@ -94,11 +90,11 @@
       var aff = (inst.affiliation || 'Unknown').replace(/^_/, '');
       cells.push('<td>' + escHtml(aff) + '</td>');
       cells.push('<td><strong>' + inst.combined_score + '</strong></td>');
+      cells.push('<td>' + (inst.num_authors || '') + '</td>');
       cells.push('<td>' + (inst.artifacts || '') + '</td>');
       cells.push('<td>' + (inst.ae_memberships || '') + '</td>');
       var chairLabel = inst.chair_count > 0 ? inst.chair_count + ' \u2605' : '';
       cells.push('<td>' + chairLabel + '</td>');
-      cells.push('<td>' + (inst.num_authors || '') + '</td>');
       cells.push('<td>' + (inst.total_papers || '') + '</td>');
       cells.push('<td>' + (inst.total_papers > 0 ? inst.artifact_rate + '%' : '') + '</td>');
       cells.push('<td>' + (inst.conferences ? inst.conferences.length : '') + '</td>');
@@ -264,6 +260,7 @@
     document.getElementById('institutionLoading').style.display = 'none';
     document.getElementById('institutionTable').style.display = '';
     document.getElementById('institution-controls').style.display = '';
+    document.getElementById('institution-legend').style.display = '';
     document.getElementById('institution-controls-bottom').style.display = '';
   }
 
@@ -274,6 +271,7 @@
     document.getElementById('institutionLoading').innerHTML = '<em>Loading ' + area + ' institution ranking data…</em>';
     document.getElementById('institutionTable').style.display = 'none';
     document.getElementById('institution-controls').style.display = 'none';
+    document.getElementById('institution-legend').style.display = 'none';
     document.getElementById('institution-controls-bottom').style.display = 'none';
     
     fetch(DATA_URLS[area])
@@ -291,11 +289,6 @@
   });
 
   // Controls
-  document.getElementById('iPageSizeSelect').addEventListener('change', function() {
-    pageSize = parseInt(this.value);
-    currentPage = 0;
-    render();
-  });
   function goPrev() { if (currentPage > 0) { currentPage--; render(); } }
   function goNext() {
     var pages = pageSize > 0 ? Math.ceil(sortedData.length / pageSize) : 1;
@@ -310,14 +303,16 @@
 </script>
 
 <style>
-#institutionTable { font-size: 0.82em; white-space: nowrap; border-collapse: collapse; width: 100%; }
-#institutionTable th, #institutionTable td { padding: 3px 8px; border: 1px solid #ddd; }
+#institutionTable { font-size: 0.78em; border-collapse: collapse; width: 100%; }
+#institutionTable th, #institutionTable td { padding: 2px 4px; border: 1px solid #ddd; }
+#institutionTable th:nth-child(2), #institutionTable td:nth-child(2) { max-width: 200px; word-wrap: break-word; white-space: normal; }
+#institutionTable td { white-space: nowrap; }
 #institutionTable th { background-color: #f2f2f2; position: sticky; top: 0; z-index: 1; }
 #institutionTable tr:nth-child(even) { background-color: #f9f9f9; }
 #institutionTable .inst-row:hover { background-color: #e8f4f8; }
 #institutionTable .expanded-row { background-color: #f9f9f9 !important; }
 #institutionTable .expanded-row:hover { background-color: #f9f9f9 !important; }
-.i-sortable::after { content: '\2195'; opacity: 0.3; margin-left: 3px; font-size: 0.8em; }
+.i-sortable::after { content: '\2195'; opacity: 0.3; margin-left: 2px; font-size: 0.75em; }
 .i-sorted-asc::after { content: '\2191'; opacity: 1; }
 .i-sorted-desc::after { content: '\2193'; opacity: 1; }
 .expand-btn { display: inline-block; font-size: 0.8em; color: #666; }
