@@ -242,7 +242,7 @@ This page aggregates institution ranking data by country and continent, showing 
     for (var cn in countryNameToCode) {
       if (lower.indexOf(cn) !== -1) return countryNameToCode[cn];
     }
-    if (lower.match(/\b(california|massachusetts|texas|new york|illinois|washington|colorado|utah|arizona|pennsylvania|ohio|michigan|florida)\b/)) return 'US';
+    if (lower.match(/\b(alabama|alaska|arizona|arkansas|california|colorado|connecticut|delaware|florida|georgia|hawaii|idaho|illinois|indiana|iowa|kansas|kentucky|louisiana|maine|maryland|massachusetts|michigan|minnesota|mississippi|missouri|montana|nebraska|nevada|new hampshire|new jersey|new mexico|new york|north carolina|north dakota|ohio|oklahoma|oregon|pennsylvania|rhode island|south carolina|south dakota|tennessee|texas|utah|vermont|virginia|washington|west virginia|wisconsin|wyoming)\b/)) return 'US';
     return '';
   }
 
