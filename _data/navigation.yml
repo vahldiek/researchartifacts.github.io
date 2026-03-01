@@ -10,6 +10,8 @@ main:
         url: systems/combined_rankings.html
       - title: "Security"
         url: security/combined_rankings.html
+      - title: "Author Profiles"
+        url: author.html
   - title: "Institution Rankings"
     url: institution_rankings.html
     children:
@@ -85,7 +87,5 @@ main:
         url: security/repo_stats.html
   - title: "Methodology"
     url: methodology.html
-  - title: "Author Profiles"
-    url: author.html
   - title: "Contribute"
     url: about.html
