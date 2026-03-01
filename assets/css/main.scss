@@ -180,24 +180,24 @@ html {
   color: #333;
 }
 
-// Desktop (≥1000px): always hide Methodology + Contribute (last 2) — Repository Stats stays visible
-@media (min-width: 1000px) {
-  .greedy-nav .visible-links > li.masthead__menu-item:nth-last-child(-n+2) {
-    display: none;
+// Desktop (≥768px): show all items
+@media (min-width: 768px) {
+  .greedy-nav .visible-links > li.masthead__menu-item {
+    display: inline-block;
+  }
+  .greedy-nav__toggle {
+    display: none !important;
   }
 }
 
-@media (max-width: 999px) {
-  // Tablet: hide last 4 (AE Committees, Repository Stats, Methodology, Contribute)
-  .greedy-nav .visible-links > li.masthead__menu-item:nth-last-child(-n+4) {
-    display: none;
-  }
-}
-
+// Mobile (<768px): hide some items, show hamburger
 @media (max-width: 767px) {
   // Mobile: hide last 5 (keep only Overview + Ranking)
   .greedy-nav .visible-links > li.masthead__menu-item:nth-last-child(-n+5) {
     display: none;
+  }
+  .greedy-nav__toggle {
+    display: flex !important;
   }
   
   /* Compact hamburger menu for very small screens */
@@ -208,5 +208,7 @@ html {
   .hidden-links .masthead__submenu li a {
     padding: 0.4em 0.8em 0.4em 1.2em;
     font-size: 0.8em;
+  }
+}
   }
 }
