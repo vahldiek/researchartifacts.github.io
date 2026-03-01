@@ -15,15 +15,7 @@
     <option value="systems">Systems Only</option>
     <option value="security">Security Only</option>
   </select>
-  <label>Show
-    <select id="cPageSizeSelect">
-      <option value="100" selected>100</option>
-      <option value="500">500</option>
-      <option value="0">All</option>
-    </select>
-    per page
-  </label>
-  <label style="margin-left:16px;">Filter:
+  <label>Filter:
     <select id="cFilterSelect">
       <option value="all" selected>All</option>
       <option value="both">Both Artifacts &amp; AE</option>
@@ -268,11 +260,6 @@
   });
 
   // Controls
-  document.getElementById('cPageSizeSelect').addEventListener('change', function() {
-    pageSize = parseInt(this.value);
-    currentPage = 0;
-    render();
-  });
   document.getElementById('cFilterSelect').addEventListener('change', function() {
     filterMode = this.value;
     applyFilter();

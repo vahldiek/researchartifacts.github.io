@@ -7,20 +7,9 @@
 
 <div id="author-controls" class="at-controls" style="display:none;">
   <div class="at-controls-row">
-    <div class="at-control-group">
-      <label class="at-label" for="pageSizeSelect">Show</label>
-      <select id="pageSizeSelect" class="at-select">
-        <option value="100" selected>100</option>
-        <option value="500">500</option>
-        <option value="0">All</option>
-      </select>
-      <span class="at-label">per page</span>
-    </div>
-    <div class="at-control-group at-page-nav">
-      <button id="prevBtn" class="at-btn" disabled>&laquo; Prev</button>
-      <span id="pageInfo" class="at-page-info"></span>
-      <button id="nextBtn" class="at-btn">Next &raquo;</button>
-    </div>
+    <button id="prevBtn" class="at-btn" disabled>&laquo; Prev</button>
+    <span id="pageInfo" class="at-page-info"></span>
+    <button id="nextBtn" class="at-btn">Next &raquo;</button>
     <span id="totalInfo" class="at-total-info"></span>
   </div>
 </div>
@@ -205,11 +194,6 @@
   }
 
   // Pagination controls
-  document.getElementById('pageSizeSelect').addEventListener('change', function() {
-    pageSize = parseInt(this.value);
-    currentPage = 0;
-    render();
-  });
   function goPrev() { if (currentPage > 0) { currentPage--; render(); } }
   function goNext() {
     var pages = pageSize > 0 ? Math.ceil(sortedAuthors.length / pageSize) : 1;
