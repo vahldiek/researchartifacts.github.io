@@ -548,15 +548,15 @@
   },
   {
     "affiliation": "Purdue University",
-    "combined_score": 138,
-    "artifacts": 38,
-    "badges_functional": 22,
-    "badges_reproducible": 15,
+    "combined_score": 141,
+    "artifacts": 39,
+    "badges_functional": 23,
+    "badges_reproducible": 16,
     "ae_memberships": 21,
     "chair_count": 0,
-    "total_papers": 95,
-    "artifact_rate": 40.0,
-    "num_authors": 21,
+    "total_papers": 96,
+    "artifact_rate": 40.6,
+    "num_authors": 22,
     "top_authors": [
       {
         "name": "Elisa Bertino",
@@ -703,20 +703,20 @@
         "total_papers": 1
       },
       {
+        "name": "Nan Jiang 0012",
+        "affiliation": "Purdue University",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
         "name": "Ruoyu Song 0001",
         "affiliation": "Purdue University",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
         "total_papers": 2
-      },
-      {
-        "name": "Shiwei Feng 0002",
-        "affiliation": "Purdue University",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
       }
     ],
     "conferences": [
@@ -727,7 +727,7 @@
     ],
     "years": {
       "2026": 7,
-      "2025": 23,
+      "2025": 24,
       "2024": 10,
       "2023": 6,
       "2022": 7,
@@ -2429,19 +2429,19 @@
   },
   {
     "affiliation": "Graz University of Technology",
-    "combined_score": 65,
-    "artifacts": 24,
+    "combined_score": 69,
+    "artifacts": 28,
     "badges_functional": 16,
     "badges_reproducible": 13,
     "ae_memberships": 4,
     "chair_count": 0,
     "total_papers": 35,
-    "artifact_rate": 68.6,
-    "num_authors": 4,
+    "artifact_rate": 80.0,
+    "num_authors": 5,
     "top_authors": [
       {
         "name": "Daniel Gruss",
-        "affiliation": "Graz University of Technology, Institute for Applied Information Processing and Communications, Austria",
+        "affiliation": "Graz University of Technology",
         "combined_score": 27,
         "artifacts": 11,
         "ae_memberships": 0,
@@ -2449,7 +2449,7 @@
       },
       {
         "name": "Stefan Mangard",
-        "affiliation": "Graz University of Technology, Austria",
+        "affiliation": "Graz University of Technology",
         "combined_score": 25,
         "artifacts": 12,
         "ae_memberships": 0,
@@ -2470,6 +2470,14 @@
         "artifacts": 0,
         "ae_memberships": 2,
         "total_papers": 0
+      },
+      {
+        "name": "Gatan Cassiers",
+        "affiliation": "Graz University of Technology",
+        "combined_score": 4,
+        "artifacts": 4,
+        "ae_memberships": 0,
+        "total_papers": 0
       }
     ],
     "conferences": [
@@ -2481,8 +2489,8 @@
     "years": {
       "2026": 2,
       "2025": 8,
-      "2024": 6,
-      "2023": 6,
+      "2024": 8,
+      "2023": 8,
       "2022": 4,
       "2021": 0,
       "2020": 2,
@@ -5693,6 +5701,101 @@
     }
   },
   {
+    "affiliation": "Microsoft Research",
+    "combined_score": 33,
+    "artifacts": 14,
+    "badges_functional": 11,
+    "badges_reproducible": 8,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 19,
+    "artifact_rate": 73.7,
+    "num_authors": 8,
+    "top_authors": [
+      {
+        "name": "Divya Gupta 0001",
+        "affiliation": "Microsoft Research",
+        "combined_score": 6,
+        "artifacts": 4,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Cdric Fournet",
+        "affiliation": "Microsoft Research",
+        "combined_score": 6,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Andrew Paverd",
+        "affiliation": "Microsoft Research",
+        "combined_score": 5,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 5
+      },
+      {
+        "name": "Sangho Lee 0001",
+        "affiliation": "Microsoft Research",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 4
+      },
+      {
+        "name": "Christoph M. Wintersteiger",
+        "affiliation": "Microsoft Research",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Jana Hofmann",
+        "affiliation": "Microsoft Research",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Manuel Costa",
+        "affiliation": "Microsoft Research",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      },
+      {
+        "name": "Sharad Agarwal",
+        "affiliation": "Microsoft Research",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 3
+      }
+    ],
+    "conferences": [
+      "ACSAC",
+      "PETS",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2026": 0,
+      "2025": 4,
+      "2024": 2,
+      "2023": 2,
+      "2022": 5,
+      "2021": 0,
+      "2020": 0,
+      "2019": 1,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
     "affiliation": "Massachusetts Institute of Technology",
     "combined_score": 33,
     "artifacts": 11,
@@ -6762,88 +6865,73 @@
     }
   },
   {
-    "affiliation": "Microsoft Research",
+    "affiliation": "University of Michigan",
     "combined_score": 27,
-    "artifacts": 10,
-    "badges_functional": 10,
-    "badges_reproducible": 7,
-    "ae_memberships": 0,
+    "artifacts": 9,
+    "badges_functional": 6,
+    "badges_reproducible": 3,
+    "ae_memberships": 3,
     "chair_count": 0,
-    "total_papers": 17,
-    "artifact_rate": 58.8,
-    "num_authors": 7,
+    "total_papers": 19,
+    "artifact_rate": 47.4,
+    "num_authors": 5,
     "top_authors": [
       {
-        "name": "Cdric Fournet",
-        "affiliation": "Microsoft Research",
-        "combined_score": 6,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 2
+        "name": "Long Huang",
+        "affiliation": "University of Michigan",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
       },
       {
-        "name": "Andrew Paverd",
-        "affiliation": "Microsoft Research Ltd,Cambridge, UK",
-        "combined_score": 5,
-        "artifacts": 2,
+        "name": "Ang Chen 0001",
+        "affiliation": "University of Michigan",
+        "combined_score": 8,
+        "artifacts": 5,
         "ae_memberships": 0,
-        "total_papers": 5
+        "total_papers": 8
       },
       {
-        "name": "Sangho Lee 0001",
-        "affiliation": "Microsoft Research, Redmond, WA, USA",
+        "name": "Florian Schaub",
+        "affiliation": "University of Michigan",
         "combined_score": 4,
         "artifacts": 2,
         "ae_memberships": 0,
-        "total_papers": 4
+        "total_papers": 6
       },
       {
-        "name": "Christoph M. Wintersteiger",
-        "affiliation": "Microsoft Research, Cambridge, UK",
+        "name": "Alanson P. Sample",
+        "affiliation": "University of Michigan",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
-        "total_papers": 1
+        "total_papers": 0
       },
       {
-        "name": "Jana Hofmann",
-        "affiliation": "Microsoft Research, UK",
+        "name": "Z. Morley Mao",
+        "affiliation": "University of Michigan",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Manuel Costa",
-        "affiliation": "Microsoft Research",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Sharad Agarwal",
-        "affiliation": "Microsoft Research",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 3
+        "total_papers": 5
       }
     ],
     "conferences": [
       "ACSAC",
+      "PETS",
       "USENIXSEC"
     ],
     "years": {
-      "2026": 0,
-      "2025": 4,
-      "2024": 1,
-      "2023": 2,
+      "2024": 3,
+      "2025": 3,
+      "2026": 1,
+      "2023": 1,
       "2022": 2,
       "2021": 0,
       "2020": 0,
-      "2019": 1,
-      "2018": 0,
+      "2019": 0,
+      "2018": 2,
       "2017": 0
     }
   },
@@ -7744,68 +7832,6 @@
       "2026": 0,
       "2025": 3,
       "2024": 3,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "University of Michigan",
-    "combined_score": 19,
-    "artifacts": 4,
-    "badges_functional": 3,
-    "badges_reproducible": 3,
-    "ae_memberships": 3,
-    "chair_count": 0,
-    "total_papers": 11,
-    "artifact_rate": 36.4,
-    "num_authors": 4,
-    "top_authors": [
-      {
-        "name": "Long Huang",
-        "affiliation": "University of Michigan",
-        "combined_score": 9,
-        "artifacts": 0,
-        "ae_memberships": 3,
-        "total_papers": 0
-      },
-      {
-        "name": "Florian Schaub",
-        "affiliation": "University of Michigan",
-        "combined_score": 4,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 6
-      },
-      {
-        "name": "Alanson P. Sample",
-        "affiliation": "University of Michigan",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 0
-      },
-      {
-        "name": "Z. Morley Mao",
-        "affiliation": "University of Michigan",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 5
-      }
-    ],
-    "conferences": [
-      "PETS",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2024": 2,
-      "2025": 3,
-      "2026": 1,
-      "2023": 0,
-      "2022": 1,
       "2021": 0,
       "2020": 0,
       "2019": 0,
@@ -12871,44 +12897,6 @@
     }
   },
   {
-    "affiliation": "University of Michigan Ann Arbor",
-    "combined_score": 8,
-    "artifacts": 5,
-    "badges_functional": 3,
-    "badges_reproducible": 0,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 8,
-    "artifact_rate": 62.5,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Ang Chen 0001",
-        "affiliation": "University of Michigan Ann Arbor",
-        "combined_score": 8,
-        "artifacts": 5,
-        "ae_memberships": 0,
-        "total_papers": 8
-      }
-    ],
-    "conferences": [
-      "ACSAC",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 0,
-      "2024": 1,
-      "2023": 1,
-      "2022": 1,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 2,
-      "2017": 0
-    }
-  },
-  {
     "affiliation": "Robert Bosch Research and Technology Center",
     "combined_score": 8,
     "artifacts": 3,
@@ -14013,44 +14001,6 @@
       "2024": 0,
       "2023": 0,
       "2022": 0,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "Microsoft Research India",
-    "combined_score": 6,
-    "artifacts": 4,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 200.0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Divya Gupta 0001",
-        "affiliation": "Microsoft Research India, Bangalore, India",
-        "combined_score": 6,
-        "artifacts": 4,
-        "ae_memberships": 0,
-        "total_papers": 2
-      }
-    ],
-    "conferences": [
-      "PETS",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 0,
-      "2024": 1,
-      "2023": 0,
-      "2022": 3,
       "2021": 0,
       "2020": 0,
       "2019": 0,
@@ -15989,43 +15939,6 @@
     ],
     "years": {
       "2026": 1
-    }
-  },
-  {
-    "affiliation": "TU Graz",
-    "combined_score": 4,
-    "artifacts": 4,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Gatan Cassiers",
-        "affiliation": "TU Graz, Austria",
-        "combined_score": 4,
-        "artifacts": 4,
-        "ae_memberships": 0,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "CHES"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 0,
-      "2024": 2,
-      "2023": 2,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
     }
   },
   {
@@ -18865,43 +18778,6 @@
       {
         "name": "Nan Jiang 0005",
         "affiliation": "Beijing University of Technology, Faculty of Information Technology, China",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "NDSS"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 1,
-      "2024": 0,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "Purdue University West Lafayette",
-    "combined_score": 3,
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Nan Jiang 0012",
-        "affiliation": "Purdue University West Lafayette, IN, USA",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,

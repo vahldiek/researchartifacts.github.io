@@ -381,6 +381,197 @@
     }
   },
   {
+    "affiliation": "Microsoft Research",
+    "combined_score": 262,
+    "artifacts": 68,
+    "badges_functional": 62,
+    "badges_reproducible": 55,
+    "ae_memberships": 25,
+    "chair_count": 1,
+    "total_papers": 104,
+    "artifact_rate": 65.4,
+    "num_authors": 27,
+    "top_authors": [
+      {
+        "name": "Fan Yang 0024",
+        "affiliation": "Microsoft Research",
+        "combined_score": 36,
+        "artifacts": 13,
+        "ae_memberships": 0,
+        "total_papers": 20
+      },
+      {
+        "name": "Jing Liu 0074",
+        "affiliation": "Microsoft Research",
+        "combined_score": 35,
+        "artifacts": 3,
+        "ae_memberships": 9,
+        "total_papers": 4
+      },
+      {
+        "name": "Lidong Zhou",
+        "affiliation": "Microsoft Research",
+        "combined_score": 32,
+        "artifacts": 11,
+        "ae_memberships": 0,
+        "total_papers": 15
+      },
+      {
+        "name": "Mao Yang 0004",
+        "affiliation": "Microsoft Research",
+        "combined_score": 21,
+        "artifacts": 7,
+        "ae_memberships": 0,
+        "total_papers": 14
+      },
+      {
+        "name": "Yuqing Yang 0001",
+        "affiliation": "Microsoft Research",
+        "combined_score": 19,
+        "artifacts": 7,
+        "ae_memberships": 0,
+        "total_papers": 9
+      },
+      {
+        "name": "Swapnil Gandhi",
+        "affiliation": "Microsoft Research",
+        "combined_score": 12,
+        "artifacts": 0,
+        "ae_memberships": 4,
+        "total_papers": 0
+      },
+      {
+        "name": "Siddhartha Sen 0001",
+        "affiliation": "Microsoft Research",
+        "combined_score": 9,
+        "artifacts": 4,
+        "ae_memberships": 0,
+        "total_papers": 8
+      },
+      {
+        "name": "Qi Chen 0009",
+        "affiliation": "Microsoft Research",
+        "combined_score": 9,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 4
+      },
+      {
+        "name": "Shan Lu 0001",
+        "affiliation": "Microsoft Research",
+        "combined_score": 9,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 8
+      },
+      {
+        "name": "Raja Gond",
+        "affiliation": "Microsoft Research",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
+        "total_papers": 0
+      },
+      {
+        "name": "Weiteng Chen",
+        "affiliation": "Microsoft Research",
+        "combined_score": 8,
+        "artifacts": 1,
+        "ae_memberships": 2,
+        "total_papers": 1
+      },
+      {
+        "name": "Jacob R. Lorch",
+        "affiliation": "Microsoft Research",
+        "combined_score": 6,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Gohar Irfan Chaudhry",
+        "affiliation": "Microsoft Research",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Minghua Ma",
+        "affiliation": "Microsoft Research",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Oleksii Oleksenko",
+        "affiliation": "Microsoft Research",
+        "combined_score": 6,
+        "artifacts": 0,
+        "ae_memberships": 2,
+        "total_papers": 0
+      },
+      {
+        "name": "Dan Ports",
+        "affiliation": "Microsoft Research",
+        "combined_score": 5,
+        "artifacts": 0,
+        "ae_memberships": 1,
+        "total_papers": 0
+      },
+      {
+        "name": "Peng Cheng 0005",
+        "affiliation": "Microsoft Research",
+        "combined_score": 4,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 3
+      },
+      {
+        "name": "Kun Li 0016",
+        "affiliation": "Microsoft Research",
+        "combined_score": 3,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 0
+      },
+      {
+        "name": "Ran Shu 0001",
+        "affiliation": "Microsoft Research",
+        "combined_score": 3,
+        "artifacts": 2,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
+        "name": "Benyu Zhang",
+        "affiliation": "Microsoft Research",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 1
+      }
+    ],
+    "conferences": [
+      "ATC",
+      "EUROSYS",
+      "FAST",
+      "OSDI",
+      "SC",
+      "SOSP"
+    ],
+    "years": {
+      "2025": 9,
+      "2024": 11,
+      "2023": 24,
+      "2022": 24,
+      "2021": 12,
+      "2020": 10,
+      "2026": 1
+    }
+  },
+  {
     "affiliation": "Tsinghua University",
     "combined_score": 175,
     "artifacts": 44,
@@ -573,15 +764,15 @@
   },
   {
     "affiliation": "University of Michigan",
-    "combined_score": 161,
-    "artifacts": 23,
-    "badges_functional": 18,
+    "combined_score": 166,
+    "artifacts": 26,
+    "badges_functional": 20,
     "badges_reproducible": 13,
     "ae_memberships": 35,
     "chair_count": 1,
-    "total_papers": 31,
-    "artifact_rate": 74.2,
-    "num_authors": 22,
+    "total_papers": 35,
+    "artifact_rate": 74.3,
+    "num_authors": 23,
     "top_authors": [
       {
         "name": "Peng Huang 0005",
@@ -736,12 +927,12 @@
         "total_papers": 0
       },
       {
-        "name": "Yiming Qiu 0001",
+        "name": "Ang Chen 0001",
         "affiliation": "University of Michigan",
-        "combined_score": 3,
-        "artifacts": 2,
+        "combined_score": 5,
+        "artifacts": 3,
         "ae_memberships": 0,
-        "total_papers": 2
+        "total_papers": 4
       }
     ],
     "conferences": [
@@ -752,24 +943,24 @@
     ],
     "years": {
       "2025": 26,
-      "2024": 6,
+      "2024": 8,
       "2023": 7,
       "2022": 9,
-      "2021": 7,
+      "2021": 8,
       "2020": 1
     }
   },
   {
     "affiliation": "University of Wisconsin-Madison",
-    "combined_score": 146,
+    "combined_score": 155,
     "artifacts": 23,
     "badges_functional": 23,
     "badges_reproducible": 16,
-    "ae_memberships": 28,
+    "ae_memberships": 31,
     "chair_count": 0,
     "total_papers": 25,
     "artifact_rate": 92.0,
-    "num_authors": 13,
+    "num_authors": 14,
     "top_authors": [
       {
         "name": "Chenhao Ye",
@@ -817,6 +1008,14 @@
         "combined_score": 15,
         "artifacts": 0,
         "ae_memberships": 5,
+        "total_papers": 0
+      },
+      {
+        "name": "Tingjia Cao",
+        "affiliation": "University of Wisconsin-Madison",
+        "combined_score": 9,
+        "artifacts": 0,
+        "ae_memberships": 3,
         "total_papers": 0
       },
       {
@@ -885,25 +1084,26 @@
       "SOSP"
     ],
     "years": {
-      "2025": 23,
+      "2025": 25,
       "2024": 12,
       "2023": 2,
       "2022": 3,
       "2021": 8,
-      "2020": 2
+      "2020": 2,
+      "2026": 1
     }
   },
   {
     "affiliation": "University of California, Berkeley",
-    "combined_score": 143,
-    "artifacts": 27,
-    "badges_functional": 27,
-    "badges_reproducible": 24,
+    "combined_score": 154,
+    "artifacts": 31,
+    "badges_functional": 31,
+    "badges_reproducible": 27,
     "ae_memberships": 21,
     "chair_count": 1,
-    "total_papers": 42,
-    "artifact_rate": 64.3,
-    "num_authors": 15,
+    "total_papers": 50,
+    "artifact_rate": 62.0,
+    "num_authors": 17,
     "top_authors": [
       {
         "name": "Ion Stoica",
@@ -952,6 +1152,14 @@
         "artifacts": 0,
         "ae_memberships": 3,
         "total_papers": 0
+      },
+      {
+        "name": "Joseph E. Gonzalez",
+        "affiliation": "University of California, Berkeley",
+        "combined_score": 8,
+        "artifacts": 3,
+        "ae_memberships": 0,
+        "total_papers": 6
       },
       {
         "name": "Rishabh R. Iyer",
@@ -1018,6 +1226,14 @@
         "total_papers": 1
       },
       {
+        "name": "Joseph Gonzalez 0001",
+        "affiliation": "University of California, Berkeley",
+        "combined_score": 3,
+        "artifacts": 1,
+        "ae_memberships": 0,
+        "total_papers": 2
+      },
+      {
         "name": "Koushik Sen",
         "affiliation": "University of California, Berkeley",
         "combined_score": 3,
@@ -1035,11 +1251,11 @@
     ],
     "years": {
       "2025": 11,
-      "2024": 9,
-      "2023": 7,
-      "2022": 8,
+      "2024": 10,
+      "2023": 8,
+      "2022": 9,
       "2021": 8,
-      "2020": 5
+      "2020": 6
     }
   },
   {
@@ -1311,163 +1527,6 @@
     }
   },
   {
-    "affiliation": "Microsoft Research",
-    "combined_score": 120,
-    "artifacts": 32,
-    "badges_functional": 31,
-    "badges_reproducible": 28,
-    "ae_memberships": 9,
-    "chair_count": 1,
-    "total_papers": 52,
-    "artifact_rate": 61.5,
-    "num_authors": 16,
-    "top_authors": [
-      {
-        "name": "Lidong Zhou",
-        "affiliation": "Microsoft Research",
-        "combined_score": 32,
-        "artifacts": 11,
-        "ae_memberships": 0,
-        "total_papers": 15
-      },
-      {
-        "name": "Mao Yang 0004",
-        "affiliation": "Microsoft Research, Beijing, China",
-        "combined_score": 21,
-        "artifacts": 7,
-        "ae_memberships": 0,
-        "total_papers": 14
-      },
-      {
-        "name": "Shan Lu 0001",
-        "affiliation": "Microsoft Research, Redmond, WA, USA",
-        "combined_score": 9,
-        "artifacts": 3,
-        "ae_memberships": 0,
-        "total_papers": 8
-      },
-      {
-        "name": "Weiteng Chen",
-        "affiliation": "Microsoft Research",
-        "combined_score": 8,
-        "artifacts": 1,
-        "ae_memberships": 2,
-        "total_papers": 1
-      },
-      {
-        "name": "Jacob R. Lorch",
-        "affiliation": "Microsoft Research, Redmond, WA, USA",
-        "combined_score": 6,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 2
-      },
-      {
-        "name": "Gohar Irfan Chaudhry",
-        "affiliation": "Microsoft Research",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Minghua Ma",
-        "affiliation": "Microsoft Research",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Oleksii Oleksenko",
-        "affiliation": "Microsoft Research",
-        "combined_score": 6,
-        "artifacts": 0,
-        "ae_memberships": 2,
-        "total_papers": 0
-      },
-      {
-        "name": "Dan Ports",
-        "affiliation": "Microsoft Research, University of Washington",
-        "combined_score": 5,
-        "artifacts": 0,
-        "ae_memberships": 1,
-        "total_papers": 0
-      },
-      {
-        "name": "Kun Li 0016",
-        "affiliation": "Microsoft Research, Beijing, China",
-        "combined_score": 3,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 0
-      },
-      {
-        "name": "Benyu Zhang",
-        "affiliation": "Microsoft Research",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Jacob Nelson 0001",
-        "affiliation": "Microsoft Research, Redmond, WA, USA",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 4
-      },
-      {
-        "name": "Marco Molinaro 0004",
-        "affiliation": "Microsoft Research, Redmond, WA, USA",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Shuo Chen 0001",
-        "affiliation": "Microsoft Research, Redmond, WA, USA",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Srikanth Kandula",
-        "affiliation": "Microsoft Research, Redmond, WA, USA",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Thomas Moscibroda",
-        "affiliation": "Microsoft Research",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 4
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "EUROSYS",
-      "OSDI",
-      "SC",
-      "SOSP"
-    ],
-    "years": {
-      "2025": 3,
-      "2024": 3,
-      "2023": 9,
-      "2022": 12,
-      "2021": 9,
-      "2020": 5
-    }
-  },
-  {
     "affiliation": "Purdue University",
     "combined_score": 115,
     "artifacts": 17,
@@ -1614,99 +1673,6 @@
       "2021": 3,
       "2020": 0,
       "2026": 2
-    }
-  },
-  {
-    "affiliation": "Microsoft Research Asia",
-    "combined_score": 112,
-    "artifacts": 32,
-    "badges_functional": 28,
-    "badges_reproducible": 25,
-    "ae_memberships": 9,
-    "chair_count": 0,
-    "total_papers": 44,
-    "artifact_rate": 72.7,
-    "num_authors": 8,
-    "top_authors": [
-      {
-        "name": "Fan Yang 0024",
-        "affiliation": "Microsoft Research Asia, Beijing, China",
-        "combined_score": 36,
-        "artifacts": 13,
-        "ae_memberships": 0,
-        "total_papers": 20
-      },
-      {
-        "name": "Jing Liu 0074",
-        "affiliation": "Microsoft Research Asia, China",
-        "combined_score": 35,
-        "artifacts": 3,
-        "ae_memberships": 9,
-        "total_papers": 4
-      },
-      {
-        "name": "Yuqing Yang 0001",
-        "affiliation": "Microsoft Research Asia, China",
-        "combined_score": 19,
-        "artifacts": 7,
-        "ae_memberships": 0,
-        "total_papers": 9
-      },
-      {
-        "name": "Qi Chen 0009",
-        "affiliation": "Microsoft Research Asia, Beijing, China",
-        "combined_score": 9,
-        "artifacts": 3,
-        "ae_memberships": 0,
-        "total_papers": 4
-      },
-      {
-        "name": "Peng Cheng 0005",
-        "affiliation": "Microsoft Research Asia, Beijing, China",
-        "combined_score": 4,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 3
-      },
-      {
-        "name": "Ran Shu 0001",
-        "affiliation": "Microsoft Research Asia",
-        "combined_score": 3,
-        "artifacts": 2,
-        "ae_memberships": 0,
-        "total_papers": 2
-      },
-      {
-        "name": "Xian Zhang 0001",
-        "affiliation": "Microsoft Research Asia, Beijing, China",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      },
-      {
-        "name": "Yuxiao Guo 0001",
-        "affiliation": "Microsoft Research Asia",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 1
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "EUROSYS",
-      "FAST",
-      "OSDI",
-      "SOSP"
-    ],
-    "years": {
-      "2025": 4,
-      "2024": 7,
-      "2023": 14,
-      "2022": 9,
-      "2021": 2,
-      "2020": 3
     }
   },
   {
@@ -7471,48 +7437,6 @@
     }
   },
   {
-    "affiliation": "Microsoft Research India",
-    "combined_score": 21,
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 7,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 2,
-    "top_authors": [
-      {
-        "name": "Swapnil Gandhi",
-        "affiliation": "Microsoft Research India",
-        "combined_score": 12,
-        "artifacts": 0,
-        "ae_memberships": 4,
-        "total_papers": 0
-      },
-      {
-        "name": "Raja Gond",
-        "affiliation": "Microsoft Research India",
-        "combined_score": 9,
-        "artifacts": 0,
-        "ae_memberships": 3,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "EUROSYS",
-      "OSDI"
-    ],
-    "years": {
-      "2020": 1,
-      "2022": 2,
-      "2023": 1,
-      "2025": 2,
-      "2026": 1
-    }
-  },
-  {
     "affiliation": "Pennsylvania State University",
     "combined_score": 21,
     "artifacts": 4,
@@ -9238,49 +9162,6 @@
     }
   },
   {
-    "affiliation": "University of California at Berkeley",
-    "combined_score": 11,
-    "artifacts": 4,
-    "badges_functional": 4,
-    "badges_reproducible": 3,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 8,
-    "artifact_rate": 50.0,
-    "num_authors": 2,
-    "top_authors": [
-      {
-        "name": "Joseph E. Gonzalez",
-        "affiliation": "University of California at Berkeley",
-        "combined_score": 8,
-        "artifacts": 3,
-        "ae_memberships": 0,
-        "total_papers": 6
-      },
-      {
-        "name": "Joseph Gonzalez 0001",
-        "affiliation": "University of California at Berkeley",
-        "combined_score": 3,
-        "artifacts": 1,
-        "ae_memberships": 0,
-        "total_papers": 2
-      }
-    ],
-    "conferences": [
-      "EUROSYS",
-      "OSDI",
-      "SOSP"
-    ],
-    "years": {
-      "2025": 0,
-      "2024": 1,
-      "2023": 1,
-      "2022": 1,
-      "2021": 0,
-      "2020": 1
-    }
-  },
-  {
     "affiliation": "VMware",
     "combined_score": 11,
     "artifacts": 4,
@@ -9482,40 +9363,6 @@
       "2022": 0,
       "2021": 2,
       "2020": 0
-    }
-  },
-  {
-    "affiliation": "Microsoft Research New York City",
-    "combined_score": 9,
-    "artifacts": 4,
-    "badges_functional": 3,
-    "badges_reproducible": 2,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 8,
-    "artifact_rate": 50.0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Siddhartha Sen 0001",
-        "affiliation": "Microsoft Research New York City, NY, USA",
-        "combined_score": 9,
-        "artifacts": 4,
-        "ae_memberships": 0,
-        "total_papers": 8
-      }
-    ],
-    "conferences": [
-      "EUROSYS",
-      "OSDI"
-    ],
-    "years": {
-      "2025": 0,
-      "2024": 1,
-      "2023": 0,
-      "2022": 1,
-      "2021": 1,
-      "2020": 1
     }
   },
   {
@@ -10105,37 +9952,6 @@
     }
   },
   {
-    "affiliation": "UW Madison",
-    "combined_score": 9,
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 3,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Tingjia Cao",
-        "affiliation": "UW Madison",
-        "combined_score": 9,
-        "artifacts": 0,
-        "ae_memberships": 3,
-        "total_papers": 0
-      }
-    ],
-    "conferences": [
-      "ATC",
-      "EUROSYS",
-      "OSDI"
-    ],
-    "years": {
-      "2025": 2,
-      "2026": 1
-    }
-  },
-  {
     "affiliation": "University of Electronic Science and Technology of China",
     "combined_score": 9,
     "artifacts": 3,
@@ -10326,7 +10142,7 @@
       },
       {
         "name": "Shane Richard Canon",
-        "affiliation": "Lawrence Berkeley National Laboratory, Data & Analytics Services Group",
+        "affiliation": "Lawrence Berkeley National Laboratory",
         "combined_score": 3,
         "artifacts": 1,
         "ae_memberships": 0,
@@ -12863,40 +12679,6 @@
       "2023": 1,
       "2022": 1,
       "2021": 0,
-      "2020": 0
-    }
-  },
-  {
-    "affiliation": "University of Michigan Ann Arbor",
-    "combined_score": 5,
-    "artifacts": 3,
-    "badges_functional": 2,
-    "badges_reproducible": 0,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 4,
-    "artifact_rate": 75.0,
-    "num_authors": 1,
-    "top_authors": [
-      {
-        "name": "Ang Chen 0001",
-        "affiliation": "University of Michigan Ann Arbor",
-        "combined_score": 5,
-        "artifacts": 3,
-        "ae_memberships": 0,
-        "total_papers": 4
-      }
-    ],
-    "conferences": [
-      "EUROSYS",
-      "SOSP"
-    ],
-    "years": {
-      "2025": 0,
-      "2024": 2,
-      "2023": 0,
-      "2022": 0,
-      "2021": 1,
       "2020": 0
     }
   },
