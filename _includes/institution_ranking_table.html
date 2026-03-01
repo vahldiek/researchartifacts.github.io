@@ -52,6 +52,10 @@
   var sortCol = 2; // default: Combined Score
   var sortAsc = false;
   var expandedRows = new Set(); // Track which rows are expanded
+  var countryAbbrv = {};
+  var countryReady = false;
+  var countryLoadPromise = null;
+  var countryInfoUrl = 'https://raw.githubusercontent.com/emeryberger/CSrankings/gh-pages/institutions.csv';
 
   var fixedCols = [
     {label:'#',                key:'rank',              type:'num'},
@@ -65,6 +69,81 @@
     {label:'R%',               key:'artifact_rate',     type:'num'},
     {label:'K',                key:'num_conferences',   type:'num'}
   ];
+
+  function countryCodeToFlag(code) {
+    if (!code || code.length !== 2) return '';
+    var upper = code.toUpperCase();
+    var first = String.fromCodePoint(0x1F1E6 + upper.charCodeAt(0) - 65);
+    var second = String.fromCodePoint(0x1F1E6 + upper.charCodeAt(1) - 65);
+    return first + second;
+  }
+
+  function normalizeInstKey(name) {
+    return (name || '')
+      .toLowerCase()
+      .replace(/\buniv\.?\b/g, 'university')
+      .replace(/\binst\.?\b/g, 'institute')
+      .replace(/[()]/g, '')
+      .replace(/[.,]/g, '')
+      .replace(/\s-\s/g, ' ')
+      .replace(/-/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  function parseCsvLine(line) {
+    var out = [];
+    var cur = '';
+    var inQuotes = false;
+    for (var i = 0; i < line.length; i++) {
+      var ch = line[i];
+      if (ch === '"') {
+        if (inQuotes && line[i + 1] === '"') {
+          cur += '"';
+          i++;
+        } else {
+          inQuotes = !inQuotes;
+        }
+      } else if (ch === ',' && !inQuotes) {
+        out.push(cur);
+        cur = '';
+      } else {
+        cur += ch;
+      }
+    }
+    out.push(cur);
+    return out;
+  }
+
+  function loadCountryMap() {
+    if (countryLoadPromise) return countryLoadPromise;
+    countryLoadPromise = fetch(countryInfoUrl)
+      .then(function(r) { return r.text(); })
+      .then(function(text) {
+        var lines = text.split(/\r?\n/);
+        for (var i = 1; i < lines.length; i++) {
+          var line = lines[i].trim();
+          if (!line) continue;
+          var parts = parseCsvLine(line);
+          if (parts.length < 3) continue;
+          var inst = parts[0];
+          var code = parts[2];
+          if (!inst || !code) continue;
+          countryAbbrv[normalizeInstKey(inst)] = code;
+        }
+        countryReady = true;
+      })
+      .catch(function() {
+        countryReady = false;
+      });
+    return countryLoadPromise;
+  }
+
+  function getFlagForInstitution(name) {
+    if (!countryReady) return '';
+    var code = countryAbbrv[normalizeInstKey(name)] || '';
+    return code ? countryCodeToFlag(code) : '';
+  }
 
   function render() {
     var start = pageSize > 0 ? currentPage * pageSize : 0;
@@ -88,7 +167,8 @@
       cells.push('<td>' + expandIcon + (start + i + 1) + '</td>');
       
       var aff = (inst.affiliation || 'Unknown').replace(/^_/, '');
-      cells.push('<td>' + escHtml(aff) + '</td>');
+      var flag = getFlagForInstitution(aff);
+      cells.push('<td>' + (flag ? '<span aria-hidden="true">' + flag + '</span> ' : '') + escHtml(aff) + '</td>');
       cells.push('<td><strong>' + inst.combined_score + '</strong></td>');
       cells.push('<td>' + (inst.num_authors || '') + '</td>');
       cells.push('<td>' + (inst.artifacts || '') + '</td>');
@@ -256,6 +336,7 @@
     buildHeader();
     sortData(sortCol, sortAsc);
     render();
+    loadCountryMap().then(function() { render(); });
 
     document.getElementById('institutionLoading').style.display = 'none';
     document.getElementById('institutionTable').style.display = '';
