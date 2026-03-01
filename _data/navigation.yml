@@ -1,7 +1,7 @@
 main:
   - title: "Overview"
     url: index.html
-  - title: "Rankings"
+  - title: "Combined Ranking"
     url: combined_rankings.html
     children:
       - title: "Institution Ranking"
