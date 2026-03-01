@@ -1,9 +1,11 @@
 main:
   - title: "Overview"
     url: index.html
-  - title: "Combined Ranking"
-    url: combined_rankings.html
+  - title: "Ranking"
+    url: "#"
     children:
+      - title: "Combined Ranking"
+        url: combined_rankings.html
       - title: "Institution Ranking"
         url: institution_rankings.html
       - title: "Author Profiles"
