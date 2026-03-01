@@ -17,6 +17,9 @@
     <option value="systems">Systems Only</option>
     <option value="security">Security Only</option>
   </select>
+  <span style="margin:0 12px;"></span>
+  <label style="font-weight:bold; margin-right:4px; white-space:nowrap;">Search:</label>
+  <input type="text" id="affiliationSearch" placeholder="Filter by institution name..." style="padding:2px 6px; font-size:0.95em; width:200px;">
 </div>
 
 <div id="institution-legend" style="margin:0 0 6px 0; display:none; font-size:0.85em; color:#555;">
@@ -47,6 +50,7 @@
   var currentArea = 'all';
   var baseUrl = '{{ "" | relative_url }}';
   var allData = [];
+  var filteredData = [];
   var sortedData = [];
   var yearColumns = [];
   var currentPage = 0;
@@ -54,6 +58,7 @@
   var sortCol = 2; // default: Combined Score
   var sortAsc = false;
   var expandedRows = new Set(); // Track which rows are expanded
+  var searchFilter = ''; // Store current search filter
 
   var fixedCols = [
     {label:'#',                key:'rank',              type:'num',   tip:'Rank'},
@@ -143,14 +148,21 @@
     
     // Known institutions and companies by country
     var knownInstitutions = {
-      // US institutions
-      'mit': 'US', 'stanford': 'US', 'berkeley': 'US', 'carnegie mellon': 'US',
+    '': 'US', 'mit': 'US', 'stanford': 'US', 'berkeley': 'US', 'carnegie mellon': 'US',
       'harvard': 'US', 'princeton': 'US', 'yale': 'US', 'cornell': 'US',
       'columbia': 'US', 'penn': 'US', 'upenn': 'US', 'cmu': 'US',
       'ucsd': 'US', 'ucsb': 'US', 'ucla': 'US', 'uiuc': 'US',
+      'uc san diego': 'US', 'uc berkeley': 'US', 'uc santa barbara': 'US', 'uc davis': 'US',
+      'uc irvine': 'US', 'uc riverside': 'US', 'uc santa cruz': 'US', 'uc merced': 'US',
+      'university of california': 'US',
       'georgia tech': 'US', 'msu': 'US', 'uofm': 'US', 'michigan': 'US',
       'caltech': 'US', 'purdue': 'US', 'texas austin': 'US', 'wisconsin': 'US',
       'washington state': 'US', 'washington': 'US', 'utexas': 'US',
+      'virginia tech': 'US', 'stony brook': 'US', 'utah': 'US', 'uiuc': 'US',
+      'duke': 'US', 'ohio state': 'US', 'illinois': 'US', 'penn state': 'US',
+      'rice': 'US', 'northwestern': 'US', 'nyu': 'US', 'boston': 'US',
+      'georgia': 'US',
+      'microsoft research': 'US', 'microsoft research asia': 'CN', 'msra': 'CN',
       'google': 'US', 'microsoft': 'US', 'amazon': 'US', 'apple': 'US',
       'meta': 'US', 'facebook': 'US', 'ibm': 'US', 'intel': 'US',
       'cisco': 'US', 'oracle': 'US', 'vmware': 'US', 'adobe': 'US',
@@ -187,11 +199,13 @@
       
       // Asia
       'tsinghua': 'CN', 'peking': 'CN', 'fudan': 'CN', 'shanghai': 'CN',
+      'jiao tong': 'CN',
       'zhejiang': 'CN', 'nanjing': 'CN', 'harbin': 'CN', 'beijing': 'CN',
       'alibaba': 'CN', 'tencent': 'CN', 'bytedance': 'CN', 'baidu': 'CN',
       'huawei': 'CN',
+      'cispa': 'DE', 'saarland': 'DE',
       'ntu': 'TW', 'nthu': 'TW', 'nctu': 'TW',
-      'hkust': 'HK', 'hku': 'HK', 'cuhk': 'HK',
+      'hkust': 'HK', 'hku': 'HK', 'cuhk': 'HK', 'chinese university': 'HK',
       'tokyo': 'JP', 'kyoto': 'JP', 'osaka': 'JP', 'tohoku': 'JP',
       'kaist': 'KR', 'seoul': 'KR', 'postech': 'KR',
       'nus': 'SG', 'ntu singapore': 'SG', 'sutd': 'SG',
@@ -261,6 +275,20 @@
   function getFlagForInstitution(name) {
     var code = getCountryCodeFromName(name);
     return code ? countryCodeToFlagHtml(code) : '';
+  }
+
+  function applySearch() {
+    if (searchFilter === '') {
+      filteredData = allData.slice();
+    } else {
+      var lower = searchFilter.toLowerCase();
+      filteredData = allData.filter(function(inst) {
+        var aff = (inst.affiliation || '').toLowerCase();
+        return aff.indexOf(lower) !== -1;
+      });
+    }
+    sortData(sortCol, sortAsc);
+    currentPage = 0;
   }
 
   function render() {
@@ -357,6 +385,7 @@
   }
 
   function sortData(colIdx, asc) {
+    sortedData = filteredData.slice();
     var key;
     if (colIdx < fixedCols.length) {
       key = fixedCols[colIdx].key;
@@ -441,7 +470,7 @@
       var aff = (inst.affiliation || '').toLowerCase();
       return aff && aff !== 'unknown' && !aff.startsWith('_unknown');
     });
-    sortedData = allData.slice();
+    applySearch();
     
     // Extract year columns
     var yrs = {};
@@ -488,6 +517,13 @@
   // Area filter
   document.getElementById('areaFilter').addEventListener('change', function() {
     loadArea(this.value);
+  });
+
+  // Search filter
+  document.getElementById('affiliationSearch').addEventListener('input', function() {
+    searchFilter = this.value;
+    applySearch();
+    render();
   });
 
   // Controls
