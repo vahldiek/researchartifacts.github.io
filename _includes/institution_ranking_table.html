@@ -417,13 +417,13 @@
 
       // Apply contribution type filter
       if (filterMode === 'both') {
-        if (!(inst.artifacts > 0 && inst.ae_memberships > 0)) return false;
+        if (!(inst.combined_score > 0)) return false;
       } else if (filterMode === 'artifacts_only') {
-        if (!(inst.artifacts > 0)) return false;
+        if (!(inst.artifact_score > 0)) return false;
       } else if (filterMode === 'ae_only') {
-        if (!(inst.ae_memberships > 0)) return false;
+        if (!(inst.ae_score > 0)) return false;
       } else {
-        if (!(inst.artifacts > 0 && inst.ae_memberships > 0)) return false;
+        if (!(inst.combined_score > 0)) return false;
       }
 
       if (geoFilter === 'world') return true;
