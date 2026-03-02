@@ -19,6 +19,15 @@
       </select>
     </div>
     <div style="white-space:nowrap;">
+      <label style="font-weight:bold; margin-right:4px; font-size:1em;">Contribution Type:</label>
+      <select id="contributionFilter" style="padding:2px 6px; font-size:1em;">
+        <option value="all" selected>All Contributions</option>
+        <option value="both">Both (Artifacts + AE)</option>
+        <option value="artifacts_only">Artifacts Only</option>
+        <option value="ae_only">AE Service Only</option>
+      </select>
+    </div>
+    <div style="white-space:nowrap;">
       <label style="font-weight:bold; margin-right:4px; font-size:1em;">Researcher:</label>
       <input id="cNameSearch" type="text" placeholder="Search by name…" style="padding:2px 6px; font-size:1em; width:160px;">
     </div>
@@ -28,15 +37,6 @@
     </div>
   </div>
 </div>
-    <div style="white-space:nowrap;">
-      <label style="font-weight:bold; margin-right:4px; font-size:1em;">Contribution Type:</label>
-      <select id="contributionFilter" style="padding:2px 6px; font-size:1em;">
-        <option value="all" selected>All Contributions</option>
-        <option value="both">Both (Artifacts + AE)</option>
-        <option value="artifacts_only">Artifacts Only</option>
-        <option value="ae_only">AE Service Only</option>
-      </select>
-    </div>
 
 <div id="combined-legend" style="margin:0 0 6px 0; display:none; font-size:0.85em; color:#555;">
   Legend: #=Rank, R=Researcher, A=Affiliation, C=Combined Score, Ar=Artifacts, P=Papers, AR%=Artifact Rate, RR%=Repro Rate, AE=AE Service, Ch=Chaired
