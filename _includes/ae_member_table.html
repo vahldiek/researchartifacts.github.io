@@ -56,7 +56,7 @@
   var fixedCols = [
     {label:'#',                 key:'rank',               type:'num',   tip:'Rank'},
     {label:'M',                 key:'name',               type:'alpha', tip:'Member'},
-    {label:'AE',                key:'total_memberships',  type:'num',   tip:'Total AE memberships'},
+    {label:'AE',                key:'total_memberships',  type:'num',   tip:'AE Service Score (3×memberships + 2×chairs)'},
     {label:'Ch',                key:'chair_count',        type:'num',   tip:'Times chaired (★)'},
     {label:'A',                 key:'affiliation',        type:'alpha', tip:'Affiliation'},
     {label:'F',                 key:'first_year',         type:'num',   tip:'First year'},
@@ -77,7 +77,8 @@
       var profileUrl = baseUrl + '/author.html?name=' + encodeURIComponent(m.name);
       var displayName = m.display_name || m.name;
       cells.push('<td><a href="' + profileUrl + '">' + escHtml(displayName) + '</a></td>');
-      cells.push('<td><strong>' + m.total_memberships + '</strong></td>');
+      var aeScore = (m.total_memberships * 3) + (m.chair_count * 2);
+      cells.push('<td><strong>' + aeScore + '</strong></td>');
       var chairLabel = m.chair_count > 0 ? m.chair_count + ' \u2605' : '';
       cells.push('<td>' + chairLabel + '</td>');
       cells.push('<td>' + escHtml(m.affiliation || '') + '</td>');
@@ -134,6 +135,9 @@
         var y = parseInt(key.slice(2));
         av = (a.years || {})[y] || 0;
         bv = (b.years || {})[y] || 0;
+      } else if (key === 'total_memberships') {
+        av = ((a.total_memberships || 0) * 3) + ((a.chair_count || 0) * 2);
+        bv = ((b.total_memberships || 0) * 3) + ((b.chair_count || 0) * 2);
       } else if (key === 'name' || key === 'affiliation') {
         av = (a[key] || '').toLowerCase();
         bv = (b[key] || '').toLowerCase();

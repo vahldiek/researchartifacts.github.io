@@ -4,7 +4,7 @@ permalink: /ae_members.html
 member_data_url: /assets/data/ae_members.json
 ---
 
-Recurring Artifact Evaluation committee members across all tracked systems and security conferences, ranked by number of committee memberships. Only members who served at least twice are listed. The **Chaired** column (★) indicates how many times the member served as AE chair or co-chair.
+Recurring Artifact Evaluation committee members across all tracked systems and security conferences, ranked by AE service score (3×memberships + 2×chairs). Only members who served at least twice are listed. The **Chaired** column (★) indicates how many times the member served as AE chair or co-chair.
 
 {% if site.data.committee_stats %}
 - **{{ site.data.committee_stats.recurring_members_systems }}** recurring members at systems conferences
