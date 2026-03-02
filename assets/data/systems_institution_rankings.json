@@ -4942,7 +4942,7 @@
     "ae_memberships": 14,
     "chair_count": 0,
     "total_papers": 1,
-    "artifact_rate": 200.0,
+    "artifact_rate": 100.0,
     "num_authors": 7,
     "top_authors": [
       {
@@ -5342,7 +5342,7 @@
     "ae_memberships": 12,
     "chair_count": 0,
     "total_papers": 2,
-    "artifact_rate": 150.0,
+    "artifact_rate": 100.0,
     "num_authors": 7,
     "top_authors": [
       {
@@ -5895,7 +5895,7 @@
     "ae_memberships": 12,
     "chair_count": 0,
     "total_papers": 0,
-    "artifact_rate": 0,
+    "artifact_rate": 100.0,
     "num_authors": 3,
     "top_authors": [
       {
@@ -6267,7 +6267,7 @@
     "ae_memberships": 9,
     "chair_count": 0,
     "total_papers": 0,
-    "artifact_rate": 0,
+    "artifact_rate": 100.0,
     "num_authors": 4,
     "top_authors": [
       {
@@ -9293,7 +9293,7 @@
       },
       {
         "name": "Stijn Volckaert",
-        "affiliation": "KU Leuven, Gent, Belgium",
+        "affiliation": "KU Leuven",
         "combined_score": 4,
         "artifacts": 2,
         "ae_memberships": 0,
@@ -9536,7 +9536,7 @@
     "ae_memberships": 0,
     "chair_count": 0,
     "total_papers": 2,
-    "artifact_rate": 150.0,
+    "artifact_rate": 100.0,
     "num_authors": 1,
     "top_authors": [
       {
@@ -9641,7 +9641,7 @@
     "ae_memberships": 2,
     "chair_count": 0,
     "total_papers": 0,
-    "artifact_rate": 0,
+    "artifact_rate": 100.0,
     "num_authors": 1,
     "top_authors": [
       {
@@ -10154,7 +10154,7 @@
     "ae_memberships": 2,
     "chair_count": 0,
     "total_papers": 0,
-    "artifact_rate": 0,
+    "artifact_rate": 100.0,
     "num_authors": 2,
     "top_authors": [
       {
@@ -10197,7 +10197,7 @@
     "ae_memberships": 2,
     "chair_count": 0,
     "total_papers": 0,
-    "artifact_rate": 0,
+    "artifact_rate": 100.0,
     "num_authors": 2,
     "top_authors": [
       {
@@ -10240,7 +10240,7 @@
     "ae_memberships": 0,
     "chair_count": 0,
     "total_papers": 0,
-    "artifact_rate": 0,
+    "artifact_rate": 100.0,
     "num_authors": 3,
     "top_authors": [
       {
@@ -10289,7 +10289,7 @@
     "ae_memberships": 0,
     "chair_count": 0,
     "total_papers": 0,
-    "artifact_rate": 0,
+    "artifact_rate": 100.0,
     "num_authors": 3,
     "top_authors": [
       {
@@ -10498,7 +10498,7 @@
     "ae_memberships": 0,
     "chair_count": 0,
     "total_papers": 2,
-    "artifact_rate": 150.0,
+    "artifact_rate": 100.0,
     "num_authors": 2,
     "top_authors": [
       {
@@ -12351,7 +12351,7 @@
     "ae_memberships": 0,
     "chair_count": 0,
     "total_papers": 1,
-    "artifact_rate": 200.0,
+    "artifact_rate": 100.0,
     "num_authors": 2,
     "top_authors": [
       {
@@ -12393,7 +12393,7 @@
     "ae_memberships": 0,
     "chair_count": 0,
     "total_papers": 0,
-    "artifact_rate": 0,
+    "artifact_rate": 100.0,
     "num_authors": 2,
     "top_authors": [
       {
@@ -12516,7 +12516,7 @@
     "ae_memberships": 0,
     "chair_count": 0,
     "total_papers": 0,
-    "artifact_rate": 0,
+    "artifact_rate": 100.0,
     "num_authors": 2,
     "top_authors": [
       {
@@ -12557,7 +12557,7 @@
     "ae_memberships": 0,
     "chair_count": 0,
     "total_papers": 1,
-    "artifact_rate": 200.0,
+    "artifact_rate": 100.0,
     "num_authors": 2,
     "top_authors": [
       {
@@ -12940,7 +12940,7 @@
     "ae_memberships": 0,
     "chair_count": 0,
     "total_papers": 2,
-    "artifact_rate": 150.0,
+    "artifact_rate": 100.0,
     "num_authors": 1,
     "top_authors": [
       {
@@ -13008,7 +13008,7 @@
     "ae_memberships": 0,
     "chair_count": 0,
     "total_papers": 1,
-    "artifact_rate": 200.0,
+    "artifact_rate": 100.0,
     "num_authors": 1,
     "top_authors": [
       {
@@ -13209,7 +13209,7 @@
     "ae_memberships": 0,
     "chair_count": 0,
     "total_papers": 0,
-    "artifact_rate": 0,
+    "artifact_rate": 100.0,
     "num_authors": 1,
     "top_authors": [
       {
@@ -13473,7 +13473,7 @@
     "ae_memberships": 0,
     "chair_count": 0,
     "total_papers": 0,
-    "artifact_rate": 0,
+    "artifact_rate": 100.0,
     "num_authors": 1,
     "top_authors": [
       {
@@ -13671,7 +13671,7 @@
     "ae_memberships": 0,
     "chair_count": 0,
     "total_papers": 0,
-    "artifact_rate": 0,
+    "artifact_rate": 100.0,
     "num_authors": 1,
     "top_authors": [
       {
@@ -13968,7 +13968,7 @@
     "ae_memberships": 0,
     "chair_count": 0,
     "total_papers": 0,
-    "artifact_rate": 0,
+    "artifact_rate": 100.0,
     "num_authors": 1,
     "top_authors": [
       {
@@ -14397,7 +14397,7 @@
     "ae_memberships": 0,
     "chair_count": 0,
     "total_papers": 0,
-    "artifact_rate": 0,
+    "artifact_rate": 100.0,
     "num_authors": 1,
     "top_authors": [
       {
@@ -14628,7 +14628,7 @@
     "ae_memberships": 0,
     "chair_count": 0,
     "total_papers": 0,
-    "artifact_rate": 0,
+    "artifact_rate": 100.0,
     "num_authors": 1,
     "top_authors": [
       {
@@ -14727,7 +14727,7 @@
     "ae_memberships": 0,
     "chair_count": 0,
     "total_papers": 0,
-    "artifact_rate": 0,
+    "artifact_rate": 100.0,
     "num_authors": 1,
     "top_authors": [
       {
@@ -14760,7 +14760,7 @@
     "ae_memberships": 0,
     "chair_count": 0,
     "total_papers": 0,
-    "artifact_rate": 0,
+    "artifact_rate": 100.0,
     "num_authors": 1,
     "top_authors": [
       {
@@ -14826,7 +14826,7 @@
     "ae_memberships": 0,
     "chair_count": 0,
     "total_papers": 0,
-    "artifact_rate": 0,
+    "artifact_rate": 100.0,
     "num_authors": 1,
     "top_authors": [
       {
@@ -14859,7 +14859,7 @@
     "ae_memberships": 0,
     "chair_count": 0,
     "total_papers": 0,
-    "artifact_rate": 0,
+    "artifact_rate": 100.0,
     "num_authors": 1,
     "top_authors": [
       {
