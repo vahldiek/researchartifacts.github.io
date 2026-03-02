@@ -11,36 +11,32 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.0.0/css/flag-icons.min.css">
 
 <div id="institution-controls" style="margin-bottom:6px; display:none; font-size:1em;">
-  <table style="border-collapse: collapse; width: 100%;">
-    <tr>
-      <td style="padding: 4px; text-align: left; width: 33%;">
-        <label style="font-weight:bold; margin-right:4px; white-space:nowrap; font-size:1em;">Area:</label>
-        <select id="areaFilter" style="padding:2px 6px; font-size:1em;">
-          <option value="all" selected>All Conferences</option>
-          <option value="systems">Systems Only</option>
-          <option value="security">Security Only</option>
-        </select>
-      </td>
-      <td style="padding: 4px; text-align: left; width: 33%;">
-        <label style="font-weight:bold; margin-right:4px; white-space:nowrap; font-size:1em;">Geo:</label>
-        <select id="geoFilter" style="padding:2px 6px; font-size:1em;"></select>
-      </td>
-      <td style="padding: 4px; text-align: left; width: 34%;">
-        <label style="font-weight:bold; margin-right:4px; white-space:nowrap; font-size:1em;">Search:</label>
-        <input type="text" id="affiliationSearch" placeholder="Filter by institution name..." style="padding:2px 6px; font-size:1em; width:200px;">
-      </td>
-    </tr>
-      <tr>
-        <td style="padding: 4px; text-align: left;" colspan="3">
-          <label style="font-weight:bold; margin-right:4px; white-space:nowrap; font-size:1em;">Contribution Type:</label>
-          <select id="contributionFilter" style="padding:2px 6px; font-size:1em;">
-            <option value="both" selected>Both (Artifacts + AE)</option>
-            <option value="artifacts_only">Artifacts Only</option>
-            <option value="ae_only">AE Service Only</option>
-          </select>
-        </td>
-      </tr>
-  </table>
+  <div style="display:flex; flex-wrap:wrap; gap:8px; align-items:center;">
+    <div style="white-space:nowrap;">
+      <label style="font-weight:bold; margin-right:4px; font-size:1em;">Area:</label>
+      <select id="areaFilter" style="padding:2px 6px; font-size:1em;">
+        <option value="all" selected>All Conferences</option>
+        <option value="systems">Systems Only</option>
+        <option value="security">Security Only</option>
+      </select>
+    </div>
+    <div style="white-space:nowrap;">
+      <label style="font-weight:bold; margin-right:4px; font-size:1em;">Geo:</label>
+      <select id="geoFilter" style="padding:2px 6px; font-size:1em;"></select>
+    </div>
+    <div style="white-space:nowrap;">
+      <label style="font-weight:bold; margin-right:4px; font-size:1em;">Contribution Type:</label>
+      <select id="contributionFilter" style="padding:2px 6px; font-size:1em;">
+        <option value="both" selected>Both (Artifacts + AE)</option>
+        <option value="artifacts_only">Artifacts Only</option>
+        <option value="ae_only">AE Service Only</option>
+      </select>
+    </div>
+    <div style="white-space:nowrap;">
+      <label style="font-weight:bold; margin-right:4px; font-size:1em;">Search:</label>
+      <input type="text" id="affiliationSearch" placeholder="Filter by institution name..." style="padding:2px 6px; font-size:1em; width:200px;">
+    </div>
+  </div>
 </div>
 
 <div id="institution-legend" style="margin:0 0 6px 0; display:none; font-size:0.85em; color:#555;">
