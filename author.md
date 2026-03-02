@@ -66,6 +66,14 @@ layout: default
     </table>
   </div>
 
+  <div id="papers-without-artifacts-section" style="display:none;">
+    <h3>Papers Without Artifacts</h3>
+    <table class="paper-table">
+      <thead><tr><th>#</th><th>Title</th><th>Conference</th><th>Year</th></tr></thead>
+      <tbody id="papers-without-body"></tbody>
+    </table>
+  </div>
+
   <div id="ae-section" style="display:none;">
     <h3>AE Committee Service</h3>
     <div id="ae-summary"></div>
@@ -153,6 +161,23 @@ layout: default
       document.getElementById('papers-section').style.display = 'none';
     }
 
+    // Papers without artifacts table
+    var papers_wo = p.papers_without_artifacts || [];
+    if (papers_wo.length > 0) {
+      document.getElementById('papers-without-artifacts-section').style.display = 'block';
+      var rows = '';
+      // Sort by year desc
+      papers_wo.sort(function(a,b) { return (b.year||0) - (a.year||0); });
+      for (var i = 0; i < papers_wo.length; i++) {
+        var pp = papers_wo[i];
+        rows += '<tr><td>' + (i+1) + '</td><td>' + escHtml(pp.title) + '</td><td>' +
+          escHtml(pp.conference) + '</td><td>' + (pp.year||'') + '</td></tr>';
+      }
+      document.getElementById('papers-without-body').innerHTML = rows;
+    } else {
+      document.getElementById('papers-without-artifacts-section').style.display = 'none';
+    }
+
     // AE service
     var aeYears = p.ae_years || {};
     var hasAE = p.ae_memberships && p.ae_memberships > 0;
@@ -185,11 +210,13 @@ layout: default
 
   function renderChart(p) {
     var papers = p.papers || [];
+    var papers_wo = p.papers_without_artifacts || [];
     var aeYears = p.ae_years || {};
     
     // Collect all years
     var yearSet = {};
     papers.forEach(function(pp) { if (pp.year) yearSet[pp.year] = true; });
+    papers_wo.forEach(function(pp) { if (pp.year) yearSet[pp.year] = true; });
     Object.keys(aeYears).forEach(function(y) { yearSet[y] = true; });
     
     var years = Object.keys(yearSet).map(Number).sort();
@@ -208,6 +235,11 @@ layout: default
       if (pp.year) paperCounts[pp.year] = (paperCounts[pp.year] || 0) + 1;
     });
     
+    var noPaperCounts = {};
+    papers_wo.forEach(function(pp) {
+      if (pp.year) noPaperCounts[pp.year] = (noPaperCounts[pp.year] || 0) + 1;
+    });
+    
     var datasets = [];
     var artifactData = allYears.map(function(y) { return paperCounts[y] || 0; });
     datasets.push({
@@ -217,6 +249,17 @@ layout: default
       borderColor: 'rgba(52, 152, 219, 1)',
       borderWidth: 1
     });
+    
+    var noArtifactData = allYears.map(function(y) { return noPaperCounts[y] || 0; });
+    if (noArtifactData.some(function(d) { return d > 0; })) {
+      datasets.push({
+        label: 'Papers Without Artifacts',
+        data: noArtifactData,
+        backgroundColor: 'rgba(189, 195, 199, 0.7)',
+        borderColor: 'rgba(189, 195, 199, 1)',
+        borderWidth: 1
+      });
+    }
     
     if (Object.keys(aeYears).length > 0) {
       var aeData = allYears.map(function(y) { return aeYears[y] || 0; });
