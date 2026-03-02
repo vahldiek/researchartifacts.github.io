@@ -49,15 +49,15 @@ This page aggregates institution ranking data by country and continent, showing 
 
 <h2>By Country</h2>
 
-<div id="country-controls" style="margin-bottom:6px; font-size:0.9em;">
+<div id="country-controls" style="margin-bottom:6px; font-size:1em;">
   <div style="display:flex; flex-wrap:wrap; gap:8px; align-items:center;">
     <div style="white-space:nowrap;">
-      <label style="font-weight:bold; margin-right:4px;">Search:</label>
-      <input id="countrySearch" type="text" placeholder="Filter countries…" style="padding:2px 6px; font-size:0.95em; width:160px;">
+      <label style="font-weight:bold; margin-right:4px; font-size:1em;">Search:</label>
+      <input id="countrySearch" type="text" placeholder="Filter countries…" style="padding:2px 6px; font-size:1em; width:160px;">
     </div>
     <div style="white-space:nowrap;">
-      <label style="font-weight:bold; margin-right:4px;">Sort&nbsp;by:</label>
-      <select id="countrySort" style="padding:2px 6px; font-size:0.95em;">
+      <label style="font-weight:bold; margin-right:4px; font-size:1em;">Sort&nbsp;by:</label>
+      <select id="countrySort" style="padding:2px 6px; font-size:1em;">
         <option value="combined" selected>Combined Score</option>
         <option value="institutions">Institutions</option>
         <option value="researchers">Researchers</option>
