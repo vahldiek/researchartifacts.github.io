@@ -185,7 +185,12 @@
   function sortData(colIdx, asc) {
     var key;
     if (colIdx < fixedCols.length) {
-      key = fixedCols[colIdx].key;
+      // Use dynamic scoreKey for Score column (index 3) to sort by correct score based on filter mode
+      if (colIdx === 3) {
+        key = scoreKey; // Will be combined_score, artifact_score, or ae_score
+      } else {
+        key = fixedCols[colIdx].key;
+      }
     } else {
       var yIdx = colIdx - fixedCols.length;
       var yr = yearColumns[yIdx];
