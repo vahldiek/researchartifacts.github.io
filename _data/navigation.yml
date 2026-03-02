@@ -12,31 +12,12 @@ main:
         url: statistics/
       - title: "Author Profiles"
         url: author.html
-  - title: "Systems"
-    url: systems/
-    children:
-      - title: "Overview"
-        url: systems/
-      - title: "Artifact Ranking"
-        url: systems/authors.html
-      - title: "ATC"
-        url: systems/atc.html
-      - title: "EuroSys"
-        url: systems/eurosys.html
-      - title: "FAST"
-        url: systems/fast.html
-      - title: "OSDI"
-        url: systems/osdi.html
-      - title: "SC"
-        url: systems/sc.html
-      - title: "SOSP"
-        url: systems/sosp.html
   - title: "Security"
     url: security/
     children:
       - title: "Overview"
         url: security/
-      - title: "Artifact Ranking"
+      - title: "Security Ranking"
         url: security/authors.html
       - title: "ACSAC"
         url: security/acsac.html
@@ -52,6 +33,25 @@ main:
         url: security/usenixsec.html
       - title: "WOOT"
         url: security/woot.html
+  - title: "Systems"
+    url: systems/
+    children:
+      - title: "Overview"
+        url: systems/
+      - title: "Systems Ranking"
+        url: systems/authors.html
+      - title: "ATC"
+        url: systems/atc.html
+      - title: "EuroSys"
+        url: systems/eurosys.html
+      - title: "FAST"
+        url: systems/fast.html
+      - title: "OSDI"
+        url: systems/osdi.html
+      - title: "SC"
+        url: systems/sc.html
+      - title: "SOSP"
+        url: systems/sosp.html
   - title: "AE Committees"
     url: committee.html
     children:

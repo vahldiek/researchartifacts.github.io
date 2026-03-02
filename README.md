@@ -5,7 +5,7 @@ This repository hosts the [researchartifacts.github.io](https://researchartifact
 ## Overview
 
 The website presents:
-- **Area Dashboards**: Dedicated pages for [Systems](https://researchartifacts.github.io/systems) and [Security](https://researchartifacts.github.io/security) conferences
+- **Area Dashboards**: Dedicated pages for [Security](https://researchartifacts.github.io/security) and [Systems](https://researchartifacts.github.io/systems) conferences
 - **Per-Conference Pages**: Detailed statistics, author rankings, and repository data for each conference
 - **Prolific Authors**: Per-area rankings of researchers with most artifact contributions, with reproducibility and functional rates
 - **Repository Statistics**: Stars, forks, and language breakdowns for artifact repos

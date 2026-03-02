@@ -2,7 +2,7 @@
 title: "Artifact Evaluation across Security & Systems Conferences"
 ---
 
-**Research artifacts & artifact evaluation (AE)** drive reproducibility and scientific impact. This project tracks and analyzes artifact evaluation outcomes across major [systems]({{ '/systems/' | relative_url }}) and [security]({{ '/security/' | relative_url }}) conferences, recognizing the contributions of both artifact authors and artifact evaluation committees. We aggregate comprehensive data on artifact evaluation badges, contributor achievements, and repository engagement to promote reproducible research and celebrate the researchers advancing this critical work.
+**Research artifacts & artifact evaluation (AE)** drive reproducibility and scientific impact. This project tracks and analyzes artifact evaluation outcomes across major [security]({{ '/security/' | relative_url }}) and [systems]({{ '/systems/' | relative_url }}) conferences, recognizing the contributions of both artifact authors and artifact evaluation committees. We aggregate comprehensive data on artifact evaluation badges, contributor achievements, and repository engagement to promote reproducible research and celebrate the researchers advancing this critical work.
 
 **Browse rankings:** [Combined Rankings]({{ '/combined_rankings.html' | relative_url }}) (researchers by artifact + AE contributions) · [Institution Rankings]({{ '/institution_rankings.html' | relative_url }}) (institutions by author engagement)
 
