@@ -221,3 +221,51 @@ For artifacts with GitHub/GitLab repositories or Zenodo/Figshare archives, we co
   - Repository type differences (libraries vs. experiment code)
   - Discovery algorithm effects (GitHub trending, recommendation systems)
 - We report these as observational data, not as quality judgments
+
+---
+
+## Artifact Citations
+
+To capture research lineage beyond repository engagement metrics, we track academic citations to artifact DOIs. This reveals second-order impact: papers that cite the artifact repository, indicating downstream research building on the artifact.
+
+### DOI Extraction and Resolution
+
+For each artifact record with a Zenodo or Figshare URL, we extract the Digital Object Identifier (DOI) using regex patterns:
+
+1. **Direct DOI extraction**: If the URL contains a DOI (e.g., `https://doi.org/10.5281/zenodo.7234567`), we extract it directly
+2. **Zenodo record ID lookup**: For Zenodo record page URLs, we parse the record ID and use the Zenodo API to fetch the corresponding DOI
+3. **Filtering**: We exclude badge links and other non-archival URLs
+
+### Citation Data Collection
+
+For each resolved DOI, we query the [OpenAlex](https://openalex.org) API to retrieve:
+- **Citation count**: The `cited_by_count` field (total number of papers citing this DOI)
+
+OpenAlex provides a freely accessible index of scholarly citations from major publishers and preprint servers, updated regularly. No authentication is required.
+
+### Aggregation and Scoring
+
+Citation counts are aggregated at three levels:
+
+1. **Per-artifact**: Each artifact records its DOI and citation count
+2. **Per-author**: All citations from artifacts authored by that person are summed
+3. **Per-institution**: All citations from authors affiliated with that institution are summed
+
+### Citation Score in Combined Rankings
+
+Each citation contributes **+1 point** to the combined score:
+
+```
+Citation Score = Total artifact citations
+Combined Score = Artifact Score + AE Service Score + Citation Score
+```
+
+This recognizes that cited artifacts generate downstream research value, extending the impact timeline beyond immediate adoption.
+
+### Important Notes on Citation Metrics
+
+- **Early-stage signal**: Recent artifacts (2025–2026) have minimal or zero citations due to publication lag in academic indexing (~6–12 months)
+- **Coverage lag**: OpenAlex is updated regularly but not in real-time; citation counts reflect data available at query time
+- **Biased by venue and discipline**: High-profile conferences and papers in well-indexed domains accumulate citations faster
+- **Self-citations included**: OpenAlex counts include citations from the authors' own subsequent work, representing valid research lineage
+- We recommend interpreting citation metrics in context with artifact age (younger artifacts naturally have fewer citations)
