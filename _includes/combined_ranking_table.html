@@ -116,9 +116,12 @@
       cells.push('<td><a href="' + profileUrl + '">' + escHtml(displayName) + '</a></td>');
       var aff = (c.display_affiliation || c.affiliation || '').replace(/^_/, '');
       cells.push('<td>' + escHtml(aff) + '</td>');
-      cells.push('<td><strong>' + (c[scoreKey] || 0) + '</strong></td>');
-      cells.push('<td>' + (c.artifact_score || 0) + '</td>');
-      cells.push('<td>' + (c.ae_score || 0) + '</td>');
+      // S column (combined_score) - bold when filterMode is 'both'
+      cells.push('<td>' + (filterMode === 'both' ? '<strong>' : '') + (c.combined_score || 0) + (filterMode === 'both' ? '</strong>' : '') + '</td>');
+      // AS column (artifact_score) - bold when filterMode is 'artifacts_only'
+      cells.push('<td>' + (filterMode === 'artifacts_only' ? '<strong>' : '') + (c.artifact_score || 0) + (filterMode === 'artifacts_only' ? '</strong>' : '') + '</td>');
+      // AES column (ae_score) - bold when filterMode is 'ae_only'
+      cells.push('<td>' + (filterMode === 'ae_only' ? '<strong>' : '') + (c.ae_score || 0) + (filterMode === 'ae_only' ? '</strong>' : '') + '</td>');
       // Display infinity symbol for null ae_ratio (no AE service)
       var aeRatioDisplay = (c.ae_ratio === null || c.ae_ratio === undefined) ? '∞' : (c.ae_ratio === 0 ? '0' : c.ae_ratio);
       cells.push('<td>' + aeRatioDisplay + '</td>');

@@ -487,9 +487,12 @@
       var aff = (inst.affiliation || 'Unknown').replace(/^_/, '');
       var flag = getFlagForInstitution(aff);
       cells.push('<td>' + (flag || '') + escHtml(aff) + '</td>');
-      cells.push('<td><strong>' + inst[scoreKey] + '</strong></td>');
-      cells.push('<td>' + (inst.artifact_score || 0) + '</td>');
-      cells.push('<td>' + (inst.ae_score || 0) + '</td>');
+      // S column (combined_score) - bold when filterMode is 'both'
+      cells.push('<td>' + (filterMode === 'both' ? '<strong>' : '') + (inst.combined_score || 0) + (filterMode === 'both' ? '</strong>' : '') + '</td>');
+      // AS column (artifact_score) - bold when filterMode is 'artifacts_only'
+      cells.push('<td>' + (filterMode === 'artifacts_only' ? '<strong>' : '') + (inst.artifact_score || 0) + (filterMode === 'artifacts_only' ? '</strong>' : '') + '</td>');
+      // AES column (ae_score) - bold when filterMode is 'ae_only'
+      cells.push('<td>' + (filterMode === 'ae_only' ? '<strong>' : '') + (inst.ae_score || 0) + (filterMode === 'ae_only' ? '</strong>' : '') + '</td>');
       // Display infinity symbol for null ae_ratio (no AE service)
       var aeRatioDisplay = (inst.ae_ratio === null || inst.ae_ratio === undefined) ? '∞' : (inst.ae_ratio === 0 ? '0' : inst.ae_ratio);
       cells.push('<td>' + aeRatioDisplay + '</td>');
