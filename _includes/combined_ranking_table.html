@@ -110,7 +110,7 @@
     for (var i = 0; i < page.length; i++) {
       var c = page[i];
       var cells = [];
-      cells.push('<td>' + (start + i + 1) + '</td>');
+      cells.push('<td>' + (c._originalRank || (start + i + 1)) + '</td>');
       var displayName = (c.display_name || c.name || '').replace(/\t/g, ' ');
       var profileUrl = baseUrl + '/author.html?name=' + encodeURIComponent(c.name);
       cells.push('<td><a href="' + profileUrl + '">' + escHtml(displayName) + '</a></td>');
@@ -271,6 +271,7 @@
           if (sortCol === idx) { sortAsc = !sortAsc; }
           else { sortCol = idx; sortAsc = false; }
           sortData(sortCol, sortAsc);
+          assignRanks();
           currentPage = 0;
           render();
           var ths = document.getElementById('combinedHead').querySelectorAll('.c-sortable');
@@ -279,6 +280,13 @@
         };
       })(ci));
       tr.appendChild(th);
+    }
+  }
+
+  function assignRanks() {
+    // Assign original rank to each item based on current sorted order
+    for (var i = 0; i < sortedData.length; i++) {
+      sortedData[i]._originalRank = i + 1;
     }
   }
 
@@ -299,6 +307,7 @@
     buildHeader();
     applyFilter();
     sortData(sortCol, sortAsc);
+    assignRanks();
     render();
 
     document.getElementById('combinedLoading').style.display = 'none';
@@ -336,6 +345,8 @@
     currentPage = 0;
     buildHeader(); // Rebuild header to update score column tooltip
     applyFilter();
+    sortData(sortCol, sortAsc);
+    assignRanks();
     render();
   });
 

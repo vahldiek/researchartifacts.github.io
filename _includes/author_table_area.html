@@ -76,7 +76,7 @@
     for (var i = 0; i < page.length; i++) {
       var a = page[i];
       var cells = [];
-      cells.push('<td>' + (start + i + 1) + '</td>');
+      cells.push('<td>' + (a._originalRank || (start + i + 1)) + '</td>');
       var profileUrl = baseUrl + '/author.html?name=' + encodeURIComponent(a.name);
       var displayName = a.display_name || a.name;
       cells.push('<td><a href="' + profileUrl + '">' + escHtml(displayName) + '</a></td>');
@@ -193,6 +193,7 @@
           if (sortCol === idx) { sortAsc = !sortAsc; }
           else { sortCol = idx; sortAsc = false; }
           sortData(sortCol, sortAsc);
+          assignRanks();
           currentPage = 0;
           render();
           // Update header indicators
@@ -202,6 +203,13 @@
         };
       })(c));
       tr.appendChild(th);
+    }
+  }
+
+  function assignRanks() {
+    // Assign original rank to each item based on current sorted order
+    for (var i = 0; i < sortedAuthors.length; i++) {
+      sortedAuthors[i]._originalRank = i + 1;
     }
   }
 
@@ -218,6 +226,7 @@
     buildHeader();
     applyFilter();
     sortData(sortCol, sortAsc);
+    assignRanks();
     render();
 
     document.getElementById('authorLoading').style.display = 'none';

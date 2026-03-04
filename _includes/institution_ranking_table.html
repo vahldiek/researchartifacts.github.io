@@ -40,7 +40,7 @@
 </div>
 
 <div id="institution-legend" style="margin:0 0 6px 0; display:none; font-size:0.85em; color:#555;">
-  Legend: #=Rank, S=Combined Score, AS=Artifact Score, AES=AE Service Score, A:E=Artifact:Evaluation Ratio, R=Researchers, Ar=Artifacts, C=Citations, P=Papers, AR%=Artifact Rate, RR%=Repro. Rate, AE=AE Memberships, Ch=Chairs
+  Legend: #=Rank, S=Combined Score, AS=Artifact Score, AES=AE Service Score, C=Citations, A:E=Artifact:Evaluation Ratio, R=Researchers, Ar=Artifacts, P=Papers, AR%=Artifact Rate, RR%=Repro. Rate, AE=AE Memberships, Ch=Chairs
 </div>
 
 <div id="institutionLoading"><em>Loading institution ranking data…</em></div>
@@ -86,10 +86,10 @@
     {label:'S',                key:'combined_score',    type:'num',   tip:'Combined score (artifact + AE service)'},
     {label:'AS',               key:'artifact_score',    type:'num',   tip:'Artifact score: sum of all artifact badges'},
     {label:'AES',              key:'ae_score',          type:'num',   tip:'AE service score: sum of committee service'},
+    {label:'C',                key:'artifact_citations', type:'num',   tip:'Total artifact citations (DOI cited_by_count)'},
     {label:'A:E',              key:'ae_ratio',          type:'num',   tip:'Artifact:Evaluation ratio (artifact_score/ae_score)'},
     {label:'R',                key:'num_authors',       type:'num',   tip:'Researchers'},
     {label:'Ar',               key:'artifacts',         type:'num',   tip:'Total artifacts'},
-    {label:'C',                key:'artifact_citations', type:'num',   tip:'Total artifact citations (DOI cited_by_count)'},
     {label:'P',                key:'total_papers',      type:'num',   tip:'Total papers'},
     {label:'AR%',              key:'artifact_rate',     type:'num',   tip:'Artifact rate: % papers with artifact'},
     {label:'RR%',              key:'repro_rate',        type:'num',   tip:'Reproducibility rate: % artifacts Reproduced'},
@@ -460,6 +460,7 @@
     }
 
     sortData(sortCol, sortAsc);
+    assignRanks();
     currentPage = 0;
   }
 
@@ -482,7 +483,7 @@
       var expandIcon = inst.top_authors && inst.top_authors.length > 0 
         ? '<span class="expand-btn" style="cursor:pointer;margin-right:4px;">' + (isExpanded ? '▼' : '▶') + '</span>'
         : '<span style="margin-right:12px;"></span>';
-      cells.push('<td>' + expandIcon + (start + i + 1) + '</td>');
+      cells.push('<td>' + expandIcon + (inst._originalRank || (start + i + 1)) + '</td>');
       
       var aff = (inst.affiliation || 'Unknown').replace(/^_/, '');
       var flag = getFlagForInstitution(aff);
@@ -490,12 +491,12 @@
       cells.push('<td><strong>' + inst[scoreKey] + '</strong></td>');
       cells.push('<td>' + (inst.artifact_score || 0) + '</td>');
       cells.push('<td>' + (inst.ae_score || 0) + '</td>');
+      cells.push('<td>' + (inst.artifact_citations || 0) + '</td>');
       // Display infinity symbol for null ae_ratio (no AE service)
       var aeRatioDisplay = (inst.ae_ratio === null || inst.ae_ratio === undefined) ? '∞' : (inst.ae_ratio === 0 ? '0' : inst.ae_ratio);
       cells.push('<td>' + aeRatioDisplay + '</td>');
       cells.push('<td>' + (inst.num_authors || '') + '</td>');
       cells.push('<td>' + (inst.artifacts || '') + '</td>');
-      cells.push('<td>' + (inst.artifact_citations || 0) + '</td>');
       cells.push('<td>' + (inst.total_papers || '') + '</td>');
       cells.push('<td>' + (inst.total_papers > 0 ? inst.artifact_rate + '%' : '') + '</td>');
       // Calculate repro rate from badges
@@ -650,6 +651,7 @@
           if (sortCol === idx) { sortAsc = !sortAsc; }
           else { sortCol = idx; sortAsc = false; }
           sortData(sortCol, sortAsc);
+          assignRanks();
           currentPage = 0;
           render();
           var ths = document.getElementById('institutionHead').querySelectorAll('.i-sortable');
@@ -658,6 +660,13 @@
         };
       })(ci));
       tr.appendChild(th);
+    }
+  }
+
+  function assignRanks() {
+    // Assign original rank to each item based on current sorted order
+    for (var i = 0; i < sortedData.length; i++) {
+      sortedData[i]._originalRank = i + 1;
     }
   }
 
@@ -684,6 +693,7 @@
 
     buildHeader();
     sortData(sortCol, sortAsc);
+    assignRanks();
     render();
 
     document.getElementById('institutionLoading').style.display = 'none';

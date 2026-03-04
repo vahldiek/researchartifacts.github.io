@@ -47,7 +47,7 @@
   var yearColumns = [];
   var currentPage = 0;
   var pageSize = 100;
-  var sortCol = 2; // default sort: Memberships
+  var sortCol = 3; // default sort: AE Service Score
   var sortAsc = false;
   var nameQuery = '';
   var affQuery = '';
@@ -73,7 +73,7 @@
     for (var i = 0; i < page.length; i++) {
       var m = page[i];
       var cells = [];
-      cells.push('<td>' + (start + i + 1) + '</td>');
+      cells.push('<td>' + (m._originalRank || (start + i + 1)) + '</td>');
       var profileUrl = baseUrl + '/author.html?name=' + encodeURIComponent(m.name);
       var displayName = m.display_name || m.name;
       cells.push('<td><a href="' + profileUrl + '">' + escHtml(displayName) + '</a></td>');
@@ -191,6 +191,7 @@
           if (sortCol === idx) { sortAsc = !sortAsc; }
           else { sortCol = idx; sortAsc = false; }
           sortData(sortCol, sortAsc);
+          assignRanks();
           currentPage = 0;
           render();
           var ths = document.getElementById('memberHead').querySelectorAll('.sortable');
@@ -199,6 +200,13 @@
         };
       })(c));
       tr.appendChild(th);
+    }
+  }
+
+  function assignRanks() {
+    // Assign original rank to each item based on current sorted order
+    for (var i = 0; i < sortedMembers.length; i++) {
+      sortedMembers[i]._originalRank = i + 1;
     }
   }
 
@@ -221,6 +229,7 @@
     buildHeader();
     applyFilter();
     sortData(sortCol, sortAsc);
+    assignRanks();
     render();
 
     document.getElementById('memberLoading').style.display = 'none';
