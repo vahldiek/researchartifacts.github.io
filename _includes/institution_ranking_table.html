@@ -460,7 +460,6 @@
     }
 
     sortData(sortCol, sortAsc);
-    assignRanks();
     currentPage = 0;
   }
 
@@ -747,6 +746,7 @@
     currentPage = 0;
     buildHeader(); // Rebuild header to update score column tooltip
     applySearch();
+    assignRanks();
     render();
   });
 
