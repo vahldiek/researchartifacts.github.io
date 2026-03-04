@@ -1,8 +1,8 @@
 {
   "total_artifacts": 2576,
-  "unique_dois": 794,
-  "artifacts_with_doi": 795,
-  "openalex_resolved": 779,
+  "unique_dois": 796,
+  "artifacts_with_doi": 797,
+  "openalex_resolved": 780,
   "artifacts_with_citations": 15,
   "by_year": {
     "2017": {
@@ -55,7 +55,7 @@
     },
     "2025": {
       "n": 710,
-      "resolved": 452,
+      "resolved": 453,
       "cited": 1,
       "sum_cites": 1
     },

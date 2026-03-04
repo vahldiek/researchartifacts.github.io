@@ -22313,7 +22313,11 @@
       "Functional"
     ],
     "repository_url": "",
-    "artifact_url": "https://github.com/mahaloz/sailr-eval/tree/e1af48353c1c5b32cc53cbaa015722d57767bd6e"
+    "artifact_url": "https://github.com/mahaloz/sailr-eval/tree/e1af48353c1c5b32cc53cbaa015722d57767bd6e",
+    "artifact_urls": [
+      "https://github.com/mahaloz/sailr-eval/tree/e1af48353c1c5b32cc53cbaa015722d57767bd6e",
+      "https://github.com/mahaloz/angr-sailr/tree/be3855762a84983137696aa14efe2431a86a7e97"
+    ]
   },
   {
     "conference": "USENIXSEC",
@@ -23010,7 +23014,12 @@
       "Functional"
     ],
     "repository_url": "",
-    "artifact_url": "https://github.com/pure-uwb/pure-poc/tree/f73633f9716e42d0b8917912c72c912b479f3153"
+    "artifact_url": "https://github.com/pure-uwb/pure-poc/tree/f73633f9716e42d0b8917912c72c912b479f3153",
+    "artifact_urls": [
+      "https://github.com/pure-uwb/pure-poc/tree/f73633f9716e42d0b8917912c72c912b479f3153",
+      "https://github.com/pure-uwb/pure-sec-rel/tree/77cc1792f79bec02b59168ee922dfe335c972ad3",
+      "https://github.com/pure-uwb/pure-models/tree/8aef1c0254642b476d9736ae5770c1992e620b27"
+    ]
   },
   {
     "conference": "USENIXSEC",
@@ -23060,7 +23069,11 @@
       "Badges: Available"
     ],
     "repository_url": "",
-    "artifact_url": "https://github.com/efrenlopezm/plc-sok-dataset/tree/ebeb195e5969d99061302950bb173c6d997be30e"
+    "artifact_url": "https://github.com/efrenlopezm/plc-sok-dataset/tree/ebeb195e5969d99061302950bb173c6d997be30e",
+    "artifact_urls": [
+      "https://github.com/efrenlopezm/plc-sok-dataset/tree/ebeb195e5969d99061302950bb173c6d997be30e",
+      "https://github.com/efrenlopezm/ics2matrix/tree/e60ba236a45483bec81b16677b8c71314267f235"
+    ]
   },
   {
     "conference": "USENIXSEC",
@@ -23405,7 +23418,11 @@
       "Reproduced"
     ],
     "repository_url": "",
-    "artifact_url": "https://hub.docker.com/r/shohamd/cacheflushsimulator"
+    "artifact_url": "https://hub.docker.com/r/shohamd/cacheflushsimulator",
+    "artifact_urls": [
+      "https://hub.docker.com/r/shohamd/cacheflushsimulator",
+      "https://github.com/shohamda/CacheFlushSimulator"
+    ]
   },
   {
     "conference": "USENIXSEC",
@@ -24530,7 +24547,11 @@
       "Badges: Available"
     ],
     "repository_url": "",
-    "artifact_url": "https://zenodo.org/records/14641606"
+    "artifact_url": "https://zenodo.org/records/14641606",
+    "artifact_urls": [
+      "https://zenodo.org/records/14641606",
+      "https://zenodo.org/records/14641608"
+    ]
   },
   {
     "conference": "USENIXSEC",
@@ -24829,7 +24850,11 @@
       "Badges: Available"
     ],
     "repository_url": "",
-    "artifact_url": "https://doi.org/10.5281/zenodo.14676762"
+    "artifact_url": "https://doi.org/10.5281/zenodo.14676762",
+    "artifact_urls": [
+      "https://doi.org/10.5281/zenodo.14676762",
+      "https://doi.org/10.5281/zenodo.14676842"
+    ]
   },
   {
     "conference": "USENIXSEC",
@@ -25057,7 +25082,11 @@
       "Badges: Available"
     ],
     "repository_url": "",
-    "artifact_url": "https://zenodo.org/records/14738544"
+    "artifact_url": "https://zenodo.org/records/14738544",
+    "artifact_urls": [
+      "https://zenodo.org/records/14738544",
+      "https://audiowatermark.github.io/"
+    ]
   },
   {
     "conference": "USENIXSEC",
@@ -25283,7 +25312,12 @@
       "Badges: Available"
     ],
     "repository_url": "",
-    "artifact_url": "https://doi.org/10.5281/zenodo.14725129"
+    "artifact_url": "https://doi.org/10.5281/zenodo.14725129",
+    "artifact_urls": [
+      "https://doi.org/10.5281/zenodo.14725129",
+      "https://doi.org/10.5281/zenodo.14725139",
+      "https://doi.org/10.5281/zenodo.14725141"
+    ]
   },
   {
     "conference": "USENIXSEC",
@@ -26216,7 +26250,11 @@
       "Functional"
     ],
     "repository_url": "",
-    "artifact_url": "https://doi.org/10.5281/zenodo.14736967"
+    "artifact_url": "https://doi.org/10.5281/zenodo.14736967",
+    "artifact_urls": [
+      "https://doi.org/10.5281/zenodo.14736967",
+      "https://doi.org/10.5281/zenodo.14870218"
+    ]
   },
   {
     "conference": "USENIXSEC",
@@ -26432,7 +26470,11 @@
       "Badges: Available"
     ],
     "repository_url": "",
-    "artifact_url": "https://zenodo.org/records/14738722?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6ImNhOGY4OTliLTVjYjYtNGZmOC1iNTkyLWVlNDQ0MTU5MTViYyIsImRhdGEiOnt9LCJyYW5kb20iOiIwZTNiYzdmNDM1MzUwMDZlNDdmMmNjZDViNDEwZDIzMyJ9.kTKRGiA0g9vtq0yDhx8InDSBH72a8gaKNdPt29ByeB2WgRoiTrgX_pEc8Kbe6bcXTzZxCoQv22b9fTcxk0FwmQ"
+    "artifact_url": "https://zenodo.org/records/14738722?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6ImNhOGY4OTliLTVjYjYtNGZmOC1iNTkyLWVlNDQ0MTU5MTViYyIsImRhdGEiOnt9LCJyYW5kb20iOiIwZTNiYzdmNDM1MzUwMDZlNDdmMmNjZDViNDEwZDIzMyJ9.kTKRGiA0g9vtq0yDhx8InDSBH72a8gaKNdPt29ByeB2WgRoiTrgX_pEc8Kbe6bcXTzZxCoQv22b9fTcxk0FwmQ",
+    "artifact_urls": [
+      "https://zenodo.org/records/14738722?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6ImNhOGY4OTliLTVjYjYtNGZmOC1iNTkyLWVlNDQ0MTU5MTViYyIsImRhdGEiOnt9LCJyYW5kb20iOiIwZTNiYzdmNDM1MzUwMDZlNDdmMmNjZDViNDEwZDIzMyJ9.kTKRGiA0g9vtq0yDhx8InDSBH72a8gaKNdPt29ByeB2WgRoiTrgX_pEc8Kbe6bcXTzZxCoQv22b9fTcxk0FwmQ",
+      "https://zenodo.org/records/14738853?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjZiMzUwYjMwLWY1OTItNDVhMS04NTc2LTYxMmE0ZTRhZmUyYyIsImRhdGEiOnt9LCJyYW5kb20iOiJmMzViY2QxNWZkMDBiNDhkYzFmNzVlNDIwMTdlMjljMyJ9.QSmiC3hgGNSLXF5pgkrMCmrBMW7Vo8ZzMUV9v_4JrUt6jW5C-NISefClFEAmJKN9PQk7lMRwSIAfcoqeq7KzZw"
+    ]
   },
   {
     "conference": "USENIXSEC",
@@ -26554,7 +26596,13 @@
       "Badges: Available"
     ],
     "repository_url": "",
-    "artifact_url": "https://doi.org/10.5281/zenodo.15540310"
+    "artifact_url": "https://doi.org/10.5281/zenodo.15540310",
+    "artifact_urls": [
+      "https://doi.org/10.5281/zenodo.15540310",
+      "https://doi.org/10.5281/zenodo.15528780",
+      "https://doi.org/10.5281/zenodo.15532579",
+      "https://doi.org/10.5281/zenodo.15568798"
+    ]
   },
   {
     "conference": "USENIXSEC",
@@ -26795,7 +26843,11 @@
       "Badges: Available"
     ],
     "repository_url": "",
-    "artifact_url": "https://doi.org/10.5281/zenodo.15530592"
+    "artifact_url": "https://doi.org/10.5281/zenodo.15530592",
+    "artifact_urls": [
+      "https://doi.org/10.5281/zenodo.15530592",
+      "https://doi.org/10.5281/zenodo.15530617"
+    ]
   },
   {
     "conference": "USENIXSEC",
@@ -27457,7 +27509,11 @@
       "Functional"
     ],
     "repository_url": "",
-    "artifact_url": "https://zenodo.org/records/15603773"
+    "artifact_url": "https://zenodo.org/records/15603773",
+    "artifact_urls": [
+      "https://zenodo.org/records/15603773",
+      "https://zenodo.org/records/16732430"
+    ]
   },
   {
     "conference": "USENIXSEC",
@@ -27518,7 +27574,13 @@
       "Badges: Available"
     ],
     "repository_url": "",
-    "artifact_url": "https://zenodo.org/records/15588740?preview=1&token=eyJhbGciOiJIUzUxMiIsImlhdCI6MTc0OTA1MDI0NiwiZXhwIjoxNzY3MTM5MTk5fQ.eyJpZCI6IjRjOTc1YzIxLWMzYWUtNDg2Yi05ODc4LWEwMzU5OGJhZDg3NCIsImRhdGEiOnt9LCJyYW5kb20iOiJiZTYwZmM1NGViZTk0NDQ0MWZhMDIwY2MzZWQxNjI5MSJ9.mUlhqytiXRiCWXenmvLt0TV0g0X2C3KqfIOhcUv2_StXusX-HCJnqzRMclTpCGvMr6TI_JmuVOAQ78eccjZWHg"
+    "artifact_url": "https://zenodo.org/records/15588740?preview=1&token=eyJhbGciOiJIUzUxMiIsImlhdCI6MTc0OTA1MDI0NiwiZXhwIjoxNzY3MTM5MTk5fQ.eyJpZCI6IjRjOTc1YzIxLWMzYWUtNDg2Yi05ODc4LWEwMzU5OGJhZDg3NCIsImRhdGEiOnt9LCJyYW5kb20iOiJiZTYwZmM1NGViZTk0NDQ0MWZhMDIwY2MzZWQxNjI5MSJ9.mUlhqytiXRiCWXenmvLt0TV0g0X2C3KqfIOhcUv2_StXusX-HCJnqzRMclTpCGvMr6TI_JmuVOAQ78eccjZWHg",
+    "artifact_urls": [
+      "https://zenodo.org/records/15588740?preview=1&token=eyJhbGciOiJIUzUxMiIsImlhdCI6MTc0OTA1MDI0NiwiZXhwIjoxNzY3MTM5MTk5fQ.eyJpZCI6IjRjOTc1YzIxLWMzYWUtNDg2Yi05ODc4LWEwMzU5OGJhZDg3NCIsImRhdGEiOnt9LCJyYW5kb20iOiJiZTYwZmM1NGViZTk0NDQ0MWZhMDIwY2MzZWQxNjI5MSJ9.mUlhqytiXRiCWXenmvLt0TV0g0X2C3KqfIOhcUv2_StXusX-HCJnqzRMclTpCGvMr6TI_JmuVOAQ78eccjZWHg",
+      "https://zenodo.org/records/15579566?preview=1&token=eyJhbGciOiJIUzUxMiIsImlhdCI6MTc0OTA1MjEyOSwiZXhwIjoxNzY3MTM5MTk5fQ.eyJpZCI6ImNkOGVkZTQ3LTczNzgtNGIxNi1hMjE3LTc2YWZjZWNjMDY2MiIsImRhdGEiOnt9LCJyYW5kb20iOiI0MmRhZGRhYzM2YWI3YjdlMjNmMjdlZjdlZTc2MjMwZiJ9.GLiLT2YnxuqaOBxDFxH-HDjzvQ_CSOmHigZJJ_Bq1lI5rTxKaKY69QNIF9dfUb9F8hclEyhEdXA1vFB9ORAJqg",
+      "https://zenodo.org/records/15581150?preview=1&token=eyJhbGciOiJIUzUxMiIsImlhdCI6MTc0OTA1MTc3NCwiZXhwIjoxNzY3MTM5MTk5fQ.eyJpZCI6Ijk5N2U3YWM4LWM2OTMtNDM1Mi05ODBjLTFkZDRmMzIwYWZhZSIsImRhdGEiOnt9LCJyYW5kb20iOiIxZDc2Y2NhZWEzNzBkOTgzOWE3YWRhMmZjY2I2ZGMzMSJ9.S-KodhpXPyBv0vT5nZrHsub0bLpy7Mze4YgF9hgFXoUElcghZir-4sUAzzhPyf3tEqM9AQu2tAA0RU-m19G-hQ",
+      "https://zenodo.org/records/15580030?preview=1&token=eyJhbGciOiJIUzUxMiIsImlhdCI6MTc0OTA1NzI4NSwiZXhwIjoxNzY3MTM5MTk5fQ.eyJpZCI6IjNhMDQ2NzdiLTRmNzgtNDM0YS05NjUwLTEwZGI4NGIxZTZiNiIsImRhdGEiOnt9LCJyYW5kb20iOiI1NjhiNGQ3MTI1OWQ5YjdiYWJiZWVjNTA3Njc3MzFkZCJ9.8v5GWr49Z3HW9HMNrRA0cfnAk784tRZTUOXI440EBLm6d5bFfMB0-IUimTIy3slgBk8fUjjZEo8w-q0r7E3tsA"
+    ]
   },
   {
     "conference": "USENIXSEC",
@@ -28089,7 +28151,20 @@
       "Badges: Available"
     ],
     "repository_url": "",
-    "artifact_url": "https://doi.org/10.5281/zenodo.15609870"
+    "artifact_url": "https://doi.org/10.5281/zenodo.15609870",
+    "artifact_urls": [
+      "https://doi.org/10.5281/zenodo.15609870",
+      "https://doi.org/10.5281/zenodo.15612137",
+      "https://doi.org/10.5281/zenodo.15545615",
+      "https://doi.org/10.5281/zenodo.15545623",
+      "https://doi.org/10.5281/zenodo.15545629",
+      "https://doi.org/10.5281/zenodo.15545638",
+      "https://doi.org/10.5281/zenodo.15545642",
+      "https://doi.org/10.5281/zenodo.15545648",
+      "https://doi.org/10.5281/zenodo.15545656",
+      "https://doi.org/10.5281/zenodo.15553243",
+      "https://doi.org/10.5281/zenodo.15549646"
+    ]
   },
   {
     "conference": "USENIXSEC",
@@ -28326,7 +28401,11 @@
       "Badges: Available"
     ],
     "repository_url": "",
-    "artifact_url": "https://doi.org/10.5281/zenodo.15611471"
+    "artifact_url": "https://doi.org/10.5281/zenodo.15611471",
+    "artifact_urls": [
+      "https://doi.org/10.5281/zenodo.15611471",
+      "https://doi.org/10.5281/zenodo.15611502"
+    ]
   },
   {
     "conference": "USENIXSEC",
@@ -28350,7 +28429,11 @@
       "Reproduced"
     ],
     "repository_url": "",
-    "artifact_url": "https://doi.org/10.5281/zenodo.15612284"
+    "artifact_url": "https://doi.org/10.5281/zenodo.15612284",
+    "artifact_urls": [
+      "https://doi.org/10.5281/zenodo.15612284",
+      "https://doi.org/10.5281/zenodo.15612193"
+    ]
   },
   {
     "conference": "USENIXSEC",
@@ -28420,7 +28503,11 @@
       "Reproduced"
     ],
     "repository_url": "",
-    "artifact_url": "https://doi.org/10.5281/zenodo.15612143"
+    "artifact_url": "https://doi.org/10.5281/zenodo.15612143",
+    "artifact_urls": [
+      "https://doi.org/10.5281/zenodo.15612143",
+      "https://doi.org/10.5281/zenodo.15646753"
+    ]
   },
   {
     "conference": "USENIXSEC",
@@ -28691,7 +28778,12 @@
       "Reproduced"
     ],
     "repository_url": "",
-    "artifact_url": "https://zenodo.org/records/14738608"
+    "artifact_url": "https://zenodo.org/records/14738608",
+    "artifact_urls": [
+      "https://zenodo.org/records/14738608",
+      "https://zenodo.org/records/14760016",
+      "https://zenodo.org/records/14738289"
+    ]
   },
   {
     "conference": "WOOT",
@@ -29328,11 +29420,34 @@
     "conference": "FAST",
     "category": "systems",
     "year": 2024,
+    "title": "I/O Passthru: Upstreaming a flexible and efficient I/O Path in Linux",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "repository_url": "",
+    "artifact_url": ""
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2024,
     "title": "Physical vs. Logical Indexing with IDEA: Inverted Deduplication-Aware Index",
     "badges": [
       "available",
       "functional",
       "reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": ""
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2024,
+    "title": "MinFlow: High-performance and Cost-efficient Data Passing for I/O-intensive Stateful Serverless Analytics",
+    "badges": [
+      "available"
     ],
     "repository_url": "",
     "artifact_url": ""
@@ -29354,21 +29469,10 @@
     "conference": "FAST",
     "category": "systems",
     "year": 2024,
-    "title": "I/O Passthru: Upstreaming a flexible and efficient I/O Path in Linux",
+    "title": "MIDAS: Minimizing Write Amplification in Log-Structured Systems through Adaptive Group Number and Size Configuration",
     "badges": [
       "available",
       "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": ""
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2024,
-    "title": "MinFlow: High-performance and Cost-efficient Data Passing for I/O-intensive Stateful Serverless Analytics",
-    "badges": [
-      "available"
     ],
     "repository_url": "",
     "artifact_url": ""
@@ -29390,10 +29494,9 @@
     "conference": "FAST",
     "category": "systems",
     "year": 2024,
-    "title": "MIDAS: Minimizing Write Amplification in Log-Structured Systems through Adaptive Group Number and Size Configuration",
+    "title": "Combining Buffered I/O and Direct I/O in Distributed File Systems",
     "badges": [
-      "available",
-      "functional"
+      "available"
     ],
     "repository_url": "",
     "artifact_url": ""
@@ -29427,9 +29530,11 @@
     "conference": "FAST",
     "category": "systems",
     "year": 2024,
-    "title": "Combining Buffered I/O and Direct I/O in Distributed File Systems",
+    "title": "Baleen: ML Admission & Prefetching for Flash Caches",
     "badges": [
-      "available"
+      "available",
+      "functional",
+      "reproduced"
     ],
     "repository_url": "",
     "artifact_url": ""
@@ -29451,11 +29556,10 @@
     "conference": "FAST",
     "category": "systems",
     "year": 2024,
-    "title": "Baleen: ML Admission & Prefetching for Flash Caches",
+    "title": "COLE: A Column-based Learned Storage for Blockchain Systems",
     "badges": [
       "available",
-      "functional",
-      "reproduced"
+      "functional"
     ],
     "repository_url": "",
     "artifact_url": ""
@@ -29469,18 +29573,6 @@
       "available",
       "functional",
       "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": ""
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2024,
-    "title": "COLE: A Column-based Learned Storage for Blockchain Systems",
-    "badges": [
-      "available",
-      "functional"
     ],
     "repository_url": "",
     "artifact_url": ""
@@ -29512,11 +29604,9 @@
     "conference": "FAST",
     "category": "systems",
     "year": 2025,
-    "title": "LeapGNN: Accelerating Distributed GNN Training Leveraging Feature-Centric Model Migration",
+    "title": "Revisiting Network Coding for Warm Blob Storage",
     "badges": [
-      "available",
-      "functional",
-      "reproduced"
+      "available"
     ],
     "repository_url": "",
     "artifact_url": ""
@@ -29537,9 +29627,11 @@
     "conference": "FAST",
     "category": "systems",
     "year": 2025,
-    "title": "Revisiting Network Coding for Warm Blob Storage",
+    "title": "LeapGNN: Accelerating Distributed GNN Training Leveraging Feature-Centric Model Migration",
     "badges": [
-      "available"
+      "available",
+      "functional",
+      "reproduced"
     ],
     "repository_url": "",
     "artifact_url": ""
@@ -29574,7 +29666,7 @@
     "conference": "FAST",
     "category": "systems",
     "year": 2025,
-    "title": "OPIMQ: Order Preserving IO stack for Multi-Queue Block Device",
+    "title": "D2FS: Device-Driven Filesystem Garbage Collection",
     "badges": [
       "available",
       "functional",
@@ -29587,7 +29679,7 @@
     "conference": "FAST",
     "category": "systems",
     "year": 2025,
-    "title": "D2FS: Device-Driven Filesystem Garbage Collection",
+    "title": "OPIMQ: Order Preserving IO stack for Multi-Queue Block Device",
     "badges": [
       "available",
       "functional",
@@ -29651,6 +29743,18 @@
     "conference": "FAST",
     "category": "systems",
     "year": 2025,
+    "title": "Boosting File Systems Elegantly: A Transparent NVM Write-ahead Log for Disk File Systems",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "repository_url": "",
+    "artifact_url": ""
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2025,
     "title": "VectorCDC: Accelerating Data Deduplication with Vector Instructions",
     "badges": [
       "available",
@@ -29675,10 +29779,9 @@
     "conference": "FAST",
     "category": "systems",
     "year": 2025,
-    "title": "Boosting File Systems Elegantly: A Transparent NVM Write-ahead Log for Disk File Systems",
+    "title": "Rethinking the Request-to-IO Transformation Process of File Systems for Full Utilization of High-Bandwidth SSDs",
     "badges": [
-      "available",
-      "functional"
+      "available"
     ],
     "repository_url": "",
     "artifact_url": ""
@@ -29699,34 +29802,10 @@
     "conference": "FAST",
     "category": "systems",
     "year": 2025,
-    "title": "Rethinking the Request-to-IO Transformation Process of File Systems for Full Utilization of High-Bandwidth SSDs",
-    "badges": [
-      "available"
-    ],
-    "repository_url": "",
-    "artifact_url": ""
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2025,
     "title": "HiDPU: A DPU-Oriented Hybrid Indexing Scheme for Disaggregated Storage Systems",
     "badges": [
       "available",
       "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": ""
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Low End-to-End Latency atop a Speculative Shared Log with Fix-Ante Ordering",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
     ],
     "repository_url": "",
     "artifact_url": ""
@@ -29761,10 +29840,11 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
-    "title": "Decentralized, Epoch-based F2FS Journaling with Fine-grained Crash Recovery",
+    "title": "Low End-to-End Latency atop a Speculative Shared Log with Fix-Ante Ordering",
     "badges": [
       "available",
-      "functional"
+      "functional",
+      "reproduced"
     ],
     "repository_url": "",
     "artifact_url": ""
@@ -29786,20 +29866,7 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
-    "title": "Picsou: Enabling Replicated State Machines to Communicate Efficiently",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": ""
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Stripeless Data Placement for Erasure-Coded In-Memory Storage",
+    "title": "Decentralized, Epoch-based F2FS Journaling with Fine-grained Crash Recovery",
     "badges": [
       "available",
       "functional"
@@ -29834,6 +29901,44 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
+    "title": "Picsou: Enabling Replicated State Machines to Communicate Efficiently",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": ""
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Stripeless Data Placement for Erasure-Coded In-Memory Storage",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "repository_url": "",
+    "artifact_url": ""
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Achieving Low-Latency Graph-Based Vector Search via Aligning Best-First Search Algorithm with SSD",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": ""
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
     "title": "KPerfIR: Towards a Open and Compiler-centric Ecosystem for GPU Kernel Performance Tooling on Modern AI Workloads",
     "badges": [
       "available",
@@ -29860,7 +29965,19 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
-    "title": "Achieving Low-Latency Graph-Based Vector Search via Aligning Best-First Search Algorithm with SSD",
+    "title": "Bayesian Code Diffusion for Efficient Automatic Deep Learning Program Optimization",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "repository_url": "",
+    "artifact_url": ""
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Training with Confidence: Catching Silent Errors in Deep Learning Training with Automated Proactive Checks",
     "badges": [
       "available",
       "functional",
@@ -29886,48 +30003,11 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
-    "title": "Bayesian Code Diffusion for Efficient Automatic Deep Learning Program Optimization",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": ""
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
     "title": "Tigon: A Distributed Database for a CXL Pod",
     "badges": [
       "available",
       "functional",
       "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": ""
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Training with Confidence: Catching Silent Errors in Deep Learning Training with Automated Proactive Checks",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": ""
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Deriving Semantic Checkers from Tests to Detect Silent Failures in Production Distributed Systems",
-    "badges": [
-      "available",
-      "functional"
     ],
     "repository_url": "",
     "artifact_url": ""
@@ -29961,9 +30041,10 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
-    "title": "MettEagle: Costs and Benefits of Implementing Containers on Microkernels",
+    "title": "Deriving Semantic Checkers from Tests to Detect Silent Failures in Production Distributed Systems",
     "badges": [
-      "available"
+      "available",
+      "functional"
     ],
     "repository_url": "",
     "artifact_url": ""
@@ -29972,10 +30053,9 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
-    "title": "Quake: Adaptive Indexing for Vector Search",
+    "title": "MettEagle: Costs and Benefits of Implementing Containers on Microkernels",
     "badges": [
-      "available",
-      "functional"
+      "available"
     ],
     "repository_url": "",
     "artifact_url": ""
@@ -29997,9 +30077,10 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
-    "title": "Enabling Efficient GPU Communication over Multiple NICs with FuseLink",
+    "title": "Quake: Adaptive Indexing for Vector Search",
     "badges": [
-      "available"
+      "available",
+      "functional"
     ],
     "repository_url": "",
     "artifact_url": ""
@@ -30008,10 +30089,9 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
-    "title": "Building Bridges: Safe Interactions with Foreign Languages through Omniglot",
+    "title": "Enabling Efficient GPU Communication over Multiple NICs with FuseLink",
     "badges": [
-      "available",
-      "functional"
+      "available"
     ],
     "repository_url": "",
     "artifact_url": ""
@@ -30045,11 +30125,10 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
-    "title": "Scalio: Scaling up DPU-based JBOF Key-value Store with NVMe-oF Target Offload",
+    "title": "Building Bridges: Safe Interactions with Foreign Languages through Omniglot",
     "badges": [
       "available",
-      "functional",
-      "reproduced"
+      "functional"
     ],
     "repository_url": "",
     "artifact_url": ""
@@ -30070,18 +30149,7 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
-    "title": "FineMem: Breaking the Allocation Overhead vs. Memory Waste Dilemma in Fine-Grained Disaggregated Memory Management",
-    "badges": [
-      "available"
-    ],
-    "repository_url": "",
-    "artifact_url": ""
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "WLB-LLM: Workload-Balanced 4D Parallelism for Large Language Model Training",
+    "title": "Scalio: Scaling up DPU-based JBOF Key-value Store with NVMe-oF Target Offload",
     "badges": [
       "available",
       "functional",
@@ -30094,7 +30162,31 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
+    "title": "FineMem: Breaking the Allocation Overhead vs. Memory Waste Dilemma in Fine-Grained Disaggregated Memory Management",
+    "badges": [
+      "available"
+    ],
+    "repository_url": "",
+    "artifact_url": ""
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
     "title": "Mirage: A Multi-Level Superoptimizer for Tensor Programs",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": ""
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "WLB-LLM: Workload-Balanced 4D Parallelism for Large Language Model Training",
     "badges": [
       "available",
       "functional",
@@ -30130,7 +30222,7 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
-    "title": "KRR: Efficient and Scalable Kernel Record Replay",
+    "title": "Compass: Encrypted Semantic Search with High Accuracy",
     "badges": [
       "available",
       "functional",
@@ -30156,7 +30248,7 @@
     "conference": "OSDI",
     "category": "systems",
     "year": 2025,
-    "title": "Compass: Encrypted Semantic Search with High Accuracy",
+    "title": "KRR: Efficient and Scalable Kernel Record Replay",
     "badges": [
       "available",
       "functional",

@@ -9,11 +9,11 @@ This page explains how we collect, process, and analyze artifact evaluation data
 - [Conferences Covered](#conferences-covered)
 - [Data Collection](#data-collection)
 - [Pipeline](#pipeline)
-- [Author Metrics](#author-metrics) — how AR%, RR%, and other author statistics are calculated
+- [Author Metrics](#author-metrics) — how AR%, RR%, A:E ratio, and combined score are calculated
 - [Institution Metrics](#institution-metrics) — how institutional data is aggregated
 - [Badge Definitions](#badge-definitions) — what each badge type means
-- [Weighted Scoring](#weighted-scoring-combined-rankings) — how the combined score is computed
 - [Repository Statistics](#repository-statistics) — GitHub/Zenodo metrics
+- [Artifact Citations](#artifact-citations) — how citation scoring works
 - [Data Format](#data-format)
 - [Contributing](#contributing)
 
@@ -94,20 +94,6 @@ Where:
 - **Artifact Score** = sum of badge points (Available+1, Functional+1, Reproduced+1 per artifact)
 - **AE Score** = committee service points (member=3, chair=5)
 
-**Interpretation:**
-- **High ratios (>2.0)**: *Producers* — primarily create artifacts with limited evaluation service
-- **Mid ratios (0.5–2.0)**: *Balanced* — both create artifacts and serve on committees
-- **Low ratios (<0.5)**: *Consumers* — primarily evaluate artifacts created by others
-- **null/undefined**: Artifact-only contributors (no committee service)
-- **0.0**: Evaluation-only contributors (no artifacts)
-
-**Example values:**
-- An author with 25 artifact points and 8 AE points has A:E = 3.12 (producer)
-- An author with 20 artifact points and 60 AE points has A:E = 0.33 (consumer)
-- An author with 32 artifact points and 0 AE points has A:E = null (artifact-only)
-
-**Ecosystem insights:** Across all institutions, 50.3% are consumers, 44.1% are balanced, and 5.6% are producers. Among top-10 institutions, 30% are producers, indicating that leading contributors often specialize in artifact creation. This ratio reveals institutional roles that combined scores alone obscure.
-
 ### AE Memberships
 The number of times this author served on an artifact evaluation committee across all tracked conferences.
 
@@ -115,7 +101,31 @@ The number of times this author served on an artifact evaluation committee acros
 The number of times this author served as an AE chair or co-chair.
 
 ### Combined Score
-A composite metric combining artifact production and AE service (see [Weighted Scoring](#weighted-scoring-combined-rankings) below).
+
+A composite metric balancing artifact production, artifact quality, citation impact, and AE service:
+
+$$\text{Combined Score} = \sum_{i=1}^{n} (A_i + F_i + R_i + C_i) + \sum_{j=1}^{m} (M_j \times 3 + \text{Ch}_j \times 3)$$
+
+Where:
+- **First sum** (per artifact):
+  - $A_i$ = 1 point if artifact *i* is Available, 0 otherwise
+  - $F_i$ = 1 point if artifact *i* is Functional, 0 otherwise
+  - $R_i$ = 1 point if artifact *i* is Reproduced/Reusable, 0 otherwise
+  - $C_i$ = citation count for artifact *i* (from OpenAlex DOI lookup)
+  - **Maximum per artifact: 4 points** (all badges + 1 point per citation)
+
+- **Second sum** (committee service):
+  - $M_j$ = each committee membership contributes 3 points
+  - $\text{Ch}_j$ = each chair role contributes 5 points
+
+**Minimum Score Threshold:** Only individuals and institutions with combined score ≥ 3 are included in rankings.
+
+**Why These Weights?**
+- **Additive badge scoring (1 point each)** reflects that each badge level requires distinct effort (availability, functionality, reproducibility)
+- **Citations (1 point per citation)** recognize downstream research value from artifact reuse
+- **AE membership = 3 points** estimates the substantial time investment (~50 hours per evaluation cycle)
+- **Chair role = 5 points** recognizes leadership and coordination responsibilities
+- This formula balances artifact producers and evaluators, countering the traditional invisibility of evaluation labor in academic metrics
 
 ---
 
@@ -162,46 +172,6 @@ We rely on each conference's official badge definitions. We treat the same badge
 
 ---
 
-## Weighted Scoring (Combined Rankings)
-
-The combined score recognizes both artifact production and evaluation service:
-
-```
-Combined Score = Artifact Score + AE Service Score
-```
-
-### Artifact Score Calculation
-
-For each artifact, badges are scored **additively** (not hierarchically):
-
-| Badge Type | Points |
-|---|---|
-| Available | +1 |
-| Functional | +1 |
-| Reproduced/Reusable | +1 |
-
-**Maximum per artifact: 3 points** (e.g., an artifact with all three badges earns 3 points)
-
-### AE Service Score Calculation
-
-| Role | Points |
-|---|---|
-| Committee member | 3 points per membership |
-| Committee chair | 5 points (3 base + 2 bonus) |
-
-### Minimum Score Threshold
-
-Only individuals and institutions with a **combined score ≥ 3** are included in rankings. This threshold ensures meaningful participation (at least one reproduced artifact, OR one AE membership, OR equivalent contributions).
-
-### Why These Weights?
-
-- **Additive badge scoring** reflects that each badge level requires distinct effort (making code available, ensuring it builds/runs, reproducing results)
-- **AE membership = 3 points** recognizes the substantial time investment (~50 hours per evaluation cycle)
-- **Chair bonus = +2** acknowledges additional coordination and leadership responsibilities
-- The formula balances recognition between artifact producers and evaluators, countering the traditional invisibility of evaluation labor in academic metrics
-
----
-
 ## Repository Statistics
 
 For artifacts with GitHub/GitLab repositories or Zenodo/Figshare archives, we collect engagement metrics as supplementary signals of community uptake:
@@ -230,11 +200,16 @@ To capture research lineage beyond repository engagement metrics, we track acade
 
 ### DOI Extraction and Resolution
 
-For each artifact record with a Zenodo or Figshare URL, we extract the Digital Object Identifier (DOI) using regex patterns:
+For each artifact record with a Zenodo or Figshare URL, we extract the Digital Object Identifier (DOI) using a two-priority approach:
 
-1. **Direct DOI extraction**: If the URL contains a DOI (e.g., `https://doi.org/10.5281/zenodo.7234567`), we extract it directly
-2. **Zenodo record ID lookup**: For Zenodo record page URLs, we parse the record ID and use the Zenodo API to fetch the corresponding DOI
+1. **Zenodo API lookup (preferred for Zenodo records)**: If the URL contains a Zenodo record ID (e.g., `https://zenodo.org/record/7234567`), we query the Zenodo API directly to retrieve the DOI associated with that record. This ensures we capture the **artifact's DOI** rather than any paper DOI that may be embedded elsewhere in the page.
+2. **Direct DOI extraction (fallback)**: 
+   - For direct DOI URLs: Extract DOI directly (e.g., `https://doi.org/10.5281/zenodo.7234567`)
+   - For Zenodo record URLs without explicit DOI: Convert Zenodo record ID to DOI format (`10.5281/zenodo.<record_id>`)
+   - For other archives (GitHub, Figshare): Use regex extraction
 3. **Filtering**: We exclude badge links and other non-archival URLs
+
+This approach ensures we consistently retrieve artifact DOIs rather than paper DOIs, improving citation accuracy.
 
 ### Citation Data Collection
 
@@ -253,12 +228,9 @@ Citation counts are aggregated at three levels:
 
 ### Citation Score in Combined Rankings
 
-Each citation contributes **+1 point** to the combined score:
+Each citation contributes **+1 point** to the combined score. Citations are integrated into the overall formula (see [Combined Score](#combined-score) above):
 
-```
-Citation Score = Total artifact citations
-Combined Score = Artifact Score + AE Service Score + Citation Score
-```
+$$C_i = \text{total citations for artifact } i$$
 
 This recognizes that cited artifacts generate downstream research value, extending the impact timeline beyond immediate adoption.
 

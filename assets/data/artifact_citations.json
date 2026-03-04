@@ -194,10 +194,10 @@
     "normalized_title": "pets a unified framework for parameterefficient transformers serving",
     "conference": "ATC",
     "year": 2022,
-    "doi": "",
-    "doi_source": "",
+    "doi": "10.5281/zenodo.6534753",
+    "doi_source": "url",
     "cited_by_count": null,
-    "openalex_error": ""
+    "openalex_error": "HTTPError: HTTP Error 404: Not Found"
   },
   {
     "title": "RunD: A Lightweight Secure Container Runtime for High-density Deployment and High-concurrency Startup in Serverless Computing",
@@ -21564,9 +21564,9 @@
     "normalized_title": "practical keyword private information retrieval from keytoindex mappings",
     "conference": "USENIXSEC",
     "year": 2025,
-    "doi": "",
-    "doi_source": "",
-    "cited_by_count": null,
+    "doi": "10.5281/zenodo.14722434",
+    "doi_source": "zenodo_api",
+    "cited_by_count": 0,
     "openalex_error": ""
   },
   {

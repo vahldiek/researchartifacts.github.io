@@ -9,11 +9,11 @@ layout: default
   font-size: 0.9em;
   border-collapse: collapse;
   width: 100%;
-  margin: 20px 0;
+  margin: 15px 0;
 }
 #citations-table th {
   background: #f2f2f2;
-  padding: 12px;
+  padding: 8px 10px;
   text-align: left;
   border: 1px solid #ddd;
   cursor: pointer;
@@ -30,7 +30,7 @@ layout: default
   content: " ↓";
 }
 #citations-table td {
-  padding: 10px 12px;
+  padding: 8px 10px;
   border: 1px solid #ddd;
 }
 #citations-table tr:nth-child(even) {
@@ -45,23 +45,23 @@ layout: default
   font-size: 1.1em;
 }
 .controls {
-  margin: 20px 0;
+  margin: 12px 0;
   display: flex;
-  gap: 15px;
+  gap: 10px;
   align-items: center;
   flex-wrap: wrap;
 }
 .search-box {
-  padding: 8px 12px;
+  padding: 6px 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 0.95em;
+  font-size: 0.9em;
   flex: 1;
   min-width: 250px;
 }
 .filter-info {
   color: #666;
-  font-size: 0.9em;
+  font-size: 0.85em;
 }
 .author-tag {
   display: inline-block;
@@ -70,6 +70,12 @@ layout: default
   margin: 1px;
   border-radius: 3px;
   font-size: 0.85em;
+  cursor: pointer;
+  border: 1px solid #b0dce8;
+}
+.author-tag:hover {
+  background: #d0ebf5;
+  text-decoration: underline;
 }
 .institution-tag {
   display: inline-block;
@@ -83,15 +89,28 @@ layout: default
 .stats-box {
   background: #f9f9f9;
   border: 1px solid #ddd;
-  padding: 15px;
+  padding: 8px 15px;
   border-radius: 4px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+}
+.stats-box p {
+  margin: 0;
+  font-size: 0.95em;
 }
 .loading {
   text-align: center;
   color: #999;
   padding: 40px;
   font-style: italic;
+}
+#citations-table a {
+  color: #0066cc;
+  text-decoration: none;
+  cursor: pointer;
+}
+#citations-table a:hover {
+  text-decoration: underline;
+  color: #0052a3;
 }
 </style>
 
@@ -142,7 +161,7 @@ layout: default
     for (let i = 0; i < artifacts.length; i++) {
       const art = artifacts[i];
       const authorsHtml = (art.authors || []).map(a => 
-        `<span class="author-tag">${escHtml(a)}</span>`
+        `<span class="author-tag" data-author="${escHtml(a)}">${escHtml(a)}</span>`
       ).join('');
       const institutionsHtml = (art.institutions || []).map(inst => 
         `<span class="institution-tag">${escHtml(inst)}</span>`
@@ -160,6 +179,16 @@ layout: default
 
     html += '</tbody></table>';
     document.getElementById('table-container').innerHTML = html;
+
+    // Add click handlers to author tags
+    document.querySelectorAll('.author-tag').forEach(tag => {
+      tag.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const author = this.dataset.author;
+        document.getElementById('search-box').value = author;
+        filterArtifacts(author);
+      });
+    });
 
     // Add click handlers to column headers
     document.querySelectorAll('#citations-table th[data-col]').forEach(th => {
