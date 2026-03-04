@@ -1,0 +1,69 @@
+{
+  "total_artifacts": 2576,
+  "unique_dois": 794,
+  "artifacts_with_doi": 795,
+  "openalex_resolved": 779,
+  "artifacts_with_citations": 15,
+  "by_year": {
+    "2017": {
+      "n": 12,
+      "resolved": 0,
+      "cited": 0,
+      "sum_cites": 0
+    },
+    "2018": {
+      "n": 22,
+      "resolved": 1,
+      "cited": 0,
+      "sum_cites": 0
+    },
+    "2019": {
+      "n": 26,
+      "resolved": 1,
+      "cited": 1,
+      "sum_cites": 2
+    },
+    "2020": {
+      "n": 133,
+      "resolved": 3,
+      "cited": 0,
+      "sum_cites": 0
+    },
+    "2021": {
+      "n": 257,
+      "resolved": 6,
+      "cited": 2,
+      "sum_cites": 54
+    },
+    "2022": {
+      "n": 355,
+      "resolved": 51,
+      "cited": 6,
+      "sum_cites": 26
+    },
+    "2023": {
+      "n": 397,
+      "resolved": 57,
+      "cited": 3,
+      "sum_cites": 10
+    },
+    "2024": {
+      "n": 505,
+      "resolved": 92,
+      "cited": 2,
+      "sum_cites": 2
+    },
+    "2025": {
+      "n": 710,
+      "resolved": 452,
+      "cited": 1,
+      "sum_cites": 1
+    },
+    "2026": {
+      "n": 159,
+      "resolved": 116,
+      "cited": 0,
+      "sum_cites": 0
+    }
+  }
+}
