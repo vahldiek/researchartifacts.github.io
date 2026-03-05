@@ -195,8 +195,8 @@ title: ""
       var entry = document.createElement('div');
       entry.style.cssText = 'padding:10px 0;';
 
-      // Line 1: Bold title (linked to DOI/paper URL if available)
-      var titleLink = d.doi_url || '';
+      // Line 1: Bold title (linked to artifact)
+      var titleLink = d.repository_url || d.artifact_url || '';
       var titleHtml = titleLink
         ? '<a href="' + escHtml(titleLink) + '" target="_blank" rel="noopener" style="color:#0066cc; text-decoration:none;">' + escHtml(d.title) + '</a>'
         : escHtml(d.title);
