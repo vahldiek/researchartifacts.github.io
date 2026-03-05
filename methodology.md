@@ -75,6 +75,8 @@ Explore detailed insights across institutions, authors, and conferences:
   - [Zenodo/Figshare Metrics](#zenodofigshare-metrics)
 - [Artifact Citations (Experimental)](#artifact-citations-experimental)
   - [Why Citation Data Is Not Included in Rankings](#why-citation-data-is-not-included-in-rankings)
+- [Data Sources](#data-sources)
+- [Acknowledgements](#acknowledgements)
 - [API Access](#api-access)
 
 ## Conferences Covered
@@ -268,6 +270,22 @@ OpenAlex reported 14 artifacts with a total of 43 citing DOIs. We verified each 
 Because current bibliographic indexes do not reliably distinguish artifact citations from paper citations, **citation counts are excluded from the combined score and ranking tables**. The citation collection pipeline remains available as an optional, experimental module for future use as citation infrastructure matures.
 
 See the [verification scripts and detailed results](https://github.com/researchartifacts/artifact_analysis) for the full analysis.
+
+---
+
+## Data Sources
+
+- **[sysartifacts.github.io](https://sysartifacts.github.io)** — Systems conference artifact evaluation results (EuroSys, OSDI, SC, SOSP)
+- **[secartifacts.github.io](https://secartifacts.github.io)** — Security conference artifact evaluation results (ACSAC, CHES, NDSS, PETS, SysTEX, USENIX Security, WOOT)
+- **[usenix.org](https://www.usenix.org)** — Badge information for USENIX conferences (ATC, FAST)
+- **[dblp.org](https://dblp.org)** — Author name matching and disambiguation
+- **[GitHub](https://docs.github.com/en/rest)**, **[Zenodo](https://developers.zenodo.org)**, **[Figshare](https://docs.figshare.com)** — Repository statistics (stars, forks, downloads)
+
+---
+
+## Acknowledgements
+
+This project celebrates the work of **artifact authors** who go the extra mile to make research reproducible, and **artifact evaluation committees** (AE chairs and members) who invest time reviewing and certifying artifacts. Their contributions strengthen our scientific record. We thank the communities maintaining [sysartifacts](https://sysartifacts.github.io) and [secartifacts](https://secartifacts.github.io) for publishing detailed evaluation results. Inspired by [Systems Circus](https://nebelwelt.net/pubstats/) and [csrankings.org](https://csrankings.org).
 
 ---
 

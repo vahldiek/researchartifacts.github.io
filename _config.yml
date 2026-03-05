@@ -8,11 +8,11 @@ plugins:
   - jekyll-redirect-from
   - jekyll-include-cache
 
-title: Security & Systems Research Artifacts
-name: Security & Systems Research Artifacts
+title: Security & Systems ReproDB
+name: Security & Systems ReproDB
 
 logo: "/assets/images/logo.svg"
-masthead_title: "Security & Systems Research Artifacts"
+masthead_title: "Security & Systems ReproDB"
 
 # Make stuff in _data accessible
 # Collections for organizing content

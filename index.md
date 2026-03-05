@@ -1,5 +1,5 @@
 ---
-title: "Artifact Evaluation across Security & Systems Conferences"
+title: ""
 ---
 
 **Research artifacts & artifact evaluation (AE)** drive reproducibility and scientific impact. This project tracks and analyzes artifact evaluation outcomes across major [security]({{ '/security/' | relative_url }}) and [systems]({{ '/systems/' | relative_url }}) conferences, recognizing the contributions of both artifact authors and artifact evaluation committees.
@@ -193,10 +193,10 @@ title: "Artifact Evaluation across Security & Systems Conferences"
     noRes.style.display = 'none';
     pageData.forEach(function(d) {
       var entry = document.createElement('div');
-      entry.style.cssText = 'padding:10px 0; border-bottom:1px solid #eee;';
+      entry.style.cssText = 'padding:10px 0;';
 
-      // Line 1: Bold title (linked to first available URL)
-      var titleLink = d.repository_url || d.artifact_url || '';
+      // Line 1: Bold title (linked to DOI/paper URL if available)
+      var titleLink = d.doi_url || '';
       var titleHtml = titleLink
         ? '<a href="' + escHtml(titleLink) + '" target="_blank" rel="noopener" style="color:#0066cc; text-decoration:none;">' + escHtml(d.title) + '</a>'
         : escHtml(d.title);
@@ -303,69 +303,3 @@ title: "Artifact Evaluation across Security & Systems Conferences"
     });
 })();
 </script>
-
-## Data Sources
-
-- **[sysartifacts.github.io](https://sysartifacts.github.io)** — Systems conference artifact evaluation results (EuroSys, OSDI, SC, SOSP)
-- **[secartifacts.github.io](https://secartifacts.github.io)** — Security conference artifact evaluation results (ACSAC, CHES, NDSS, PETS, SysTEX, USENIX Security, WOOT)
-- **[usenix.org](https://www.usenix.org)** — Badge information for USENIX conferences (ATC, FAST)
-- **[dblp.org](https://dblp.org)** — Author name matching and disambiguation
-- **[GitHub](https://docs.github.com/en/rest)**, **[Zenodo](https://developers.zenodo.org)**, **[Figshare](https://docs.figshare.com)** — Repository statistics (stars, forks, downloads)
-
-## Acknowledgements
-
-This project celebrates the work of **artifact authors** who go the extra mile to make research reproducible, and **artifact evaluation committees** (AE chairs and members) who invest time reviewing and certifying artifacts. Their contributions strengthen our scientific record. We thank the communities maintaining [sysartifacts](https://sysartifacts.github.io) and [secartifacts](https://secartifacts.github.io) for publishing detailed evaluation results. Inspired by [Systems Circus](https://nebelwelt.net/pubstats/) and [csrankings.org](https://csrankings.org).
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  var years = [{% for y in site.data.artifacts_by_year %}"{{ y.year }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
-  var systems = [{% for y in site.data.artifacts_by_year %}{{ y.systems }}{% unless forloop.last %},{% endunless %}{% endfor %}];
-  var security = [{% for y in site.data.artifacts_by_year %}{{ y.security }}{% unless forloop.last %},{% endunless %}{% endfor %}];
-  var totals = [{% for y in site.data.artifacts_by_year %}{{ y.count }}{% unless forloop.last %},{% endunless %}{% endfor %}];
-
-  new Chart(document.getElementById('areaChart'), {
-    type: 'line',
-    data: {
-      labels: years,
-      datasets: [
-        { label: 'Total', data: totals, borderColor: '#333', backgroundColor: 'rgba(51,51,51,0.1)', fill: false, tension: 0.2 },
-        { label: 'Security', data: security, borderColor: '#c0392b', backgroundColor: 'rgba(192,57,43,0.1)', fill: false, tension: 0.2 },
-        { label: 'Systems', data: systems, borderColor: '#2980b9', backgroundColor: 'rgba(41,128,185,0.1)', fill: false, tension: 0.2 }
-      ]
-    },
-    options: {
-      responsive: true,
-      plugins: { title: { display: true, text: 'Artifacts by Year and Area' } },
-      scales: { y: { beginAtZero: true, title: { display: true, text: 'Artifacts' } } }
-    }
-  });
-});
-</script>
-
-<style>
-table {
-  font-size: 0.78em;
-  white-space: nowrap;
-  border-collapse: collapse;
-}
-table th, table td {
-  padding: 3px 6px;
-  border: 1px solid #ddd;
-}
-table th {
-  background-color: #f2f2f2;
-  position: sticky;
-  top: 0;
-}
-table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-table tr:hover {
-  background-color: #e8f4f8;
-}
-</style>
-
----
-
-**Data:** [All Artifacts](/assets/data/artifacts.json) | [Artifacts by Conference](/assets/data/artifacts_by_conference.json) | [Rankings](/assets/data/combined_rankings.json) | [Authors](/assets/data/authors.json) | [Repository Stats](/assets/data/top_repos.json)
