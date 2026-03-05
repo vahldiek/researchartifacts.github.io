@@ -30,7 +30,16 @@ title: "Artifact Evaluation across Security & Systems Conferences"
 </div>
 
 <div id="results-container" style="margin-top:1em; overflow-x:auto;">
-  <table id="resultsTable" style="width:100%; border-collapse:collapse; font-size:0.9em; display:none;">
+  <table id="resultsTable" style="width:100%; border-collapse:collapse; font-size:0.9em; display:none; table-layout:fixed;">
+    <colgroup>
+      <col style="width:22%">
+      <col style="width:22%">
+      <col style="width:14%">
+      <col style="width:8%">
+      <col style="width:5%">
+      <col style="width:18%">
+      <col style="width:11%">
+    </colgroup>
     <thead>
       <tr style="background:#f5f5f5; text-align:left;">
         <th style="padding:8px 10px; border-bottom:2px solid #ddd; cursor:pointer;" onclick="sortResults('title')">Title ⇅</th>
@@ -150,11 +159,11 @@ title: "Artifact Evaluation across Security & Systems Conferences"
 
   function badgeLabel(b) {
     var t = b.toLowerCase().replace('badges: ', '').trim();
-    if (t === 'artifact evaluated') return '🏅 Evaluated';
-    if (t === 'available') return '📦 Available';
-    if (t === 'functional') return '⚙️ Functional';
-    if (t === 'reproduced') return '🔄 Reproduced';
-    if (t === 'reusable') return '♻️ Reusable';
+    if (t === 'artifact evaluated') return 'Evaluated';
+    if (t === 'available') return 'Available';
+    if (t === 'functional') return 'Functional';
+    if (t === 'reproduced') return 'Reproduced';
+    if (t === 'reusable') return 'Reusable';
     return t.charAt(0).toUpperCase() + t.slice(1);
   }
 
@@ -217,7 +226,7 @@ title: "Artifact Evaluation across Security & Systems Conferences"
 
       // Badges
       var badgesHtml = (d.badges || []).map(function(b) {
-        return '<span style="display:inline-block; padding:1px 6px; margin:1px; border-radius:3px; background:#e8f5e9; font-size:0.85em; white-space:nowrap;">' + badgeLabel(b) + '</span>';
+        return '<span style="display:inline-block; padding:1px 5px; margin:1px 0; border-radius:3px; background:#e8f5e9; font-size:0.8em;">' + badgeLabel(b) + '</span>';
       }).join(' ');
 
       // Links
@@ -234,13 +243,13 @@ title: "Artifact Evaluation across Security & Systems Conferences"
       var linksHtml = links.length > 0 ? links.join('<br>') : '<span style="color:#999;">—</span>';
 
       tr.innerHTML =
-        '<td style="padding:6px 10px;">' + titleHtml + '</td>' +
-        '<td style="padding:6px 10px; max-width:200px;">' + authorsHtml + '</td>' +
-        '<td style="padding:6px 10px; max-width:150px;">' + affHtml + '</td>' +
-        '<td style="padding:6px 10px; white-space:nowrap;">' + venueHtml + '</td>' +
-        '<td style="padding:6px 10px; white-space:nowrap;">' + yearHtml + '</td>' +
-        '<td style="padding:6px 10px;">' + badgesHtml + '</td>' +
-        '<td style="padding:6px 10px; white-space:nowrap;">' + linksHtml + '</td>';
+        '<td style="padding:6px 10px; overflow-wrap:break-word; word-wrap:break-word;">' + titleHtml + '</td>' +
+        '<td style="padding:6px 10px; overflow-wrap:break-word; word-wrap:break-word;">' + authorsHtml + '</td>' +
+        '<td style="padding:6px 10px; overflow-wrap:break-word; word-wrap:break-word;">' + affHtml + '</td>' +
+        '<td style="padding:6px 10px;">' + venueHtml + '</td>' +
+        '<td style="padding:6px 10px;">' + yearHtml + '</td>' +
+        '<td style="padding:6px 10px; overflow-wrap:break-word; word-wrap:break-word;">' + badgesHtml + '</td>' +
+        '<td style="padding:6px 10px;">' + linksHtml + '</td>';
       tbody.appendChild(tr);
     });
 
