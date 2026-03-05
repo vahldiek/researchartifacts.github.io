@@ -26,12 +26,7 @@ This page explains how we collect, process, and analyze artifact evaluation data
 - [Repository Statistics](#repository-statistics)
   - [GitHub/GitLab Metrics](#githubgitlab-metrics)
   - [Zenodo/Figshare Metrics](#zenodofigshare-metrics)
-- [Artifact Citations](#artifact-citations)
-  - [DOI Extraction and Resolution](#doi-extraction-and-resolution)
-  - [Citation Data Collection](#citation-data-collection)
-  - [Aggregation and Scoring](#aggregation-and-scoring)
-  - [Citation Score in Combined Rankings](#citation-score-in-combined-rankings)
-  - [Important Notes on Citation Metrics](#important-notes-on-citation-metrics)
+- [Artifact Citations (Experimental)](#artifact-citations-experimental)
 
 ## Conferences Covered
 
@@ -118,17 +113,16 @@ The number of times this author served as an AE chair or co-chair.
 
 ### Combined Score
 
-A composite metric balancing artifact production, artifact quality, citation impact, and AE service:
+A composite metric balancing artifact production, artifact quality, and AE service:
 
-$$\text{Combined Score} = \sum_{i=1}^{n} (A_i + F_i + R_i + C_i) + \sum_{j=1}^{m} (M_j \times 3 + \text{Ch}_j \times 3)$$
+$$\text{Combined Score} = \sum_{i=1}^{n} (A_i + F_i + R_i) + \sum_{j=1}^{m} (M_j \times 3 + \text{Ch}_j \times 3)$$
 
 Where:
 - **First sum** (per artifact):
   - $A_i$ = 1 point if artifact *i* is Available, 0 otherwise
   - $F_i$ = 1 point if artifact *i* is Functional, 0 otherwise
   - $R_i$ = 1 point if artifact *i* is Reproduced/Reusable, 0 otherwise
-  - $C_i$ = citation count for artifact *i* (from OpenAlex DOI lookup)
-  - **Maximum per artifact: 4 points** (all badges + 1 point per citation)
+  - **Maximum per artifact: 3 points** (all three badges)
 
 - **Second sum** (committee service):
   - $M_j$ = each committee membership contributes 3 points
@@ -138,7 +132,6 @@ Where:
 
 **Why These Weights?**
 - **Additive badge scoring (1 point each)** reflects that each badge level requires distinct effort (availability, functionality, reproducibility)
-- **Citations (1 point per citation)** recognize downstream research value from artifact reuse
 - **AE membership = 3 points** estimates the substantial time investment (~50 hours per evaluation cycle)
 - **Chair role = 5 points** recognizes leadership and coordination responsibilities
 - This formula balances artifact producers and evaluators, countering the traditional invisibility of evaluation labor in academic metrics
@@ -210,50 +203,19 @@ For artifacts with GitHub/GitLab repositories or Zenodo/Figshare archives, we co
 
 ---
 
-## Artifact Citations
+## Artifact Citations (Experimental)
 
-To capture research lineage beyond repository engagement metrics, we track academic citations to artifact DOIs. This reveals second-order impact: papers that cite the artifact repository, indicating downstream research building on the artifact.
+We attempted to track academic citations to artifact DOIs using [OpenAlex](https://openalex.org), querying citation counts for 782 artifact DOIs (Zenodo and Figshare).
 
-### DOI Extraction and Resolution
+### Why Citation Data Is Not Included in Rankings
 
-For each artifact record with a Zenodo or Figshare URL, we extract the Digital Object Identifier (DOI) using a two-priority approach:
+OpenAlex reported 14 artifacts with a total of 43 citing DOIs. We verified each citing DOI by checking [Crossref](https://www.crossref.org/) publisher-submitted reference lists for the actual artifact DOI, and detected self-citations by comparing author lists between the artifact and the citing paper.
 
-1. **Zenodo API lookup (preferred for Zenodo records)**: If the URL contains a Zenodo record ID (e.g., `https://zenodo.org/record/7234567`), we query the Zenodo API directly to retrieve the DOI associated with that record. This ensures we capture the **artifact's DOI** rather than any paper DOI that may be embedded elsewhere in the page.
-2. **Direct DOI extraction (fallback)**:
-  - For direct DOI URLs: Extract DOI directly (e.g., `https://doi.org/10.5281/zenodo.7234567`)
-  - For Zenodo record URLs without explicit DOI: Convert Zenodo record ID to DOI format (`10.5281/zenodo.<record_id>`)
-  - For other archives (GitHub, Figshare): Use regex extraction
-3. **Filtering**: We keep **only artifact storage DOIs** (currently Zenodo `10.5281/zenodo.*` and Figshare `10.6084/m9.figshare.*`) and drop paper DOIs (e.g., ACM `10.1145/...`)
+**Result: zero genuine third-party artifact citations.** All 43 were:
+- **36 false positives** — the citing paper's bibliography contains the *paper* DOI, not the artifact DOI. OpenAlex conflates these when the artifact and paper share a title.
+- **6 self-citations** — the paper cites its own artifact (same authors).
+- **1 unknown** — an arXiv preprint whose references could not be resolved.
 
-This approach ensures we consistently retrieve artifact DOIs rather than paper DOIs, improving citation accuracy.
+Because current bibliographic indexes do not reliably distinguish artifact citations from paper citations, **citation counts are excluded from the combined score and ranking tables**. The citation collection pipeline remains available as an optional, experimental module for future use as citation infrastructure matures.
 
-### Citation Data Collection
-
-For each resolved DOI, we query the [OpenAlex](https://openalex.org) API to retrieve:
-- **Citation count**: The `cited_by_count` field (total number of papers citing this DOI)
-
-OpenAlex provides a freely accessible index of scholarly citations from major publishers and preprint servers, updated regularly. No authentication is required.
-
-### Aggregation and Scoring
-
-Citation counts are aggregated at three levels:
-
-1. **Per-artifact**: Each artifact records its DOI and citation count
-2. **Per-author**: All citations from artifacts authored by that person are summed
-3. **Per-institution**: All citations from authors affiliated with that institution are summed
-
-### Citation Score in Combined Rankings
-
-Each citation contributes **+1 point** to the combined score. Citations are integrated into the overall formula (see [Combined Score](#combined-score) above):
-
-$$C_i = \text{total citations for artifact } i$$
-
-This recognizes that cited artifacts generate downstream research value, extending the impact timeline beyond immediate adoption.
-
-### Important Notes on Citation Metrics
-
-- **Early-stage signal**: Recent artifacts (2025–2026) have minimal or zero citations due to publication lag in academic indexing (~6–12 months)
-- **Coverage lag**: OpenAlex is updated regularly but not in real-time; citation counts reflect data available at query time
-- **Biased by venue and discipline**: High-profile conferences and papers in well-indexed domains accumulate citations faster
-- **Self-citations included**: OpenAlex counts include citations from the authors' own subsequent work, representing valid research lineage
-- We recommend interpreting citation metrics in context with artifact age (younger artifacts naturally have fewer citations)
+See the [verification scripts and detailed results](https://github.com/researchartifacts/artifact_analysis) for the full analysis.

@@ -19,7 +19,7 @@
 </div>
 
 <div id="author-legend" style="margin:0 0 6px 0; display:none; font-size:0.85em; color:#555;">
-  Legend: #=Rank, S=Score, Ar=Artifacts, C=Citations, P=Papers, AR%=Art. Rate, RR%=Repro. Rate, AvR%=Available Rate, Y=Last 5y
+  Legend: #=Rank, S=Score, Ar=Artifacts, P=Papers, AR%=Art. Rate, RR%=Repro. Rate, AvR%=Available Rate, Y=Last 5y
 </div>
 
 <div id="authorLoading"><em>Loading author data…</em></div>
@@ -58,7 +58,6 @@
     {label:'Affiliation',       key:'affiliation',     type:'alpha', tip:'Affiliation'},
     {label:'S',                 key:'artifact_score',  type:'num',   tip:'Artifact score: Available×1 + Functional×1 + Reproduced×1'},
     {label:'Ar',                key:'artifacts',       type:'num',   tip:'Total artifacts'},
-    {label:'C',                 key:'artifact_citations', type:'num', tip:'Total artifact citations (DOI cited_by_count)'},
     {label:'P',                 key:'total_papers',    type:'num',   tip:'Total papers at tracked conferences'},
     {label:'AR%',               key:'artifact_rate',   type:'num',   tip:'Artifact rate: % of papers with artifact'},
     {label:'RR%',               key:'repro_rate',      type:'num',   tip:'Reproducibility rate: % of artifacts Reproduced'},
@@ -83,7 +82,6 @@
       cells.push('<td>' + escHtml(a.affiliation || '') + '</td>');
       cells.push('<td><strong>' + (a.artifact_score || 0) + '</strong></td>');
       cells.push('<td>' + (a.artifacts || 0) + '</td>');
-      cells.push('<td>' + (a.artifact_citations || 0) + '</td>');
       cells.push('<td>' + (a.total_papers || '') + '</td>');
       cells.push('<td>' + (a.total_papers > 0 ? a.artifact_rate + '%' : '') + '</td>');
       cells.push('<td>' + a.repro_rate + '%</td>');

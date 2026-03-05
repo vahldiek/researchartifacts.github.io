@@ -40,7 +40,7 @@
 </div>
 
 <div id="institution-legend" style="margin:0 0 6px 0; display:none; font-size:0.85em; color:#555;">
-  Legend: #=Rank, S=Combined Score, AS=Artifact Score, AES=AE Service Score, A:E=Artifact:Evaluation Ratio, R=Researchers, Ar=Artifacts, C=Citations, P=Papers, AR%=Artifact Rate, RR%=Repro. Rate, AE=AE Memberships, Ch=Chairs
+  Legend: #=Rank, S=Combined Score, AS=Artifact Score, AES=AE Service Score, A:E=Artifact:Evaluation Ratio, R=Researchers, Ar=Artifacts, P=Papers, AR%=Artifact Rate, RR%=Repro. Rate, AE=AE Memberships, Ch=Chairs
 </div>
 
 <div id="institutionLoading"><em>Loading institution ranking data…</em></div>
@@ -83,13 +83,12 @@
   var fixedCols = [
     {label:'#',                key:'rank',              type:'num',   tip:'Rank'},
     {label:'Institution',      key:'affiliation',       type:'alpha', tip:'Institution'},
-    {label:'S',                key:'combined_score',    type:'num',   tip:'Combined score: ∑(A+F+R+C) + ∑(AE memberships×3 + Chairs×5)'},
+    {label:'S',                key:'combined_score',    type:'num',   tip:'Combined score: ∑(A+F+R) + ∑(AE memberships×3 + Chairs×5)'},
     {label:'AS',               key:'artifact_score',    type:'num',   tip:'Artifact score: sum of all artifact badges'},
     {label:'AES',              key:'ae_score',          type:'num',   tip:'AE service score: sum of committee service'},
     {label:'A:E',              key:'ae_ratio',          type:'num',   tip:'Artifact:Evaluation ratio (artifact_score/ae_score)'},
     {label:'R',                key:'num_authors',       type:'num',   tip:'Researchers'},
     {label:'Ar',               key:'artifacts',         type:'num',   tip:'Total artifacts'},
-    {label:'C',                key:'artifact_citations', type:'num',   tip:'Total artifact citations (DOI cited_by_count)'},
     {label:'P',                key:'total_papers',      type:'num',   tip:'Total papers'},
     {label:'AR%',              key:'artifact_rate',     type:'num',   tip:'Artifact rate: % papers with artifact'},
     {label:'RR%',              key:'repro_rate',        type:'num',   tip:'Reproducibility rate: % artifacts Reproduced'},
@@ -498,7 +497,6 @@
       cells.push('<td>' + aeRatioDisplay + '</td>');
       cells.push('<td>' + (inst.num_authors || '') + '</td>');
       cells.push('<td>' + (inst.artifacts || '') + '</td>');
-      cells.push('<td>' + (inst.artifact_citations || 0) + '</td>');
       cells.push('<td>' + (inst.total_papers || '') + '</td>');
       cells.push('<td>' + (inst.total_papers > 0 ? inst.artifact_rate + '%' : '') + '</td>');
       // Calculate repro rate from badges

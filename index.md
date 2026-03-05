@@ -49,7 +49,7 @@ Explore detailed insights across institutions, authors, and conferences:
 - **[Institution Rankings]({{ '/institution_rankings.html' | relative_url }})** — Institutions ranked by artifact contributions and author engagement
 - **[Author Rankings]({{ '/authors.html' | relative_url }})** — Individual authors ranked by artifact evaluation impact
 - **[Statistics]({{ '/statistics/' | relative_url }})** — Artifact evaluation trends by country and continent
-- **[Repository Statistics]({{ '/repo_stats.html' | relative_url }})** — Most popular artifact repositories by stars, forks, and citations
+- **[Repository Statistics]({{ '/repo_stats.html' | relative_url }})** — Most popular artifact repositories by stars, forks, and downloads
 
 <script>
 (function(){
