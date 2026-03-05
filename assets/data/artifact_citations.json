@@ -1641,7 +1641,9 @@
     "cited_by_count": 1,
     "citations_openalex": 1,
     "citations_semantic_scholar": null,
-    "citing_dois_openalex": [],
+    "citing_dois_openalex": [
+      "10.1109/jiot.2024.3496525"
+    ],
     "citing_dois_semantic_scholar": [],
     "citing_dois_openalex_truncated": false,
     "citing_dois_semantic_scholar_truncated": false,
@@ -2848,7 +2850,9 @@
     "cited_by_count": 1,
     "citations_openalex": 1,
     "citations_semantic_scholar": null,
-    "citing_dois_openalex": [],
+    "citing_dois_openalex": [
+      "10.1145/3492321.3519571"
+    ],
     "citing_dois_semantic_scholar": [],
     "citing_dois_openalex_truncated": false,
     "citing_dois_semantic_scholar_truncated": false,
@@ -3018,7 +3022,9 @@
     "cited_by_count": 1,
     "citations_openalex": 1,
     "citations_semantic_scholar": null,
-    "citing_dois_openalex": [],
+    "citing_dois_openalex": [
+      "10.1145/3492321.3519589"
+    ],
     "citing_dois_semantic_scholar": [],
     "citing_dois_openalex_truncated": false,
     "citing_dois_semantic_scholar_truncated": false,
@@ -3137,7 +3143,9 @@
     "cited_by_count": 1,
     "citations_openalex": 1,
     "citations_semantic_scholar": null,
-    "citing_dois_openalex": [],
+    "citing_dois_openalex": [
+      "10.1007/978-3-031-61486-6_4"
+    ],
     "citing_dois_semantic_scholar": [],
     "citing_dois_openalex_truncated": false,
     "citing_dois_semantic_scholar_truncated": false,
@@ -3273,7 +3281,10 @@
     "cited_by_count": 2,
     "citations_openalex": 2,
     "citations_semantic_scholar": null,
-    "citing_dois_openalex": [],
+    "citing_dois_openalex": [
+      "10.1145/3492321.3519572",
+      "10.1145/3579370.3594768"
+    ],
     "citing_dois_semantic_scholar": [],
     "citing_dois_openalex_truncated": false,
     "citing_dois_semantic_scholar_truncated": false,
@@ -3715,7 +3726,9 @@
     "cited_by_count": 1,
     "citations_openalex": 1,
     "citations_semantic_scholar": null,
-    "citing_dois_openalex": [],
+    "citing_dois_openalex": [
+      "10.1145/3694715.3695944"
+    ],
     "citing_dois_semantic_scholar": [],
     "citing_dois_openalex_truncated": false,
     "citing_dois_semantic_scholar_truncated": false,
@@ -3800,7 +3813,9 @@
     "cited_by_count": 1,
     "citations_openalex": 1,
     "citations_semantic_scholar": null,
-    "citing_dois_openalex": [],
+    "citing_dois_openalex": [
+      "10.1145/3552326.3567485"
+    ],
     "citing_dois_semantic_scholar": [],
     "citing_dois_openalex_truncated": false,
     "citing_dois_semantic_scholar_truncated": false,
@@ -11739,7 +11754,10 @@
     "cited_by_count": 2,
     "citations_openalex": 2,
     "citations_semantic_scholar": null,
-    "citing_dois_openalex": [],
+    "citing_dois_openalex": [
+      "10.1145/3359789.3359842",
+      "10.1145/3462333"
+    ],
     "citing_dois_semantic_scholar": [],
     "citing_dois_openalex_truncated": false,
     "citing_dois_semantic_scholar_truncated": false,
@@ -17128,7 +17146,9 @@
     "cited_by_count": 1,
     "citations_openalex": 1,
     "citations_semantic_scholar": null,
-    "citing_dois_openalex": [],
+    "citing_dois_openalex": [
+      "10.14722/ndss.2024.23116"
+    ],
     "citing_dois_semantic_scholar": [],
     "citing_dois_openalex_truncated": false,
     "citing_dois_semantic_scholar_truncated": false,
@@ -28331,7 +28351,25 @@
     "cited_by_count": 17,
     "citations_openalex": 17,
     "citations_semantic_scholar": null,
-    "citing_dois_openalex": [],
+    "citing_dois_openalex": [
+      "10.1007/978-981-96-7005-5_25",
+      "10.1007/978-981-97-4519-7_6",
+      "10.1007/s10207-025-01040-0",
+      "10.1016/j.cose.2023.103328",
+      "10.1016/j.cose.2024.104311",
+      "10.1016/j.cose.2025.104413",
+      "10.1016/j.cose.2025.104588",
+      "10.1016/j.jisa.2025.104057",
+      "10.1051/itmconf/20246000016",
+      "10.1109/globecom48099.2022.10001525",
+      "10.1109/icde53745.2022.00287",
+      "10.1109/sp54263.2024.00087",
+      "10.14722/ndss.2024.23204",
+      "10.14722/ndss.2024.24582",
+      "10.2139/ssrn.5351687",
+      "10.3390/s23249881",
+      "10.48550/arxiv.2309.09498"
+    ],
     "citing_dois_semantic_scholar": [],
     "citing_dois_openalex_truncated": false,
     "citing_dois_semantic_scholar_truncated": false,
@@ -30167,7 +30205,12 @@
     "cited_by_count": 4,
     "citations_openalex": 4,
     "citations_semantic_scholar": null,
-    "citing_dois_openalex": [],
+    "citing_dois_openalex": [
+      "10.1109/sp61157.2025.00151",
+      "10.1109/swc57546.2023.10449051",
+      "10.1145/3555050.3569133",
+      "10.1145/3576915.3623075"
+    ],
     "citing_dois_semantic_scholar": [],
     "citing_dois_openalex_truncated": false,
     "citing_dois_semantic_scholar_truncated": false,
@@ -30456,7 +30499,16 @@
     "cited_by_count": 8,
     "citations_openalex": 8,
     "citations_semantic_scholar": null,
-    "citing_dois_openalex": [],
+    "citing_dois_openalex": [
+      "10.1016/j.infsof.2024.107524",
+      "10.1109/icse48619.2023.00157",
+      "10.1109/icse48619.2023.00211",
+      "10.1109/iiai-aai-winter61682.2023.00016",
+      "10.1109/sp54263.2024.00137",
+      "10.1109/tse.2024.3358258",
+      "10.1145/3634737.3657003",
+      "10.3390/electronics13081433"
+    ],
     "citing_dois_semantic_scholar": [],
     "citing_dois_openalex_truncated": false,
     "citing_dois_semantic_scholar_truncated": false,
@@ -41659,7 +41711,9 @@
     "cited_by_count": 1,
     "citations_openalex": 1,
     "citations_semantic_scholar": null,
-    "citing_dois_openalex": [],
+    "citing_dois_openalex": [
+      "10.1007/s11432-025-4388-5"
+    ],
     "citing_dois_semantic_scholar": [],
     "citing_dois_openalex_truncated": false,
     "citing_dois_semantic_scholar_truncated": false,
@@ -41795,7 +41849,10 @@
     "cited_by_count": 2,
     "citations_openalex": 2,
     "citations_semantic_scholar": null,
-    "citing_dois_openalex": [],
+    "citing_dois_openalex": [
+      "10.1145/3543507.3583189",
+      "10.1145/3629131"
+    ],
     "citing_dois_semantic_scholar": [],
     "citing_dois_openalex_truncated": false,
     "citing_dois_semantic_scholar_truncated": false,

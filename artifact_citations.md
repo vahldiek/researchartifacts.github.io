@@ -117,9 +117,15 @@ layout: default
 }
 </style>
 
-<h2>Artifact Citations Ranking</h2>
+<h2>Artifact Citations</h2>
 
-<p><strong id="total-artifacts">Loading...</strong> artifacts with citations. <em id="data-status"></em></p>
+<p>We queried <a href="https://openalex.org/">OpenAlex</a> for citations of <strong>782</strong> artifact DOIs (Zenodo &amp; Figshare) across <strong>2,576</strong> artifacts.
+OpenAlex reported <strong>14</strong> artifacts with a total of <strong>43</strong> citing DOIs.
+We verified each citing DOI using <a href="https://www.crossref.org/">Crossref</a> publisher-submitted reference lists to check whether the citing paper's bibliography actually contains the artifact DOI (rather than the associated paper DOI).</p>
+
+<p><strong>Result: 0 genuine third-party artifact citations.</strong> All 43 citing DOIs were either false positives (36 &mdash; the paper was cited, not the artifact), self-citations (6 &mdash; the paper cites its own artifact), or unknown (1).</p>
+
+<p><strong id="total-artifacts">0</strong> artifacts with verified third-party citations. <em id="data-status"></em></p>
 
 <div class="controls">
   <label style="font-weight:bold; margin-right:4px; font-size:1em;">Search:</label>

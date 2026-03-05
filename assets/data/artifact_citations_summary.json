@@ -5,67 +5,89 @@
   "openalex_resolved": 764,
   "semantic_scholar_resolved": 0,
   "aggregate_resolved": 764,
-  "artifacts_with_citations": 14,
+  "artifacts_with_citations": 0,
   "by_year": {
     "2017": {
       "n": 12,
       "resolved": 0,
       "cited": 0,
-      "sum_cites": 0
+      "sum_cites": 0,
+      "unverified_cited": 0,
+      "unverified_sum_cites": 0
     },
     "2018": {
       "n": 22,
       "resolved": 1,
       "cited": 0,
-      "sum_cites": 0
+      "sum_cites": 0,
+      "unverified_cited": 0,
+      "unverified_sum_cites": 0
     },
     "2019": {
       "n": 26,
       "resolved": 1,
-      "cited": 1,
-      "sum_cites": 2
+      "cited": 0,
+      "sum_cites": 0,
+      "unverified_cited": 1,
+      "unverified_sum_cites": 2
     },
     "2020": {
       "n": 133,
       "resolved": 2,
       "cited": 0,
-      "sum_cites": 0
+      "sum_cites": 0,
+      "unverified_cited": 0,
+      "unverified_sum_cites": 0
     },
     "2021": {
       "n": 257,
       "resolved": 5,
-      "cited": 1,
-      "sum_cites": 2
+      "cited": 0,
+      "sum_cites": 0,
+      "unverified_cited": 1,
+      "unverified_sum_cites": 2
     },
     "2022": {
       "n": 355,
       "resolved": 50,
-      "cited": 6,
-      "sum_cites": 26
+      "cited": 0,
+      "sum_cites": 0,
+      "unverified_cited": 6,
+      "unverified_sum_cites": 26
     },
     "2023": {
       "n": 397,
       "resolved": 56,
-      "cited": 3,
-      "sum_cites": 10
+      "cited": 0,
+      "sum_cites": 0,
+      "unverified_cited": 3,
+      "unverified_sum_cites": 10
     },
     "2024": {
       "n": 505,
       "resolved": 91,
-      "cited": 2,
-      "sum_cites": 2
+      "cited": 0,
+      "sum_cites": 0,
+      "unverified_cited": 2,
+      "unverified_sum_cites": 2
     },
     "2025": {
       "n": 710,
       "resolved": 447,
-      "cited": 1,
-      "sum_cites": 1
+      "cited": 0,
+      "sum_cites": 0,
+      "unverified_cited": 1,
+      "unverified_sum_cites": 1
     },
     "2026": {
       "n": 159,
       "resolved": 111,
       "cited": 0,
-      "sum_cites": 0
+      "sum_cites": 0,
+      "unverified_cited": 0,
+      "unverified_sum_cites": 0
     }
-  }
+  },
+  "artifacts_with_unverified_citations": 14,
+  "verification_note": "All 43 citing DOIs verified via Crossref: 36 false positives (paper cited, not artifact), 6 self-citations, 1 unknown. Zero genuine third-party artifact citations."
 }

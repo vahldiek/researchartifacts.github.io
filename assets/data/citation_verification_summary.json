@@ -1,0 +1,12 @@
+{
+  "total_citing_dois_checked": 43,
+  "verdicts": {
+    "FALSE_POSITIVE": 36,
+    "SELF_CITATION": 6,
+    "UNKNOWN": 1,
+    "GENUINE": 0
+  },
+  "genuine_third_party_citations": 0,
+  "method": "Crossref reference list verification + author overlap self-citation detection",
+  "note": "OpenAlex conflates paper and artifact citations when titles match. Crossref publisher-submitted bibliographies used to verify actual DOI cited."
+}
