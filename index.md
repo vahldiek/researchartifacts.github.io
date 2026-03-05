@@ -245,14 +245,15 @@ title: "Artifact Evaluation across Security & Systems Conferences"
       }
       var linksHtml = links.length > 0 ? links.join('<br>') : '<span style="color:#999;">—</span>';
 
+      var cellBase = 'padding:6px 10px; overflow:hidden; overflow-wrap:break-word; word-wrap:break-word; vertical-align:top;';
       tr.innerHTML =
-        '<td style="padding:6px 10px; overflow-wrap:break-word; word-wrap:break-word;">' + titleHtml + '</td>' +
-        '<td style="padding:6px 10px; overflow-wrap:break-word; word-wrap:break-word;">' + authorsHtml + '</td>' +
-        '<td style="padding:6px 10px; overflow-wrap:break-word; word-wrap:break-word;">' + affHtml + '</td>' +
-        '<td style="padding:6px 10px;">' + venueHtml + '</td>' +
-        '<td style="padding:6px 10px;">' + yearHtml + '</td>' +
-        '<td style="padding:6px 10px; overflow-wrap:break-word; word-wrap:break-word;">' + badgesHtml + '</td>' +
-        '<td style="padding:6px 10px;">' + linksHtml + '</td>';
+        '<td style="' + cellBase + '">' + titleHtml + '</td>' +
+        '<td style="' + cellBase + '">' + authorsHtml + '</td>' +
+        '<td style="' + cellBase + '">' + affHtml + '</td>' +
+        '<td style="' + cellBase + '">' + venueHtml + '</td>' +
+        '<td style="' + cellBase + '">' + yearHtml + '</td>' +
+        '<td style="' + cellBase + '">' + badgesHtml + '</td>' +
+        '<td style="' + cellBase + '">' + linksHtml + '</td>';
       tbody.appendChild(tr);
     });
 
