@@ -2,101 +2,296 @@
 title: "Artifact Evaluation across Security & Systems Conferences"
 ---
 
-**Research artifacts & artifact evaluation (AE)** drive reproducibility and scientific impact. This project tracks and analyzes artifact evaluation outcomes across major [security]({{ '/security/' | relative_url }}) and [systems]({{ '/systems/' | relative_url }}) conferences, recognizing the contributions of both artifact authors and artifact evaluation committees. We aggregate comprehensive data on artifact evaluation badges, contributor achievements, and repository engagement to promote reproducible research and celebrate the researchers advancing this critical work.
+**Research artifacts & artifact evaluation (AE)** drive reproducibility and scientific impact. This project tracks and analyzes artifact evaluation outcomes across major [security]({{ '/security/' | relative_url }}) and [systems]({{ '/systems/' | relative_url }}) conferences, recognizing the contributions of both artifact authors and artifact evaluation committees.
 
-**Browse rankings:** [Combined Rankings]({{ '/combined_rankings.html' | relative_url }}) (researchers by artifact + AE contributions) · [Institution Rankings]({{ '/institution_rankings.html' | relative_url }}) (institutions by author engagement)
-
-{% if site.data.summary %}
-
-## Overview
-
-| | |
-|---|---|
-| **Total Artifacts** | {{ site.data.summary.total_artifacts }} |
-| **Conferences Tracked** | {{ site.data.summary.total_conferences }} ({{ site.data.summary.conferences_list | join: ", " }}) |
-| **Years Covered** | {{ site.data.summary.year_range }} |
-| **Total Authors** | {{ site.data.author_summary.total_authors }} |
-| **AE Committee Members** | {{ site.data.committee_stats.total_members }} ({{ site.data.committee_stats.recurring_members }} recurring) |
-
-## Artifacts by Year and Area
-
-<div style="width:100%; max-width:400px; margin:1em 0;">
-<canvas id="areaChart" height="200"></canvas>
+<div id="search-container" style="max-width:720px; margin:2em auto; text-align:center;">
+  <div style="position:relative; display:inline-block; width:100%;">
+    <input id="searchBox" type="text" placeholder="Search artifacts by title, author, affiliation, or venue…"
+      style="width:100%; padding:14px 48px 14px 20px; font-size:1.1em; border:2px solid #ddd; border-radius:28px; outline:none; box-shadow:0 2px 8px rgba(0,0,0,0.08); transition: box-shadow 0.2s, border-color 0.2s;"
+      onfocus="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.12)'; this.style.borderColor='#4285f4';"
+      onblur="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'; this.style.borderColor='#ddd';"
+      autocomplete="off">
+    <span style="position:absolute; right:16px; top:50%; transform:translateY(-50%); color:#999; font-size:1.2em; pointer-events:none;">&#128269;</span>
+  </div>
+  <div id="filters" style="margin-top:12px; display:flex; flex-wrap:wrap; gap:10px; justify-content:center; align-items:center;">
+    <select id="yearFilter" style="padding:8px 12px; border:1px solid #ccc; border-radius:6px; font-size:0.95em; background:#fff;">
+      <option value="">All Years</option>
+    </select>
+    <select id="venueFilter" style="padding:8px 12px; border:1px solid #ccc; border-radius:6px; font-size:0.95em; background:#fff;">
+      <option value="">All Venues</option>
+    </select>
+    <select id="areaFilter" style="padding:8px 12px; border:1px solid #ccc; border-radius:6px; font-size:0.95em; background:#fff;">
+      <option value="">All Areas</option>
+      <option value="systems">Systems</option>
+      <option value="security">Security</option>
+    </select>
+  </div>
+  <div id="searchStatus" style="margin-top:8px; font-size:0.9em; color:#666;"></div>
 </div>
 
-| Area | Total | {% for y in site.data.artifacts_by_year reversed %}{{ y.year }} | {% endfor %}
-|---|:---:|{% for y in site.data.artifacts_by_year reversed %}:---:|{% endfor %}
-| **[Systems]({{ '/systems/' | relative_url }})** | {% assign _st = 0 %}{% assign _sa = 0 %}{% assign _sf = 0 %}{% assign _sr = 0 %}{% for conf in site.data.artifacts_by_conference %}{% if conf.category == "systems" %}{% for yd in conf.years %}{% assign _st = _st | plus: yd.total %}{% assign _sa = _sa | plus: yd.available %}{% assign _sf = _sf | plus: yd.functional %}{% assign _sr = _sr | plus: yd.reproducible %}{% endfor %}{% endif %}{% endfor %}**{{ _st }}** ({{ _sa }}, {{ _sf }}, {{ _sr }}) | {% for y in site.data.artifacts_by_year reversed %}{% assign _ct = 0 %}{% assign _ca = 0 %}{% assign _cf = 0 %}{% assign _cr = 0 %}{% for conf in site.data.artifacts_by_conference %}{% if conf.category == "systems" %}{% for yd in conf.years %}{% if yd.year == y.year %}{% assign _ct = _ct | plus: yd.total %}{% assign _ca = _ca | plus: yd.available %}{% assign _cf = _cf | plus: yd.functional %}{% assign _cr = _cr | plus: yd.reproducible %}{% endif %}{% endfor %}{% endif %}{% endfor %}{% if _ct > 0 %}{{ _ct }} ({{ _ca }}, {{ _cf }}, {{ _cr }}){% else %}&ndash;{% endif %} | {% endfor %}
-| **[Security]({{ '/security/' | relative_url }})** | {% assign _st = 0 %}{% assign _sa = 0 %}{% assign _sf = 0 %}{% assign _sr = 0 %}{% for conf in site.data.artifacts_by_conference %}{% if conf.category == "security" %}{% for yd in conf.years %}{% assign _st = _st | plus: yd.total %}{% assign _sa = _sa | plus: yd.available %}{% assign _sf = _sf | plus: yd.functional %}{% assign _sr = _sr | plus: yd.reproducible %}{% endfor %}{% endif %}{% endfor %}**{{ _st }}** ({{ _sa }}, {{ _sf }}, {{ _sr }}) | {% for y in site.data.artifacts_by_year reversed %}{% assign _ct = 0 %}{% assign _ca = 0 %}{% assign _cf = 0 %}{% assign _cr = 0 %}{% for conf in site.data.artifacts_by_conference %}{% if conf.category == "security" %}{% for yd in conf.years %}{% if yd.year == y.year %}{% assign _ct = _ct | plus: yd.total %}{% assign _ca = _ca | plus: yd.available %}{% assign _cf = _cf | plus: yd.functional %}{% assign _cr = _cr | plus: yd.reproducible %}{% endif %}{% endfor %}{% endif %}{% endfor %}{% if _ct > 0 %}{{ _ct }} ({{ _ca }}, {{ _cf }}, {{ _cr }}){% else %}&ndash;{% endif %} | {% endfor %}
-| **Total** | {% assign _st = 0 %}{% assign _sa = 0 %}{% assign _sf = 0 %}{% assign _sr = 0 %}{% for conf in site.data.artifacts_by_conference %}{% for yd in conf.years %}{% assign _st = _st | plus: yd.total %}{% assign _sa = _sa | plus: yd.available %}{% assign _sf = _sf | plus: yd.functional %}{% assign _sr = _sr | plus: yd.reproducible %}{% endfor %}{% endfor %}**{{ _st }}** ({{ _sa }}, {{ _sf }}, {{ _sr }}) | {% for y in site.data.artifacts_by_year reversed %}{% assign _ct = 0 %}{% assign _ca = 0 %}{% assign _cf = 0 %}{% assign _cr = 0 %}{% for conf in site.data.artifacts_by_conference %}{% for yd in conf.years %}{% if yd.year == y.year %}{% assign _ct = _ct | plus: yd.total %}{% assign _ca = _ca | plus: yd.available %}{% assign _cf = _cf | plus: yd.functional %}{% assign _cr = _cr | plus: yd.reproducible %}{% endif %}{% endfor %}{% endfor %}**{{ _ct }}** ({{ _ca }}, {{ _cf }}, {{ _cr }}) | {% endfor %}
+<div id="results-container" style="margin-top:1em; overflow-x:auto;">
+  <table id="resultsTable" style="width:100%; border-collapse:collapse; font-size:0.9em; display:none;">
+    <thead>
+      <tr style="background:#f5f5f5; text-align:left;">
+        <th style="padding:8px 10px; border-bottom:2px solid #ddd; cursor:pointer;" onclick="sortResults('title')">Title ⇅</th>
+        <th style="padding:8px 10px; border-bottom:2px solid #ddd;">Authors</th>
+        <th style="padding:8px 10px; border-bottom:2px solid #ddd;">Affiliations</th>
+        <th style="padding:8px 10px; border-bottom:2px solid #ddd; cursor:pointer;" onclick="sortResults('venue')">Venue ⇅</th>
+        <th style="padding:8px 10px; border-bottom:2px solid #ddd; cursor:pointer;" onclick="sortResults('year')">Year ⇅</th>
+        <th style="padding:8px 10px; border-bottom:2px solid #ddd;">Badges</th>
+        <th style="padding:8px 10px; border-bottom:2px solid #ddd;">Links</th>
+      </tr>
+    </thead>
+    <tbody id="resultsBody"></tbody>
+  </table>
+</div>
 
-Each cell shows **total (available, functional, reproduced)**.
-
-## Ranking: Top Contributors
-
-Researchers contribute through artifact publication and AE committee service. The [author ranking]({{ '/combined_rankings.html' | relative_url }}) combines both contributions into a unified score recognizing dual impact. Below are the top 10 most prolific contributors:
-
-<table id="top10Table">
-<thead><tr><th>#</th><th>Name</th><th>Affiliation</th><th>Ar</th><th>AE</th><th>Ch</th><th>AS</th><th>AES</th><th>S</th></tr></thead>
-<tbody><tr><td colspan="9"><em>Loading…</em></td></tr></tbody>
-</table>
-
-## Statistics & Analysis
-
-Explore detailed insights across institutions, authors, and conferences:
-
-- **[Author Rankings]({{ '/combined_rankings.html' | relative_url }})** — Researchers ranked by artifact contributions + AE committee work
-- **[Institution Rankings]({{ '/institution_rankings.html' | relative_url }})** — Institutions ranked by artifact contributions and author engagement
-- **[Author Rankings]({{ '/authors.html' | relative_url }})** — Individual authors ranked by artifact evaluation impact
-- **[Statistics]({{ '/statistics/' | relative_url }})** — Artifact evaluation trends by country and continent
-- **[Repository Statistics]({{ '/repo_stats.html' | relative_url }})** — Most popular artifact repositories by stars, forks, and downloads
+<div id="pagination" style="margin-top:12px; text-align:center; display:none;">
+  <button id="prevBtn" onclick="changePage(-1)" style="padding:6px 16px; margin:0 4px; border:1px solid #ccc; border-radius:4px; background:#fff; cursor:pointer;">← Prev</button>
+  <span id="pageInfo" style="margin:0 10px; font-size:0.95em;"></span>
+  <button id="nextBtn" onclick="changePage(1)" style="padding:6px 16px; margin:0 4px; border:1px solid #ccc; border-radius:4px; background:#fff; cursor:pointer;">Next →</button>
+</div>
 
 <script>
 (function(){
-  fetch('{{ "/assets/data/combined_rankings.json" | relative_url }}')
-    .then(function(r){ return r.json(); })
-    .then(function(data){
-      data.sort(function(a,b){ return (b.combined_score||0) - (a.combined_score||0); });
-      var top = data.slice(0, 10);
-      var tbody = document.querySelector('#top10Table tbody');
-      tbody.innerHTML = '';
-      var baseUrl = '{{ "" | relative_url }}';
-      top.forEach(function(e, i){
-        var name = (e.name || '').replace(/\t/g, ' ');
-        var displayName = name.replace(/\s+\d{4}$/, '').replace(/\t/g, ' ');
-        var aff  = (e.affiliation || '').replace(/^_/, '');
-        var profileUrl = baseUrl + '/author.html?name=' + encodeURIComponent(e.name);
-        var tr = document.createElement('tr');
-        tr.innerHTML = '<td>' + (i+1) + '</td>'
-          + '<td><a href="' + profileUrl + '" style="color:#0066cc;text-decoration:none;">' + escHtml(displayName) + '</a></td>'
-          + '<td>' + escHtml(aff) + '</td>'
-          + '<td>' + (e.artifacts||0) + '</td>'
-          + '<td>' + (e.ae_memberships||0) + '</td>'
-          + '<td>' + (e.chair_count||0) + '</td>'
-          + '<td>' + (e.artifact_score||0) + '</td>'
-          + '<td>' + (e.ae_score||0) + '</td>'
-          + '<td><strong>' + (e.combined_score||0) + '</strong></td>';
-        tbody.appendChild(tr);
-      });
-    });
+  var allData = [];
+  var filtered = [];
+  var currentPage = 1;
+  var pageSize = 25;
+  var sortField = 'year';
+  var sortAsc = false;
+  var baseUrl = '{{ "" | relative_url }}';
+
   function escHtml(s) {
     var d = document.createElement('div');
-    d.appendChild(document.createTextNode(s));
+    d.appendChild(document.createTextNode(s || ''));
     return d.innerHTML;
   }
+
+  function normalizeText(s) {
+    return (s || '').toLowerCase().replace(/[^a-z0-9 ]/g, ' ');
+  }
+
+  function buildSearchIndex(data) {
+    data.forEach(function(d) {
+      d._search = normalizeText(d.title) + ' ' +
+        normalizeText((d.authors || []).join(' ')) + ' ' +
+        normalizeText((d.affiliations || []).join(' ')) + ' ' +
+        normalizeText(d.conference) + ' ' +
+        normalizeText(d.category) + ' ' +
+        d.year;
+    });
+  }
+
+  function populateFilters(data) {
+    var years = {}, venues = {};
+    data.forEach(function(d) {
+      years[d.year] = 1;
+      venues[d.conference] = 1;
+    });
+    var yearSel = document.getElementById('yearFilter');
+    Object.keys(years).sort().reverse().forEach(function(y) {
+      var opt = document.createElement('option');
+      opt.value = y; opt.textContent = y;
+      yearSel.appendChild(opt);
+    });
+    var venueSel = document.getElementById('venueFilter');
+    Object.keys(venues).sort().forEach(function(v) {
+      var opt = document.createElement('option');
+      opt.value = v; opt.textContent = v;
+      venueSel.appendChild(opt);
+    });
+  }
+
+  function doSearch() {
+    var query = normalizeText(document.getElementById('searchBox').value.trim());
+    var yearVal = document.getElementById('yearFilter').value;
+    var venueVal = document.getElementById('venueFilter').value;
+    var areaVal = document.getElementById('areaFilter').value;
+    var terms = query.split(/\s+/).filter(function(t) { return t.length > 0; });
+
+    filtered = allData.filter(function(d) {
+      if (yearVal && String(d.year) !== yearVal) return false;
+      if (venueVal && d.conference !== venueVal) return false;
+      if (areaVal && d.category !== areaVal) return false;
+      if (terms.length === 0) return true;
+      return terms.every(function(t) { return d._search.indexOf(t) !== -1; });
+    });
+
+    currentPage = 1;
+    doSort();
+    renderResults();
+  }
+
+  function doSort() {
+    filtered.sort(function(a, b) {
+      var va, vb;
+      if (sortField === 'year') { va = a.year; vb = b.year; }
+      else if (sortField === 'venue') { va = a.conference; vb = b.conference; }
+      else { va = a.title.toLowerCase(); vb = b.title.toLowerCase(); }
+      if (va < vb) return sortAsc ? -1 : 1;
+      if (va > vb) return sortAsc ? 1 : -1;
+      return 0;
+    });
+  }
+
+  window.sortResults = function(field) {
+    if (sortField === field) { sortAsc = !sortAsc; }
+    else { sortField = field; sortAsc = true; }
+    doSort();
+    renderResults();
+  };
+
+  window.changePage = function(delta) {
+    var maxPage = Math.ceil(filtered.length / pageSize);
+    currentPage = Math.max(1, Math.min(maxPage, currentPage + delta));
+    renderResults();
+  };
+
+  function badgeLabel(b) {
+    var t = b.toLowerCase().replace('badges: ', '').trim();
+    if (t === 'artifact evaluated') return '🏅 Evaluated';
+    if (t === 'available') return '📦 Available';
+    if (t === 'functional') return '⚙️ Functional';
+    if (t === 'reproduced') return '🔄 Reproduced';
+    if (t === 'reusable') return '♻️ Reusable';
+    return t.charAt(0).toUpperCase() + t.slice(1);
+  }
+
+  function renderResults() {
+    var table = document.getElementById('resultsTable');
+    var tbody = document.getElementById('resultsBody');
+    var pagination = document.getElementById('pagination');
+    var status = document.getElementById('searchStatus');
+    var query = document.getElementById('searchBox').value.trim();
+    var yearVal = document.getElementById('yearFilter').value;
+    var venueVal = document.getElementById('venueFilter').value;
+    var areaVal = document.getElementById('areaFilter').value;
+
+    if (!query && !yearVal && !venueVal && !areaVal) {
+      table.style.display = 'none';
+      pagination.style.display = 'none';
+      status.textContent = allData.length + ' artifacts available. Type a query or select a filter to search.';
+      return;
+    }
+
+    var maxPage = Math.ceil(filtered.length / pageSize) || 1;
+    var start = (currentPage - 1) * pageSize;
+    var pageData = filtered.slice(start, start + pageSize);
+
+    tbody.innerHTML = '';
+    if (filtered.length === 0) {
+      table.style.display = 'table';
+      tbody.innerHTML = '<tr><td colspan="7" style="padding:16px; text-align:center; color:#999;">No artifacts found matching your search.</td></tr>';
+      pagination.style.display = 'none';
+      status.textContent = '0 results';
+      return;
+    }
+
+    pageData.forEach(function(d) {
+      var tr = document.createElement('tr');
+      tr.style.borderBottom = '1px solid #eee';
+
+      // Title
+      var titleHtml = escHtml(d.title);
+
+      // Authors (truncate if many)
+      var authorsArr = d.authors || [];
+      var authorsHtml = authorsArr.length > 0
+        ? authorsArr.map(function(a) {
+            var profileUrl = baseUrl + '/author.html?name=' + encodeURIComponent(a);
+            return '<a href="' + profileUrl + '" style="color:#0066cc;text-decoration:none;">' + escHtml(a) + '</a>';
+          }).join(', ')
+        : '<span style="color:#999;">—</span>';
+
+      // Affiliations
+      var affHtml = (d.affiliations || []).length > 0
+        ? escHtml(d.affiliations.join(', '))
+        : '<span style="color:#999;">—</span>';
+
+      // Venue
+      var venueHtml = escHtml(d.conference);
+
+      // Year
+      var yearHtml = String(d.year);
+
+      // Badges
+      var badgesHtml = (d.badges || []).map(function(b) {
+        return '<span style="display:inline-block; padding:1px 6px; margin:1px; border-radius:3px; background:#e8f5e9; font-size:0.85em; white-space:nowrap;">' + badgeLabel(b) + '</span>';
+      }).join(' ');
+
+      // Links
+      var links = [];
+      var repoUrl = d.repository_url || '';
+      var artUrl = d.artifact_url || '';
+      if (repoUrl) links.push('<a href="' + escHtml(repoUrl) + '" target="_blank" rel="noopener" style="color:#0066cc; text-decoration:none;" title="Repository">📂 Repo</a>');
+      if (artUrl) links.push('<a href="' + escHtml(artUrl) + '" target="_blank" rel="noopener" style="color:#0066cc; text-decoration:none;" title="Artifact">📎 Artifact</a>');
+      if (d.artifact_urls) {
+        d.artifact_urls.forEach(function(u, i) {
+          if (u && links.length < 4) links.push('<a href="' + escHtml(u) + '" target="_blank" rel="noopener" style="color:#0066cc; text-decoration:none;" title="Artifact">📎 #' + (i+1) + '</a>');
+        });
+      }
+      var linksHtml = links.length > 0 ? links.join('<br>') : '<span style="color:#999;">—</span>';
+
+      tr.innerHTML =
+        '<td style="padding:6px 10px;">' + titleHtml + '</td>' +
+        '<td style="padding:6px 10px; max-width:200px;">' + authorsHtml + '</td>' +
+        '<td style="padding:6px 10px; max-width:150px;">' + affHtml + '</td>' +
+        '<td style="padding:6px 10px; white-space:nowrap;">' + venueHtml + '</td>' +
+        '<td style="padding:6px 10px; white-space:nowrap;">' + yearHtml + '</td>' +
+        '<td style="padding:6px 10px;">' + badgesHtml + '</td>' +
+        '<td style="padding:6px 10px; white-space:nowrap;">' + linksHtml + '</td>';
+      tbody.appendChild(tr);
+    });
+
+    table.style.display = 'table';
+    status.textContent = filtered.length + ' result' + (filtered.length !== 1 ? 's' : '') + ' found';
+    pagination.style.display = maxPage > 1 ? 'block' : 'none';
+    document.getElementById('pageInfo').textContent = 'Page ' + currentPage + ' of ' + maxPage;
+    document.getElementById('prevBtn').disabled = currentPage <= 1;
+    document.getElementById('nextBtn').disabled = currentPage >= maxPage;
+  }
+
+  // Load data
+  fetch('{{ "/assets/data/search_data.json" | relative_url }}')
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      allData = data;
+      buildSearchIndex(data);
+      populateFilters(data);
+      document.getElementById('searchStatus').textContent = data.length + ' artifacts available. Type a query or select a filter to search.';
+
+      // Wire up events
+      var debounceTimer;
+      document.getElementById('searchBox').addEventListener('input', function() {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(doSearch, 200);
+      });
+      document.getElementById('yearFilter').addEventListener('change', doSearch);
+      document.getElementById('venueFilter').addEventListener('change', doSearch);
+      document.getElementById('areaFilter').addEventListener('change', doSearch);
+
+      // Check URL params for pre-filled search
+      var params = new URLSearchParams(window.location.search);
+      if (params.get('q')) {
+        document.getElementById('searchBox').value = params.get('q');
+        doSearch();
+      }
+      if (params.get('venue')) {
+        document.getElementById('venueFilter').value = params.get('venue');
+        doSearch();
+      }
+      if (params.get('year')) {
+        document.getElementById('yearFilter').value = params.get('year');
+        doSearch();
+      }
+    })
+    .catch(function(err) {
+      document.getElementById('searchStatus').textContent = 'Error loading artifact data.';
+      console.error(err);
+    });
 })();
 </script>
-
-## Explore by Conference Area
-
-- [Systems]({{ '/systems/' | relative_url }}) — Breakdown and rankings for systems venues (EuroSys, OSDI, SC, SOSP)
-- [Security]({{ '/security/' | relative_url }}) — Breakdown and rankings for security venues (ACSAC, CHES, NDSS, PETS, USENIX Security, WOOT)
-- [Methodology]({{ '/methodology.html' | relative_url }}) — How we collect, process, and analyze the data
-- [About]({{ '/about.html' | relative_url }}) — Project information and how to contribute
-
-{% else %}
-Statistics are being generated. Check back soon!
-{% endif %}
 
 ## Data Sources
 
