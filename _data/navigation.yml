@@ -12,6 +12,8 @@ main:
         url: statistics/
       - title: "Author Profiles"
         url: author.html
+      - title: "Institution Profiles"
+        url: institution.html
   - title: "Security"
     url: security/
     children:
