@@ -388,53 +388,6 @@
     "last_year": 2025
   },
   {
-    "name": "Anjo Vahldiek-Oberwagner",
-    "display_name": "Anjo Vahldiek-Oberwagner",
-    "affiliation": "Intel Labs",
-    "total_memberships": 7,
-    "chair_count": 5,
-    "conferences": [
-      [
-        "EUROSYS",
-        2022
-      ],
-      [
-        "OSDI",
-        2020
-      ],
-      [
-        "SC",
-        2021
-      ],
-      [
-        "SC",
-        2021
-      ],
-      [
-        "USENIXSEC",
-        2020
-      ],
-      [
-        "USENIXSEC",
-        2023
-      ],
-      [
-        "USENIXSEC",
-        2024
-      ]
-    ],
-    "area": "both",
-    "years": {
-      "2020": 2,
-      "2021": 2,
-      "2022": 1,
-      "2023": 1,
-      "2024": 1
-    },
-    "first_year": 2020,
-    "last_year": 2024
-  },
-  {
     "name": "Jianyu Jiang",
     "display_name": "Jianyu Jiang",
     "affiliation": "Huawei Technologies Co.",
@@ -704,6 +657,49 @@
     },
     "first_year": 2023,
     "last_year": 2025
+  },
+  {
+    "name": "Anjo Vahldiek-Oberwagner",
+    "display_name": "Anjo Vahldiek-Oberwagner",
+    "affiliation": "Intel Labs",
+    "total_memberships": 6,
+    "chair_count": 5,
+    "conferences": [
+      [
+        "EUROSYS",
+        2022
+      ],
+      [
+        "OSDI",
+        2020
+      ],
+      [
+        "SC",
+        2021
+      ],
+      [
+        "USENIXSEC",
+        2020
+      ],
+      [
+        "USENIXSEC",
+        2023
+      ],
+      [
+        "USENIXSEC",
+        2024
+      ]
+    ],
+    "area": "both",
+    "years": {
+      "2020": 2,
+      "2021": 1,
+      "2022": 1,
+      "2023": 1,
+      "2024": 1
+    },
+    "first_year": 2020,
+    "last_year": 2024
   },
   {
     "name": "Solal Pirelli",
@@ -10987,29 +10983,6 @@
     "last_year": 2024
   },
   {
-    "name": "Ivo Jimenez",
-    "display_name": "Ivo Jimenez",
-    "affiliation": "University of California, Santa Cruz",
-    "total_memberships": 2,
-    "chair_count": 1,
-    "conferences": [
-      [
-        "SC",
-        2021
-      ],
-      [
-        "SOSP",
-        2021
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2021": 2
-    },
-    "first_year": 2021,
-    "last_year": 2021
-  },
-  {
     "name": "Peter Schwabe",
     "display_name": "Peter Schwabe",
     "affiliation": "Max Planck Institute for Security and Privacy",
@@ -11055,29 +11028,6 @@
     },
     "first_year": 2025,
     "last_year": 2025
-  },
-  {
-    "name": "Tanu Malik",
-    "display_name": "Tanu Malik",
-    "affiliation": "DePaul University",
-    "total_memberships": 2,
-    "chair_count": 1,
-    "conferences": [
-      [
-        "SC",
-        2021
-      ],
-      [
-        "SC",
-        2021
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2021": 2
-    },
-    "first_year": 2021,
-    "last_year": 2021
   },
   {
     "name": "Tianyin Xu",
@@ -11623,29 +11573,6 @@
     },
     "first_year": 2025,
     "last_year": 2026
-  },
-  {
-    "name": "Antonio Sciarappa",
-    "display_name": "Antonio Sciarappa",
-    "affiliation": "Leonardo Labs, Italy",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "SC",
-        2021
-      ],
-      [
-        "SC",
-        2021
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2021": 2
-    },
-    "first_year": 2021,
-    "last_year": 2021
   },
   {
     "name": "Archit Bhatnagar",
@@ -15376,29 +15303,6 @@
     "last_year": 2025
   },
   {
-    "name": "Kiril Dichev",
-    "display_name": "Kiril Dichev",
-    "affiliation": "University of Cambridge",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "SC",
-        2021
-      ],
-      [
-        "SC",
-        2021
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2021": 2
-    },
-    "first_year": 2021,
-    "last_year": 2021
-  },
-  {
     "name": "Kunal Mukherjee",
     "display_name": "Kunal Mukherjee",
     "affiliation": "The University of Texas at Dallas",
@@ -15749,29 +15653,6 @@
     },
     "first_year": 2023,
     "last_year": 2026
-  },
-  {
-    "name": "Marion Weinzierl",
-    "display_name": "Marion Weinzierl",
-    "affiliation": "N8 CIR",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "SC",
-        2021
-      ],
-      [
-        "SC",
-        2021
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2021": 2
-    },
-    "first_year": 2021,
-    "last_year": 2021
   },
   {
     "name": "Marton Bognar",
@@ -17469,29 +17350,6 @@
     "last_year": 2025
   },
   {
-    "name": "Rocío Carratalá-Sáez",
-    "display_name": "Rocío Carratalá-Sáez",
-    "affiliation": "Jaume I University",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "SC",
-        2021
-      ],
-      [
-        "SC",
-        2021
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2021": 2
-    },
-    "first_year": 2021,
-    "last_year": 2021
-  },
-  {
     "name": "Ruidan Li",
     "display_name": "Ruidan Li",
     "affiliation": "University of Chicago",
@@ -18537,29 +18395,6 @@
     },
     "first_year": 2025,
     "last_year": 2026
-  },
-  {
-    "name": "Steve Menken",
-    "display_name": "Steve Menken",
-    "affiliation": "NREL",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "SC",
-        2021
-      ],
-      [
-        "SC",
-        2021
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2021": 2
-    },
-    "first_year": 2021,
-    "last_year": 2021
   },
   {
     "name": "Steven Ngo",
@@ -21628,6 +21463,25 @@
     "last_year": 2026
   },
   {
+    "name": "Ivo Jimenez",
+    "display_name": "Ivo Jimenez",
+    "affiliation": "University of California, Santa Cruz",
+    "total_memberships": 1,
+    "chair_count": 1,
+    "conferences": [
+      [
+        "SOSP",
+        2021
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2021": 1
+    },
+    "first_year": 2021,
+    "last_year": 2021
+  },
+  {
     "name": "Jo Van Bulck",
     "display_name": "Jo Van Bulck",
     "affiliation": "KU Leuven",
@@ -21949,6 +21803,25 @@
     },
     "first_year": 2025,
     "last_year": 2025
+  },
+  {
+    "name": "Tanu Malik",
+    "display_name": "Tanu Malik",
+    "affiliation": "DePaul University",
+    "total_memberships": 1,
+    "chair_count": 1,
+    "conferences": [
+      [
+        "SC",
+        2021
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2021": 1
+    },
+    "first_year": 2021,
+    "last_year": 2021
   },
   {
     "name": "Thaleia Dimitra Doudali",
@@ -23585,6 +23458,25 @@
     "last_year": 2024
   },
   {
+    "name": "Antonio Sciarappa",
+    "display_name": "Antonio Sciarappa",
+    "affiliation": "Leonardo Labs, Italy",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SC",
+        2021
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2021": 1
+    },
+    "first_year": 2021,
+    "last_year": 2021
+  },
+  {
     "name": "Antreas Dionysiou",
     "display_name": "Antreas Dionysiou",
     "affiliation": "University of Cyprus",
@@ -24554,25 +24446,6 @@
     "last_year": 2021
   },
   {
-    "name": "Carlos Maltzahn",
-    "display_name": "Carlos Maltzahn",
-    "affiliation": "University of California, Santa Cruz",
-    "total_memberships": 1,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "SC",
-        2021
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2021": 1
-    },
-    "first_year": 2021,
-    "last_year": 2021
-  },
-  {
     "name": "Carson Harmon",
     "display_name": "Carson Harmon",
     "affiliation": "Trail of Bits",
@@ -25426,25 +25299,6 @@
     },
     "first_year": 2024,
     "last_year": 2024
-  },
-  {
-    "name": "David Abramson",
-    "display_name": "David Abramson",
-    "affiliation": "University of Queensland",
-    "total_memberships": 1,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "SC",
-        2021
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2021": 1
-    },
-    "first_year": 2021,
-    "last_year": 2021
   },
   {
     "name": "David Beserra",
@@ -30881,6 +30735,25 @@
     "last_year": 2025
   },
   {
+    "name": "Kiril Dichev",
+    "display_name": "Kiril Dichev",
+    "affiliation": "University of Cambridge",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SC",
+        2021
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2021": 1
+    },
+    "first_year": 2021,
+    "last_year": 2021
+  },
+  {
     "name": "Koen Koning",
     "display_name": "Koen Koning",
     "affiliation": "Intel",
@@ -32304,6 +32177,25 @@
     },
     "first_year": 2024,
     "last_year": 2024
+  },
+  {
+    "name": "Marion Weinzierl",
+    "display_name": "Marion Weinzierl",
+    "affiliation": "N8 CIR",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SC",
+        2021
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2021": 1
+    },
+    "first_year": 2021,
+    "last_year": 2021
   },
   {
     "name": "Marius Fleischer",
@@ -35935,6 +35827,25 @@
     "last_year": 2024
   },
   {
+    "name": "Rocío Carratalá-Sáez",
+    "display_name": "Rocío Carratalá-Sáez",
+    "affiliation": "Jaume I University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SC",
+        2021
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2021": 1
+    },
+    "first_year": 2021,
+    "last_year": 2021
+  },
+  {
     "name": "Rodothea Myrsini Tsoupidi",
     "display_name": "Rodothea Myrsini Tsoupidi",
     "affiliation": "KTH Royal Institute of Technology",
@@ -36047,25 +35958,6 @@
     },
     "first_year": 2025,
     "last_year": 2025
-  },
-  {
-    "name": "Rosa M. Badia",
-    "display_name": "Rosa M. Badia",
-    "affiliation": "BSC",
-    "total_memberships": 1,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "SC",
-        2021
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2021": 1
-    },
-    "first_year": 2021,
-    "last_year": 2021
   },
   {
     "name": "Rossen Boykov",
@@ -36522,25 +36414,6 @@
     },
     "first_year": 2023,
     "last_year": 2023
-  },
-  {
-    "name": "Scott Michael",
-    "display_name": "Scott Michael",
-    "affiliation": "Indiana University",
-    "total_memberships": 1,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "SC",
-        2021
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2021": 1
-    },
-    "first_year": 2021,
-    "last_year": 2021
   },
   {
     "name": "Sebastian Kappes",
@@ -38006,9 +37879,9 @@
     "last_year": 2021
   },
   {
-    "name": "Stephen Lien Harrell",
-    "display_name": "Stephen Lien Harrell",
-    "affiliation": "TACC",
+    "name": "Steve Menken",
+    "display_name": "Steve Menken",
+    "affiliation": "NREL",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [

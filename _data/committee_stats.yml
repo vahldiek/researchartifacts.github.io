@@ -1,18 +1,18 @@
-last_updated: '2026-03-13'
-total_members: 3341
-total_systems: 1712
+last_updated: '2026-03-18'
+total_members: 3328
+total_systems: 1699
 total_security: 1628
 total_conferences: 50
 total_countries: 59
 total_continents: 7
 total_institutions: 434
-recurring_members: 1912
-recurring_members_systems: 933
+recurring_members: 1907
+recurring_members_systems: 928
 recurring_members_security: 1051
 recurring_chairs: 67
 top_countries:
 - name: United States
-  count: 1543
+  count: 1538
 - name: China
   count: 290
 - name: Germany
@@ -20,7 +20,7 @@ top_countries:
 - name: Hong Kong
   count: 135
 - name: United Kingdom
-  count: 92
+  count: 91
 - name: Switzerland
   count: 68
 - name: Taiwan, Province of China
@@ -32,7 +32,7 @@ top_countries:
 - name: Japan
   count: 51
 - name: Australia
-  count: 46
+  count: 45
 - name: Italy
   count: 38
 - name: Netherlands
@@ -43,13 +43,13 @@ top_countries:
   count: 33
 top_countries_systems:
 - name: United States
-  count: 910
+  count: 905
 - name: China
   count: 204
 - name: Hong Kong
   count: 86
 - name: United Kingdom
-  count: 50
+  count: 49
 - name: Taiwan, Province of China
   count: 43
 - name: Switzerland
@@ -105,13 +105,13 @@ top_countries_security:
   count: 20
 top_continents:
 - name: North America
-  count: 1599
+  count: 1594
 - name: Asia
-  count: 694
+  count: 693
 - name: Europe
-  count: 588
+  count: 587
 - name: Oceania
-  count: 47
+  count: 46
 - name: Africa
   count: 32
 - name: Unknown
@@ -120,17 +120,17 @@ top_continents:
   count: 6
 top_continents_systems:
 - name: North America
-  count: 930
+  count: 925
 - name: Asia
-  count: 417
+  count: 416
 - name: Europe
-  count: 219
+  count: 218
 - name: Africa
   count: 14
 - name: Unknown
   count: 9
 - name: Oceania
-  count: 8
+  count: 7
 - name: South America
   count: 3
 top_continents_security:
@@ -277,8 +277,8 @@ institution_timeline:
   systems: 30
   security: 29
 - year: 2021
-  total: 141
-  systems: 117
+  total: 140
+  systems: 116
   security: 40
 - year: 2022
   total: 147
@@ -475,7 +475,7 @@ committee_sizes:
   year: 2021
   conf_year: sc2021
   area: systems
-  size: 61
+  size: 48
 - conference: SOSP
   year: 2021
   conf_year: sosp2021
