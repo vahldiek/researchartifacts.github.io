@@ -389,13 +389,14 @@ layout: default
       (p.papers || []).forEach(function(paper) {
         var key = paper.title;
         if (!paperMap[key]) {
+          var normTitle = paper.title.replace(/\.+$/, '');
           paperMap[key] = {
             title: paper.title,
             authors: [],
             conference: paper.conference,
             year: paper.year,
             badges: paper.badges,
-            url: artifactUrlMap[paper.title] || ''
+            url: artifactUrlMap[normTitle] || ''
           };
         }
         paperMap[key].authors.push(p.name);
@@ -549,14 +550,14 @@ layout: default
     allProfiles = results[1];
     instHistory = results[2] || [];
 
-    // Build title -> artifact URL map
+    // Build title -> artifact URL map (normalize by stripping trailing period)
     var artifacts = results[3] || [];
     artifactUrlMap = {};
     for (var i = 0; i < artifacts.length; i++) {
       var art = artifacts[i];
       var url = art.artifact_url || art.repository_url || '';
       if (art.title && url) {
-        artifactUrlMap[art.title] = url;
+        artifactUrlMap[art.title.replace(/\.+$/, '')] = url;
       }
     }
 

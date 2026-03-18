@@ -96,9 +96,11 @@ layout: default
   var DATA_URL = '{{ "/assets/data/author_profiles.json" | relative_url }}';
   var CITED_ARTIFACTS_URL = '{{ "/assets/data/cited_artifacts_by_author.json" | relative_url }}';
   var HISTORY_URL = '{{ "/assets/data/ranking_history.json" | relative_url }}';
+  var ARTIFACTS_URL = '{{ "/assets/data/artifacts.json" | relative_url }}';
   var allProfiles = [];
   var profileMap = {};
   var citedArtifactsMap = {};
+  var artifactUrlMap = {};
   var rankHistory = [];
   var chart = null;
   var historyChart = null;
@@ -165,7 +167,10 @@ layout: default
       papers.sort(function(a,b) { return (b.year||0) - (a.year||0); });
       for (var i = 0; i < papers.length; i++) {
         var pp = papers[i];
-        rows += '<tr><td>' + (i+1) + '</td><td>' + escHtml(pp.title) + '</td><td>' +
+        var normT = pp.title.replace(/\.+$/, '');
+        var ppUrl = artifactUrlMap[normT] || '';
+        var titleCell = ppUrl ? '<a href="' + escHtml(ppUrl) + '" target="_blank" rel="noopener">' + escHtml(pp.title) + '</a>' : escHtml(pp.title);
+        rows += '<tr><td>' + (i+1) + '</td><td>' + titleCell + '</td><td>' +
           escHtml(pp.conference) + '</td><td>' + (pp.year||'') + '</td><td>' +
           badgeHtml(pp.badges) + '</td></tr>';
       }
@@ -462,11 +467,23 @@ layout: default
   Promise.all([
     fetch(DATA_URL).then(function(r) { return r.json(); }),
     fetch(CITED_ARTIFACTS_URL).then(function(r) { return r.json(); }).catch(function() { return {}; }),
-    fetch(HISTORY_URL).then(function(r) { return r.json(); }).catch(function() { return []; })
+    fetch(HISTORY_URL).then(function(r) { return r.json(); }).catch(function() { return []; }),
+    fetch(ARTIFACTS_URL).then(function(r) { return r.json(); }).catch(function() { return []; })
   ]).then(function(results) {
       var data = results[0];
       citedArtifactsMap = results[1] || {};
       rankHistory = results[2] || [];
+
+      // Build title -> artifact URL map (normalize by stripping trailing period)
+      var artList = results[3] || [];
+      artifactUrlMap = {};
+      for (var ai = 0; ai < artList.length; ai++) {
+        var artItem = artList[ai];
+        var artUrl = artItem.artifact_url || artItem.repository_url || '';
+        if (artItem.title && artUrl) {
+          artifactUrlMap[artItem.title.replace(/\.+$/, '')] = artUrl;
+        }
+      }
 
       allProfiles = data;
       profileMap = {};
