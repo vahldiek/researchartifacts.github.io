@@ -541,7 +541,7 @@
       var instAuthors = profilesByAffiliation[inst.affiliation] || [];
       if (isExpanded && instAuthors.length > 0) {
         var expandedContent = '<td colspan="' + numCols + '" style="padding:8px 16px; background-color:#f9f9f9;">';
-        var showCount = Math.min(instAuthors.length, 20);
+        var showCount = Math.min(instAuthors.length, 10);
         expandedContent += '<div style="margin-left:20px;"><strong>Top ' + showCount + ' of ' + instAuthors.length + ' Researchers:</strong> <a href="' + baseUrl + '/institution.html?name=' + encodeURIComponent(inst.affiliation) + '" style="font-size:0.85em;">View all →</a><br>';
         expandedContent += '<table style="margin-top:8px; font-size:0.9em; border-collapse:collapse; width:auto;">';
         expandedContent += '<thead><tr style="background-color:#e8e8e8;"><th style="padding:4px 8px;border:1px solid #ccc;">Name</th><th style="padding:4px 8px;border:1px solid #ccc;">Combined</th><th style="padding:4px 8px;border:1px solid #ccc;">Artifacts</th><th style="padding:4px 8px;border:1px solid #ccc;">AE Service</th><th style="padding:4px 8px;border:1px solid #ccc;">Papers</th></tr></thead><tbody>';
@@ -591,6 +591,7 @@
     var instRows = document.querySelectorAll('.inst-row');
     instRows.forEach(function(row) {
       row.addEventListener('click', function(e) {
+        if (e.target.closest('a')) return;
         var instId = row.dataset.instId;
         if (expandedRows.has(instId)) {
           expandedRows.delete(instId);
