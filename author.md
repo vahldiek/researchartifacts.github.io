@@ -83,6 +83,11 @@ layout: default
       <tbody id="citations-body"></tbody>
     </table>
   </div>
+
+  <div id="history-section" style="display:none;">
+    <h3>Ranking History</h3>
+    <div class="chart-container"><canvas id="historyChart" height="220"></canvas></div>
+  </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
@@ -90,10 +95,13 @@ layout: default
 (function() {
   var DATA_URL = '{{ "/assets/data/author_profiles.json" | relative_url }}';
   var CITED_ARTIFACTS_URL = '{{ "/assets/data/cited_artifacts_by_author.json" | relative_url }}';
+  var HISTORY_URL = '{{ "/assets/data/ranking_history.json" | relative_url }}';
   var allProfiles = [];
   var profileMap = {};
   var citedArtifactsMap = {};
+  var rankHistory = [];
   var chart = null;
+  var historyChart = null;
 
   function escHtml(s) {
     if (!s) return '';
@@ -138,6 +146,8 @@ layout: default
       cards += card(p.artifact_score || 0, 'Artifact Score');
       cards += card(p.ae_score || 0, 'AE Score');
       if (p.rank) cards += card('#' + p.rank, 'Rank');
+      var rankChange = getRankChange(p.name);
+      if (rankChange) cards += card(rankChange.html, 'Rank Change');
     }
     cards += card(p.artifact_count, 'Artifacts');
     cards += card(p.total_papers, 'Total Papers');
@@ -231,6 +241,9 @@ layout: default
 
     // Timeline chart
     renderChart(p);
+
+    // Ranking history chart
+    renderHistoryChart(p);
   }
 
   function renderChart(p) {
@@ -293,6 +306,69 @@ layout: default
         },
         scales: {
           y: { beginAtZero: true, ticks: { stepSize: 1, precision: 0 } }
+        }
+      }
+    });
+  }
+
+  function getRankChange(name) {
+    if (rankHistory.length < 2) return null;
+    var curr = rankHistory[rankHistory.length - 1].entries[name];
+    var prev = rankHistory[rankHistory.length - 2].entries[name];
+    if (!curr || !prev) return null;
+    var diff = prev.rank - curr.rank;
+    if (diff > 0) return { html: '<span style="color:#27ae60">▲' + diff + '</span>' };
+    if (diff < 0) return { html: '<span style="color:#e74c3c">▼' + (-diff) + '</span>' };
+    return { html: '<span style="color:#999">–</span>' };
+  }
+
+  function renderHistoryChart(p) {
+    if (rankHistory.length < 2) {
+      document.getElementById('history-section').style.display = 'none';
+      return;
+    }
+    // Collect data points for this author across all snapshots
+    var labels = [];
+    var scores = [];
+    var ranks = [];
+    var artScores = [];
+    var aeScores = [];
+    for (var i = 0; i < rankHistory.length; i++) {
+      var snap = rankHistory[i];
+      var e = snap.entries[p.name];
+      if (e) {
+        labels.push(snap.date);
+        scores.push(e.score);
+        ranks.push(e.rank);
+        artScores.push(e.as);
+        aeScores.push(e.aes);
+      }
+    }
+    if (labels.length < 2) {
+      document.getElementById('history-section').style.display = 'none';
+      return;
+    }
+    document.getElementById('history-section').style.display = '';
+    var ctx = document.getElementById('historyChart').getContext('2d');
+    if (historyChart) historyChart.destroy();
+    historyChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [
+          { label: 'Combined Score', data: scores, borderColor: '#2c3e50', backgroundColor: 'rgba(44,62,80,0.1)', fill: false, tension: 0.2, yAxisID: 'y' },
+          { label: 'Artifact Score', data: artScores, borderColor: '#3498db', backgroundColor: 'rgba(52,152,219,0.1)', fill: false, tension: 0.2, yAxisID: 'y' },
+          { label: 'AE Score', data: aeScores, borderColor: '#27ae60', backgroundColor: 'rgba(39,174,96,0.1)', fill: false, tension: 0.2, yAxisID: 'y' },
+          { label: 'Rank', data: ranks, borderColor: '#e74c3c', backgroundColor: 'rgba(231,76,60,0.1)', fill: false, tension: 0.2, borderDash: [5,3], yAxisID: 'y1' }
+        ]
+      },
+      options: {
+        responsive: true,
+        interaction: { mode: 'index', intersect: false },
+        plugins: { legend: { display: true } },
+        scales: {
+          y: { beginAtZero: true, position: 'left', title: { display: true, text: 'Score' } },
+          y1: { reverse: true, position: 'right', grid: { drawOnChartArea: false }, title: { display: true, text: 'Rank (#1 = top)' }, ticks: { precision: 0 } }
         }
       }
     });
@@ -381,27 +457,20 @@ layout: default
   });
 
   // --- Load data & init ---
-  fetch(DATA_URL)
-    .then(function(r) { return r.json(); })
-    .then(function(data) {
+  Promise.all([
+    fetch(DATA_URL).then(function(r) { return r.json(); }),
+    fetch(CITED_ARTIFACTS_URL).then(function(r) { return r.json(); }).catch(function() { return {}; }),
+    fetch(HISTORY_URL).then(function(r) { return r.json(); }).catch(function() { return []; })
+  ]).then(function(results) {
+      var data = results[0];
+      citedArtifactsMap = results[1] || {};
+      rankHistory = results[2] || [];
+
       allProfiles = data;
       profileMap = {};
       for (var i = 0; i < data.length; i++) {
         profileMap[data[i].name] = data[i];
       }
-      
-      // Load cited artifacts data
-      return fetch(CITED_ARTIFACTS_URL)
-        .then(function(r) { return r.json(); })
-        .then(function(citedData) {
-          citedArtifactsMap = citedData || {};
-          return true;
-        })
-        .catch(function(err) {
-          console.warn('Could not load cited artifacts data:', err);
-          citedArtifactsMap = {};
-          return true;
-        });
     })
     .then(function() {
       document.getElementById('loading-msg').style.display = 'none';

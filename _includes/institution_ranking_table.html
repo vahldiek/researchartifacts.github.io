@@ -9,6 +9,7 @@
 {% endcomment %}
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.0.0/css/flag-icons.min.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
 
 <div id="institution-controls" style="margin-bottom:6px; display:none; font-size:1em;">
   <div style="display:flex; flex-wrap:wrap; gap:8px; align-items:center;">
@@ -66,7 +67,9 @@
   };
   var currentArea = 'all';
   var baseUrl = '{{ "" | relative_url }}';
+  var PROFILES_URL = '{{ "/assets/data/author_profiles.json" | relative_url }}';
   var allData = [];
+  var profilesByAffiliation = {};  // affiliation -> sorted array of profiles
   var filteredData = [];
   var sortedData = [];
   var yearColumns = [];
@@ -79,6 +82,8 @@
   var geoFilter = 'world';
   var filterMode = 'both';
   var scoreKey = 'combined_score'; // Track which score to display
+  var instHistory = []; // Array of {date, entries} snapshots
+  var prevInstSnapshot = null; // Previous month's snapshot entries
 
   var fixedCols = [
     {label:'#',                key:'rank',              type:'num',   tip:'Rank'},
@@ -478,14 +483,24 @@
       var cells = [];
       
       // Rank column with expand button
-      var expandIcon = inst.top_authors && inst.top_authors.length > 0 
+      var expandIcon = (profilesByAffiliation[inst.affiliation] && profilesByAffiliation[inst.affiliation].length > 0)
         ? '<span class="expand-btn" style="cursor:pointer;margin-right:4px;">' + (isExpanded ? '▼' : '▶') + '</span>'
         : '<span style="margin-right:12px;"></span>';
-      cells.push('<td>' + expandIcon + (inst._originalRank || (start + i + 1)) + '</td>');
+      var instRankVal = inst._originalRank || (start + i + 1);
+      var instRankChange = '';
+      if (prevInstSnapshot && prevInstSnapshot[inst.affiliation]) {
+        var oldInstRank = prevInstSnapshot[inst.affiliation].rank;
+        var instDiff = oldInstRank - instRankVal;
+        if (instDiff > 0) instRankChange = ' <span style="color:#27ae60;font-size:0.8em" title="Up ' + instDiff + ' from #' + oldInstRank + '">▲' + instDiff + '</span>';
+        else if (instDiff < 0) instRankChange = ' <span style="color:#e74c3c;font-size:0.8em" title="Down ' + (-instDiff) + ' from #' + oldInstRank + '">▼' + (-instDiff) + '</span>';
+        else instRankChange = ' <span style="color:#999;font-size:0.8em" title="Unchanged">–</span>';
+      }
+      cells.push('<td>' + expandIcon + instRankVal + instRankChange + '</td>');
       
       var aff = (inst.affiliation || 'Unknown').replace(/^_/, '');
       var flag = getFlagForInstitution(aff);
-      cells.push('<td>' + (flag || '') + escHtml(aff) + '</td>');
+      var instUrl = baseUrl + '/institution.html?name=' + encodeURIComponent(inst.affiliation);
+      cells.push('<td>' + (flag || '') + '<a href="' + instUrl + '">' + escHtml(aff) + '</a></td>');
       // S column (combined_score) - bold when filterMode is 'both'
       cells.push('<td>' + (filterMode === 'both' ? '<strong>' : '') + (inst.combined_score || 0) + (filterMode === 'both' ? '</strong>' : '') + '</td>');
       // AS column (artifact_score) - bold when filterMode is 'artifacts_only'
@@ -523,26 +538,50 @@
       rows.push('<tr class="inst-row" data-inst-id="' + instId + '" style="cursor:pointer;">' + cells.join('') + '</tr>');
       
       // Add expanded row if needed
-      if (isExpanded && inst.top_authors && inst.top_authors.length > 0) {
+      var instAuthors = profilesByAffiliation[inst.affiliation] || [];
+      if (isExpanded && instAuthors.length > 0) {
         var expandedContent = '<td colspan="' + numCols + '" style="padding:8px 16px; background-color:#f9f9f9;">';
-        expandedContent += '<div style="margin-left:20px;"><strong>Top ' + inst.top_authors.length + ' Researchers:</strong><br>';
+        var showCount = Math.min(instAuthors.length, 20);
+        expandedContent += '<div style="margin-left:20px;"><strong>Top ' + showCount + ' of ' + instAuthors.length + ' Researchers:</strong> <a href="' + baseUrl + '/institution.html?name=' + encodeURIComponent(inst.affiliation) + '" style="font-size:0.85em;">View all →</a><br>';
         expandedContent += '<table style="margin-top:8px; font-size:0.9em; border-collapse:collapse; width:auto;">';
         expandedContent += '<thead><tr style="background-color:#e8e8e8;"><th style="padding:4px 8px;border:1px solid #ccc;">Name</th><th style="padding:4px 8px;border:1px solid #ccc;">Combined</th><th style="padding:4px 8px;border:1px solid #ccc;">Artifacts</th><th style="padding:4px 8px;border:1px solid #ccc;">AE Service</th><th style="padding:4px 8px;border:1px solid #ccc;">Papers</th></tr></thead><tbody>';
         
-        for (var k = 0; k < inst.top_authors.length; k++) {
-          var author = inst.top_authors[k];
-          var displayName = author.name.replace(/\s+\d{4}$/, '').replace(/\t/g, ' ');
+        for (var k = 0; k < showCount; k++) {
+          var author = instAuthors[k];
+          var displayName = (author.name || '').replace(/\s+\d{4}$/, '').replace(/\t/g, ' ');
           var profileUrl = baseUrl + '/author.html?name=' + encodeURIComponent(author.name);
           expandedContent += '<tr style="' + (k % 2 === 0 ? 'background-color:#fff;' : 'background-color:#f5f5f5;') + '">';
           expandedContent += '<td style="padding:4px 8px;border:1px solid #ccc;"><a href="' + profileUrl + '">' + escHtml(displayName) + '</a></td>';
-          expandedContent += '<td style="padding:4px 8px;border:1px solid #ccc;text-align:center;"><strong>' + author.combined_score + '</strong></td>';
-          expandedContent += '<td style="padding:4px 8px;border:1px solid #ccc;text-align:center;">' + (author.artifacts || 0) + '</td>';
+          expandedContent += '<td style="padding:4px 8px;border:1px solid #ccc;text-align:center;"><strong>' + (author.combined_score || 0) + '</strong></td>';
+          expandedContent += '<td style="padding:4px 8px;border:1px solid #ccc;text-align:center;">' + (author.artifact_count || 0) + '</td>';
           expandedContent += '<td style="padding:4px 8px;border:1px solid #ccc;text-align:center;">' + (author.ae_memberships || 0) + '</td>';
           expandedContent += '<td style="padding:4px 8px;border:1px solid #ccc;text-align:center;">' + (author.total_papers || 0) + '</td>';
           expandedContent += '</tr>';
         }
         
-        expandedContent += '</tbody></table></div></td>';
+        expandedContent += '</tbody></table>';
+        // Add score history chart if we have history data
+        if (instHistory.length >= 2) {
+          var histLabels = [];
+          var histScores = [];
+          var histAS = [];
+          var histAES = [];
+          for (var hi = 0; hi < instHistory.length; hi++) {
+            var he = instHistory[hi].entries[inst.affiliation];
+            if (he) {
+              histLabels.push(instHistory[hi].date);
+              histScores.push(he.score);
+              histAS.push(he.as);
+              histAES.push(he.aes);
+            }
+          }
+          if (histLabels.length >= 2) {
+            var chartId = 'instChart-' + instId;
+            expandedContent += '<div style="margin-top:12px;"><strong>Score History:</strong>';
+            expandedContent += '<div style="max-width:500px;"><canvas id="' + chartId + '" height="150"></canvas></div></div>';
+          }
+        }
+        expandedContent += '</div></td>';
         rows.push('<tr class="expanded-row" data-inst-id="' + instId + '">' + expandedContent + '</tr>');
       }
     }
@@ -561,6 +600,35 @@
         render();
       });
     });
+
+    // Render institution history charts for expanded rows
+    if (typeof Chart !== 'undefined' && instHistory.length >= 2) {
+      expandedRows.forEach(function(instId) {
+        var canvas = document.getElementById('instChart-' + instId);
+        if (!canvas) return;
+        var idx = parseInt(instId.replace('inst-', ''));
+        var inst = sortedData[idx];
+        if (!inst) return;
+        var hl = [], hs = [], ha = [], hae = [];
+        for (var hi = 0; hi < instHistory.length; hi++) {
+          var he = instHistory[hi].entries[inst.affiliation];
+          if (he) { hl.push(instHistory[hi].date); hs.push(he.score); ha.push(he.as); hae.push(he.aes); }
+        }
+        if (hl.length < 2) return;
+        new Chart(canvas.getContext('2d'), {
+          type: 'line',
+          data: {
+            labels: hl,
+            datasets: [
+              { label: 'Combined', data: hs, borderColor: '#2c3e50', fill: false, tension: 0.2 },
+              { label: 'Artifact', data: ha, borderColor: '#3498db', fill: false, tension: 0.2 },
+              { label: 'AE', data: hae, borderColor: '#27ae60', fill: false, tension: 0.2 }
+            ]
+          },
+          options: { responsive: true, plugins: { legend: { display: true, position: 'bottom' } }, scales: { y: { beginAtZero: true } } }
+        });
+      });
+    }
     
     updatePageInfo();
   }
@@ -760,8 +828,33 @@
   document.getElementById('iPrevBtnB').addEventListener('click', goPrev);
   document.getElementById('iNextBtnB').addEventListener('click', goNext);
 
-  // Load initial data
-  loadArea(currentArea);
+  // Load institution ranking history + author profiles, then initial data
+  var INST_HISTORY_URL = '{{ "/assets/data/institution_ranking_history.json" | relative_url }}';
+  Promise.all([
+    fetch(INST_HISTORY_URL).then(function(r) { return r.json(); }).catch(function() { return []; }),
+    fetch(PROFILES_URL).then(function(r) { return r.json(); }).catch(function() { return []; })
+  ]).then(function(results) {
+    instHistory = results[0] || [];
+    if (instHistory.length >= 2) {
+      prevInstSnapshot = instHistory[instHistory.length - 2].entries;
+    }
+    // Build affiliation -> sorted authors map
+    var profiles = results[1] || [];
+    profilesByAffiliation = {};
+    for (var i = 0; i < profiles.length; i++) {
+      var p = profiles[i];
+      var aff = p.affiliation || '';
+      if (!profilesByAffiliation[aff]) profilesByAffiliation[aff] = [];
+      profilesByAffiliation[aff].push(p);
+    }
+    // Sort each affiliation's authors by combined_score descending
+    Object.keys(profilesByAffiliation).forEach(function(aff) {
+      profilesByAffiliation[aff].sort(function(a, b) {
+        return (b.combined_score || 0) - (a.combined_score || 0);
+      });
+    });
+    loadArea(currentArea);
+  });
 })();
 </script>
 

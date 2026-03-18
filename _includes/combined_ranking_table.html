@@ -62,6 +62,7 @@
     'systems': '{{ page.systems_data_url | relative_url }}',
     'security': '{{ page.security_data_url | relative_url }}'
   };
+  var HISTORY_URL = '{{ "/assets/data/ranking_history.json" | relative_url }}';
   var currentArea = '{{ page.default_area | default: "all" }}';
   var baseUrl = '{{ "" | relative_url }}';
   var allData = [];
@@ -76,6 +77,8 @@
   var nameQuery = '';
   var affQuery = '';
   var scoreKey = 'combined_score'; // Track which score to display
+  var rankHistory = []; // Array of {date, entries} snapshots
+  var prevSnapshot = null; // Previous month's snapshot entries
 
   var fixedCols = [
     {label:'#',                key:'rank',              type:'num',   tip:'Rank'},
@@ -109,7 +112,16 @@
     for (var i = 0; i < page.length; i++) {
       var c = page[i];
       var cells = [];
-      cells.push('<td>' + (c._originalRank || (start + i + 1)) + '</td>');
+      var rankVal = c._originalRank || (start + i + 1);
+      var rankChange = '';
+      if (prevSnapshot && prevSnapshot[c.name]) {
+        var oldRank = prevSnapshot[c.name].rank;
+        var diff = oldRank - c.rank;
+        if (diff > 0) rankChange = ' <span style="color:#27ae60;font-size:0.8em" title="Up ' + diff + ' from #' + oldRank + '">▲' + diff + '</span>';
+        else if (diff < 0) rankChange = ' <span style="color:#e74c3c;font-size:0.8em" title="Down ' + (-diff) + ' from #' + oldRank + '">▼' + (-diff) + '</span>';
+        else rankChange = ' <span style="color:#999;font-size:0.8em" title="Unchanged">–</span>';
+      }
+      cells.push('<td>' + rankVal + rankChange + '</td>');
       var displayName = (c.display_name || c.name || '').replace(/\t/g, ' ');
       var profileUrl = baseUrl + '/author.html?name=' + encodeURIComponent(c.name);
       cells.push('<td><a href="' + profileUrl + '">' + escHtml(displayName) + '</a></td>');
@@ -377,8 +389,17 @@
   // Set initial area selection
   document.getElementById('areaFilter').value = currentArea;
 
-  // Load initial data
-  loadArea(currentArea);
+  // Load ranking history, then initial data
+  fetch(HISTORY_URL)
+    .then(function(r) { return r.json(); })
+    .then(function(history) {
+      rankHistory = history || [];
+      if (rankHistory.length >= 2) {
+        prevSnapshot = rankHistory[rankHistory.length - 2].entries;
+      }
+    })
+    .catch(function() { rankHistory = []; })
+    .finally(function() { loadArea(currentArea); });
 })();
 </script>
 
