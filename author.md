@@ -70,7 +70,7 @@ layout: default
     <h3>AE Committee Service</h3>
     <div id="ae-summary"></div>
     <table class="ae-table" id="ae-table" style="display:none;">
-      <thead><tr><th>Conference</th><th>Year</th></tr></thead>
+      <thead><tr><th>Conference</th><th>Year</th><th>Role</th></tr></thead>
       <tbody id="ae-body"></tbody>
     </table>
   </div>
@@ -208,7 +208,9 @@ layout: default
           var entry = sorted[j];
           var conf = Array.isArray(entry) ? entry[0] : entry;
           var yr = Array.isArray(entry) ? entry[1] : '';
-          arows += '<tr><td>' + escHtml(conf) + '</td><td>' + escHtml(String(yr)) + '</td></tr>';
+          var role = (Array.isArray(entry) && entry.length > 2) ? entry[2] : 'member';
+          var roleLabel = role === 'chair' ? '★ Chair' : 'Member';
+          arows += '<tr><td>' + escHtml(conf) + '</td><td>' + escHtml(String(yr)) + '</td><td>' + roleLabel + '</td></tr>';
         }
         document.getElementById('ae-body').innerHTML = arows;
       }

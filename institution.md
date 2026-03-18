@@ -403,12 +403,13 @@ layout: default
         p.ae_conferences.forEach(function(entry) {
           var conf = Array.isArray(entry) ? entry[0] : entry;
           var yr = Array.isArray(entry) ? entry[1] : '';
+          var role = (Array.isArray(entry) && entry.length > 2) ? entry[2] : 'member';
           aeConferences[conf] = true;
           aeData.push({
             authorName: p.name,
             conference: conf,
             year: yr,
-            role: 'member'
+            role: role
           });
         });
       }
