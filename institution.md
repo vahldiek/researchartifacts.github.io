@@ -84,7 +84,7 @@ layout: default
       <thead><tr>
         <th>#</th>
         <th>Title</th>
-        <th>Author</th>
+        <th>Authors</th>
         <th>Conference</th>
         <th>Year</th>
         <th>Badges</th>
@@ -124,12 +124,14 @@ layout: default
   var INST_URL = '{{ "/assets/data/institution_rankings.json" | relative_url }}';
   var PROFILES_URL = '{{ "/assets/data/author_profiles.json" | relative_url }}';
   var HISTORY_URL = '{{ "/assets/data/institution_ranking_history.json" | relative_url }}';
+  var ARTIFACTS_URL = '{{ "/assets/data/artifacts.json" | relative_url }}';
   var baseUrl = '{{ "" | relative_url }}';
 
   var allInstitutions = [];
   var instMap = {};
   var allProfiles = [];
   var instHistory = [];
+  var artifactUrlMap = {};  // title -> artifact_url
   var historyChart = null;
 
   // Pagination state
@@ -210,10 +212,19 @@ layout: default
   // ── Artifacts ─────────────────────────────────────────────────────────
   function renderArtifacts(slice, startIdx) {
     return slice.map(function(a, i) {
+      var titleHtml;
+      if (a.url) {
+        titleHtml = '<a href="' + escHtml(a.url) + '" target="_blank" rel="noopener">' + escHtml(a.title) + '</a>';
+      } else {
+        titleHtml = escHtml(a.title);
+      }
+      var authorsHtml = a.authors.map(function(name) {
+        return '<a href="' + baseUrl + '/author.html?name=' + encodeURIComponent(name) + '">' + escHtml(cleanName(name)) + '</a>';
+      }).join(', ');
       return '<tr>' +
         '<td>' + (startIdx + i + 1) + '</td>' +
-        '<td>' + escHtml(a.title) + '</td>' +
-        '<td><a href="' + baseUrl + '/author.html?name=' + encodeURIComponent(a.authorName) + '">' + escHtml(cleanName(a.authorName)) + '</a></td>' +
+        '<td>' + titleHtml + '</td>' +
+        '<td>' + authorsHtml + '</td>' +
         '<td>' + escHtml(a.conference || '') + '</td>' +
         '<td>' + (a.year || '') + '</td>' +
         '<td>' + badgeHtml(a.badges) + '</td>' +
@@ -372,19 +383,25 @@ layout: default
       document.getElementById('inst-contributors-section').style.display = 'none';
     }
 
-    // Artifacts — collect all papers from affiliated authors
-    artData = [];
+    // Artifacts — collect all papers, deduplicate by title, combine authors
+    var paperMap = {};
     affProfiles.forEach(function(p) {
       (p.papers || []).forEach(function(paper) {
-        artData.push({
-          title: paper.title,
-          authorName: p.name,
-          conference: paper.conference,
-          year: paper.year,
-          badges: paper.badges
-        });
+        var key = paper.title;
+        if (!paperMap[key]) {
+          paperMap[key] = {
+            title: paper.title,
+            authors: [],
+            conference: paper.conference,
+            year: paper.year,
+            badges: paper.badges,
+            url: artifactUrlMap[paper.title] || ''
+          };
+        }
+        paperMap[key].authors.push(p.name);
       });
     });
+    artData = Object.keys(paperMap).map(function(k) { return paperMap[k]; });
     artData.sort(function(a, b) { return (b.year || 0) - (a.year || 0); });
     artPage = 0;
     if (artData.length > 0) {
@@ -519,7 +536,8 @@ layout: default
   Promise.all([
     fetch(INST_URL).then(function(r) { return r.json(); }),
     fetch(PROFILES_URL).then(function(r) { return r.json(); }),
-    fetch(HISTORY_URL).then(function(r) { return r.json(); }).catch(function() { return []; })
+    fetch(HISTORY_URL).then(function(r) { return r.json(); }).catch(function() { return []; }),
+    fetch(ARTIFACTS_URL).then(function(r) { return r.json(); }).catch(function() { return []; })
   ]).then(function(results) {
     allInstitutions = results[0].filter(function(inst) {
       var a = (inst.affiliation || '').toLowerCase();
@@ -530,6 +548,17 @@ layout: default
 
     allProfiles = results[1];
     instHistory = results[2] || [];
+
+    // Build title -> artifact URL map
+    var artifacts = results[3] || [];
+    artifactUrlMap = {};
+    for (var i = 0; i < artifacts.length; i++) {
+      var art = artifacts[i];
+      var url = art.artifact_url || art.repository_url || '';
+      if (art.title && url) {
+        artifactUrlMap[art.title] = url;
+      }
+    }
 
     document.getElementById('inst-loading').style.display = 'none';
     searchBox.style.display = '';
