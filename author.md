@@ -70,7 +70,7 @@ layout: default
     <h3>AE Committee Service</h3>
     <div id="ae-summary"></div>
     <table class="ae-table" id="ae-table" style="display:none;">
-      <thead><tr><th>Year</th><th>Count</th></tr></thead>
+      <thead><tr><th>Conference</th><th>Year</th></tr></thead>
       <tbody id="ae-body"></tbody>
     </table>
   </div>
@@ -175,16 +175,30 @@ layout: default
       if (p.chair_count) summary += ', <strong>' + p.chair_count + '</strong> as chair/co-chair';
       summary += '.</p>';
       if (p.ae_conferences && p.ae_conferences.length) {
-        summary += '<p>Conferences: ' + p.ae_conferences.map(function(c){ return '<strong>'+escHtml(c)+'</strong>';}).join(', ') +'</p>';
+        var confNames = [];
+        var seen = {};
+        for (var ci = 0; ci < p.ae_conferences.length; ci++) {
+          var cn = Array.isArray(p.ae_conferences[ci]) ? p.ae_conferences[ci][0] : p.ae_conferences[ci];
+          if (!seen[cn]) { seen[cn] = true; confNames.push(cn); }
+        }
+        summary += '<p>Conferences: ' + confNames.map(function(c){ return '<strong>'+escHtml(c)+'</strong>';}).join(', ') +'</p>';
       }
       document.getElementById('ae-summary').innerHTML = summary;
 
-      var yearKeys = Object.keys(aeYears).sort();
-      if (yearKeys.length) {
+      if (p.ae_conferences && p.ae_conferences.length) {
         document.getElementById('ae-table').style.display = '';
+        var sorted = p.ae_conferences.slice().sort(function(a,b) {
+          var ya = Array.isArray(a) ? a[1] : 0, yb = Array.isArray(b) ? b[1] : 0;
+          if (yb !== ya) return yb - ya;
+          var na = Array.isArray(a) ? a[0] : a, nb = Array.isArray(b) ? b[0] : b;
+          return na < nb ? -1 : na > nb ? 1 : 0;
+        });
         var arows = '';
-        for (var j = 0; j < yearKeys.length; j++) {
-          arows += '<tr><td>' + yearKeys[j] + '</td><td>' + aeYears[yearKeys[j]] + '</td></tr>';
+        for (var j = 0; j < sorted.length; j++) {
+          var entry = sorted[j];
+          var conf = Array.isArray(entry) ? entry[0] : entry;
+          var yr = Array.isArray(entry) ? entry[1] : '';
+          arows += '<tr><td>' + escHtml(conf) + '</td><td>' + escHtml(String(yr)) + '</td></tr>';
         }
         document.getElementById('ae-body').innerHTML = arows;
       }
