@@ -3,6 +3,7 @@ conferences_list:
 - ATC
 - CHES
 - EUROSYS
+- FAST
 - NDSS
 - OSDI
 - PETS
@@ -11,7 +12,7 @@ conferences_list:
 - SYSTEX
 - USENIXSEC
 - WOOT
-last_updated: 2026-03-13 20:44:15 UTC
+last_updated: 2026-03-20 10:05:03 UTC
 security_artifacts: 1858
 security_conferences:
 - ACSAC
@@ -21,13 +22,14 @@ security_conferences:
 - SYSTEX
 - USENIXSEC
 - WOOT
-systems_artifacts: 645
+systems_artifacts: 718
 systems_conferences:
 - ATC
 - EUROSYS
+- FAST
 - OSDI
 - SC
 - SOSP
-total_artifacts: 2503
-total_conferences: 12
+total_artifacts: 2576
+total_conferences: 13
 year_range: 2017-2026

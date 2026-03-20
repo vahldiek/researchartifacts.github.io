@@ -1,18 +1,18 @@
-last_updated: '2026-03-18'
-total_members: 3328
+last_updated: '2026-03-20'
+total_members: 3343
 total_systems: 1699
-total_security: 1628
+total_security: 1643
 total_conferences: 50
 total_countries: 59
 total_continents: 7
-total_institutions: 434
-recurring_members: 1907
+total_institutions: 435
+recurring_members: 1919
 recurring_members_systems: 928
-recurring_members_security: 1051
+recurring_members_security: 1065
 recurring_chairs: 67
 top_countries:
 - name: United States
-  count: 1538
+  count: 1547
 - name: China
   count: 290
 - name: Germany
@@ -26,7 +26,7 @@ top_countries:
 - name: Taiwan, Province of China
   count: 68
 - name: Canada
-  count: 56
+  count: 60
 - name: Singapore
   count: 51
 - name: Japan
@@ -74,7 +74,7 @@ top_countries_systems:
   count: 11
 top_countries_security:
 - name: United States
-  count: 632
+  count: 641
 - name: Germany
   count: 128
 - name: China
@@ -83,11 +83,11 @@ top_countries_security:
   count: 49
 - name: United Kingdom
   count: 42
+- name: Canada
+  count: 40
 - name: Australia
   count: 39
 - name: Japan
-  count: 36
-- name: Canada
   count: 36
 - name: Belgium
   count: 34
@@ -105,7 +105,7 @@ top_countries_security:
   count: 20
 top_continents:
 - name: North America
-  count: 1594
+  count: 1607
 - name: Asia
   count: 693
 - name: Europe
@@ -135,7 +135,7 @@ top_continents_systems:
   count: 3
 top_continents_security:
 - name: North America
-  count: 668
+  count: 681
 - name: Europe
   count: 369
 - name: Asia
@@ -152,11 +152,11 @@ top_institutions:
 - name: University of Illinois Urbana-Champaign
   count: 108
 - name: Purdue University
-  count: 87
+  count: 88
 - name: University of California, Irvine
   count: 67
 - name: University of Wisconsin - Madison
-  count: 63
+  count: 64
 - name: Georgia Institute of Technology
   count: 56
 - name: cispa helmholtz center for information security
@@ -170,9 +170,9 @@ top_institutions:
 - name: institute of parallel and distributed systems, shanghai jiao tong university
   count: 47
 - name: computing and imaging institute - the university of utah
-  count: 42
+  count: 43
 - name: Carnegie Mellon University
-  count: 40
+  count: 41
 - name: University of Chicago
   count: 38
 - name: University of California, Berkeley
@@ -236,13 +236,13 @@ top_institutions_security:
 - name: University of California, Irvine
   count: 41
 - name: Purdue University
-  count: 39
+  count: 40
 - name: imec-distrinet, ku leuven
   count: 31
 - name: Georgia Institute of Technology
   count: 27
 - name: University of Wisconsin - Madison
-  count: 25
+  count: 26
 - name: Ruhr-Universität Bochum
   count: 25
 - name: National Tsinghua University
@@ -259,18 +259,18 @@ top_institutions_security:
   count: 17
 - name: Zhejiang University
   count: 17
+- name: Carnegie Mellon University
+  count: 16
 - name: Toyo University
   count: 16
 - name: Virginia Tech
   count: 15
-- name: Carnegie Mellon University
-  count: 15
 - name: Indiana University - Bloomington
   count: 14
-- name: The Hong Kong Polytechnic University
-  count: 13
 - name: computing and imaging institute - the university of utah
-  count: 12
+  count: 13
+- name: Anderson University
+  count: 13
 institution_timeline:
 - year: 2020
   total: 53
@@ -297,9 +297,9 @@ institution_timeline:
   systems: 118
   security: 165
 - year: 2026
-  total: 200
+  total: 203
   systems: 73
-  security: 159
+  security: 163
 committee_sizes:
 - conference: ATC
   year: 2022
@@ -470,7 +470,7 @@ committee_sizes:
   year: 2026
   conf_year: pets2026
   area: security
-  size: 65
+  size: 80
 - conference: SC
   year: 2021
   conf_year: sc2021
