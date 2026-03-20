@@ -1,5 +1,766 @@
 [
   {
+    "title": "The Design and Implementation of a Capacity-Variant Storage System.",
+    "normalized_title": "the design and implementation of a capacityvariant storage system",
+    "authors": [
+      "Ziyang Jiao",
+      "Xiangqun Zhang 0002",
+      "Hojin Shin",
+      "Jongmoo Choi",
+      "Bryan S. Kim"
+    ],
+    "year": 2024,
+    "artifact_year": 2024,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast24/presentation/jiao"
+  },
+  {
+    "title": "Symbiosis: The Art of Application and Kernel Cache Cooperation.",
+    "normalized_title": "symbiosis the art of application and kernel cache cooperation",
+    "authors": [
+      "Yifan Dai",
+      "Jing Liu 0074",
+      "Andrea C. Arpaci-Dusseau",
+      "Remzi H. Arpaci-Dusseau"
+    ],
+    "year": 2024,
+    "artifact_year": 2024,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast24/presentation/dai"
+  },
+  {
+    "title": "We Ain't Afraid of No File Fragmentation: Causes and Prevention of Its Performance Impact on Modern Flash SSDs.",
+    "normalized_title": "we aint afraid of no file fragmentation causes and prevention of its performance impact on modern flash ssds",
+    "authors": [
+      "Yuhun Jun",
+      "Shin-Hyun Park",
+      "Jeong-Uk Kang",
+      "Sang-Hoon Kim",
+      "Euiseong Seo"
+    ],
+    "year": 2024,
+    "artifact_year": 2024,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast24/presentation/jun"
+  },
+  {
+    "title": "D2FS: Device-Driven Filesystem Garbage Collection.",
+    "normalized_title": "d2fs devicedriven filesystem garbage collection",
+    "authors": [
+      "Juwon Kim",
+      "Seungjae Lee",
+      "Joontaek Oh",
+      "Dongkun Shin",
+      "Youjip Won"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast25/presentation/kim-juwon"
+  },
+  {
+    "title": "Oasis: An Out-of-core Approximate Graph System via All-Distances Sketches.",
+    "normalized_title": "oasis an outofcore approximate graph system via alldistances sketches",
+    "authors": [
+      "Tsun-Yu Yang",
+      "Yi Li",
+      "Yizou Chen",
+      "Bingzhe Li",
+      "Ming-Chang Yang"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast25/presentation/yang"
+  },
+  {
+    "title": "Don't Maintain Twice, It's Alright: Merged Metadata Management in Deduplication File System with GogetaFS.",
+    "normalized_title": "dont maintain twice its alright merged metadata management in deduplication file system with gogetafs",
+    "authors": [
+      "Yanqi Pan",
+      "Wen Xia",
+      "Erci Xu",
+      "Hao Huang",
+      "Xiangyu Zou",
+      "Shiyi Li"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast25/presentation/pan"
+  },
+  {
+    "title": "Baleen: ML Admission & Prefetching for Flash Caches.",
+    "normalized_title": "baleen ml admission prefetching for flash caches",
+    "authors": [
+      "Daniel Lin-Kit Wong",
+      "Hao Wu",
+      "Carson Molder",
+      "Sathya Gunasekar",
+      "Jimmy Lu",
+      "Snehal Khandkar",
+      "Abhinav Sharma",
+      "Daniel S. Berger",
+      "Nathan Beckmann",
+      "Gregory R. Ganger"
+    ],
+    "year": 2024,
+    "artifact_year": 2024,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast24/presentation/wong"
+  },
+  {
+    "title": "Physical vs. Logical Indexing with IDEA: Inverted Deduplication-Aware Index.",
+    "normalized_title": "physical vs logical indexing with idea inverted deduplicationaware index",
+    "authors": [
+      "Asaf Levi",
+      "Philip Shilane",
+      "Sarai Sheinvald",
+      "Gala Yadgar"
+    ],
+    "year": 2024,
+    "artifact_year": 2024,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast24/presentation/levi"
+  },
+  {
+    "title": "COLE: A Column-based Learned Storage for Blockchain Systems.",
+    "normalized_title": "cole a columnbased learned storage for blockchain systems",
+    "authors": [
+      "Ce Zhang 0007",
+      "Cheng Xu 0004",
+      "Haibo Hu 0001",
+      "Jianliang Xu"
+    ],
+    "year": 2024,
+    "artifact_year": 2024,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast24/presentation/zhang-ce"
+  },
+  {
+    "title": "I/O Passthru: Upstreaming a flexible and efficient I/O Path in Linux.",
+    "normalized_title": "io passthru upstreaming a flexible and efficient io path in linux",
+    "authors": [
+      "Kanchan Joshi",
+      "Anuj Gupta",
+      "Javier Gonzlez 0006",
+      "Ankit Kumar",
+      "Krishna Kanth Reddy",
+      "Arun George",
+      "Simon Andreas Frimann Lund",
+      "Jens Axboe"
+    ],
+    "year": 2024,
+    "artifact_year": 2024,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast24/presentation/joshi"
+  },
+  {
+    "title": "TeRM: Extending RDMA-Attached Memory with SSD.",
+    "normalized_title": "term extending rdmaattached memory with ssd",
+    "authors": [
+      "Zhe Yang 0012",
+      "Qing Wang 0031",
+      "Xiaojian Liao",
+      "Youyou Lu",
+      "Keji Huang",
+      "Jiwu Shu"
+    ],
+    "year": 2024,
+    "artifact_year": 2024,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast24/presentation/yang-zhe"
+  },
+  {
+    "title": "3L-Cache: Low Overhead and Precise Learning-based Eviction Policy for Caches.",
+    "normalized_title": "3lcache low overhead and precise learningbased eviction policy for caches",
+    "authors": [
+      "Wenbin Zhou",
+      "Zhixiong Niu",
+      "Yongqiang Xiong",
+      "Juan Fang",
+      "Qian Wang"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast25/presentation/zhou-wenbin"
+  },
+  {
+    "title": "Combining Buffered I/O and Direct I/O in Distributed File Systems.",
+    "normalized_title": "combining buffered io and direct io in distributed file systems",
+    "authors": [
+      "Yingjin Qian",
+      "Marc-Andr Vef",
+      "Patrick Farrell",
+      "Andreas Dilger",
+      "Xi Li",
+      "Shuichi Ihara",
+      "Yinjin Fu",
+      "Wei Xue",
+      "Andr Brinkmann"
+    ],
+    "year": 2024,
+    "artifact_year": 2024,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast24/presentation/qian"
+  },
+  {
+    "title": "RFUSE: Modernizing Userspace Filesystem Framework through Scalable Kernel-Userspace Communication.",
+    "normalized_title": "rfuse modernizing userspace filesystem framework through scalable kerneluserspace communication",
+    "authors": [
+      "Kyu-Jin Cho",
+      "Jaewon Choi",
+      "Hyungjoon Kwon",
+      "Jin-Soo Kim"
+    ],
+    "year": 2024,
+    "artifact_year": 2024,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast24/presentation/cho"
+  },
+  {
+    "title": "MinFlow: High-performance and Cost-efficient Data Passing for I/O-intensive Stateful Serverless Analytics.",
+    "normalized_title": "minflow highperformance and costefficient data passing for iointensive stateful serverless analytics",
+    "authors": [
+      "Tao Li",
+      "Yongkun Li 0001",
+      "Wenzhe Zhu",
+      "Yinlong Xu 0001",
+      "John C. S. Lui"
+    ],
+    "year": 2024,
+    "artifact_year": 2024,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast24/presentation/li"
+  },
+  {
+    "title": "AegonKV: A High Bandwidth, Low Tail Latency, and Low Storage Cost KV-Separated LSM Store with SmartSSD-based GC Offloading.",
+    "normalized_title": "aegonkv a high bandwidth low tail latency and low storage cost kvseparated lsm store with smartssdbased gc offloading",
+    "authors": [
+      "Zhuohui Duan",
+      "Hao Feng",
+      "Haikun Liu",
+      "Xiaofei Liao",
+      "Hai Jin 0001",
+      "Bangyu Li"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast25/presentation/duan"
+  },
+  {
+    "title": "Kosmo: Efficient Online Miss Ratio Curve Generation for Eviction Policy Evaluation.",
+    "normalized_title": "kosmo efficient online miss ratio curve generation for eviction policy evaluation",
+    "authors": [
+      "Kia Shakiba",
+      "Sari Sultan",
+      "Michael Stumm"
+    ],
+    "year": 2024,
+    "artifact_year": 2024,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast24/presentation/shakiba"
+  },
+  {
+    "title": "OmniCache: Collaborative Caching for Near-storage Accelerators.",
+    "normalized_title": "omnicache collaborative caching for nearstorage accelerators",
+    "authors": [
+      "Jian Zhang",
+      "Yujie Ren",
+      "Marie Nguyen",
+      "Changwoo Min",
+      "Sudarsun Kannan"
+    ],
+    "year": 2024,
+    "artifact_year": 2024,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast24/presentation/zhang-jian"
+  },
+  {
+    "title": "Rethinking the Request-to-IO Transformation Process of File Systems for Full Utilization of High-Bandwidth SSDs.",
+    "normalized_title": "rethinking the requesttoio transformation process of file systems for full utilization of highbandwidth ssds",
+    "authors": [
+      "Yekang Zhan",
+      "Haichuan Hu",
+      "Xiangrui Yang 0001",
+      "Qiang Cao 0001",
+      "Hong Jiang 0001",
+      "Shaohua Wang",
+      "Jie Yao 0001"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast25/presentation/zhan"
+  },
+  {
+    "title": "PolyStore: Exploiting Combined Capabilities of Heterogeneous Storage.",
+    "normalized_title": "polystore exploiting combined capabilities of heterogeneous storage",
+    "authors": [
+      "Yujie Ren",
+      "David Domingo",
+      "Jian Zhang",
+      "Paul John",
+      "Rekha Pitchumani",
+      "Sanidhya Kashyap",
+      "Sudarsun Kannan"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast25/presentation/ren"
+  },
+  {
+    "title": "Metis: File System Model Checking via Versatile Input and State Exploration.",
+    "normalized_title": "metis file system model checking via versatile input and state exploration",
+    "authors": [
+      "Yifei Liu",
+      "Manish Adkar",
+      "Gerard J. Holzmann",
+      "Geoff Kuenning",
+      "Pei Liu",
+      "Scott A. Smolka",
+      "Wei Su",
+      "Erez Zadok"
+    ],
+    "year": 2024,
+    "artifact_year": 2024,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast24/presentation/liu-yifei"
+  },
+  {
+    "title": "Boosting File Systems Elegantly: A Transparent NVM Write-ahead Log for Disk File Systems.",
+    "normalized_title": "boosting file systems elegantly a transparent nvm writeahead log for disk file systems",
+    "authors": [
+      "Guoyu Wang",
+      "Xilong Che",
+      "Haoyang Wei",
+      "Shuo Chen",
+      "Puyi He",
+      "Juncheng Hu"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast25/presentation/wang"
+  },
+  {
+    "title": "Cloudscape: A Study of Storage Services in Modern Cloud Architectures.",
+    "normalized_title": "cloudscape a study of storage services in modern cloud architectures",
+    "authors": [
+      "Sambhav Satija",
+      "Chenhao Ye",
+      "Ranjitha Kosgi",
+      "Aditya Jain",
+      "Romit Kankaria",
+      "Yiwei Chen",
+      "Andrea C. Arpaci-Dusseau",
+      "Remzi H. Arpaci-Dusseau",
+      "Kiran Srinivasan"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast25/presentation/satija"
+  },
+  {
+    "title": "Revisiting Network Coding for Warm Blob Storage.",
+    "normalized_title": "revisiting network coding for warm blob storage",
+    "authors": [
+      "Chuang Gan 0002",
+      "Yuchong Hu",
+      "Leyan Zhao",
+      "Xin Zhao",
+      "Pengyu Gong",
+      "Dan Feng 0001"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast25/presentation/gan"
+  },
+  {
+    "title": "HiDPU: A DPU-Oriented Hybrid Indexing Scheme for Disaggregated Storage Systems.",
+    "normalized_title": "hidpu a dpuoriented hybrid indexing scheme for disaggregated storage systems",
+    "authors": [
+      "Wenbin Zhu",
+      "Zhaoyan Shen",
+      "Qian Wei",
+      "Renhai Chen",
+      "Xin Yao",
+      "Dongxiao Yu",
+      "Zili Shao"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast25/presentation/zhu"
+  },
+  {
+    "title": "Silhouette: Leveraging Consistency Mechanisms to Detect Bugs in Persistent Memory-Based File Systems.",
+    "normalized_title": "silhouette leveraging consistency mechanisms to detect bugs in persistent memorybased file systems",
+    "authors": [
+      "Bing Jiao",
+      "Ashvin Goel",
+      "An-I Andy Wang"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast25/presentation/jiao"
+  },
+  {
+    "title": "ShiftLock: Mitigate One-sided RDMA Lock Contention via Handover.",
+    "normalized_title": "shiftlock mitigate onesided rdma lock contention via handover",
+    "authors": [
+      "Jian Gao",
+      "Qing Wang 0031",
+      "Jiwu Shu"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast25/presentation/gao"
+  },
+  {
+    "title": "VectorCDC: Accelerating Data Deduplication with Vector Instructions.",
+    "normalized_title": "vectorcdc accelerating data deduplication with vector instructions",
+    "authors": [
+      "Sreeharsha Udayashankar",
+      "Abdelrahman Baba",
+      "Samer Al-Kiswany"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast25/presentation/udayashankar"
+  },
+  {
+    "title": "LeapGNN: Accelerating Distributed GNN Training Leveraging Feature-Centric Model Migration.",
+    "normalized_title": "leapgnn accelerating distributed gnn training leveraging featurecentric model migration",
+    "authors": [
+      "Weijian Chen 0002",
+      "Shuibing He",
+      "Haoyang Qu",
+      "Xuechen Zhang 0001"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast25/presentation/chen-weijian-leap"
+  },
+  {
+    "title": "GPHash: An Efficient Hash Index for GPU with Byte-Granularity Persistent Memory.",
+    "normalized_title": "gphash an efficient hash index for gpu with bytegranularity persistent memory",
+    "authors": [
+      "Menglei Chen",
+      "Yu Hua 0001",
+      "Zhangyu Chen",
+      "Ming Zhang",
+      "Gen Dong"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast25/presentation/chen-menglei"
+  },
+  {
+    "title": "In-Memory Key-Value Store Live Migration with NetMigrate.",
+    "normalized_title": "inmemory keyvalue store live migration with netmigrate",
+    "authors": [
+      "Zeying Zhu",
+      "Yibo Zhao",
+      "Zaoxing Liu"
+    ],
+    "year": 2024,
+    "artifact_year": 2024,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast24/presentation/zhu"
+  },
+  {
+    "title": "MIDAS: Minimizing Write Amplification in Log-Structured Systems through Adaptive Group Number and Size Configuration.",
+    "normalized_title": "midas minimizing write amplification in logstructured systems through adaptive group number and size configuration",
+    "authors": [
+      "Seonggyun Oh",
+      "Jeeyun Kim",
+      "Soyoung Han",
+      "Jaeho Kim",
+      "Sungjin Lee 0001",
+      "Sam H. Noh"
+    ],
+    "year": 2024,
+    "artifact_year": 2024,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast24/presentation/oh"
+  },
+  {
+    "title": "Selective On-Device Execution of Data-Dependent Read I/Os.",
+    "normalized_title": "selective ondevice execution of datadependent read ios",
+    "authors": [
+      "Chanyoung Park",
+      "Minu Chung",
+      "Hyungon Moon"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast25/presentation/park"
+  },
+  {
+    "title": "ELECT: Enabling Erasure Coding Tiering for LSM-tree-based Storage.",
+    "normalized_title": "elect enabling erasure coding tiering for lsmtreebased storage",
+    "authors": [
+      "Yanjing Ren",
+      "Yuanming Ren",
+      "Xiaolu Li 0002",
+      "Yuchong Hu",
+      "Jingwei Li 0001",
+      "Patrick P. C. Lee"
+    ],
+    "year": 2024,
+    "artifact_year": 2024,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast24/presentation/ren"
+  },
+  {
+    "title": "OPIMQ: Order Preserving IO stack for Multi-Queue Block Device.",
+    "normalized_title": "opimq order preserving io stack for multiqueue block device",
+    "authors": [
+      "Jieun Kim",
+      "Joontaek Oh",
+      "Juwon Kim",
+      "Seung Won Yoo",
+      "Youjip Won"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "FAST",
+    "conference": "FAST",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/fast25/presentation/kim-jieun"
+  },
+  {
     "title": "FUZZVPN: Finding Vulnerabilities in OpenVPN.",
     "normalized_title": "fuzzvpn finding vulnerabilities in openvpn",
     "authors": [
@@ -8365,7 +9126,7 @@
       "Shuguo Fan",
       "Chengkun Wei",
       "Min Chen 0032",
-      "Yuwei Li",
+      "Yuwei Li 0002",
       "Yuanchao Zhang",
       "Zhikun Zhang 0001",
       "Wenzhi Chen"
@@ -15664,7 +16425,7 @@
     "normalized_title": "appatch automated adaptive prompting large language models for realworld software vulnerability patching",
     "authors": [
       "Yu Nong",
-      "Haoran Yang",
+      "Haoran Yang 0002",
       "Long Cheng 0005",
       "Hongxin Hu",
       "Haipeng Cai"
@@ -28391,7 +29152,7 @@
     "title": "LPNS: Scalable and Latency-Predictable Local Storage Virtualization for Unpredictable NVMe SSDs in Clouds.",
     "normalized_title": "lpns scalable and latencypredictable local storage virtualization for unpredictable nvme ssds in clouds",
     "authors": [
-      "Bo Peng",
+      "Bo Peng 0043",
       "Cheng Guo",
       "Jianguo Yao 0002",
       "Haibing Guan"
@@ -34513,6 +35274,74 @@
     "doi_url": "https://www.usenix.org/conference/osdi24/presentation/sun-biao"
   },
   {
+    "title": "Quantum Virtual Machines.",
+    "normalized_title": "quantum virtual machines",
+    "authors": [
+      "Runzhou Tao 0001",
+      "Hongzheng Zhu",
+      "Jason Nieh",
+      "Jianan Yao",
+      "Ronghui Gu"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/tao"
+  },
+  {
+    "title": "Bayesian Code Diffusion for Efficient Automatic Deep Learning Program Optimization.",
+    "normalized_title": "bayesian code diffusion for efficient automatic deep learning program optimization",
+    "authors": [
+      "Isu Jeong",
+      "Seulki Lee 0002"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/jeong"
+  },
+  {
+    "title": "QiMeng-Xpiler: Transcompiling Tensor Programs for Deep Learning Systems with a Neural-Symbolic Approach.",
+    "normalized_title": "qimengxpiler transcompiling tensor programs for deep learning systems with a neuralsymbolic approach",
+    "authors": [
+      "Shouyang Dong",
+      "Jun Bi",
+      "Di Huang",
+      "Jiaming Guo",
+      "Jianxing Xu",
+      "Ruibai Xu",
+      "Xinkai Song",
+      "Yifan Hao 0001",
+      "Ling Li 0001",
+      "Xuehai Zhou",
+      "Tianshi Chen 0002",
+      "Qi Guo 0001",
+      "Yunji Chen"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/dong"
+  },
+  {
     "title": "SEPH: Scalable, Efficient, and Predictable Hashing on Persistent Memory.",
     "normalized_title": "seph scalable efficient and predictable hashing on persistent memory",
     "authors": [
@@ -34533,6 +35362,48 @@
       "reproduced"
     ],
     "doi_url": "https://www.usenix.org/conference/osdi23/presentation/wang-chao"
+  },
+  {
+    "title": "Neutrino: Fine-grained GPU Kernel Profiling via Programmable Probing.",
+    "normalized_title": "neutrino finegrained gpu kernel profiling via programmable probing",
+    "authors": [
+      "Songlin Huang",
+      "Chenshu Wu"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/huang-songlin"
+  },
+  {
+    "title": "Scalio: Scaling up DPU-based JBOF Key-value Store with NVMe-oF Target Offload.",
+    "normalized_title": "scalio scaling up dpubased jbof keyvalue store with nvmeof target offload",
+    "authors": [
+      "Xun Sun",
+      "Mingxing Zhang",
+      "Yingdi Shan",
+      "Kang Chen",
+      "Jinlei Jiang",
+      "Yongwei Wu 0001"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/sun"
   },
   {
     "title": "From WiscKey to Bourbon: A Learned Index for Log-Structured Merge Trees.",
@@ -34628,6 +35499,28 @@
     "doi_url": "https://www.usenix.org/conference/osdi24/presentation/ahn"
   },
   {
+    "title": "Building Bridges: Safe Interactions with Foreign Languages through Omniglot.",
+    "normalized_title": "building bridges safe interactions with foreign languages through omniglot",
+    "authors": [
+      "Leon Schuermann",
+      "Jack Toubes",
+      "Tyler Potyondy",
+      "Pat Pannuto",
+      "Mae Milano",
+      "Amit Levy 0001"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/schuermann"
+  },
+  {
     "title": "Fairness in Serving Large Language Models.",
     "normalized_title": "fairness in serving large language models",
     "authors": [
@@ -34693,6 +35586,31 @@
     "doi_url": "https://www.usenix.org/conference/osdi20/presentation/dauterman-dory"
   },
   {
+    "title": "Picsou: Enabling Replicated State Machines to Communicate Efficiently.",
+    "normalized_title": "picsou enabling replicated state machines to communicate efficiently",
+    "authors": [
+      "Reginald Frank",
+      "Micah Murray",
+      "Chawinphat Tankuranand",
+      "Junseo Yoo",
+      "Ethan Xu",
+      "Natacha Crooks",
+      "Suyash Gupta 0001",
+      "Manos Kapritsos"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/frank"
+  },
+  {
     "title": "Retrofitting High Availability Mechanism to Tame Hybrid Transaction/Analytical Processing.",
     "normalized_title": "retrofitting high availability mechanism to tame hybrid transactionanalytical processing",
     "authors": [
@@ -34710,6 +35628,28 @@
       "available"
     ],
     "doi_url": "https://www.usenix.org/conference/osdi21/presentation/shen"
+  },
+  {
+    "title": "XSched: Preemptive Scheduling for Diverse XPUs.",
+    "normalized_title": "xsched preemptive scheduling for diverse xpus",
+    "authors": [
+      "Weihang Shen",
+      "Mingcong Han",
+      "Jialong Liu",
+      "Rong Chen 0001",
+      "Haibo Chen 0001"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/shen-weihang"
   },
   {
     "title": "Nomad: Non-Exclusive Memory Tiering via Transactional Page Migration.",
@@ -34804,6 +35744,29 @@
     "doi_url": "https://www.usenix.org/conference/osdi20/presentation/li-jialin"
   },
   {
+    "title": "Tintin: A Unified Hardware Performance Profiling Infrastructure to Uncover and Manage Uncertainty.",
+    "normalized_title": "tintin a unified hardware performance profiling infrastructure to uncover and manage uncertainty",
+    "authors": [
+      "Ao Li 0006",
+      "Marion Sudvarg",
+      "Zihan Li",
+      "Sanjoy K. Baruah",
+      "Chris Gill 0001",
+      "Ning Zhang 0017"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/li"
+  },
+  {
     "title": "CrossFS: A Cross-layered Direct-Access File System.",
     "normalized_title": "crossfs a crosslayered directaccess file system",
     "authors": [
@@ -34821,6 +35784,32 @@
       "functional"
     ],
     "doi_url": "https://www.usenix.org/conference/osdi20/presentation/ren"
+  },
+  {
+    "title": "Deriving Semantic Checkers from Tests to Detect Silent Failures in Production Distributed Systems.",
+    "normalized_title": "deriving semantic checkers from tests to detect silent failures in production distributed systems",
+    "authors": [
+      "Chang Lou",
+      "Dimas Shidqi Parikesit",
+      "Yujin Huang",
+      "Zhewen Yang",
+      "Senapati Diwangkara",
+      "Yuzhuo Jing",
+      "Achmad Imam Kistijantoro",
+      "Ding Yuan 0004",
+      "Suman Nath",
+      "Peng Huang 0005"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/lou"
   },
   {
     "title": "GNNAdvisor: An Adaptive and Efficient Runtime System for GNN Acceleration on GPUs.",
@@ -34845,6 +35834,30 @@
       "reproduced"
     ],
     "doi_url": "https://www.usenix.org/conference/osdi21/presentation/wang-yuke"
+  },
+  {
+    "title": "Quake: Adaptive Indexing for Vector Search.",
+    "normalized_title": "quake adaptive indexing for vector search",
+    "authors": [
+      "Jason Mohoney",
+      "Devesh Sarda",
+      "Mengze Tang",
+      "Shihabur Rahman Chowdhury",
+      "Anil Pacaci",
+      "Ihab F. Ilyas",
+      "Theodoros Rekatsinas",
+      "Shivaram Venkataraman"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/mohoney"
   },
   {
     "title": "Application-Informed Kernel Synchronization Primitives.",
@@ -34893,6 +35906,31 @@
     "doi_url": "https://www.usenix.org/conference/osdi24/presentation/wu-bingyang"
   },
   {
+    "title": "KPerfIR: Towards a Open and Compiler-centric Ecosystem for GPU Kernel Performance Tooling on Modern AI Workloads.",
+    "normalized_title": "kperfir towards a open and compilercentric ecosystem for gpu kernel performance tooling on modern ai workloads",
+    "authors": [
+      "Yue Guan 0003",
+      "Yuanwei Fang",
+      "Keren Zhou 0001",
+      "Corbin Robeck",
+      "Manman Ren",
+      "Zhongkai Yu",
+      "Yufei Ding 0001",
+      "Adnan Aziz"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/guan"
+  },
+  {
     "title": "ORC: Increasing Cloud Memory Density via Object Reuse with Capabilities.",
     "normalized_title": "orc increasing cloud memory density via object reuse with capabilities",
     "authors": [
@@ -34913,6 +35951,30 @@
       "functional"
     ],
     "doi_url": "https://www.usenix.org/conference/osdi23/presentation/sartakov"
+  },
+  {
+    "title": "Fast and Synchronous Crash Consistency with Metadata Write-Once File System.",
+    "normalized_title": "fast and synchronous crash consistency with metadata writeonce file system",
+    "authors": [
+      "Yanqi Pan",
+      "Wen Xia",
+      "Yifeng Zhang",
+      "Xiangyu Zou",
+      "Hao Huang",
+      "Zhenhua Li 0001",
+      "Chentao Wu"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/pan"
   },
   {
     "title": "VeriSMo: A Verified Security Module for Confidential VMs.",
@@ -35159,6 +36221,33 @@
     "doi_url": "https://www.usenix.org/conference/osdi24/presentation/ma-haoran"
   },
   {
+    "title": "EMT: An OS Framework for New Memory Translation Architectures.",
+    "normalized_title": "emt an os framework for new memory translation architectures",
+    "authors": [
+      "Siyuan Chai 0001",
+      "Jiyuan Zhang 0003",
+      "Jongyul Kim 0001",
+      "Alan Wang",
+      "Fan Chung",
+      "Jovan Stojkovic",
+      "Weiwei Jia 0001",
+      "Dimitrios Skarlatos 0002",
+      "Josep Torrellas",
+      "Tianyin Xu"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/chai-siyuan"
+  },
+  {
     "title": "GoJournal: a verified, concurrent, crash-safe journaling system.",
     "normalized_title": "gojournal a verified concurrent crashsafe journaling system",
     "authors": [
@@ -35351,6 +36440,29 @@
     "doi_url": "https://www.usenix.org/conference/osdi21/presentation/koo"
   },
   {
+    "title": "Low End-to-End Latency atop a Speculative Shared Log with Fix-Ante Ordering.",
+    "normalized_title": "low endtoend latency atop a speculative shared log with fixante ordering",
+    "authors": [
+      "Shreesha G. Bhat",
+      "Tony Hong",
+      "Xuhao Luo",
+      "Jiyu Hu",
+      "Aishwarya Ganesan",
+      "Ramnatthan Alagappan"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/bhat"
+  },
+  {
     "title": "Encrypted Databases Made Secure Yet Maintainable.",
     "normalized_title": "encrypted databases made secure yet maintainable",
     "authors": [
@@ -35398,6 +36510,53 @@
     "doi_url": "https://www.usenix.org/conference/osdi21/presentation/rodrigues"
   },
   {
+    "title": "Basilisk: Using Provenance Invariants to Automate Proofs of Undecidable Protocols.",
+    "normalized_title": "basilisk using provenance invariants to automate proofs of undecidable protocols",
+    "authors": [
+      "Tony Nuda Zhang",
+      "Keshav Singh",
+      "Tej Chajed",
+      "Manos Kapritsos",
+      "Bryan Parno"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/zhang-tony"
+  },
+  {
+    "title": "MettEagle: Costs and Benefits of Implementing Containers on Microkernels.",
+    "normalized_title": "metteagle costs and benefits of implementing containers on microkernels",
+    "authors": [
+      "Till Miemietz",
+      "Viktor Reusch",
+      "Matthias Hille",
+      "Lars Wrenger",
+      "Jana Eisoldt",
+      "Jan Kltzke",
+      "Max Kurze",
+      "Adam Lackorzynski",
+      "Michael Roitzsch",
+      "Hermann Hrtig"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/miemietz"
+  },
+  {
     "title": "USHER: Holistic Interference Avoidance for Resource Optimized ML Inference.",
     "normalized_title": "usher holistic interference avoidance for resource optimized ml inference",
     "authors": [
@@ -35414,6 +36573,27 @@
       "available"
     ],
     "doi_url": "https://www.usenix.org/conference/osdi24/presentation/shubha"
+  },
+  {
+    "title": "FineMem: Breaking the Allocation Overhead vs. Memory Waste Dilemma in Fine-Grained Disaggregated Memory Management.",
+    "normalized_title": "finemem breaking the allocation overhead vs memory waste dilemma in finegrained disaggregated memory management",
+    "authors": [
+      "Xiaoyang Wang",
+      "Yongkun Li 0001",
+      "Kan Wu",
+      "Wenzhe Zhu",
+      "Yuqi Li",
+      "Yinlong Xu 0001"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/wang-xiaoyang"
   },
   {
     "title": "STORM: Refinement Types for Secure Web Applications.",
@@ -35533,6 +36713,27 @@
       "reproduced"
     ],
     "doi_url": "https://www.usenix.org/conference/osdi21/presentation/ibanez"
+  },
+  {
+    "title": "Stripeless Data Placement for Erasure-Coded In-Memory Storage.",
+    "normalized_title": "stripeless data placement for erasurecoded inmemory storage",
+    "authors": [
+      "Jian Gao",
+      "Jiwu Shu",
+      "Bin Yan",
+      "Yuhao Zhang 0006",
+      "Keji Huang"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/gao"
   },
   {
     "title": "Anvil: Verifying Liveness of Cluster Management Controllers.",
@@ -35775,6 +36976,32 @@
     "doi_url": "https://www.usenix.org/conference/osdi24/presentation/lee"
   },
   {
+    "title": "Paralegal: Practical Static Analysis for Privacy Bugs.",
+    "normalized_title": "paralegal practical static analysis for privacy bugs",
+    "authors": [
+      "Justus Adam",
+      "Carolyn Zech",
+      "Livia Zhu",
+      "Sreshtaa Rajesh",
+      "Nathan Harbison",
+      "Mithi Jethwa",
+      "Will Crichton",
+      "Shriram Krishnamurthi",
+      "Malte Schwarzkopf"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/adam"
+  },
+  {
     "title": "Byzantine Ordered Consensus without Byzantine Oligarchy.",
     "normalized_title": "byzantine ordered consensus without byzantine oligarchy",
     "authors": [
@@ -35795,6 +37022,33 @@
       "reproduced"
     ],
     "doi_url": "https://www.usenix.org/conference/osdi20/presentation/zhang-yunhao"
+  },
+  {
+    "title": "Mirage: A Multi-Level Superoptimizer for Tensor Programs.",
+    "normalized_title": "mirage a multilevel superoptimizer for tensor programs",
+    "authors": [
+      "Mengdi Wu",
+      "Xinhao Cheng",
+      "Shengyu Liu",
+      "Chunan Shi",
+      "Jianan Ji",
+      "Man Kit Ao",
+      "Praveen Velliengiri",
+      "Xupeng Miao",
+      "Oded Padon",
+      "Zhihao Jia"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/wu-mengdi"
   },
   {
     "title": "A Tensor Compiler for Unified Machine Learning Prediction Serving.",
@@ -35840,6 +37094,51 @@
       "reproduced"
     ],
     "doi_url": "https://www.usenix.org/conference/osdi20/presentation/boos"
+  },
+  {
+    "title": "Kamino: Efficient VM Allocation at Scale with Latency-Driven Cache-Aware Scheduling.",
+    "normalized_title": "kamino efficient vm allocation at scale with latencydriven cacheaware scheduling",
+    "authors": [
+      "David Domingo",
+      "Hugo Barbalho",
+      "Marco Molinaro 0004",
+      "Kuan Liu",
+      "Abhisek Pan",
+      "David Dion",
+      "Thomas Moscibroda",
+      "Sudarsun Kannan",
+      "Ishai Menache"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/domingo"
+  },
+  {
+    "title": "Weave: Efficient and Expressive Oblivious Analytics at Scale.",
+    "normalized_title": "weave efficient and expressive oblivious analytics at scale",
+    "authors": [
+      "Mahdi Soleimani",
+      "Grace Jia",
+      "Anurag Khandelwal"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/soleimani"
   },
   {
     "title": "Achieving 100Gbps Intrusion Prevention on a Single Server.",
@@ -35931,6 +37230,25 @@
     "doi_url": "https://www.usenix.org/conference/osdi21/presentation/feng"
   },
   {
+    "title": "Achieving Low-Latency Graph-Based Vector Search via Aligning Best-First Search Algorithm with SSD.",
+    "normalized_title": "achieving lowlatency graphbased vector search via aligning bestfirst search algorithm with ssd",
+    "authors": [
+      "Hao Guo",
+      "Youyou Lu"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/guo"
+  },
+  {
     "title": "Ansor: Generating High-Performance Tensor Programs for Deep Learning.",
     "normalized_title": "ansor generating highperformance tensor programs for deep learning",
     "authors": [
@@ -35984,6 +37302,25 @@
       "reproduced"
     ],
     "doi_url": "https://www.usenix.org/conference/osdi23/presentation/shi"
+  },
+  {
+    "title": "Decouple and Decompose: Scaling Resource Allocation with DeDe.",
+    "normalized_title": "decouple and decompose scaling resource allocation with dede",
+    "authors": [
+      "Zhiying Xu",
+      "Minlan Yu",
+      "Francis Y. Yan"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/xu"
   },
   {
     "title": "Storage Systems are Distributed Systems (So Verify Them That Way!).",
@@ -36092,6 +37429,28 @@
       "reproduced"
     ],
     "doi_url": "https://www.usenix.org/conference/osdi20/presentation/zhu"
+  },
+  {
+    "title": "BlitzScale: Fast and Live Large Model Autoscaling with O(1) Host Caching.",
+    "normalized_title": "blitzscale fast and live large model autoscaling with o1 host caching",
+    "authors": [
+      "Dingyan Zhang",
+      "Haotian Wang",
+      "Yang Liu",
+      "Xingda Wei",
+      "Yizhou Shan",
+      "Rong Chen 0001",
+      "Haibo Chen 0001"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/zhang-dingyan"
   },
   {
     "title": "PACEMAKER: Avoiding HeART attacks in storage clusters with disk-adaptive redundancy.",
@@ -36871,6 +38230,29 @@
     "doi_url": "https://www.usenix.org/conference/osdi21/presentation/bhardwaj"
   },
   {
+    "title": "Training with Confidence: Catching Silent Errors in Deep Learning Training with Automated Proactive Checks.",
+    "normalized_title": "training with confidence catching silent errors in deep learning training with automated proactive checks",
+    "authors": [
+      "Yuxuan Jiang 0016",
+      "Ziming Zhou",
+      "Boyu Xu 0005",
+      "Beijie Liu",
+      "Runhui Xu",
+      "Peng Huang 0005"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/jiang"
+  },
+  {
     "title": "FIRM: An Intelligent Fine-grained Resource Management Framework for SLO-Oriented Microservices.",
     "normalized_title": "firm an intelligent finegrained resource management framework for slooriented microservices",
     "authors": [
@@ -36938,6 +38320,30 @@
       "functional"
     ],
     "doi_url": "https://www.usenix.org/conference/osdi23/presentation/zhou-ziqiao"
+  },
+  {
+    "title": "Tigon: A Distributed Database for a CXL Pod.",
+    "normalized_title": "tigon a distributed database for a cxl pod",
+    "authors": [
+      "Yibo Huang 0006",
+      "Haowei Chen",
+      "Newton Ni",
+      "Yan Sun",
+      "Vijay Chidambaram",
+      "Dixin Tang",
+      "Emmett Witchel"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/huang-yibo"
   },
   {
     "title": "Sharding the State Machine: Automated Modular Reasoning for Complex Concurrent Systems.",
@@ -37059,6 +38465,26 @@
     "doi_url": "https://www.usenix.org/conference/osdi24/presentation/goldweber"
   },
   {
+    "title": "Decentralized, Epoch-based F2FS Journaling with Fine-grained Crash Recovery.",
+    "normalized_title": "decentralized epochbased f2fs journaling with finegrained crash recovery",
+    "authors": [
+      "Yaotian Cui",
+      "Zhiqi Wang",
+      "Renhai Chen",
+      "Zili Shao"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/cui"
+  },
+  {
     "title": "Cobra: Making Transactional Key-Value Stores Verifiably Serializable.",
     "normalized_title": "cobra making transactional keyvalue stores verifiably serializable",
     "authors": [
@@ -37146,6 +38572,58 @@
     "doi_url": "https://www.usenix.org/conference/osdi21/presentation/han"
   },
   {
+    "title": "NanoFlow: Towards Optimal Large Language Model Serving Throughput.",
+    "normalized_title": "nanoflow towards optimal large language model serving throughput",
+    "authors": [
+      "Kan Zhu",
+      "Yufei Gao",
+      "Yilong Zhao 0002",
+      "Liangyu Zhao",
+      "Gefei Zuo",
+      "Yile Gu",
+      "Dedong Xie",
+      "Zihao Ye 0001",
+      "Keisuke Kamahori",
+      "Chien-Yu Lin",
+      "Ziren Wang",
+      "Stephanie Wang",
+      "Arvind Krishnamurthy",
+      "Baris Kasikci"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/zhu-kan"
+  },
+  {
+    "title": "Compass: Encrypted Semantic Search with High Accuracy.",
+    "normalized_title": "compass encrypted semantic search with high accuracy",
+    "authors": [
+      "Jinhao Zhu",
+      "Liana Patel",
+      "Matei Zaharia",
+      "Raluca Ada Popa"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/zhu-jinhao"
+  },
+  {
     "title": "Retiarii: A Deep Learning Exploratory-Training Framework.",
     "normalized_title": "retiarii a deep learning exploratorytraining framework",
     "authors": [
@@ -37168,6 +38646,37 @@
       "reproduced"
     ],
     "doi_url": "https://www.usenix.org/conference/osdi20/presentation/zhang-quanlu"
+  },
+  {
+    "title": "Enabling Efficient GPU Communication over Multiple NICs with FuseLink.",
+    "normalized_title": "enabling efficient gpu communication over multiple nics with fuselink",
+    "authors": [
+      "Zhenghang Ren",
+      "Yuxuan Li",
+      "Zilong Wang 0007",
+      "Xinyang Huang",
+      "Wenxue Li 0004",
+      "Kaiqiang Xu",
+      "Xudong Liao",
+      "Yijun Sun",
+      "Bowen Liu 0002",
+      "Han Tian",
+      "Junxue Zhang 0001",
+      "Mingfei Wang",
+      "Zhizhen Zhong",
+      "Guyue Liu",
+      "Ying Zhang 0022",
+      "Kai Chen 0005"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/ren"
   },
   {
     "title": "Efficiently Mitigating Transient Execution Attacks using the Unmapped Speculation Contract.",
@@ -37281,6 +38790,30 @@
     "doi_url": "https://www.usenix.org/conference/osdi22/presentation/mahgoub"
   },
   {
+    "title": "Extending Applications Safely and Efficiently.",
+    "normalized_title": "extending applications safely and efficiently",
+    "authors": [
+      "Yusheng Zheng",
+      "Tong Yu",
+      "Yiwei Yang 0002",
+      "Yanpeng Hu",
+      "Xiaozheng Lai",
+      "Dan Williams 0001",
+      "Andi Quinn"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/zheng-yusheng"
+  },
+  {
     "title": "Ship your Critical Section, Not Your Data: Enabling Transparent Delegation with TCLOCKS.",
     "normalized_title": "ship your critical section not your data enabling transparent delegation with tclocks",
     "authors": [
@@ -37365,6 +38898,38 @@
     "doi_url": "https://www.usenix.org/conference/osdi20/presentation/hao"
   },
   {
+    "title": "Understanding Stragglers in Large Model Training Using What-if Analysis.",
+    "normalized_title": "understanding stragglers in large model training using whatif analysis",
+    "authors": [
+      "Jinkun Lin",
+      "Ziheng Jiang",
+      "Zuquan Song",
+      "Sida Zhao",
+      "Menghan Yu",
+      "Zhanghan Wang",
+      "Chenyuan Wang",
+      "Zuocheng Shi",
+      "Xiang Shi",
+      "Wei Jia",
+      "Zherui Liu",
+      "Shuguang Wang",
+      "Haibin Lin",
+      "Xin Liu 0086",
+      "Aurojit Panda",
+      "Jinyang Li 0001"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/lin-jinkun"
+  },
+  {
     "title": "Automatic Reliability Testing For Cluster Management Controllers.",
     "normalized_title": "automatic reliability testing for cluster management controllers",
     "authors": [
@@ -37408,6 +38973,35 @@
       "reproduced"
     ],
     "doi_url": "https://www.usenix.org/conference/osdi22/presentation/lou-demystifying"
+  },
+  {
+    "title": "WLB-LLM: Workload-Balanced 4D Parallelism for Large Language Model Training.",
+    "normalized_title": "wlbllm workloadbalanced 4d parallelism for large language model training",
+    "authors": [
+      "Zheng Wang 0075",
+      "Anna Cai",
+      "Xinfeng Xie",
+      "Zaifeng Pan",
+      "Yue Guan 0003",
+      "Weiwei Chu",
+      "Jie Wang 0022",
+      "Shikai Li",
+      "Jianyu Huang",
+      "Chris Cai",
+      "Yuchen Hao",
+      "Yufei Ding 0001"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/wang-zheng"
   },
   {
     "title": "Metastable Failures in the Wild.",
@@ -37593,6 +39187,30 @@
     "doi_url": "https://www.usenix.org/conference/osdi20/presentation/dauterman-safetypin"
   },
   {
+    "title": "PoWER Never Corrupts: Tool-Agnostic Verification of Crash Consistency and Corruption Detection.",
+    "normalized_title": "power never corrupts toolagnostic verification of crash consistency and corruption detection",
+    "authors": [
+      "Hayley LeBlanc",
+      "Jacob R. Lorch",
+      "Chris Hawblitzel",
+      "Cheng Huang",
+      "Yiheng Tao",
+      "Nickolai Zeldovich",
+      "Vijay Chidambaram"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/leblanc"
+  },
+  {
     "title": "SparTA: Deep-Learning Model Sparsity via Tensor-with-Sparsity-Attribute.",
     "normalized_title": "sparta deeplearning model sparsity via tensorwithsparsityattribute",
     "authors": [
@@ -37686,6 +39304,25 @@
     "doi_url": "https://www.usenix.org/conference/osdi20/presentation/chang"
   },
   {
+    "title": "QOS: Quantum Operating System.",
+    "normalized_title": "qos quantum operating system",
+    "authors": [
+      "Emmanouil Giortamis",
+      "Francisco Romo",
+      "Nathaniel Tornow",
+      "Pramod Bhatotia"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/giortamis"
+  },
+  {
     "title": "Security and Performance in the Delegated User-level Virtualization.",
     "normalized_title": "security and performance in the delegated userlevel virtualization",
     "authors": [
@@ -37708,6 +39345,26 @@
       "reproduced"
     ],
     "doi_url": "https://www.usenix.org/conference/osdi23/presentation/chen"
+  },
+  {
+    "title": "KRR: Efficient and Scalable Kernel Record Replay.",
+    "normalized_title": "krr efficient and scalable kernel record replay",
+    "authors": [
+      "Tianren Zhang",
+      "Sishuai Gong",
+      "Pedro Fonseca 0001"
+    ],
+    "year": 2025,
+    "artifact_year": 2025,
+    "venue": "OSDI",
+    "conference": "OSDI",
+    "category": "systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://www.usenix.org/conference/osdi25/presentation/zhang-tianren"
   },
   {
     "title": "Phase Modulation Side Channels: Jittery JTAG for On-Chip Voltage Measurements.",
@@ -39920,6 +41577,25 @@
     "doi_url": "https://doi.org/10.56553/popets-2024-0049"
   },
   {
+    "title": "How Experts Personalize Privacy & Security Advice for At-Risk Users.",
+    "normalized_title": "how experts personalize privacy security advice for atrisk users",
+    "authors": [
+      "Wentao Guo 0005",
+      "Alexander Yang",
+      "Nathan Malkin",
+      "Michelle L. Mazurek"
+    ],
+    "year": 2026,
+    "artifact_year": 2026,
+    "venue": "Proc. Priv. Enhancing Technol.",
+    "conference": "PETS",
+    "category": "security",
+    "badges": [
+      "available"
+    ],
+    "doi_url": "https://doi.org/10.56553/popets-2026-0017"
+  },
+  {
     "title": "Masking Feedforward Neural Networks Against Power Analysis Attacks.",
     "normalized_title": "masking feedforward neural networks against power analysis attacks",
     "authors": [
@@ -40112,6 +41788,27 @@
     "category": "security",
     "badges": [],
     "doi_url": "https://doi.org/10.2478/popets-2021-0070"
+  },
+  {
+    "title": "Word-level Annotation of GDPR Transparency Compliance in Privacy Policies using Large Language Models.",
+    "normalized_title": "wordlevel annotation of gdpr transparency compliance in privacy policies using large language models",
+    "authors": [
+      "Thomas Cory",
+      "Wolf Rieder",
+      "Julia Krmer",
+      "Philip Raschke",
+      "Patrick Herbke",
+      "Axel Kpper"
+    ],
+    "year": 2026,
+    "artifact_year": 2026,
+    "venue": "Proc. Priv. Enhancing Technol.",
+    "conference": "PETS",
+    "category": "security",
+    "badges": [
+      "available"
+    ],
+    "doi_url": "https://doi.org/10.56553/popets-2026-0026"
   },
   {
     "title": "Attribute-based Single Sign-On: Secure, Private, and Efficient.",
@@ -40700,6 +42397,26 @@
     "doi_url": "https://doi.org/10.56553/popets-2024-0028"
   },
   {
+    "title": "dX-Privacy for Text and the Curse of Dimensionality.",
+    "normalized_title": "dxprivacy for text and the curse of dimensionality",
+    "authors": [
+      "Hassan Asghar 0001",
+      "Robin Carpentier",
+      "Benjamin Zi Hao Zhao",
+      "Dali Kaafar"
+    ],
+    "year": 2026,
+    "artifact_year": 2026,
+    "venue": "Proc. Priv. Enhancing Technol.",
+    "conference": "PETS",
+    "category": "security",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://doi.org/10.56553/popets-2026-0012"
+  },
+  {
     "title": "Practical, Private Assurance of the Value of Collaboration via Fully Homomorphic Encryption.",
     "normalized_title": "practical private assurance of the value of collaboration via fully homomorphic encryption",
     "authors": [
@@ -40735,6 +42452,28 @@
     "category": "security",
     "badges": [],
     "doi_url": "https://doi.org/10.56553/popets-2022-0088"
+  },
+  {
+    "title": "Bot Among Us: Exploring User Awareness and Privacy Concerns About Chatbots in Group Chats.",
+    "normalized_title": "bot among us exploring user awareness and privacy concerns about chatbots in group chats",
+    "authors": [
+      "Kai-Hsiang Chou",
+      "Yi-An Wang",
+      "Chong Kai Lau",
+      "Mahmood Sharif",
+      "Hsu-Chun Hsiao"
+    ],
+    "year": 2026,
+    "artifact_year": 2026,
+    "venue": "Proc. Priv. Enhancing Technol.",
+    "conference": "PETS",
+    "category": "security",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://doi.org/10.56553/popets-2026-0016"
   },
   {
     "title": "Private Stream Aggregation with Labels in the Standard Model.",
@@ -40998,6 +42737,25 @@
     "doi_url": "https://doi.org/10.56553/popets-2024-0043"
   },
   {
+    "title": "PriVA-C: Defending Voice Assistants from Fingerprinting Attacks.",
+    "normalized_title": "privac defending voice assistants from fingerprinting attacks",
+    "authors": [
+      "Dilawer Ahmed",
+      "Aafaq Sabir",
+      "Ahsan Zafar",
+      "Anupam Das 0001"
+    ],
+    "year": 2026,
+    "artifact_year": 2026,
+    "venue": "Proc. Priv. Enhancing Technol.",
+    "conference": "PETS",
+    "category": "security",
+    "badges": [
+      "available"
+    ],
+    "doi_url": "https://doi.org/10.56553/popets-2026-0003"
+  },
+  {
     "title": "SoK: Efficient Privacy-preserving Clustering.",
     "normalized_title": "sok efficient privacypreserving clustering",
     "authors": [
@@ -41227,6 +42985,32 @@
     "category": "security",
     "badges": [],
     "doi_url": "https://doi.org/10.2478/popets-2020-0055"
+  },
+  {
+    "title": "Location-Enhanced Information Flow for Home Automations.",
+    "normalized_title": "locationenhanced information flow for home automations",
+    "authors": [
+      "McKenna McCall",
+      "Ben Weinshel",
+      "Kunlin Cai",
+      "Ying Li 0095",
+      "Eric Zeng 0001",
+      "Devika Manohar",
+      "Lujo Bauer",
+      "Limin Jia 0001",
+      "Yuan Tian 0001"
+    ],
+    "year": 2026,
+    "artifact_year": 2026,
+    "venue": "Proc. Priv. Enhancing Technol.",
+    "conference": "PETS",
+    "category": "security",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://doi.org/10.56553/popets-2026-0018"
   },
   {
     "title": "Privacy-Aware Adversarial Network in Human Mobility Prediction.",
@@ -41483,7 +43267,7 @@
     "authors": [
       "Pithayuth Charnsethikul",
       "Almajd Zunquti",
-      "Gale Lucas",
+      "Gale M. Lucas",
       "Jelena Mirkovic"
     ],
     "year": 2025,
@@ -41564,6 +43348,45 @@
     "doi_url": "https://doi.org/10.56553/popets-2023-0048"
   },
   {
+    "title": "Obscura: Enabling Ephemeral Proxies for Traffic Encapsulation in WebRTC Media Streams Against Cost-Effective Censors.",
+    "normalized_title": "obscura enabling ephemeral proxies for traffic encapsulation in webrtc media streams against costeffective censors",
+    "authors": [
+      "Joo Afonso Vilalonga",
+      "Kevin Gallagher 0001",
+      "Joo S. Resende",
+      "Henrique Domingos"
+    ],
+    "year": 2026,
+    "artifact_year": 2026,
+    "venue": "Proc. Priv. Enhancing Technol.",
+    "conference": "PETS",
+    "category": "security",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://doi.org/10.56553/popets-2026-0030"
+  },
+  {
+    "title": "AI-in-the-Loop: Privacy Preserving Real-Time Scam Detection and Conversational Scam-baiting by Leveraging LLMs and Federated Learning.",
+    "normalized_title": "aiintheloop privacy preserving realtime scam detection and conversational scambaiting by leveraging llms and federated learning",
+    "authors": [
+      "Ismail Hossain",
+      "Sai Puppala",
+      "Md Jahangir Alam 0003",
+      "Sajedul Talukder"
+    ],
+    "year": 2026,
+    "artifact_year": 2026,
+    "venue": "Proc. Priv. Enhancing Technol.",
+    "conference": "PETS",
+    "category": "security",
+    "badges": [
+      "available"
+    ],
+    "doi_url": "https://doi.org/10.56553/popets-2026-0006"
+  },
+  {
     "title": "Compact and Divisible E-Cash with Threshold Issuance.",
     "normalized_title": "compact and divisible ecash with threshold issuance",
     "authors": [
@@ -41626,6 +43449,25 @@
     "category": "security",
     "badges": [],
     "doi_url": "https://doi.org/10.2478/popets-2021-0056"
+  },
+  {
+    "title": "Privacy vs. Profit: The Impact of Google's Manifest Version 3 (MV3) Update on Ad Blocker Effectiveness.",
+    "normalized_title": "privacy vs profit the impact of googles manifest version 3 mv3 update on ad blocker effectiveness",
+    "authors": [
+      "Karlo Lukic",
+      "Lazaros Papadopoulos"
+    ],
+    "year": 2026,
+    "artifact_year": 2026,
+    "venue": "Proc. Priv. Enhancing Technol.",
+    "conference": "PETS",
+    "category": "security",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://doi.org/10.56553/popets-2026-0027"
   },
   {
     "title": "Building a Privacy-Preserving Smart Camera System.",
@@ -41979,6 +43821,26 @@
     "doi_url": "https://doi.org/10.56553/popets-2025-0055"
   },
   {
+    "title": "What-App? App Usage Detection Using Encrypted LTE/5G Traffic.",
+    "normalized_title": "whatapp app usage detection using encrypted lte5g traffic",
+    "authors": [
+      "Jinjin Wang",
+      "Zishuai Cheng",
+      "Mihai Ordean",
+      "Baojiang Cui"
+    ],
+    "year": 2026,
+    "artifact_year": 2026,
+    "venue": "Proc. Priv. Enhancing Technol.",
+    "conference": "PETS",
+    "category": "security",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://doi.org/10.56553/popets-2026-0013"
+  },
+  {
     "title": "NOTRY: Deniable messaging with retroactive avowal.",
     "normalized_title": "notry deniable messaging with retroactive avowal",
     "authors": [
@@ -42194,6 +44056,25 @@
     "doi_url": "https://doi.org/10.2478/popets-2021-0027"
   },
   {
+    "title": "Sanitization or Deception? Rethinking Privacy Protection in Large Language Models.",
+    "normalized_title": "sanitization or deception rethinking privacy protection in large language models",
+    "authors": [
+      "Bipin Paudel",
+      "Bishwas Mandal",
+      "George T. Amariucai",
+      "Shuangqing Wei"
+    ],
+    "year": 2026,
+    "artifact_year": 2026,
+    "venue": "Proc. Priv. Enhancing Technol.",
+    "conference": "PETS",
+    "category": "security",
+    "badges": [
+      "available"
+    ],
+    "doi_url": "https://doi.org/10.56553/popets-2026-0009"
+  },
+  {
     "title": "How Unique is Whose Web Browser? The role of demographics in browser fingerprinting among US users.",
     "normalized_title": "how unique is whose web browser the role of demographics in browser fingerprinting among us users",
     "authors": [
@@ -42348,6 +44229,25 @@
     "category": "security",
     "badges": [],
     "doi_url": "https://doi.org/10.56553/popets-2023-0052"
+  },
+  {
+    "title": "SPRINT: Scalable Secure & Differentially Private Inference for Transformers.",
+    "normalized_title": "sprint scalable secure differentially private inference for transformers",
+    "authors": [
+      "Francesco Capano",
+      "Jonas Bhler",
+      "Benjamin Weggenmann"
+    ],
+    "year": 2026,
+    "artifact_year": 2026,
+    "venue": "Proc. Priv. Enhancing Technol.",
+    "conference": "PETS",
+    "category": "security",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://doi.org/10.56553/popets-2026-0008"
   },
   {
     "title": "SoK: Descriptive Statistics Under Local Differential Privacy.",
@@ -42642,6 +44542,26 @@
     "doi_url": "https://doi.org/10.2478/popets-2020-0016"
   },
   {
+    "title": "Ad Personalization and Transparency in Mobile Ecosystems: A Comparative Analysis of Google's and Apple's EU App Stores.",
+    "normalized_title": "ad personalization and transparency in mobile ecosystems a comparative analysis of googles and apples eu app stores",
+    "authors": [
+      "David Breuer",
+      "Lucas Becker",
+      "Matthias Hollick"
+    ],
+    "year": 2026,
+    "artifact_year": 2026,
+    "venue": "Proc. Priv. Enhancing Technol.",
+    "conference": "PETS",
+    "category": "security",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://doi.org/10.56553/popets-2026-0031"
+  },
+  {
     "title": "Locally Differentially Private Frequency Estimation via Joint Randomized Response.",
     "normalized_title": "locally differentially private frequency estimation via joint randomized response",
     "authors": [
@@ -42871,6 +44791,27 @@
       "reproduced"
     ],
     "doi_url": "https://doi.org/10.56553/popets-2025-0074"
+  },
+  {
+    "title": "Personal Data Flows and Privacy Policy Traceability in Third-party LLM Apps in the GPT Ecosystem.",
+    "normalized_title": "personal data flows and privacy policy traceability in thirdparty llm apps in the gpt ecosystem",
+    "authors": [
+      "Juan Carlos Carrillo",
+      "Jose Luis Martin-Navarro",
+      "Rongjun Ma",
+      "Jose Such"
+    ],
+    "year": 2026,
+    "artifact_year": 2026,
+    "venue": "Proc. Priv. Enhancing Technol.",
+    "conference": "PETS",
+    "category": "security",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://doi.org/10.56553/popets-2026-0015"
   },
   {
     "title": "Falcon: Honest-Majority Maliciously Secure Framework for Private Deep Learning.",
@@ -43387,6 +45328,28 @@
       "reproduced"
     ],
     "doi_url": "https://doi.org/10.56553/popets-2025-0040"
+  },
+  {
+    "title": "Making Sense of Private Advertising: A Principled Approach to a Complex Ecosystem.",
+    "normalized_title": "making sense of private advertising a principled approach to a complex ecosystem",
+    "authors": [
+      "Kyle Hogan",
+      "Alishah Chator",
+      "Gabriel Kaptchuk",
+      "Mayank Varia",
+      "Srinivas Devadas"
+    ],
+    "year": 2026,
+    "artifact_year": 2026,
+    "venue": "Proc. Priv. Enhancing Technol.",
+    "conference": "PETS",
+    "category": "security",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://doi.org/10.56553/popets-2026-0023"
   },
   {
     "title": "Data-Explainable Website Fingerprinting with Network Simulation.",
@@ -44283,6 +46246,23 @@
     "doi_url": "https://doi.org/10.56553/popets-2025-0022"
   },
   {
+    "title": "Securing Private Federated Learning in a Malicious Setting: A Scalable TEE-Based Approach with Client Auditing.",
+    "normalized_title": "securing private federated learning in a malicious setting a scalable teebased approach with client auditing",
+    "authors": [
+      "Shun Takagi",
+      "Satoshi Hasegawa"
+    ],
+    "year": 2026,
+    "artifact_year": 2026,
+    "venue": "Proc. Priv. Enhancing Technol.",
+    "conference": "PETS",
+    "category": "security",
+    "badges": [
+      "available"
+    ],
+    "doi_url": "https://doi.org/10.56553/popets-2026-0025"
+  },
+  {
     "title": "Polymath: Low-Latency MPC via Secure Polynomial Evaluations and Its Applications.",
     "normalized_title": "polymath lowlatency mpc via secure polynomial evaluations and its applications",
     "authors": [
@@ -44346,6 +46326,27 @@
     "category": "security",
     "badges": [],
     "doi_url": "https://doi.org/10.56553/popets-2023-0075"
+  },
+  {
+    "title": "ReporTor: Facilitating User Reporting of Issues Encountered in Naturalistic Web Browsing via Tor Browser.",
+    "normalized_title": "reportor facilitating user reporting of issues encountered in naturalistic web browsing via tor browser",
+    "authors": [
+      "Nicholas Micallef",
+      "Cameron Cartier",
+      "Kevin Gallagher 0001",
+      "Lucas Zagal",
+      "Sameer Patil"
+    ],
+    "year": 2026,
+    "artifact_year": 2026,
+    "venue": "Proc. Priv. Enhancing Technol.",
+    "conference": "PETS",
+    "category": "security",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://doi.org/10.56553/popets-2026-0020"
   },
   {
     "title": "On the Role and Form of Personal Information Disclosure in Cyberbullying Incidents.",
@@ -44419,6 +46420,27 @@
     "category": "security",
     "badges": [],
     "doi_url": "https://doi.org/10.56553/popets-2024-0113"
+  },
+  {
+    "title": "Ephemeral Network-Layer Fingerprinting Defenses.",
+    "normalized_title": "ephemeral networklayer fingerprinting defenses",
+    "authors": [
+      "Tobias Pulls",
+      "Topi Korhonen",
+      "Ethan Witwer",
+      "Niklas Carlsson"
+    ],
+    "year": 2026,
+    "artifact_year": 2026,
+    "venue": "Proc. Priv. Enhancing Technol.",
+    "conference": "PETS",
+    "category": "security",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "doi_url": "https://doi.org/10.56553/popets-2026-0022"
   },
   {
     "title": "HyDia: FHE-based Facial Matching with Hybrid Approximations and Diagonalization.",
@@ -44997,6 +47019,25 @@
     "doi_url": "https://doi.org/10.2478/popets-2020-0025"
   },
   {
+    "title": "Are we collaborative yet? A Usability Perspective on Mixnet Latency for Real-Time Applications.",
+    "normalized_title": "are we collaborative yet a usability perspective on mixnet latency for realtime applications",
+    "authors": [
+      "Killian Davitt",
+      "Dan Ristea",
+      "Steven J. Murdoch"
+    ],
+    "year": 2026,
+    "artifact_year": 2026,
+    "venue": "Proc. Priv. Enhancing Technol.",
+    "conference": "PETS",
+    "category": "security",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "doi_url": "https://doi.org/10.56553/popets-2026-0029"
+  },
+  {
     "title": "Analyzing the Feasibility and Generalizability of Fingerprinting Internet of Things Devices.",
     "normalized_title": "analyzing the feasibility and generalizability of fingerprinting internet of things devices",
     "authors": [
@@ -45219,28 +47260,6 @@
       "Reproduced"
     ],
     "doi_url": "https://eprint.iacr.org/2024/1146"
-  },
-  {
-    "title": "Making Sense of Private Advertising: A Principled Approach to a Complex Ecosystem.",
-    "normalized_title": "making sense of private advertising a principled approach to a complex ecosystem",
-    "authors": [
-      "Kyle Hogan",
-      "Alishah Chator",
-      "Gabriel Kaptchuk",
-      "Mayank Varia",
-      "Srinivas Devadas"
-    ],
-    "year": 2025,
-    "artifact_year": 2026,
-    "venue": "IACR Cryptol. ePrint Arch.",
-    "conference": "PETS",
-    "category": "security",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "doi_url": "https://eprint.iacr.org/2025/2316"
   },
   {
     "title": "Cross-Consensus Reliable Broadcast and its Applications.",
@@ -45530,25 +47549,6 @@
     "doi_url": "https://doi.org/10.48550/arXiv.2510.03319"
   },
   {
-    "title": "Are we collaborative yet? A Usability Perspective on Mixnet Latency for Real-Time Applications.",
-    "normalized_title": "are we collaborative yet a usability perspective on mixnet latency for realtime applications",
-    "authors": [
-      "Killian Davitt",
-      "Dan Ristea",
-      "Steven J. Murdoch"
-    ],
-    "year": 2026,
-    "artifact_year": 2026,
-    "venue": "CoRR",
-    "conference": "PETS",
-    "category": "security",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "doi_url": "https://doi.org/10.48550/arXiv.2601.17845"
-  },
-  {
     "title": "Beyond the Request: Harnessing HTTP Response Headers for Cross-Browser Web Tracker Classification in an Imbalanced Setting.",
     "normalized_title": "beyond the request harnessing http response headers for crossbrowser web tracker classification in an imbalanced setting",
     "authors": [
@@ -45713,25 +47713,6 @@
       "Reproduced"
     ],
     "doi_url": "https://arxiv.org/abs/2112.06324"
-  },
-  {
-    "title": "AI-in-the-Loop: Privacy Preserving Real-Time Scam Detection and Conversational Scambaiting by Leveraging LLMs and Federated Learning.",
-    "normalized_title": "aiintheloop privacy preserving realtime scam detection and conversational scambaiting by leveraging llms and federated learning",
-    "authors": [
-      "Ismail Hossain",
-      "Sai Puppala",
-      "Sajedul Talukder",
-      "Md Jahangir Alam 0003"
-    ],
-    "year": 2025,
-    "artifact_year": 2026,
-    "venue": "CoRR",
-    "conference": "PETS",
-    "category": "security",
-    "badges": [
-      "available"
-    ],
-    "doi_url": "https://doi.org/10.48550/arXiv.2509.05362"
   },
   {
     "title": "A Deep Dive into Function Inlining and its Security Implications for ML-based Binary Analysis.",
@@ -45942,27 +47923,6 @@
     "doi_url": "https://doi.org/10.48550/arXiv.2512.12006"
   },
   {
-    "title": "Word-level Annotation of GDPR Transparency Compliance in Privacy Policies using Large Language Models.",
-    "normalized_title": "wordlevel annotation of gdpr transparency compliance in privacy policies using large language models",
-    "authors": [
-      "Thomas Cory",
-      "Wolf Rieder",
-      "Julia Krmer",
-      "Philip Raschke",
-      "Patrick Herbke",
-      "Axel Kpper"
-    ],
-    "year": 2025,
-    "artifact_year": 2026,
-    "venue": "CoRR",
-    "conference": "PETS",
-    "category": "security",
-    "badges": [
-      "available"
-    ],
-    "doi_url": "https://doi.org/10.48550/arXiv.2503.10727"
-  },
-  {
     "title": "From Obfuscated to Obvious: A Comprehensive JavaScript Deobfuscation Tool for Security Analysis.",
     "normalized_title": "from obfuscated to obvious a comprehensive javascript deobfuscation tool for security analysis",
     "authors": [
@@ -46051,23 +48011,6 @@
       "reproduced"
     ],
     "doi_url": "https://doi.org/10.48550/arXiv.2510.19615"
-  },
-  {
-    "title": "Securing Private Federated Learning in a Malicious Setting: A Scalable TEE-Based Approach with Client Auditing.",
-    "normalized_title": "securing private federated learning in a malicious setting a scalable teebased approach with client auditing",
-    "authors": [
-      "Shun Takagi",
-      "Satoshi Hasegawa"
-    ],
-    "year": 2025,
-    "artifact_year": 2026,
-    "venue": "CoRR",
-    "conference": "PETS",
-    "category": "security",
-    "badges": [
-      "available"
-    ],
-    "doi_url": "https://doi.org/10.48550/arXiv.2509.08709"
   },
   {
     "title": "Benchmarking and Understanding Safety Risks in AI Character Platforms.",
@@ -46240,24 +48183,5 @@
       "reproduced"
     ],
     "doi_url": "https://doi.org/10.48550/arXiv.2312.04960"
-  },
-  {
-    "title": "Privacy vs. Profit: The Impact of Google's Manifest Version 3 (MV3) Update on Ad Blocker Effectiveness.",
-    "normalized_title": "privacy vs profit the impact of googles manifest version 3 mv3 update on ad blocker effectiveness",
-    "authors": [
-      "Karlo Lukic",
-      "Lazaros Papadopoulos"
-    ],
-    "year": 2025,
-    "artifact_year": 2026,
-    "venue": "CoRR",
-    "conference": "PETS",
-    "category": "security",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "doi_url": "https://doi.org/10.48550/arXiv.2503.01000"
   }
 ]

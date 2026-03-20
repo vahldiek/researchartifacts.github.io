@@ -9518,6 +9518,32 @@
     "last_year": 2026
   },
   {
+    "name": "Xiaochen Zhu",
+    "display_name": "Xiaochen Zhu",
+    "affiliation": "Massachusetts Institute of Technology",
+    "total_memberships": 2,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "PETS",
+        2026,
+        "member"
+      ],
+      [
+        "USENIXSEC",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "security",
+    "years": {
+      "2025": 1,
+      "2026": 1
+    },
+    "first_year": 2025,
+    "last_year": 2026
+  },
+  {
     "name": "Xiaoqi Chen",
     "display_name": "Xiaoqi Chen",
     "affiliation": "Purdue University",
@@ -10369,6 +10395,26 @@
     "last_year": 2025
   },
   {
+    "name": "Aaryan Patel",
+    "display_name": "Aaryan Patel",
+    "affiliation": "University of Wisconsin-Madison",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "PETS",
+        2026,
+        "member"
+      ]
+    ],
+    "area": "security",
+    "years": {
+      "2026": 1
+    },
+    "first_year": 2026,
+    "last_year": 2026
+  },
+  {
     "name": "Abdul Haddi Amjad",
     "display_name": "Abdul Haddi Amjad",
     "affiliation": "Virginia Tech",
@@ -10487,6 +10533,26 @@
     },
     "first_year": 2022,
     "last_year": 2022
+  },
+  {
+    "name": "Afari Darfoor",
+    "display_name": "Afari Darfoor",
+    "affiliation": "University of Alberta",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "PETS",
+        2026,
+        "member"
+      ]
+    ],
+    "area": "security",
+    "years": {
+      "2026": 1
+    },
+    "first_year": 2026,
+    "last_year": 2026
   },
   {
     "name": "Akira Takahashi",
@@ -10697,6 +10763,26 @@
     "conferences": [
       [
         "NDSS",
+        2026,
+        "member"
+      ]
+    ],
+    "area": "security",
+    "years": {
+      "2026": 1
+    },
+    "first_year": 2026,
+    "last_year": 2026
+  },
+  {
+    "name": "Allan Lyons",
+    "display_name": "Allan Lyons",
+    "affiliation": "University of Alberta",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "PETS",
         2026,
         "member"
       ]
@@ -12189,6 +12275,26 @@
     "last_year": 2025
   },
   {
+    "name": "Chinenye Okafor",
+    "display_name": "Chinenye Okafor",
+    "affiliation": "Purdue University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "PETS",
+        2026,
+        "member"
+      ]
+    ],
+    "area": "security",
+    "years": {
+      "2026": 1
+    },
+    "first_year": 2026,
+    "last_year": 2026
+  },
+  {
     "name": "Christian van Sloun",
     "display_name": "Christian van Sloun",
     "affiliation": "RWTH Aachen University",
@@ -12197,6 +12303,26 @@
     "conferences": [
       [
         "NDSS",
+        2026,
+        "member"
+      ]
+    ],
+    "area": "security",
+    "years": {
+      "2026": 1
+    },
+    "first_year": 2026,
+    "last_year": 2026
+  },
+  {
+    "name": "Christopher Jiang",
+    "display_name": "Christopher Jiang",
+    "affiliation": "University of Calgary",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "PETS",
         2026,
         "member"
       ]
@@ -12567,6 +12693,26 @@
     },
     "first_year": 2024,
     "last_year": 2024
+  },
+  {
+    "name": "Deepthi Mungara",
+    "display_name": "Deepthi Mungara",
+    "affiliation": "Paderborn University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "PETS",
+        2026,
+        "member"
+      ]
+    ],
+    "area": "security",
+    "years": {
+      "2026": 1
+    },
+    "first_year": 2026,
+    "last_year": 2026
   },
   {
     "name": "Denis Donadel",
@@ -17129,6 +17275,26 @@
     "last_year": 2026
   },
   {
+    "name": "Mahmuda Keya",
+    "display_name": "Mahmuda Keya",
+    "affiliation": "University of Massachusetts Dartmouth",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "PETS",
+        2026,
+        "member"
+      ]
+    ],
+    "area": "security",
+    "years": {
+      "2026": 1
+    },
+    "first_year": 2026,
+    "last_year": 2026
+  },
+  {
     "name": "Mahsa Saeidi",
     "display_name": "Mahsa Saeidi",
     "affiliation": "Oregon State University",
@@ -17237,6 +17403,26 @@
     "conferences": [
       [
         "USENIXSEC",
+        2026,
+        "member"
+      ]
+    ],
+    "area": "security",
+    "years": {
+      "2026": 1
+    },
+    "first_year": 2026,
+    "last_year": 2026
+  },
+  {
+    "name": "Marco Abbadini",
+    "display_name": "Marco Abbadini",
+    "affiliation": "Università degli Studi di Bergamo",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "PETS",
         2026,
         "member"
       ]
@@ -17407,6 +17593,26 @@
     },
     "first_year": 2023,
     "last_year": 2023
+  },
+  {
+    "name": "Mary Ogunmola",
+    "display_name": "Mary Ogunmola",
+    "affiliation": "University of Utah",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "PETS",
+        2026,
+        "member"
+      ]
+    ],
+    "area": "both",
+    "years": {
+      "2026": 1
+    },
+    "first_year": 2026,
+    "last_year": 2026
   },
   {
     "name": "Mathé Hertogh",
@@ -18327,6 +18533,26 @@
     },
     "first_year": 2022,
     "last_year": 2022
+  },
+  {
+    "name": "Moshood Fakorede",
+    "display_name": "Moshood Fakorede",
+    "affiliation": "Louisiana State University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "PETS",
+        2026,
+        "member"
+      ]
+    ],
+    "area": "security",
+    "years": {
+      "2026": 1
+    },
+    "first_year": 2026,
+    "last_year": 2026
   },
   {
     "name": "Mughees Ur Rehman",
@@ -19567,6 +19793,26 @@
     },
     "first_year": 2022,
     "last_year": 2022
+  },
+  {
+    "name": "Rabeya Bosri",
+    "display_name": "Rabeya Bosri",
+    "affiliation": "University of Alberta",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "PETS",
+        2026,
+        "member"
+      ]
+    ],
+    "area": "security",
+    "years": {
+      "2026": 1
+    },
+    "first_year": 2026,
+    "last_year": 2026
   },
   {
     "name": "Rachel King",
@@ -20949,6 +21195,26 @@
     "last_year": 2023
   },
   {
+    "name": "Shreya Sharma",
+    "display_name": "Shreya Sharma",
+    "affiliation": "Carnegie Mellon University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "PETS",
+        2026,
+        "member"
+      ]
+    ],
+    "area": "security",
+    "years": {
+      "2026": 1
+    },
+    "first_year": 2026,
+    "last_year": 2026
+  },
+  {
     "name": "Shu Wang",
     "display_name": "Shu Wang",
     "affiliation": "George Mason University",
@@ -21487,6 +21753,26 @@
     },
     "first_year": 2025,
     "last_year": 2025
+  },
+  {
+    "name": "Teresa Brooks",
+    "display_name": "Teresa Brooks",
+    "affiliation": "Cloudflare & Pace University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "PETS",
+        2026,
+        "member"
+      ]
+    ],
+    "area": "security",
+    "years": {
+      "2026": 1
+    },
+    "first_year": 2026,
+    "last_year": 2026
   },
   {
     "name": "Thijs van Ede",
@@ -22029,6 +22315,26 @@
     "last_year": 2026
   },
   {
+    "name": "Vijay Jain",
+    "display_name": "Vijay Jain",
+    "affiliation": "Amazon",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "PETS",
+        2026,
+        "member"
+      ]
+    ],
+    "area": "both",
+    "years": {
+      "2026": 1
+    },
+    "first_year": 2026,
+    "last_year": 2026
+  },
+  {
     "name": "Vikash Sehwag",
     "display_name": "Vikash Sehwag",
     "affiliation": "Princeton University",
@@ -22387,26 +22693,6 @@
     },
     "first_year": 2026,
     "last_year": 2026
-  },
-  {
-    "name": "Xiaochen Zhu",
-    "display_name": "Xiaochen Zhu",
-    "affiliation": "Massachusetts Institute of Technology",
-    "total_memberships": 1,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "USENIXSEC",
-        2025,
-        "member"
-      ]
-    ],
-    "area": "security",
-    "years": {
-      "2025": 1
-    },
-    "first_year": 2025,
-    "last_year": 2025
   },
   {
     "name": "Xiaoguang Wang",

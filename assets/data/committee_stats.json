@@ -1,17 +1,17 @@
 {
   "summary": {
-    "total_members": 3328,
+    "total_members": 3343,
     "total_systems": 1699,
-    "total_security": 1628,
+    "total_security": 1643,
     "total_countries": 59,
     "total_continents": 7,
-    "total_institutions": 434
+    "total_institutions": 435
   },
   "by_country": {
     "overall": [
       {
         "name": "United States",
-        "count": 1538
+        "count": 1547
       },
       {
         "name": "China",
@@ -39,7 +39,7 @@
       },
       {
         "name": "Canada",
-        "count": 56
+        "count": 60
       },
       {
         "name": "Singapore",
@@ -435,7 +435,7 @@
     "security": [
       {
         "name": "United States",
-        "count": 632
+        "count": 641
       },
       {
         "name": "Germany",
@@ -454,15 +454,15 @@
         "count": 42
       },
       {
+        "name": "Canada",
+        "count": 40
+      },
+      {
         "name": "Australia",
         "count": 39
       },
       {
         "name": "Japan",
-        "count": 36
-      },
-      {
-        "name": "Canada",
         "count": 36
       },
       {
@@ -627,7 +627,7 @@
     "overall": [
       {
         "name": "North America",
-        "count": 1594
+        "count": 1607
       },
       {
         "name": "Asia",
@@ -687,7 +687,7 @@
     "security": [
       {
         "name": "North America",
-        "count": 668
+        "count": 681
       },
       {
         "name": "Europe",
@@ -723,7 +723,7 @@
       },
       {
         "name": "Purdue University",
-        "count": 87
+        "count": 88
       },
       {
         "name": "University of California, Irvine",
@@ -731,7 +731,7 @@
       },
       {
         "name": "University of Wisconsin - Madison",
-        "count": 63
+        "count": 64
       },
       {
         "name": "Georgia Institute of Technology",
@@ -759,11 +759,11 @@
       },
       {
         "name": "computing and imaging institute - the university of utah",
-        "count": 42
+        "count": 43
       },
       {
         "name": "Carnegie Mellon University",
-        "count": 40
+        "count": 41
       },
       {
         "name": "University of Chicago",
@@ -910,6 +910,10 @@
         "count": 16
       },
       {
+        "name": "Massachusetts Institute of Technology",
+        "count": 16
+      },
+      {
         "name": "Indiana University - Bloomington",
         "count": 16
       },
@@ -920,10 +924,6 @@
       {
         "name": "Boston University",
         "count": 16
-      },
-      {
-        "name": "Massachusetts Institute of Technology",
-        "count": 15
       },
       {
         "name": "University of Massachusetts at Amherst",
@@ -994,6 +994,14 @@
         "count": 13
       },
       {
+        "name": "Louisiana State University",
+        "count": 13
+      },
+      {
+        "name": "Anderson University",
+        "count": 13
+      },
+      {
         "name": "The Hong Kong Polytechnic University",
         "count": 13
       },
@@ -1010,15 +1018,7 @@
         "count": 12
       },
       {
-        "name": "Louisiana State University",
-        "count": 12
-      },
-      {
         "name": "University of Twente",
-        "count": 12
-      },
-      {
-        "name": "Anderson University",
         "count": 12
       },
       {
@@ -1090,6 +1090,10 @@
         "count": 9
       },
       {
+        "name": "amazon",
+        "count": 9
+      },
+      {
         "name": "National Technical University of Athens",
         "count": 9
       },
@@ -1127,10 +1131,6 @@
       },
       {
         "name": "kaust",
-        "count": 8
-      },
-      {
-        "name": "amazon",
         "count": 8
       },
       {
@@ -1390,7 +1390,15 @@
         "count": 4
       },
       {
+        "name": "University of Alberta",
+        "count": 4
+      },
+      {
         "name": "University of Maine",
+        "count": 4
+      },
+      {
+        "name": "University of Calgary",
         "count": 4
       },
       {
@@ -1523,10 +1531,6 @@
       },
       {
         "name": "Linköping University",
-        "count": 3
-      },
-      {
-        "name": "University of Calgary",
         "count": 3
       },
       {
@@ -2154,10 +2158,6 @@
         "count": 1
       },
       {
-        "name": "University of Alberta",
-        "count": 1
-      },
-      {
         "name": "University of Verona",
         "count": 1
       },
@@ -2219,6 +2219,10 @@
       },
       {
         "name": "University of Jammu",
+        "count": 1
+      },
+      {
+        "name": "University of Massachusetts at Dartmouth",
         "count": 1
       },
       {
@@ -3555,7 +3559,7 @@
       },
       {
         "name": "Purdue University",
-        "count": 39
+        "count": 40
       },
       {
         "name": "imec-distrinet, ku leuven",
@@ -3567,7 +3571,7 @@
       },
       {
         "name": "University of Wisconsin - Madison",
-        "count": 25
+        "count": 26
       },
       {
         "name": "Ruhr-Universität Bochum",
@@ -3602,6 +3606,10 @@
         "count": 17
       },
       {
+        "name": "Carnegie Mellon University",
+        "count": 16
+      },
+      {
         "name": "Toyo University",
         "count": 16
       },
@@ -3610,20 +3618,20 @@
         "count": 15
       },
       {
-        "name": "Carnegie Mellon University",
-        "count": 15
-      },
-      {
         "name": "Indiana University - Bloomington",
         "count": 14
       },
       {
-        "name": "The Hong Kong Polytechnic University",
+        "name": "computing and imaging institute - the university of utah",
         "count": 13
       },
       {
-        "name": "computing and imaging institute - the university of utah",
-        "count": 12
+        "name": "Anderson University",
+        "count": 13
+      },
+      {
+        "name": "The Hong Kong Polytechnic University",
+        "count": 13
       },
       {
         "name": "Stevens Institute of Technology",
@@ -3642,15 +3650,15 @@
         "count": 12
       },
       {
-        "name": "Anderson University",
-        "count": 12
-      },
-      {
         "name": "University of California, Berkeley",
         "count": 12
       },
       {
         "name": "Baze University Abuja",
+        "count": 12
+      },
+      {
+        "name": "Louisiana State University",
         "count": 12
       },
       {
@@ -3679,10 +3687,6 @@
       },
       {
         "name": "Arak University of Technology",
-        "count": 11
-      },
-      {
-        "name": "Louisiana State University",
         "count": 11
       },
       {
@@ -3830,6 +3834,10 @@
         "count": 6
       },
       {
+        "name": "Massachusetts Institute of Technology",
+        "count": 6
+      },
+      {
         "name": "University College London, University of London",
         "count": 6
       },
@@ -3890,10 +3898,6 @@
         "count": 5
       },
       {
-        "name": "Massachusetts Institute of Technology",
-        "count": 5
-      },
-      {
         "name": "The University of Texas at Austin",
         "count": 5
       },
@@ -3914,6 +3918,10 @@
         "count": 4
       },
       {
+        "name": "University of Alberta",
+        "count": 4
+      },
+      {
         "name": "The University of Hong Kong",
         "count": 4
       },
@@ -3923,6 +3931,10 @@
       },
       {
         "name": "University of Maine",
+        "count": 4
+      },
+      {
+        "name": "University of Calgary",
         "count": 4
       },
       {
@@ -4030,11 +4042,11 @@
         "count": 3
       },
       {
-        "name": "University of Calgary",
+        "name": "Bloomsburg University of Pennsylvania",
         "count": 3
       },
       {
-        "name": "Bloomsburg University of Pennsylvania",
+        "name": "amazon",
         "count": 3
       },
       {
@@ -4214,10 +4226,6 @@
         "count": 2
       },
       {
-        "name": "amazon",
-        "count": 2
-      },
-      {
         "name": "Swinburne University of Technology",
         "count": 2
       },
@@ -4334,10 +4342,6 @@
         "count": 1
       },
       {
-        "name": "University of Alberta",
-        "count": 1
-      },
-      {
         "name": "University of Verona",
         "count": 1
       },
@@ -4411,6 +4415,10 @@
       },
       {
         "name": "University of Jammu",
+        "count": 1
+      },
+      {
+        "name": "University of Massachusetts at Dartmouth",
         "count": 1
       },
       {
@@ -4968,7 +4976,7 @@
         "Zimbabwe": 2
       },
       "2026": {
-        "United States": 247,
+        "United States": 256,
         "United Kingdom": 6,
         "Rwanda": 2,
         "Germany": 38,
@@ -4989,7 +4997,7 @@
         "Hungary": 1,
         "Poland": 2,
         "Japan": 8,
-        "Canada": 12,
+        "Canada": 16,
         "Netherlands": 7,
         "Belgium": 9,
         "Australia": 8,
@@ -5342,7 +5350,7 @@
         "Israel": 1
       },
       "2026": {
-        "United States": 186,
+        "United States": 195,
         "Japan": 7,
         "Belgium": 9,
         "Singapore": 6,
@@ -5361,7 +5369,7 @@
         "India": 5,
         "Croatia": 1,
         "Korea, Republic of": 4,
-        "Canada": 11,
+        "Canada": 15,
         "South Korea": 3,
         "Finland": 1,
         "Switzerland": 5,
@@ -5428,7 +5436,7 @@
         "Oceania": 17
       },
       "2026": {
-        "North America": 259,
+        "North America": 272,
         "Europe": 98,
         "Africa": 10,
         "Asia": 99,
@@ -5533,7 +5541,7 @@
         "Africa": 2
       },
       "2026": {
-        "North America": 197,
+        "North America": 210,
         "Asia": 85,
         "Europe": 80,
         "Oceania": 8,
@@ -5779,7 +5787,7 @@
       "year": 2026,
       "conf_year": "pets2026",
       "area": "security",
-      "size": 65
+      "size": 80
     },
     {
       "conference": "SC",
@@ -6732,6 +6740,11 @@
     },
     {
       "conference": "pets2026",
+      "name": "Marco Abbadini",
+      "affiliation": "Università degli Studi di Bergamo"
+    },
+    {
+      "conference": "pets2026",
       "name": "Mugdha Khedkar",
       "affiliation": "Heinz Nixdorf Institute"
     },
@@ -6739,6 +6752,11 @@
       "conference": "pets2026",
       "name": "Panagiotis Chatzigiannis",
       "affiliation": "Visa Research"
+    },
+    {
+      "conference": "pets2026",
+      "name": "Teresa Brooks",
+      "affiliation": "Cloudflare & Pace University"
     },
     {
       "conference": "pets2026",

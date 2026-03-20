@@ -113,15 +113,15 @@
   conference: EUROSYS
   parsed: false
   year: 2026
-- artifact_count: 0
+- artifact_count: 17
   category: systems
   conference: FAST
-  parsed: false
+  parsed: true
   year: 2024
-- artifact_count: 0
+- artifact_count: 18
   category: systems
   conference: FAST
-  parsed: false
+  parsed: true
   year: 2025
 - artifact_count: 38
   category: security
@@ -163,10 +163,10 @@
   conference: OSDI
   parsed: true
   year: 2024
-- artifact_count: 0
+- artifact_count: 38
   category: systems
   conference: OSDI
-  parsed: false
+  parsed: true
   year: 2025
 - artifact_count: 22
   category: security
