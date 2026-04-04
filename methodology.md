@@ -107,6 +107,8 @@ The pipeline ([run_pipeline.sh](https://github.com/researchartifacts/artifact_an
 7. **Generate area-specific rankings** (systems, security, overall)
 8. **Export data** (JSON/YAML) and charts to this website
 
+All output data structures are formally defined in the [Data Schemas](https://researchartifacts.github.io/data-schemas/) documentation.
+
 The complete pipeline takes ~30 minutes to run and processes the DBLP XML database (~3GB compressed) to match ~2,500+ artifact papers to author records and compute total paper counts.
 
 ## Author Metrics
@@ -280,6 +282,7 @@ See the [verification scripts and detailed results](https://github.com/researcha
 - **[usenix.org](https://www.usenix.org)** — Badge information for USENIX conferences (ATC, FAST)
 - **[dblp.org](https://dblp.org)** — Author name matching and disambiguation
 - **[GitHub](https://docs.github.com/en/rest)**, **[Zenodo](https://developers.zenodo.org)**, **[Figshare](https://docs.figshare.com)** — Repository statistics (stars, forks, downloads)
+- **[Data Schemas](https://researchartifacts.github.io/data-schemas/)** — JSON Schema definitions for all data structures used by this site
 
 ---
 
