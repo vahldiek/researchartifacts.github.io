@@ -1,14 +1,13 @@
 {
-  "total_artifacts": 2576,
-  "total_conferences": 13,
-  "systems_artifacts": 718,
-  "security_artifacts": 1858,
+  "total_artifacts": 2652,
+  "total_conferences": 12,
+  "systems_artifacts": 645,
+  "security_artifacts": 2007,
   "conferences_list": [
     "ACSAC",
     "ATC",
     "CHES",
     "EUROSYS",
-    "FAST",
     "NDSS",
     "OSDI",
     "PETS",
@@ -21,7 +20,6 @@
   "systems_conferences": [
     "ATC",
     "EUROSYS",
-    "FAST",
     "OSDI",
     "SC",
     "SOSP"
@@ -36,5 +34,5 @@
     "WOOT"
   ],
   "year_range": "2017-2026",
-  "last_updated": "2026-03-20 10:05:03 UTC"
+  "last_updated": "2026-04-04 00:32:00 UTC"
 }

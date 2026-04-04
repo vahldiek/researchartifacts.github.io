@@ -1581,7 +1581,9 @@
     "year": 2024,
     "title": "Balancing Analysis Time and Bug Detection: Daily Development-friendly Bug Detection in Linux",
     "badges": [
-      ""
+      "available",
+      "functional",
+      "reproduced"
     ],
     "repository_url": "https://github.com/sslab-keio/FiTx",
     "artifact_url": ""
@@ -30691,6 +30693,1812 @@
     "appendix_url": "https://secartifacts.github.io/usenixsec2025/appendix-files/sec25cycle2ae-final207.pdf"
   },
   {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Imitative Membership Inference Attack",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17885393"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "VeCT: Secure and Efficient Constant-Time Code Rewriting with Vector Extensions",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17822446",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final2.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Hydrangea: Optimistic Two-Round Partial Synchrony with Improved Fault Resilience",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17823671"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "From Easy to Hard++: Promoting Differentially Private Image Synthesis Through Spatial-Frequency Curriculum",
+    "badges": [
+      "Badges: Available",
+      "Functional"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17836341",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final4.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Opossum Attack: Application Layer Desynchronization using Opportunistic TLS",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17855525"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "DaLens: Charting DNS Self-Amplification Threats at Large",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17832418?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjcwODJiYTc3LTM0NGQtNDM4Yy1iYTViLTUyNGZiNWIyNWMxYSIsImRhdGEiOnt9LCJyYW5kb20iOiJlMjJmNjljNTY1ZjhlYjJkMzc4NjZmYWM1ZTE4MzU1YSJ9.sPg2-LLE5v8W7qpHYgR_XfLdD01t0NJr7erzGAYetwo-Z1YZdlcHNS0gWhF4XlcwO39IBUtnfPA95q3D__mNhg"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "FABRICKED: Misconfiguring Infinity Fabric to Break AMD SEV-SNP",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17830021?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjJjNWQ1NjNiLTBhNmYtNGFkNC1hZTc1LTBkNzhiZTM5NWE4MiIsImRhdGEiOnt9LCJyYW5kb20iOiI4NjNiYTllZDUzYjdlZWVhMGVkOWViY2FjZmFiOTYxMyJ9.AKbLNlVmhYXwQB1PXsnV10wQ1CSRKlk010zBUm3F_BkZIy3UTvBFufFp2rvvy_mS5N_HadOWdj1EJKLtcz5l8Q"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Quantifying Large Language Model Attacks Through the Lens of Model Cognition",
+    "badges": [
+      "Badges: Available",
+      "Functional"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17875176",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final8.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "A Midsummer Meme\u2019s Dream: Investigating Market Manipulations in the Meme Coin Ecosystem",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17830943"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Arguzz: Testing zkVMs for Soundness and Completeness Bugs",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.16939845"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "WILD Attack: Stealthy Undermining of Wi-Fi-Based Geolocation Through Remote Crowdsourced Data Injection",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17834160"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Distributed Vector Commitments and Their Applications",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17863157"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Logos: Robust Sharding Blockchain With Fast Processing and Optimal Cross-Shard Overhead",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17855927"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "mmCipher: Batching Post-Quantum Public Key Encryption Made Bandwidth-Optimal",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17849532",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final14.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "XGuardian: Towards Explainable and Generalized AI Anti-Cheat on FPS Games",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17845613"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Overcoming the Retrieval Barrier: Indirect Prompt Injection in the Wild for LLM Systems",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17968523"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "A Distortion-minimization Watermarking Framework for Large Language Models: Larger Capacity, Stronger Robustness and Higher Quality",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.18242631"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Jailbreaking the AMD Secure Processor: Enabling Live Analysis of SEV-SNPs Undocumented Security Boundaries",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17865002?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjUyZTI0YmM4LTRjM2UtNDA0MC04YWZhLWE4OGYzODQyYzZmNCIsImRhdGEiOnt9LCJyYW5kb20iOiIzODUzODNmM2RhNGVhMzk4YjRiZTgxNmU2N2VhOTNlZCJ9.lvetSy26gHlQ0thGQwDgr0Ira1FFPZ8DLn3hfoyQWpVE-bWoCWNKh_i2am8sEfjTLnZGxcoZoKCrNVG32kK3_w"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Sirens Whisper: Inaudible Near-Ultrasonic Jailbreaks of Speech-Driven LLMs",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17851194"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "CuSafe: Capturing Memory Corruption on NVIDIA GPUs",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.6084/m9.figshare.30821396"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Interpolation-Based Optimization for Enforcing lp-Norm Metric Differential Privacy in Continuous and Fine-Grained Domains",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17851733",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final21.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "KernelRCA: Facilitating Root Cause Analysis of Memory Corruptions in Linux Kernel with Contextual Causality Chain",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/18410035",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final22.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Behind Bars: A Side-Channel Attack on NVIDIA MIG Cache Partitioning Using Memory Barriers",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17861917"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Cracks in the Walled Garden: Dissecting the Gray-Market of Unauthorized iOS App Distribution via Ad Hoc Sideloading",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17850998",
+    "artifact_urls": [
+      "https://doi.org/10.5281/zenodo.17850998",
+      "https://doi.org/10.5281/zenodo.17846379"
+    ]
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Shred-to-Shine Metamorphosis of (Distributed) Polynomial Commitments",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17867141",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final26.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "TIMESLICE-SANDWICH: A GPU Side-Channel Attack Exploiting Time-Sliced Scheduling",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17987226"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "A Large-Scale Study of Personalized Phishing using Large Language Models",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17882184"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Identifying Provenance of Generative Text-to-Image Models",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17870201"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Residual-PAC Privacy: Automatic Privacy Control Beyond the Gaussian Barrier",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17871622"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Inconsistent, Incomplete, and Insecure: A Survey of Account Security Interfaces",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17880685"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Distributed Synthesis of Differentially Private Tabular Datasets",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.18218427",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final33.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Bridges to Self: Silent Web-to-App Tracking on Mobile via Localhost",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17880051"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "M-Step: A Single-Stepping Framework for Side-Channel Analysis on TrustZone-M",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17910184",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final35.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "The State of Passkeys: Studying the Adoption and Security of Passkeys on the Web",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17898769",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final36.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "FABS: Fast Attribute-Based Signatures",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17882304"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Transparent Dictionaries from Polynomial Commitments",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17901509"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "MULCOTAINT: Towards Efficient Multi-tag Dynamic Taint Analysis via Hardware/Software Co-design",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/doi/10.5281/zenodo.17939551"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Quorus: Efficient, Scalable Threshold ML-DSA Signatures from MPC",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17888654",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final42.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "E2E-AKMA: An End-to-End Secure and Privacy-Enhancing AKMA Protocol Against the Anchor Function Compromise",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17972924"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "LPG: Raise Your Location Privacy Game in Direct-to-Cell LEO Satellite Networks",
+    "badges": [
+      "Badges: Available",
+      "Functional"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17906146",
+    "artifact_urls": [
+      "https://doi.org/10.5281/zenodo.17906146",
+      "https://doi.org/10.5281/zenodo.18428501"
+    ],
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final46.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "The Art of Hide and Seek: Making Pickle-Based Model Supply Chain Poisoning Stealthy Again",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17895474"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Sy-FAR: Symmetry-based Fair Adversarial Robustness",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17878074"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Static Detection of TOCTOU Bugs Caused by Kernel Races",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17898451"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "WAVED: Principled Identification of Off-Path Exploitable Weak Verifications within the TCP/IP Protocol Suite",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17896119",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final50.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "TrojPix: Electromagnetic Covert Channels via Imperceptible Pixel Modulation",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17905407"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Analyzing the WebRTC Ecosystem and Breaking Authentication in DTLS-SRTP",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17880120"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "From Mirai to Gorilla: Deep Dive into a Long-Lasting DDoS-for-Hire Botnet",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17886098"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Unlocking the True Potential of Decryption Failure Oracles: A Hybrid Adaptive-LDPC Attack on ML-KEM Using Imperfect Oracles",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17899501"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Fend for Yourself! Backdoor Purification in Federated Graph Learning with an Evolving Knowledge Anchor",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17898577",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final58.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "InstrSem: Automatically and Generically Inferring Semantics of (Undocumented) CPU Instructions",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17974657",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final59.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Garuda and Pari: Faster and Smaller SNARKs via Equifficient Polynomial Commitments",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17970155"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Differential Trust: Dynamic Multi-Authority Anonymous Credentials with Epoch-Weighted Updates",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17905110"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Can we estimate privacy vulnerability of individual records? Towards Mitigating Attribute Inference Attacks on ML Models",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17905132",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final66.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Trustworthy and Confidential SBOM Exchange",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17906622",
+    "artifact_urls": [
+      "https://doi.org/10.5281/zenodo.17906622",
+      "https://doi.org/10.5281/zenodo.17859760"
+    ],
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final67.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Provable Secure Steganography Based on Adaptive Dynamic Sampling",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17906788"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Anonymous Tokens with Designated-Reader Metadata Bit",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17946122",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final71.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "ZipPIR: High-throughput Single-server PIR without Client-side Storage",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17907224",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final72.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "vCause: Efficient and Verifiable Causality Analysis for Cloud-based Endpoint Auditing",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17908629"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Streaming Function Secret Sharing and Its Applications",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17910080"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Silicon Heist: (Ransom) Attacks for Cloud FPGAs via Privilege Escalation",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/16950451?preview=1&token=eyJhbGciOiJIUzUxMiIsImlhdCI6MTc2NTU1ODUxMiwiZXhwIjoxNzY5ODE3NTk5fQ.eyJpZCI6IjRkZGM5ZTlkLTYyZGYtNGI0MS05ZDBkLWVkYWE5OTkzMThjNyIsImRhdGEiOnt9LCJyYW5kb20iOiJjZGRiOWY0NTkxNmNkNzVjN2ZjZjQxMWY5YmNiNGFiMiJ9.MV3dodwYMOyc_EXrc26mJenL2yQU7qpS5tlBJ_LnFTSGh8rtFNujaqRqIEK8Utp77lsL-B3lOMBoQOXczI3fEA"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Membership Inference Attacks on Tokenizers of Large Language Models",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.18080228",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final79.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "VidLeaks: Membership Inference Attacks Against Text-to-Video Models",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17972831"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Scribe: Low-memory SNARKs via Read-Write Streaming",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/uploads/17957696"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "BADControl: Backdoor Attacks Against Control Systems",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17932677"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "CompLeak: Deep Learning Model Compression Exacerbates Privacy Leakage",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://figshare.com/articles/software/CompLeak/30904289",
+    "artifact_urls": [
+      "https://figshare.com/articles/software/CompLeak/30904289",
+      "https://doi.org/10.6084/m9.figshare.30904289"
+    ],
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final83.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "The Prompt Stealing Fallacy: Rethinking Metrics, Attacks, and Defenses",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17934144?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjA5ZTI2NGZlLTY3MWItNGNjMS04NjJhLTRmODhkZDMzODhjYiIsImRhdGEiOnt9LCJyYW5kb20iOiJiMjVmMjg5NjlmZTViZWNlMWJiZjhlYjlkYjM2M2NkMCJ9.E2lMNJQraHOFiY4BPU3oTO5k5iBj-hIIqRpbbTsRz0jDA5JpVKWhVYafDyooiq6XLhzsDoFpCJOr4xnldRCM2Q"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Efficient and High-Accuracy Secure Two-Party Protocols for a Class of Functions with Real-number Inputs",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17936337"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "From Texts to Rules: Generating Sigma Rules with Large Language Models from Cyber Threat Reports",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17970580"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Side-Channel Attacks on Open vSwitch",
+    "badges": [
+      "Badges: Available",
+      "Functional"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17965902",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final88.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Efficient Threshold ML-DSA",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17963722"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "B-Privacy: Defining and Enforcing Privacy in Weighted Voting",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17965708"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "FIRA: Enabling Automatic Forensic Investigation of Unmanned Aerial Vehicles",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.18395925",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final91.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Nudge: A Private Recommendations Engine",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17968761"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "BatchBoot: Fast Batched Bootstrapping for TFHE scheme and Practical Applications",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17936945"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Inference Attacks Against Graph Generative Diffusion Models",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17946102"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Autonomy Comes with Costs: Detecting Denial-of-Service Vulnerabilities Caused by Resource Abusing in LLM-based Agents",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17947230"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Source Code: Assumption-Free Fuzzy PSI via Predicate Encryption",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17936990"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "DMGuard: Safeguarding Kernels from Physical-Page Use-After-Free Vulnerabilities",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17970502",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final97.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Secure Protocol Composition under Dynamic Corruption: Models and Proofs",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.6084/m9.figshare.29958290",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final98.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "ARM MTE Performance in Practice",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17953065"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "'Abuse Risks are Often Inherent to Product Features': Exploring AI Vendors\u2019 Bug Bounty and Responsible Disclosure Policies",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17957266"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Hop: A Modern Transport and Remote Access Protocol",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17953396",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final101.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "CombiSan: Unifying Software Sanitizers for Comprehensive Fuzzing",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/16949365",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final102.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "TAT: Attesting Trajectory Integrity of Industrial Robotic Arms",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.18047962"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "VSG-Safe: Spotting NSFW Video through Cross-Frame Evidence",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.6084/m9.figshare.30902915"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "You Know Why, but Still Rely: The Impact of Explainable AI on Trust, Task Load, and Performance in Cybersecurity Decision-Making",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17920612",
+    "artifact_urls": [
+      "https://doi.org/10.5281/zenodo.17920612",
+      "https://doi.org/10.5281/zenodo.17973504",
+      "https://osf.io/qyrzb/overview?view_only=1ac2e8ebe8944a989acaf2ebdd8251a6",
+      "https://osf.io/t6pwd/overview?view_only=cf8b97a191a04c5cb5b0275e4b6ecd2a"
+    ]
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "End-to-End Encrypted Collaborative Documents",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17973972"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Chameleon Channels: Measuring YouTube Accounts Repurposed for Deception and Profit",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17955052",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final107.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Shadowfax: Hybrid Security and Deniability for AKEMs",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/18939418",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final108.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Bridging Bitcoin to Second Layers via BitVM2",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17949747",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final109.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Attacks on Approximate Caches in Text-to-Image Diffusion Models",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17957900"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "SophOMR: Improved Oblivious Message Retrieval from SIMD-Aware Homomorphic Compression",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17958466",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final111.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Invariant-Guided Logical Testing of Open RAN Controllers",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17969521"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "PANGOLIN: Fuzzing Multilingual IoT Firmware with LLM-Driven Code Analysis",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.6084/m9.figshare.30904379"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "RBOOT: Accelerating Homomorphic Neural Network Inference by Fusing ReLU within Bootstrapping",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17960273"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Turn Your Face Into An Attack Surface: Screen Attack Using Facial Reflections in Video Conferencing",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/16925324"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "PICS: Private Intersection over Committed (and reusable) Sets",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17958838",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final117.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "On Evaluating the Robustness of Large Vision-Language Models via Untargeted Modality Alignment Breaking Adversarial Attack",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17958814"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Ajax: Fast Threshold Fully Homomorphic Encryption without Noise Flooding",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17963095"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "V\u03b5rity: Verifiable Local Differential Privacy",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17959962"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Leveraging Cryptographic Simulator Synthesis for Formally Verifying the FOO E-Voting Protocol -- Artifacts",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17880702",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final123.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Libra: Pattern-Scheduling Co-Optimization for Cross-Scheme FHE Code Generation over GPGPU",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17962002",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final124.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "InstantOMR: Oblivious Message Retrieval with Low Latency and Optimal Parallelizability",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17959835",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final125.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "PrivacyShield: Relaying BLE Beacons to Counter Unsolicited Tracking",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17964520",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final127.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "SoK: PHILTER: Uncovering Security and Functional Gaps in AI-based Phishing Website Detection Literature via an LLM-based Reasoning Framework",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17964375"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Lethe: Purifying Backdoored Large Language Models with Knowledge Dilution",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17960577"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "MASLeak: Investigating and Exposing Intellectual Property Leakage Vulnerabilities in Multi-Agent Systems",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": ""
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Sliding into the Flight Deck\u2019s DMs: Practical Message Attacks on CPDLC",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17964693"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "SafeFFI: Efficient Sanitization at the Boundary Between Safe and Unsafe Code in Rust and Mixed-Language Applications",
+    "badges": [
+      "Badges: Available",
+      "Functional"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17976648",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final132.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Cutting the Gordian Knot: Detecting Malicious PyPI Packages via a Knowledge-Mining Framework",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17929520"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "OS-Sanitizer: System-wide Latent Defect Inference in Linux Applications",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17979528",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final135.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "DDR-SSE: Duplicated Retrieval of Documents for System-wide Secure Searchable Symmetric Encryption",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17965794",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final136.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Security and Privacy Analysis of Tile\u2019s Location Tracking Protocol",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17966636?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6ImZhM2JkYWI5LTYzMGEtNDEwNy1iOWNkLTE2YzY5OTc0ODEzOCIsImRhdGEiOnt9LCJyYW5kb20iOiIyYWJlMGI3ZmI2MmI2NWZmYjMwOTU5MDIwYTkwOWY4MSJ9.bdRa0H3U9fKDIriW_Gi-Cb6Lx44LUV-0yyFiT2iZxsOxZtzUwpH4SdUXuOkhnrTqaXbCRa070Tp6cu7YQS21OQ"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "PROBE+DETECT+MITIGATE (PDM): Enabling Cloud Tenants to Self-Defend against Microarchitectural Attacks",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17967755"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "\"Your imaging may be stone-cold normal, but if they look sick, they\u2019re going to get admitted\": An Investigation of Clinicians\u2019 Perceptions of Impact & Likelihood of Security Failures",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://osf.io/ahjp3/overview?view_only=8442f58f00ca4dfdbf2ed2dfa90baba0"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "HAMLOCK: HArdware-Model LOgically Combined attacK",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17980434"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Digital Risks and Coping Practices among Roblox Game Creators",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17926420"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Window-based Membership Inference Attacks Against Fine-tuned Large Language Models",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17968678"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "The Adverse Effects of Omitting Records in Differential Privacy: How Sampling and Suppression Degrade the Privacy\u2013Utility Tradeoff (USENIX Security 2026 Artifact)",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17977527",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final144.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Why Johnny Adopts Identity-Based Software Signing: A Usability Case Study of Sigstore",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17969423"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "IoT Product Page Data",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://figshare.com/s/1064824a8f2a72c0e4f5"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Unbalanced Fuzzy Private Set Intersection for $L_{\\infty}$ Distance: Achieving Sublinear Communication with Large Set Size",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17982106"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "NOIR: Privacy-Preserving Generation of Code with Open-Source LLMs",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://tinyurl.com/NOIR-Artifact"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Artifacts for BLE Theft Auto: Evaluating the Security of Aftermarket BLE-based Automotive Remote Control Systems",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17970344"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "JailbreakScope: Interpreting Jailbreak Mechanism through Representation and Circuit Analyses",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17971644"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Patch-Guided Vulnerability Detection: Extracting Java API Security Rules via Attack\u2013Defense Cross-Analysis",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17972522"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Revealing the Dark Side of Smart Accounts: An Empirical Study of EIP-7702 Incurred Risks in Blockchain Ecosystem",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17895541"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Love, Lies, and Language Models: Investigating AI\u2019s Role in Romance-Baiting Scams",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17984568",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final154.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Khost: KVM-based Near Native MCU Firmware Rehosting",
+    "badges": [
+      "Badges: Available",
+      "Functional"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17976459",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final155.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "kSFS: Repurposing a Microkernel-like Interface for Fast and Secure In-Kernel Linux File Systems",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17973522",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final157.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "ViPer Strike: Defeating Visual Reasoning CAPTCHAs via Structured Vision\u2013Language Inference",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/18191465"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Assessing LLM Response Quality in the Context of Technology-Facilitated Abuse",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://osf.io/cu253/overview?view_only=62000cfa88e846daba447a07be7cda96"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Tracegram: Framing Trace-Level Traffic Analysis with Temporally-Aware Multiple Instance Learning",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17978903"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "When Fun Turns Toxic: A First Look at Aggressive Advertising in Mini-games",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17974792"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "SMASH: Scalable Maliciously Secure Hybrid Multi-party Computation Framework for Privacy-Preserving Large Language Models",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17977209?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6ImUzZjNiZDkzLTllM2ItNGQ1OC1iOTgzLTdjMjIwN2ViYjg0MiIsImRhdGEiOnt9LCJyYW5kb20iOiJkOTk4NmQ3YzBiZjgxYWJlNGU2ZGUzODdjMDk1ODdhMSJ9.7_h-Mt02nThtPUpWf6XfpYQtgrSOreTcFiA5Ogkd2eMdEzKEDL3SmfzphjLjnjW8RWkade-dMWahduhXN0wX6w"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "SoK: Security of Cyber-physical Systems Under Intentional Electromagnetic Interference Attacks",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.18019022"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Cracking Federated Privacy: Initialization-Resilient Gradient Inversion with Fine-Grained Reconstruction",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17979356"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Concretely efficient blind signatures based on VOLE-in-the-head proofs and the MAYO trapdoor",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17979640",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final166.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Estimating the amount of script-generated traffic in a mixture",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17980327"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Bridging Usability and Performance: A Tensor Compiler for Autovectorizing Homomorphic Encryption",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17957733",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final168.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Heli: Heavy-Light Private Aggregation",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17980903",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final169.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Network-Level Prompt and Trait Leakage in Local Research Agents",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17981422"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Memclave: Secure In-Memory Enclave for Untrusted Hosts",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17986461",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final171.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "When Updates Backfire: A Black-Box Security Analysis of Desktop Software Update Mechanisms",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17982402"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Semantics Over Syntax: Uncovering Pre-Authentication 5G Baseband Vulnerabilities",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/doi/10.5281/zenodo.17984911",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final173.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "TopFeaRe: Locating Critical State of Adversarial Resilience for Graphs Regarding Topology-Feature Entanglement",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17920432"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "United We Defend: Collaborative Membership Inference Defenses in Federated Learning",
+    "badges": [
+      "Badges: Available",
+      "Functional"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.5281/zenodo.17982729",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final175.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "FirmReBugger: A Benchmark Framework for Monolithic Firmware Fuzzers",
+    "badges": [
+      "Badges: Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://doi.org/10.6084/m9.figshare.31205056",
+    "appendix_url": "https://secartifacts.github.io/usenixsec2026/appendix-files/sec26cycle1ae-final176.pdf"
+  },
+  {
+    "conference": "USENIXSEC",
+    "category": "security",
+    "year": 2026,
+    "title": "Lost in Blockchain Address Misuse: Hidden Cross-Platform Risks and Their Security Impact",
+    "badges": [
+      "Badges: Available"
+    ],
+    "repository_url": "",
+    "artifact_url": "https://zenodo.org/records/17984167"
+  },
+  {
     "conference": "WOOT",
     "category": "security",
     "year": 2019,
@@ -31350,982 +33158,5 @@
     "repository_url": "",
     "artifact_url": "",
     "paper_url": "https://www.usenix.org/conference/woot25/presentation/jo"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2024,
-    "title": "Symbiosis: The Art of Application and Kernel Cache Cooperation",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast24-dai.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2024,
-    "title": "RFUSE: Modernizing Userspace Filesystem Framework through Scalable Kernel-Userspace Communication",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast24-cho.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2024,
-    "title": "The Design and Implementation of a Capacity-Variant Storage System",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast24-jiao.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2024,
-    "title": "MinFlow: High-performance and Cost-efficient Data Passing for I/O-intensive Stateful Serverless Analytics",
-    "badges": [
-      "available"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast24-li.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2024,
-    "title": "We Ain't Afraid of No File Fragmentation: Causes and Prevention of Its Performance Impact on Modern Flash SSDs",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast24-jun.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2024,
-    "title": "Physical vs. Logical Indexing with IDEA: Inverted Deduplication-Aware Index",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast24-levi.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2024,
-    "title": "I/O Passthru: Upstreaming a flexible and efficient I/O Path in Linux",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast24-joshi.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2024,
-    "title": "MIDAS: Minimizing Write Amplification in Log-Structured Systems through Adaptive Group Number and Size Configuration",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast24-oh.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2024,
-    "title": "Metis: File System Model Checking via Versatile Input and State Exploration",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast24-liu-yifei.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2024,
-    "title": "Combining Buffered I/O and Direct I/O in Distributed File Systems",
-    "badges": [
-      "available"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast24-qian.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2024,
-    "title": "ELECT: Enabling Erasure Coding Tiering for LSM-tree-based Storage",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast24-ren.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2024,
-    "title": "Kosmo: Efficient Online Miss Ratio Curve Generation for Eviction Policy Evaluation",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast24-shakiba.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2024,
-    "title": "Baleen: ML Admission & Prefetching for Flash Caches",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast24-wong.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2024,
-    "title": "TeRM: Extending RDMA-Attached Memory with SSD",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast24-yang-zhe.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2024,
-    "title": "In-Memory Key-Value Store Live Migration with NetMigrate",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast24-zhu.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2024,
-    "title": "COLE: A Column-based Learned Storage for Blockchain Systems",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast24-zhang_ce.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2024,
-    "title": "OmniCache: Collaborative Caching for Near-storage Accelerators",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast24-zhang-jian.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2025,
-    "title": "GPHash: An Efficient Hash Index for GPU with Byte-Granularity Persistent Memory",
-    "badges": [
-      "available"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast25-chen-menglei.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2025,
-    "title": "Revisiting Network Coding for Warm Blob Storage",
-    "badges": [
-      "available"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast25-gan.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2025,
-    "title": "AegonKV: A High Bandwidth, Low Tail Latency, and Low Storage Cost KV-Separated LSM Store with SmartSSD-based GC Offloading",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast25-duan.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2025,
-    "title": "LeapGNN: Accelerating Distributed GNN Training Leveraging Feature-Centric Model Migration",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast25-chen-weijian-leap.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2025,
-    "title": "ShiftLock: Mitigate One-sided RDMA Lock Contention via Handover",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast25-gao.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2025,
-    "title": "Silhouette: Leveraging Consistency Mechanisms to Detect Bugs in Persistent Memory-Based File Systems",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast25-jiao.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2025,
-    "title": "D2FS: Device-Driven Filesystem Garbage Collection",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast25-kim-juwon.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2025,
-    "title": "OPIMQ: Order Preserving IO stack for Multi-Queue Block Device",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast25-kim-jieun.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2025,
-    "title": "Don't Maintain Twice, It's Alright: Merged Metadata Management in Deduplication File System with GogetaFS",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast25-pan.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2025,
-    "title": "Selective On-Device Execution of Data-Dependent Read I/Os",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast25-park.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2025,
-    "title": "PolyStore: Exploiting Combined Capabilities of Heterogeneous Storage",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast25-ren.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2025,
-    "title": "Cloudscape: A Study of Storage Services in Modern Cloud Architectures",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast25-satija.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2025,
-    "title": "VectorCDC: Accelerating Data Deduplication with Vector Instructions",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast25-udayashankar.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2025,
-    "title": "Boosting File Systems Elegantly: A Transparent NVM Write-ahead Log for Disk File Systems",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast25-wang.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2025,
-    "title": "Oasis: An Out-of-core Approximate Graph System via All-Distances Sketches",
-    "badges": [
-      "available"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast25-yang.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2025,
-    "title": "Rethinking the Request-to-IO Transformation Process of File Systems for Full Utilization of High-Bandwidth SSDs",
-    "badges": [
-      "available"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast25-zhan.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2025,
-    "title": "3L-Cache: Low Overhead and Precise Learning-based Eviction Policy for Caches",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast25-zhou-wenbin.pdf"
-  },
-  {
-    "conference": "FAST",
-    "category": "systems",
-    "year": 2025,
-    "title": "HiDPU: A DPU-Oriented Hybrid Indexing Scheme for Disaggregated Storage Systems",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/fast25-zhu.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Paralegal: Practical Static Analysis for Privacy Bugs",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-adam.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "EMT: An OS Framework for New Memory Translation Architectures",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-chai-siyuan.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Low End-to-End Latency atop a Speculative Shared Log with Fix-Ante Ordering",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-bhat.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Decentralized, Epoch-based F2FS Journaling with Fine-grained Crash Recovery",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-cui.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Kamino: Efficient VM Allocation at Scale with Latency-Driven Cache-Aware Scheduling",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-domingo.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Stripeless Data Placement for Erasure-Coded In-Memory Storage",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-gao.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Picsou: Enabling Replicated State Machines to Communicate Efficiently",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-frank.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "QiMeng-Xpiler: Transcompiling Tensor Programs for Deep Learning Systems with a Neural-Symbolic Approach",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-dong.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "QOS: Quantum Operating System",
-    "badges": [
-      "available"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-giortamis.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "KPerfIR: Towards a Open and Compiler-centric Ecosystem for GPU Kernel Performance Tooling on Modern AI Workloads",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-guan.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Achieving Low-Latency Graph-Based Vector Search via Aligning Best-First Search Algorithm with SSD",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-guo.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Neutrino: Fine-grained GPU Kernel Profiling via Programmable Probing",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-huang-songlin.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Bayesian Code Diffusion for Efficient Automatic Deep Learning Program Optimization",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-jeong.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "PoWER Never Corrupts: Tool-Agnostic Verification of Crash Consistency and Corruption Detection",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-leblanc.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Tigon: A Distributed Database for a CXL Pod",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-huang-yibo.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Training with Confidence: Catching Silent Errors in Deep Learning Training with Automated Proactive Checks",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-jiang.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Deriving Semantic Checkers from Tests to Detect Silent Failures in Production Distributed Systems",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-lou.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Understanding Stragglers in Large Model Training Using What-if Analysis",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-lin-jinkun.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Tintin: A Unified Hardware Performance Profiling Infrastructure to Uncover and Manage Uncertainty",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-li.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "MettEagle: Costs and Benefits of Implementing Containers on Microkernels",
-    "badges": [
-      "available"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-miemietz.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Quake: Adaptive Indexing for Vector Search",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-mohoney.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Fast and Synchronous Crash Consistency with Metadata Write-Once File System",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-pan.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Enabling Efficient GPU Communication over Multiple NICs with FuseLink",
-    "badges": [
-      "available"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-ren.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Weave: Efficient and Expressive Oblivious Analytics at Scale",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-soleimani.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "XSched: Preemptive Scheduling for Diverse XPUs",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-shen-weihang.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Building Bridges: Safe Interactions with Foreign Languages through Omniglot",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-schuermann.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Quantum Virtual Machines",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-tao.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Scalio: Scaling up DPU-based JBOF Key-value Store with NVMe-oF Target Offload",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-sun.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "FineMem: Breaking the Allocation Overhead vs. Memory Waste Dilemma in Fine-Grained Disaggregated Memory Management",
-    "badges": [
-      "available"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-wang-xiaoyang.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "WLB-LLM: Workload-Balanced 4D Parallelism for Large Language Model Training",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-wang-zheng.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Mirage: A Multi-Level Superoptimizer for Tensor Programs",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-wu-mengdi.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Decouple and Decompose: Scaling Resource Allocation with DeDe",
-    "badges": [
-      "available",
-      "functional"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-xu.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "BlitzScale: Fast and Live Large Model Autoscaling with O(1) Host Caching",
-    "badges": [
-      "available"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-zhang-dingyan.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Compass: Encrypted Semantic Search with High Accuracy",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-zhu-jinhao.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "KRR: Efficient and Scalable Kernel Record Replay",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-zhang-tianren.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Extending Applications Safely and Efficiently",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-zheng-yusheng.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "Basilisk: Using Provenance Invariants to Automate Proofs of Undecidable Protocols",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-zhang-tony.pdf"
-  },
-  {
-    "conference": "OSDI",
-    "category": "systems",
-    "year": 2025,
-    "title": "NanoFlow: Towards Optimal Large Language Model Serving Throughput",
-    "badges": [
-      "available",
-      "functional",
-      "reproduced"
-    ],
-    "repository_url": "",
-    "artifact_url": "",
-    "paper_url": "https://www.usenix.org/system/files/osdi25-zhu-kan.pdf"
   }
 ]
