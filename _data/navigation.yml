@@ -80,5 +80,7 @@ main:
         url: security/repo_stats.html
   - title: "Methodology"
     url: methodology.html
+  - title: "Data Schemas"
+    url: https://researchartifacts.github.io/data-schemas/
   - title: "Contribute"
     url: about.html
