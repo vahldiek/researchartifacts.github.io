@@ -97,10 +97,12 @@ layout: default
   var CITED_ARTIFACTS_URL = '{{ "/assets/data/cited_artifacts_by_author.json" | relative_url }}';
   var HISTORY_URL = '{{ "/assets/data/ranking_history.json" | relative_url }}';
   var ARTIFACTS_URL = '{{ "/assets/data/artifacts.json" | relative_url }}';
+  var PAPERS_URL = '{{ "/assets/data/papers.json" | relative_url }}';
   var allProfiles = [];
   var profileMap = {};
   var citedArtifactsMap = {};
   var artifactUrlMap = {};
+  var paperIndex = {};  // paper_id -> paper object
   var rankHistory = [];
   var chart = null;
   var historyChart = null;
@@ -158,8 +160,16 @@ layout: default
     if (p.chair_count) cards += card(p.chair_count, 'Chair Roles');
     document.getElementById('score-cards').innerHTML = cards;
 
-    // Papers table
-    var papers = p.papers || [];
+    // Papers table — resolve from paper index if paper_ids available
+    var papers = [];
+    if (p.paper_ids && p.paper_ids.length > 0) {
+      for (var pi = 0; pi < p.paper_ids.length; pi++) {
+        var pp = paperIndex[p.paper_ids[pi]];
+        if (pp) papers.push(pp);
+      }
+    } else {
+      papers = p.papers || [];
+    }
     if (papers.length > 0) {
       document.getElementById('papers-section').style.display = 'block';
       var rows = '';
@@ -254,7 +264,15 @@ layout: default
   }
 
   function renderChart(p) {
-    var papers = p.papers || [];
+    var papers = [];
+    if (p.paper_ids && p.paper_ids.length > 0) {
+      for (var pi = 0; pi < p.paper_ids.length; pi++) {
+        var pp = paperIndex[p.paper_ids[pi]];
+        if (pp) papers.push(pp);
+      }
+    } else {
+      papers = p.papers || [];
+    }
     var aeYears = p.ae_years || {};
     
     // Collect all years
@@ -468,7 +486,8 @@ layout: default
     fetch(DATA_URL).then(function(r) { return r.json(); }),
     fetch(CITED_ARTIFACTS_URL).then(function(r) { return r.json(); }).catch(function() { return {}; }),
     fetch(HISTORY_URL).then(function(r) { return r.json(); }).catch(function() { return []; }),
-    fetch(ARTIFACTS_URL).then(function(r) { return r.json(); }).catch(function() { return []; })
+    fetch(ARTIFACTS_URL).then(function(r) { return r.json(); }).catch(function() { return []; }),
+    fetch(PAPERS_URL).then(function(r) { return r.json(); }).catch(function() { return []; })
   ]).then(function(results) {
       var data = results[0];
       citedArtifactsMap = results[1] || {};
@@ -479,10 +498,18 @@ layout: default
       artifactUrlMap = {};
       for (var ai = 0; ai < artList.length; ai++) {
         var artItem = artList[ai];
-        var artUrl = artItem.artifact_url || artItem.repository_url || '';
+        var artUrls = artItem.artifact_urls || [];
+        var artUrl = artUrls.length > 0 ? artUrls[0] : (artItem.artifact_url || artItem.repository_url || '');
         if (artItem.title && artUrl) {
           artifactUrlMap[artItem.title.replace(/\.+$/, '')] = artUrl;
         }
+      }
+
+      // Build paper index (id -> paper object)
+      var papersList = results[4] || [];
+      paperIndex = {};
+      for (var pi = 0; pi < papersList.length; pi++) {
+        paperIndex[papersList[pi].id] = papersList[pi];
       }
 
       allProfiles = data;

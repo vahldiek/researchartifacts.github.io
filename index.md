@@ -196,7 +196,8 @@ title: ""
       entry.style.cssText = 'padding:10px 0;';
 
       // Line 1: Bold title (linked to artifact)
-      var titleLink = d.repository_url || d.artifact_url || '';
+      var artUrls = d.artifact_urls || [];
+      var titleLink = artUrls.length > 0 ? artUrls[0] : (d.repository_url || d.artifact_url || '');
       var titleHtml = titleLink
         ? '<a href="' + escHtml(titleLink) + '" target="_blank" rel="noopener" style="color:#0066cc; text-decoration:none;">' + escHtml(d.title) + '</a>'
         : escHtml(d.title);
@@ -224,19 +225,20 @@ title: ""
       } else if (d.paper_url) {
         links.push('<a href="' + escHtml(d.paper_url) + '" target="_blank" rel="noopener" style="color:#0066cc; text-decoration:none;">📄 Paper</a>');
       }
-      if (d.repository_url) {
-        var isGitHub = d.repository_url.indexOf('github.com') !== -1;
-        var repoLabel = isGitHub ? '💻 GitHub' : '💻 Repository';
-        links.push('<a href="' + escHtml(d.repository_url) + '" target="_blank" rel="noopener" style="color:#0066cc; text-decoration:none;">' + repoLabel + '</a>');
-      }
-      // Show github_url only if different from repository_url
-      if (d.github_url && d.github_url !== d.repository_url) {
-        links.push('<a href="' + escHtml(d.github_url) + '" target="_blank" rel="noopener" style="color:#0066cc; text-decoration:none;">💻 GitHub</a>');
-      }
-      if (d.artifact_url) links.push('<a href="' + escHtml(d.artifact_url) + '" target="_blank" rel="noopener" style="color:#0066cc; text-decoration:none;">📦 Artifact</a>');
-      if (d.artifact_urls) {
-        d.artifact_urls.forEach(function(u, i) {
-          if (u) links.push('<a href="' + escHtml(u) + '" target="_blank" rel="noopener" style="color:#0066cc; text-decoration:none;">Artifact #' + (i+1) + '</a>');
+      // Artifact URLs (unified list)
+      var artUrlList = d.artifact_urls || [];
+      if (artUrlList.length === 1) {
+        var isGH = artUrlList[0].indexOf('github.com') !== -1;
+        var lbl = isGH ? '💻 GitHub' : '📦 Artifact';
+        links.push('<a href="' + escHtml(artUrlList[0]) + '" target="_blank" rel="noopener" style="color:#0066cc; text-decoration:none;">' + lbl + '</a>');
+      } else {
+        artUrlList.forEach(function(u, i) {
+          if (u) {
+            var isGH = u.indexOf('github.com') !== -1;
+            var lbl = isGH ? '💻 GitHub' : '📦 Artifact';
+            if (artUrlList.length > 1) lbl += ' #' + (i+1);
+            links.push('<a href="' + escHtml(u) + '" target="_blank" rel="noopener" style="color:#0066cc; text-decoration:none;">' + lbl + '</a>');
+          }
         });
       }
       if (d.appendix_url) links.push('<a href="' + escHtml(d.appendix_url) + '" target="_blank" rel="noopener" style="color:#0066cc; text-decoration:none;">📋 Appendix</a>');
@@ -265,12 +267,9 @@ title: ""
     var exportData = filtered.map(function(d) {
       var e = {title: d.title, conference: d.conference, category: d.category, year: d.year, badges: d.badges, authors: d.authors, affiliations: d.affiliations};
       if (d.doi_url) e.doi_url = d.doi_url;
-      if (d.repository_url) e.repository_url = d.repository_url;
-      if (d.artifact_url) e.artifact_url = d.artifact_url;
-      if (d.artifact_urls) e.artifact_urls = d.artifact_urls;
+      if (d.artifact_urls && d.artifact_urls.length) e.artifact_urls = d.artifact_urls;
       if (d.paper_url) e.paper_url = d.paper_url;
       if (d.appendix_url) e.appendix_url = d.appendix_url;
-      if (d.github_url) e.github_url = d.github_url;
       if (d.award) e.award = d.award;
       return e;
     });

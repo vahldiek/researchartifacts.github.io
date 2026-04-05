@@ -555,7 +555,8 @@ layout: default
     artifactUrlMap = {};
     for (var i = 0; i < artifacts.length; i++) {
       var art = artifacts[i];
-      var url = art.artifact_url || art.repository_url || '';
+      var artUrls = art.artifact_urls || [];
+      var url = artUrls.length > 0 ? artUrls[0] : (art.artifact_url || art.repository_url || '');
       if (art.title && url) {
         artifactUrlMap[art.title.replace(/\.+$/, '')] = url;
       }
