@@ -7,7 +7,9 @@ permalink: /about.html
 
 All data and code are open source:
 
-- **Analysis Scripts**: [github.com/researchartifacts/artifact_analysis](https://github.com/researchartifacts/artifact_analysis)
+- **Analysis Pipeline**: [github.com/researchartifacts/artifact_analysis](https://github.com/researchartifacts/artifact_analysis) — Scraping, analysis, and generation scripts
+- **Pipeline Documentation**: [researchartifacts.github.io/artifact_analysis](https://researchartifacts.github.io/artifact_analysis/) — CLI reference, API docs, and data models
+- **Data Schemas**: [researchartifacts.github.io/data-schemas](https://researchartifacts.github.io/data-schemas/) — JSON Schema definitions for all output formats
 - **Pipeline Results**: [github.com/researchartifacts/artifact_analysis_results](https://github.com/researchartifacts/artifact_analysis_results) — Archived outputs from each pipeline run
 - **Website Source**: [github.com/researchartifacts/researchartifacts.github.io](https://github.com/researchartifacts/researchartifacts.github.io)
 - **Raw Data**: Available in `/assets/data/` directory (JSON format)
