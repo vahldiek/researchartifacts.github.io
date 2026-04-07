@@ -1,4 +1,4 @@
-# Security & Systems ReproDB
+# ReproDB
 
 This repository hosts the [researchartifacts.github.io](https://researchartifacts.github.io) website, which provides statistics and analysis of artifact evaluations across computer science research conferences.
 
