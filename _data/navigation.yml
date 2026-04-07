@@ -86,8 +86,8 @@ main:
       - title: "Overview"
         url: about.html
       - title: "Repositories"
-        url: https://github.com/researchartifacts
+        url: https://github.com/reprodb
       - title: "Documentation"
-        url: https://researchartifacts.github.io/artifact_analysis/
+        url: https://reprodb.github.io/reprodb-pipeline/
       - title: "Data Schemas"
-        url: https://researchartifacts.github.io/data-schemas/
+        url: https://reprodb.github.io/data-schemas/

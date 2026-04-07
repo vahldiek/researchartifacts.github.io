@@ -92,11 +92,11 @@ We scrape artifact evaluation results from sysartifacts/secartifacts websites, e
 
 Repository statistics (GitHub stars/forks, Zenodo/Figshare downloads) are collected via their public APIs. Author names are matched to [DBLP](https://dblp.org) for disambiguation and total-publication counts. Author affiliations are enriched using DBLP person pages and [CSRankings](http://csrankings.org) faculty data.
 
-All scripts are in the [artifact_analysis](https://github.com/researchartifacts/artifact_analysis) repository. Full CLI reference, API documentation, and data model definitions are in the [pipeline documentation](https://researchartifacts.github.io/artifact_analysis/).
+All scripts are in the [reprodb-pipeline](https://github.com/reprodb/reprodb-pipeline) repository. Full CLI reference, API documentation, and data model definitions are in the [pipeline documentation](https://reprodb.github.io/reprodb-pipeline/).
 
 ## Pipeline
 
-The pipeline ([run_pipeline.sh](https://github.com/researchartifacts/artifact_analysis/blob/main/run_pipeline.sh)) runs monthly via GitHub Actions:
+The pipeline ([run_pipeline.sh](https://github.com/reprodb/reprodb-pipeline/blob/main/run_pipeline.sh)) runs monthly via GitHub Actions:
 
 1. **Scrape artifact results** from sysartifacts/secartifacts
 2. **Match papers to DBLP authors** and extract author affiliations
@@ -107,7 +107,7 @@ The pipeline ([run_pipeline.sh](https://github.com/researchartifacts/artifact_an
 7. **Generate area-specific rankings** (systems, security, overall)
 8. **Export data** (JSON/YAML) and charts to this website
 
-All output data structures are formally defined in the [Data Schemas](https://researchartifacts.github.io/data-schemas/) documentation.
+All output data structures are formally defined in the [Data Schemas](https://reprodb.github.io/data-schemas/) documentation.
 
 The complete pipeline takes ~30 minutes to run and processes the DBLP XML database (~3GB compressed) to match ~2,500+ artifact papers to author records and compute total paper counts.
 
@@ -271,7 +271,7 @@ OpenAlex reported 14 artifacts with a total of 43 citing DOIs. We verified each 
 
 Because current bibliographic indexes do not reliably distinguish artifact citations from paper citations, **citation counts are excluded from the combined score and ranking tables**. The citation collection pipeline remains available as an optional, experimental module for future use as citation infrastructure matures.
 
-See the [verification scripts and detailed results](https://github.com/researchartifacts/artifact_analysis) for the full analysis.
+See the [verification scripts and detailed results](https://github.com/reprodb/reprodb-pipeline) for the full analysis.
 
 ---
 
@@ -282,7 +282,7 @@ See the [verification scripts and detailed results](https://github.com/researcha
 - **[usenix.org](https://www.usenix.org)** — Badge information for USENIX conferences (ATC, FAST)
 - **[dblp.org](https://dblp.org)** — Author name matching and disambiguation
 - **[GitHub](https://docs.github.com/en/rest)**, **[Zenodo](https://developers.zenodo.org)**, **[Figshare](https://docs.figshare.com)** — Repository statistics (stars, forks, downloads)
-- **[Data Schemas](https://researchartifacts.github.io/data-schemas/)** — JSON Schema definitions for all data structures used by this site
+- **[Data Schemas](https://reprodb.github.io/data-schemas/)** — JSON Schema definitions for all data structures used by this site
 
 ---
 

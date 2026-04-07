@@ -4,7 +4,7 @@
 #
 # Examples:
 #   ./serve.sh                                # Serve at http://localhost:4000/
-#   ./serve.sh --baseurl /researchartifacts.github.io  # Mimic project-page deploy
+#   ./serve.sh --baseurl /reprodb.github.io  # Mimic project-page deploy
 
 set -e
 

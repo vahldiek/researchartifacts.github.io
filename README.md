@@ -1,11 +1,11 @@
 # ReproDB
 
-This repository hosts the [researchartifacts.github.io](https://researchartifacts.github.io) website, which provides statistics and analysis of artifact evaluations across computer science research conferences.
+This repository hosts the [reprodb.github.io](https://reprodb.github.io) website, which provides statistics and analysis of artifact evaluations across computer science research conferences.
 
 ## Overview
 
 The website presents:
-- **Area Dashboards**: Dedicated pages for [Security](https://researchartifacts.github.io/security) and [Systems](https://researchartifacts.github.io/systems) conferences
+- **Area Dashboards**: Dedicated pages for [Security](https://reprodb.github.io/security) and [Systems](https://reprodb.github.io/systems) conferences
 - **Per-Conference Pages**: Detailed statistics, author rankings, and repository data for each conference
 - **Prolific Authors**: Per-area rankings of researchers with most artifact contributions, with reproducibility and functional rates
 - **Repository Statistics**: Stars, forks, and language breakdowns for artifact repos
@@ -24,7 +24,7 @@ Data is automatically collected from:
 - **Jekyll** — Static site generator
 - **GitHub Pages** — Hosting with automatic deployment
 - **Minimal Mistakes** — Jekyll theme (v4.27)
-- **Python** — Data processing (see [artifact_analysis](https://github.com/researchartifacts/artifact_analysis))
+- **Python** — Data processing (see [reprodb-pipeline](https://github.com/reprodb/reprodb-pipeline))
 
 ## Local Development
 
@@ -81,7 +81,7 @@ bundle exec jekyll serve
 
 ## Data Updates
 
-Data is updated monthly via [GitHub Actions](https://github.com/researchartifacts/artifact_analysis/blob/main/.github/workflows/update-stats.yml) in the `artifact_analysis` repository.
+Data is updated monthly via [GitHub Actions](https://github.com/reprodb/reprodb-pipeline/blob/main/.github/workflows/update-stats.yml) in the `reprodb-pipeline` repository.
 
 The workflow:
 1. Scrapes artifact evaluation results from sysartifacts, secartifacts, and USENIX
@@ -100,7 +100,7 @@ Contributions welcome! Please:
 3. Make your changes
 4. Submit a pull request
 
-For data issues, please report them in the [artifact_analysis](https://github.com/researchartifacts/artifact_analysis) repository.
+For data issues, please report them in the [reprodb-pipeline](https://github.com/reprodb/reprodb-pipeline) repository.
 
 ## License
 
@@ -108,7 +108,7 @@ MIT License — see [LICENSE](LICENSE) file for details.
 
 ## Related Projects
 
-- [artifact_analysis](https://github.com/researchartifacts/artifact_analysis) — Data collection and analysis pipeline
+- [reprodb-pipeline](https://github.com/reprodb/reprodb-pipeline) — Data collection and analysis pipeline
 - [sysartifacts.github.io](https://github.com/sysartifacts/sysartifacts.github.io) — Systems artifact evaluation results
 - [secartifacts.github.io](https://github.com/secartifacts/secartifacts.github.io) — Security artifact evaluation results
 - [secartifacts.github.io](https://github.com/secartifacts/secartifacts.github.io) - Security artifact evaluation results

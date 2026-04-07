@@ -1,6 +1,6 @@
-repository: 'researchartifacts/researchartifacts.github.io'
+repository: 'reprodb/reprodb.github.io'
 url: "https://vahldiek.github.io"
-baseurl: "/researchartifacts.github.io"
+baseurl: "/reprodb.github.io"
 
 markdown: kramdown
 remote_theme: "mmistakes/minimal-mistakes@4.27.0"
