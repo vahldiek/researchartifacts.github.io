@@ -324,11 +324,11 @@ document.addEventListener('DOMContentLoaded', function() {
     var papers = (author.papers || []).filter(function(p) { return p.conference === CONF; });
     var ba = 0, bf = 0, br = 0, yearMap = {};
     papers.forEach(function(p) {
-      var bb = p.badges || [];
+      var bb = (p.badges || []).map(function(b) { return b.toLowerCase(); });
       if (bb.length > 0) {
-        if (bb.indexOf('Available') >= 0) ba++;
-        if (bb.indexOf('Functional') >= 0) bf++;
-        if (bb.indexOf('Reproduced') >= 0) br++;
+        if (bb.indexOf('available') >= 0) ba++;
+        if (bb.indexOf('functional') >= 0) bf++;
+        if (bb.indexOf('reproduced') >= 0) br++;
         yearMap[p.year] = (yearMap[p.year] || 0) + 1;
       }
     });
