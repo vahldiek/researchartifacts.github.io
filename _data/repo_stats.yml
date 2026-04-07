@@ -1,15 +1,15 @@
 overall:
-  github_repos: 1172
-  total_stars: 105203
-  total_forks: 14092
+  github_repos: 1287
+  total_stars: 125187
+  total_forks: 16014
   max_stars: 14346
   max_forks: 1855
-  zenodo_repos: 848
-  total_views: 187243
-  total_downloads: 182580
-  avg_stars: 89.8
-  avg_forks: 12.0
-  last_updated: 2026-04-07 12:40:23 UTC
+  zenodo_repos: 831
+  total_views: 184728
+  total_downloads: 177554
+  avg_stars: 97.3
+  avg_forks: 12.4
+  last_updated: 2026-04-07 21:17:29 UTC
 by_conference:
 - name: ACSAC
   github_repos: 158
@@ -129,10 +129,10 @@ by_conference:
     name: ucsb-seclab/popkorn-artifact
     pushed_at: '2025-08-16T09:08:03Z'
 - name: ATC
-  github_repos: 107
-  total_stars: 4734
-  total_forks: 812
-  avg_stars: 44.2
+  github_repos: 108
+  total_stars: 4796
+  total_forks: 824
+  avg_stars: 44.4
   avg_forks: 7.6
   max_stars: 1649
   max_forks: 194
@@ -150,11 +150,11 @@ by_conference:
     avg_stars: 88.9
     avg_forks: 15.8
   - year: 2024
-    github_repos: 35
-    stars: 715
-    forks: 73
-    avg_stars: 20.4
-    avg_forks: 2.1
+    github_repos: 36
+    stars: 777
+    forks: 85
+    avg_stars: 21.6
+    avg_forks: 2.4
   top_repos:
   - title: 'Portunus: Re-imagining Access Control in Distributed Systems'
     url: https://github.com/cloudflare/circl/tree/main/abe/cpabe/tkn20
@@ -311,20 +311,20 @@ by_conference:
   years: []
   top_repos: []
 - name: OSDI
-  github_repos: 136
-  total_stars: 51664
-  total_forks: 6687
-  avg_stars: 379.9
-  avg_forks: 49.2
+  github_repos: 137
+  total_stars: 55196
+  total_forks: 6977
+  avg_stars: 402.9
+  avg_forks: 50.9
   max_stars: 14346
   max_forks: 1855
   years:
   - year: 2020
-    github_repos: 33
-    stars: 24419
-    forks: 3081
-    avg_stars: 740.0
-    avg_forks: 93.4
+    github_repos: 34
+    stars: 27951
+    forks: 3371
+    avg_stars: 822.1
+    avg_forks: 99.1
   - year: 2021
     github_repos: 18
     stars: 801
@@ -386,6 +386,18 @@ by_conference:
     language: Python
     name: bytedance/byteps
     pushed_at: '2023-10-03T18:02:27Z'
+  - title: A Tensor Compiler for Unified Machine Learning Prediction Serving
+    url: https://github.com/microsoft/hummingbird/commit/dbebbb715e7050b47895082664adc27f8b846aa1
+    conference: OSDI
+    year: 2020
+    area: systems
+    stars: 3532
+    forks: 290
+    description: Hummingbird compiles trained ML models into tensor computation for
+      faster inference.
+    language: Python
+    name: microsoft/hummingbird
+    pushed_at: '2025-07-17T17:52:29Z'
   - title: 'Parax: Automating Inter- and Intra-Operator Parallelism for Distributed
       Deep Learning'
     url: https://github.com/alpa-projects/alpa/tree/osdi22_artifact/osdi22_artifact
@@ -398,26 +410,12 @@ by_conference:
     language: Python
     name: alpa-projects/alpa
     pushed_at: '2023-12-09T16:26:31Z'
-  - title: 'Theseus: an Experiment in Operating System Structure and State Management'
-    url: https://github.com/theseus-os/Theseus/tree/osdi20ae/osdi20ae
-    conference: OSDI
-    year: 2020
-    area: systems
-    stars: 3140
-    forks: 185
-    description: "Theseus is a modern OS written from scratch in Rust that explores\
-      \ \U0001D422\U0001D427\U0001D42D\U0001D42B\U0001D41A\U0001D425\U0001D422\U0001D427\
-      \U0001D420\U0001D42E\U0001D41A\U0001D425 \U0001D41D\U0001D41E\U0001D42C\U0001D422\
-      \U0001D420\U0001D427: closing the semantic gap between "
-    language: Rust
-    name: theseus-os/Theseus
-    pushed_at: '2024-09-22T18:48:20Z'
 - name: PETS
-  github_repos: 282
-  total_stars: 21805
-  total_forks: 2057
-  avg_stars: 77.3
-  avg_forks: 7.3
+  github_repos: 294
+  total_stars: 21883
+  total_forks: 2067
+  avg_stars: 74.4
+  avg_forks: 7.0
   max_stars: 12833
   max_forks: 638
   years:
@@ -446,17 +444,17 @@ by_conference:
     avg_stars: 14.2
     avg_forks: 2.8
   - year: 2024
-    github_repos: 54
-    stars: 343
-    forks: 83
-    avg_stars: 6.4
+    github_repos: 59
+    stars: 418
+    forks: 91
+    avg_stars: 7.1
     avg_forks: 1.5
   - year: 2025
-    github_repos: 84
-    stars: 432
-    forks: 89
-    avg_stars: 5.1
-    avg_forks: 1.1
+    github_repos: 91
+    stars: 435
+    forks: 91
+    avg_stars: 4.8
+    avg_forks: 1.0
   - year: 2026
     github_repos: 35
     stars: 32
@@ -690,11 +688,11 @@ by_conference:
     name: dnet-tee/wait-a-cycle
     pushed_at: '2025-06-17T15:55:24Z'
 - name: USENIXSEC
-  github_repos: 302
-  total_stars: 14474
-  total_forks: 2243
-  avg_stars: 47.9
-  avg_forks: 7.4
+  github_repos: 395
+  total_stars: 18383
+  total_forks: 2849
+  avg_stars: 46.5
+  avg_forks: 7.2
   max_stars: 1393
   max_forks: 269
   years:
@@ -705,29 +703,29 @@ by_conference:
     avg_stars: 158.2
     avg_forks: 26.7
   - year: 2021
-    github_repos: 23
-    stars: 1656
-    forks: 197
-    avg_stars: 72.0
-    avg_forks: 8.6
+    github_repos: 25
+    stars: 2046
+    forks: 281
+    avg_stars: 81.8
+    avg_forks: 11.2
   - year: 2022
-    github_repos: 59
-    stars: 3438
-    forks: 494
-    avg_stars: 58.3
+    github_repos: 88
+    stars: 5076
+    forks: 735
+    avg_stars: 57.7
     avg_forks: 8.4
   - year: 2023
-    github_repos: 87
-    stars: 3474
-    forks: 635
-    avg_stars: 39.9
-    avg_forks: 7.3
+    github_repos: 115
+    stars: 4470
+    forks: 807
+    avg_stars: 38.9
+    avg_forks: 7.0
   - year: 2024
-    github_repos: 107
-    stars: 2106
-    forks: 276
-    avg_stars: 19.7
-    avg_forks: 2.6
+    github_repos: 141
+    stars: 2991
+    forks: 385
+    avg_stars: 21.2
+    avg_forks: 2.7
   - year: 2025
     github_repos: 2
     stars: 4
@@ -794,20 +792,20 @@ by_conference:
     name: GrammaTech/ddisasm
     pushed_at: '2026-04-01T21:57:41Z'
 - name: WOOT
-  github_repos: 15
-  total_stars: 1162
-  total_forks: 140
-  avg_stars: 77.5
-  avg_forks: 9.3
-  max_stars: 678
-  max_forks: 69
+  github_repos: 23
+  total_stars: 13565
+  total_forks: 1144
+  avg_stars: 589.8
+  avg_forks: 49.7
+  max_stars: 12333
+  max_forks: 993
   years:
   - year: 2019
-    github_repos: 3
-    stars: 377
-    forks: 51
-    avg_stars: 125.7
-    avg_forks: 17.0
+    github_repos: 4
+    stars: 12710
+    forks: 1044
+    avg_stars: 3177.5
+    avg_forks: 261.0
   - year: 2021
     github_repos: 1
     stars: 19
@@ -827,18 +825,29 @@ by_conference:
     avg_stars: 3.0
     avg_forks: 1.0
   - year: 2024
-    github_repos: 2
-    stars: 54
-    forks: 6
-    avg_stars: 27.0
-    avg_forks: 3.0
+    github_repos: 6
+    stars: 95
+    forks: 16
+    avg_stars: 15.8
+    avg_forks: 2.7
   - year: 2025
-    github_repos: 5
-    stars: 685
-    forks: 71
-    avg_stars: 137.0
-    avg_forks: 14.2
+    github_repos: 8
+    stars: 714
+    forks: 72
+    avg_stars: 89.2
+    avg_forks: 9.0
   top_repos:
+  - title: Automatic Wireless Protocol Reverse Engineering
+    url: https://github.com/jopohl/urh/releases/tag/v2.7.3
+    conference: WOOT
+    year: 2019
+    area: security
+    stars: 12333
+    forks: 993
+    description: 'Universal Radio Hacker: Investigate Wireless Protocols Like A Boss'
+    language: Python
+    name: jopohl/urh
+    pushed_at: '2025-12-19T14:25:58Z'
   - title: 'Bluetooth Security Testing with BlueToolkit: a Large-Scale Automotive
       Case Study'
     url: https://github.com/sgxgsx/BlueToolkit
@@ -885,19 +894,6 @@ by_conference:
     language: C++
     name: RischardV/riscv-alphanumeric-shellcoding
     pushed_at: '2019-08-12T17:56:57Z'
-  - title: 'D-TIME: Distributed Threadless Independent Malware Execution for Runtime
-      Obfuscation'
-    url: https://github.com/JithinPavithran/d-time
-    conference: WOOT
-    year: 2019
-    area: security
-    stars: 36
-    forks: 12
-    description: 'This repository contains D-TIME: Distributed Threadless Independent
-      Malware Execution for Runtime Obfuscation.'
-    language: C++
-    name: pwnlogs/d-time
-    pushed_at: '2021-01-22T00:46:35Z'
 by_year:
 - year: 2017
   github_repos: 5
@@ -916,59 +912,59 @@ by_year:
   max_stars: 568
   max_forks: 162
 - year: 2019
-  github_repos: 18
-  total_stars: 871
-  total_forks: 176
-  avg_stars: 48.4
-  avg_forks: 9.8
-  max_stars: 305
-  max_forks: 40
+  github_repos: 19
+  total_stars: 13204
+  total_forks: 1169
+  avg_stars: 694.9
+  avg_forks: 61.5
+  max_stars: 12333
+  max_forks: 993
 - year: 2020
-  github_repos: 90
-  total_stars: 32623
-  total_forks: 4426
-  avg_stars: 362.5
-  avg_forks: 49.2
+  github_repos: 91
+  total_stars: 36155
+  total_forks: 4716
+  avg_stars: 397.3
+  avg_forks: 51.8
   max_stars: 14346
   max_forks: 1855
 - year: 2021
-  github_repos: 133
-  total_stars: 19024
-  total_forks: 1660
-  avg_stars: 143.0
-  avg_forks: 12.5
+  github_repos: 135
+  total_stars: 19414
+  total_forks: 1744
+  avg_stars: 143.8
+  avg_forks: 12.9
   max_stars: 12833
   max_forks: 638
 - year: 2022
-  github_repos: 229
-  total_stars: 32691
-  total_forks: 4534
-  avg_stars: 142.8
-  avg_forks: 19.8
+  github_repos: 258
+  total_stars: 34329
+  total_forks: 4775
+  avg_stars: 133.1
+  avg_forks: 18.5
   max_stars: 14346
   max_forks: 1855
 - year: 2023
-  github_repos: 242
-  total_stars: 10179
-  total_forks: 1807
-  avg_stars: 42.1
-  avg_forks: 7.5
+  github_repos: 270
+  total_stars: 11175
+  total_forks: 1979
+  avg_stars: 41.4
+  avg_forks: 7.3
   max_stars: 1649
   max_forks: 269
 - year: 2024
-  github_repos: 288
-  total_stars: 7354
-  total_forks: 1002
-  avg_stars: 25.5
-  avg_forks: 3.5
+  github_repos: 332
+  total_stars: 8417
+  total_forks: 1141
+  avg_stars: 25.4
+  avg_forks: 3.4
   max_stars: 1003
   max_forks: 167
 - year: 2025
-  github_repos: 119
-  total_stars: 1572
-  total_forks: 244
-  avg_stars: 13.2
-  avg_forks: 2.1
+  github_repos: 129
+  total_stars: 1604
+  total_forks: 247
+  avg_stars: 12.4
+  avg_forks: 1.9
   max_stars: 678
   max_forks: 69
 - year: 2026
