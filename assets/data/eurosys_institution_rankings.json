@@ -1,0 +1,7132 @@
+[
+  {
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "combined_score": 58,
+    "artifact_score": 11,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 47,
+    "ae_ratio": 0.23,
+    "role": "Consumer",
+    "artifacts": 4,
+    "badges_functional": 4,
+    "badges_reproducible": 3,
+    "ae_memberships": 15,
+    "chair_count": 1,
+    "total_papers": 6,
+    "artifact_rate": 66.7,
+    "num_authors": 14,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 1,
+      "2025": 6,
+      "2026": 5,
+      "2024": 0,
+      "2023": 6,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "Purdue University",
+    "combined_score": 56,
+    "artifact_score": 23,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 33,
+    "ae_ratio": 0.7,
+    "role": "Balanced",
+    "artifacts": 8,
+    "badges_functional": 8,
+    "badges_reproducible": 7,
+    "ae_memberships": 11,
+    "chair_count": 0,
+    "total_papers": 10,
+    "artifact_rate": 80.0,
+    "num_authors": 16,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 3,
+      "2024": 2,
+      "2023": 6,
+      "2022": 4,
+      "2021": 0,
+      "2026": 4
+    }
+  },
+  {
+    "affiliation": "University of California, Berkeley",
+    "combined_score": 41,
+    "artifact_score": 15,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 26,
+    "ae_ratio": 0.58,
+    "role": "Balanced",
+    "artifacts": 5,
+    "badges_functional": 5,
+    "badges_reproducible": 5,
+    "ae_memberships": 8,
+    "chair_count": 1,
+    "total_papers": 12,
+    "artifact_rate": 41.7,
+    "num_authors": 11,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 2,
+      "2024": 1,
+      "2023": 1,
+      "2022": 8,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "Shanghai Jiao Tong University",
+    "combined_score": 38,
+    "artifact_score": 26,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 12,
+    "ae_ratio": 2.17,
+    "role": "Producer",
+    "artifacts": 9,
+    "badges_functional": 9,
+    "badges_reproducible": 8,
+    "ae_memberships": 4,
+    "chair_count": 0,
+    "total_papers": 18,
+    "artifact_rate": 50.0,
+    "num_authors": 12,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 5,
+      "2024": 2,
+      "2023": 0,
+      "2022": 5,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "IMDEA Software Institute",
+    "combined_score": 37,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 37,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 11,
+    "chair_count": 2,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 6,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2023": 2,
+      "2024": 4,
+      "2025": 3,
+      "2026": 2
+    }
+  },
+  {
+    "affiliation": "University of Toronto",
+    "combined_score": 36,
+    "artifact_score": 18,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 18,
+    "ae_ratio": 1.0,
+    "role": "Balanced",
+    "artifacts": 6,
+    "badges_functional": 6,
+    "badges_reproducible": 6,
+    "ae_memberships": 6,
+    "chair_count": 0,
+    "total_papers": 6,
+    "artifact_rate": 100.0,
+    "num_authors": 7,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 6,
+      "2024": 3,
+      "2023": 0,
+      "2022": 0,
+      "2021": 1,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "EPFL",
+    "combined_score": 36,
+    "artifact_score": 8,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 28,
+    "ae_ratio": 0.29,
+    "role": "Consumer",
+    "artifacts": 3,
+    "badges_functional": 3,
+    "badges_reproducible": 2,
+    "ae_memberships": 8,
+    "chair_count": 2,
+    "total_papers": 3,
+    "artifact_rate": 100.0,
+    "num_authors": 8,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 1,
+      "2022": 3,
+      "2023": 5,
+      "2025": 0,
+      "2024": 2
+    }
+  },
+  {
+    "affiliation": "University of California, Irvine",
+    "combined_score": 36,
+    "artifact_score": 6,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 30,
+    "ae_ratio": 0.2,
+    "role": "Consumer",
+    "artifacts": 2,
+    "badges_functional": 2,
+    "badges_reproducible": 2,
+    "ae_memberships": 10,
+    "chair_count": 0,
+    "total_papers": 4,
+    "artifact_rate": 50.0,
+    "num_authors": 11,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2024": 1,
+      "2025": 1,
+      "2023": 4,
+      "2022": 2,
+      "2021": 0,
+      "2026": 4
+    }
+  },
+  {
+    "affiliation": "Tsinghua University",
+    "combined_score": 33,
+    "artifact_score": 9,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 24,
+    "ae_ratio": 0.38,
+    "role": "Consumer",
+    "artifacts": 3,
+    "badges_functional": 3,
+    "badges_reproducible": 3,
+    "ae_memberships": 8,
+    "chair_count": 0,
+    "total_papers": 3,
+    "artifact_rate": 100.0,
+    "num_authors": 8,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 1,
+      "2023": 1,
+      "2024": 4,
+      "2025": 2,
+      "2026": 2,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "University of Wisconsin-Madison",
+    "combined_score": 30,
+    "artifact_score": 15,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 15,
+    "ae_ratio": 1.0,
+    "role": "Balanced",
+    "artifacts": 6,
+    "badges_functional": 6,
+    "badges_reproducible": 3,
+    "ae_memberships": 5,
+    "chair_count": 0,
+    "total_papers": 7,
+    "artifact_rate": 85.7,
+    "num_authors": 9,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 8,
+      "2024": 0,
+      "2023": 1,
+      "2022": 1,
+      "2021": 0,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Microsoft Research",
+    "combined_score": 27,
+    "artifact_score": 9,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 18,
+    "ae_ratio": 0.5,
+    "role": "Balanced",
+    "artifacts": 4,
+    "badges_functional": 3,
+    "badges_reproducible": 2,
+    "ae_memberships": 6,
+    "chair_count": 0,
+    "total_papers": 5,
+    "artifact_rate": 80.0,
+    "num_authors": 6,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2024": 2,
+      "2023": 2,
+      "2022": 2,
+      "2021": 1,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Technical University of Munich",
+    "combined_score": 26,
+    "artifact_score": 12,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 14,
+    "ae_ratio": 0.86,
+    "role": "Balanced",
+    "artifacts": 4,
+    "badges_functional": 4,
+    "badges_reproducible": 4,
+    "ae_memberships": 4,
+    "chair_count": 1,
+    "total_papers": 7,
+    "artifact_rate": 57.1,
+    "num_authors": 5,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2024": 0,
+      "2023": 0,
+      "2022": 4,
+      "2021": 2,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "University of California, San Diego",
+    "combined_score": 25,
+    "artifact_score": 10,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 15,
+    "ae_ratio": 0.67,
+    "role": "Balanced",
+    "artifacts": 4,
+    "badges_functional": 4,
+    "badges_reproducible": 2,
+    "ae_memberships": 5,
+    "chair_count": 0,
+    "total_papers": 4,
+    "artifact_rate": 100.0,
+    "num_authors": 7,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 2,
+      "2024": 4,
+      "2023": 0,
+      "2022": 1,
+      "2021": 1,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Boston University",
+    "combined_score": 24,
+    "artifact_score": 21,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 7.0,
+    "role": "Producer",
+    "artifacts": 7,
+    "badges_functional": 7,
+    "badges_reproducible": 7,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 8,
+    "artifact_rate": 87.5,
+    "num_authors": 5,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 4,
+      "2024": 0,
+      "2023": 0,
+      "2022": 3,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "University of Massachusetts Amherst",
+    "combined_score": 24,
+    "artifact_score": 12,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 12,
+    "ae_ratio": 1.0,
+    "role": "Balanced",
+    "artifacts": 4,
+    "badges_functional": 4,
+    "badges_reproducible": 4,
+    "ae_memberships": 4,
+    "chair_count": 0,
+    "total_papers": 4,
+    "artifact_rate": 100.0,
+    "num_authors": 7,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 2,
+      "2023": 0,
+      "2022": 1,
+      "2021": 4,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Stony Brook University",
+    "combined_score": 24,
+    "artifact_score": 15,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 9,
+    "ae_ratio": 1.67,
+    "role": "Balanced",
+    "artifacts": 5,
+    "badges_functional": 5,
+    "badges_reproducible": 5,
+    "ae_memberships": 3,
+    "chair_count": 0,
+    "total_papers": 5,
+    "artifact_rate": 100.0,
+    "num_authors": 6,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2024": 0,
+      "2023": 2,
+      "2022": 5,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Georgia Institute of Technology",
+    "combined_score": 24,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 21,
+    "ae_ratio": 0.14,
+    "role": "Consumer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 7,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 7,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 4,
+      "2026": 2,
+      "2024": 0,
+      "2023": 2,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Chinese University of Hong Kong",
+    "combined_score": 24,
+    "artifact_score": 6,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 18,
+    "ae_ratio": 0.33,
+    "role": "Consumer",
+    "artifacts": 2,
+    "badges_functional": 2,
+    "badges_reproducible": 2,
+    "ae_memberships": 6,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 100.0,
+    "num_authors": 7,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 2,
+      "2026": 3,
+      "2024": 2,
+      "2023": 0,
+      "2022": 0,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "Hong Kong University of Science and Technology",
+    "combined_score": 22,
+    "artifact_score": 10,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 12,
+    "ae_ratio": 0.83,
+    "role": "Balanced",
+    "artifacts": 4,
+    "badges_functional": 3,
+    "badges_reproducible": 3,
+    "ae_memberships": 4,
+    "chair_count": 0,
+    "total_papers": 5,
+    "artifact_rate": 80.0,
+    "num_authors": 7,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 3,
+      "2024": 1,
+      "2023": 2,
+      "2022": 1,
+      "2021": 0,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "University of Utah",
+    "combined_score": 21,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 21,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 7,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 3,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 1,
+      "2023": 2,
+      "2024": 1,
+      "2025": 1,
+      "2026": 2
+    }
+  },
+  {
+    "affiliation": "ETH Zurich",
+    "combined_score": 21,
+    "artifact_score": 15,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 2.5,
+    "role": "Producer",
+    "artifacts": 5,
+    "badges_functional": 5,
+    "badges_reproducible": 5,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 11,
+    "artifact_rate": 45.5,
+    "num_authors": 6,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 3,
+      "2024": 2,
+      "2023": 0,
+      "2022": 0,
+      "2021": 2
+    }
+  },
+  {
+    "affiliation": "Carnegie Mellon University",
+    "combined_score": 21,
+    "artifact_score": 9,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 12,
+    "ae_ratio": 0.75,
+    "role": "Balanced",
+    "artifacts": 3,
+    "badges_functional": 3,
+    "badges_reproducible": 3,
+    "ae_memberships": 4,
+    "chair_count": 0,
+    "total_papers": 3,
+    "artifact_rate": 100.0,
+    "num_authors": 6,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 4,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 0,
+      "2026": 3
+    }
+  },
+  {
+    "affiliation": "University of Pennsylvania",
+    "combined_score": 21,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 18,
+    "ae_ratio": 0.17,
+    "role": "Consumer",
+    "artifacts": 2,
+    "badges_functional": 1,
+    "badges_reproducible": 0,
+    "ae_memberships": 6,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 100.0,
+    "num_authors": 7,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 1,
+      "2023": 0,
+      "2022": 2,
+      "2021": 3,
+      "2026": 2
+    }
+  },
+  {
+    "affiliation": "Zhejiang University",
+    "combined_score": 18,
+    "artifact_score": 9,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 9,
+    "ae_ratio": 1.0,
+    "role": "Balanced",
+    "artifacts": 3,
+    "badges_functional": 3,
+    "badges_reproducible": 3,
+    "ae_memberships": 3,
+    "chair_count": 0,
+    "total_papers": 4,
+    "artifact_rate": 75.0,
+    "num_authors": 4,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 2,
+      "2024": 2,
+      "2023": 0,
+      "2022": 2,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Massachusetts Institute of Technology",
+    "combined_score": 18,
+    "artifact_score": 12,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 2.0,
+    "role": "Balanced",
+    "artifacts": 4,
+    "badges_functional": 4,
+    "badges_reproducible": 4,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 4,
+    "artifact_rate": 100.0,
+    "num_authors": 5,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2024": 0,
+      "2023": 0,
+      "2022": 3,
+      "2021": 2
+    }
+  },
+  {
+    "affiliation": "University of Virginia",
+    "combined_score": 18,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 18,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 6,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 4,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 2,
+      "2026": 2,
+      "2024": 1,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "New York University",
+    "combined_score": 18,
+    "artifact_score": 6,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 12,
+    "ae_ratio": 0.5,
+    "role": "Balanced",
+    "artifacts": 2,
+    "badges_functional": 2,
+    "badges_reproducible": 2,
+    "ae_memberships": 4,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 100.0,
+    "num_authors": 6,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 3,
+      "2023": 0,
+      "2022": 2,
+      "2021": 0,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "University of Texas at Arlington",
+    "combined_score": 17,
+    "artifact_score": 14,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 4.67,
+    "role": "Producer",
+    "artifacts": 5,
+    "badges_functional": 5,
+    "badges_reproducible": 4,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 8,
+    "artifact_rate": 62.5,
+    "num_authors": 4,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2024": 1,
+      "2023": 0,
+      "2022": 4,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Columbia University",
+    "combined_score": 15,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 12,
+    "ae_ratio": 0.25,
+    "role": "Consumer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 4,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 5,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2024": 1,
+      "2023": 0,
+      "2022": 1,
+      "2021": 0,
+      "2026": 2
+    }
+  },
+  {
+    "affiliation": "Nanjing University",
+    "combined_score": 15,
+    "artifact_score": 12,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 4.0,
+    "role": "Producer",
+    "artifacts": 4,
+    "badges_functional": 4,
+    "badges_reproducible": 4,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 10,
+    "artifact_rate": 40.0,
+    "num_authors": 5,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 2,
+      "2024": 2,
+      "2023": 0,
+      "2022": 1,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "National Technical University of Athens",
+    "combined_score": 15,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 15,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 5,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 5,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 3,
+      "2021": 1,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "University of Texas at Austin",
+    "combined_score": 13,
+    "artifact_score": 4,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 9,
+    "ae_ratio": 0.44,
+    "role": "Consumer",
+    "artifacts": 2,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 3,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 100.0,
+    "num_authors": 4,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 3,
+      "2021": 0,
+      "2026": 2
+    }
+  },
+  {
+    "affiliation": "Leibniz Supercomputing Center",
+    "combined_score": 12,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 12,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 4,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 1,
+      "2023": 1,
+      "2024": 1,
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "University of Hong Kong",
+    "combined_score": 12,
+    "artifact_score": 12,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 5,
+    "badges_functional": 4,
+    "badges_reproducible": 3,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 6,
+    "artifact_rate": 83.3,
+    "num_authors": 3,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 4,
+      "2023": 0,
+      "2022": 0,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "The University of Manchester",
+    "combined_score": 12,
+    "artifact_score": 4,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 8,
+    "ae_ratio": 0.5,
+    "role": "Balanced",
+    "artifacts": 2,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 2,
+    "chair_count": 1,
+    "total_papers": 4,
+    "artifact_rate": 50.0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 1,
+      "2022": 1,
+      "2021": 1,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Nanyang Technological University",
+    "combined_score": 12,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 12,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 4,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 3,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 1,
+      "2023": 2,
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "Sun Yat-sen University",
+    "combined_score": 12,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 12,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 4,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 3,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2023": 3,
+      "2024": 1
+    }
+  },
+  {
+    "affiliation": "University of California, Merced",
+    "combined_score": 12,
+    "artifact_score": 6,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 1.0,
+    "role": "Balanced",
+    "artifacts": 2,
+    "badges_functional": 2,
+    "badges_reproducible": 2,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 3,
+    "artifact_rate": 66.7,
+    "num_authors": 4,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 2,
+      "2026": 2
+    }
+  },
+  {
+    "affiliation": "KAIST",
+    "combined_score": 12,
+    "artifact_score": 12,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 4,
+    "badges_functional": 4,
+    "badges_reproducible": 4,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 7,
+    "artifact_rate": 57.1,
+    "num_authors": 4,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 4,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "University of Cambridge",
+    "combined_score": 12,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 12,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 4,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 4,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 3,
+      "2023": 1
+    }
+  },
+  {
+    "affiliation": "University of California, Riverside",
+    "combined_score": 12,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 12,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 4,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 4,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2024": 1,
+      "2026": 1,
+      "2023": 1,
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "Stanford University",
+    "combined_score": 11,
+    "artifact_score": 2,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 9,
+    "ae_ratio": 0.22,
+    "role": "Consumer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 0,
+    "ae_memberships": 3,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 3,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2024": 0,
+      "2023": 1,
+      "2022": 0,
+      "2021": 0,
+      "2026": 2
+    }
+  },
+  {
+    "affiliation": "Vrije Universiteit Amsterdam",
+    "combined_score": 11,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 11,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 3,
+    "chair_count": 1,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 3,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 3
+    }
+  },
+  {
+    "affiliation": "KU Leuven",
+    "combined_score": 11,
+    "artifact_score": 5,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.83,
+    "role": "Balanced",
+    "artifacts": 3,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 7,
+    "artifact_rate": 42.9,
+    "num_authors": 3,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 3,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "IST, U. Lisboa & INESC-ID, Portugal",
+    "combined_score": 10,
+    "artifact_score": 5,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 5,
+    "ae_ratio": 1.0,
+    "role": "Balanced",
+    "artifacts": 2,
+    "badges_functional": 2,
+    "badges_reproducible": 1,
+    "ae_memberships": 1,
+    "chair_count": 1,
+    "total_papers": 2,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2024": 1,
+      "2023": 1,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Ohio State University",
+    "combined_score": 10,
+    "artifact_score": 10,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 4,
+    "badges_functional": 4,
+    "badges_reproducible": 2,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 4,
+    "artifact_rate": 100.0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2024": 1,
+      "2023": 1,
+      "2022": 0,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "The Ohio State University",
+    "combined_score": 9,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.5,
+    "role": "Balanced",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 1,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "Akamai Technologies",
+    "combined_score": 9,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 9,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 3,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2024": 1,
+      "2025": 1,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "LinkedIn",
+    "combined_score": 9,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 9,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 3,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 1,
+      "2022": 1,
+      "2023": 1
+    }
+  },
+  {
+    "affiliation": "University of Sydney",
+    "combined_score": 9,
+    "artifact_score": 9,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 3,
+    "badges_functional": 3,
+    "badges_reproducible": 3,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 6,
+    "artifact_rate": 50.0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2024": 0,
+      "2023": 0,
+      "2022": 2,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Independent",
+    "combined_score": 9,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 9,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 3,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2026": 2
+    }
+  },
+  {
+    "affiliation": "National University of Singapore",
+    "combined_score": 9,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 9,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 3,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 1,
+      "2023": 2
+    }
+  },
+  {
+    "affiliation": "Amazon",
+    "combined_score": 9,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 9,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 3,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2024": 1,
+      "2025": 1,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "University of Florida",
+    "combined_score": 9,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 9,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 3,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2026": 1,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "Cornell University",
+    "combined_score": 9,
+    "artifact_score": 6,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 2.0,
+    "role": "Balanced",
+    "artifacts": 2,
+    "badges_functional": 2,
+    "badges_reproducible": 2,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 100.0,
+    "num_authors": 3,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 3,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Northeastern University",
+    "combined_score": 9,
+    "artifact_score": 6,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 2.0,
+    "role": "Balanced",
+    "artifacts": 2,
+    "badges_functional": 2,
+    "badges_reproducible": 2,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 4,
+    "artifact_rate": 50.0,
+    "num_authors": 3,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 2,
+      "2022": 0,
+      "2021": 0,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Max Planck Institute for Software Systems",
+    "combined_score": 9,
+    "artifact_score": 6,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 2.0,
+    "role": "Balanced",
+    "artifacts": 2,
+    "badges_functional": 2,
+    "badges_reproducible": 2,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 100.0,
+    "num_authors": 3,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 2,
+      "2022": 1,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Google",
+    "combined_score": 9,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 9,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 3,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 3,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 2,
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "University of California, Santa Cruz",
+    "combined_score": 9,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 9,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 3,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 3,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 2,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Intel Labs",
+    "combined_score": 8,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 5,
+    "ae_ratio": 0.6,
+    "role": "Balanced",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 1,
+    "chair_count": 1,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2024": 0,
+      "2023": 0,
+      "2022": 1,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Telefonica Research Spain",
+    "combined_score": 8,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 8,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 1,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 1,
+      "2022": 1
+    }
+  },
+  {
+    "affiliation": "Tianjin University",
+    "combined_score": 8,
+    "artifact_score": 2,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.33,
+    "role": "Consumer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 2,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Sapienza University of Rome",
+    "combined_score": 8,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 8,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 1,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2023": 2
+    }
+  },
+  {
+    "affiliation": "Harbin Institute of Technology",
+    "combined_score": 8,
+    "artifact_score": 8,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 4,
+    "badges_functional": 4,
+    "badges_reproducible": 0,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 4,
+    "artifact_rate": 100.0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 4,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Johns Hopkins University",
+    "combined_score": 7,
+    "artifact_score": 1,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.17,
+    "role": "Consumer",
+    "artifacts": 1,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 2,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Meta, USA",
+    "combined_score": 6,
+    "artifact_score": 6,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 2,
+    "badges_functional": 2,
+    "badges_reproducible": 2,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 2
+    }
+  },
+  {
+    "affiliation": "Huawei Technologies Co.",
+    "combined_score": 6,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 1.0,
+    "role": "Balanced",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 1,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "Universitatea Politehnica of Bucharest",
+    "combined_score": 6,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 1.0,
+    "role": "Balanced",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 1,
+      "2022": 0,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "TU Dortmund",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Singapore University of Technology and Design",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 1,
+      "2022": 1
+    }
+  },
+  {
+    "affiliation": "INESC TEC",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "SAP",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 1,
+      "2022": 1
+    }
+  },
+  {
+    "affiliation": "Imdea Networks Institute",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Eastern Institute of Technology",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Binghamton University",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Niccolò Cusano University",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2024": 1,
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "Rochester Institute of Technology",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "The Hang Seng University of Hong Kong",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2024": 1,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Leica Geosystems AG",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Univ Toulouse, IRIT",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Juniper Networks",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "INRIA",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Jiangxi University of Science and Technology",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Dartmouth College",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Snowflake",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2024": 1,
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "INESC TEC & University of Minho",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "NEU",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2024": 1,
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "Karlsruhe Institute of Technology",
+    "combined_score": 6,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 1.0,
+    "role": "Balanced",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 2,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "University of Science and Technology of China",
+    "combined_score": 6,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 1.0,
+    "role": "Balanced",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 4,
+    "artifact_rate": 25.0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "Rutgers University",
+    "combined_score": 6,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 1.0,
+    "role": "Balanced",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 3,
+    "artifact_rate": 33.3,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "The University of Texas at Arlington",
+    "combined_score": 6,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 1.0,
+    "role": "Balanced",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 1,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "University of California, Davis",
+    "combined_score": 6,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 1.0,
+    "role": "Balanced",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 1,
+      "2022": 0,
+      "2021": 0,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Hong Kong Baptist University",
+    "combined_score": 6,
+    "artifact_score": 6,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 2,
+    "badges_functional": 2,
+    "badges_reproducible": 2,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 4,
+    "artifact_rate": 50.0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 2,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "University of Illinois at Chicago",
+    "combined_score": 6,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 1.0,
+    "role": "Balanced",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 1,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "Peking University",
+    "combined_score": 6,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 1.0,
+    "role": "Balanced",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 50.0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 1,
+      "2023": 0,
+      "2022": 1,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Netflix",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1,
+      "2022": 1
+    }
+  },
+  {
+    "affiliation": "Harvard University",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2023": 1,
+      "2022": 1
+    }
+  },
+  {
+    "affiliation": "University of Michigan",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 1,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "Imperial College London",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 1,
+      "2024": 1
+    }
+  },
+  {
+    "affiliation": "Iowa State University",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2023": 1
+    }
+  },
+  {
+    "affiliation": "University of Chicago",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 1,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Sungkyunkwan University",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 2
+    }
+  },
+  {
+    "affiliation": "City University of Hong Kong",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2024": 1,
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "Singapore Management University",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1,
+      "2024": 1
+    }
+  },
+  {
+    "affiliation": "University of Edinburgh",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 2
+    }
+  },
+  {
+    "affiliation": "The University of Tokyo",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 1,
+      "2023": 1
+    }
+  },
+  {
+    "affiliation": "Brown University",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2024": 1,
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "University of Oslo",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2023": 1,
+      "2024": 1
+    }
+  },
+  {
+    "affiliation": "Microsoft",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1,
+      "2024": 1
+    }
+  },
+  {
+    "affiliation": "University of California, Santa Barbara",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 1,
+      "2023": 1
+    }
+  },
+  {
+    "affiliation": "INRIA, Ecole Polytechnique-IPP",
+    "combined_score": 5,
+    "artifact_score": 2,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.67,
+    "role": "Balanced",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "Télécom SudParis",
+    "combined_score": 5,
+    "artifact_score": 2,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.67,
+    "role": "Balanced",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "IBM Research Europe - Ireland, Dublin, Ireland",
+    "combined_score": 5,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 5,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 1,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "Isovalent",
+    "combined_score": 5,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 5,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 1,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "Université de Neuchâtel",
+    "combined_score": 5,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 5,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 1,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2024": 1
+    }
+  },
+  {
+    "affiliation": "Chalmers University of Technology",
+    "combined_score": 5,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 5,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 1,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2023": 1
+    }
+  },
+  {
+    "affiliation": "Ain Shams University",
+    "combined_score": 4,
+    "artifact_score": 4,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 2,
+    "badges_functional": 2,
+    "badges_reproducible": 0,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 5,
+    "artifact_rate": 40.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 1,
+      "2023": 1,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "University Politehnica of Bucharest",
+    "combined_score": 4,
+    "artifact_score": 4,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 2,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 1,
+      "2022": 0,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "University of Lisbon",
+    "combined_score": 4,
+    "artifact_score": 4,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 2,
+    "badges_functional": 2,
+    "badges_reproducible": 0,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 2,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Virginia Tech, Department of Computer Science, Blacksburg, VA, USA",
+    "combined_score": 4,
+    "artifact_score": 4,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 2,
+    "badges_functional": 2,
+    "badges_reproducible": 0,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2024": 0,
+      "2023": 1,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Pohang University of Science and Technology (POSTECH), Department of Computer Science and Engineering, Pohang, South Korea",
+    "combined_score": 4,
+    "artifact_score": 4,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 2,
+    "badges_functional": 2,
+    "badges_reproducible": 0,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 3,
+    "artifact_rate": 66.7,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2024": 0,
+      "2023": 1,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "University of Trento",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 2,
+    "badges_functional": 1,
+    "badges_reproducible": 0,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 1,
+      "2023": 1,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Tel Aviv University",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "Lancaster University",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "University of Neuchtel",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 5,
+    "artifact_rate": 20.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 1,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Beijing Institute of Technology, School of Computer Science and Technology, China",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 1,
+      "2023": 0,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "ShanghaiTech University",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 1,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "TU Braunschweig, Germany",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Virginia Tech, Blacksburg, VA, USA",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 50.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 1,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Leibniz Universitt Hannover, Germany",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Indiana University",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 1,
+      "2023": 0,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "University of North Carolina at Chapel Hill",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 1,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "University of Illinois",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 1,
+      "2023": 0,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "INRIA, France",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 1,
+      "2023": 0,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Nanjing University of Posts and Telecommunications, School of Computer Science, Nanjing, China",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 1,
+      "2023": 0,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Huawei Hong Kong Research Center, Hong Kong, SAR, China",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 50.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "University of Bath",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Ant Group CO Ltd, Department of Security Countermeasure Technology, Hangzhou, Zhejiang, China",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 1,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Alibaba Group, Alibaba Cloud Computing, Hangzhou, China",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 3,
+    "artifact_rate": 33.3,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 1,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Sorbonne University",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 50.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 1,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "KTH Royal Institute of Technology, Stockholm, Sweden",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Universit de Lige, Belgium",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "Chinese Academy of Sciences, Institute of Computing Technology, State Key Laboratory of Computer Architecture, Beijing, China",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 3,
+    "artifact_rate": 33.3,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 1,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "University of South Carolina",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 1,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "University of Transport",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 1,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Huawei Technologies, Shenzhen, China",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Huazhong University of Science and Technology, Wuhan National Laboratory for Optoelectronics, China",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 1,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Imperial College London, UK",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 50.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "VMware Research, Palo Alto, CA, USA",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 1,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Google, Mountain View, CA, USA",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "Huawei Technoloies, Theory Lab, Hong Kong",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "Amazon Web Services",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 1,
+      "2023": 0,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "University of Oregon",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 1,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Institute of Computing Technology, Chinese Academy of Sciences, Beijing",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Alibaba Group, Alibaba Cloud, Beijing, China",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Southern University of Science and Technology, Department of Computer Science and Engineering, China",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "North Carolina State University",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 1,
+      "2023": 0,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "The University of Hong Kong",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "Cockroach Labs, New York, NY, USA",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 1,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Amazon Web Services, Inc., East Palo Alto, CA, USA",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 1,
+      "2023": 0,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "ENS Lyon, France",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 1,
+      "2023": 0,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Princeton University",
+    "combined_score": 3,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 1,
+      "2023": 0,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Auth0",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "University De Pau Et Des Pays De L'adour",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2024": 1
+    }
+  },
+  {
+    "affiliation": "OctoML",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "Mbarara University of Science and Technology",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2023": 1
+    }
+  },
+  {
+    "affiliation": "Harvard",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2024": 1
+    }
+  },
+  {
+    "affiliation": "York University",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2024": 1
+    }
+  },
+  {
+    "affiliation": "Ph.D. University of Edinburgh",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "Aalto University",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2024": 1
+    }
+  },
+  {
+    "affiliation": "Federal University of Ceará (UFC",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 1
+    }
+  },
+  {
+    "affiliation": "IMDEA Networks Institute",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "Hasso Plattner Institute",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "Brac University",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "Accenture Labs",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2024": 1
+    }
+  },
+  {
+    "affiliation": "Telefonica Research",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "FAU Erlangen-NÃ¼rnberg",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2024": 1
+    }
+  },
+  {
+    "affiliation": "3DS OUTSCALE",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2023": 1
+    }
+  },
+  {
+    "affiliation": "Sorbonne Université, CNRS, Inria, LIP6",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "Salesforce.com and University of Florida",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Northwestern Polytechnical University",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2023": 1
+    }
+  },
+  {
+    "affiliation": "Illinois Institute of Technology",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2024": 1
+    }
+  },
+  {
+    "affiliation": "ByteDance",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "UNIST",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "King Abdullah University of Science and Technology",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2024": 1
+    }
+  },
+  {
+    "affiliation": "École Pour l'Informatique et les Techniques Avancées",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "Facebook Inc",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 1
+    }
+  },
+  {
+    "affiliation": "INESC-ID and Instituto Superior Técnico, Universidade de Lisboa",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2024": 1
+    }
+  },
+  {
+    "affiliation": "Huawei Dresden Research Center",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "Rice University",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Duke University",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Politecnico di Milano",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Huazhong University of Science and Technology",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "ICS-FORTH",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 1
+    }
+  },
+  {
+    "affiliation": "University of Massachusetts at Amherst",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2024": 1
+    }
+  },
+  {
+    "affiliation": "Exostellar",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2024": 1
+    }
+  },
+  {
+    "affiliation": "University of Crete and FORTH-ICS",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "Technische Universität Braunschweig",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 1
+    }
+  },
+  {
+    "affiliation": "Colorado School of Mines",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "France",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "University at Buffalo",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2023": 1
+    }
+  },
+  {
+    "affiliation": "Institute of Software, Chinese Academy of Sciences",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 1
+    }
+  },
+  {
+    "affiliation": "Institute of Computing Technology, CAS",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2023": 1
+    }
+  },
+  {
+    "affiliation": "University of Electronic Science and Technology of China",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "School of Computer Science, University College Dublin & VistaMilk SFI",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2023": 1
+    }
+  },
+  {
+    "affiliation": "University of Manchester",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2023": 1
+    }
+  },
+  {
+    "affiliation": "Korea University",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "INESC-ID & IST U. Lisboa",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 1
+    }
+  },
+  {
+    "affiliation": "Beihang University",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Virginia Tech",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Tesla Inc",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "University of Washington",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Keio University",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 1
+    }
+  },
+  {
+    "affiliation": "Rice",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 1
+    }
+  },
+  {
+    "affiliation": "Guangzhou",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Crusoe",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "University of California, Los Angeles",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "Cardiff University",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "University of Telepegaso",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "UNC Chapel Hill",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "Cloudflare",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "Newcastle University",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 1
+    }
+  },
+  {
+    "affiliation": "Friedrich-Alexander-Universitaet Erlangen-Nï¿½rnberg",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "The Ohio State University / Meta Platforms",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "Umeå University",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "Dresden University of Technology",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2023": 1
+    }
+  },
+  {
+    "affiliation": "JPMorgan Chase and co",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Royal Holloway, University of London",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 1
+    }
+  },
+  {
+    "affiliation": "Technion",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "University of Neuchâtel",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "University of Colorado Boulder",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "University of Naples Federico II",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2023": 1
+    }
+  },
+  {
+    "affiliation": "University of Central Missouri",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "TU Dresden, Huawei Technologies Duesseldorf",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "Adobe",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "University of Southern California",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "Universidade Federal de Goiás",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 1
+    }
+  },
+  {
+    "affiliation": "University of Rome Tor Vergata",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2024": 1
+    }
+  },
+  {
+    "affiliation": "Indian Institute of Technology Madras",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2023": 1
+    }
+  },
+  {
+    "affiliation": "Tennessee Technological University",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Zhengqing",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2023": 1
+    }
+  },
+  {
+    "affiliation": "IST Lisbon & INESC-ID",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2024": 1
+    }
+  },
+  {
+    "affiliation": "University of British Columbia",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "Amirkabir University of Technology",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "Amazon Web Services / University of Oxford",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "Stevens Institute of Technology",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2023": 1
+    }
+  },
+  {
+    "affiliation": "Massey University",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 1
+    }
+  },
+  {
+    "affiliation": "BlackBerry",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "University of Nebraska at Omaha",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "The University of Edinburgh",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "UCAS",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "the University of Hong Kong",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 1
+    }
+  },
+  {
+    "affiliation": "Lynn",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 1
+    }
+  },
+  {
+    "affiliation": "Amazon Prime Video",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "University of Bristol",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "ZettaScale Technology, Paris",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 1
+    }
+  },
+  {
+    "affiliation": "ServiceNow",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "University of South Florida",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "Uber Technologies, Inc.",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "Databricks",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "ByteDance Inc.",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 1
+    }
+  },
+  {
+    "affiliation": "TU Delft",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "Bowling Green State University",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Barkhausen Institut",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "ENSTA Bretagne",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2024": 1
+    }
+  },
+  {
+    "affiliation": "New Jersey Institute of Technology",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2021": 1
+    }
+  },
+  {
+    "affiliation": "Harvard / Apple",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "Institute of Computing Technology Chinese Academy of Sciences",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2024": 1
+    }
+  },
+  {
+    "affiliation": "China Telecom Cloud Computing Research Institute",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "Chongqing University",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2023": 1
+    }
+  },
+  {
+    "affiliation": "University of Chinese Academy of Sciences",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2023": 1
+    }
+  },
+  {
+    "affiliation": "Waseda University",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "Beijing University of Posts and Telecommunications",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "Renmin University of China",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "SambaNova Systems Inc.",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2026": 1
+    }
+  },
+  {
+    "affiliation": "College of Computer Science and Technology, National University of Defense Technology",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2022": 1
+    }
+  }
+]

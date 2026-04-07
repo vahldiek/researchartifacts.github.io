@@ -276,7 +276,6 @@ document.addEventListener('DOMContentLoaded', function() {
         timer = setTimeout(function() {
           self.searchQuery = val.toLowerCase().trim();
           self.applyFilter();
-          self.doSort();
           self.render();
         }, 200);
       });
@@ -313,6 +312,19 @@ document.addEventListener('DOMContentLoaded', function() {
     var col = this.cols[this.sortCol];
     if (!col) return;
     var key = col.key, type = col.type, asc = this.sortAsc;
+    /* Sort the full data first to assign stable ranks */
+    var full = this.allData.slice();
+    full.sort(function(a, b) {
+      var av = a[key], bv = b[key];
+      if (av == null) av = type === 'alpha' ? '' : 0;
+      if (bv == null) bv = type === 'alpha' ? '' : 0;
+      if (type === 'alpha') { av = String(av).toLowerCase(); bv = String(bv).toLowerCase(); }
+      if (av < bv) return asc ? -1 : 1;
+      if (av > bv) return asc ? 1 : -1;
+      return 0;
+    });
+    for (var i = 0; i < full.length; i++) full[i]._rank = i + 1;
+    /* Now sort the filtered subset with the same comparator */
     this.sorted = this.filtered.slice();
     this.sorted.sort(function(a, b) {
       var av = a[key], bv = b[key];
@@ -368,69 +380,39 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   };
 
-  /* ── Compute per-conference author stats ───────────────────────────── */
-  function computeConfAuthor(author) {
-    var papers = (author.papers || []).filter(function(p) { return p.conference === CONF; });
-    var ba = 0, bf = 0, br = 0, yearMap = {};
-    papers.forEach(function(p) {
-      var bb = (p.badges || []).map(function(b) { return b.toLowerCase(); });
-      if (bb.length > 0) {
-        if (bb.indexOf('available') >= 0) ba++;
-        if (bb.indexOf('functional') >= 0) bf++;
-        if (bb.indexOf('reproduced') >= 0) br++;
-        yearMap[p.year] = (yearMap[p.year] || 0) + 1;
-      }
-    });
-    var artifacts = papers.filter(function(p) { return p.badges && p.badges.length > 0; }).length;
-    if (artifacts === 0) return null;
-    var tp = (author.total_papers_by_conf || {})[CONF] || 0;
-    return {
-      name: author.name,
-      _display: author.display_name || author.name,
-      affiliation: author.affiliation || '',
-      artifact_score: ba + bf + br,
-      artifacts: artifacts,
-      total_papers: tp,
-      artifact_rate: tp > 0 ? Math.round(artifacts / tp * 1000) / 10 : 0,
-      repro_rate: artifacts > 0 ? Math.round(br / artifacts * 1000) / 10 : 0,
-      functional_rate: artifacts > 0 ? Math.round((ba + bf) / artifacts * 500) / 10 : 0,
-      years: yearMap
-    };
-  }
-
-  /* ── AUTHORS ───────────────────────────────────────────────────────── */
-  var confAuthors = []; // shared with institution aggregation
-
+  /* ── AUTHORS — from pre-computed per-conference combined rankings ──── */
   function initAuthors(rawData) {
-    confAuthors = [];
+    /* rawData is e.g. osdi_combined_rankings.json — already has
+       combined_score, artifact_score, ae_score, rank, years, etc. */
     var yrs = {};
     for (var i = 0; i < rawData.length; i++) {
-      if (!(rawData[i].conferences || []).includes(CONF)) continue;
-      var ca = computeConfAuthor(rawData[i]);
-      if (ca) { confAuthors.push(ca); for (var y in ca.years) yrs[y] = true; }
+      var d = rawData[i];
+      d._display = d.display_name || d.name;
+      var yrObj = d.years || {};
+      for (var y in yrObj) { if (yrObj[y] > 0) yrs[y] = true; }
     }
     var yearCols = Object.keys(yrs).map(Number).sort(function(a,b){return b-a;});
+    /* Flatten year data into sortable keys */
+    for (var k = 0; k < rawData.length; k++) {
+      for (var yj = 0; yj < yearCols.length; yj++) {
+        rawData[k]['_y' + yearCols[yj]] = (rawData[k].years || {})[yearCols[yj]] || 0;
+      }
+    }
     var cols = [
       {label:'#',           key:'_rank',          type:'num'},
       {label:'Researcher',  key:'_display',       type:'alpha'},
       {label:'Affiliation', key:'affiliation',    type:'alpha'},
-      {label:'S',           key:'artifact_score', type:'num', tip:'Artifact Score: Available+Functional+Reproduced'},
+      {label:'S',           key:'combined_score', type:'num', tip:'Combined Score (artifacts + AE service)'},
       {label:'Ar',          key:'artifacts',      type:'num', tip:'Artifacts at this conference'},
       {label:'P',           key:'total_papers',   type:'num', tip:'Papers at this conference'},
+      {label:'AE',          key:'ae_memberships', type:'num', tip:'AE memberships'},
       {label:'AR%',         key:'artifact_rate',  type:'num', tip:'Artifact rate'},
-      {label:'RR%',         key:'repro_rate',     type:'num', tip:'Reproducibility rate'},
-      {label:'AvR%',        key:'functional_rate',type:'num', tip:'Available/Functional rate'}
+      {label:'RR%',         key:'repro_rate',     type:'num', tip:'Reproducibility rate'}
     ];
     for (var j = 0; j < yearCols.length; j++) {
       cols.push({label: '' + yearCols[j], key: '_y' + yearCols[j], type: 'num'});
     }
-    for (var k = 0; k < confAuthors.length; k++) {
-      for (var yj = 0; yj < yearCols.length; yj++) {
-        confAuthors[k]['_y' + yearCols[yj]] = (confAuthors[k].years || {})[yearCols[yj]] || 0;
-      }
-    }
-
-    if (confAuthors.length === 0) {
+    if (rawData.length === 0) {
       document.getElementById('authorLoading').textContent = 'No author data for this conference.';
       return;
     }
@@ -441,79 +423,43 @@ document.addEventListener('DOMContentLoaded', function() {
       toggleDivId: 'author-toggle', toggleBtnId: 'authorToggleBtn',
       totalId: 'authorTotal', searchId: 'authorSearch',
       cols: cols, sortCol: 3, sortAsc: false,
-      renderRow: function(d, idx) {
+      renderRow: function(d) {
         var url = BASE + '/author.html?name=' + encodeURIComponent(d.name);
-        var cells = '<td>' + (idx + 1) + '</td>';
+        var cells = '<td>' + d._rank + '</td>';
         cells += '<td><a href="' + url + '">' + esc(d._display) + '</a></td>';
-        cells += '<td class="wrap-cell">' + esc(d.affiliation) + '</td>';
-        cells += '<td><strong>' + d.artifact_score + '</strong></td>';
-        cells += '<td>' + d.artifacts + '</td>';
-        cells += '<td>' + (d.total_papers || '') + '</td>';
+        cells += '<td class="wrap-cell">' + esc(d.affiliation || '') + '</td>';
+        cells += '<td><strong>' + (d.combined_score||0) + '</strong></td>';
+        cells += '<td>' + (d.artifacts||'') + '</td>';
+        cells += '<td>' + (d.total_papers||'') + '</td>';
+        cells += '<td>' + (d.ae_memberships ? d.ae_memberships : '') + '</td>';
         cells += '<td>' + (d.total_papers > 0 ? d.artifact_rate + '%' : '') + '</td>';
-        cells += '<td>' + d.repro_rate + '%</td>';
-        cells += '<td>' + d.functional_rate + '%</td>';
+        cells += '<td>' + (d.repro_rate||0) + '%</td>';
         for (var j = 0; j < yearCols.length; j++) {
           var cnt = d['_y' + yearCols[j]] || 0;
           cells += '<td>' + (cnt > 0 ? cnt : '') + '</td>';
         }
         return cells;
       }
-    }).init(confAuthors);
+    }).init(rawData);
   }
 
-  /* ── INSTITUTIONS — aggregated from per-conference author data ─────── */
-  function initInstitutions(aeData) {
-    /* Aggregate author data by affiliation for THIS conference */
-    var instMap = {};
-    for (var i = 0; i < confAuthors.length; i++) {
-      var a = confAuthors[i];
-      var aff = a.affiliation || '';
-      if (!aff) continue;
-      if (!instMap[aff]) {
-        instMap[aff] = { affiliation: aff, artifact_score: 0, artifacts: 0,
-          total_papers: 0, num_authors: 0, ae_memberships: 0, chair_count: 0, years: {} };
-      }
-      var inst = instMap[aff];
-      inst.artifact_score += a.artifact_score;
-      inst.artifacts += a.artifacts;
-      inst.total_papers += a.total_papers;
-      inst.num_authors++;
-      for (var y in a.years) {
-        inst.years[y] = (inst.years[y] || 0) + a.years[y];
-      }
-    }
-    /* Add AE service for this conference */
-    for (var j = 0; j < aeData.length; j++) {
-      var m = aeData[j];
-      var entries = (m.conferences||[]).filter(function(c) { return c[0] === CONF; });
-      if (entries.length === 0) continue;
-      var aff2 = m.affiliation || '';
-      if (!aff2) continue;
-      if (!instMap[aff2]) {
-        instMap[aff2] = { affiliation: aff2, artifact_score: 0, artifacts: 0,
-          total_papers: 0, num_authors: 0, ae_memberships: 0, chair_count: 0, years: {} };
-      }
-      instMap[aff2].ae_memberships += entries.length;
-      instMap[aff2].chair_count += entries.filter(function(c) { return c[2] === 'chair'; }).length;
-    }
-    var all = Object.values(instMap);
-
-    /* Determine year columns */
+  /* ── INSTITUTIONS — from pre-computed per-conference institution rankings */
+  function initInstitutions(rawData) {
     var yrs = {};
-    for (var k = 0; k < all.length; k++) {
-      for (var yr in all[k].years) yrs[yr] = true;
+    for (var i = 0; i < rawData.length; i++) {
+      var yrObj = rawData[i].years || {};
+      for (var y in yrObj) { if (yrObj[y] > 0) yrs[y] = true; }
     }
     var yearCols = Object.keys(yrs).map(Number).sort(function(a,b){return b-a;});
-    for (var ki = 0; ki < all.length; ki++) {
+    for (var k = 0; k < rawData.length; k++) {
       for (var yj = 0; yj < yearCols.length; yj++) {
-        all[ki]['_y' + yearCols[yj]] = (all[ki].years || {})[yearCols[yj]] || 0;
+        rawData[k]['_y' + yearCols[yj]] = (rawData[k].years || {})[yearCols[yj]] || 0;
       }
     }
-
     var cols = [
       {label:'#',           key:'_rank',          type:'num'},
       {label:'Institution', key:'affiliation',    type:'alpha'},
-      {label:'S',           key:'artifact_score', type:'num', tip:'Conference-specific artifact score'},
+      {label:'S',           key:'combined_score', type:'num', tip:'Combined Score (artifacts + AE service)'},
       {label:'R',           key:'num_authors',    type:'num', tip:'Researchers'},
       {label:'Ar',          key:'artifacts',      type:'num', tip:'Artifacts'},
       {label:'P',           key:'total_papers',   type:'num', tip:'Papers'},
@@ -523,8 +469,7 @@ document.addEventListener('DOMContentLoaded', function() {
     for (var jc = 0; jc < yearCols.length; jc++) {
       cols.push({label: '' + yearCols[jc], key: '_y' + yearCols[jc], type: 'num'});
     }
-
-    if (all.length === 0) {
+    if (rawData.length === 0) {
       document.getElementById('instLoading').textContent = 'No institution data for this conference.';
       return;
     }
@@ -535,11 +480,11 @@ document.addEventListener('DOMContentLoaded', function() {
       toggleDivId: 'inst-toggle', toggleBtnId: 'instToggleBtn',
       totalId: 'instTotal', searchId: 'instSearch',
       cols: cols, sortCol: 2, sortAsc: false,
-      renderRow: function(d, idx) {
+      renderRow: function(d) {
         var url = BASE + '/institution.html?name=' + encodeURIComponent(d.affiliation);
-        var cells = '<td>' + (idx + 1) + '</td>';
+        var cells = '<td>' + d._rank + '</td>';
         cells += '<td class="wrap-cell"><a href="' + url + '">' + esc(d.affiliation) + '</a></td>';
-        cells += '<td><strong>' + (d.artifact_score||0) + '</strong></td>';
+        cells += '<td><strong>' + (d.combined_score||0) + '</strong></td>';
         cells += '<td>' + (d.num_authors||'') + '</td>';
         cells += '<td>' + (d.artifacts||'') + '</td>';
         cells += '<td>' + (d.total_papers||'') + '</td>';
@@ -551,7 +496,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         return cells;
       }
-    }).init(all);
+    }).init(rawData);
   }
 
   /* ── AE COMMITTEE — filtered from ae_members.json ──────────────────── */
@@ -592,8 +537,8 @@ document.addEventListener('DOMContentLoaded', function() {
         {label:'Last',        key:'last_year',      type:'num', tip:'Last year'}
       ],
       sortCol: 3, sortAsc: false,
-      renderRow: function(d, idx) {
-        return '<td>' + (idx + 1) + '</td>' +
+      renderRow: function(d) {
+        return '<td>' + d._rank + '</td>' +
           '<td>' + esc(d._display) + '</td>' +
           '<td class="wrap-cell">' + esc(d.affiliation) + '</td>' +
           '<td><strong>' + d.terms + '</strong></td>' +
@@ -606,13 +551,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
   /* ── Load all data in parallel ─────────────────────────────────────── */
   var dataBase = '{{ site.baseurl }}/assets/data/';
+  var confLower = CONF.toLowerCase();
   Promise.all([
-    fetch(dataBase + 'authors.json').then(function(r) { return r.json(); }),
+    fetch(dataBase + confLower + '_combined_rankings.json').then(function(r) { return r.json(); }),
+    fetch(dataBase + confLower + '_institution_rankings.json').then(function(r) { return r.json(); }),
     fetch(dataBase + 'ae_members.json').then(function(r) { return r.json(); })
   ]).then(function(results) {
     initAuthors(results[0]);
     initInstitutions(results[1]);
-    initAE(results[1]);
+    initAE(results[2]);
   }).catch(function(e) {
     ['authorLoading','instLoading','aeLoading'].forEach(function(id) {
       document.getElementById(id).textContent = 'Error loading data: ' + e.message;
