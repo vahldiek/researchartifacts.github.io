@@ -50,8 +50,10 @@ Authors who contributed evaluated artifacts at {{ conf_display }}, ranked by art
 <tbody id="authorBody"></tbody>
 </table>
 
-<div id="author-toggle" style="margin-top:4px; display:none; font-size:0.9em;">
-  <button id="authorToggleBtn" style="padding:2px 6px; font-size:0.9em;">Show all</button>
+<div id="author-pager" style="margin-top:4px; display:none; font-size:0.9em;">
+  <button id="authorPrev" style="padding:2px 6px; font-size:0.9em;">&laquo; Prev</button>
+  <span id="authorPageInfo" style="margin:0 6px;"></span>
+  <button id="authorNext" style="padding:2px 6px; font-size:0.9em;">Next &raquo;</button>
   <span id="authorTotal" style="margin-left:8px; color:#666;"></span>
 </div>
 
@@ -79,8 +81,10 @@ Institutions at {{ conf_display }}, ranked by conference-specific artifact score
 <tbody id="instBody"></tbody>
 </table>
 
-<div id="inst-toggle" style="margin-top:4px; display:none; font-size:0.9em;">
-  <button id="instToggleBtn" style="padding:2px 6px; font-size:0.9em;">Show all</button>
+<div id="inst-pager" style="margin-top:4px; display:none; font-size:0.9em;">
+  <button id="instPrev" style="padding:2px 6px; font-size:0.9em;">&laquo; Prev</button>
+  <span id="instPageInfo" style="margin:0 6px;"></span>
+  <button id="instNext" style="padding:2px 6px; font-size:0.9em;">Next &raquo;</button>
   <span id="instTotal" style="margin-left:8px; color:#666;"></span>
 </div>
 
@@ -108,8 +112,10 @@ Artifact evaluation committee members at {{ conf_display }}, ranked by number of
 <tbody id="aeBody"></tbody>
 </table>
 
-<div id="ae-toggle" style="margin-top:4px; display:none; font-size:0.9em;">
-  <button id="aeToggleBtn" style="padding:2px 6px; font-size:0.9em;">Show all</button>
+<div id="ae-pager" style="margin-top:4px; display:none; font-size:0.9em;">
+  <button id="aePrev" style="padding:2px 6px; font-size:0.9em;">&laquo; Prev</button>
+  <span id="aePageInfo" style="margin:0 6px;"></span>
+  <button id="aeNext" style="padding:2px 6px; font-size:0.9em;">Next &raquo;</button>
   <span id="aeTotal" style="margin-left:8px; color:#666;"></span>
 </div>
 
@@ -240,7 +246,7 @@ document.addEventListener('DOMContentLoaded', function() {
     return d.innerHTML;
   }
 
-  /* ── Top-10 sortable table with "Show all" toggle ──────────────────── */
+  /* ── Paginated sortable table ────────────────────────────────────────── */
   function Top10Table(cfg) {
     this.headId = cfg.headId;
     this.bodyId = cfg.bodyId;
@@ -248,8 +254,10 @@ document.addEventListener('DOMContentLoaded', function() {
     this.legendId = cfg.legendId;
     this.loadingId = cfg.loadingId;
     this.tableId = cfg.tableId;
-    this.toggleDivId = cfg.toggleDivId;
-    this.toggleBtnId = cfg.toggleBtnId;
+    this.pagerDivId = cfg.pagerDivId;
+    this.prevBtnId = cfg.prevBtnId;
+    this.nextBtnId = cfg.nextBtnId;
+    this.pageInfoId = cfg.pageInfoId;
     this.totalId = cfg.totalId;
     this.searchId = cfg.searchId;
     this.cols = cfg.cols;
@@ -259,14 +267,17 @@ document.addEventListener('DOMContentLoaded', function() {
     this.allData = [];
     this.filtered = [];
     this.sorted = [];
-    this.showAll = false;
+    this.page = 0;
+    this.pageSize = TOP_N;
     this.searchQuery = '';
 
     var self = this;
-    document.getElementById(this.toggleBtnId).addEventListener('click', function() {
-      self.showAll = !self.showAll;
-      this.textContent = self.showAll ? 'Show top 10' : 'Show all';
-      self.render();
+    document.getElementById(this.prevBtnId).addEventListener('click', function() {
+      if (self.page > 0) { self.page--; self.render(); }
+    });
+    document.getElementById(this.nextBtnId).addEventListener('click', function() {
+      var pages = Math.ceil(self.sorted.length / self.pageSize);
+      if (self.page < pages - 1) { self.page++; self.render(); }
     });
     if (this.searchId) {
       var timer = null;
@@ -276,6 +287,8 @@ document.addEventListener('DOMContentLoaded', function() {
         timer = setTimeout(function() {
           self.searchQuery = val.toLowerCase().trim();
           self.applyFilter();
+          self.page = 0;
+          self.doSort();
           self.render();
         }, 200);
       });
@@ -292,8 +305,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById(this.tableId).style.display = '';
     document.getElementById(this.controlsId).style.display = '';
     if (this.legendId) document.getElementById(this.legendId).style.display = '';
-    document.getElementById(this.toggleDivId).style.display = '';
-    document.getElementById(this.totalId).textContent = data.length + ' total';
+    document.getElementById(this.pagerDivId).style.display = '';
   };
 
   Top10Table.prototype.applyFilter = function() {
@@ -312,47 +324,41 @@ document.addEventListener('DOMContentLoaded', function() {
     var col = this.cols[this.sortCol];
     if (!col) return;
     var key = col.key, type = col.type, asc = this.sortAsc;
-    /* Sort the full data first to assign stable ranks */
+    var cmp = function(a, b) {
+      var av = a[key], bv = b[key];
+      if (av == null) av = type === 'alpha' ? '' : 0;
+      if (bv == null) bv = type === 'alpha' ? '' : 0;
+      if (type === 'alpha') { av = String(av).toLowerCase(); bv = String(bv).toLowerCase(); }
+      if (av < bv) return asc ? -1 : 1;
+      if (av > bv) return asc ? 1 : -1;
+      return 0;
+    };
     var full = this.allData.slice();
-    full.sort(function(a, b) {
-      var av = a[key], bv = b[key];
-      if (av == null) av = type === 'alpha' ? '' : 0;
-      if (bv == null) bv = type === 'alpha' ? '' : 0;
-      if (type === 'alpha') { av = String(av).toLowerCase(); bv = String(bv).toLowerCase(); }
-      if (av < bv) return asc ? -1 : 1;
-      if (av > bv) return asc ? 1 : -1;
-      return 0;
-    });
+    full.sort(cmp);
     for (var i = 0; i < full.length; i++) full[i]._rank = i + 1;
-    /* Now sort the filtered subset with the same comparator */
     this.sorted = this.filtered.slice();
-    this.sorted.sort(function(a, b) {
-      var av = a[key], bv = b[key];
-      if (av == null) av = type === 'alpha' ? '' : 0;
-      if (bv == null) bv = type === 'alpha' ? '' : 0;
-      if (type === 'alpha') { av = String(av).toLowerCase(); bv = String(bv).toLowerCase(); }
-      if (av < bv) return asc ? -1 : 1;
-      if (av > bv) return asc ? 1 : -1;
-      return 0;
-    });
+    this.sorted.sort(cmp);
   };
 
   Top10Table.prototype.render = function() {
-    var display = this.showAll || this.searchQuery ? this.sorted : this.sorted.slice(0, TOP_N);
+    var total = this.sorted.length;
+    var pages = Math.max(1, Math.ceil(total / this.pageSize));
+    if (this.page >= pages) this.page = pages - 1;
+    if (this.page < 0) this.page = 0;
+    var start = this.page * this.pageSize;
+    var end = Math.min(start + this.pageSize, total);
+    var display = this.sorted.slice(start, end);
     var rows = [];
     for (var i = 0; i < display.length; i++) {
-      rows.push('<tr>' + this.renderRow(display[i], i) + '</tr>');
+      rows.push('<tr>' + this.renderRow(display[i], start + i) + '</tr>');
     }
     document.getElementById(this.bodyId).innerHTML = rows.join('');
-    var btn = document.getElementById(this.toggleBtnId);
-    if (this.searchQuery) {
-      btn.style.display = 'none';
-      document.getElementById(this.totalId).textContent = this.sorted.length + ' matching';
-    } else {
-      btn.style.display = '';
-      btn.textContent = this.showAll ? 'Show top 10' : 'Show all';
-      document.getElementById(this.totalId).textContent = this.allData.length + ' total';
-    }
+    document.getElementById(this.prevBtnId).disabled = this.page <= 0;
+    document.getElementById(this.nextBtnId).disabled = this.page >= pages - 1;
+    var info = total > 0 ? (start + 1) + '\u2013' + end + ' of ' + total : '0';
+    document.getElementById(this.pageInfoId).textContent = info;
+    document.getElementById(this.totalId).textContent =
+      this.searchQuery ? total + ' matching' : this.allData.length + ' total';
   };
 
   Top10Table.prototype.buildHeader = function() {
@@ -370,6 +376,7 @@ document.addEventListener('DOMContentLoaded', function() {
           if (self.sortCol === idx) self.sortAsc = !self.sortAsc;
           else { self.sortCol = idx; self.sortAsc = false; }
           self.doSort();
+          self.page = 0;
           self.render();
           var ths = document.getElementById(self.headId).querySelectorAll('.cp-sortable');
           ths.forEach(function(h) { h.classList.remove('cp-sorted-asc', 'cp-sorted-desc'); });
@@ -420,7 +427,7 @@ document.addEventListener('DOMContentLoaded', function() {
       headId: 'authorHead', bodyId: 'authorBody',
       controlsId: 'author-controls', legendId: 'author-legend',
       loadingId: 'authorLoading', tableId: 'authorTable',
-      toggleDivId: 'author-toggle', toggleBtnId: 'authorToggleBtn',
+      pagerDivId: 'author-pager', prevBtnId: 'authorPrev', nextBtnId: 'authorNext', pageInfoId: 'authorPageInfo',
       totalId: 'authorTotal', searchId: 'authorSearch',
       cols: cols, sortCol: 3, sortAsc: false,
       renderRow: function(d) {
@@ -477,7 +484,7 @@ document.addEventListener('DOMContentLoaded', function() {
       headId: 'instHead', bodyId: 'instBody',
       controlsId: 'inst-controls', legendId: 'inst-legend',
       loadingId: 'instLoading', tableId: 'instTable',
-      toggleDivId: 'inst-toggle', toggleBtnId: 'instToggleBtn',
+      pagerDivId: 'inst-pager', prevBtnId: 'instPrev', nextBtnId: 'instNext', pageInfoId: 'instPageInfo',
       totalId: 'instTotal', searchId: 'instSearch',
       cols: cols, sortCol: 2, sortAsc: false,
       renderRow: function(d) {
@@ -525,7 +532,7 @@ document.addEventListener('DOMContentLoaded', function() {
       headId: 'aeHead', bodyId: 'aeBody',
       controlsId: 'ae-controls', legendId: 'ae-legend',
       loadingId: 'aeLoading', tableId: 'aeTable',
-      toggleDivId: 'ae-toggle', toggleBtnId: 'aeToggleBtn',
+      pagerDivId: 'ae-pager', prevBtnId: 'aePrev', nextBtnId: 'aeNext', pageInfoId: 'aePageInfo',
       totalId: 'aeTotal', searchId: 'aeSearch',
       cols: [
         {label:'#',           key:'_rank',          type:'num'},
