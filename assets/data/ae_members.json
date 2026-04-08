@@ -401,7 +401,7 @@
   {
     "name": "Nathan Rutherford",
     "display_name": "Nathan Rutherford",
-    "affiliation": "Royal Holloway, University of London",
+    "affiliation": "Royal Holloway",
     "total_memberships": 8,
     "chair_count": 2,
     "conferences": [
@@ -507,6 +507,59 @@
     },
     "first_year": 2022,
     "last_year": 2024
+  },
+  {
+    "name": "Bogdan Alexandru Stoica",
+    "display_name": "Bogdan Alexandru Stoica",
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "total_memberships": 7,
+    "chair_count": 2,
+    "conferences": [
+      [
+        "ATC",
+        2022,
+        "member"
+      ],
+      [
+        "CAIS",
+        2026,
+        "chair"
+      ],
+      [
+        "EUROSYS",
+        2022,
+        "member"
+      ],
+      [
+        "EUROSYS",
+        2025,
+        "member"
+      ],
+      [
+        "EUROSYS",
+        2026,
+        "chair"
+      ],
+      [
+        "OSDI",
+        2022,
+        "member"
+      ],
+      [
+        "SOSP",
+        2021,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2021": 1,
+      "2022": 3,
+      "2025": 1,
+      "2026": 2
+    },
+    "first_year": 2021,
+    "last_year": 2026
   },
   {
     "name": "Abdullah Al Raqibul Islam",
@@ -772,7 +825,7 @@
   {
     "name": "Anjo Vahldiek-Oberwagner",
     "display_name": "Anjo Vahldiek-Oberwagner",
-    "affiliation": "Intel Labs",
+    "affiliation": "Intel",
     "total_memberships": 6,
     "chair_count": 5,
     "conferences": [
@@ -864,54 +917,6 @@
       "2026": 1
     },
     "first_year": 2020,
-    "last_year": 2026
-  },
-  {
-    "name": "Bogdan Alexandru Stoica",
-    "display_name": "Bogdan Alexandru Stoica",
-    "affiliation": "University of Illinois Urbana-Champaign",
-    "total_memberships": 6,
-    "chair_count": 1,
-    "conferences": [
-      [
-        "ATC",
-        2022,
-        "member"
-      ],
-      [
-        "EUROSYS",
-        2022,
-        "member"
-      ],
-      [
-        "EUROSYS",
-        2025,
-        "member"
-      ],
-      [
-        "EUROSYS",
-        2026,
-        "chair"
-      ],
-      [
-        "OSDI",
-        2022,
-        "member"
-      ],
-      [
-        "SOSP",
-        2021,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2021": 1,
-      "2022": 3,
-      "2025": 1,
-      "2026": 1
-    },
-    "first_year": 2021,
     "last_year": 2026
   },
   {
@@ -1442,7 +1447,7 @@
   {
     "name": "Mingyu Li",
     "display_name": "Mingyu Li",
-    "affiliation": "Institute of Software, Chinese Academy of Sciences",
+    "affiliation": "Institute of Software",
     "total_memberships": 6,
     "chair_count": 0,
     "conferences": [
@@ -2195,7 +2200,7 @@
   {
     "name": "Diogo Vaz",
     "display_name": "Diogo Vaz",
-    "affiliation": "INESC-ID and Instituto Superior Técnico, Universidade de Lisboa",
+    "affiliation": "INESC-ID and Instituto Superior Técnico",
     "total_memberships": 5,
     "chair_count": 0,
     "conferences": [
@@ -4133,7 +4138,7 @@
   {
     "name": "Erin Avllazagaj",
     "display_name": "Erin Avllazagaj",
-    "affiliation": "UMD, CP",
+    "affiliation": "UMD",
     "total_memberships": 4,
     "chair_count": 0,
     "conferences": [
@@ -4791,7 +4796,7 @@
   {
     "name": "João Oliveira",
     "display_name": "João Oliveira",
-    "affiliation": "INESC-ID and Instituto Superior Técnico, Universidade de Lisboa",
+    "affiliation": "INESC-ID and Instituto Superior Técnico",
     "total_memberships": 4,
     "chair_count": 0,
     "conferences": [
@@ -5814,7 +5819,7 @@
   {
     "name": "Tejaswi Agarwal",
     "display_name": "Tejaswi Agarwal",
-    "affiliation": "Uber Technologies, Inc.",
+    "affiliation": "Uber Technologies",
     "total_memberships": 4,
     "chair_count": 0,
     "conferences": [
@@ -5851,7 +5856,7 @@
   {
     "name": "Tolga Atalay",
     "display_name": "Tolga Atalay",
-    "affiliation": "A2 Labs LLC, Virginia Tech",
+    "affiliation": "A2 Labs LLC",
     "total_memberships": 4,
     "chair_count": 0,
     "conferences": [
@@ -6508,7 +6513,7 @@
   {
     "name": "Zhiyu Zhang",
     "display_name": "Zhiyu Zhang",
-    "affiliation": "Institute of Information Engineering, Chinese Academy of Sciences",
+    "affiliation": "Institute of Information Engineering",
     "total_memberships": 4,
     "chair_count": 0,
     "conferences": [
@@ -6750,7 +6755,7 @@
   {
     "name": "Ji Qi",
     "display_name": "Ji Qi",
-    "affiliation": "Institute of Software, Chinese Academy of Sciences",
+    "affiliation": "Institute of Software",
     "total_memberships": 3,
     "chair_count": 2,
     "conferences": [
@@ -7786,7 +7791,7 @@
   {
     "name": "Diksha Goel",
     "display_name": "Diksha Goel",
-    "affiliation": "CSIRO's Data61, Australia",
+    "affiliation": "CSIRO's Data61",
     "total_memberships": 3,
     "chair_count": 0,
     "conferences": [
@@ -12852,7 +12857,7 @@
   {
     "name": "André Augusto",
     "display_name": "André Augusto",
-    "affiliation": "INESC-ID and Instituto Superior Técnico, University of Lisbon",
+    "affiliation": "INESC-ID and Instituto Superior Técnico",
     "total_memberships": 2,
     "chair_count": 0,
     "conferences": [
@@ -13695,7 +13700,7 @@
   {
     "name": "Chang Liu",
     "display_name": "Chang Liu",
-    "affiliation": "Institute of Software, Chinese Academy of Sciences",
+    "affiliation": "Institute of Software",
     "total_memberships": 2,
     "chair_count": 0,
     "conferences": [
@@ -14152,7 +14157,7 @@
   {
     "name": "Dawei Wang",
     "display_name": "Dawei Wang",
-    "affiliation": "SKLOIS, Institute of Information Engineering, Chinese Academy of Sciences, Beijing, China",
+    "affiliation": "SKLOIS",
     "total_memberships": 2,
     "chair_count": 0,
     "conferences": [
@@ -15072,7 +15077,7 @@
   {
     "name": "Guilhem Lacombe",
     "display_name": "Guilhem Lacombe",
-    "affiliation": "VERIMAG, Université Grenoble-Alpes",
+    "affiliation": "VERIMAG",
     "total_memberships": 2,
     "chair_count": 0,
     "conferences": [
@@ -16268,7 +16273,7 @@
   {
     "name": "Jiatai He",
     "display_name": "Jiatai He",
-    "affiliation": "Institute of Software, Chinese Academy of Sciences",
+    "affiliation": "Institute of Software",
     "total_memberships": 2,
     "chair_count": 0,
     "conferences": [
@@ -17791,7 +17796,7 @@
   {
     "name": "Millian Poquet",
     "display_name": "Millian Poquet",
-    "affiliation": "Univ Toulouse, IRIT",
+    "affiliation": "Univ Toulouse",
     "total_memberships": 2,
     "chair_count": 0,
     "conferences": [
@@ -18383,7 +18388,7 @@
   {
     "name": "Pasin Manurangsi",
     "display_name": "Pasin Manurangsi",
-    "affiliation": "Google Research",
+    "affiliation": "Google",
     "total_memberships": 2,
     "chair_count": 0,
     "conferences": [
@@ -18791,7 +18796,7 @@
   {
     "name": "Qinglin Pan",
     "display_name": "Qinglin Pan",
-    "affiliation": "Institute of Software, Chinese Academy of Sciences",
+    "affiliation": "Institute of Software",
     "total_memberships": 2,
     "chair_count": 0,
     "conferences": [
@@ -19247,7 +19252,7 @@
   {
     "name": "Rishit Saiya",
     "display_name": "Rishit Saiya",
-    "affiliation": "Cyber Defense, PwC, USA",
+    "affiliation": "Cyber Defense",
     "total_memberships": 2,
     "chair_count": 0,
     "conferences": [
@@ -19349,7 +19354,7 @@
   {
     "name": "Ruilin Zhao",
     "display_name": "Ruilin Zhao",
-    "affiliation": "Institute of Software, Chinese Academy of Sciences",
+    "affiliation": "Institute of Software",
     "total_memberships": 2,
     "chair_count": 0,
     "conferences": [
@@ -23584,26 +23589,6 @@
     "last_year": 2025
   },
   {
-    "name": "Bogdan \"Bo\" Stoica",
-    "display_name": "Bogdan \"Bo\" Stoica",
-    "affiliation": "University of Illinois Urbana-Champaign",
-    "total_memberships": 1,
-    "chair_count": 1,
-    "conferences": [
-      [
-        "CAIS",
-        2026,
-        "chair"
-      ]
-    ],
-    "area": "unknown",
-    "years": {
-      "2026": 1
-    },
-    "first_year": 2026,
-    "last_year": 2026
-  },
-  {
     "name": "Brendan Dolan-Gavitt",
     "display_name": "Brendan Dolan-Gavitt",
     "affiliation": "New York University",
@@ -23626,7 +23611,7 @@
   {
     "name": "Christian Pinto",
     "display_name": "Christian Pinto",
-    "affiliation": "IBM Research Europe - Ireland, Dublin, Ireland",
+    "affiliation": "IBM Research Europe - Ireland",
     "total_memberships": 1,
     "chair_count": 1,
     "conferences": [
@@ -23946,7 +23931,7 @@
   {
     "name": "Martin Albrecht",
     "display_name": "Martin Albrecht",
-    "affiliation": "Royal Holloway, University of London",
+    "affiliation": "Royal Holloway",
     "total_memberships": 1,
     "chair_count": 1,
     "conferences": [
@@ -24006,7 +23991,7 @@
   {
     "name": "Miguel Matos",
     "display_name": "Miguel Matos",
-    "affiliation": "IST, U. Lisboa & INESC-ID, Portugal",
+    "affiliation": "IST",
     "total_memberships": 1,
     "chair_count": 1,
     "conferences": [
@@ -25966,7 +25951,7 @@
   {
     "name": "Antonio Sciarappa",
     "display_name": "Antonio Sciarappa",
-    "affiliation": "Leonardo Labs, Italy",
+    "affiliation": "Leonardo Labs",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -26626,7 +26611,7 @@
   {
     "name": "Benoit Martin",
     "display_name": "Benoit Martin",
-    "affiliation": "Sorbonne Université, CNRS, Inria, LIP6",
+    "affiliation": "Sorbonne Université",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -26686,7 +26671,7 @@
   {
     "name": "Bhavani Shankar Garikapati",
     "display_name": "Bhavani Shankar Garikapati",
-    "affiliation": "Staff Engineer, Lyft",
+    "affiliation": "Staff Engineer",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -27026,7 +27011,7 @@
   {
     "name": "Caterina Maidhof",
     "display_name": "Caterina Maidhof",
-    "affiliation": "Valencian Research Institute for Artificial Intelligence (VRAIN), Universitat Politècnica de València (UPV), Spain",
+    "affiliation": "Valencian Research Institute for Artificial Intelligence (VRAIN)",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -27206,7 +27191,7 @@
   {
     "name": "Charles Babu M",
     "display_name": "Charles Babu M",
-    "affiliation": "CEA LIST, Université Paris-Saclay",
+    "affiliation": "CEA LIST",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -28506,7 +28491,7 @@
   {
     "name": "Duy-Phuc Pham",
     "display_name": "Duy-Phuc Pham",
-    "affiliation": "INRIA, IRISA, France",
+    "affiliation": "INRIA",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -29666,7 +29651,7 @@
   {
     "name": "Gianluca Scopelliti",
     "display_name": "Gianluca Scopelliti",
-    "affiliation": "Politecnico di Torino, Dromt",
+    "affiliation": "Politecnico di Torino",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -29986,7 +29971,7 @@
   {
     "name": "Guozhu Meng",
     "display_name": "Guozhu Meng",
-    "affiliation": "SKLOIS, Institute of Information Engineering, Chinese Academy of Sciences",
+    "affiliation": "SKLOIS",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -31486,7 +31471,7 @@
   {
     "name": "James Howe",
     "display_name": "James Howe",
-    "affiliation": "PQShield, UK",
+    "affiliation": "PQShield",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -31966,7 +31951,7 @@
   {
     "name": "Jiawei Xiao",
     "display_name": "Jiawei Xiao",
-    "affiliation": "Institute of Computing Technology, CAS",
+    "affiliation": "Institute of Computing Technology",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -32346,7 +32331,7 @@
   {
     "name": "Joana Tirana",
     "display_name": "Joana Tirana",
-    "affiliation": "School of Computer Science, University College Dublin & VistaMilk SFI",
+    "affiliation": "School of Computer Science",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -32386,7 +32371,7 @@
   {
     "name": "Joe",
     "display_name": "Joe",
-    "affiliation": "Royal Holloway, University of London",
+    "affiliation": "Royal Holloway",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -32406,7 +32391,7 @@
   {
     "name": "Joe Rowell",
     "display_name": "Joe Rowell",
-    "affiliation": "Royal Holloway University of London, UK",
+    "affiliation": "Royal Holloway University of London",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -32586,7 +32571,7 @@
   {
     "name": "Joost Renes",
     "display_name": "Joost Renes",
-    "affiliation": "NXP Semiconductors, The Netherlands",
+    "affiliation": "NXP Semiconductors",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -32726,7 +32711,7 @@
   {
     "name": "Josiane Kouam",
     "display_name": "Josiane Kouam",
-    "affiliation": "INRIA, Ecole Polytechnique-IPP",
+    "affiliation": "INRIA",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -34726,7 +34711,7 @@
   {
     "name": "Léo Ducas",
     "display_name": "Léo Ducas",
-    "affiliation": "CWI, The Netherlands",
+    "affiliation": "CWI",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -35086,7 +35071,7 @@
   {
     "name": "Marc Stevens",
     "display_name": "Marc Stevens",
-    "affiliation": "CWI Cryptology Group, The Netherlands",
+    "affiliation": "CWI Cryptology Group",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -35466,7 +35451,7 @@
   {
     "name": "Matthias J. Kannwischer",
     "display_name": "Matthias J. Kannwischer",
-    "affiliation": "Academia Sinica, Taiwan",
+    "affiliation": "Academia Sinica",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -37146,7 +37131,7 @@
   {
     "name": "Nimish Mishra",
     "display_name": "Nimish Mishra",
-    "affiliation": "Indian Institute of Technology, Kharagpur",
+    "affiliation": "Indian Institute of Technology",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -38066,7 +38051,7 @@
   {
     "name": "Pranesh Santikellur",
     "display_name": "Pranesh Santikellur",
-    "affiliation": "Indian institute of technology Kharagpur, India",
+    "affiliation": "Indian institute of technology Kharagpur",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -38526,7 +38511,7 @@
   {
     "name": "Rafael Lourenço de Lima Chehab",
     "display_name": "Rafael Lourenço de Lima Chehab",
-    "affiliation": "TU Dresden, Huawei Technologies Duesseldorf",
+    "affiliation": "TU Dresden",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -38686,7 +38671,7 @@
   {
     "name": "Rajdeep Ghosh",
     "display_name": "Rajdeep Ghosh",
-    "affiliation": "Indian Institute of Technology, Kharagpur",
+    "affiliation": "Indian Institute of Technology",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -38806,7 +38791,7 @@
   {
     "name": "Raounak BENABIDALLAH",
     "display_name": "Raounak BENABIDALLAH",
-    "affiliation": "CEA LIST, Université Paris Saclay",
+    "affiliation": "CEA LIST",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -39426,7 +39411,7 @@
   {
     "name": "Salwa SOUAF",
     "display_name": "Salwa SOUAF",
-    "affiliation": "CEA LIST, Université Paris Saclay",
+    "affiliation": "CEA LIST",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -39506,7 +39491,7 @@
   {
     "name": "Samuel Pélissier",
     "display_name": "Samuel Pélissier",
-    "affiliation": "INSA Lyon, Inria",
+    "affiliation": "INSA Lyon",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -40946,7 +40931,7 @@
   {
     "name": "Siliang Qin",
     "display_name": "Siliang Qin",
-    "affiliation": "Institute of Information Engineering, Chinese Academy of Sciences",
+    "affiliation": "Institute of Information Engineering",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -41166,7 +41151,7 @@
   {
     "name": "Sreeja Nair",
     "display_name": "Sreeja Nair",
-    "affiliation": "ZettaScale Technology, Paris",
+    "affiliation": "ZettaScale Technology",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -41186,7 +41171,7 @@
   {
     "name": "Sreeja S Nair",
     "display_name": "Sreeja S Nair",
-    "affiliation": "Sorbonne University and ADLINK Technology Inc., France",
+    "affiliation": "Sorbonne University and ADLINK Technology Inc.",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -42506,7 +42491,7 @@
   {
     "name": "Utkarsh Mittal",
     "display_name": "Utkarsh Mittal",
-    "affiliation": "BCS, IEEE, and Gap",
+    "affiliation": "BCS",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -44026,7 +44011,7 @@
   {
     "name": "Yanmao Man",
     "display_name": "Yanmao Man",
-    "affiliation": "ByteDance, Inc",
+    "affiliation": "ByteDance",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -45106,7 +45091,7 @@
   {
     "name": "Yunyi Zhang",
     "display_name": "Yunyi Zhang",
-    "affiliation": "National University of Defense Technology, Tsinghua University",
+    "affiliation": "National University of Defense Technology",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -46146,7 +46131,7 @@
   {
     "name": "jiawei fei",
     "display_name": "jiawei fei",
-    "affiliation": "College of Computer Science and Technology, National University of Defense Technology",
+    "affiliation": "College of Computer Science and Technology",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [

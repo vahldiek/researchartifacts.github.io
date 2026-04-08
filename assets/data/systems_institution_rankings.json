@@ -1,23 +1,24 @@
 [
   {
     "affiliation": "University of Illinois Urbana-Champaign",
-    "combined_score": 459,
+    "combined_score": 464,
     "artifact_score": 164,
     "artifact_citations": 0,
     "citation_score": 0,
-    "ae_score": 295,
-    "ae_ratio": 0.56,
+    "ae_score": 300,
+    "ae_ratio": 0.55,
     "role": "Balanced",
     "artifacts": 59,
     "badges_functional": 59,
     "badges_reproducible": 46,
-    "ae_memberships": 97,
-    "chair_count": 2,
+    "ae_memberships": 98,
+    "chair_count": 3,
     "total_papers": 76,
     "artifact_rate": 77.6,
     "num_authors": 58,
     "conferences": [
       "ATC",
+      "CAIS",
       "EUROSYS",
       "FAST",
       "OSDI",
@@ -31,7 +32,7 @@
       "2022": 14,
       "2021": 10,
       "2020": 6,
-      "2026": 5
+      "2026": 6
     }
   },
   {
@@ -837,7 +838,7 @@
       "2025": 12,
       "2024": 4,
       "2023": 6,
-      "2022": 10,
+      "2022": 8,
       "2021": 2,
       "2020": 0
     }
@@ -2794,10 +2795,10 @@
     ],
     "years": {
       "2025": 1,
-      "2024": 2,
+      "2024": 0,
       "2023": 4,
       "2022": 0,
-      "2021": 4,
+      "2021": 3,
       "2020": 1,
       "2026": 1
     }
