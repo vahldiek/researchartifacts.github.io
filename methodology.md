@@ -33,52 +33,6 @@ Each cell shows **total (available, functional, reproduced)**.
 
 {% endif %}
 
-## Statistics & Analysis
-
-Explore detailed insights across institutions, authors, and conferences:
-
-- **[Author Rankings]({{ '/combined_rankings.html' | relative_url }})** — Researchers ranked by artifact contributions + AE committee work
-- **[Institution Rankings]({{ '/institution_rankings.html' | relative_url }})** — Institutions ranked by artifact contributions and author engagement
-- **[Author Rankings]({{ '/authors.html' | relative_url }})** — Individual authors ranked by artifact evaluation impact
-- **[Statistics]({{ '/statistics/' | relative_url }})** — Artifact evaluation trends by country and continent
-- **[Repository Statistics]({{ '/repo_stats.html' | relative_url }})** — Most popular artifact repositories by stars, forks, and downloads
-
-## Explore by Conference Area
-
-- [Systems]({{ '/systems/' | relative_url }}) — Breakdown and rankings for systems venues (EuroSys, OSDI, SC, SOSP)
-- [Security]({{ '/security/' | relative_url }}) — Breakdown and rankings for security venues (ACSAC, CHES, NDSS, PETS, USENIX Security, WOOT)
-
-## Table of Contents
-- [Overview](#overview)
-- [Artifacts by Year and Area](#artifacts-by-year-and-area)
-- [Statistics \& Analysis](#statistics--analysis)
-- [Explore by Conference Area](#explore-by-conference-area)
-- [Table of Contents](#table-of-contents)
-- [Conferences Covered](#conferences-covered)
-- [Data Collection](#data-collection)
-- [Pipeline](#pipeline)
-- [Author Metrics](#author-metrics)
-  - [Artifacts](#artifacts)
-  - [Total Papers](#total-papers)
-  - [Artifact Rate (AR%)](#artifact-rate-ar)
-  - [Reproducibility Rate (RR%)](#reproducibility-rate-rr)
-  - [Artifact:Evaluation Ratio (A:E)](#artifactevaluation-ratio-ae)
-  - [AE Memberships](#ae-memberships)
-  - [Chair Count](#chair-count)
-  - [Combined Score](#combined-score)
-- [Institution Metrics](#institution-metrics)
-  - [How Institution Data is Aggregated](#how-institution-data-is-aggregated)
-  - [Cross-Area Aggregation](#cross-area-aggregation)
-- [Badge Definitions](#badge-definitions)
-- [Repository Statistics](#repository-statistics)
-  - [GitHub/GitLab Metrics](#githubgitlab-metrics)
-  - [Zenodo/Figshare Metrics](#zenodofigshare-metrics)
-- [Artifact Citations (Experimental)](#artifact-citations-experimental)
-  - [Why Citation Data Is Not Included in Rankings](#why-citation-data-is-not-included-in-rankings)
-- [Data Sources](#data-sources)
-- [Acknowledgements](#acknowledgements)
-- [API Access](#api-access)
-
 ## Conferences Covered
 
 Data is collected from conferences tracked by [sysartifacts](https://sysartifacts.github.io) and [secartifacts](https://secartifacts.github.io):
@@ -109,7 +63,7 @@ The pipeline ([run_pipeline.sh](https://github.com/reprodb/reprodb-pipeline/blob
 
 All output data structures are formally defined in the [Data Schemas](https://reprodb.github.io/data-schemas/) documentation.
 
-The complete pipeline takes ~30 minutes to run and processes the DBLP XML database (~3GB compressed) to match ~2,500+ artifact papers to author records and compute total paper counts.
+The complete pipeline takes ~30 minutes to run and processes the DBLP XML database (~3 GB compressed) to match {{ site.data.summary.total_artifacts }}+ artifact papers to author records and compute total paper counts.
 
 ## Author Metrics
 
@@ -258,7 +212,7 @@ For artifacts with GitHub/GitLab repositories or Zenodo/Figshare archives, we co
 
 ## Artifact Citations (Experimental)
 
-We attempted to track academic citations to artifact DOIs using [OpenAlex](https://openalex.org), querying citation counts for 782 artifact DOIs (Zenodo and Figshare).
+We attempted to track academic citations to artifact DOIs using [OpenAlex](https://openalex.org), querying citation counts for artifact DOIs (Zenodo and Figshare).
 
 ### Why Citation Data Is Not Included in Rankings
 
@@ -277,9 +231,9 @@ See the [verification scripts and detailed results](https://github.com/reprodb/r
 
 ## Data Sources
 
-- **[sysartifacts.github.io](https://sysartifacts.github.io)** — Systems conference artifact evaluation results (EuroSys, OSDI, SC, SOSP)
-- **[secartifacts.github.io](https://secartifacts.github.io)** — Security conference artifact evaluation results (ACSAC, CHES, NDSS, PETS, SysTEX, USENIX Security, WOOT)
-- **[usenix.org](https://www.usenix.org)** — Badge information for USENIX conferences (ATC, FAST)
+- **[sysartifacts.github.io](https://sysartifacts.github.io)** — Systems conference artifact evaluation results ({{ site.data.summary.systems_conferences | join: ", " }})
+- **[secartifacts.github.io](https://secartifacts.github.io)** — Security conference artifact evaluation results ({{ site.data.summary.security_conferences | join: ", " }})
+- **[usenix.org](https://www.usenix.org)** — Badge information for USENIX conferences
 - **[dblp.org](https://dblp.org)** — Author name matching and disambiguation
 - **[GitHub](https://docs.github.com/en/rest)**, **[Zenodo](https://developers.zenodo.org)**, **[Figshare](https://docs.figshare.com)** — Repository statistics (stars, forks, downloads)
 - **[Data Schemas](https://reprodb.github.io/data-schemas/)** — JSON Schema definitions for all data structures used by this site
