@@ -58,6 +58,34 @@
     }
   },
   {
+    "affiliation": "Academia Sinica",
+    "combined_score": 27,
+    "artifact_score": 21,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 3.5,
+    "role": "Producer",
+    "artifacts": 21,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 24,
+    "artifact_rate": 87.5,
+    "num_authors": 4,
+    "conferences": [
+      "CHES"
+    ],
+    "years": {
+      "2025": 2,
+      "2024": 2,
+      "2023": 4,
+      "2022": 7,
+      "2021": 7
+    }
+  },
+  {
     "affiliation": "KU Leuven",
     "combined_score": 27,
     "artifact_score": 4,
@@ -117,21 +145,21 @@
   },
   {
     "affiliation": "PQShield",
-    "combined_score": 19,
+    "combined_score": 22,
     "artifact_score": 1,
     "artifact_citations": 0,
     "citation_score": 0,
-    "ae_score": 18,
-    "ae_ratio": 0.06,
+    "ae_score": 21,
+    "ae_ratio": 0.05,
     "role": "Consumer",
     "artifacts": 1,
     "badges_functional": 0,
     "badges_reproducible": 0,
-    "ae_memberships": 6,
+    "ae_memberships": 7,
     "chair_count": 0,
     "total_papers": 4,
     "artifact_rate": 25.0,
-    "num_authors": 3,
+    "num_authors": 4,
     "conferences": [
       "CHES"
     ],
@@ -140,7 +168,7 @@
       "2025": 2,
       "2026": 1,
       "2023": 1,
-      "2022": 1,
+      "2022": 2,
       "2021": 1
     }
   },
@@ -171,34 +199,6 @@
       "2022": 2,
       "2021": 0,
       "2026": 1
-    }
-  },
-  {
-    "affiliation": "Academia Sinica",
-    "combined_score": 15,
-    "artifact_score": 12,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 4.0,
-    "role": "Producer",
-    "artifacts": 12,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 15,
-    "artifact_rate": 80.0,
-    "num_authors": 3,
-    "conferences": [
-      "CHES"
-    ],
-    "years": {
-      "2025": 1,
-      "2024": 0,
-      "2023": 3,
-      "2022": 5,
-      "2021": 4
     }
   },
   {
@@ -256,34 +256,6 @@
       "2023": 3,
       "2022": 1,
       "2021": 1
-    }
-  },
-  {
-    "affiliation": "Academia Sinica, Taiwan",
-    "combined_score": 12,
-    "artifact_score": 9,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 3.0,
-    "role": "Producer",
-    "artifacts": 9,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 9,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "CHES"
-    ],
-    "years": {
-      "2025": 1,
-      "2024": 2,
-      "2023": 1,
-      "2022": 2,
-      "2021": 3
     }
   },
   {
@@ -586,7 +558,7 @@
     }
   },
   {
-    "affiliation": "PQShield Ltd., Oxford, UK",
+    "affiliation": "PQShield Ltd.",
     "combined_score": 6,
     "artifact_score": 1,
     "artifact_citations": 0,
@@ -635,6 +607,31 @@
     ],
     "years": {
       "2025": 2
+    }
+  },
+  {
+    "affiliation": "NXP Semiconductors",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 2,
+    "conferences": [
+      "CHES"
+    ],
+    "years": {
+      "2022": 1,
+      "2026": 1
     }
   },
   {
@@ -882,7 +879,7 @@
     }
   },
   {
-    "affiliation": "Catholic University of Louvain, Louvain-la-Neuve, Belgium",
+    "affiliation": "Catholic University of Louvain",
     "combined_score": 4,
     "artifact_score": 1,
     "artifact_citations": 0,
@@ -966,7 +963,7 @@
     }
   },
   {
-    "affiliation": "Research Centre Inria Sophia Antipolis - Mditerrane: Valbonne, France",
+    "affiliation": "Research Centre Inria Sophia Antipolis - Mditerrane: Valbonne",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -1106,7 +1103,7 @@
     }
   },
   {
-    "affiliation": "Research Center for Information Technology Innovation, Academia Sinica",
+    "affiliation": "Research Center for Information Technology Innovation",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -1406,7 +1403,7 @@
     }
   },
   {
-    "affiliation": "PQShield, UK",
+    "affiliation": "Royal Holloway University of London",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,
@@ -1427,78 +1424,6 @@
     ],
     "years": {
       "2022": 1
-    }
-  },
-  {
-    "affiliation": "Royal Holloway University of London, UK",
-    "combined_score": 3,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "conferences": [
-      "CHES"
-    ],
-    "years": {
-      "2022": 1
-    }
-  },
-  {
-    "affiliation": "NXP Semiconductors, The Netherlands",
-    "combined_score": 3,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "conferences": [
-      "CHES"
-    ],
-    "years": {
-      "2022": 1
-    }
-  },
-  {
-    "affiliation": "NXP Semiconductors",
-    "combined_score": 3,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "conferences": [
-      "CHES"
-    ],
-    "years": {
-      "2026": 1
     }
   },
   {
@@ -1526,7 +1451,7 @@
     }
   },
   {
-    "affiliation": "CWI, The Netherlands",
+    "affiliation": "CWI",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,
@@ -1574,7 +1499,7 @@
     }
   },
   {
-    "affiliation": "CWI Cryptology Group, The Netherlands",
+    "affiliation": "CWI Cryptology Group",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,
@@ -1694,7 +1619,7 @@
     }
   },
   {
-    "affiliation": "Indian institute of technology Kharagpur, India",
+    "affiliation": "Indian institute of technology Kharagpur",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,

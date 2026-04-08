@@ -31,30 +31,30 @@
   },
   {
     "affiliation": "Google",
-    "combined_score": 37,
-    "artifact_score": 1,
+    "combined_score": 44,
+    "artifact_score": 2,
     "artifact_citations": 0,
     "citation_score": 0,
-    "ae_score": 36,
-    "ae_ratio": 0.03,
+    "ae_score": 42,
+    "ae_ratio": 0.05,
     "role": "Consumer",
-    "artifacts": 1,
+    "artifacts": 2,
     "badges_functional": 0,
     "badges_reproducible": 0,
-    "ae_memberships": 12,
+    "ae_memberships": 14,
     "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 50.0,
-    "num_authors": 6,
+    "total_papers": 9,
+    "artifact_rate": 22.2,
+    "num_authors": 7,
     "conferences": [
       "PETS"
     ],
     "years": {
-      "2024": 3,
-      "2025": 6,
+      "2024": 4,
+      "2025": 7,
       "2026": 3,
       "2023": 0,
-      "2022": 1,
+      "2022": 2,
       "2021": 0,
       "2020": 0
     }
@@ -86,6 +86,36 @@
       "2023": 0,
       "2022": 3,
       "2021": 1,
+      "2020": 1
+    }
+  },
+  {
+    "affiliation": "TU Darmstadt",
+    "combined_score": 29,
+    "artifact_score": 20,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 9,
+    "ae_ratio": 2.22,
+    "role": "Producer",
+    "artifacts": 11,
+    "badges_functional": 5,
+    "badges_reproducible": 4,
+    "ae_memberships": 3,
+    "chair_count": 0,
+    "total_papers": 16,
+    "artifact_rate": 68.8,
+    "num_authors": 7,
+    "conferences": [
+      "PETS"
+    ],
+    "years": {
+      "2026": 2,
+      "2025": 5,
+      "2024": 2,
+      "2023": 1,
+      "2022": 1,
+      "2021": 2,
       "2020": 1
     }
   },
@@ -147,36 +177,6 @@
       "2022": 1,
       "2021": 0,
       "2020": 0
-    }
-  },
-  {
-    "affiliation": "TU Darmstadt",
-    "combined_score": 26,
-    "artifact_score": 17,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 9,
-    "ae_ratio": 1.89,
-    "role": "Balanced",
-    "artifacts": 10,
-    "badges_functional": 4,
-    "badges_reproducible": 3,
-    "ae_memberships": 3,
-    "chair_count": 0,
-    "total_papers": 15,
-    "artifact_rate": 66.7,
-    "num_authors": 6,
-    "conferences": [
-      "PETS"
-    ],
-    "years": {
-      "2026": 2,
-      "2025": 4,
-      "2024": 2,
-      "2023": 1,
-      "2022": 1,
-      "2021": 2,
-      "2020": 1
     }
   },
   {
@@ -411,6 +411,36 @@
       "2024": 1,
       "2025": 1,
       "2026": 1
+    }
+  },
+  {
+    "affiliation": "King's College London",
+    "combined_score": 18,
+    "artifact_score": 9,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 9,
+    "ae_ratio": 1.0,
+    "role": "Balanced",
+    "artifacts": 3,
+    "badges_functional": 3,
+    "badges_reproducible": 3,
+    "ae_memberships": 3,
+    "chair_count": 0,
+    "total_papers": 4,
+    "artifact_rate": 75.0,
+    "num_authors": 4,
+    "conferences": [
+      "PETS"
+    ],
+    "years": {
+      "2024": 1,
+      "2025": 3,
+      "2026": 2,
+      "2023": 0,
+      "2022": 0,
+      "2021": 0,
+      "2020": 0
     }
   },
   {
@@ -673,36 +703,6 @@
       "2024": 2,
       "2023": 1,
       "2022": 1,
-      "2021": 0,
-      "2020": 0
-    }
-  },
-  {
-    "affiliation": "King's College London",
-    "combined_score": 15,
-    "artifact_score": 6,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 9,
-    "ae_ratio": 0.67,
-    "role": "Balanced",
-    "artifacts": 2,
-    "badges_functional": 2,
-    "badges_reproducible": 2,
-    "ae_memberships": 3,
-    "chair_count": 0,
-    "total_papers": 3,
-    "artifact_rate": 66.7,
-    "num_authors": 3,
-    "conferences": [
-      "PETS"
-    ],
-    "years": {
-      "2024": 1,
-      "2025": 2,
-      "2026": 2,
-      "2023": 0,
-      "2022": 0,
       "2021": 0,
       "2020": 0
     }
@@ -1707,36 +1707,6 @@
     }
   },
   {
-    "affiliation": "Google, Mountain View, CA, USA",
-    "combined_score": 7,
-    "artifact_score": 1,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 6,
-    "ae_ratio": 0.17,
-    "role": "Consumer",
-    "artifacts": 1,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 2,
-    "chair_count": 0,
-    "total_papers": 7,
-    "artifact_rate": 14.3,
-    "num_authors": 1,
-    "conferences": [
-      "PETS"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 1,
-      "2024": 1,
-      "2023": 0,
-      "2022": 1,
-      "2021": 0,
-      "2020": 0
-    }
-  },
-  {
     "affiliation": "Univ. of Maryland - College Park",
     "combined_score": 7,
     "artifact_score": 7,
@@ -2470,7 +2440,7 @@
     }
   },
   {
-    "affiliation": "cole Polytechnique, Paris, France",
+    "affiliation": "cole Polytechnique",
     "combined_score": 4,
     "artifact_score": 4,
     "artifact_citations": 0,
@@ -2650,7 +2620,7 @@
     }
   },
   {
-    "affiliation": "Maastricht Universit, The Netherlands",
+    "affiliation": "Maastricht Universit",
     "combined_score": 4,
     "artifact_score": 1,
     "artifact_citations": 0,
@@ -2770,7 +2740,7 @@
     }
   },
   {
-    "affiliation": "Catholic University of Leuven, Belgium",
+    "affiliation": "Catholic University of Leuven",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -3100,7 +3070,7 @@
     }
   },
   {
-    "affiliation": "Robert Bosch GmbH, Germany",
+    "affiliation": "Robert Bosch GmbH",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -3130,7 +3100,7 @@
     }
   },
   {
-    "affiliation": "Westphalia University of Applied Sciences Gelsenkirchen, Germany",
+    "affiliation": "Westphalia University of Applied Sciences Gelsenkirchen",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -3310,36 +3280,6 @@
     }
   },
   {
-    "affiliation": "TU Darmstadt, Germany",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "PETS"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 1,
-      "2024": 0,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0
-    }
-  },
-  {
     "affiliation": "Hasso Plattner Institute",
     "combined_score": 3,
     "artifact_score": 3,
@@ -3400,7 +3340,7 @@
     }
   },
   {
-    "affiliation": "TU Wien, Austria",
+    "affiliation": "TU Wien",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -3490,7 +3430,7 @@
     }
   },
   {
-    "affiliation": "Robert Bosch Research and Technology Center, Germany",
+    "affiliation": "Robert Bosch Research and Technology Center",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -3550,7 +3490,7 @@
     }
   },
   {
-    "affiliation": "Beijing Institute of Technology, China",
+    "affiliation": "Beijing Institute of Technology",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -3730,7 +3670,7 @@
     }
   },
   {
-    "affiliation": "Naval Research Laboratory, USA",
+    "affiliation": "Naval Research Laboratory",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -3820,36 +3760,6 @@
     }
   },
   {
-    "affiliation": "King's College London, London, UK",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "PETS"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 1,
-      "2024": 0,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0
-    }
-  },
-  {
     "affiliation": "University of Warsaw",
     "combined_score": 3,
     "artifact_score": 3,
@@ -3880,7 +3790,7 @@
     }
   },
   {
-    "affiliation": "Ca' Foscari University of Venice, Italy",
+    "affiliation": "Ca' Foscari University of Venice",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -4096,7 +4006,7 @@
     }
   },
   {
-    "affiliation": "Staff Engineer, Lyft",
+    "affiliation": "Staff Engineer",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,
@@ -4168,7 +4078,7 @@
     }
   },
   {
-    "affiliation": "Valencian Research Institute for Artificial Intelligence (VRAIN), Universitat Politècnica de València (UPV), Spain",
+    "affiliation": "Valencian Research Institute for Artificial Intelligence (VRAIN), Universitat Politècnica de València (UPV)",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,
@@ -4264,7 +4174,7 @@
     }
   },
   {
-    "affiliation": "CSIRO's Data61, Australia",
+    "affiliation": "CSIRO's Data61",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,
@@ -4288,7 +4198,7 @@
     }
   },
   {
-    "affiliation": "UMD, CP",
+    "affiliation": "UMD",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,

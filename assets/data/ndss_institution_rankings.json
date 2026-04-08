@@ -806,6 +806,32 @@
     }
   },
   {
+    "affiliation": "New York University Abu Dhabi",
+    "combined_score": 9,
+    "artifact_score": 6,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 2.0,
+    "role": "Balanced",
+    "artifacts": 2,
+    "badges_functional": 2,
+    "badges_reproducible": 2,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 100.0,
+    "num_authors": 2,
+    "conferences": [
+      "NDSS"
+    ],
+    "years": {
+      "2026": 1,
+      "2025": 2,
+      "2024": 0
+    }
+  },
+  {
     "affiliation": "University of South Florida",
     "combined_score": 9,
     "artifact_score": 3,
@@ -1214,7 +1240,7 @@
     }
   },
   {
-    "affiliation": "Catholic University of Leuven, Belgium",
+    "affiliation": "Catholic University of Leuven",
     "combined_score": 6,
     "artifact_score": 6,
     "artifact_citations": 0,
@@ -1263,32 +1289,6 @@
       "2026": 0,
       "2025": 1,
       "2024": 1
-    }
-  },
-  {
-    "affiliation": "New York University Abu Dhabi, UAE",
-    "combined_score": 6,
-    "artifact_score": 6,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 2,
-    "badges_functional": 2,
-    "badges_reproducible": 2,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "NDSS"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 2,
-      "2024": 0
     }
   },
   {
@@ -1620,7 +1620,7 @@
     }
   },
   {
-    "affiliation": "Cyber Defense, PwC, USA",
+    "affiliation": "Cyber Defense",
     "combined_score": 6,
     "artifact_score": 0,
     "artifact_citations": 0,
@@ -1670,7 +1670,7 @@
     }
   },
   {
-    "affiliation": "A2 Labs LLC, Virginia Tech",
+    "affiliation": "A2 Labs LLC",
     "combined_score": 6,
     "artifact_score": 0,
     "artifact_citations": 0,
@@ -1846,6 +1846,32 @@
       "2026": 0,
       "2025": 0,
       "2024": 2
+    }
+  },
+  {
+    "affiliation": "Academia Sinica",
+    "combined_score": 6,
+    "artifact_score": 6,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 2,
+    "badges_functional": 2,
+    "badges_reproducible": 2,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 100.0,
+    "num_authors": 2,
+    "conferences": [
+      "NDSS"
+    ],
+    "years": {
+      "2026": 0,
+      "2025": 2,
+      "2024": 0
     }
   },
   {
@@ -2514,32 +2540,6 @@
     }
   },
   {
-    "affiliation": "Academia Sinica",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "NDSS"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 1,
-      "2024": 0
-    }
-  },
-  {
     "affiliation": "Univ. of California - Davis",
     "combined_score": 3,
     "artifact_score": 3,
@@ -2852,7 +2852,7 @@
     }
   },
   {
-    "affiliation": "Politecnico di Torino, Dromt",
+    "affiliation": "Politecnico di Torino",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -3060,33 +3060,7 @@
     }
   },
   {
-    "affiliation": "Academia Sinica, Taipei, Taiwan",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "NDSS"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 1,
-      "2024": 0
-    }
-  },
-  {
-    "affiliation": "INESC TEC, Portugal",
+    "affiliation": "INESC TEC",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -3112,7 +3086,7 @@
     }
   },
   {
-    "affiliation": "China University of Geosciences, School of Computer Science, Wuhan, China",
+    "affiliation": "China University of Geosciences, School of Computer Science",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -3268,7 +3242,7 @@
     }
   },
   {
-    "affiliation": "Beijing University of Technology, Faculty of Information Technology, China",
+    "affiliation": "Beijing University of Technology, Faculty of Information Technology",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -3346,7 +3320,7 @@
     }
   },
   {
-    "affiliation": "SRI International, Menlo Park, CA, USA",
+    "affiliation": "SRI International",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -3502,7 +3476,7 @@
     }
   },
   {
-    "affiliation": "Zhejiang University of Technology, Department of Computer Science, Hangzhou, China",
+    "affiliation": "Zhejiang University of Technology, Department of Computer Science",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -3554,7 +3528,7 @@
     }
   },
   {
-    "affiliation": "National University of Defense Technology (NUDT), School of Computer, Changsha, China",
+    "affiliation": "National University of Defense Technology (NUDT), School of Computer",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -3904,7 +3878,7 @@
     }
   },
   {
-    "affiliation": "CSIRO's Data61, Australia",
+    "affiliation": "CSIRO's Data61",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,
@@ -4193,30 +4167,6 @@
   },
   {
     "affiliation": "KTH Royal Institute of Technology",
-    "combined_score": 3,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "conferences": [
-      "NDSS"
-    ],
-    "years": {
-      "2026": 1
-    }
-  },
-  {
-    "affiliation": "New York University Abu Dhabi",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,

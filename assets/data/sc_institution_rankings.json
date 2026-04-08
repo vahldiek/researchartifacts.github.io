@@ -120,6 +120,30 @@
     }
   },
   {
+    "affiliation": "Lawrence Livermore National Laboratory",
+    "combined_score": 15,
+    "artifact_score": 12,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 4.0,
+    "role": "Producer",
+    "artifacts": 4,
+    "badges_functional": 4,
+    "badges_reproducible": 4,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 4,
+    "artifact_rate": 100.0,
+    "num_authors": 4,
+    "conferences": [
+      "SC"
+    ],
+    "years": {
+      "2021": 4
+    }
+  },
+  {
     "affiliation": "Georgia Institute of Technology",
     "combined_score": 12,
     "artifact_score": 9,
@@ -216,30 +240,6 @@
     }
   },
   {
-    "affiliation": "Lawrence Livermore National Laboratory, CA, USA",
-    "combined_score": 9,
-    "artifact_score": 9,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 3,
-    "badges_functional": 3,
-    "badges_reproducible": 3,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 3,
-    "artifact_rate": 100.0,
-    "num_authors": 3,
-    "conferences": [
-      "SC"
-    ],
-    "years": {
-      "2021": 3
-    }
-  },
-  {
     "affiliation": "Hunan University",
     "combined_score": 9,
     "artifact_score": 9,
@@ -288,7 +288,7 @@
     }
   },
   {
-    "affiliation": "Pacific Northwest National Laboratory, Richland, WA, USA",
+    "affiliation": "Pacific Northwest National Laboratory",
     "combined_score": 8,
     "artifact_score": 8,
     "artifact_citations": 0,
@@ -480,30 +480,6 @@
     }
   },
   {
-    "affiliation": "Lawrence Livermore National Laboratory",
-    "combined_score": 6,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 1.0,
-    "role": "Balanced",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "SC"
-    ],
-    "years": {
-      "2021": 1
-    }
-  },
-  {
     "affiliation": "Vrije Universiteit Amsterdam",
     "combined_score": 6,
     "artifact_score": 3,
@@ -549,6 +525,30 @@
     ],
     "years": {
       "2021": 3
+    }
+  },
+  {
+    "affiliation": "Chinese Academy of Sciences",
+    "combined_score": 6,
+    "artifact_score": 6,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 4,
+    "badges_functional": 2,
+    "badges_reproducible": 0,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 7,
+    "artifact_rate": 57.1,
+    "num_authors": 2,
+    "conferences": [
+      "SC"
+    ],
+    "years": {
+      "2021": 4
     }
   },
   {
@@ -624,7 +624,31 @@
     }
   },
   {
-    "affiliation": "Johannes Gutenberg-Universitt Mainz, Germany",
+    "affiliation": "Johannes Gutenberg-Universitt Mainz",
+    "combined_score": 6,
+    "artifact_score": 6,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 2,
+    "badges_functional": 2,
+    "badges_reproducible": 2,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 100.0,
+    "num_authors": 2,
+    "conferences": [
+      "SC"
+    ],
+    "years": {
+      "2021": 2
+    }
+  },
+  {
+    "affiliation": "Los Alamos National Laboratory",
     "combined_score": 6,
     "artifact_score": 6,
     "artifact_citations": 0,
@@ -840,7 +864,7 @@
     }
   },
   {
-    "affiliation": "Chinese Academy of Sciences, Institute of Computing Technology, Beijing, China",
+    "affiliation": "Chinese Academy of Sciences, Institute of Computing Technology",
     "combined_score": 5,
     "artifact_score": 5,
     "artifact_citations": 0,
@@ -936,30 +960,6 @@
     }
   },
   {
-    "affiliation": "Chinese Academy of Sciences, Beijing, China",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 2,
-    "badges_functional": 1,
-    "badges_reproducible": 0,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "SC"
-    ],
-    "years": {
-      "2021": 2
-    }
-  },
-  {
     "affiliation": "University of Chinese Academy of Sciences",
     "combined_score": 3,
     "artifact_score": 3,
@@ -975,30 +975,6 @@
     "chair_count": 0,
     "total_papers": 2,
     "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "SC"
-    ],
-    "years": {
-      "2021": 2
-    }
-  },
-  {
-    "affiliation": "Chinese Academy of Sciences",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 2,
-    "badges_functional": 1,
-    "badges_reproducible": 0,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 5,
-    "artifact_rate": 40.0,
     "num_authors": 1,
     "conferences": [
       "SC"
@@ -1080,7 +1056,7 @@
     }
   },
   {
-    "affiliation": "Johannes Gutenberg University Mainz, Data Center, Germany",
+    "affiliation": "Johannes Gutenberg University Mainz, Data Center",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -1368,31 +1344,7 @@
     }
   },
   {
-    "affiliation": "Los Alamos National Laboratory",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "SC"
-    ],
-    "years": {
-      "2021": 1
-    }
-  },
-  {
-    "affiliation": "Tech-X Corporation, Boulder, CO, USA",
+    "affiliation": "Tech-X Corporation",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -1464,7 +1416,7 @@
     }
   },
   {
-    "affiliation": "Los Alamos National Laboratory, Defense Systems and Analysis Division, USA",
+    "affiliation": "Los Alamos National Laboratory, Defense Systems and Analysis Division",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -1560,31 +1512,7 @@
     }
   },
   {
-    "affiliation": "Los Alamos National Laboratory, Los Alamos, NM, USA",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "SC"
-    ],
-    "years": {
-      "2021": 1
-    }
-  },
-  {
-    "affiliation": "Alibaba Group, Hangzhou, China",
+    "affiliation": "Alibaba Group",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -1680,7 +1608,7 @@
     }
   },
   {
-    "affiliation": "ByteDance, Singapore",
+    "affiliation": "ByteDance",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -1704,7 +1632,7 @@
     }
   },
   {
-    "affiliation": "Alibaba Group, Alibaba Cloud, Hangzhou, China",
+    "affiliation": "Alibaba Group, Alibaba Cloud",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -1824,7 +1752,7 @@
     }
   },
   {
-    "affiliation": "Huazhong University of Science and Technology, Wuhan, China",
+    "affiliation": "Huazhong University of Science and Technology",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -1872,7 +1800,7 @@
     }
   },
   {
-    "affiliation": "Leonardo Labs, Italy",
+    "affiliation": "Leonardo Labs",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,

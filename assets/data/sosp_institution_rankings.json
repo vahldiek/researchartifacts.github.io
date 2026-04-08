@@ -540,6 +540,33 @@
     }
   },
   {
+    "affiliation": "Amazon Web Services",
+    "combined_score": 19,
+    "artifact_score": 13,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 2.17,
+    "role": "Producer",
+    "artifacts": 5,
+    "badges_functional": 5,
+    "badges_reproducible": 3,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 5,
+    "artifact_rate": 100.0,
+    "num_authors": 3,
+    "conferences": [
+      "SOSP"
+    ],
+    "years": {
+      "2024": 0,
+      "2023": 4,
+      "2022": 0,
+      "2021": 3
+    }
+  },
+  {
     "affiliation": "University of Science and Technology of China",
     "combined_score": 18,
     "artifact_score": 15,
@@ -863,7 +890,7 @@
     }
   },
   {
-    "affiliation": "Huawei Cloud, Shenzhen, China",
+    "affiliation": "Huawei Cloud",
     "combined_score": 12,
     "artifact_score": 12,
     "artifact_citations": 0,
@@ -917,7 +944,7 @@
     }
   },
   {
-    "affiliation": "Alibaba Group, Hangzhou, China",
+    "affiliation": "Alibaba Group",
     "combined_score": 12,
     "artifact_score": 12,
     "artifact_citations": 0,
@@ -1209,6 +1236,33 @@
     }
   },
   {
+    "affiliation": "Google DeepMind",
+    "combined_score": 10,
+    "artifact_score": 10,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 4,
+    "badges_functional": 4,
+    "badges_reproducible": 2,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 4,
+    "artifact_rate": 100.0,
+    "num_authors": 2,
+    "conferences": [
+      "SOSP"
+    ],
+    "years": {
+      "2024": 0,
+      "2023": 2,
+      "2022": 0,
+      "2021": 2
+    }
+  },
+  {
     "affiliation": "New York University",
     "combined_score": 9,
     "artifact_score": 9,
@@ -1317,6 +1371,33 @@
     }
   },
   {
+    "affiliation": "Imperial College London",
+    "combined_score": 9,
+    "artifact_score": 6,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 2.0,
+    "role": "Balanced",
+    "artifacts": 2,
+    "badges_functional": 2,
+    "badges_reproducible": 2,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 100.0,
+    "num_authors": 3,
+    "conferences": [
+      "SOSP"
+    ],
+    "years": {
+      "2024": 2,
+      "2023": 1,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
     "affiliation": "Sun Yat-sen University",
     "combined_score": 9,
     "artifact_score": 3,
@@ -1369,34 +1450,7 @@
     }
   },
   {
-    "affiliation": "Amazon Web Services, Santa Clara, California, United States of America",
-    "combined_score": 7,
-    "artifact_score": 7,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 3,
-    "badges_functional": 3,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 3,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "SOSP"
-    ],
-    "years": {
-      "2024": 0,
-      "2023": 1,
-      "2022": 0,
-      "2021": 2
-    }
-  },
-  {
-    "affiliation": "Igalia, Remote, Korea, South ? Republic of Korea",
+    "affiliation": "Igalia",
     "combined_score": 6,
     "artifact_score": 6,
     "artifact_citations": 0,
@@ -1450,7 +1504,7 @@
     }
   },
   {
-    "affiliation": "School of Computer Science, Fudan University, Shanghai, China",
+    "affiliation": "School of Computer Science, Fudan University",
     "combined_score": 6,
     "artifact_score": 6,
     "artifact_citations": 0,
@@ -1472,33 +1526,6 @@
     "years": {
       "2024": 1,
       "2023": 1,
-      "2022": 0,
-      "2021": 0
-    }
-  },
-  {
-    "affiliation": "Amazon Web Services, Seattle, WA, USA",
-    "combined_score": 6,
-    "artifact_score": 6,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 2,
-    "badges_functional": 2,
-    "badges_reproducible": 2,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "SOSP"
-    ],
-    "years": {
-      "2024": 0,
-      "2023": 2,
       "2022": 0,
       "2021": 0
     }
@@ -1555,31 +1582,6 @@
       "2023": 0,
       "2022": 0,
       "2021": 1
-    }
-  },
-  {
-    "affiliation": "Amazon Web Services",
-    "combined_score": 6,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 6,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 2,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "conferences": [
-      "SOSP"
-    ],
-    "years": {
-      "2021": 1,
-      "2023": 1
     }
   },
   {
@@ -1660,7 +1662,7 @@
     }
   },
   {
-    "affiliation": "School of Computer Science, Peking University, Beijing, China",
+    "affiliation": "School of Computer Science, Peking University",
     "combined_score": 6,
     "artifact_score": 6,
     "artifact_citations": 0,
@@ -1741,7 +1743,7 @@
     }
   },
   {
-    "affiliation": "Huawei Dresden Research Center, Germany",
+    "affiliation": "Huawei Dresden Research Center",
     "combined_score": 6,
     "artifact_score": 6,
     "artifact_citations": 0,
@@ -1792,6 +1794,33 @@
       "2023": 0,
       "2022": 0,
       "2021": 2
+    }
+  },
+  {
+    "affiliation": "Dresden University of Technology",
+    "combined_score": 6,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 1.0,
+    "role": "Balanced",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 50.0,
+    "num_authors": 2,
+    "conferences": [
+      "SOSP"
+    ],
+    "years": {
+      "2024": 0,
+      "2023": 1,
+      "2022": 0,
+      "2021": 1
     }
   },
   {
@@ -1900,33 +1929,6 @@
       "2023": 0,
       "2022": 0,
       "2021": 1
-    }
-  },
-  {
-    "affiliation": "Imperial College London",
-    "combined_score": 6,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 1.0,
-    "role": "Balanced",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 2,
-    "conferences": [
-      "SOSP"
-    ],
-    "years": {
-      "2024": 1,
-      "2023": 1,
-      "2022": 0,
-      "2021": 0
     }
   },
   {
@@ -2129,60 +2131,6 @@
     }
   },
   {
-    "affiliation": "Google DeepMind",
-    "combined_score": 5,
-    "artifact_score": 5,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 2,
-    "badges_functional": 2,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "SOSP"
-    ],
-    "years": {
-      "2024": 0,
-      "2023": 1,
-      "2022": 0,
-      "2021": 1
-    }
-  },
-  {
-    "affiliation": "Google DeepMind, Mountain View, CA, USA",
-    "combined_score": 5,
-    "artifact_score": 5,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 2,
-    "badges_functional": 2,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "SOSP"
-    ],
-    "years": {
-      "2024": 0,
-      "2023": 1,
-      "2022": 0,
-      "2021": 1
-    }
-  },
-  {
     "affiliation": "University of North Carolina",
     "combined_score": 5,
     "artifact_score": 5,
@@ -2363,7 +2311,7 @@
     }
   },
   {
-    "affiliation": "Oracle Labs, Zürich, CH",
+    "affiliation": "Oracle Labs",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -2390,7 +2338,7 @@
     }
   },
   {
-    "affiliation": "Petuum, Inc., Boston, USA",
+    "affiliation": "Petuum, Inc.",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -2471,7 +2419,7 @@
     }
   },
   {
-    "affiliation": "IBM Thomas J. Watson Research Center, Yorktown Heights, NY, USA",
+    "affiliation": "IBM Thomas J. Watson Research Center",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -2552,33 +2500,6 @@
     }
   },
   {
-    "affiliation": "Imperial College London, London, United Kingdom",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "SOSP"
-    ],
-    "years": {
-      "2024": 1,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0
-    }
-  },
-  {
     "affiliation": "University of Hong Kong",
     "combined_score": 3,
     "artifact_score": 3,
@@ -2606,7 +2527,7 @@
     }
   },
   {
-    "affiliation": "DBOS, inc, Sunnyvale, California, USA",
+    "affiliation": "DBOS, inc",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -2630,33 +2551,6 @@
       "2023": 1,
       "2022": 0,
       "2021": 0
-    }
-  },
-  {
-    "affiliation": "Dresden University of Technology, Germany",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 50.0,
-    "num_authors": 1,
-    "conferences": [
-      "SOSP"
-    ],
-    "years": {
-      "2024": 0,
-      "2023": 0,
-      "2022": 0,
-      "2021": 1
     }
   },
   {
@@ -2687,7 +2581,7 @@
     }
   },
   {
-    "affiliation": "Mysten Labs, Zürich, CH",
+    "affiliation": "Mysten Labs",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -2768,7 +2662,7 @@
     }
   },
   {
-    "affiliation": "VMware Research, Bellevue, WA, US",
+    "affiliation": "VMware Research",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -2903,7 +2797,7 @@
     }
   },
   {
-    "affiliation": "IBM T.J. Watson Research Center, Hawthorne, NY, USA",
+    "affiliation": "IBM T.J. Watson Research Center",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -2957,7 +2851,7 @@
     }
   },
   {
-    "affiliation": "VMware, Palo Alto, CA, USA",
+    "affiliation": "VMware",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -2984,7 +2878,7 @@
     }
   },
   {
-    "affiliation": "Weizmann Institute of Science, Rehovot, Israel",
+    "affiliation": "Weizmann Institute of Science",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -3011,7 +2905,7 @@
     }
   },
   {
-    "affiliation": "Pontifical Catholic University of Minas Gerais, Belo Horizonte, Brazil",
+    "affiliation": "Pontifical Catholic University of Minas Gerais",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -3038,7 +2932,7 @@
     }
   },
   {
-    "affiliation": "Tlcom SudParis, Palaiseau, France",
+    "affiliation": "Tlcom SudParis",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -3416,7 +3310,7 @@
     }
   },
   {
-    "affiliation": "Pelikan Foundation, San Francisco, United States of America",
+    "affiliation": "Pelikan Foundation",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -3443,7 +3337,7 @@
     }
   },
   {
-    "affiliation": "Amazon Web Services, Inc., East Palo Alto, CA, USA",
+    "affiliation": "Amazon Web Services, Inc.",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -3578,7 +3472,7 @@
     }
   },
   {
-    "affiliation": "AWS Shanghai AI Lab, Shanghai, China",
+    "affiliation": "AWS Shanghai AI Lab",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -3605,7 +3499,7 @@
     }
   },
   {
-    "affiliation": "Google LLC, Seattle, Washington, United States",
+    "affiliation": "Google LLC",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -3632,7 +3526,7 @@
     }
   },
   {
-    "affiliation": "Department of Computer Science, Rice University, Houston, Texas, United States of America",
+    "affiliation": "Department of Computer Science, Rice University",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -3686,7 +3580,7 @@
     }
   },
   {
-    "affiliation": "Department of Computer Science, University of Chicago, Chicago, IL, USA",
+    "affiliation": "Department of Computer Science, University of Chicago",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -4337,30 +4231,6 @@
     }
   },
   {
-    "affiliation": "Dresden University of Technology",
-    "combined_score": 3,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "conferences": [
-      "SOSP"
-    ],
-    "years": {
-      "2023": 1
-    }
-  },
-  {
     "affiliation": "Augusta University",
     "combined_score": 3,
     "artifact_score": 0,
@@ -4529,7 +4399,7 @@
     }
   },
   {
-    "affiliation": "Sorbonne University and ADLINK Technology Inc., France",
+    "affiliation": "Sorbonne University and ADLINK Technology Inc.",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,
