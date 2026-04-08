@@ -77,28 +77,19 @@ The total number of papers this author published at tracked conferences, **count
 The paper count is determined by matching author names to DBLP records and filtering by conference and year.
 
 ### Artifact Rate (AR%)
-The percentage of an author's papers (at AE-active conferences) that have artifact badges:
-
-**AR%** = (Artifacts / Total Papers) × 100
+The percentage of an author's papers (at AE-active conferences) that have artifact badges: **AR% = (Artifacts / Total Papers) × 100**.
 
 **Key point:** The denominator includes only papers from years when the venue had artifact evaluation. This ensures the rate reflects artifact adoption within the relevant time window, avoiding both over-inflation (counting only artifact papers) and under-inflation (counting all historical publications).
 
 **Cross-area handling:** For authors active in both systems and security, contributions are **summed**. If an author has 10 systems papers and 5 security papers (all in AE-active years), the denominator is 15. This additive approach is correct because systems and security conferences are disjoint publication venues.
 
 ### Reproducibility Rate (RR%)
-Among papers with artifacts, the percentage achieving the highest-tier badge (Reproduced or Reusable):
-
-**RR%** = (Reproduced badges / Total artifacts) × 100
-
+Among papers with artifacts, the percentage achieving the highest-tier badge (Reproduced or Reusable): **RR% = (Reproduced badges / Total artifacts) × 100**.
 This measures the depth of reproducibility beyond mere artifact availability.
 
 ### Artifact:Evaluation Ratio (A:E)
 
-The A:E ratio characterizes the balance between artifact production and evaluation service:
-
-**A:E** = Artifact Score / AE Score
-
-Where:
+The A:E ratio characterizes the balance between artifact production and evaluation service: **A:E = Artifact Score / AE Score**, where:
 - **Artifact Score** = sum of badge points (Available+1, Functional+1, Reproduced+1 per artifact)
 - **AE Score** = committee service points (member=3, chair=5)
 
