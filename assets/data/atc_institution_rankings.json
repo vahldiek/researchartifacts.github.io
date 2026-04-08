@@ -399,6 +399,33 @@
     }
   },
   {
+    "affiliation": "ByteDance",
+    "combined_score": 25,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 25,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 7,
+    "chair_count": 2,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 3,
+    "conferences": [
+      "ATC"
+    ],
+    "years": {
+      "2023": 1,
+      "2024": 2,
+      "2025": 2,
+      "2022": 2
+    }
+  },
+  {
     "affiliation": "Imperial College London",
     "combined_score": 25,
     "artifact_score": 4,
@@ -480,6 +507,32 @@
     }
   },
   {
+    "affiliation": "Alibaba Group",
+    "combined_score": 24,
+    "artifact_score": 24,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 9,
+    "badges_functional": 8,
+    "badges_reproducible": 7,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 14,
+    "artifact_rate": 64.3,
+    "num_authors": 7,
+    "conferences": [
+      "ATC"
+    ],
+    "years": {
+      "2024": 0,
+      "2023": 4,
+      "2022": 5
+    }
+  },
+  {
     "affiliation": "Microsoft Research",
     "combined_score": 24,
     "artifact_score": 3,
@@ -507,30 +560,30 @@
     }
   },
   {
-    "affiliation": "ByteDance",
-    "combined_score": 22,
-    "artifact_score": 0,
+    "affiliation": "Huazhong University of Science and Technology",
+    "combined_score": 24,
+    "artifact_score": 3,
     "artifact_citations": 0,
     "citation_score": 0,
-    "ae_score": 22,
-    "ae_ratio": 0.0,
+    "ae_score": 21,
+    "ae_ratio": 0.14,
     "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 6,
-    "chair_count": 2,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 3,
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 7,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 8,
     "conferences": [
       "ATC"
     ],
     "years": {
+      "2024": 0,
       "2023": 1,
-      "2024": 2,
-      "2025": 2,
-      "2022": 1
+      "2022": 3,
+      "2025": 4
     }
   },
   {
@@ -558,32 +611,6 @@
       "2023": 1,
       "2024": 2,
       "2025": 1
-    }
-  },
-  {
-    "affiliation": "Alibaba Group",
-    "combined_score": 21,
-    "artifact_score": 21,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 8,
-    "badges_functional": 7,
-    "badges_reproducible": 6,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 12,
-    "artifact_rate": 66.7,
-    "num_authors": 6,
-    "conferences": [
-      "ATC"
-    ],
-    "years": {
-      "2024": 0,
-      "2023": 4,
-      "2022": 4
     }
   },
   {
@@ -637,31 +664,6 @@
       "2023": 0,
       "2022": 1,
       "2025": 4
-    }
-  },
-  {
-    "affiliation": "Huazhong University of Science and Technology",
-    "combined_score": 21,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 21,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 7,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 7,
-    "conferences": [
-      "ATC"
-    ],
-    "years": {
-      "2025": 4,
-      "2022": 3
     }
   },
   {
@@ -744,7 +746,7 @@
     }
   },
   {
-    "affiliation": "Institute of Software, Chinese Academy of Sciences",
+    "affiliation": "Institute of Software",
     "combined_score": 18,
     "artifact_score": 0,
     "artifact_citations": 0,
@@ -846,6 +848,31 @@
       "2023": 0,
       "2022": 1,
       "2025": 1
+    }
+  },
+  {
+    "affiliation": "INESC-ID and Instituto Superior Técnico",
+    "combined_score": 15,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 15,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 5,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 3,
+    "conferences": [
+      "ATC"
+    ],
+    "years": {
+      "2024": 3,
+      "2025": 2
     }
   },
   {
@@ -1128,31 +1155,6 @@
       "2024": 0,
       "2023": 0,
       "2022": 3
-    }
-  },
-  {
-    "affiliation": "INESC-ID and Instituto Superior Técnico",
-    "combined_score": 12,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 12,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 4,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 2,
-    "conferences": [
-      "ATC"
-    ],
-    "years": {
-      "2024": 2,
-      "2025": 2
     }
   },
   {
@@ -1900,7 +1902,7 @@
     }
   },
   {
-    "affiliation": "Royal Holloway, University of London",
+    "affiliation": "Royal Holloway",
     "combined_score": 8,
     "artifact_score": 0,
     "artifact_citations": 0,
@@ -2670,6 +2672,32 @@
       "2024": 0,
       "2023": 2,
       "2022": 0
+    }
+  },
+  {
+    "affiliation": "U.S. Naval Research Laboratory",
+    "combined_score": 6,
+    "artifact_score": 6,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 2,
+    "badges_functional": 2,
+    "badges_reproducible": 2,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 100.0,
+    "num_authors": 2,
+    "conferences": [
+      "ATC"
+    ],
+    "years": {
+      "2024": 0,
+      "2023": 0,
+      "2022": 2
     }
   },
   {
@@ -3697,58 +3725,6 @@
     }
   },
   {
-    "affiliation": "U.S. Naval Research Laboratory",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "ATC"
-    ],
-    "years": {
-      "2024": 0,
-      "2023": 0,
-      "2022": 1
-    }
-  },
-  {
-    "affiliation": "U.S. Naval Research Laboratory, Georgetown University",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "ATC"
-    ],
-    "years": {
-      "2024": 0,
-      "2023": 0,
-      "2022": 1
-    }
-  },
-  {
     "affiliation": "IIT Bombay",
     "combined_score": 3,
     "artifact_score": 3,
@@ -4035,32 +4011,6 @@
     }
   },
   {
-    "affiliation": "Alibaba Group, Alibaba Cloud",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 50.0,
-    "num_authors": 1,
-    "conferences": [
-      "ATC"
-    ],
-    "years": {
-      "2024": 0,
-      "2023": 0,
-      "2022": 1
-    }
-  },
-  {
     "affiliation": "University of South Florida",
     "combined_score": 3,
     "artifact_score": 3,
@@ -4109,32 +4059,6 @@
     "years": {
       "2024": 1,
       "2023": 0,
-      "2022": 0
-    }
-  },
-  {
-    "affiliation": "Huazhong University of Science and Technology, Wuhan National Laboratory for Optoelectronics",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "ATC"
-    ],
-    "years": {
-      "2024": 0,
-      "2023": 1,
       "2022": 0
     }
   },
@@ -4236,30 +4160,6 @@
     ],
     "years": {
       "2025": 1
-    }
-  },
-  {
-    "affiliation": "INESC-ID and Instituto Superior Técnico, University of Lisbon",
-    "combined_score": 3,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "conferences": [
-      "ATC"
-    ],
-    "years": {
-      "2024": 1
     }
   },
   {
@@ -5151,7 +5051,7 @@
     }
   },
   {
-    "affiliation": "Uber Technologies, Inc.",
+    "affiliation": "Uber Technologies",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,

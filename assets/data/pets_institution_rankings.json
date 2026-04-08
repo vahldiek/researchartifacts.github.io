@@ -270,6 +270,36 @@
     }
   },
   {
+    "affiliation": "Aalto University",
+    "combined_score": 21,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 21,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 7,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "PETS"
+    ],
+    "years": {
+      "2021": 1,
+      "2022": 1,
+      "2023": 1,
+      "2024": 1,
+      "2025": 1,
+      "2026": 1,
+      "2020": 1
+    }
+  },
+  {
     "affiliation": "The Tor Project",
     "combined_score": 21,
     "artifact_score": 0,
@@ -354,35 +384,6 @@
       "2022": 0,
       "2021": 0,
       "2020": 0
-    }
-  },
-  {
-    "affiliation": "Aalto University",
-    "combined_score": 18,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 18,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 6,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "conferences": [
-      "PETS"
-    ],
-    "years": {
-      "2021": 1,
-      "2022": 1,
-      "2023": 1,
-      "2024": 1,
-      "2025": 1,
-      "2026": 1
     }
   },
   {
@@ -1326,6 +1327,32 @@
     }
   },
   {
+    "affiliation": "UFMG (Brazil) & Macquarie University (Australia)",
+    "combined_score": 9,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 9,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 3,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "PETS"
+    ],
+    "years": {
+      "2025": 1,
+      "2026": 1,
+      "2024": 1
+    }
+  },
+  {
     "affiliation": "University of California, Los Angeles",
     "combined_score": 9,
     "artifact_score": 3,
@@ -1797,6 +1824,31 @@
     }
   },
   {
+    "affiliation": "Arizona State University",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "PETS"
+    ],
+    "years": {
+      "2023": 1,
+      "2025": 1
+    }
+  },
+  {
     "affiliation": "Bloomberg",
     "combined_score": 6,
     "artifact_score": 0,
@@ -1969,31 +2021,6 @@
     "years": {
       "2020": 1,
       "2021": 1
-    }
-  },
-  {
-    "affiliation": "UFMG (Brazil) & Macquarie University (Australia)",
-    "combined_score": 6,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 6,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 2,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "conferences": [
-      "PETS"
-    ],
-    "years": {
-      "2025": 1,
-      "2026": 1
     }
   },
   {
@@ -2260,7 +2287,7 @@
     }
   },
   {
-    "affiliation": "MAX-IV Laboratory, Lund University",
+    "affiliation": "MAX-IV Laboratory",
     "combined_score": 5,
     "artifact_score": 5,
     "artifact_citations": 0,
@@ -2950,7 +2977,7 @@
     }
   },
   {
-    "affiliation": "Secure Mobile Networking Lab, Technical University of Darmstadt",
+    "affiliation": "Secure Mobile Networking Lab",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -3982,30 +4009,6 @@
     }
   },
   {
-    "affiliation": "Arizona State University",
-    "combined_score": 3,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "conferences": [
-      "PETS"
-    ],
-    "years": {
-      "2023": 1
-    }
-  },
-  {
     "affiliation": "Staff Engineer",
     "combined_score": 3,
     "artifact_score": 0,
@@ -4078,7 +4081,7 @@
     }
   },
   {
-    "affiliation": "Valencian Research Institute for Artificial Intelligence (VRAIN), Universitat Politècnica de València (UPV)",
+    "affiliation": "Valencian Research Institute for Artificial Intelligence (VRAIN)",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,
@@ -4702,7 +4705,7 @@
     }
   },
   {
-    "affiliation": "Uber Technologies, Inc.",
+    "affiliation": "Uber Technologies",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,

@@ -488,6 +488,33 @@
     }
   },
   {
+    "affiliation": "Amazon Web Services",
+    "combined_score": 22,
+    "artifact_score": 16,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 2.67,
+    "role": "Producer",
+    "artifacts": 6,
+    "badges_functional": 6,
+    "badges_reproducible": 4,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 6,
+    "artifact_rate": 100.0,
+    "num_authors": 4,
+    "conferences": [
+      "SOSP"
+    ],
+    "years": {
+      "2024": 0,
+      "2023": 5,
+      "2022": 0,
+      "2021": 3
+    }
+  },
+  {
     "affiliation": "Stanford University",
     "combined_score": 21,
     "artifact_score": 18,
@@ -537,33 +564,6 @@
     "years": {
       "2021": 4,
       "2023": 2
-    }
-  },
-  {
-    "affiliation": "Amazon Web Services",
-    "combined_score": 19,
-    "artifact_score": 13,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 6,
-    "ae_ratio": 2.17,
-    "role": "Producer",
-    "artifacts": 5,
-    "badges_functional": 5,
-    "badges_reproducible": 3,
-    "ae_memberships": 2,
-    "chair_count": 0,
-    "total_papers": 5,
-    "artifact_rate": 100.0,
-    "num_authors": 3,
-    "conferences": [
-      "SOSP"
-    ],
-    "years": {
-      "2024": 0,
-      "2023": 4,
-      "2022": 0,
-      "2021": 3
     }
   },
   {
@@ -993,6 +993,33 @@
     "years": {
       "2024": 2,
       "2023": 2,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "School of Computer Science",
+    "combined_score": 12,
+    "artifact_score": 12,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 4,
+    "badges_functional": 4,
+    "badges_reproducible": 4,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 4,
+    "artifact_rate": 100.0,
+    "num_authors": 3,
+    "conferences": [
+      "SOSP"
+    ],
+    "years": {
+      "2024": 3,
+      "2023": 1,
       "2022": 0,
       "2021": 0
     }
@@ -1504,33 +1531,6 @@
     }
   },
   {
-    "affiliation": "School of Computer Science, Fudan University",
-    "combined_score": 6,
-    "artifact_score": 6,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 2,
-    "badges_functional": 2,
-    "badges_reproducible": 2,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "SOSP"
-    ],
-    "years": {
-      "2024": 1,
-      "2023": 1,
-      "2022": 0,
-      "2021": 0
-    }
-  },
-  {
     "affiliation": "Telecom SudParis - Institut Polytechnique de Paris",
     "combined_score": 6,
     "artifact_score": 3,
@@ -1585,7 +1585,7 @@
     }
   },
   {
-    "affiliation": "Institute of Software, Chinese Academy of Sciences",
+    "affiliation": "Institute of Software",
     "combined_score": 6,
     "artifact_score": 0,
     "artifact_citations": 0,
@@ -1659,33 +1659,6 @@
       "2023": 0,
       "2022": 0,
       "2021": 1
-    }
-  },
-  {
-    "affiliation": "School of Computer Science, Peking University",
-    "combined_score": 6,
-    "artifact_score": 6,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 2,
-    "badges_functional": 2,
-    "badges_reproducible": 2,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 100.0,
-    "num_authors": 2,
-    "conferences": [
-      "SOSP"
-    ],
-    "years": {
-      "2024": 2,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0
     }
   },
   {
@@ -1960,6 +1933,33 @@
   },
   {
     "affiliation": "Harbin Institute of Technology",
+    "combined_score": 6,
+    "artifact_score": 6,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 2,
+    "badges_functional": 2,
+    "badges_reproducible": 2,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 100.0,
+    "num_authors": 2,
+    "conferences": [
+      "SOSP"
+    ],
+    "years": {
+      "2024": 0,
+      "2023": 2,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Department of Computer Science",
     "combined_score": 6,
     "artifact_score": 6,
     "artifact_citations": 0,
@@ -2338,7 +2338,7 @@
     }
   },
   {
-    "affiliation": "Petuum, Inc.",
+    "affiliation": "Petuum",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -2527,7 +2527,7 @@
     }
   },
   {
-    "affiliation": "DBOS, inc",
+    "affiliation": "DBOS",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -2986,7 +2986,7 @@
     }
   },
   {
-    "affiliation": "TU Dresden, Huawei Technologies Duesseldorf",
+    "affiliation": "TU Dresden",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -3337,33 +3337,6 @@
     }
   },
   {
-    "affiliation": "Amazon Web Services, Inc.",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "SOSP"
-    ],
-    "years": {
-      "2024": 0,
-      "2023": 1,
-      "2022": 0,
-      "2021": 0
-    }
-  },
-  {
     "affiliation": "Ontario Tech University",
     "combined_score": 3,
     "artifact_score": 3,
@@ -3499,61 +3472,7 @@
     }
   },
   {
-    "affiliation": "Department of Computer Science, Rice University",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "SOSP"
-    ],
-    "years": {
-      "2024": 0,
-      "2023": 1,
-      "2022": 0,
-      "2021": 0
-    }
-  },
-  {
     "affiliation": "SUSTech",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "SOSP"
-    ],
-    "years": {
-      "2024": 0,
-      "2023": 1,
-      "2022": 0,
-      "2021": 0
-    }
-  },
-  {
-    "affiliation": "Department of Computer Science, University of Chicago",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -4684,7 +4603,7 @@
     }
   },
   {
-    "affiliation": "Institute of Information Engineering, Chinese Academy of Sciences",
+    "affiliation": "Institute of Information Engineering",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,

@@ -168,6 +168,30 @@
     }
   },
   {
+    "affiliation": "Chinese Academy of Sciences",
+    "combined_score": 11,
+    "artifact_score": 11,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 6,
+    "badges_functional": 4,
+    "badges_reproducible": 1,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 9,
+    "artifact_rate": 66.7,
+    "num_authors": 3,
+    "conferences": [
+      "SC"
+    ],
+    "years": {
+      "2021": 6
+    }
+  },
+  {
     "affiliation": "Sandia National Laboratories",
     "combined_score": 9,
     "artifact_score": 6,
@@ -241,6 +265,30 @@
   },
   {
     "affiliation": "Hunan University",
+    "combined_score": 9,
+    "artifact_score": 9,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 3,
+    "badges_functional": 3,
+    "badges_reproducible": 3,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 3,
+    "artifact_rate": 100.0,
+    "num_authors": 3,
+    "conferences": [
+      "SC"
+    ],
+    "years": {
+      "2021": 3
+    }
+  },
+  {
+    "affiliation": "Los Alamos National Laboratory",
     "combined_score": 9,
     "artifact_score": 9,
     "artifact_citations": 0,
@@ -528,30 +576,6 @@
     }
   },
   {
-    "affiliation": "Chinese Academy of Sciences",
-    "combined_score": 6,
-    "artifact_score": 6,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 4,
-    "badges_functional": 2,
-    "badges_reproducible": 0,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 7,
-    "artifact_rate": 57.1,
-    "num_authors": 2,
-    "conferences": [
-      "SC"
-    ],
-    "years": {
-      "2021": 4
-    }
-  },
-  {
     "affiliation": "National University of Singapore",
     "combined_score": 6,
     "artifact_score": 6,
@@ -648,30 +672,6 @@
     }
   },
   {
-    "affiliation": "Los Alamos National Laboratory",
-    "combined_score": 6,
-    "artifact_score": 6,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 2,
-    "badges_functional": 2,
-    "badges_reproducible": 2,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 100.0,
-    "num_authors": 2,
-    "conferences": [
-      "SC"
-    ],
-    "years": {
-      "2021": 2
-    }
-  },
-  {
     "affiliation": "Massachusetts Institute of Technology",
     "combined_score": 6,
     "artifact_score": 6,
@@ -721,6 +721,30 @@
   },
   {
     "affiliation": "IIT Bombay",
+    "combined_score": 6,
+    "artifact_score": 6,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 2,
+    "badges_functional": 2,
+    "badges_reproducible": 2,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 100.0,
+    "num_authors": 2,
+    "conferences": [
+      "SC"
+    ],
+    "years": {
+      "2021": 2
+    }
+  },
+  {
+    "affiliation": "Alibaba Group",
     "combined_score": 6,
     "artifact_score": 6,
     "artifact_citations": 0,
@@ -856,30 +880,6 @@
     "total_papers": 0,
     "artifact_rate": 0,
     "num_authors": 2,
-    "conferences": [
-      "SC"
-    ],
-    "years": {
-      "2021": 2
-    }
-  },
-  {
-    "affiliation": "Chinese Academy of Sciences, Institute of Computing Technology",
-    "combined_score": 5,
-    "artifact_score": 5,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 2,
-    "badges_functional": 2,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
     "conferences": [
       "SC"
     ],
@@ -1032,7 +1032,7 @@
     }
   },
   {
-    "affiliation": "Johannes Gutenberg University Mainz, Data Center",
+    "affiliation": "Johannes Gutenberg University Mainz",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -1392,30 +1392,6 @@
     }
   },
   {
-    "affiliation": "Los Alamos National Laboratory, Defense Systems and Analysis Division",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "SC"
-    ],
-    "years": {
-      "2021": 1
-    }
-  },
-  {
     "affiliation": "University of Utah",
     "combined_score": 3,
     "artifact_score": 3,
@@ -1465,30 +1441,6 @@
   },
   {
     "affiliation": "Baidu Security",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "SC"
-    ],
-    "years": {
-      "2021": 1
-    }
-  },
-  {
-    "affiliation": "Alibaba Group",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -1585,30 +1537,6 @@
   },
   {
     "affiliation": "ByteDance",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "SC"
-    ],
-    "years": {
-      "2021": 1
-    }
-  },
-  {
-    "affiliation": "Alibaba Group, Alibaba Cloud",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,

@@ -2130,7 +2130,7 @@
     }
   },
   {
-    "affiliation": "Institute of Information Engineering, Chinese Academy of Sciences",
+    "affiliation": "Institute of Information Engineering",
     "combined_score": 25,
     "artifact_score": 7,
     "artifact_citations": 0,
@@ -2392,6 +2392,36 @@
       "2024": 2,
       "2023": 4,
       "2022": 2,
+      "2021": 0,
+      "2020": 0
+    }
+  },
+  {
+    "affiliation": "Chinese Academy of Sciences",
+    "combined_score": 23,
+    "artifact_score": 20,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 6.67,
+    "role": "Producer",
+    "artifacts": 9,
+    "badges_functional": 6,
+    "badges_reproducible": 5,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 26,
+    "artifact_rate": 34.6,
+    "num_authors": 5,
+    "conferences": [
+      "USENIXSEC"
+    ],
+    "years": {
+      "2026": 0,
+      "2025": 6,
+      "2024": 2,
+      "2023": 1,
+      "2022": 1,
       "2021": 0,
       "2020": 0
     }
@@ -2965,6 +2995,66 @@
     }
   },
   {
+    "affiliation": "Huazhong University of Science and Technology",
+    "combined_score": 19,
+    "artifact_score": 10,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 9,
+    "ae_ratio": 1.11,
+    "role": "Balanced",
+    "artifacts": 5,
+    "badges_functional": 3,
+    "badges_reproducible": 2,
+    "ae_memberships": 3,
+    "chair_count": 0,
+    "total_papers": 6,
+    "artifact_rate": 83.3,
+    "num_authors": 5,
+    "conferences": [
+      "USENIXSEC"
+    ],
+    "years": {
+      "2026": 2,
+      "2025": 3,
+      "2024": 3,
+      "2023": 0,
+      "2022": 0,
+      "2021": 0,
+      "2020": 0
+    }
+  },
+  {
+    "affiliation": "The George Washington University",
+    "combined_score": 18,
+    "artifact_score": 6,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 12,
+    "ae_ratio": 0.5,
+    "role": "Balanced",
+    "artifacts": 2,
+    "badges_functional": 2,
+    "badges_reproducible": 2,
+    "ae_memberships": 4,
+    "chair_count": 0,
+    "total_papers": 5,
+    "artifact_rate": 40.0,
+    "num_authors": 1,
+    "conferences": [
+      "USENIXSEC"
+    ],
+    "years": {
+      "2026": 0,
+      "2025": 1,
+      "2024": 1,
+      "2023": 1,
+      "2022": 1,
+      "2021": 0,
+      "2020": 0
+    }
+  },
+  {
     "affiliation": "SUSTech",
     "combined_score": 18,
     "artifact_score": 15,
@@ -3165,36 +3255,6 @@
       "2026": 0,
       "2025": 1,
       "2022": 2,
-      "2021": 0,
-      "2020": 0
-    }
-  },
-  {
-    "affiliation": "Chinese Academy of Sciences",
-    "combined_score": 17,
-    "artifact_score": 14,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 4.67,
-    "role": "Producer",
-    "artifacts": 7,
-    "badges_functional": 4,
-    "badges_reproducible": 3,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 23,
-    "artifact_rate": 30.4,
-    "num_authors": 3,
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 4,
-      "2024": 2,
-      "2023": 1,
-      "2022": 1,
       "2021": 0,
       "2020": 0
     }
@@ -3522,36 +3582,6 @@
       "2024": 1,
       "2023": 1,
       "2022": 2,
-      "2021": 0,
-      "2020": 0
-    }
-  },
-  {
-    "affiliation": "The George Washington University",
-    "combined_score": 15,
-    "artifact_score": 6,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 9,
-    "ae_ratio": 0.67,
-    "role": "Balanced",
-    "artifacts": 2,
-    "badges_functional": 2,
-    "badges_reproducible": 2,
-    "ae_memberships": 3,
-    "chair_count": 0,
-    "total_papers": 5,
-    "artifact_rate": 40.0,
-    "num_authors": 1,
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 1,
-      "2024": 1,
-      "2023": 1,
-      "2022": 1,
       "2021": 0,
       "2020": 0
     }
@@ -3942,6 +3972,36 @@
     }
   },
   {
+    "affiliation": "National University of Defense Technology",
+    "combined_score": 14,
+    "artifact_score": 8,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 1.33,
+    "role": "Balanced",
+    "artifacts": 4,
+    "badges_functional": 2,
+    "badges_reproducible": 2,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 8,
+    "artifact_rate": 50.0,
+    "num_authors": 4,
+    "conferences": [
+      "USENIXSEC"
+    ],
+    "years": {
+      "2026": 0,
+      "2025": 5,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 0,
+      "2020": 0
+    }
+  },
+  {
     "affiliation": "Binghamton University",
     "combined_score": 14,
     "artifact_score": 11,
@@ -3967,36 +4027,6 @@
       "2024": 1,
       "2023": 0,
       "2022": 2,
-      "2021": 0,
-      "2020": 0
-    }
-  },
-  {
-    "affiliation": "Huazhong University of Science and Technology",
-    "combined_score": 14,
-    "artifact_score": 5,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 9,
-    "ae_ratio": 0.56,
-    "role": "Balanced",
-    "artifacts": 3,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 3,
-    "chair_count": 0,
-    "total_papers": 3,
-    "artifact_rate": 100.0,
-    "num_authors": 4,
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 2,
-      "2025": 3,
-      "2024": 1,
-      "2023": 0,
-      "2022": 0,
       "2021": 0,
       "2020": 0
     }
@@ -4376,6 +4406,32 @@
       "2022": 1,
       "2021": 0,
       "2020": 0
+    }
+  },
+  {
+    "affiliation": "LAAS-CNRS",
+    "combined_score": 12,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 12,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 4,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 2,
+    "conferences": [
+      "USENIXSEC"
+    ],
+    "years": {
+      "2022": 2,
+      "2026": 1,
+      "2025": 1
     }
   },
   {
@@ -5290,6 +5346,32 @@
     }
   },
   {
+    "affiliation": "Redacted",
+    "combined_score": 9,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 9,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 3,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "USENIXSEC"
+    ],
+    "years": {
+      "2020": 1,
+      "2022": 1,
+      "2021": 1
+    }
+  },
+  {
     "affiliation": "HUMAN Security",
     "combined_score": 9,
     "artifact_score": 0,
@@ -5588,6 +5670,36 @@
     }
   },
   {
+    "affiliation": "Accenture Labs",
+    "combined_score": 9,
+    "artifact_score": 6,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 2.0,
+    "role": "Balanced",
+    "artifacts": 2,
+    "badges_functional": 2,
+    "badges_reproducible": 2,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 100.0,
+    "num_authors": 2,
+    "conferences": [
+      "USENIXSEC"
+    ],
+    "years": {
+      "2026": 0,
+      "2025": 1,
+      "2024": 1,
+      "2023": 0,
+      "2022": 0,
+      "2021": 0,
+      "2020": 0
+    }
+  },
+  {
     "affiliation": "University of Tennessee",
     "combined_score": 9,
     "artifact_score": 6,
@@ -5705,31 +5817,6 @@
       "2022": 0,
       "2021": 0,
       "2020": 0
-    }
-  },
-  {
-    "affiliation": "LAAS-CNRS",
-    "combined_score": 9,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 9,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 3,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 2,
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2022": 2,
-      "2026": 1
     }
   },
   {
@@ -6478,7 +6565,7 @@
     }
   },
   {
-    "affiliation": "CSIRO, Data61",
+    "affiliation": "CSIRO",
     "combined_score": 7,
     "artifact_score": 7,
     "artifact_citations": 0,
@@ -6628,7 +6715,7 @@
     }
   },
   {
-    "affiliation": "Laboratoire d'Informatique, de Modélisation et d'Optimisation des Systèmes",
+    "affiliation": "Laboratoire d'Informatique",
     "combined_score": 6,
     "artifact_score": 6,
     "artifact_citations": 0,
@@ -6802,36 +6889,6 @@
       "2025": 1,
       "2024": 0,
       "2023": 1,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0
-    }
-  },
-  {
-    "affiliation": "Accenture Labs",
-    "combined_score": 6,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 1.0,
-    "role": "Balanced",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 0,
-      "2024": 1,
-      "2023": 0,
       "2022": 0,
       "2021": 0,
       "2020": 0
@@ -7018,7 +7075,7 @@
     }
   },
   {
-    "affiliation": "ByteDance, Inc",
+    "affiliation": "ByteDance",
     "combined_score": 6,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -7045,31 +7102,6 @@
       "2022": 0,
       "2021": 0,
       "2020": 0
-    }
-  },
-  {
-    "affiliation": "Redacted",
-    "combined_score": 6,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 6,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 2,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2020": 1,
-      "2022": 1
     }
   },
   {
@@ -7803,7 +7835,7 @@
     }
   },
   {
-    "affiliation": "Institute of Software, Chinese Academy of Sciences",
+    "affiliation": "Institute of Software",
     "combined_score": 6,
     "artifact_score": 6,
     "artifact_citations": 0,
@@ -8463,36 +8495,6 @@
     }
   },
   {
-    "affiliation": "Huazhong University of Science and Technology, School of Computer Science and Technology, Cyber-Physical-Social Systems Lab",
-    "combined_score": 5,
-    "artifact_score": 5,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 2,
-    "badges_functional": 2,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 3,
-    "artifact_rate": 66.7,
-    "num_authors": 1,
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 0,
-      "2024": 2,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0
-    }
-  },
-  {
     "affiliation": "BUPT",
     "combined_score": 5,
     "artifact_score": 5,
@@ -8508,36 +8510,6 @@
     "chair_count": 0,
     "total_papers": 2,
     "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 2,
-      "2024": 0,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0
-    }
-  },
-  {
-    "affiliation": "National University of Defense Technology, Tsinghua University",
-    "combined_score": 5,
-    "artifact_score": 2,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 0.67,
-    "role": "Balanced",
-    "artifacts": 2,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 5,
-    "artifact_rate": 40.0,
     "num_authors": 1,
     "conferences": [
       "USENIXSEC"
@@ -8583,7 +8555,7 @@
     }
   },
   {
-    "affiliation": "Beijing Institute of Technology, School of Cyberspace Science and Technology",
+    "affiliation": "Beijing Institute of Technology",
     "combined_score": 5,
     "artifact_score": 2,
     "artifact_citations": 0,
@@ -8853,7 +8825,7 @@
     }
   },
   {
-    "affiliation": "FH Mnster, Fachbereich Elektrotechnik und Informatik",
+    "affiliation": "FH Mnster",
     "combined_score": 4,
     "artifact_score": 4,
     "artifact_citations": 0,
@@ -9213,7 +9185,7 @@
     }
   },
   {
-    "affiliation": "Secure Mobile Networking Lab, Technical University of Darmstadt",
+    "affiliation": "Secure Mobile Networking Lab",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -9243,7 +9215,7 @@
     }
   },
   {
-    "affiliation": "Computer Science, The George Washington University",
+    "affiliation": "Computer Science",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -9303,7 +9275,7 @@
     }
   },
   {
-    "affiliation": "LRI, University of Paris XI",
+    "affiliation": "LRI",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -9453,7 +9425,7 @@
     }
   },
   {
-    "affiliation": "Indian Institute of Technology Kharagpur, Department of Computer Science and Engineering",
+    "affiliation": "Indian Institute of Technology Kharagpur",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -9506,36 +9478,6 @@
       "2026": 0,
       "2025": 0,
       "2024": 1,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0
-    }
-  },
-  {
-    "affiliation": "Accenture Labs, Accenture Israel Cyber R&D Lab",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 1,
-      "2024": 0,
       "2023": 0,
       "2022": 0,
       "2021": 0,
@@ -10023,36 +9965,6 @@
     }
   },
   {
-    "affiliation": "Chinese Academy of Sciences, Institute of Information Engineering",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 50.0,
-    "num_authors": 1,
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 1,
-      "2024": 0,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0
-    }
-  },
-  {
     "affiliation": "Soochow University",
     "combined_score": 3,
     "artifact_score": 3,
@@ -10263,36 +10175,6 @@
     }
   },
   {
-    "affiliation": "National University of Defense Technology, College of Computer",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 1,
-      "2024": 0,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0
-    }
-  },
-  {
     "affiliation": "New Jersey Institute of Technology",
     "combined_score": 3,
     "artifact_score": 3,
@@ -10436,36 +10318,6 @@
       "2026": 0,
       "2025": 0,
       "2024": 1,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0
-    }
-  },
-  {
-    "affiliation": "Chinese Academy of Sciences, Institute of Software, Trusted Computing and Information Assurance Laboratory",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 1,
-      "2024": 0,
       "2023": 0,
       "2022": 0,
       "2021": 0,
@@ -10653,7 +10505,7 @@
     }
   },
   {
-    "affiliation": "Bytedance Inc., Security Research",
+    "affiliation": "Bytedance Inc.",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -11013,7 +10865,7 @@
     }
   },
   {
-    "affiliation": "Beijing Institute of Graphic Communication, School of Information Engineering",
+    "affiliation": "Beijing Institute of Graphic Communication",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -11208,36 +11060,6 @@
     "chair_count": 0,
     "total_papers": 1,
     "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 1,
-      "2024": 0,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0
-    }
-  },
-  {
-    "affiliation": "National University of Defense Technology, College of Electronic Engineering",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 50.0,
     "num_authors": 1,
     "conferences": [
       "USENIXSEC"
@@ -11685,30 +11507,6 @@
     }
   },
   {
-    "affiliation": "National University of Defense Technology",
-    "combined_score": 3,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2025": 1
-    }
-  },
-  {
     "affiliation": "Howard University",
     "combined_score": 3,
     "artifact_score": 0,
@@ -11925,7 +11723,7 @@
     }
   },
   {
-    "affiliation": "Royal Holloway, University of London",
+    "affiliation": "Royal Holloway",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,

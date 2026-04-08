@@ -100,6 +100,31 @@
     }
   },
   {
+    "affiliation": "Huazhong University of Science and Technology",
+    "combined_score": 12,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 9,
+    "ae_ratio": 0.33,
+    "role": "Consumer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 3,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 2,
+    "conferences": [
+      "FAST"
+    ],
+    "years": {
+      "2025": 1,
+      "2024": 2
+    }
+  },
+  {
     "affiliation": "Netflix",
     "combined_score": 12,
     "artifact_score": 3,
@@ -299,31 +324,6 @@
     }
   },
   {
-    "affiliation": "Huazhong University of Science and Technology, School of Computer Science and Technology",
-    "combined_score": 6,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 1.0,
-    "role": "Balanced",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "FAST"
-    ],
-    "years": {
-      "2025": 0,
-      "2024": 1
-    }
-  },
-  {
     "affiliation": "Washington State University",
     "combined_score": 6,
     "artifact_score": 3,
@@ -371,31 +371,6 @@
     "years": {
       "2025": 1,
       "2024": 1
-    }
-  },
-  {
-    "affiliation": "Huazhong University of Science and Technology",
-    "combined_score": 6,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 6,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 2,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "conferences": [
-      "FAST"
-    ],
-    "years": {
-      "2024": 1,
-      "2025": 1
     }
   },
   {
@@ -719,7 +694,7 @@
     }
   },
   {
-    "affiliation": "University of Electronic Science and Technology of China, Center for Cyber Security",
+    "affiliation": "University of Electronic Science and Technology of China",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -1612,7 +1587,7 @@
     }
   },
   {
-    "affiliation": "BCS, IEEE, and Gap",
+    "affiliation": "BCS",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,

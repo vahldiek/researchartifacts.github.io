@@ -862,6 +862,34 @@
     }
   },
   {
+    "affiliation": "ByteDance",
+    "combined_score": 28,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 28,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 8,
+    "chair_count": 2,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 3,
+    "conferences": [
+      "OSDI"
+    ],
+    "years": {
+      "2020": 1,
+      "2023": 1,
+      "2024": 2,
+      "2025": 2,
+      "2022": 2
+    }
+  },
+  {
     "affiliation": "Imperial College London",
     "combined_score": 28,
     "artifact_score": 4,
@@ -978,7 +1006,7 @@
     }
   },
   {
-    "affiliation": "Institute of Software, Chinese Academy of Sciences",
+    "affiliation": "Institute of Software",
     "combined_score": 26,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -1003,34 +1031,6 @@
       "2022": 1,
       "2021": 0,
       "2020": 0
-    }
-  },
-  {
-    "affiliation": "ByteDance",
-    "combined_score": 25,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 25,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 7,
-    "chair_count": 2,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 3,
-    "conferences": [
-      "OSDI"
-    ],
-    "years": {
-      "2020": 1,
-      "2023": 1,
-      "2024": 2,
-      "2025": 2,
-      "2022": 1
     }
   },
   {
@@ -1511,6 +1511,60 @@
     }
   },
   {
+    "affiliation": "Indian Institute of Technology",
+    "combined_score": 15,
+    "artifact_score": 6,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 9,
+    "ae_ratio": 0.67,
+    "role": "Balanced",
+    "artifacts": 2,
+    "badges_functional": 2,
+    "badges_reproducible": 2,
+    "ae_memberships": 3,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 100.0,
+    "num_authors": 4,
+    "conferences": [
+      "OSDI"
+    ],
+    "years": {
+      "2024": 0,
+      "2023": 1,
+      "2022": 2,
+      "2021": 0,
+      "2020": 0,
+      "2025": 2
+    }
+  },
+  {
+    "affiliation": "INESC-ID and Instituto Superior Técnico",
+    "combined_score": 15,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 15,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 5,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 3,
+    "conferences": [
+      "OSDI"
+    ],
+    "years": {
+      "2024": 3,
+      "2025": 2
+    }
+  },
+  {
     "affiliation": "University of California, Irvine",
     "combined_score": 15,
     "artifact_score": 3,
@@ -1838,31 +1892,6 @@
       "2022": 1,
       "2021": 1,
       "2020": 0
-    }
-  },
-  {
-    "affiliation": "INESC-ID and Instituto Superior Técnico",
-    "combined_score": 12,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 12,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 4,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 2,
-    "conferences": [
-      "OSDI"
-    ],
-    "years": {
-      "2024": 2,
-      "2025": 2
     }
   },
   {
@@ -2223,6 +2252,62 @@
     }
   },
   {
+    "affiliation": "School of Computer Science",
+    "combined_score": 9,
+    "artifact_score": 9,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 3,
+    "badges_functional": 3,
+    "badges_reproducible": 3,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 3,
+    "artifact_rate": 100.0,
+    "num_authors": 3,
+    "conferences": [
+      "OSDI"
+    ],
+    "years": {
+      "2024": 1,
+      "2023": 1,
+      "2022": 0,
+      "2021": 0,
+      "2020": 0
+    }
+  },
+  {
+    "affiliation": "Amazon Web Services",
+    "combined_score": 9,
+    "artifact_score": 6,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 2.0,
+    "role": "Balanced",
+    "artifacts": 2,
+    "badges_functional": 2,
+    "badges_reproducible": 2,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 3,
+    "artifact_rate": 66.7,
+    "num_authors": 3,
+    "conferences": [
+      "OSDI"
+    ],
+    "years": {
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 1,
+      "2020": 2
+    }
+  },
+  {
     "affiliation": "The University of Texas at Arlington",
     "combined_score": 9,
     "artifact_score": 9,
@@ -2276,31 +2361,6 @@
       "2022": 1,
       "2021": 0,
       "2020": 1
-    }
-  },
-  {
-    "affiliation": "Indian Institute of Technology",
-    "combined_score": 9,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 9,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 3,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 3,
-    "conferences": [
-      "OSDI"
-    ],
-    "years": {
-      "2025": 2,
-      "2022": 1
     }
   },
   {
@@ -2483,7 +2543,7 @@
     }
   },
   {
-    "affiliation": "Royal Holloway, University of London",
+    "affiliation": "Royal Holloway",
     "combined_score": 8,
     "artifact_score": 0,
     "artifact_citations": 0,
@@ -2533,6 +2593,35 @@
       "2022": 0,
       "2021": 0,
       "2020": 1
+    }
+  },
+  {
+    "affiliation": "Chinese Academy of Sciences",
+    "combined_score": 8,
+    "artifact_score": 5,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 1.67,
+    "role": "Balanced",
+    "artifacts": 2,
+    "badges_functional": 2,
+    "badges_reproducible": 1,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 3,
+    "artifact_rate": 66.7,
+    "num_authors": 2,
+    "conferences": [
+      "OSDI"
+    ],
+    "years": {
+      "2024": 0,
+      "2023": 0,
+      "2022": 1,
+      "2021": 0,
+      "2020": 1,
+      "2025": 1
     }
   },
   {
@@ -2677,34 +2766,6 @@
   },
   {
     "affiliation": "Univ. of California - Riverside",
-    "combined_score": 6,
-    "artifact_score": 6,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 2,
-    "badges_functional": 2,
-    "badges_reproducible": 2,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "OSDI"
-    ],
-    "years": {
-      "2024": 0,
-      "2023": 1,
-      "2022": 1,
-      "2021": 0,
-      "2020": 0
-    }
-  },
-  {
-    "affiliation": "Indian Institute of Technology, Kanpur, Department of Computer Science and Engineering",
     "combined_score": 6,
     "artifact_score": 6,
     "artifact_citations": 0,
@@ -3101,34 +3162,6 @@
     }
   },
   {
-    "affiliation": "School of Computer Science, Peking University",
-    "combined_score": 6,
-    "artifact_score": 6,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 2,
-    "badges_functional": 2,
-    "badges_reproducible": 2,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 100.0,
-    "num_authors": 2,
-    "conferences": [
-      "OSDI"
-    ],
-    "years": {
-      "2024": 1,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0
-    }
-  },
-  {
     "affiliation": "National Chiao Tung University",
     "combined_score": 6,
     "artifact_score": 6,
@@ -3182,34 +3215,6 @@
       "2022": 0,
       "2021": 0,
       "2020": 0
-    }
-  },
-  {
-    "affiliation": "Amazon Web Services",
-    "combined_score": 6,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 1.0,
-    "role": "Balanced",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 2,
-    "conferences": [
-      "OSDI"
-    ],
-    "years": {
-      "2024": 0,
-      "2023": 0,
-      "2022": 0,
-      "2021": 1,
-      "2020": 1
     }
   },
   {
@@ -3635,34 +3640,6 @@
     }
   },
   {
-    "affiliation": "Chinese Academy of Sciences, Institute of Computing Technology",
-    "combined_score": 5,
-    "artifact_score": 5,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 2,
-    "badges_functional": 2,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 3,
-    "artifact_rate": 66.7,
-    "num_authors": 1,
-    "conferences": [
-      "OSDI"
-    ],
-    "years": {
-      "2024": 0,
-      "2023": 0,
-      "2022": 1,
-      "2021": 0,
-      "2020": 1
-    }
-  },
-  {
     "affiliation": "Mysten Labs",
     "combined_score": 5,
     "artifact_score": 5,
@@ -3851,7 +3828,7 @@
     }
   },
   {
-    "affiliation": "Petuum, Inc.",
+    "affiliation": "Petuum",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -4523,35 +4500,7 @@
     }
   },
   {
-    "affiliation": "School of Computer Science, Fudan University",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "OSDI"
-    ],
-    "years": {
-      "2024": 0,
-      "2023": 1,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0
-    }
-  },
-  {
-    "affiliation": "University of Electronic Science and Technology of China, MOE Key Laboratory of Optical Fiber Sensing and Communications",
+    "affiliation": "University of Electronic Science and Technology of China",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -4594,34 +4543,6 @@
     "chair_count": 0,
     "total_papers": 1,
     "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "OSDI"
-    ],
-    "years": {
-      "2024": 0,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 1
-    }
-  },
-  {
-    "affiliation": "Amazon Web Services, Inc.",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 50.0,
     "num_authors": 1,
     "conferences": [
       "OSDI"
@@ -4732,30 +4653,6 @@
     ],
     "years": {
       "2020": 1
-    }
-  },
-  {
-    "affiliation": "INESC-ID and Instituto Superior Técnico, University of Lisbon",
-    "combined_score": 3,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "conferences": [
-      "OSDI"
-    ],
-    "years": {
-      "2024": 1
     }
   },
   {
@@ -5192,30 +5089,6 @@
   },
   {
     "affiliation": "Renmin University",
-    "combined_score": 3,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "conferences": [
-      "OSDI"
-    ],
-    "years": {
-      "2025": 1
-    }
-  },
-  {
-    "affiliation": "Chinese Academy of Sciences",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,
@@ -5767,7 +5640,7 @@
     }
   },
   {
-    "affiliation": "Uber Technologies, Inc.",
+    "affiliation": "Uber Technologies",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,

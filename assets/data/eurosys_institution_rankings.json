@@ -1439,6 +1439,34 @@
     }
   },
   {
+    "affiliation": "Alibaba Group",
+    "combined_score": 10,
+    "artifact_score": 10,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 0,
+    "ae_ratio": null,
+    "role": "Producer",
+    "artifacts": 4,
+    "badges_functional": 4,
+    "badges_reproducible": 2,
+    "ae_memberships": 0,
+    "chair_count": 0,
+    "total_papers": 6,
+    "artifact_rate": 66.7,
+    "num_authors": 3,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2024": 1,
+      "2023": 1,
+      "2022": 1,
+      "2021": 0
+    }
+  },
+  {
     "affiliation": "Virginia Tech",
     "combined_score": 10,
     "artifact_score": 7,
@@ -2144,34 +2172,6 @@
       "2024": 0,
       "2023": 2,
       "2022": 0,
-      "2021": 0
-    }
-  },
-  {
-    "affiliation": "Alibaba Group",
-    "combined_score": 7,
-    "artifact_score": 7,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 3,
-    "badges_functional": 3,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 5,
-    "artifact_rate": 60.0,
-    "num_authors": 2,
-    "conferences": [
-      "EUROSYS"
-    ],
-    "years": {
-      "2025": 0,
-      "2024": 1,
-      "2023": 1,
-      "2022": 1,
       "2021": 0
     }
   },
@@ -3095,6 +3095,62 @@
     "ae_memberships": 0,
     "chair_count": 0,
     "total_papers": 2,
+    "artifact_rate": 100.0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2024": 0,
+      "2023": 1,
+      "2022": 0,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Huazhong University of Science and Technology",
+    "combined_score": 6,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 1.0,
+    "role": "Balanced",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 2,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 1,
+      "2024": 0,
+      "2023": 0,
+      "2022": 1,
+      "2021": 0
+    }
+  },
+  {
+    "affiliation": "Institute of Computing Technology",
+    "combined_score": 6,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 1.0,
+    "role": "Balanced",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 1,
     "artifact_rate": 100.0,
     "num_authors": 2,
     "conferences": [
@@ -4206,7 +4262,7 @@
     }
   },
   {
-    "affiliation": "Nanjing University of Posts and Telecommunications, School of Computer Science",
+    "affiliation": "Nanjing University of Posts and Telecommunications",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -4346,7 +4402,7 @@
     }
   },
   {
-    "affiliation": "Ant Group CO Ltd, Department of Security Countermeasure Technology",
+    "affiliation": "Ant Group CO Ltd",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -4654,34 +4710,6 @@
     }
   },
   {
-    "affiliation": "Huazhong University of Science and Technology, Wuhan National Laboratory for Optoelectronics",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "EUROSYS"
-    ],
-    "years": {
-      "2025": 0,
-      "2024": 0,
-      "2023": 0,
-      "2022": 1,
-      "2021": 0
-    }
-  },
-  {
     "affiliation": "Xiamen University",
     "combined_score": 3,
     "artifact_score": 3,
@@ -4790,62 +4818,6 @@
       "2024": 0,
       "2023": 0,
       "2022": 1,
-      "2021": 0
-    }
-  },
-  {
-    "affiliation": "Institute of Computing Technology, Chinese Academy of Sciences",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "EUROSYS"
-    ],
-    "years": {
-      "2025": 1,
-      "2024": 0,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0
-    }
-  },
-  {
-    "affiliation": "Alibaba Group, Alibaba Cloud",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "EUROSYS"
-    ],
-    "years": {
-      "2025": 1,
-      "2024": 0,
-      "2023": 0,
-      "2022": 0,
       "2021": 0
     }
   },
@@ -5018,7 +4990,7 @@
     }
   },
   {
-    "affiliation": "Amazon Web Services, Inc.",
+    "affiliation": "Amazon Web Services",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,
@@ -5798,30 +5770,6 @@
     }
   },
   {
-    "affiliation": "Huazhong University of Science and Technology",
-    "combined_score": 3,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "conferences": [
-      "EUROSYS"
-    ],
-    "years": {
-      "2025": 1
-    }
-  },
-  {
     "affiliation": "ICS-FORTH",
     "combined_score": 3,
     "artifact_score": 0,
@@ -6038,7 +5986,7 @@
     }
   },
   {
-    "affiliation": "Institute of Software, Chinese Academy of Sciences",
+    "affiliation": "Institute of Software",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,
@@ -6059,30 +6007,6 @@
     ],
     "years": {
       "2022": 1
-    }
-  },
-  {
-    "affiliation": "Institute of Computing Technology",
-    "combined_score": 3,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "conferences": [
-      "EUROSYS"
-    ],
-    "years": {
-      "2023": 1
     }
   },
   {
@@ -6110,7 +6034,7 @@
     }
   },
   {
-    "affiliation": "School of Computer Science, University College Dublin & VistaMilk SFI",
+    "affiliation": "School of Computer Science",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,
@@ -6590,7 +6514,7 @@
     }
   },
   {
-    "affiliation": "Royal Holloway, University of London",
+    "affiliation": "Royal Holloway",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,
@@ -6710,7 +6634,7 @@
     }
   },
   {
-    "affiliation": "TU Dresden, Huawei Technologies Duesseldorf",
+    "affiliation": "TU Dresden",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,
@@ -7310,7 +7234,7 @@
     }
   },
   {
-    "affiliation": "Uber Technologies, Inc.",
+    "affiliation": "Uber Technologies",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,
@@ -7742,7 +7666,7 @@
     }
   },
   {
-    "affiliation": "College of Computer Science and Technology, National University of Defense Technology",
+    "affiliation": "College of Computer Science and Technology",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,

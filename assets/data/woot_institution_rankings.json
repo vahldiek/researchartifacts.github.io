@@ -184,7 +184,7 @@
     }
   },
   {
-    "affiliation": "Royal Holloway, University of London",
+    "affiliation": "Royal Holloway",
     "combined_score": 6,
     "artifact_score": 0,
     "artifact_citations": 0,
@@ -210,6 +210,31 @@
   },
   {
     "affiliation": "Netherlands Forensic Institute",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "WOOT"
+    ],
+    "years": {
+      "2024": 1,
+      "2025": 1
+    }
+  },
+  {
+    "affiliation": "LAAS-CNRS",
     "combined_score": 6,
     "artifact_score": 0,
     "artifact_citations": 0,
@@ -661,30 +686,6 @@
   },
   {
     "affiliation": "Oregon State University",
-    "combined_score": 3,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "conferences": [
-      "WOOT"
-    ],
-    "years": {
-      "2024": 1
-    }
-  },
-  {
-    "affiliation": "LAAS-CNRS",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,
