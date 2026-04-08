@@ -101,15 +101,7 @@ The number of times this author served as an AE chair or co-chair.
 
 ### Combined Score
 
-A composite metric balancing artifact production, artifact quality, and AE service:
-
-```
-Combined Score = Σ (Aᵢ + Fᵢ + Rᵢ)  +  Σ (3 + Bⱼ × 2)
-                 i=1..n                 j=1..m
-                (artifacts)            (AE terms)
-```
-
-Where:
+A composite metric balancing artifact production, artifact quality, and AE service: **Combined Score = Σᵢ(Aᵢ + Fᵢ + Rᵢ) + Σⱼ(3 + Bⱼ × 2)**, summing over *n* artifacts and *m* AE terms, where:
 - **First sum** (per artifact *i*):
   - Aᵢ = 1 if artifact *i* is Available, 0 otherwise
   - Fᵢ = 1 if artifact *i* is Functional, 0 otherwise
