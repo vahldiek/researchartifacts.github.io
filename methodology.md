@@ -218,9 +218,14 @@ See the [verification scripts and detailed results](https://github.com/reprodb/r
 
 - **[sysartifacts.github.io](https://sysartifacts.github.io)** — Systems conference artifact evaluation results ({{ site.data.summary.systems_conferences | join: ", " }})
 - **[secartifacts.github.io](https://secartifacts.github.io)** — Security conference artifact evaluation results ({{ site.data.summary.security_conferences | join: ", " }})
-- **[usenix.org](https://www.usenix.org)** — Badge information for USENIX conferences
-- **[dblp.org](https://dblp.org)** — Author name matching and disambiguation
-- **[GitHub](https://docs.github.com/en/rest)**, **[Zenodo](https://developers.zenodo.org)**, **[Figshare](https://docs.figshare.com)** — Repository statistics (stars, forks, downloads)
+- **[usenix.org](https://www.usenix.org)** — Badge information and AE committee data for USENIX conferences
+- **[ACM Digital Library](https://dl.acm.org)** — Paper metadata for ACM-published conferences
+- **[DBLP](https://dblp.org)** — Author name matching, disambiguation, and total publication counts
+- **[Semantic Scholar](https://www.semanticscholar.org)** — Author affiliation enrichment and citation data
+- **[OpenAlex](https://openalex.org)** — Author affiliation enrichment
+- **[CSRankings](https://csrankings.org)** — Faculty affiliation data
+- **[GitHub](https://docs.github.com/en/rest)**, **[GitLab](https://docs.gitlab.com/ee/api/)** — Repository statistics (stars, forks)
+- **[Zenodo](https://developers.zenodo.org)**, **[Figshare](https://docs.figshare.com)** — Archive statistics (downloads, views)
 - **[Data Schemas](https://reprodb.github.io/data-schemas/)** — JSON Schema definitions for all data structures used by this site
 
 ---
