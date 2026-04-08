@@ -1443,6 +1443,37 @@
     }
   },
   {
+    "affiliation": "Intel",
+    "combined_score": 56,
+    "artifact_score": 41,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 15,
+    "ae_ratio": 2.73,
+    "role": "Producer",
+    "artifacts": 16,
+    "badges_functional": 16,
+    "badges_reproducible": 9,
+    "ae_memberships": 3,
+    "chair_count": 3,
+    "total_papers": 17,
+    "artifact_rate": 94.1,
+    "num_authors": 8,
+    "conferences": [
+      "EUROSYS",
+      "OSDI",
+      "SC"
+    ],
+    "years": {
+      "2025": 4,
+      "2024": 0,
+      "2023": 0,
+      "2022": 1,
+      "2021": 13,
+      "2020": 1
+    }
+  },
+  {
     "affiliation": "University of California, Los Angeles",
     "combined_score": 55,
     "artifact_score": 25,
@@ -2646,35 +2677,6 @@
     }
   },
   {
-    "affiliation": "Intel Corporation",
-    "combined_score": 30,
-    "artifact_score": 30,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 12,
-    "badges_functional": 12,
-    "badges_reproducible": 6,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 12,
-    "artifact_rate": 100.0,
-    "num_authors": 6,
-    "conferences": [
-      "SC"
-    ],
-    "years": {
-      "2025": 0,
-      "2024": 0,
-      "2023": 0,
-      "2022": 0,
-      "2021": 12,
-      "2020": 0
-    }
-  },
-  {
     "affiliation": "Manipal Academy of Higher Education",
     "combined_score": 29,
     "artifact_score": 29,
@@ -2917,37 +2919,6 @@
       "2021": 2,
       "2020": 0,
       "2026": 2
-    }
-  },
-  {
-    "affiliation": "Intel Labs",
-    "combined_score": 26,
-    "artifact_score": 11,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 15,
-    "ae_ratio": 0.73,
-    "role": "Balanced",
-    "artifacts": 4,
-    "badges_functional": 4,
-    "badges_reproducible": 3,
-    "ae_memberships": 3,
-    "chair_count": 3,
-    "total_papers": 5,
-    "artifact_rate": 80.0,
-    "num_authors": 2,
-    "conferences": [
-      "EUROSYS",
-      "OSDI",
-      "SC"
-    ],
-    "years": {
-      "2025": 4,
-      "2024": 0,
-      "2023": 0,
-      "2022": 1,
-      "2021": 1,
-      "2020": 1
     }
   },
   {

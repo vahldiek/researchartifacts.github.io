@@ -24,27 +24,27 @@
     }
   },
   {
-    "affiliation": "Intel Corporation",
-    "combined_score": 30,
+    "affiliation": "Intel",
+    "combined_score": 35,
     "artifact_score": 30,
     "artifact_citations": 0,
     "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
+    "ae_score": 5,
+    "ae_ratio": 6.0,
     "role": "Producer",
     "artifacts": 12,
     "badges_functional": 12,
     "badges_reproducible": 6,
-    "ae_memberships": 0,
-    "chair_count": 0,
+    "ae_memberships": 1,
+    "chair_count": 1,
     "total_papers": 12,
     "artifact_rate": 100.0,
-    "num_authors": 6,
+    "num_authors": 7,
     "conferences": [
       "SC"
     ],
     "years": {
-      "2021": 12
+      "2021": 13
     }
   },
   {
@@ -903,30 +903,6 @@
     "chair_count": 0,
     "total_papers": 1,
     "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "SC"
-    ],
-    "years": {
-      "2021": 1
-    }
-  },
-  {
-    "affiliation": "Intel Labs",
-    "combined_score": 5,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 5,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 1,
-    "chair_count": 1,
-    "total_papers": 0,
-    "artifact_rate": 0,
     "num_authors": 1,
     "conferences": [
       "SC"

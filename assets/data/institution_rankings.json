@@ -2499,6 +2499,44 @@
     }
   },
   {
+    "affiliation": "Intel",
+    "combined_score": 84,
+    "artifact_score": 44,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 40,
+    "ae_ratio": 1.1,
+    "role": "Balanced",
+    "artifacts": 17,
+    "badges_functional": 17,
+    "badges_reproducible": 10,
+    "ae_memberships": 10,
+    "chair_count": 5,
+    "total_papers": 19,
+    "artifact_rate": 89.5,
+    "num_authors": 10,
+    "conferences": [
+      "CHES",
+      "EUROSYS",
+      "OSDI",
+      "SC",
+      "USENIXSEC",
+      "WOOT"
+    ],
+    "years": {
+      "2025": 7,
+      "2024": 1,
+      "2023": 1,
+      "2022": 1,
+      "2021": 14,
+      "2020": 2,
+      "2026": 0,
+      "2019": 0,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
     "affiliation": "Huazhong University of Science and Technology",
     "combined_score": 83,
     "artifact_score": 8,
@@ -4729,42 +4767,6 @@
     }
   },
   {
-    "affiliation": "Intel Labs",
-    "combined_score": 42,
-    "artifact_score": 14,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 28,
-    "ae_ratio": 0.5,
-    "role": "Balanced",
-    "artifacts": 5,
-    "badges_functional": 5,
-    "badges_reproducible": 4,
-    "ae_memberships": 6,
-    "chair_count": 5,
-    "total_papers": 7,
-    "artifact_rate": 71.4,
-    "num_authors": 2,
-    "conferences": [
-      "EUROSYS",
-      "OSDI",
-      "SC",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2025": 4,
-      "2024": 1,
-      "2023": 1,
-      "2022": 1,
-      "2021": 1,
-      "2020": 2,
-      "2026": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
     "affiliation": "Institute of Software, Chinese Academy of Sciences",
     "combined_score": 42,
     "artifact_score": 6,
@@ -6112,35 +6114,6 @@
       "2024": 4,
       "2025": 3,
       "2026": 3
-    }
-  },
-  {
-    "affiliation": "Intel Corporation",
-    "combined_score": 30,
-    "artifact_score": 30,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 12,
-    "badges_functional": 12,
-    "badges_reproducible": 6,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 12,
-    "artifact_rate": 100.0,
-    "num_authors": 6,
-    "conferences": [
-      "SC"
-    ],
-    "years": {
-      "2025": 0,
-      "2024": 0,
-      "2023": 0,
-      "2022": 0,
-      "2021": 12,
-      "2020": 0
     }
   },
   {
@@ -11172,33 +11145,6 @@
       "2019": 0,
       "2018": 0,
       "2017": 0
-    }
-  },
-  {
-    "affiliation": "Intel",
-    "combined_score": 12,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 12,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 4,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 2,
-    "conferences": [
-      "CHES",
-      "USENIXSEC",
-      "WOOT"
-    ],
-    "years": {
-      "2021": 1,
-      "2025": 3
     }
   },
   {
