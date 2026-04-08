@@ -26,7 +26,7 @@ title: ""
       <option value="security">Security</option>
     </select>
   </div>
-  <div id="searchStatus" style="margin-top:8px; font-size:0.9em; color:#666; display:inline;"></div>
+  <div id="searchStatus" style="margin-top:8px; font-size:0.9em; color:#666; display:inline;">Loading artifact data…</div>
   <button id="downloadBtn" onclick="downloadResults()" style="display:none; margin-left:10px; padding:4px 14px; border:1px solid #ccc; border-radius:4px; background:#fff; cursor:pointer; font-size:0.9em; vertical-align:middle;">⬇ Download JSON</button>
 </div>
 
