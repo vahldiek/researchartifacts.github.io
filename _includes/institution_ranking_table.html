@@ -487,15 +487,17 @@
         ? '<span class="expand-btn" style="cursor:pointer;margin-right:4px;">' + (isExpanded ? '▼' : '▶') + '</span>'
         : '<span style="margin-right:12px;"></span>';
       var instRankVal = inst._originalRank || (start + i + 1);
+      // Show rank on: first item per page, or first item in a tie group
+      var showRank = (i === 0) || (inst._showRank !== false);
       var instRankChange = '';
-      if (prevInstSnapshot && prevInstSnapshot[inst.affiliation]) {
+      if (showRank && prevInstSnapshot && prevInstSnapshot[inst.affiliation]) {
         var oldInstRank = prevInstSnapshot[inst.affiliation].rank;
         var instDiff = oldInstRank - instRankVal;
         if (instDiff > 0) instRankChange = ' <span style="color:#27ae60;font-size:0.8em" title="Up ' + instDiff + ' from #' + oldInstRank + '">▲' + instDiff + '</span>';
         else if (instDiff < 0) instRankChange = ' <span style="color:#e74c3c;font-size:0.8em" title="Down ' + (-instDiff) + ' from #' + oldInstRank + '">▼' + (-instDiff) + '</span>';
         else instRankChange = ' <span style="color:#999;font-size:0.8em" title="Unchanged">–</span>';
       }
-      cells.push('<td>' + expandIcon + instRankVal + instRankChange + '</td>');
+      cells.push('<td>' + expandIcon + (showRank ? instRankVal + instRankChange : '') + '</td>');
       
       var aff = (inst.affiliation || 'Unknown').replace(/^_/, '');
       var flag = getFlagForInstitution(aff);
@@ -676,6 +678,11 @@
       }
       if (av < bv) return asc ? -1 : 1;
       if (av > bv) return asc ? 1 : -1;
+      // Secondary sort: alphabetical by institution name
+      var an = (a.affiliation || '').toLowerCase();
+      var bn = (b.affiliation || '').toLowerCase();
+      if (an < bn) return -1;
+      if (an > bn) return 1;
       return 0;
     });
   }
@@ -733,9 +740,18 @@
   }
 
   function assignRanks() {
-    // Assign original rank to each item based on current sorted order
+    // Assign tied ranks: same score = same rank number.
+    // _showRank is true only for the first item in each tie group
+    // (unless a search/filter is active, in which case always show).
+    var isSearching = !!(searchFilter || geoFilter !== 'world');
+    var rank = 1;
     for (var i = 0; i < sortedData.length; i++) {
-      sortedData[i]._originalRank = i + 1;
+      var cur = sortedData[i][scoreKey] || 0;
+      if (i > 0 && cur < (sortedData[i - 1][scoreKey] || 0)) {
+        rank = i + 1;
+      }
+      sortedData[i]._originalRank = rank;
+      sortedData[i]._showRank = isSearching || (i === 0 || cur !== (sortedData[i - 1][scoreKey] || 0));
     }
   }
 
@@ -800,6 +816,7 @@
   document.getElementById('affiliationSearch').addEventListener('input', function() {
     searchFilter = this.value;
     applySearch();
+    assignRanks();
     render();
   });
 
@@ -807,6 +824,7 @@
   document.getElementById('geoFilter').addEventListener('change', function() {
     geoFilter = this.value;
     applySearch();
+    assignRanks();
     render();
   });
 
