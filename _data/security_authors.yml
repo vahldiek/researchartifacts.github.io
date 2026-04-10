@@ -122082,9 +122082,9 @@
     2017: 0
   rank: 3456
   author_id: 7019
-- name: Heng Huang 0001
+- name: Heng Huang
   display_name: Heng Huang
-  affiliation: University of Maryland at College Park
+  affiliation: George Washington University
   artifact_score: 1
   artifacts: 1
   total: 1
@@ -122111,6 +122111,7 @@
     2018: 0
     2017: 0
   rank: 3456
+  author_id: 5298
 - name: Heng Pan
   display_name: Heng Pan
   affiliation: ''

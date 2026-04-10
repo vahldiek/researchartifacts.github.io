@@ -1,5 +1,34 @@
 [
   {
+    "affiliation": "Max Planck Society",
+    "combined_score": 45,
+    "artifact_score": 16,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 29,
+    "ae_ratio": 0.55,
+    "role": "Balanced",
+    "artifacts": 16,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 9,
+    "chair_count": 1,
+    "total_papers": 19,
+    "artifact_rate": 84.2,
+    "num_authors": 6,
+    "conferences": [
+      "CHES"
+    ],
+    "years": {
+      "2025": 4,
+      "2024": 1,
+      "2023": 5,
+      "2022": 7,
+      "2021": 3,
+      "2026": 2
+    }
+  },
+  {
     "affiliation": "Graz University of Technology",
     "combined_score": 35,
     "artifact_score": 11,
@@ -25,35 +54,6 @@
       "2023": 4,
       "2022": 3,
       "2021": 0,
-      "2026": 2
-    }
-  },
-  {
-    "affiliation": "Max Planck Institute for Security and Privacy",
-    "combined_score": 31,
-    "artifact_score": 10,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 21,
-    "ae_ratio": 0.48,
-    "role": "Consumer",
-    "artifacts": 10,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 7,
-    "chair_count": 0,
-    "total_papers": 11,
-    "artifact_rate": 90.9,
-    "num_authors": 4,
-    "conferences": [
-      "CHES"
-    ],
-    "years": {
-      "2025": 2,
-      "2024": 1,
-      "2023": 2,
-      "2022": 6,
-      "2021": 2,
       "2026": 2
     }
   },
@@ -228,34 +228,6 @@
       "2022": 1,
       "2021": 0,
       "2026": 1
-    }
-  },
-  {
-    "affiliation": "Max Planck Society",
-    "combined_score": 14,
-    "artifact_score": 6,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 8,
-    "ae_ratio": 0.75,
-    "role": "Balanced",
-    "artifacts": 6,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 2,
-    "chair_count": 1,
-    "total_papers": 8,
-    "artifact_rate": 75.0,
-    "num_authors": 2,
-    "conferences": [
-      "CHES"
-    ],
-    "years": {
-      "2025": 2,
-      "2024": 0,
-      "2023": 3,
-      "2022": 1,
-      "2021": 1
     }
   },
   {

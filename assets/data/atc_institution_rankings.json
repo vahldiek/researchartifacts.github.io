@@ -55,26 +55,26 @@
   },
   {
     "affiliation": "Tsinghua University",
-    "combined_score": 72,
-    "artifact_score": 63,
+    "combined_score": 75,
+    "artifact_score": 66,
     "artifact_citations": 0,
     "citation_score": 0,
     "ae_score": 9,
-    "ae_ratio": 7.0,
+    "ae_ratio": 7.33,
     "role": "Producer",
-    "artifacts": 21,
-    "badges_functional": 21,
-    "badges_reproducible": 21,
+    "artifacts": 22,
+    "badges_functional": 22,
+    "badges_reproducible": 22,
     "ae_memberships": 3,
     "chair_count": 0,
-    "total_papers": 25,
-    "artifact_rate": 84.0,
-    "num_authors": 16,
+    "total_papers": 26,
+    "artifact_rate": 84.6,
+    "num_authors": 17,
     "conferences": [
       "ATC"
     ],
     "years": {
-      "2024": 7,
+      "2024": 8,
       "2023": 4,
       "2022": 10,
       "2025": 2
@@ -720,29 +720,28 @@
     }
   },
   {
-    "affiliation": "Xiamen University",
+    "affiliation": "Max Planck Society",
     "combined_score": 18,
-    "artifact_score": 15,
+    "artifact_score": 0,
     "artifact_citations": 0,
     "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 5.0,
-    "role": "Producer",
-    "artifacts": 5,
-    "badges_functional": 5,
-    "badges_reproducible": 5,
-    "ae_memberships": 1,
+    "ae_score": 18,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 6,
     "chair_count": 0,
-    "total_papers": 5,
-    "artifact_rate": 100.0,
+    "total_papers": 0,
+    "artifact_rate": 0,
     "num_authors": 4,
     "conferences": [
       "ATC"
     ],
     "years": {
-      "2024": 4,
-      "2023": 0,
-      "2022": 1,
+      "2022": 2,
+      "2024": 3,
       "2025": 1
     }
   },
@@ -875,6 +874,33 @@
       "2024": 2,
       "2023": 2,
       "2022": 1
+    }
+  },
+  {
+    "affiliation": "Xiamen University",
+    "combined_score": 15,
+    "artifact_score": 12,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 4.0,
+    "role": "Producer",
+    "artifacts": 4,
+    "badges_functional": 4,
+    "badges_reproducible": 4,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 4,
+    "artifact_rate": 100.0,
+    "num_authors": 4,
+    "conferences": [
+      "ATC"
+    ],
+    "years": {
+      "2024": 3,
+      "2023": 0,
+      "2022": 1,
+      "2025": 1
     }
   },
   {
@@ -1519,32 +1545,6 @@
       "2024": 0,
       "2023": 1,
       "2022": 1
-    }
-  },
-  {
-    "affiliation": "Max Planck Institute for Security and Privacy",
-    "combined_score": 9,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 9,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 3,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "conferences": [
-      "ATC"
-    ],
-    "years": {
-      "2022": 1,
-      "2024": 1,
-      "2025": 1
     }
   },
   {
@@ -2667,30 +2667,6 @@
     ],
     "years": {
       "2025": 2
-    }
-  },
-  {
-    "affiliation": "Max Planck Institute for Informatics",
-    "combined_score": 6,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 6,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 2,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 2,
-    "conferences": [
-      "ATC"
-    ],
-    "years": {
-      "2024": 2
     }
   },
   {
@@ -5060,30 +5036,6 @@
   },
   {
     "affiliation": "Johns Hopkins University",
-    "combined_score": 3,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "conferences": [
-      "ATC"
-    ],
-    "years": {
-      "2022": 1
-    }
-  },
-  {
-    "affiliation": "Max Planck Institute for Software Systems",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,

@@ -312,6 +312,32 @@
     }
   },
   {
+    "affiliation": "Max Planck Society",
+    "combined_score": 18,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 15,
+    "ae_ratio": 0.2,
+    "role": "Consumer",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 5,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 4,
+    "conferences": [
+      "NDSS"
+    ],
+    "years": {
+      "2024": 3,
+      "2025": 2,
+      "2026": 1
+    }
+  },
+  {
     "affiliation": "Carnegie Mellon University",
     "combined_score": 16,
     "artifact_score": 10,
@@ -413,32 +439,6 @@
       "2026": 1,
       "2025": 3,
       "2024": 1
-    }
-  },
-  {
-    "affiliation": "Max Planck Institute for Security and Privacy",
-    "combined_score": 15,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 15,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 5,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 3,
-    "conferences": [
-      "NDSS"
-    ],
-    "years": {
-      "2024": 2,
-      "2025": 2,
-      "2026": 1
     }
   },
   {
@@ -3194,32 +3194,6 @@
   },
   {
     "affiliation": "Kyoto University",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "NDSS"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 0,
-      "2024": 1
-    }
-  },
-  {
-    "affiliation": "Max Planck Society",
     "combined_score": 3,
     "artifact_score": 3,
     "artifact_citations": 0,

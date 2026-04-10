@@ -1469,6 +1469,34 @@
     }
   },
   {
+    "affiliation": "Max Planck Society",
+    "combined_score": 12,
+    "artifact_score": 9,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 3.0,
+    "role": "Producer",
+    "artifacts": 3,
+    "badges_functional": 3,
+    "badges_reproducible": 3,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 3,
+    "artifact_rate": 100.0,
+    "num_authors": 4,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 3,
+      "2022": 1,
+      "2021": 0
+    }
+  },
+  {
     "affiliation": "Google",
     "combined_score": 12,
     "artifact_score": 3,
@@ -2772,34 +2800,6 @@
     }
   },
   {
-    "affiliation": "Max Planck Society",
-    "combined_score": 6,
-    "artifact_score": 6,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 2,
-    "badges_functional": 2,
-    "badges_reproducible": 2,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 100.0,
-    "num_authors": 2,
-    "conferences": [
-      "EUROSYS"
-    ],
-    "years": {
-      "2025": 0,
-      "2024": 0,
-      "2023": 2,
-      "2022": 0,
-      "2021": 0
-    }
-  },
-  {
     "affiliation": "Chinese Academy of Sciences",
     "combined_score": 6,
     "artifact_score": 6,
@@ -3023,34 +3023,6 @@
       "2024": 0,
       "2023": 0,
       "2022": 2,
-      "2021": 0
-    }
-  },
-  {
-    "affiliation": "Max Planck Institute for Software Systems",
-    "combined_score": 6,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 1.0,
-    "role": "Balanced",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 2,
-    "conferences": [
-      "EUROSYS"
-    ],
-    "years": {
-      "2025": 0,
-      "2024": 0,
-      "2023": 1,
-      "2022": 1,
       "2021": 0
     }
   },

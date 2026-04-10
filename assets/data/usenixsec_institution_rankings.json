@@ -210,6 +210,36 @@
     }
   },
   {
+    "affiliation": "Max Planck Society",
+    "combined_score": 108,
+    "artifact_score": 59,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 49,
+    "ae_ratio": 1.2,
+    "role": "Balanced",
+    "artifacts": 24,
+    "badges_functional": 19,
+    "badges_reproducible": 16,
+    "ae_memberships": 15,
+    "chair_count": 2,
+    "total_papers": 37,
+    "artifact_rate": 64.9,
+    "num_authors": 18,
+    "conferences": [
+      "USENIXSEC"
+    ],
+    "years": {
+      "2026": 4,
+      "2025": 13,
+      "2024": 5,
+      "2023": 6,
+      "2022": 8,
+      "2021": 2,
+      "2020": 1
+    }
+  },
+  {
     "affiliation": "Carnegie Mellon University",
     "combined_score": 105,
     "artifact_score": 87,
@@ -567,36 +597,6 @@
       "2022": 2,
       "2021": 0,
       "2020": 4
-    }
-  },
-  {
-    "affiliation": "Max Planck Society",
-    "combined_score": 66,
-    "artifact_score": 56,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 10,
-    "ae_ratio": 5.6,
-    "role": "Producer",
-    "artifacts": 23,
-    "badges_functional": 18,
-    "badges_reproducible": 15,
-    "ae_memberships": 2,
-    "chair_count": 2,
-    "total_papers": 36,
-    "artifact_rate": 63.9,
-    "num_authors": 8,
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 7,
-      "2024": 3,
-      "2023": 5,
-      "2022": 8,
-      "2021": 1,
-      "2020": 1
     }
   },
   {
@@ -2907,34 +2907,6 @@
     }
   },
   {
-    "affiliation": "Max Planck Institute for Security and Privacy",
-    "combined_score": 21,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 21,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 7,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 4,
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2021": 1,
-      "2023": 1,
-      "2024": 2,
-      "2025": 2,
-      "2026": 1
-    }
-  },
-  {
     "affiliation": "Palo Alto Networks",
     "combined_score": 20,
     "artifact_score": 2,
@@ -3382,31 +3354,6 @@
       "2022": 0,
       "2021": 0,
       "2020": 0
-    }
-  },
-  {
-    "affiliation": "Max Planck Institute for Informatics",
-    "combined_score": 18,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 18,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 6,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 5,
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2025": 3,
-      "2026": 3
     }
   },
   {
@@ -9681,36 +9628,6 @@
       "2026": 0,
       "2025": 0,
       "2024": 1,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0
-    }
-  },
-  {
-    "affiliation": "Max Planck Institute for Software Systems",
-    "combined_score": 3,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 1,
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 1,
-      "2024": 0,
       "2023": 0,
       "2022": 0,
       "2021": 0,

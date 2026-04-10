@@ -591,6 +591,36 @@
     }
   },
   {
+    "affiliation": "Max Planck Society",
+    "combined_score": 17,
+    "artifact_score": 14,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 4.67,
+    "role": "Producer",
+    "artifacts": 8,
+    "badges_functional": 4,
+    "badges_reproducible": 2,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 10,
+    "artifact_rate": 80.0,
+    "num_authors": 4,
+    "conferences": [
+      "PETS"
+    ],
+    "years": {
+      "2026": 0,
+      "2025": 5,
+      "2024": 0,
+      "2023": 2,
+      "2022": 1,
+      "2021": 0,
+      "2020": 1
+    }
+  },
+  {
     "affiliation": "Brave",
     "combined_score": 16,
     "artifact_score": 1,
@@ -1527,36 +1557,6 @@
     }
   },
   {
-    "affiliation": "Max Planck Society",
-    "combined_score": 9,
-    "artifact_score": 9,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 0,
-    "ae_ratio": null,
-    "role": "Producer",
-    "artifacts": 6,
-    "badges_functional": 2,
-    "badges_reproducible": 1,
-    "ae_memberships": 0,
-    "chair_count": 0,
-    "total_papers": 8,
-    "artifact_rate": 75.0,
-    "num_authors": 2,
-    "conferences": [
-      "PETS"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 2,
-      "2024": 0,
-      "2023": 2,
-      "2022": 1,
-      "2021": 0,
-      "2020": 1
-    }
-  },
-  {
     "affiliation": "ETH Zurich",
     "combined_score": 9,
     "artifact_score": 3,
@@ -1642,36 +1642,6 @@
       "2024": 0,
       "2023": 0,
       "2022": 1,
-      "2021": 0,
-      "2020": 0
-    }
-  },
-  {
-    "affiliation": "Max Planck Institute for Informatics",
-    "combined_score": 8,
-    "artifact_score": 5,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 1.67,
-    "role": "Balanced",
-    "artifacts": 2,
-    "badges_functional": 2,
-    "badges_reproducible": 1,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 100.0,
-    "num_authors": 2,
-    "conferences": [
-      "PETS"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 3,
-      "2024": 0,
-      "2023": 0,
-      "2022": 0,
       "2021": 0,
       "2020": 0
     }
