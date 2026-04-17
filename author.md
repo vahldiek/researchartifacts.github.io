@@ -6,6 +6,9 @@ layout: default
 
 <style>
 #author-search-box { padding:8px 14px; font-size:1em; width:100%; max-width:480px; border:1px solid #ccc; border-radius:4px; }
+.avail-warn { position:relative; cursor:help; font-size:0.8em; color:#b26a00; background:#fff8e1; padding:1px 5px; border-radius:3px; border:1px solid #ffe0b2; }
+.avail-warn .avail-tip { display:none; position:absolute; bottom:125%; left:50%; transform:translateX(-50%); background:#333; color:#fff; font-size:0.85em; padding:4px 8px; border-radius:4px; white-space:nowrap; z-index:100; pointer-events:none; }
+.avail-warn:hover .avail-tip { display:block; }
 #search-results { list-style:none; padding:0; margin:4px 0 0 0; max-height:260px; overflow-y:auto; border:1px solid #ddd; border-radius:4px; display:none; position:absolute; background:#fff; z-index:100; width:100%; max-width:480px; }
 #search-results li { padding:8px 14px; cursor:pointer; border-bottom:1px solid #f0f0f0; }
 #search-results li:hover, #search-results li.active { background:#e8f4f8; }
@@ -490,8 +493,8 @@ layout: default
     if (!availabilityLoaded || !url) return '';
     var normalUrl = url.replace(/\/+$/, '');
     if (urlAccessible[normalUrl] === false) {
-      var tip = 'This URL may be unavailable (last checked ' + (availabilityCheckedAt || 'recently') + ')';
-      return ' <span title="' + escHtml(tip) + '" style="cursor:help; font-size:0.8em; color:#b26a00; background:#fff8e1; padding:1px 5px; border-radius:3px; border:1px solid #ffe0b2;">\u26a0 may be unavailable</span>';
+      var tip = 'URL may be unavailable (last checked ' + (availabilityCheckedAt || 'recently') + ')';
+      return ' <span class="avail-warn">\u26a0 may be unavailable<span class="avail-tip">' + escHtml(tip) + '</span></span>';
     }
     return '';
   }

@@ -2,6 +2,12 @@
 title: ""
 ---
 
+<style>
+.avail-warn { position:relative; cursor:help; font-size:0.8em; color:#b26a00; background:#fff8e1; padding:1px 5px; border-radius:3px; border:1px solid #ffe0b2; }
+.avail-warn .avail-tip { display:none; position:absolute; bottom:125%; left:50%; transform:translateX(-50%); background:#333; color:#fff; font-size:0.85em; padding:4px 8px; border-radius:4px; white-space:nowrap; z-index:100; pointer-events:none; }
+.avail-warn:hover .avail-tip { display:block; }
+</style>
+
 **Research artifacts & artifact evaluation (AE)** drive reproducibility and scientific impact. This project analyzes and makes accessible artifact evaluation outcomes across major [security]({{ '/security/' | relative_url }}) and [systems]({{ '/systems/' | relative_url }}) conferences, recognizing the contributions of both artifact authors and artifact evaluation committees.
 
 <div id="search-container" style="max-width:720px; margin:2em auto; text-align:center;">
@@ -300,8 +306,8 @@ title: ""
     if (!availabilityLoaded || !url) return '';
     var normalUrl = url.replace(/\/+$/, '');
     if (urlAccessible[normalUrl] === false) {
-      var tip = 'This URL may be unavailable (last checked ' + (availabilityCheckedAt || 'recently') + ')';
-      return ' <span title="' + escHtml(tip) + '" style="cursor:help; font-size:0.8em; color:#b26a00; background:#fff8e1; padding:1px 5px; border-radius:3px; border:1px solid #ffe0b2;">⚠ may be unavailable</span>';
+      var tip = 'URL may be unavailable (last checked ' + (availabilityCheckedAt || 'recently') + ')';
+      return ' <span class="avail-warn">\u26a0 may be unavailable<span class="avail-tip">' + escHtml(tip) + '</span></span>';
     }
     return '';
   }
