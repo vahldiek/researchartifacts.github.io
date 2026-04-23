@@ -17,7 +17,8 @@ title: ""
       onfocus="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.12)'; this.style.borderColor='#4285f4';"
       onblur="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'; this.style.borderColor='#ddd';"
       autocomplete="off">
-    <svg style="position:absolute; right:16px; top:50%; transform:translateY(-50%); pointer-events:none;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <svg id="searchIcon" style="position:absolute; right:16px; top:50%; transform:translateY(-50%); pointer-events:none;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <svg id="clearIcon" onclick="clearSearch()" style="display:none; position:absolute; right:16px; top:50%; transform:translateY(-50%); cursor:pointer;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
   </div>
   <div id="filters" style="margin-top:12px; display:flex; flex-wrap:wrap; gap:10px; justify-content:center; align-items:center;">
     <select id="yearFilter" style="padding:8px 12px; border:1px solid #ccc; border-radius:6px; font-size:0.95em; background:#fff;">
@@ -209,6 +210,7 @@ title: ""
       pagination.style.display = 'none';
       sortCtrl.style.display = 'none';
       document.getElementById('downloadBtn').style.display = 'none';
+      document.getElementById('shareBtn').style.display = 'none';
       status.textContent = allData.length + ' artifacts available. Type a query or select a filter to search.';
       return;
     }
@@ -224,6 +226,7 @@ title: ""
       pagination.style.display = 'none';
       sortCtrl.style.display = 'none';
       document.getElementById('downloadBtn').style.display = 'none';
+      document.getElementById('shareBtn').style.display = 'none';
       status.textContent = '0 results';
       return;
     }
@@ -350,6 +353,20 @@ title: ""
     }
   };
 
+  function updateSearchIcon() {
+    var hasText = document.getElementById('searchBox').value.length > 0;
+    document.getElementById('searchIcon').style.display = hasText ? 'none' : 'block';
+    document.getElementById('clearIcon').style.display = hasText ? 'block' : 'none';
+  }
+
+  window.clearSearch = function() {
+    var box = document.getElementById('searchBox');
+    box.value = '';
+    box.focus();
+    updateSearchIcon();
+    doSearch();
+  };
+
   function availabilityTag(url) {
     if (!availabilityLoaded || !url) return '';
     var normalUrl = url.replace(/\/+$/, '');
@@ -392,6 +409,7 @@ title: ""
       document.getElementById('searchBox').addEventListener('input', function() {
         clearTimeout(debounceTimer);
         debounceTimer = setTimeout(doSearch, 200);
+        updateSearchIcon();
       });
       document.getElementById('yearFilter').addEventListener('change', doSearch);
       document.getElementById('venueFilter').addEventListener('change', doSearch);
@@ -416,7 +434,10 @@ title: ""
         document.getElementById('areaFilter').value = params.get('area');
         hasParam = true;
       }
-      if (hasParam) doSearch();
+      if (hasParam) {
+        updateSearchIcon();
+        doSearch();
+      }
     })
     .catch(function(err) {
       document.getElementById('searchStatus').textContent = 'Error loading artifact data.';
