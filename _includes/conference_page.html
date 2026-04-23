@@ -179,11 +179,11 @@ Download the underlying data as JSON for further analysis:
 {% assign cat = page.conf_category %}
 | Dataset | Download |
 |---|---|
-| **Artifacts** | [artifacts.json]({{ site.baseurl }}/assets/data/artifacts.json) |
-| **Authors** | [authors.json]({{ site.baseurl }}/assets/data/authors.json) |
-| **Combined Rankings** | [combined_rankings.json]({{ site.baseurl }}/assets/data/combined_rankings.json) |
-| **AE Members** | [ae_members.json]({{ site.baseurl }}/assets/data/ae_members.json) |
-| **Institution Rankings** | [institution_rankings.json]({{ site.baseurl }}/assets/data/institution_rankings.json) |
+| **Artifacts** | [artifacts.json]({{ '/assets/data/artifacts.json' | relative_url }}) |
+| **Authors** | [authors.json]({{ '/assets/data/authors.json' | relative_url }}) |
+| **Combined Rankings** | [combined_rankings.json]({{ '/assets/data/combined_rankings.json' | relative_url }}) |
+| **AE Members** | [ae_members.json]({{ '/assets/data/ae_members.json' | relative_url }}) |
+| **Institution Rankings** | [institution_rankings.json]({{ '/assets/data/institution_rankings.json' | relative_url }}) |
 
 *Filter by `conference: "{{ conf_name }}"` for {{ conf_display }}-specific data.*
 
@@ -557,7 +557,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   /* ── Load all data in parallel ─────────────────────────────────────── */
-  var dataBase = '{{ site.baseurl }}/assets/data/';
+  var dataBase = '{{ "/assets/data/" | relative_url }}';
   var confLower = CONF.toLowerCase();
   Promise.all([
     fetch(dataBase + confLower + '_combined_rankings.json').then(function(r) { return r.json(); }),
