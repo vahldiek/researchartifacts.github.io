@@ -1,15 +1,15 @@
 overall:
   github_repos: 1277
-  total_stars: 125124
+  total_stars: 125125
   total_forks: 16042
   max_stars: 14348
   max_forks: 1854
-  zenodo_repos: 816
-  total_views: 207760
-  total_downloads: 185618
+  zenodo_repos: 824
+  total_views: 208331
+  total_downloads: 183768
   avg_stars: 98.0
   avg_forks: 12.6
-  last_updated: 2026-04-23 21:50:10 UTC
+  last_updated: 2026-04-23 21:58:43 UTC
 by_conference:
 - name: ACSAC
   github_repos: 158
@@ -521,9 +521,9 @@ by_conference:
     pushed_at: '2026-04-23T16:58:29Z'
 - name: SOSP
   github_repos: 86
-  total_stars: 5267
+  total_stars: 5268
   total_forks: 894
-  avg_stars: 61.2
+  avg_stars: 61.3
   avg_forks: 10.4
   max_stars: 1217
   max_forks: 166
@@ -536,9 +536,9 @@ by_conference:
     avg_forks: 11.5
   - year: 2023
     github_repos: 28
-    stars: 1146
+    stars: 1147
     forks: 207
-    avg_stars: 40.9
+    avg_stars: 41.0
     avg_forks: 7.4
   - year: 2024
     github_repos: 24
@@ -951,7 +951,7 @@ by_year:
   max_forks: 1854
 - year: 2023
   github_repos: 270
-  total_stars: 11226
+  total_stars: 11227
   total_forks: 1994
   avg_stars: 41.6
   avg_forks: 7.4
