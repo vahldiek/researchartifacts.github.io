@@ -54,11 +54,10 @@ The table below shows the number of AE committee members per conference per year
 
 Some discrepancies exist between artifact results and committee data:
 
-- **ACSAC** — 8 years of artifact results but no committee data published on secartifacts.
 - **ATC & OSDI** share the same AE committee at USENIX, so committee members appear under both conferences for years 2022–2024.
 - Some conference-years show only chairs (no full committee): ATC 2023, OSDI 2023, SOSP 2024–2026.
 
-These gaps mean the **systems** committee count ({{ site.data.committee_stats.total_systems }}) is somewhat inflated (ATC/OSDI duplication), while the **security** count ({{ site.data.committee_stats.total_security }}) is understated (missing ACSAC).
+These gaps mean the **systems** committee count ({{ site.data.committee_stats.total_systems }}) is somewhat inflated (ATC/OSDI duplication).
 
 ---
 
