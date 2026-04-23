@@ -1,15 +1,15 @@
 overall:
   github_repos: 1277
-  total_stars: 125124
-  total_forks: 16042
+  total_stars: 125125
+  total_forks: 16044
   max_stars: 14348
   max_forks: 1854
-  zenodo_repos: 816
-  total_views: 207760
-  total_downloads: 185618
+  zenodo_repos: 863
+  total_views: 222933
+  total_downloads: 190808
   avg_stars: 98.0
   avg_forks: 12.6
-  last_updated: 2026-04-23 21:50:10 UTC
+  last_updated: 2026-04-23 22:58:13 UTC
 by_conference:
 - name: ACSAC
   github_repos: 158
@@ -166,7 +166,7 @@ by_conference:
     description: 'CIRCL: Cloudflare Interoperable Reusable Cryptographic Library'
     language: Go
     name: cloudflare/circl
-    pushed_at: '2026-04-21T16:08:01Z'
+    pushed_at: '2026-04-23T22:28:29Z'
   - title: 'SecretFlow-SPU: A Performant and User-Friendly Framework for Privacy-Preserving
       Machine Learning'
     url: https://github.com/secretflow/spu/tree/atc23_ae
@@ -413,7 +413,7 @@ by_conference:
 - name: PETS
   github_repos: 294
   total_stars: 21977
-  total_forks: 2084
+  total_forks: 2086
   avg_stars: 74.8
   avg_forks: 7.1
   max_stars: 12883
@@ -422,9 +422,9 @@ by_conference:
   - year: 2020
     github_repos: 15
     stars: 3487
-    forks: 468
+    forks: 469
     avg_stars: 232.5
-    avg_forks: 31.2
+    avg_forks: 31.3
   - year: 2021
     github_repos: 21
     stars: 13133
@@ -434,7 +434,7 @@ by_conference:
   - year: 2022
     github_repos: 34
     stars: 3895
-    forks: 592
+    forks: 593
     avg_stars: 114.6
     avg_forks: 17.4
   - year: 2023
@@ -481,7 +481,7 @@ by_conference:
     year: 2020
     area: security
     stars: 3308
-    forks: 419
+    forks: 420
     description: Google's differential privacy libraries.
     language: Go
     name: google/differential-privacy
@@ -492,7 +492,7 @@ by_conference:
     year: 2022
     area: security
     stars: 3308
-    forks: 419
+    forks: 420
     description: Google's differential privacy libraries.
     language: Go
     name: google/differential-privacy
@@ -521,9 +521,9 @@ by_conference:
     pushed_at: '2026-04-23T16:58:29Z'
 - name: SOSP
   github_repos: 86
-  total_stars: 5267
+  total_stars: 5268
   total_forks: 894
-  avg_stars: 61.2
+  avg_stars: 61.3
   avg_forks: 10.4
   max_stars: 1217
   max_forks: 166
@@ -536,9 +536,9 @@ by_conference:
     avg_forks: 11.5
   - year: 2023
     github_repos: 28
-    stars: 1146
+    stars: 1147
     forks: 207
-    avg_stars: 40.9
+    avg_stars: 41.0
     avg_forks: 7.4
   - year: 2024
     github_repos: 24
@@ -928,7 +928,7 @@ by_year:
 - year: 2020
   github_repos: 91
   total_stars: 36189
-  total_forks: 4723
+  total_forks: 4724
   avg_stars: 397.7
   avg_forks: 51.9
   max_stars: 14348
@@ -944,14 +944,14 @@ by_year:
 - year: 2022
   github_repos: 258
   total_stars: 34369
-  total_forks: 4786
+  total_forks: 4787
   avg_stars: 133.2
   avg_forks: 18.6
   max_stars: 14348
   max_forks: 1854
 - year: 2023
   github_repos: 270
-  total_stars: 11226
+  total_stars: 11227
   total_forks: 1994
   avg_stars: 41.6
   avg_forks: 7.4
