@@ -1,14 +1,14 @@
 last_updated: '2026-04-24'
-total_members: 3327
+total_members: 3324
 total_systems: 1573
-total_security: 1754
+total_security: 1751
 total_conferences: 52
 total_countries: 58
 total_continents: 7
 total_institutions: 442
-recurring_members: 2034
+recurring_members: 2031
 recurring_members_systems: 955
-recurring_members_security: 1151
+recurring_members_security: 1148
 recurring_chairs: 72
 top_countries:
 - name: United States
@@ -424,12 +424,12 @@ committee_sizes:
   year: 2025
   conf_year: ndss2025
   area: security
-  size: 64
+  size: 63
 - conference: NDSS
   year: 2026
   conf_year: ndss2026
   area: security
-  size: 132
+  size: 130
 - conference: OSDI
   year: 2020
   conf_year: osdi2020

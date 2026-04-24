@@ -1,8 +1,8 @@
 {
   "summary": {
-    "total_members": 3327,
+    "total_members": 3324,
     "total_systems": 1573,
-    "total_security": 1754,
+    "total_security": 1751,
     "total_countries": 58,
     "total_continents": 7,
     "total_institutions": 442
@@ -5838,14 +5838,14 @@
       "year": 2025,
       "conf_year": "ndss2025",
       "area": "security",
-      "size": 64
+      "size": 63
     },
     {
       "conference": "NDSS",
       "year": 2026,
       "conf_year": "ndss2026",
       "area": "security",
-      "size": 132
+      "size": 130
     },
     {
       "conference": "OSDI",
@@ -6495,11 +6495,6 @@
     },
     {
       "conference": "ndss2025",
-      "name": "Four members received the Distinguished Evaluator Award 🏆 from the organizers.",
-      "affiliation": ""
-    },
-    {
-      "conference": "ndss2025",
       "name": "Ahmed Lekssays",
       "affiliation": "Qatar Computing Research Institute"
     },
@@ -6527,11 +6522,6 @@
       "conference": "ndss2025",
       "name": "Shaofeng Li",
       "affiliation": "Peng Cheng Laboratory"
-    },
-    {
-      "conference": "ndss2026",
-      "name": "Nine members received the Distinguished Evaluator Award 🏆 from the organizers.",
-      "affiliation": ""
     },
     {
       "conference": "ndss2026",
@@ -6577,11 +6567,6 @@
       "conference": "ndss2026",
       "name": "Tommaso Sacchetti",
       "affiliation": "EURECOM"
-    },
-    {
-      "conference": "ndss2026",
-      "name": "¹ Participated in one out of two review cycles.",
-      "affiliation": ""
     },
     {
       "conference": "pets2020",
