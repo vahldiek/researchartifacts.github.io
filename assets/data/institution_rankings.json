@@ -2315,45 +2315,6 @@
     }
   },
   {
-    "affiliation": "University of California, Riverside",
-    "combined_score": 99,
-    "artifact_score": 30,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 69,
-    "ae_ratio": 0.43,
-    "role": "Consumer",
-    "artifacts": 17,
-    "badges_functional": 15,
-    "badges_reproducible": 5,
-    "ae_memberships": 23,
-    "chair_count": 0,
-    "total_papers": 30,
-    "artifact_rate": 56.7,
-    "num_authors": 21,
-    "conferences": [
-      "ACSAC",
-      "ATC",
-      "EUROSYS",
-      "NDSS",
-      "OSDI",
-      "SOSP",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2023": 3,
-      "2024": 10,
-      "2025": 6,
-      "2026": 6,
-      "2022": 8,
-      "2021": 6,
-      "2020": 0,
-      "2019": 0,
-      "2018": 1,
-      "2017": 0
-    }
-  },
-  {
     "affiliation": "Huawei",
     "combined_score": 97,
     "artifact_score": 53,
@@ -2389,6 +2350,45 @@
       "2026": 1,
       "2018": 0,
       "2017": 1
+    }
+  },
+  {
+    "affiliation": "University of California, Riverside",
+    "combined_score": 96,
+    "artifact_score": 27,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 69,
+    "ae_ratio": 0.39,
+    "role": "Consumer",
+    "artifacts": 16,
+    "badges_functional": 14,
+    "badges_reproducible": 4,
+    "ae_memberships": 23,
+    "chair_count": 0,
+    "total_papers": 29,
+    "artifact_rate": 55.2,
+    "num_authors": 20,
+    "conferences": [
+      "ACSAC",
+      "ATC",
+      "EUROSYS",
+      "NDSS",
+      "OSDI",
+      "SOSP",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2023": 3,
+      "2024": 9,
+      "2025": 6,
+      "2026": 6,
+      "2022": 8,
+      "2021": 6,
+      "2020": 0,
+      "2019": 0,
+      "2018": 1,
+      "2017": 0
     }
   },
   {
@@ -3641,43 +3641,6 @@
     }
   },
   {
-    "affiliation": "Johns Hopkins University",
-    "combined_score": 63,
-    "artifact_score": 42,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 21,
-    "ae_ratio": 2.0,
-    "role": "Balanced",
-    "artifacts": 22,
-    "badges_functional": 13,
-    "badges_reproducible": 10,
-    "ae_memberships": 7,
-    "chair_count": 0,
-    "total_papers": 29,
-    "artifact_rate": 75.9,
-    "num_authors": 10,
-    "conferences": [
-      "NDSS",
-      "OSDI",
-      "PETS",
-      "SOSP",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 2,
-      "2025": 9,
-      "2024": 2,
-      "2023": 7,
-      "2022": 2,
-      "2021": 0,
-      "2020": 3,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
     "affiliation": "Brown University",
     "combined_score": 63,
     "artifact_score": 33,
@@ -3789,6 +3752,43 @@
       "2020": 2,
       "2019": 0,
       "2026": 1
+    }
+  },
+  {
+    "affiliation": "Johns Hopkins University",
+    "combined_score": 60,
+    "artifact_score": 39,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 21,
+    "ae_ratio": 1.86,
+    "role": "Balanced",
+    "artifacts": 21,
+    "badges_functional": 12,
+    "badges_reproducible": 9,
+    "ae_memberships": 7,
+    "chair_count": 0,
+    "total_papers": 28,
+    "artifact_rate": 75.0,
+    "num_authors": 9,
+    "conferences": [
+      "NDSS",
+      "OSDI",
+      "PETS",
+      "SOSP",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2026": 2,
+      "2025": 9,
+      "2024": 2,
+      "2023": 7,
+      "2022": 1,
+      "2021": 0,
+      "2020": 3,
+      "2019": 0,
+      "2018": 0,
+      "2017": 0
     }
   },
   {
@@ -4210,45 +4210,6 @@
     }
   },
   {
-    "affiliation": "Rutgers University",
-    "combined_score": 52,
-    "artifact_score": 14,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 38,
-    "ae_ratio": 0.37,
-    "role": "Consumer",
-    "artifacts": 5,
-    "badges_functional": 5,
-    "badges_reproducible": 4,
-    "ae_memberships": 12,
-    "chair_count": 1,
-    "total_papers": 9,
-    "artifact_rate": 55.6,
-    "num_authors": 7,
-    "conferences": [
-      "ATC",
-      "EUROSYS",
-      "FAST",
-      "OSDI",
-      "PETS",
-      "SOSP",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2024": 4,
-      "2025": 5,
-      "2026": 1,
-      "2023": 2,
-      "2022": 2,
-      "2021": 2,
-      "2020": 1,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
     "affiliation": "University of Twente",
     "combined_score": 52,
     "artifact_score": 19,
@@ -4390,6 +4351,42 @@
       "2019": 0,
       "2018": 0,
       "2017": 0
+    }
+  },
+  {
+    "affiliation": "Rutgers University",
+    "combined_score": 49,
+    "artifact_score": 11,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 38,
+    "ae_ratio": 0.29,
+    "role": "Consumer",
+    "artifacts": 4,
+    "badges_functional": 4,
+    "badges_reproducible": 3,
+    "ae_memberships": 12,
+    "chair_count": 1,
+    "total_papers": 8,
+    "artifact_rate": 50.0,
+    "num_authors": 6,
+    "conferences": [
+      "ATC",
+      "EUROSYS",
+      "FAST",
+      "OSDI",
+      "SOSP",
+      "USENIXSEC"
+    ],
+    "years": {
+      "2024": 4,
+      "2025": 4,
+      "2026": 1,
+      "2023": 2,
+      "2022": 2,
+      "2021": 2,
+      "2020": 1,
+      "2019": 0
     }
   },
   {
@@ -4579,41 +4576,6 @@
       "2021": 0,
       "2020": 2,
       "2019": 2,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "Indiana University Bloomington",
-    "combined_score": 46,
-    "artifact_score": 16,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 30,
-    "ae_ratio": 0.53,
-    "role": "Balanced",
-    "artifacts": 6,
-    "badges_functional": 5,
-    "badges_reproducible": 5,
-    "ae_memberships": 10,
-    "chair_count": 0,
-    "total_papers": 6,
-    "artifact_rate": 100.0,
-    "num_authors": 10,
-    "conferences": [
-      "NDSS",
-      "USENIXSEC",
-      "VEHICLESEC"
-    ],
-    "years": {
-      "2026": 6,
-      "2025": 4,
-      "2024": 3,
-      "2023": 2,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
       "2018": 0,
       "2017": 0
     }
@@ -5043,6 +5005,41 @@
       "2026": 1,
       "2024": 0,
       "2023": 0,
+      "2021": 0,
+      "2020": 0,
+      "2019": 0,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
+    "affiliation": "Indiana University Bloomington",
+    "combined_score": 37,
+    "artifact_score": 7,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 30,
+    "ae_ratio": 0.23,
+    "role": "Consumer",
+    "artifacts": 3,
+    "badges_functional": 2,
+    "badges_reproducible": 2,
+    "ae_memberships": 10,
+    "chair_count": 0,
+    "total_papers": 3,
+    "artifact_rate": 100.0,
+    "num_authors": 8,
+    "conferences": [
+      "NDSS",
+      "USENIXSEC",
+      "VEHICLESEC"
+    ],
+    "years": {
+      "2026": 6,
+      "2025": 3,
+      "2024": 2,
+      "2023": 1,
+      "2022": 0,
       "2021": 0,
       "2020": 0,
       "2019": 0,
@@ -7177,43 +7174,6 @@
     }
   },
   {
-    "affiliation": "University of Georgia",
-    "combined_score": 23,
-    "artifact_score": 20,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 6.67,
-    "role": "Producer",
-    "artifacts": 9,
-    "badges_functional": 6,
-    "badges_reproducible": 6,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 16,
-    "artifact_rate": 56.2,
-    "num_authors": 5,
-    "conferences": [
-      "ACSAC",
-      "NDSS",
-      "PETS",
-      "USENIXSEC",
-      "WOOT"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 1,
-      "2024": 7,
-      "2023": 1,
-      "2022": 1,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
     "affiliation": "University of South Florida",
     "combined_score": 23,
     "artifact_score": 14,
@@ -7979,6 +7939,43 @@
       "2025": 1,
       "2024": 0,
       "2023": 3,
+      "2022": 1,
+      "2021": 0,
+      "2020": 0,
+      "2019": 0,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
+    "affiliation": "University of Georgia",
+    "combined_score": 20,
+    "artifact_score": 17,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 5.67,
+    "role": "Producer",
+    "artifacts": 8,
+    "badges_functional": 5,
+    "badges_reproducible": 5,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 15,
+    "artifact_rate": 53.3,
+    "num_authors": 4,
+    "conferences": [
+      "ACSAC",
+      "NDSS",
+      "PETS",
+      "USENIXSEC",
+      "WOOT"
+    ],
+    "years": {
+      "2026": 0,
+      "2025": 1,
+      "2024": 6,
+      "2023": 1,
       "2022": 1,
       "2021": 0,
       "2020": 0,
@@ -17211,40 +17208,6 @@
     }
   },
   {
-    "affiliation": "USC",
-    "combined_score": 6,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 1.0,
-    "role": "Balanced",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 2,
-    "conferences": [
-      "SC",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2021": 1,
-      "2026": 0,
-      "2025": 0,
-      "2024": 0,
-      "2023": 0,
-      "2022": 1,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
     "affiliation": "University of Oslo",
     "combined_score": 6,
     "artifact_score": 0,
@@ -21581,6 +21544,30 @@
     ],
     "years": {
       "2025": 1
+    }
+  },
+  {
+    "affiliation": "USC",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "SC"
+    ],
+    "years": {
+      "2021": 1
     }
   },
   {

@@ -754,58 +754,6 @@
     }
   },
   {
-    "affiliation": "University of California, Riverside",
-    "combined_score": 12,
-    "artifact_score": 6,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 6,
-    "ae_ratio": 1.0,
-    "role": "Balanced",
-    "artifacts": 2,
-    "badges_functional": 2,
-    "badges_reproducible": 2,
-    "ae_memberships": 2,
-    "chair_count": 0,
-    "total_papers": 2,
-    "artifact_rate": 100.0,
-    "num_authors": 4,
-    "conferences": [
-      "NDSS"
-    ],
-    "years": {
-      "2026": 1,
-      "2025": 0,
-      "2024": 3
-    }
-  },
-  {
-    "affiliation": "Indiana University Bloomington",
-    "combined_score": 12,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 9,
-    "ae_ratio": 0.33,
-    "role": "Consumer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 3,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 4,
-    "conferences": [
-      "NDSS"
-    ],
-    "years": {
-      "2026": 3,
-      "2025": 0,
-      "2024": 1
-    }
-  },
-  {
     "affiliation": "The University of Utah",
     "combined_score": 9,
     "artifact_score": 0,
@@ -1116,6 +1064,32 @@
     }
   },
   {
+    "affiliation": "University of California, Riverside",
+    "combined_score": 9,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.5,
+    "role": "Balanced",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 3,
+    "conferences": [
+      "NDSS"
+    ],
+    "years": {
+      "2026": 1,
+      "2025": 0,
+      "2024": 2
+    }
+  },
+  {
     "affiliation": "Beihang University",
     "combined_score": 9,
     "artifact_score": 6,
@@ -1139,6 +1113,30 @@
       "2026": 1,
       "2025": 0,
       "2024": 2
+    }
+  },
+  {
+    "affiliation": "Indiana University Bloomington",
+    "combined_score": 9,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 9,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 3,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 3,
+    "conferences": [
+      "NDSS"
+    ],
+    "years": {
+      "2026": 3
     }
   },
   {

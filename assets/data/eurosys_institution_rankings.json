@@ -967,6 +967,35 @@
     }
   },
   {
+    "affiliation": "University of Massachusetts Amherst",
+    "combined_score": 18,
+    "artifact_score": 6,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 12,
+    "ae_ratio": 0.5,
+    "role": "Balanced",
+    "artifacts": 2,
+    "badges_functional": 2,
+    "badges_reproducible": 2,
+    "ae_memberships": 4,
+    "chair_count": 0,
+    "total_papers": 2,
+    "artifact_rate": 100.0,
+    "num_authors": 6,
+    "conferences": [
+      "EUROSYS"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 1,
+      "2023": 0,
+      "2022": 1,
+      "2021": 3,
+      "2026": 1
+    }
+  },
+  {
     "affiliation": "University of California, Berkeley",
     "combined_score": 18,
     "artifact_score": 0,
@@ -1187,35 +1216,6 @@
       "2023": 2,
       "2022": 1,
       "2021": 1,
-      "2026": 1
-    }
-  },
-  {
-    "affiliation": "University of Massachusetts Amherst",
-    "combined_score": 15,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 12,
-    "ae_ratio": 0.25,
-    "role": "Consumer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 4,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 5,
-    "conferences": [
-      "EUROSYS"
-    ],
-    "years": {
-      "2025": 0,
-      "2024": 0,
-      "2023": 0,
-      "2022": 1,
-      "2021": 3,
       "2026": 1
     }
   },

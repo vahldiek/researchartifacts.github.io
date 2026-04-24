@@ -592,6 +592,35 @@
     }
   },
   {
+    "affiliation": "Columbia University",
+    "combined_score": 41,
+    "artifact_score": 26,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 15,
+    "ae_ratio": 1.73,
+    "role": "Balanced",
+    "artifacts": 10,
+    "badges_functional": 9,
+    "badges_reproducible": 8,
+    "ae_memberships": 5,
+    "chair_count": 0,
+    "total_papers": 15,
+    "artifact_rate": 66.7,
+    "num_authors": 9,
+    "conferences": [
+      "OSDI"
+    ],
+    "years": {
+      "2025": 4,
+      "2024": 2,
+      "2023": 0,
+      "2022": 7,
+      "2021": 1,
+      "2020": 1
+    }
+  },
+  {
     "affiliation": "ETH Zurich",
     "combined_score": 37,
     "artifact_score": 28,
@@ -706,35 +735,6 @@
       "2022": 6,
       "2021": 2,
       "2020": 0
-    }
-  },
-  {
-    "affiliation": "Columbia University",
-    "combined_score": 35,
-    "artifact_score": 20,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 15,
-    "ae_ratio": 1.33,
-    "role": "Balanced",
-    "artifacts": 8,
-    "badges_functional": 7,
-    "badges_reproducible": 6,
-    "ae_memberships": 5,
-    "chair_count": 0,
-    "total_papers": 13,
-    "artifact_rate": 61.5,
-    "num_authors": 8,
-    "conferences": [
-      "OSDI"
-    ],
-    "years": {
-      "2025": 4,
-      "2024": 2,
-      "2023": 0,
-      "2022": 5,
-      "2021": 1,
-      "2020": 1
     }
   },
   {
