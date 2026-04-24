@@ -390,32 +390,6 @@
     }
   },
   {
-    "affiliation": "University of Utah",
-    "combined_score": 15,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 12,
-    "ae_ratio": 0.25,
-    "role": "Consumer",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 4,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 3,
-    "conferences": [
-      "NDSS"
-    ],
-    "years": {
-      "2024": 3,
-      "2025": 1,
-      "2026": 1
-    }
-  },
-  {
     "affiliation": "RWTH Aachen University",
     "combined_score": 15,
     "artifact_score": 9,
@@ -829,6 +803,32 @@
       "2026": 3,
       "2025": 0,
       "2024": 1
+    }
+  },
+  {
+    "affiliation": "The University of Utah",
+    "combined_score": 9,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 9,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 3,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "NDSS"
+    ],
+    "years": {
+      "2024": 1,
+      "2025": 1,
+      "2026": 1
     }
   },
   {
@@ -1599,7 +1599,7 @@
     }
   },
   {
-    "affiliation": "University of Twente / Inria",
+    "affiliation": "University of Twente/Inria",
     "combined_score": 6,
     "artifact_score": 0,
     "artifact_citations": 0,
@@ -1624,7 +1624,7 @@
     }
   },
   {
-    "affiliation": "Georgia State University",
+    "affiliation": "Old Dominion University",
     "combined_score": 6,
     "artifact_score": 0,
     "artifact_citations": 0,
@@ -2136,6 +2136,32 @@
       "2026": 0,
       "2025": 2,
       "2024": 0
+    }
+  },
+  {
+    "affiliation": "University of Utah",
+    "combined_score": 6,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 1.0,
+    "role": "Balanced",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 2,
+    "conferences": [
+      "NDSS"
+    ],
+    "years": {
+      "2026": 0,
+      "2025": 0,
+      "2024": 2
     }
   },
   {
