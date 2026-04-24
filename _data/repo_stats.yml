@@ -1,15 +1,15 @@
 overall:
-  github_repos: 1337
-  total_stars: 127416
-  total_forks: 16533
+  github_repos: 1346
+  total_stars: 127631
+  total_forks: 16556
   max_stars: 14348
   max_forks: 1854
-  zenodo_repos: 849
-  total_views: 212848
-  total_downloads: 187573
-  avg_stars: 95.3
-  avg_forks: 12.4
-  last_updated: 2026-04-24 15:43:19 UTC
+  zenodo_repos: 875
+  total_views: 225850
+  total_downloads: 194957
+  avg_stars: 94.8
+  avg_forks: 12.3
+  last_updated: 2026-04-24 17:52:22 UTC
 by_conference:
 - name: ACSAC
   github_repos: 158
@@ -311,11 +311,11 @@ by_conference:
   years: []
   top_repos: []
 - name: OSDI
-  github_repos: 138
-  total_stars: 55288
-  total_forks: 6990
-  avg_stars: 400.6
-  avg_forks: 50.7
+  github_repos: 139
+  total_stars: 55335
+  total_forks: 6996
+  avg_stars: 398.1
+  avg_forks: 50.3
   max_stars: 14348
   max_forks: 1854
   years:
@@ -344,11 +344,11 @@ by_conference:
     avg_stars: 69.8
     avg_forks: 11.0
   - year: 2024
-    github_repos: 30
-    stars: 2184
-    forks: 255
-    avg_stars: 72.8
-    avg_forks: 8.5
+    github_repos: 31
+    stars: 2231
+    forks: 261
+    avg_stars: 72.0
+    avg_forks: 8.4
   top_repos:
   - title: 'Retiarii: A Deep Learning Exploratory-Training Framework'
     url: https://github.com/microsoft/nni/tree/retiarii_artifact
@@ -699,11 +699,11 @@ by_conference:
     name: dnet-tee/wait-a-cycle
     pushed_at: '2025-06-17T15:55:24Z'
 - name: USENIXSEC
-  github_repos: 418
-  total_stars: 18944
-  total_forks: 2913
-  avg_stars: 45.3
-  avg_forks: 7.0
+  github_repos: 426
+  total_stars: 19112
+  total_forks: 2930
+  avg_stars: 44.9
+  avg_forks: 6.9
   max_stars: 1392
   max_forks: 271
   years:
@@ -732,10 +732,10 @@ by_conference:
     avg_stars: 39.1
     avg_forks: 7.1
   - year: 2024
-    github_repos: 164
-    stars: 3503
-    forks: 441
-    avg_stars: 21.4
+    github_repos: 172
+    stars: 3671
+    forks: 458
+    avg_stars: 21.3
     avg_forks: 2.7
   - year: 2025
     github_repos: 2
@@ -963,9 +963,9 @@ by_year:
   max_stars: 1654
   max_forks: 268
 - year: 2024
-  github_repos: 356
-  total_stars: 9008
-  total_forks: 1207
+  github_repos: 365
+  total_stars: 9223
+  total_forks: 1230
   avg_stars: 25.3
   avg_forks: 3.4
   max_stars: 1000
