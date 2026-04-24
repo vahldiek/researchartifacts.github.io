@@ -1,15 +1,15 @@
 overall:
-  github_repos: 1277
-  total_stars: 125125
-  total_forks: 16042
-  max_stars: 14348
+  github_repos: 1296
+  total_stars: 126543
+  total_forks: 16447
+  max_stars: 14347
   max_forks: 1854
-  zenodo_repos: 824
-  total_views: 208331
-  total_downloads: 183768
-  avg_stars: 98.0
-  avg_forks: 12.6
-  last_updated: 2026-04-23 21:58:43 UTC
+  zenodo_repos: 818
+  total_views: 205363
+  total_downloads: 94485
+  avg_stars: 97.6
+  avg_forks: 12.7
+  last_updated: 2026-04-24 14:59:56 UTC
 by_conference:
 - name: ACSAC
   github_repos: 158
@@ -130,8 +130,8 @@ by_conference:
     pushed_at: '2025-08-16T09:08:03Z'
 - name: ATC
   github_repos: 108
-  total_stars: 4815
-  total_forks: 831
+  total_stars: 4816
+  total_forks: 832
   avg_stars: 44.6
   avg_forks: 7.7
   max_stars: 1654
@@ -146,14 +146,14 @@ by_conference:
   - year: 2023
     github_repos: 35
     stars: 3125
-    forks: 559
+    forks: 560
     avg_stars: 89.3
     avg_forks: 16.0
   - year: 2024
     github_repos: 36
-    stars: 782
+    stars: 783
     forks: 85
-    avg_stars: 21.7
+    avg_stars: 21.8
     avg_forks: 2.4
   top_repos:
   - title: 'Portunus: Re-imagining Access Control in Distributed Systems'
@@ -166,7 +166,7 @@ by_conference:
     description: 'CIRCL: Cloudflare Interoperable Reusable Cryptographic Library'
     language: Go
     name: cloudflare/circl
-    pushed_at: '2026-04-21T16:08:01Z'
+    pushed_at: '2026-04-23T22:28:29Z'
   - title: 'SecretFlow-SPU: A Performant and User-Friendly Framework for Privacy-Preserving
       Machine Learning'
     url: https://github.com/secretflow/spu/tree/atc23_ae
@@ -312,18 +312,18 @@ by_conference:
   top_repos: []
 - name: OSDI
   github_repos: 137
-  total_stars: 55241
+  total_stars: 55243
   total_forks: 6984
   avg_stars: 403.2
   avg_forks: 51.0
-  max_stars: 14348
+  max_stars: 14347
   max_forks: 1854
   years:
   - year: 2020
     github_repos: 34
-    stars: 27969
+    stars: 27972
     forks: 3372
-    avg_stars: 822.6
+    avg_stars: 822.7
     avg_forks: 99.2
   - year: 2021
     github_repos: 18
@@ -333,9 +333,9 @@ by_conference:
     avg_forks: 9.5
   - year: 2022
     github_repos: 31
-    stars: 22589
+    stars: 22588
     forks: 2917
-    avg_stars: 728.7
+    avg_stars: 728.6
     avg_forks: 94.1
   - year: 2023
     github_repos: 25
@@ -355,7 +355,7 @@ by_conference:
     conference: OSDI
     year: 2020
     area: systems
-    stars: 14348
+    stars: 14347
     forks: 1854
     description: An open source AutoML toolkit for automate machine learning lifecycle,
       including feature engineering, neural architectur
@@ -367,7 +367,7 @@ by_conference:
     conference: OSDI
     year: 2022
     area: systems
-    stars: 14348
+    stars: 14347
     forks: 1854
     description: An open source AutoML toolkit for automate machine learning lifecycle,
       including feature engineering, neural architectur
@@ -380,7 +380,7 @@ by_conference:
     conference: OSDI
     year: 2020
     area: systems
-    stars: 3714
+    stars: 3715
     forks: 492
     description: A high performance and generic framework for distributed DNN training
     language: Python
@@ -412,29 +412,29 @@ by_conference:
     pushed_at: '2023-12-09T16:26:31Z'
 - name: PETS
   github_repos: 294
-  total_stars: 21977
-  total_forks: 2084
+  total_stars: 21980
+  total_forks: 2086
   avg_stars: 74.8
   avg_forks: 7.1
-  max_stars: 12883
+  max_stars: 12882
   max_forks: 642
   years:
   - year: 2020
     github_repos: 15
     stars: 3487
-    forks: 468
+    forks: 469
     avg_stars: 232.5
-    avg_forks: 31.2
+    avg_forks: 31.3
   - year: 2021
     github_repos: 21
-    stars: 13133
+    stars: 13132
     forks: 723
-    avg_stars: 625.4
+    avg_stars: 625.3
     avg_forks: 34.4
   - year: 2022
     github_repos: 34
     stars: 3895
-    forks: 592
+    forks: 593
     avg_stars: 114.6
     avg_forks: 17.4
   - year: 2023
@@ -451,13 +451,13 @@ by_conference:
     avg_forks: 1.5
   - year: 2025
     github_repos: 91
-    stars: 446
+    stars: 449
     forks: 94
     avg_stars: 4.9
     avg_forks: 1.0
   - year: 2026
     github_repos: 35
-    stars: 35
+    stars: 36
     forks: 5
     avg_stars: 1.0
     avg_forks: 0.1
@@ -468,7 +468,7 @@ by_conference:
     conference: PETS
     year: 2021
     area: security
-    stars: 12883
+    stars: 12882
     forks: 642
     description: "Build your own 'AirTags' \U0001F3F7 today! Framework for tracking\
       \ personal Bluetooth devices via Apple's massive Find My network."
@@ -481,7 +481,7 @@ by_conference:
     year: 2020
     area: security
     stars: 3308
-    forks: 419
+    forks: 420
     description: Google's differential privacy libraries.
     language: Go
     name: google/differential-privacy
@@ -492,7 +492,7 @@ by_conference:
     year: 2022
     area: security
     stars: 3308
-    forks: 419
+    forks: 420
     description: Google's differential privacy libraries.
     language: Go
     name: google/differential-privacy
@@ -520,23 +520,29 @@ by_conference:
     name: privacy-tech-lab/gpc-optmeowt
     pushed_at: '2026-04-23T16:58:29Z'
 - name: SOSP
-  github_repos: 86
-  total_stars: 5268
-  total_forks: 894
-  avg_stars: 61.3
-  avg_forks: 10.4
-  max_stars: 1217
+  github_repos: 105
+  total_stars: 6675
+  total_forks: 1294
+  avg_stars: 63.6
+  avg_forks: 12.3
+  max_stars: 1218
   max_forks: 166
   years:
+  - year: 2019
+    github_repos: 19
+    stars: 1404
+    forks: 400
+    avg_stars: 73.9
+    avg_forks: 21.1
   - year: 2021
     github_repos: 34
-    stars: 2252
+    stars: 2253
     forks: 390
-    avg_stars: 66.2
+    avg_stars: 66.3
     avg_forks: 11.5
   - year: 2023
     github_repos: 28
-    stars: 1147
+    stars: 1149
     forks: 207
     avg_stars: 41.0
     avg_forks: 7.4
@@ -553,7 +559,7 @@ by_conference:
     conference: SOSP
     year: 2021
     area: systems
-    stars: 1217
+    stars: 1218
     forks: 145
     description: Kernel-Bypass LibOS Architecture
     language: Rust
@@ -572,6 +578,17 @@ by_conference:
     language: C++
     name: microsoft/nnfusion
     pushed_at: '2024-09-19T06:31:57Z'
+  - title: Generalized Pipeline Parallelism for DNN Training
+    url: https://github.com/msr-fiddle/pipedream
+    conference: SOSP
+    year: 2019
+    area: systems
+    stars: 392
+    forks: 115
+    description: ''
+    language: Python
+    name: msr-fiddle/pipedream
+    pushed_at: '2022-11-04T14:51:26Z'
   - title: Reducing Energy Bloat in Large Model Training
     url: https://github.com/ml-energy/zeus/tree/kronos
     conference: SOSP
@@ -594,18 +611,6 @@ by_conference:
     language: Rust
     name: SunHao-0/healer
     pushed_at: '2022-02-23T01:30:05Z'
-  - title: 'PIT: Optimization of Dynamic Sparse Deep Learning Models via Permutation
-      Invariant Transformation'
-    url: https://github.com/microsoft/SparTA/tree/pit_artifact
-    conference: SOSP
-    year: 2023
-    area: systems
-    stars: 167
-    forks: 12
-    description: ''
-    language: Python
-    name: microsoft/SparTA
-    pushed_at: '2024-07-22T05:39:43Z'
 - name: SYSTEX
   github_repos: 17
   total_stars: 60
@@ -695,8 +700,8 @@ by_conference:
     pushed_at: '2025-06-17T15:55:24Z'
 - name: USENIXSEC
   github_repos: 378
-  total_stars: 18104
-  total_forks: 2828
+  total_stars: 18108
+  total_forks: 2830
   avg_stars: 47.9
   avg_forks: 7.5
   max_stars: 1392
@@ -704,9 +709,9 @@ by_conference:
   years:
   - year: 2020
     github_repos: 24
-    stars: 3798
-    forks: 642
-    avg_stars: 158.2
+    stars: 3799
+    forks: 643
+    avg_stars: 158.3
     avg_forks: 26.8
   - year: 2021
     github_repos: 25
@@ -716,14 +721,14 @@ by_conference:
     avg_forks: 11.2
   - year: 2022
     github_repos: 88
-    stars: 5093
+    stars: 5095
     forks: 736
     avg_stars: 57.9
     avg_forks: 8.4
   - year: 2023
     github_repos: 115
-    stars: 4496
-    forks: 813
+    stars: 4497
+    forks: 814
     avg_stars: 39.1
     avg_forks: 7.1
   - year: 2024
@@ -766,7 +771,7 @@ by_conference:
     conference: USENIXSEC
     year: 2022
     area: security
-    stars: 1276
+    stars: 1277
     forks: 83
     description: A generator of weird files (binary polyglots, near polyglots, polymocks...)
     language: Python
@@ -791,26 +796,26 @@ by_conference:
     conference: USENIXSEC
     year: 2020
     area: security
-    stars: 747
-    forks: 66
+    stars: 748
+    forks: 67
     description: A fast and accurate disassembler
     language: C++
     name: GrammaTech/ddisasm
     pushed_at: '2026-04-17T20:51:01Z'
 - name: WOOT
   github_repos: 23
-  total_stars: 13605
+  total_stars: 13606
   total_forks: 1148
-  avg_stars: 591.5
+  avg_stars: 591.6
   avg_forks: 49.9
-  max_stars: 12366
+  max_stars: 12367
   max_forks: 996
   years:
   - year: 2019
     github_repos: 4
-    stars: 12743
+    stars: 12744
     forks: 1047
-    avg_stars: 3185.8
+    avg_stars: 3186.0
     avg_forks: 261.8
   - year: 2021
     github_repos: 1
@@ -848,7 +853,7 @@ by_conference:
     conference: WOOT
     year: 2019
     area: security
-    stars: 12366
+    stars: 12367
     forks: 996
     description: 'Universal Radio Hacker: Investigate Wireless Protocols Like A Boss'
     language: Python
@@ -918,20 +923,20 @@ by_year:
   max_stars: 566
   max_forks: 161
 - year: 2019
-  github_repos: 19
-  total_stars: 13237
-  total_forks: 1171
-  avg_stars: 696.7
-  avg_forks: 61.6
-  max_stars: 12366
+  github_repos: 38
+  total_stars: 14642
+  total_forks: 1571
+  avg_stars: 385.3
+  avg_forks: 41.3
+  max_stars: 12367
   max_forks: 996
 - year: 2020
   github_repos: 91
-  total_stars: 36189
-  total_forks: 4723
+  total_stars: 36193
+  total_forks: 4725
   avg_stars: 397.7
   avg_forks: 51.9
-  max_stars: 14348
+  max_stars: 14347
   max_forks: 1854
 - year: 2021
   github_repos: 136
@@ -939,27 +944,27 @@ by_year:
   total_forks: 1752
   avg_stars: 143.3
   avg_forks: 12.9
-  max_stars: 12883
+  max_stars: 12882
   max_forks: 642
 - year: 2022
   github_repos: 258
-  total_stars: 34369
-  total_forks: 4786
+  total_stars: 34370
+  total_forks: 4787
   avg_stars: 133.2
   avg_forks: 18.6
-  max_stars: 14348
+  max_stars: 14347
   max_forks: 1854
 - year: 2023
   github_repos: 270
-  total_stars: 11227
-  total_forks: 1994
+  total_stars: 11230
+  total_forks: 1996
   avg_stars: 41.6
   avg_forks: 7.4
   max_stars: 1654
   max_forks: 268
 - year: 2024
   github_repos: 315
-  total_stars: 8121
+  total_stars: 8122
   total_forks: 1116
   avg_stars: 25.8
   avg_forks: 3.5
@@ -967,7 +972,7 @@ by_year:
   max_forks: 166
 - year: 2025
   github_repos: 129
-  total_stars: 1603
+  total_stars: 1606
   total_forks: 255
   avg_stars: 12.4
   avg_forks: 2.0
@@ -975,7 +980,7 @@ by_year:
   max_forks: 70
 - year: 2026
   github_repos: 41
-  total_stars: 40
+  total_stars: 41
   total_forks: 7
   avg_stars: 1.0
   avg_forks: 0.2

@@ -144,6 +144,23 @@
     reusable: 0
     total: 45
     year: 2025
+- category: systems
+  name: FAST
+  total_artifacts: 35
+  venue_type: conference
+  years:
+  - available: 17
+    functional: 15
+    reproducible: 8
+    reusable: 0
+    total: 17
+    year: 2024
+  - available: 18
+    functional: 14
+    reproducible: 9
+    reusable: 0
+    total: 18
+    year: 2025
 - category: security
   name: NDSS
   total_artifacts: 215
@@ -169,7 +186,7 @@
     year: 2026
 - category: systems
   name: OSDI
-  total_artifacts: 175
+  total_artifacts: 213
   venue_type: conference
   years:
   - available: 47
@@ -202,6 +219,12 @@
     reusable: 0
     total: 34
     year: 2024
+  - available: 38
+    functional: 33
+    reproducible: 22
+    reusable: 0
+    total: 38
+    year: 2025
 - category: security
   name: PETS
   total_artifacts: 360
@@ -262,9 +285,15 @@
     year: 2021
 - category: systems
   name: SOSP
-  total_artifacts: 99
+  total_artifacts: 121
   venue_type: conference
   years:
+  - available: 21
+    functional: 19
+    reproducible: 12
+    reusable: 0
+    total: 22
+    year: 2019
   - available: 39
     functional: 38
     reproducible: 27

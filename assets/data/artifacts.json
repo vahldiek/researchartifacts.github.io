@@ -4163,6 +4163,437 @@
     ]
   },
   {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2024,
+    "title": "RFUSE: Modernizing Userspace Filesystem Framework through Scalable Kernel-Userspace Communication",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast24-cho.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2024,
+    "title": "The Design and Implementation of a Capacity-Variant Storage System",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast24-jiao.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2024,
+    "title": "I/O Passthru: Upstreaming a flexible and efficient I/O Path in Linux",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast24-joshi.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2024,
+    "title": "Symbiosis: The Art of Application and Kernel Cache Cooperation",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast24-dai.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2024,
+    "title": "We Ain't Afraid of No File Fragmentation: Causes and Prevention of Its Performance Impact on Modern Flash SSDs",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast24-jun.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2024,
+    "title": "Physical vs. Logical Indexing with IDEA: Inverted Deduplication-Aware Index",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast24-levi.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2024,
+    "title": "MinFlow: High-performance and Cost-efficient Data Passing for I/O-intensive Stateful Serverless Analytics",
+    "badges": [
+      "available"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast24-li.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2024,
+    "title": "Metis: File System Model Checking via Versatile Input and State Exploration",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast24-liu-yifei.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2024,
+    "title": "MIDAS: Minimizing Write Amplification in Log-Structured Systems through Adaptive Group Number and Size Configuration",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast24-oh.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2024,
+    "title": "Combining Buffered I/O and Direct I/O in Distributed File Systems",
+    "badges": [
+      "available"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast24-qian.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2024,
+    "title": "ELECT: Enabling Erasure Coding Tiering for LSM-tree-based Storage",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast24-ren.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2024,
+    "title": "Kosmo: Efficient Online Miss Ratio Curve Generation for Eviction Policy Evaluation",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast24-shakiba.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2024,
+    "title": "Baleen: ML Admission & Prefetching for Flash Caches",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast24-wong.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2024,
+    "title": "TeRM: Extending RDMA-Attached Memory with SSD",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast24-yang-zhe.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2024,
+    "title": "COLE: A Column-based Learned Storage for Blockchain Systems",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast24-zhang_ce.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2024,
+    "title": "OmniCache: Collaborative Caching for Near-storage Accelerators",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast24-zhang-jian.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2024,
+    "title": "In-Memory Key-Value Store Live Migration with NetMigrate",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast24-zhu.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2025,
+    "title": "LeapGNN: Accelerating Distributed GNN Training Leveraging Feature-Centric Model Migration",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast25-chen-weijian-leap.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2025,
+    "title": "GPHash: An Efficient Hash Index for GPU with Byte-Granularity Persistent Memory",
+    "badges": [
+      "available"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast25-chen-menglei.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2025,
+    "title": "AegonKV: A High Bandwidth, Low Tail Latency, and Low Storage Cost KV-Separated LSM Store with SmartSSD-based GC Offloading",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast25-duan.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2025,
+    "title": "Revisiting Network Coding for Warm Blob Storage",
+    "badges": [
+      "available"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast25-gan.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2025,
+    "title": "ShiftLock: Mitigate One-sided RDMA Lock Contention via Handover",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast25-gao.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2025,
+    "title": "Silhouette: Leveraging Consistency Mechanisms to Detect Bugs in Persistent Memory-Based File Systems",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast25-jiao.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2025,
+    "title": "OPIMQ: Order Preserving IO stack for Multi-Queue Block Device",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast25-kim-jieun.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2025,
+    "title": "D2FS: Device-Driven Filesystem Garbage Collection",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast25-kim-juwon.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2025,
+    "title": "Selective On-Device Execution of Data-Dependent Read I/Os",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast25-park.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2025,
+    "title": "Don't Maintain Twice, It's Alright: Merged Metadata Management in Deduplication File System with GogetaFS",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast25-pan.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2025,
+    "title": "PolyStore: Exploiting Combined Capabilities of Heterogeneous Storage",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast25-ren.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2025,
+    "title": "Cloudscape: A Study of Storage Services in Modern Cloud Architectures",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast25-satija.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2025,
+    "title": "VectorCDC: Accelerating Data Deduplication with Vector Instructions",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast25-udayashankar.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2025,
+    "title": "Boosting File Systems Elegantly: A Transparent NVM Write-ahead Log for Disk File Systems",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast25-wang.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2025,
+    "title": "Oasis: An Out-of-core Approximate Graph System via All-Distances Sketches",
+    "badges": [
+      "available"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast25-yang.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2025,
+    "title": "Rethinking the Request-to-IO Transformation Process of File Systems for Full Utilization of High-Bandwidth SSDs",
+    "badges": [
+      "available"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast25-zhan.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2025,
+    "title": "3L-Cache: Low Overhead and Precise Learning-based Eviction Policy for Caches",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast25-zhou-wenbin.pdf"
+  },
+  {
+    "conference": "FAST",
+    "category": "systems",
+    "year": 2025,
+    "title": "HiDPU: A DPU-Oriented Hybrid Indexing Scheme for Disaggregated Storage Systems",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/fast25-zhu.pdf"
+  },
+  {
     "conference": "OSDI",
     "category": "systems",
     "year": 2020,
@@ -6551,6 +6982,479 @@
     ]
   },
   {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "EMT: An OS Framework for New Memory Translation Architectures",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-chai-siyuan.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Paralegal: Practical Static Analysis for Privacy Bugs",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-adam.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Low End-to-End Latency atop a Speculative Shared Log with Fix-Ante Ordering",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-bhat.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Kamino: Efficient VM Allocation at Scale with Latency-Driven Cache-Aware Scheduling",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-domingo.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Decentralized, Epoch-based F2FS Journaling with Fine-grained Crash Recovery",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-cui.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "QiMeng-Xpiler: Transcompiling Tensor Programs for Deep Learning Systems with a Neural-Symbolic Approach",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-dong.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Stripeless Data Placement for Erasure-Coded In-Memory Storage",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-gao.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "QOS: Quantum Operating System",
+    "badges": [
+      "available"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-giortamis.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Picsou: Enabling Replicated State Machines to Communicate Efficiently",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-frank.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "KPerfIR: Towards a Open and Compiler-centric Ecosystem for GPU Kernel Performance Tooling on Modern AI Workloads",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-guan.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Achieving Low-Latency Graph-Based Vector Search via Aligning Best-First Search Algorithm with SSD",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-guo.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Neutrino: Fine-grained GPU Kernel Profiling via Programmable Probing",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-huang-songlin.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Tigon: A Distributed Database for a CXL Pod",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-huang-yibo.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Training with Confidence: Catching Silent Errors in Deep Learning Training with Automated Proactive Checks",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-jiang.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Bayesian Code Diffusion for Efficient Automatic Deep Learning Program Optimization",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-jeong.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "PoWER Never Corrupts: Tool-Agnostic Verification of Crash Consistency and Corruption Detection",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-leblanc.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Tintin: A Unified Hardware Performance Profiling Infrastructure to Uncover and Manage Uncertainty",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-li.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Understanding Stragglers in Large Model Training Using What-if Analysis",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-lin-jinkun.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Deriving Semantic Checkers from Tests to Detect Silent Failures in Production Distributed Systems",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-lou.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Quake: Adaptive Indexing for Vector Search",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-mohoney.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "MettEagle: Costs and Benefits of Implementing Containers on Microkernels",
+    "badges": [
+      "available"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-miemietz.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Fast and Synchronous Crash Consistency with Metadata Write-Once File System",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-pan.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Building Bridges: Safe Interactions with Foreign Languages through Omniglot",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-schuermann.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Enabling Efficient GPU Communication over Multiple NICs with FuseLink",
+    "badges": [
+      "available"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-ren.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "XSched: Preemptive Scheduling for Diverse XPUs",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-shen-weihang.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Weave: Efficient and Expressive Oblivious Analytics at Scale",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-soleimani.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Scalio: Scaling up DPU-based JBOF Key-value Store with NVMe-oF Target Offload",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-sun.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Quantum Virtual Machines",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-tao.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "FineMem: Breaking the Allocation Overhead vs. Memory Waste Dilemma in Fine-Grained Disaggregated Memory Management",
+    "badges": [
+      "available"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-wang-xiaoyang.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Mirage: A Multi-Level Superoptimizer for Tensor Programs",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-wu-mengdi.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "WLB-LLM: Workload-Balanced 4D Parallelism for Large Language Model Training",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-wang-zheng.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Decouple and Decompose: Scaling Resource Allocation with DeDe",
+    "badges": [
+      "available",
+      "functional"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-xu.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "BlitzScale: Fast and Live Large Model Autoscaling with O(1) Host Caching",
+    "badges": [
+      "available"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-zhang-dingyan.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "KRR: Efficient and Scalable Kernel Record Replay",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-zhang-tianren.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Basilisk: Using Provenance Invariants to Automate Proofs of Undecidable Protocols",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-zhang-tony.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Extending Applications Safely and Efficiently",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-zheng-yusheng.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "Compass: Encrypted Semantic Search with High Accuracy",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-zhu-jinhao.pdf"
+  },
+  {
+    "conference": "OSDI",
+    "category": "systems",
+    "year": 2025,
+    "title": "NanoFlow: Towards Optimal Large Language Model Serving Throughput",
+    "badges": [
+      "available",
+      "functional",
+      "reproduced"
+    ],
+    "artifact_urls": [],
+    "paper_url": "https://www.usenix.org/system/files/osdi25-zhu-kan.pdf"
+  },
+  {
     "conference": "SC",
     "category": "systems",
     "year": 2021,
@@ -7507,6 +8411,301 @@
     ],
     "artifact_urls": [],
     "paper_url": "https://doi.org/10.1145/3458817.3476145"
+  },
+  {
+    "conference": "SOSP",
+    "category": "systems",
+    "year": 2019,
+    "title": "Verifying concurrent, crash-safe systems with Perennial",
+    "badges": [
+      "Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "artifact_urls": [
+      "https://github.com/mit-pdos/perennial/tree/master/artifact"
+    ]
+  },
+  {
+    "conference": "SOSP",
+    "category": "systems",
+    "year": 2019,
+    "title": "Risk-based planning for evolving data-center networks",
+    "badges": [
+      "Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "artifact_urls": [
+      "https://github.com/SiGe/Janus"
+    ],
+    "award": true
+  },
+  {
+    "conference": "SOSP",
+    "category": "systems",
+    "year": 2019,
+    "title": "Scaling symbolic evaluation for automated verification of systems code with Serval",
+    "badges": [
+      "Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "artifact_urls": [
+      "https://unsat.cs.washington.edu/projects/serval/"
+    ],
+    "award": true
+  },
+  {
+    "conference": "SOSP",
+    "category": "systems",
+    "year": 2019,
+    "title": "RECIPE: Converting Concurrent DRAM Indexes to Persistent-Memory Indexes",
+    "badges": [
+      "Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "artifact_urls": [
+      "https://github.com/utsaslab/RECIPE"
+    ]
+  },
+  {
+    "conference": "SOSP",
+    "category": "systems",
+    "year": 2019,
+    "title": "File Systems Unfit as Distributed Storage Backends: Lessons from 10 Years of Ceph Evolution",
+    "badges": [
+      "Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "artifact_urls": [
+      "https://github.com/mkuchnik/CephEvolution"
+    ]
+  },
+  {
+    "conference": "SOSP",
+    "category": "systems",
+    "year": 2019,
+    "title": "SplitFS: Reducing Software Overhead in File Systems for Persistent Memory",
+    "badges": [
+      "Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "artifact_urls": [
+      "https://github.com/utsaslab/SplitFS"
+    ]
+  },
+  {
+    "conference": "SOSP",
+    "category": "systems",
+    "year": 2019,
+    "title": "Lineage Stash: Fault Tolerance Off the Critical Path",
+    "badges": [
+      "Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "artifact_urls": [
+      "https://github.com/stephanie-wang/ray/tree/lineage-stash"
+    ],
+    "award": true
+  },
+  {
+    "conference": "SOSP",
+    "category": "systems",
+    "year": 2019,
+    "title": "Verifying Software Network Functions with No Verification Expertise",
+    "badges": [
+      "Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "artifact_urls": [
+      "https://github.com/vigor-nf/vigor"
+    ]
+  },
+  {
+    "conference": "SOSP",
+    "category": "systems",
+    "year": 2019,
+    "title": "I4: Incremental Inference of Inductive Invariants for Verification of Distributed Protocols",
+    "badges": [
+      "Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "artifact_urls": [
+      "https://github.com/GLaDOS-Michigan/I4"
+    ]
+  },
+  {
+    "conference": "SOSP",
+    "category": "systems",
+    "year": 2019,
+    "title": "An Analysis of Performance Evolution of Linux's Core Operations",
+    "badges": [
+      "Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "artifact_urls": [
+      "https://github.com/LinuxPerfStudy/LEBench"
+    ]
+  },
+  {
+    "conference": "SOSP",
+    "category": "systems",
+    "year": 2019,
+    "title": "Optimizing Deep Learning Computation with Automated Generation of Graph Substitutions",
+    "badges": [
+      "Available",
+      "Functional",
+      "Reproduced"
+    ],
+    "artifact_urls": [
+      "https://github.com/jiazhihao/sosp19ae"
+    ]
+  },
+  {
+    "conference": "SOSP",
+    "category": "systems",
+    "year": 2019,
+    "title": "Efficient and Scalable Thread-Safety Violation Detection --- Finding thousands of concurrency bugs during testing",
+    "badges": [
+      "Available",
+      "Functional"
+    ],
+    "artifact_urls": [
+      "https://github.com/SpectrumLi/TSVDExamples"
+    ]
+  },
+  {
+    "conference": "SOSP",
+    "category": "systems",
+    "year": 2019,
+    "title": "Optimizing Data Intensive Computations in Existing Libraries with Split Annotations",
+    "badges": [
+      "Available",
+      "Functional"
+    ],
+    "artifact_urls": [
+      "https://github.com/weld-project/split-annotations"
+    ]
+  },
+  {
+    "conference": "SOSP",
+    "category": "systems",
+    "year": 2019,
+    "title": "Parity Models: Erasure-Coded Resilience for Prediction Serving Systems",
+    "badges": [
+      "Available",
+      "Functional"
+    ],
+    "artifact_urls": [
+      "https://github.com/Thesys-lab/parity-models"
+    ]
+  },
+  {
+    "conference": "SOSP",
+    "category": "systems",
+    "year": 2019,
+    "title": "Teechain: A Secure Payment Network with Asynchronous Blockchain Access",
+    "badges": [
+      "Available",
+      "Functional"
+    ],
+    "artifact_urls": [
+      "https://github.com/lsds/Teechain"
+    ]
+  },
+  {
+    "conference": "SOSP",
+    "category": "systems",
+    "year": 2019,
+    "title": "Scalable and Practical Locking with Shuffling",
+    "badges": [
+      "Available",
+      "Functional"
+    ],
+    "artifact_urls": [
+      "https://github.com/sslab-gatech/shfllock"
+    ]
+  },
+  {
+    "conference": "SOSP",
+    "category": "systems",
+    "year": 2019,
+    "title": "Finding Semantic Bugs in File Systems with an Extensible Fuzzing Framework",
+    "badges": [
+      "Available",
+      "Functional"
+    ],
+    "artifact_urls": [
+      "https://github.com/sslab-gatech/hydra"
+    ]
+  },
+  {
+    "conference": "SOSP",
+    "category": "systems",
+    "year": 2019,
+    "title": "Generalized Pipeline Parallelism for DNN Training",
+    "badges": [
+      "Available",
+      "Functional"
+    ],
+    "artifact_urls": [
+      "https://github.com/msr-fiddle/pipedream"
+    ]
+  },
+  {
+    "conference": "SOSP",
+    "category": "systems",
+    "year": 2019,
+    "title": "AutoMine: Harmonizing High-Level Abstraction and High Performance for Graph Mining",
+    "badges": [
+      "Functional",
+      "Reproduced"
+    ],
+    "artifact_urls": []
+  },
+  {
+    "conference": "SOSP",
+    "category": "systems",
+    "year": 2019,
+    "title": "ShortCut: Accelerating Mostly-Deterministic Code Regions",
+    "badges": [
+      "Available"
+    ],
+    "artifact_urls": [
+      "https://github.com/dozenow/shortcut"
+    ]
+  },
+  {
+    "conference": "SOSP",
+    "category": "systems",
+    "year": 2019,
+    "title": "Replication in the era of microservices",
+    "badges": [
+      "Available"
+    ],
+    "artifact_urls": [
+      "https://github.com/GLaDOS-Michigan/Aegean"
+    ]
+  },
+  {
+    "conference": "SOSP",
+    "category": "systems",
+    "year": 2019,
+    "title": "Nexus: A GPU Cluster Engine for Accelerating Neural Networks Based Video Analysis",
+    "badges": [
+      "Available"
+    ],
+    "artifact_urls": [
+      "https://github.com/uwsampl/nexus"
+    ]
   },
   {
     "conference": "SOSP",
