@@ -1135,32 +1135,6 @@
     }
   },
   {
-    "affiliation": "Tencent",
-    "combined_score": 9,
-    "artifact_score": 3,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 6,
-    "ae_ratio": 0.5,
-    "role": "Balanced",
-    "artifacts": 1,
-    "badges_functional": 1,
-    "badges_reproducible": 1,
-    "ae_memberships": 2,
-    "chair_count": 0,
-    "total_papers": 1,
-    "artifact_rate": 100.0,
-    "num_authors": 2,
-    "conferences": [
-      "ATC"
-    ],
-    "years": {
-      "2024": 1,
-      "2023": 0,
-      "2022": 1
-    }
-  },
-  {
     "affiliation": "University of Massachusetts Amherst",
     "combined_score": 9,
     "artifact_score": 0,
@@ -1337,6 +1311,31 @@
     ],
     "years": {
       "2024": 3
+    }
+  },
+  {
+    "affiliation": "National University of Singapore",
+    "combined_score": 9,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 9,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 3,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 3,
+    "conferences": [
+      "ATC"
+    ],
+    "years": {
+      "2022": 2,
+      "2024": 1
     }
   },
   {
@@ -1747,6 +1746,32 @@
     }
   },
   {
+    "affiliation": "Tencent",
+    "combined_score": 6,
+    "artifact_score": 3,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 1.0,
+    "role": "Balanced",
+    "artifacts": 1,
+    "badges_functional": 1,
+    "badges_reproducible": 1,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 1,
+    "artifact_rate": 100.0,
+    "num_authors": 1,
+    "conferences": [
+      "ATC"
+    ],
+    "years": {
+      "2024": 0,
+      "2023": 0,
+      "2022": 1
+    }
+  },
+  {
     "affiliation": "Technion",
     "combined_score": 6,
     "artifact_score": 6,
@@ -2056,30 +2081,6 @@
       "2024": 2,
       "2023": 0,
       "2022": 0
-    }
-  },
-  {
-    "affiliation": "National University of Singapore",
-    "combined_score": 6,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 6,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 2,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 2,
-    "conferences": [
-      "ATC"
-    ],
-    "years": {
-      "2022": 2
     }
   },
   {
@@ -3509,7 +3510,7 @@
     }
   },
   {
-    "affiliation": "Hewlett Packard Enterprise Labs",
+    "affiliation": "Hewlett Packard Labs",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,
@@ -3893,7 +3894,7 @@
     }
   },
   {
-    "affiliation": "Indiana University Bloomington",
+    "affiliation": "Oak Ridge National Laboratory",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,
@@ -3989,7 +3990,7 @@
     }
   },
   {
-    "affiliation": "Applied Scientist at Amazon Prime Video",
+    "affiliation": "Amazon",
     "combined_score": 3,
     "artifact_score": 0,
     "artifact_citations": 0,

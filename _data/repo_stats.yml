@@ -1,15 +1,15 @@
 overall:
-  github_repos: 1285
-  total_stars: 125293
-  total_forks: 16059
+  github_repos: 1312
+  total_stars: 126865
+  total_forks: 16476
   max_stars: 14348
   max_forks: 1854
-  zenodo_repos: 850
-  total_views: 219025
-  total_downloads: 189263
-  avg_stars: 97.5
-  avg_forks: 12.5
-  last_updated: 2026-04-24 12:01:47 UTC
+  zenodo_repos: 861
+  total_views: 219133
+  total_downloads: 191331
+  avg_stars: 96.7
+  avg_forks: 12.6
+  last_updated: 2026-04-24 12:59:38 UTC
 by_conference:
 - name: ACSAC
   github_repos: 158
@@ -520,14 +520,20 @@ by_conference:
     name: privacy-tech-lab/gpc-optmeowt
     pushed_at: '2026-04-23T16:58:29Z'
 - name: SOSP
-  github_repos: 86
-  total_stars: 5268
-  total_forks: 894
-  avg_stars: 61.3
-  avg_forks: 10.4
+  github_repos: 105
+  total_stars: 6672
+  total_forks: 1294
+  avg_stars: 63.5
+  avg_forks: 12.3
   max_stars: 1217
   max_forks: 166
   years:
+  - year: 2019
+    github_repos: 19
+    stars: 1404
+    forks: 400
+    avg_stars: 73.9
+    avg_forks: 21.1
   - year: 2021
     github_repos: 34
     stars: 2252
@@ -572,6 +578,17 @@ by_conference:
     language: C++
     name: microsoft/nnfusion
     pushed_at: '2024-09-19T06:31:57Z'
+  - title: Generalized Pipeline Parallelism for DNN Training
+    url: https://github.com/msr-fiddle/pipedream
+    conference: SOSP
+    year: 2019
+    area: systems
+    stars: 392
+    forks: 115
+    description: ''
+    language: Python
+    name: msr-fiddle/pipedream
+    pushed_at: '2022-11-04T14:51:26Z'
   - title: Reducing Energy Bloat in Large Model Training
     url: https://github.com/ml-energy/zeus/tree/kronos
     conference: SOSP
@@ -594,18 +611,6 @@ by_conference:
     language: Rust
     name: SunHao-0/healer
     pushed_at: '2022-02-23T01:30:05Z'
-  - title: 'PIT: Optimization of Dynamic Sparse Deep Learning Models via Permutation
-      Invariant Transformation'
-    url: https://github.com/microsoft/SparTA/tree/pit_artifact
-    conference: SOSP
-    year: 2023
-    area: systems
-    stars: 167
-    forks: 12
-    description: ''
-    language: Python
-    name: microsoft/SparTA
-    pushed_at: '2024-07-22T05:39:43Z'
 - name: SYSTEX
   github_repos: 17
   total_stars: 60
@@ -694,11 +699,11 @@ by_conference:
     name: dnet-tee/wait-a-cycle
     pushed_at: '2025-06-17T15:55:24Z'
 - name: USENIXSEC
-  github_repos: 386
-  total_stars: 18272
-  total_forks: 2845
-  avg_stars: 47.3
-  avg_forks: 7.4
+  github_repos: 394
+  total_stars: 18440
+  total_forks: 2862
+  avg_stars: 46.8
+  avg_forks: 7.3
   max_stars: 1392
   max_forks: 271
   years:
@@ -727,9 +732,9 @@ by_conference:
     avg_stars: 39.1
     avg_forks: 7.1
   - year: 2024
-    github_repos: 132
-    stars: 2831
-    forks: 373
+    github_repos: 140
+    stars: 2999
+    forks: 390
     avg_stars: 21.4
     avg_forks: 2.8
   - year: 2025
@@ -918,11 +923,11 @@ by_year:
   max_stars: 566
   max_forks: 161
 - year: 2019
-  github_repos: 19
-  total_stars: 13237
-  total_forks: 1171
-  avg_stars: 696.7
-  avg_forks: 61.6
+  github_repos: 38
+  total_stars: 14641
+  total_forks: 1571
+  avg_stars: 385.3
+  avg_forks: 41.3
   max_stars: 12366
   max_forks: 996
 - year: 2020
@@ -958,10 +963,10 @@ by_year:
   max_stars: 1654
   max_forks: 268
 - year: 2024
-  github_repos: 323
-  total_stars: 8289
-  total_forks: 1133
-  avg_stars: 25.7
+  github_repos: 331
+  total_stars: 8457
+  total_forks: 1150
+  avg_stars: 25.5
   avg_forks: 3.5
   max_stars: 1000
   max_forks: 166

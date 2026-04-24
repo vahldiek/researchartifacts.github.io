@@ -333,6 +333,43 @@
     }
   },
   {
+    "affiliation": "Purdue University",
+    "combined_score": 165,
+    "artifact_score": 87,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 78,
+    "ae_ratio": 1.12,
+    "role": "Balanced",
+    "artifacts": 52,
+    "badges_functional": 25,
+    "badges_reproducible": 19,
+    "ae_memberships": 26,
+    "chair_count": 0,
+    "total_papers": 136,
+    "artifact_rate": 38.2,
+    "num_authors": 34,
+    "conferences": [
+      "ACSAC",
+      "NDSS",
+      "PETS",
+      "USENIXSEC",
+      "VEHICLESEC"
+    ],
+    "years": {
+      "2026": 14,
+      "2025": 34,
+      "2024": 11,
+      "2023": 6,
+      "2022": 6,
+      "2021": 0,
+      "2020": 1,
+      "2019": 2,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
     "affiliation": "University of California, Irvine",
     "combined_score": 161,
     "artifact_score": 47,
@@ -363,42 +400,6 @@
       "2021": 0,
       "2020": 3,
       "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "Purdue University",
-    "combined_score": 161,
-    "artifact_score": 86,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 75,
-    "ae_ratio": 1.15,
-    "role": "Balanced",
-    "artifacts": 51,
-    "badges_functional": 25,
-    "badges_reproducible": 19,
-    "ae_memberships": 25,
-    "chair_count": 0,
-    "total_papers": 135,
-    "artifact_rate": 37.8,
-    "num_authors": 33,
-    "conferences": [
-      "ACSAC",
-      "NDSS",
-      "PETS",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 13,
-      "2025": 33,
-      "2024": 11,
-      "2023": 6,
-      "2022": 6,
-      "2021": 0,
-      "2020": 1,
-      "2019": 2,
       "2018": 0,
       "2017": 0
     }
@@ -513,29 +514,30 @@
   },
   {
     "affiliation": "University of Pennsylvania",
-    "combined_score": 116,
+    "combined_score": 124,
     "artifact_score": 86,
     "artifact_citations": 0,
     "citation_score": 0,
-    "ae_score": 30,
-    "ae_ratio": 2.87,
+    "ae_score": 38,
+    "ae_ratio": 2.26,
     "role": "Producer",
     "artifacts": 39,
     "badges_functional": 30,
     "badges_reproducible": 21,
-    "ae_memberships": 10,
-    "chair_count": 0,
+    "ae_memberships": 12,
+    "chair_count": 1,
     "total_papers": 70,
     "artifact_rate": 55.7,
-    "num_authors": 22,
+    "num_authors": 24,
     "conferences": [
       "ACSAC",
       "NDSS",
       "PETS",
-      "USENIXSEC"
+      "USENIXSEC",
+      "VEHICLESEC"
     ],
     "years": {
-      "2026": 6,
+      "2026": 8,
       "2025": 13,
       "2024": 8,
       "2023": 4,
@@ -1123,6 +1125,43 @@
     }
   },
   {
+    "affiliation": "Indiana University Bloomington",
+    "combined_score": 80,
+    "artifact_score": 17,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 63,
+    "ae_ratio": 0.27,
+    "role": "Consumer",
+    "artifacts": 7,
+    "badges_functional": 5,
+    "badges_reproducible": 5,
+    "ae_memberships": 21,
+    "chair_count": 0,
+    "total_papers": 9,
+    "artifact_rate": 77.8,
+    "num_authors": 14,
+    "conferences": [
+      "ACSAC",
+      "NDSS",
+      "PETS",
+      "USENIXSEC",
+      "VEHICLESEC"
+    ],
+    "years": {
+      "2026": 7,
+      "2025": 6,
+      "2024": 3,
+      "2023": 6,
+      "2022": 4,
+      "2021": 0,
+      "2020": 0,
+      "2019": 0,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
     "affiliation": "Nanyang Technological University",
     "combined_score": 79,
     "artifact_score": 61,
@@ -1232,6 +1271,43 @@
     }
   },
   {
+    "affiliation": "Google",
+    "combined_score": 77,
+    "artifact_score": 14,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 63,
+    "ae_ratio": 0.22,
+    "role": "Consumer",
+    "artifacts": 7,
+    "badges_functional": 4,
+    "badges_reproducible": 3,
+    "ae_memberships": 21,
+    "chair_count": 0,
+    "total_papers": 20,
+    "artifact_rate": 35.0,
+    "num_authors": 14,
+    "conferences": [
+      "CHES",
+      "NDSS",
+      "PETS",
+      "USENIXSEC",
+      "VEHICLESEC"
+    ],
+    "years": {
+      "2026": 5,
+      "2025": 9,
+      "2024": 7,
+      "2023": 2,
+      "2022": 5,
+      "2021": 0,
+      "2020": 0,
+      "2019": 0,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
     "affiliation": "Paderborn University",
     "combined_score": 74,
     "artifact_score": 35,
@@ -1305,6 +1381,44 @@
     }
   },
   {
+    "affiliation": "New York University",
+    "combined_score": 74,
+    "artifact_score": 56,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 18,
+    "ae_ratio": 3.11,
+    "role": "Producer",
+    "artifacts": 28,
+    "badges_functional": 17,
+    "badges_reproducible": 15,
+    "ae_memberships": 6,
+    "chair_count": 0,
+    "total_papers": 35,
+    "artifact_rate": 80.0,
+    "num_authors": 20,
+    "conferences": [
+      "ACSAC",
+      "CHES",
+      "NDSS",
+      "PETS",
+      "USENIXSEC",
+      "VEHICLESEC"
+    ],
+    "years": {
+      "2026": 1,
+      "2025": 8,
+      "2024": 5,
+      "2023": 10,
+      "2022": 6,
+      "2021": 1,
+      "2020": 3,
+      "2019": 0,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
     "affiliation": "University of Georgia",
     "combined_score": 72,
     "artifact_score": 23,
@@ -1337,115 +1451,6 @@
       "2021": 0,
       "2020": 1,
       "2019": 4,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "Indiana University Bloomington",
-    "combined_score": 71,
-    "artifact_score": 14,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 57,
-    "ae_ratio": 0.25,
-    "role": "Consumer",
-    "artifacts": 6,
-    "badges_functional": 4,
-    "badges_reproducible": 4,
-    "ae_memberships": 19,
-    "chair_count": 0,
-    "total_papers": 8,
-    "artifact_rate": 75.0,
-    "num_authors": 11,
-    "conferences": [
-      "ACSAC",
-      "NDSS",
-      "PETS",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 5,
-      "2025": 6,
-      "2024": 2,
-      "2023": 6,
-      "2022": 4,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "Google",
-    "combined_score": 71,
-    "artifact_score": 14,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 57,
-    "ae_ratio": 0.25,
-    "role": "Consumer",
-    "artifacts": 7,
-    "badges_functional": 4,
-    "badges_reproducible": 3,
-    "ae_memberships": 19,
-    "chair_count": 0,
-    "total_papers": 20,
-    "artifact_rate": 35.0,
-    "num_authors": 12,
-    "conferences": [
-      "CHES",
-      "NDSS",
-      "PETS",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 3,
-      "2025": 9,
-      "2024": 7,
-      "2023": 2,
-      "2022": 5,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "New York University",
-    "combined_score": 71,
-    "artifact_score": 56,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 15,
-    "ae_ratio": 3.73,
-    "role": "Producer",
-    "artifacts": 28,
-    "badges_functional": 17,
-    "badges_reproducible": 15,
-    "ae_memberships": 5,
-    "chair_count": 0,
-    "total_papers": 35,
-    "artifact_rate": 80.0,
-    "num_authors": 19,
-    "conferences": [
-      "ACSAC",
-      "CHES",
-      "NDSS",
-      "PETS",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 0,
-      "2025": 8,
-      "2024": 5,
-      "2023": 10,
-      "2022": 6,
-      "2021": 1,
-      "2020": 3,
-      "2019": 0,
       "2018": 0,
       "2017": 0
     }
@@ -1812,6 +1817,44 @@
     }
   },
   {
+    "affiliation": "University of Utah",
+    "combined_score": 60,
+    "artifact_score": 24,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 36,
+    "ae_ratio": 0.67,
+    "role": "Balanced",
+    "artifacts": 11,
+    "badges_functional": 7,
+    "badges_reproducible": 7,
+    "ae_memberships": 12,
+    "chair_count": 0,
+    "total_papers": 13,
+    "artifact_rate": 84.6,
+    "num_authors": 9,
+    "conferences": [
+      "ACSAC",
+      "NDSS",
+      "PETS",
+      "USENIXSEC",
+      "VEHICLESEC",
+      "WOOT"
+    ],
+    "years": {
+      "2024": 9,
+      "2025": 2,
+      "2026": 6,
+      "2023": 3,
+      "2022": 3,
+      "2021": 0,
+      "2020": 0,
+      "2019": 0,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
     "affiliation": "University of Virginia",
     "combined_score": 59,
     "artifact_score": 35,
@@ -1848,6 +1891,44 @@
     }
   },
   {
+    "affiliation": "Microsoft",
+    "combined_score": 59,
+    "artifact_score": 38,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 21,
+    "ae_ratio": 1.81,
+    "role": "Balanced",
+    "artifacts": 17,
+    "badges_functional": 12,
+    "badges_reproducible": 10,
+    "ae_memberships": 7,
+    "chair_count": 0,
+    "total_papers": 31,
+    "artifact_rate": 54.8,
+    "num_authors": 13,
+    "conferences": [
+      "ACSAC",
+      "CHES",
+      "PETS",
+      "SYSTEX",
+      "USENIXSEC",
+      "VEHICLESEC"
+    ],
+    "years": {
+      "2026": 4,
+      "2025": 5,
+      "2024": 3,
+      "2023": 5,
+      "2022": 4,
+      "2021": 1,
+      "2020": 0,
+      "2019": 1,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
     "affiliation": "TU Delft",
     "combined_score": 59,
     "artifact_score": 38,
@@ -1879,80 +1960,6 @@
       "2021": 0,
       "2020": 0,
       "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "University of Utah",
-    "combined_score": 57,
-    "artifact_score": 24,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 33,
-    "ae_ratio": 0.73,
-    "role": "Balanced",
-    "artifacts": 11,
-    "badges_functional": 7,
-    "badges_reproducible": 7,
-    "ae_memberships": 11,
-    "chair_count": 0,
-    "total_papers": 13,
-    "artifact_rate": 84.6,
-    "num_authors": 8,
-    "conferences": [
-      "ACSAC",
-      "NDSS",
-      "PETS",
-      "USENIXSEC",
-      "WOOT"
-    ],
-    "years": {
-      "2024": 9,
-      "2025": 2,
-      "2026": 5,
-      "2023": 3,
-      "2022": 3,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "Microsoft",
-    "combined_score": 56,
-    "artifact_score": 38,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 18,
-    "ae_ratio": 2.11,
-    "role": "Producer",
-    "artifacts": 17,
-    "badges_functional": 12,
-    "badges_reproducible": 10,
-    "ae_memberships": 6,
-    "chair_count": 0,
-    "total_papers": 31,
-    "artifact_rate": 54.8,
-    "num_authors": 12,
-    "conferences": [
-      "ACSAC",
-      "CHES",
-      "PETS",
-      "SYSTEX",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 3,
-      "2025": 5,
-      "2024": 3,
-      "2023": 5,
-      "2022": 4,
-      "2021": 1,
-      "2020": 0,
-      "2019": 1,
       "2018": 0,
       "2017": 0
     }
@@ -2065,6 +2072,42 @@
     }
   },
   {
+    "affiliation": "Louisiana State University",
+    "combined_score": 52,
+    "artifact_score": 6,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 46,
+    "ae_ratio": 0.13,
+    "role": "Consumer",
+    "artifacts": 3,
+    "badges_functional": 2,
+    "badges_reproducible": 2,
+    "ae_memberships": 14,
+    "chair_count": 2,
+    "total_papers": 4,
+    "artifact_rate": 75.0,
+    "num_authors": 7,
+    "conferences": [
+      "ACSAC",
+      "PETS",
+      "USENIXSEC",
+      "VEHICLESEC"
+    ],
+    "years": {
+      "2026": 4,
+      "2025": 4,
+      "2024": 4,
+      "2023": 2,
+      "2022": 0,
+      "2021": 1,
+      "2020": 0,
+      "2019": 1,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
     "affiliation": "Massachusetts Institute of Technology",
     "combined_score": 52,
     "artifact_score": 34,
@@ -2098,41 +2141,6 @@
       "2019": 0,
       "2018": 0,
       "2017": 1
-    }
-  },
-  {
-    "affiliation": "Louisiana State University",
-    "combined_score": 49,
-    "artifact_score": 6,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 43,
-    "ae_ratio": 0.14,
-    "role": "Consumer",
-    "artifacts": 3,
-    "badges_functional": 2,
-    "badges_reproducible": 2,
-    "ae_memberships": 13,
-    "chair_count": 2,
-    "total_papers": 4,
-    "artifact_rate": 75.0,
-    "num_authors": 7,
-    "conferences": [
-      "ACSAC",
-      "PETS",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 3,
-      "2025": 4,
-      "2024": 4,
-      "2023": 2,
-      "2022": 0,
-      "2021": 1,
-      "2020": 0,
-      "2019": 1,
-      "2018": 0,
-      "2017": 0
     }
   },
   {
@@ -5084,6 +5092,32 @@
     }
   },
   {
+    "affiliation": "University of Modena and Reggio Emilia",
+    "combined_score": 20,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 20,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 6,
+    "chair_count": 1,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 5,
+    "conferences": [
+      "NDSS",
+      "VEHICLESEC"
+    ],
+    "years": {
+      "2024": 1,
+      "2026": 5
+    }
+  },
+  {
     "affiliation": "University of South Florida",
     "combined_score": 20,
     "artifact_score": 8,
@@ -5284,6 +5318,40 @@
       "2025": 5,
       "2024": 2,
       "2023": 1,
+      "2022": 0,
+      "2021": 0,
+      "2020": 0,
+      "2019": 0,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
+    "affiliation": "University of Massachusetts Lowell",
+    "combined_score": 19,
+    "artifact_score": 13,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 2.17,
+    "role": "Producer",
+    "artifacts": 5,
+    "badges_functional": 5,
+    "badges_reproducible": 3,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 8,
+    "artifact_rate": 62.5,
+    "num_authors": 3,
+    "conferences": [
+      "USENIXSEC",
+      "VEHICLESEC"
+    ],
+    "years": {
+      "2026": 2,
+      "2025": 3,
+      "2024": 2,
+      "2023": 0,
       "2022": 0,
       "2021": 0,
       "2020": 0,
@@ -5844,6 +5912,41 @@
     }
   },
   {
+    "affiliation": "Penn State University",
+    "combined_score": 17,
+    "artifact_score": 8,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 9,
+    "ae_ratio": 0.89,
+    "role": "Balanced",
+    "artifacts": 4,
+    "badges_functional": 3,
+    "badges_reproducible": 2,
+    "ae_memberships": 3,
+    "chair_count": 0,
+    "total_papers": 4,
+    "artifact_rate": 100.0,
+    "num_authors": 3,
+    "conferences": [
+      "PETS",
+      "USENIXSEC",
+      "VEHICLESEC"
+    ],
+    "years": {
+      "2026": 3,
+      "2025": 2,
+      "2024": 0,
+      "2023": 1,
+      "2022": 1,
+      "2021": 0,
+      "2020": 0,
+      "2019": 0,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
     "affiliation": "Institute of Information Engineering",
     "combined_score": 17,
     "artifact_score": 5,
@@ -6244,39 +6347,6 @@
       "2022": 2,
       "2021": 0,
       "2020": 2,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "University of Massachusetts Lowell",
-    "combined_score": 16,
-    "artifact_score": 13,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 4.33,
-    "role": "Producer",
-    "artifacts": 5,
-    "badges_functional": 5,
-    "badges_reproducible": 3,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 8,
-    "artifact_rate": 62.5,
-    "num_authors": 3,
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 1,
-      "2025": 3,
-      "2024": 2,
-      "2023": 0,
-      "2022": 0,
-      "2021": 0,
-      "2020": 0,
       "2019": 0,
       "2018": 0,
       "2017": 0
@@ -7022,40 +7092,6 @@
       "2024": 1,
       "2023": 1,
       "2022": 0,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "Penn State University",
-    "combined_score": 14,
-    "artifact_score": 8,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 6,
-    "ae_ratio": 1.33,
-    "role": "Balanced",
-    "artifacts": 4,
-    "badges_functional": 3,
-    "badges_reproducible": 2,
-    "ae_memberships": 2,
-    "chair_count": 0,
-    "total_papers": 4,
-    "artifact_rate": 100.0,
-    "num_authors": 2,
-    "conferences": [
-      "PETS",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 2,
-      "2025": 2,
-      "2024": 0,
-      "2023": 1,
-      "2022": 1,
       "2021": 0,
       "2020": 0,
       "2019": 0,
@@ -11683,6 +11719,31 @@
     }
   },
   {
+    "affiliation": "Howard University",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "USENIXSEC",
+      "VEHICLESEC"
+    ],
+    "years": {
+      "2026": 2
+    }
+  },
+  {
     "affiliation": "The Penn State University",
     "combined_score": 6,
     "artifact_score": 0,
@@ -12653,6 +12714,32 @@
     }
   },
   {
+    "affiliation": "Salesforce",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 2,
+    "conferences": [
+      "PETS",
+      "VEHICLESEC"
+    ],
+    "years": {
+      "2026": 1,
+      "2020": 1
+    }
+  },
+  {
     "affiliation": "Oracle",
     "combined_score": 6,
     "artifact_score": 0,
@@ -12843,6 +12930,31 @@
     "num_authors": 2,
     "conferences": [
       "USENIXSEC"
+    ],
+    "years": {
+      "2026": 2
+    }
+  },
+  {
+    "affiliation": "NVIDIA",
+    "combined_score": 6,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 2,
+    "conferences": [
+      "USENIXSEC",
+      "VEHICLESEC"
     ],
     "years": {
       "2026": 2
@@ -17324,30 +17436,6 @@
     }
   },
   {
-    "affiliation": "University of Modena and Reggio Emilia",
-    "combined_score": 3,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "conferences": [
-      "NDSS"
-    ],
-    "years": {
-      "2024": 1
-    }
-  },
-  {
     "affiliation": "The University of Sydney",
     "combined_score": 3,
     "artifact_score": 0,
@@ -17612,30 +17700,6 @@
     }
   },
   {
-    "affiliation": "Howard University",
-    "combined_score": 3,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "conferences": [
-      "USENIXSEC"
-    ],
-    "years": {
-      "2026": 1
-    }
-  },
-  {
     "affiliation": "University of Santa Barbara",
     "combined_score": 3,
     "artifact_score": 0,
@@ -17852,6 +17916,30 @@
     }
   },
   {
+    "affiliation": "KAGE Corporation",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "VEHICLESEC"
+    ],
+    "years": {
+      "2026": 1
+    }
+  },
+  {
     "affiliation": "UCSC",
     "combined_score": 3,
     "artifact_score": 0,
@@ -18014,30 +18102,6 @@
     "num_authors": 1,
     "conferences": [
       "PETS"
-    ],
-    "years": {
-      "2026": 1
-    }
-  },
-  {
-    "affiliation": "NVIDIA",
-    "combined_score": 3,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "conferences": [
-      "USENIXSEC"
     ],
     "years": {
       "2026": 1
@@ -18233,6 +18297,30 @@
     ],
     "years": {
       "2024": 1
+    }
+  },
+  {
+    "affiliation": "Argonne National Laboratory",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "VEHICLESEC"
+    ],
+    "years": {
+      "2026": 1
     }
   },
   {
@@ -18572,30 +18660,6 @@
     }
   },
   {
-    "affiliation": "Salesforce",
-    "combined_score": 3,
-    "artifact_score": 0,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 0.0,
-    "role": "Consumer",
-    "artifacts": 0,
-    "badges_functional": 0,
-    "badges_reproducible": 0,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 0,
-    "artifact_rate": 0,
-    "num_authors": 1,
-    "conferences": [
-      "PETS"
-    ],
-    "years": {
-      "2020": 1
-    }
-  },
-  {
     "affiliation": "San Diego State University",
     "combined_score": 3,
     "artifact_score": 0,
@@ -18689,6 +18753,30 @@
     ],
     "years": {
       "2023": 1
+    }
+  },
+  {
+    "affiliation": "NED University of Engineering and Technology",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "VEHICLESEC"
+    ],
+    "years": {
+      "2026": 1
     }
   },
   {
@@ -19028,6 +19116,30 @@
     }
   },
   {
+    "affiliation": "University of Idaho",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "VEHICLESEC"
+    ],
+    "years": {
+      "2026": 1
+    }
+  },
+  {
     "affiliation": "Taxes A&M University",
     "combined_score": 3,
     "artifact_score": 0,
@@ -19049,6 +19161,30 @@
     ],
     "years": {
       "2020": 1
+    }
+  },
+  {
+    "affiliation": "University of New Hampshire",
+    "combined_score": 3,
+    "artifact_score": 0,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 3,
+    "ae_ratio": 0.0,
+    "role": "Consumer",
+    "artifacts": 0,
+    "badges_functional": 0,
+    "badges_reproducible": 0,
+    "ae_memberships": 1,
+    "chair_count": 0,
+    "total_papers": 0,
+    "artifact_rate": 0,
+    "num_authors": 1,
+    "conferences": [
+      "VEHICLESEC"
+    ],
+    "years": {
+      "2026": 1
     }
   },
   {

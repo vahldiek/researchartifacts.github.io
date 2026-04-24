@@ -3,7 +3,7 @@
     "name": "Amit Samanta",
     "display_name": "Amit Samanta",
     "affiliation": "University of Utah",
-    "total_memberships": 11,
+    "total_memberships": 12,
     "chair_count": 0,
     "conferences": [
       [
@@ -52,6 +52,11 @@
         "member"
       ],
       [
+        "OSDI",
+        2025,
+        "member"
+      ],
+      [
         "SOSP",
         2021,
         "member"
@@ -68,7 +73,7 @@
       "2022": 3,
       "2023": 2,
       "2024": 3,
-      "2025": 1,
+      "2025": 2,
       "2026": 1
     },
     "first_year": 2021,
@@ -78,7 +83,7 @@
     "name": "Cesar A. Stuardo",
     "display_name": "Cesar A. Stuardo",
     "affiliation": "ByteDance",
-    "total_memberships": 8,
+    "total_memberships": 9,
     "chair_count": 4,
     "conferences": [
       [
@@ -120,6 +125,11 @@
         "OSDI",
         2024,
         "chair"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
       ]
     ],
     "area": "systems",
@@ -128,10 +138,186 @@
       "2021": 1,
       "2022": 2,
       "2023": 2,
-      "2024": 2
+      "2024": 2,
+      "2025": 1
     },
     "first_year": 2020,
-    "last_year": 2024
+    "last_year": 2025
+  },
+  {
+    "name": "Hongzheng Chen",
+    "display_name": "Hongzheng Chen",
+    "affiliation": "Cornell University",
+    "total_memberships": 8,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2022,
+        "member"
+      ],
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "EUROSYS",
+        2022,
+        "member"
+      ],
+      [
+        "OSDI",
+        2022,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ],
+      [
+        "SOSP",
+        2021,
+        "member"
+      ],
+      [
+        "SOSP",
+        2023,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2021": 1,
+      "2022": 3,
+      "2023": 1,
+      "2024": 2,
+      "2025": 1
+    },
+    "first_year": 2021,
+    "last_year": 2025
+  },
+  {
+    "name": "Jing Liu",
+    "display_name": "Jing Liu",
+    "affiliation": "Max Planck Society",
+    "total_memberships": 8,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2022,
+        "member"
+      ],
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "EUROSYS",
+        2024,
+        "member"
+      ],
+      [
+        "EUROSYS",
+        2025,
+        "member"
+      ],
+      [
+        "OSDI",
+        2022,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ],
+      [
+        "SOSP",
+        2023,
+        "member"
+      ]
+    ],
+    "area": "both",
+    "years": {
+      "2022": 2,
+      "2023": 1,
+      "2024": 3,
+      "2025": 2
+    },
+    "first_year": 2022,
+    "last_year": 2025
+  },
+  {
+    "name": "Konstantinos Papaioannou",
+    "display_name": "Konstantinos Papaioannou",
+    "affiliation": "IMDEA Software Institute",
+    "total_memberships": 8,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "EUROSYS",
+        2023,
+        "member"
+      ],
+      [
+        "EUROSYS",
+        2024,
+        "member"
+      ],
+      [
+        "EUROSYS",
+        2025,
+        "member"
+      ],
+      [
+        "EUROSYS",
+        2026,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ],
+      [
+        "SOSP",
+        2023,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2023": 2,
+      "2024": 3,
+      "2025": 2,
+      "2026": 1
+    },
+    "first_year": 2023,
+    "last_year": 2026
   },
   {
     "name": "Jianyu Jiang",
@@ -239,9 +425,9 @@
     "last_year": 2026
   },
   {
-    "name": "Hongzheng Chen",
-    "display_name": "Hongzheng Chen",
-    "affiliation": "Cornell University",
+    "name": "Minhui Xie",
+    "display_name": "Minhui Xie",
+    "affiliation": "Tsinghua University",
     "total_memberships": 7,
     "chair_count": 0,
     "conferences": [
@@ -251,28 +437,28 @@
         "member"
       ],
       [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
         "EUROSYS",
         2022,
         "member"
       ],
       [
-        "OSDI",
-        2022,
+        "EUROSYS",
+        2023,
         "member"
       ],
       [
-        "OSDI",
+        "EUROSYS",
         2024,
         "member"
       ],
       [
-        "SOSP",
-        2021,
+        "FAST",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2022,
         "member"
       ],
       [
@@ -283,119 +469,12 @@
     ],
     "area": "systems",
     "years": {
-      "2021": 1,
       "2022": 3,
-      "2023": 1,
+      "2023": 2,
       "2024": 2
     },
-    "first_year": 2021,
-    "last_year": 2024
-  },
-  {
-    "name": "Jing Liu",
-    "display_name": "Jing Liu",
-    "affiliation": "Max Planck Society",
-    "total_memberships": 7,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2022,
-        "member"
-      ],
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "EUROSYS",
-        2024,
-        "member"
-      ],
-      [
-        "EUROSYS",
-        2025,
-        "member"
-      ],
-      [
-        "OSDI",
-        2022,
-        "member"
-      ],
-      [
-        "OSDI",
-        2024,
-        "member"
-      ],
-      [
-        "SOSP",
-        2023,
-        "member"
-      ]
-    ],
-    "area": "both",
-    "years": {
-      "2022": 2,
-      "2023": 1,
-      "2024": 3,
-      "2025": 1
-    },
     "first_year": 2022,
-    "last_year": 2025
-  },
-  {
-    "name": "Konstantinos Papaioannou",
-    "display_name": "Konstantinos Papaioannou",
-    "affiliation": "IMDEA Software Institute",
-    "total_memberships": 7,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "EUROSYS",
-        2023,
-        "member"
-      ],
-      [
-        "EUROSYS",
-        2024,
-        "member"
-      ],
-      [
-        "EUROSYS",
-        2025,
-        "member"
-      ],
-      [
-        "EUROSYS",
-        2026,
-        "member"
-      ],
-      [
-        "OSDI",
-        2024,
-        "member"
-      ],
-      [
-        "SOSP",
-        2023,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2023": 2,
-      "2024": 3,
-      "2025": 1,
-      "2026": 1
-    },
-    "first_year": 2023,
-    "last_year": 2026
+    "last_year": 2024
   },
   {
     "name": "Solal Pirelli",
@@ -494,6 +573,53 @@
     "last_year": 2026
   },
   {
+    "name": "Fadhil Kurnia",
+    "display_name": "Fadhil Kurnia",
+    "affiliation": "University of Massachusetts Amherst",
+    "total_memberships": 6,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2022,
+        "member"
+      ],
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "EUROSYS",
+        2022,
+        "member"
+      ],
+      [
+        "OSDI",
+        2022,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2022": 3,
+      "2024": 2,
+      "2025": 1
+    },
+    "first_year": 2022,
+    "last_year": 2025
+  },
+  {
     "name": "Mingyu Li",
     "display_name": "Mingyu Li",
     "affiliation": "Institute of Software",
@@ -542,53 +668,6 @@
     "last_year": 2024
   },
   {
-    "name": "Minhui Xie",
-    "display_name": "Minhui Xie",
-    "affiliation": "Tsinghua University",
-    "total_memberships": 6,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2022,
-        "member"
-      ],
-      [
-        "EUROSYS",
-        2022,
-        "member"
-      ],
-      [
-        "EUROSYS",
-        2023,
-        "member"
-      ],
-      [
-        "EUROSYS",
-        2024,
-        "member"
-      ],
-      [
-        "OSDI",
-        2022,
-        "member"
-      ],
-      [
-        "SOSP",
-        2023,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2022": 3,
-      "2023": 2,
-      "2024": 1
-    },
-    "first_year": 2022,
-    "last_year": 2024
-  },
-  {
     "name": "Qiang Su",
     "display_name": "Qiang Su",
     "affiliation": "Chinese University of Hong Kong",
@@ -634,6 +713,102 @@
     },
     "first_year": 2022,
     "last_year": 2024
+  },
+  {
+    "name": "Saheed Olayemi Bolarinwa",
+    "display_name": "Saheed Olayemi Bolarinwa",
+    "affiliation": "Leibniz Supercomputing Center",
+    "total_memberships": 6,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "EUROSYS",
+        2022,
+        "member"
+      ],
+      [
+        "EUROSYS",
+        2023,
+        "member"
+      ],
+      [
+        "EUROSYS",
+        2024,
+        "member"
+      ],
+      [
+        "EUROSYS",
+        2025,
+        "member"
+      ],
+      [
+        "FAST",
+        2024,
+        "member"
+      ],
+      [
+        "SOSP",
+        2021,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2021": 1,
+      "2022": 1,
+      "2023": 1,
+      "2024": 2,
+      "2025": 1
+    },
+    "first_year": 2021,
+    "last_year": 2025
+  },
+  {
+    "name": "Tianle Zhong",
+    "display_name": "Tianle Zhong",
+    "affiliation": "University of Virginia",
+    "total_memberships": 6,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "EUROSYS",
+        2024,
+        "member"
+      ],
+      [
+        "EUROSYS",
+        2025,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ],
+      [
+        "SOSP",
+        2023,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2023": 1,
+      "2024": 3,
+      "2025": 2
+    },
+    "first_year": 2023,
+    "last_year": 2025
   },
   {
     "name": "Nathan Rutherford",
@@ -719,9 +894,9 @@
     "last_year": 2024
   },
   {
-    "name": "Fadhil Kurnia",
-    "display_name": "Fadhil Kurnia",
-    "affiliation": "University of Massachusetts Amherst",
+    "name": "Boxi Yu",
+    "display_name": "Boxi Yu",
+    "affiliation": "Chinese University of Hong Kong",
     "total_memberships": 5,
     "chair_count": 0,
     "conferences": [
@@ -736,11 +911,6 @@
         "member"
       ],
       [
-        "EUROSYS",
-        2022,
-        "member"
-      ],
-      [
         "OSDI",
         2022,
         "member"
@@ -748,32 +918,74 @@
       [
         "OSDI",
         2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
-      "2022": 3,
-      "2024": 2
+      "2022": 2,
+      "2024": 2,
+      "2025": 1
     },
     "first_year": 2022,
-    "last_year": 2024
+    "last_year": 2025
   },
   {
-    "name": "Saheed Olayemi Bolarinwa",
-    "display_name": "Saheed Olayemi Bolarinwa",
-    "affiliation": "Leibniz Supercomputing Center",
+    "name": "Chenhao Ye",
+    "display_name": "Chenhao Ye",
+    "affiliation": "University of Wisconsin-Madison",
     "total_memberships": 5,
     "chair_count": 0,
     "conferences": [
       [
-        "EUROSYS",
-        2022,
+        "ATC",
+        2024,
         "member"
       ],
       [
         "EUROSYS",
-        2023,
+        2025,
+        "member"
+      ],
+      [
+        "FAST",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 3,
+      "2025": 2
+    },
+    "first_year": 2024,
+    "last_year": 2025
+  },
+  {
+    "name": "Dongjoo Seo",
+    "display_name": "Dongjoo Seo",
+    "affiliation": "University of California, Irvine",
+    "total_memberships": 5,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
         "member"
       ],
       [
@@ -787,20 +999,192 @@
         "member"
       ],
       [
-        "SOSP",
+        "FAST",
+        2025,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 3,
+      "2025": 2
+    },
+    "first_year": 2024,
+    "last_year": 2025
+  },
+  {
+    "name": "Fang Zhou",
+    "display_name": "Fang Zhou",
+    "affiliation": "The Ohio State University",
+    "total_memberships": 5,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "EUROSYS",
         2021,
+        "member"
+      ],
+      [
+        "EUROSYS",
+        2022,
+        "member"
+      ],
+      [
+        "OSDI",
+        2020,
+        "member"
+      ],
+      [
+        "OSDI",
+        2021,
+        "member"
+      ],
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1,
+      "2020": 1,
+      "2021": 2,
+      "2022": 1
+    },
+    "first_year": 2019,
+    "last_year": 2022
+  },
+  {
+    "name": "Georgia Christofidi",
+    "display_name": "Georgia Christofidi",
+    "affiliation": "IMDEA Software Institute",
+    "total_memberships": 5,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "EUROSYS",
+        2023,
+        "member"
+      ],
+      [
+        "EUROSYS",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2023": 1,
+      "2024": 3,
+      "2025": 1
+    },
+    "first_year": 2023,
+    "last_year": 2025
+  },
+  {
+    "name": "Liangcheng Yu",
+    "display_name": "Liangcheng Yu",
+    "affiliation": "University of Pennsylvania",
+    "total_memberships": 5,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2022,
+        "member"
+      ],
+      [
+        "EUROSYS",
+        2021,
+        "member"
+      ],
+      [
+        "FAST",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2022,
+        "member"
+      ],
+      [
+        "SOSP",
+        2023,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
       "2021": 1,
-      "2022": 1,
+      "2022": 2,
       "2023": 1,
-      "2024": 1,
-      "2025": 1
+      "2024": 1
     },
     "first_year": 2021,
+    "last_year": 2024
+  },
+  {
+    "name": "Saisha Kamat",
+    "display_name": "Saisha Kamat",
+    "affiliation": "University of North Carolina at Charlotte",
+    "total_memberships": 5,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2022,
+        "member"
+      ],
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2022,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2022": 2,
+      "2024": 2,
+      "2025": 1
+    },
+    "first_year": 2022,
     "last_year": 2025
   },
   {
@@ -847,9 +1231,52 @@
     "last_year": 2024
   },
   {
-    "name": "Tianle Zhong",
-    "display_name": "Tianle Zhong",
-    "affiliation": "University of Virginia",
+    "name": "Swapnil Gandhi",
+    "display_name": "Swapnil Gandhi",
+    "affiliation": "Microsoft",
+    "total_memberships": 5,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2022,
+        "member"
+      ],
+      [
+        "EUROSYS",
+        2023,
+        "member"
+      ],
+      [
+        "OSDI",
+        2020,
+        "member"
+      ],
+      [
+        "OSDI",
+        2022,
+        "member"
+      ],
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1,
+      "2020": 1,
+      "2022": 2,
+      "2023": 1
+    },
+    "first_year": 2019,
+    "last_year": 2023
+  },
+  {
+    "name": "Xin Tan",
+    "display_name": "Xin Tan",
+    "affiliation": "Chinese University of Hong Kong",
     "total_memberships": 5,
     "chair_count": 0,
     "conferences": [
@@ -860,12 +1287,12 @@
       ],
       [
         "EUROSYS",
-        2024,
+        2025,
         "member"
       ],
       [
         "EUROSYS",
-        2025,
+        2026,
         "member"
       ],
       [
@@ -874,19 +1301,19 @@
         "member"
       ],
       [
-        "SOSP",
-        2023,
+        "OSDI",
+        2025,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
-      "2023": 1,
-      "2024": 3,
-      "2025": 1
+      "2024": 2,
+      "2025": 2,
+      "2026": 1
     },
-    "first_year": 2023,
-    "last_year": 2025
+    "first_year": 2024,
+    "last_year": 2026
   },
   {
     "name": "Yongfeng Wang",
@@ -969,6 +1396,44 @@
       "2022": 3
     },
     "first_year": 2021,
+    "last_year": 2022
+  },
+  {
+    "name": "Anjo Vahldiek-Oberwagner",
+    "display_name": "Anjo Vahldiek-Oberwagner",
+    "affiliation": "Intel",
+    "total_memberships": 4,
+    "chair_count": 3,
+    "conferences": [
+      [
+        "EUROSYS",
+        2022,
+        "chair"
+      ],
+      [
+        "OSDI",
+        2020,
+        "chair"
+      ],
+      [
+        "SC",
+        2021,
+        "chair"
+      ],
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "both",
+    "years": {
+      "2019": 1,
+      "2020": 1,
+      "2021": 1,
+      "2022": 1
+    },
+    "first_year": 2019,
     "last_year": 2022
   },
   {
@@ -1082,61 +1547,25 @@
     "last_year": 2023
   },
   {
-    "name": "Boxi Yu",
-    "display_name": "Boxi Yu",
-    "affiliation": "Chinese University of Hong Kong",
+    "name": "Chenhao Jiang",
+    "display_name": "Chenhao Jiang",
+    "affiliation": "University of Toronto",
     "total_memberships": 4,
     "chair_count": 0,
     "conferences": [
       [
         "ATC",
-        2022,
-        "member"
-      ],
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "OSDI",
-        2022,
-        "member"
-      ],
-      [
-        "OSDI",
-        2024,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2022": 2,
-      "2024": 2
-    },
-    "first_year": 2022,
-    "last_year": 2024
-  },
-  {
-    "name": "Dongjoo Seo",
-    "display_name": "Dongjoo Seo",
-    "affiliation": "University of California, Irvine",
-    "total_memberships": 4,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "EUROSYS",
         2024,
         "member"
       ],
       [
         "EUROSYS",
         2025,
+        "member"
+      ],
+      [
+        "FAST",
+        2024,
         "member"
       ],
       [
@@ -1154,41 +1583,77 @@
     "last_year": 2025
   },
   {
-    "name": "Fang Zhou",
-    "display_name": "Fang Zhou",
-    "affiliation": "The Ohio State University",
+    "name": "Diogo Vaz",
+    "display_name": "Diogo Vaz",
+    "affiliation": "INESC-ID and Instituto Superior Técnico",
     "total_memberships": 4,
     "chair_count": 0,
     "conferences": [
       [
-        "EUROSYS",
-        2021,
+        "ATC",
+        2024,
         "member"
       ],
       [
         "EUROSYS",
-        2022,
+        2024,
         "member"
       ],
       [
         "OSDI",
-        2020,
+        2024,
         "member"
       ],
       [
         "OSDI",
-        2021,
+        2025,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
-      "2020": 1,
-      "2021": 2,
-      "2022": 1
+      "2024": 3,
+      "2025": 1
     },
-    "first_year": 2020,
-    "last_year": 2022
+    "first_year": 2024,
+    "last_year": 2025
+  },
+  {
+    "name": "Feiran",
+    "display_name": "Feiran",
+    "affiliation": "Alex",
+    "total_memberships": 4,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ],
+      [
+        "SOSP",
+        2023,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2023": 1,
+      "2024": 2,
+      "2025": 1
+    },
+    "first_year": 2023,
+    "last_year": 2025
   },
   {
     "name": "Gao Wei",
@@ -1228,9 +1693,45 @@
     "last_year": 2025
   },
   {
-    "name": "Georgia Christofidi",
-    "display_name": "Georgia Christofidi",
-    "affiliation": "IMDEA Software Institute",
+    "name": "Ghadeer Almusaddar",
+    "display_name": "Ghadeer Almusaddar",
+    "affiliation": "Binghamton University",
+    "total_memberships": 4,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "EUROSYS",
+        2025,
+        "member"
+      ],
+      [
+        "EUROSYS",
+        2026,
+        "member"
+      ],
+      [
+        "FAST",
+        2025,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 3,
+      "2026": 1
+    },
+    "first_year": 2025,
+    "last_year": 2026
+  },
+  {
+    "name": "Guanzhou Hu",
+    "display_name": "Guanzhou Hu",
+    "affiliation": "University of Wisconsin-Madison",
     "total_memberships": 4,
     "chair_count": 0,
     "conferences": [
@@ -1240,28 +1741,28 @@
         "member"
       ],
       [
-        "EUROSYS",
-        2023,
-        "member"
-      ],
-      [
-        "EUROSYS",
-        2024,
+        "FAST",
+        2025,
         "member"
       ],
       [
         "OSDI",
         2024,
         "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
       ]
     ],
     "area": "systems",
     "years": {
-      "2023": 1,
-      "2024": 3
+      "2024": 2,
+      "2025": 2
     },
-    "first_year": 2023,
-    "last_year": 2024
+    "first_year": 2024,
+    "last_year": 2025
   },
   {
     "name": "Haoran Qiu",
@@ -1372,41 +1873,41 @@
     "last_year": 2024
   },
   {
-    "name": "Liangcheng Yu",
-    "display_name": "Liangcheng Yu",
-    "affiliation": "University of Pennsylvania",
+    "name": "Michael Paper",
+    "display_name": "Michael Paper",
+    "affiliation": "Stanford University",
     "total_memberships": 4,
     "chair_count": 0,
     "conferences": [
       [
         "ATC",
-        2022,
+        2024,
         "member"
       ],
       [
         "EUROSYS",
-        2021,
+        2026,
         "member"
       ],
       [
         "OSDI",
-        2022,
+        2024,
         "member"
       ],
       [
-        "SOSP",
-        2023,
+        "OSDI",
+        2025,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
-      "2021": 1,
-      "2022": 2,
-      "2023": 1
+      "2024": 2,
+      "2025": 1,
+      "2026": 1
     },
-    "first_year": 2021,
-    "last_year": 2023
+    "first_year": 2024,
+    "last_year": 2026
   },
   {
     "name": "Moritz Lumme",
@@ -1517,77 +2018,186 @@
     "last_year": 2022
   },
   {
-    "name": "Saisha Kamat",
-    "display_name": "Saisha Kamat",
-    "affiliation": "University of North Carolina at Charlotte",
+    "name": "Ruiming Lu",
+    "display_name": "Ruiming Lu",
+    "affiliation": "Shanghai Jiao Tong University",
     "total_memberships": 4,
     "chair_count": 0,
     "conferences": [
       [
-        "ATC",
-        2022,
-        "member"
-      ],
-      [
-        "ATC",
+        "EUROSYS",
         2024,
         "member"
       ],
       [
-        "OSDI",
-        2022,
+        "FAST",
+        2024,
         "member"
       ],
       [
-        "OSDI",
-        2024,
+        "FAST",
+        2025,
+        "member"
+      ],
+      [
+        "SOSP",
+        2023,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
-      "2022": 2,
-      "2024": 2
+      "2023": 1,
+      "2024": 2,
+      "2025": 1
     },
-    "first_year": 2022,
-    "last_year": 2024
+    "first_year": 2023,
+    "last_year": 2025
   },
   {
-    "name": "Swapnil Gandhi",
-    "display_name": "Swapnil Gandhi",
-    "affiliation": "Microsoft",
+    "name": "Shawn Zhong",
+    "display_name": "Shawn Zhong",
+    "affiliation": "University of Wisconsin-Madison",
     "total_memberships": 4,
     "chair_count": 0,
     "conferences": [
       [
         "ATC",
-        2022,
+        2024,
+        "member"
+      ],
+      [
+        "FAST",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 3,
+      "2025": 1
+    },
+    "first_year": 2024,
+    "last_year": 2025
+  },
+  {
+    "name": "Sibendu Paul",
+    "display_name": "Sibendu Paul",
+    "affiliation": "Amazon",
+    "total_memberships": 4,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
         "member"
       ],
       [
         "EUROSYS",
-        2023,
+        2025,
         "member"
       ],
       [
         "OSDI",
-        2020,
+        2024,
         "member"
       ],
       [
         "OSDI",
-        2022,
+        2025,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
-      "2020": 1,
-      "2022": 2,
-      "2023": 1
+      "2024": 2,
+      "2025": 2
     },
-    "first_year": 2020,
-    "last_year": 2023
+    "first_year": 2024,
+    "last_year": 2025
+  },
+  {
+    "name": "Souptik Sen",
+    "display_name": "Souptik Sen",
+    "affiliation": "Snowflake",
+    "total_memberships": 4,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "EUROSYS",
+        2024,
+        "member"
+      ],
+      [
+        "EUROSYS",
+        2025,
+        "member"
+      ],
+      [
+        "FAST",
+        2025,
+        "member"
+      ],
+      [
+        "SOSP",
+        2023,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2023": 1,
+      "2024": 1,
+      "2025": 2
+    },
+    "first_year": 2023,
+    "last_year": 2025
+  },
+  {
+    "name": "Stratos Psomadakis",
+    "display_name": "Stratos Psomadakis",
+    "affiliation": "National Technical University of Athens",
+    "total_memberships": 4,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "EUROSYS",
+        2025,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 2,
+      "2025": 2
+    },
+    "first_year": 2024,
+    "last_year": 2025
   },
   {
     "name": "Vlad-Andrei Badoiu",
@@ -1735,9 +2345,9 @@
     "last_year": 2022
   },
   {
-    "name": "Xin Tan",
-    "display_name": "Xin Tan",
-    "affiliation": "Chinese University of Hong Kong",
+    "name": "Wenhui Zhang",
+    "display_name": "Wenhui Zhang",
+    "affiliation": "ByteDance",
     "total_memberships": 4,
     "chair_count": 0,
     "conferences": [
@@ -1747,8 +2357,113 @@
         "member"
       ],
       [
-        "EUROSYS",
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
         2025,
+        "member"
+      ],
+      [
+        "SOSP",
+        2023,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2023": 1,
+      "2024": 2,
+      "2025": 1
+    },
+    "first_year": 2023,
+    "last_year": 2025
+  },
+  {
+    "name": "Wenlong Wang",
+    "display_name": "Wenlong Wang",
+    "affiliation": "University of Minnesota",
+    "total_memberships": 4,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "FAST",
+        2025,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 2,
+      "2025": 2
+    },
+    "first_year": 2024,
+    "last_year": 2025
+  },
+  {
+    "name": "Xiaoxiang Shi",
+    "display_name": "Xiaoxiang Shi",
+    "affiliation": "Shanghai Jiao Tong University",
+    "total_memberships": 4,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ],
+      [
+        "SOSP",
+        2023,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2023": 1,
+      "2024": 2,
+      "2025": 1
+    },
+    "first_year": 2023,
+    "last_year": 2025
+  },
+  {
+    "name": "Yibo Huang",
+    "display_name": "Yibo Huang",
+    "affiliation": "University of Texas at Austin",
+    "total_memberships": 4,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
         "member"
       ],
       [
@@ -1760,9 +2475,14 @@
         "OSDI",
         2024,
         "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
       ]
     ],
-    "area": "systems",
+    "area": "both",
     "years": {
       "2024": 2,
       "2025": 1,
@@ -1770,6 +2490,42 @@
     },
     "first_year": 2024,
     "last_year": 2026
+  },
+  {
+    "name": "Zeying Zhu",
+    "display_name": "Zeying Zhu",
+    "affiliation": "University of Maryland",
+    "total_memberships": 4,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "FAST",
+        2025,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 2,
+      "2025": 2
+    },
+    "first_year": 2024,
+    "last_year": 2025
   },
   {
     "name": "juyi lin",
@@ -1806,38 +2562,6 @@
     },
     "first_year": 2024,
     "last_year": 2025
-  },
-  {
-    "name": "Anjo Vahldiek-Oberwagner",
-    "display_name": "Anjo Vahldiek-Oberwagner",
-    "affiliation": "Intel",
-    "total_memberships": 3,
-    "chair_count": 3,
-    "conferences": [
-      [
-        "EUROSYS",
-        2022,
-        "chair"
-      ],
-      [
-        "OSDI",
-        2020,
-        "chair"
-      ],
-      [
-        "SC",
-        2021,
-        "chair"
-      ]
-    ],
-    "area": "both",
-    "years": {
-      "2020": 1,
-      "2021": 1,
-      "2022": 1
-    },
-    "first_year": 2020,
-    "last_year": 2022
   },
   {
     "name": "Chengyu Zhang",
@@ -2029,6 +2753,69 @@
     "last_year": 2023
   },
   {
+    "name": "Aakash Sharma",
+    "display_name": "Aakash Sharma",
+    "affiliation": "UiT The Arctic University of Norway",
+    "total_memberships": 3,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ],
+      [
+        "OSDI",
+        2021,
+        "member"
+      ],
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1,
+      "2021": 1,
+      "2025": 1
+    },
+    "first_year": 2019,
+    "last_year": 2025
+  },
+  {
+    "name": "Aditya Shah",
+    "display_name": "Aditya Shah",
+    "affiliation": "Google",
+    "total_memberships": 3,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 2,
+      "2025": 1
+    },
+    "first_year": 2024,
+    "last_year": 2025
+  },
+  {
     "name": "Aman Goel",
     "display_name": "Aman Goel",
     "affiliation": "Amazon",
@@ -2058,6 +2845,38 @@
     },
     "first_year": 2021,
     "last_year": 2023
+  },
+  {
+    "name": "Amoghavarsha Suresh",
+    "display_name": "Amoghavarsha Suresh",
+    "affiliation": "Stony Brook University",
+    "total_memberships": 3,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "EUROSYS",
+        2022,
+        "member"
+      ],
+      [
+        "SOSP",
+        2019,
+        "member"
+      ],
+      [
+        "SOSP",
+        2021,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1,
+      "2021": 1,
+      "2022": 1
+    },
+    "first_year": 2019,
+    "last_year": 2022
   },
   {
     "name": "Ayush Goel",
@@ -2151,6 +2970,37 @@
     "last_year": 2022
   },
   {
+    "name": "Changyuan Lin",
+    "display_name": "Changyuan Lin",
+    "affiliation": "University of British Columbia",
+    "total_memberships": 3,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 2,
+      "2025": 1
+    },
+    "first_year": 2024,
+    "last_year": 2025
+  },
+  {
     "name": "Chen-Yu Ho",
     "display_name": "Chen-Yu Ho",
     "affiliation": "King Abdullah University of Science and Technology",
@@ -2182,9 +3032,72 @@
     "last_year": 2024
   },
   {
-    "name": "Chenhao Jiang",
-    "display_name": "Chenhao Jiang",
-    "affiliation": "University of Toronto",
+    "name": "Chunfeng Du",
+    "display_name": "Chunfeng Du",
+    "affiliation": "Zhengzhou University",
+    "total_memberships": 3,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ],
+      [
+        "SOSP",
+        2021,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2021": 1,
+      "2024": 1,
+      "2025": 1
+    },
+    "first_year": 2021,
+    "last_year": 2025
+  },
+  {
+    "name": "Cláudia Brito",
+    "display_name": "Cláudia Brito",
+    "affiliation": "INESC TEC",
+    "total_memberships": 3,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "EUROSYS",
+        2025,
+        "member"
+      ],
+      [
+        "EUROSYS",
+        2026,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 2,
+      "2026": 1
+    },
+    "first_year": 2025,
+    "last_year": 2026
+  },
+  {
+    "name": "Diman Zad Tootaghaj",
+    "display_name": "Diman Zad Tootaghaj",
+    "affiliation": "Hewlett Packard Labs",
     "total_memberships": 3,
     "chair_count": 0,
     "conferences": [
@@ -2194,13 +3107,13 @@
         "member"
       ],
       [
-        "EUROSYS",
-        2025,
+        "OSDI",
+        2024,
         "member"
       ],
       [
         "OSDI",
-        2024,
+        2025,
         "member"
       ]
     ],
@@ -2211,67 +3124,6 @@
     },
     "first_year": 2024,
     "last_year": 2025
-  },
-  {
-    "name": "Chenhao Ye",
-    "display_name": "Chenhao Ye",
-    "affiliation": "University of Wisconsin-Madison",
-    "total_memberships": 3,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "EUROSYS",
-        2025,
-        "member"
-      ],
-      [
-        "OSDI",
-        2024,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2024": 2,
-      "2025": 1
-    },
-    "first_year": 2024,
-    "last_year": 2025
-  },
-  {
-    "name": "Diogo Vaz",
-    "display_name": "Diogo Vaz",
-    "affiliation": "INESC-ID and Instituto Superior Técnico",
-    "total_memberships": 3,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "EUROSYS",
-        2024,
-        "member"
-      ],
-      [
-        "OSDI",
-        2024,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2024": 3
-    },
-    "first_year": 2024,
-    "last_year": 2024
   },
   {
     "name": "Divyanshu Saxena",
@@ -2336,37 +3188,6 @@
     "last_year": 2025
   },
   {
-    "name": "Feiran",
-    "display_name": "Feiran",
-    "affiliation": "Alex",
-    "total_memberships": 3,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "OSDI",
-        2024,
-        "member"
-      ],
-      [
-        "SOSP",
-        2023,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2023": 1,
-      "2024": 2
-    },
-    "first_year": 2023,
-    "last_year": 2024
-  },
-  {
     "name": "Han-Ting Liang",
     "display_name": "Han-Ting Liang",
     "affiliation": "University of Illinois Urbana-Champaign",
@@ -2396,6 +3217,37 @@
     },
     "first_year": 2024,
     "last_year": 2026
+  },
+  {
+    "name": "Haocheng Xu",
+    "display_name": "Haocheng Xu",
+    "affiliation": "University of California, Irvine",
+    "total_memberships": 3,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 2,
+      "2025": 1
+    },
+    "first_year": 2024,
+    "last_year": 2025
   },
   {
     "name": "Haoran Ma",
@@ -2429,6 +3281,37 @@
     "last_year": 2024
   },
   {
+    "name": "Huibing Dong",
+    "display_name": "Huibing Dong",
+    "affiliation": "University of Minnesota",
+    "total_memberships": 3,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 2,
+      "2025": 1
+    },
+    "first_year": 2024,
+    "last_year": 2025
+  },
+  {
     "name": "Ines Messadi",
     "display_name": "Ines Messadi",
     "affiliation": "TU Darmstadt",
@@ -2457,6 +3340,37 @@
     },
     "first_year": 2022,
     "last_year": 2022
+  },
+  {
+    "name": "Jiamin Li",
+    "display_name": "Jiamin Li",
+    "affiliation": "City University of Hong Kong",
+    "total_memberships": 3,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "EUROSYS",
+        2024,
+        "member"
+      ],
+      [
+        "FAST",
+        2024,
+        "member"
+      ],
+      [
+        "SOSP",
+        2023,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2023": 1,
+      "2024": 2
+    },
+    "first_year": 2023,
+    "last_year": 2024
   },
   {
     "name": "Jian Zhang",
@@ -2584,6 +3498,99 @@
     "last_year": 2026
   },
   {
+    "name": "Jinnan Guo",
+    "display_name": "Jinnan Guo",
+    "affiliation": "Imperial College London",
+    "total_memberships": 3,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 2,
+      "2025": 1
+    },
+    "first_year": 2024,
+    "last_year": 2025
+  },
+  {
+    "name": "Jinsun Yoo",
+    "display_name": "Jinsun Yoo",
+    "affiliation": "Georgia Institute of Technology",
+    "total_memberships": 3,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 2,
+      "2025": 1
+    },
+    "first_year": 2024,
+    "last_year": 2025
+  },
+  {
+    "name": "João Oliveira",
+    "display_name": "João Oliveira",
+    "affiliation": "INESC-ID and Instituto Superior Técnico",
+    "total_memberships": 3,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 2,
+      "2025": 1
+    },
+    "first_year": 2024,
+    "last_year": 2025
+  },
+  {
     "name": "Junda Chen",
     "display_name": "Junda Chen",
     "affiliation": "University of California, San Diego",
@@ -2597,6 +3604,37 @@
       ],
       [
         "EUROSYS",
+        2025,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 2,
+      "2025": 1
+    },
+    "first_year": 2024,
+    "last_year": 2025
+  },
+  {
+    "name": "Kiran Shashi Hombal",
+    "display_name": "Kiran Shashi Hombal",
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "total_memberships": 3,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "FAST",
         2025,
         "member"
       ],
@@ -2646,6 +3684,37 @@
     "last_year": 2022
   },
   {
+    "name": "Malvika Jadhav",
+    "display_name": "Malvika Jadhav",
+    "affiliation": "University of Florida",
+    "total_memberships": 3,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "EUROSYS",
+        2025,
+        "member"
+      ],
+      [
+        "EUROSYS",
+        2026,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "both",
+    "years": {
+      "2025": 2,
+      "2026": 1
+    },
+    "first_year": 2025,
+    "last_year": 2026
+  },
+  {
     "name": "Md Ashfaqur Rahaman",
     "display_name": "Md Ashfaqur Rahaman",
     "affiliation": "University of Utah",
@@ -2677,9 +3746,9 @@
     "last_year": 2022
   },
   {
-    "name": "Michael Paper",
-    "display_name": "Michael Paper",
-    "affiliation": "Stanford University",
+    "name": "Mingxuan Yang",
+    "display_name": "Mingxuan Yang",
+    "affiliation": "Imperial College London",
     "total_memberships": 3,
     "chair_count": 0,
     "conferences": [
@@ -2689,23 +3758,54 @@
         "member"
       ],
       [
-        "EUROSYS",
-        2026,
+        "OSDI",
+        2024,
         "member"
       ],
       [
         "OSDI",
-        2024,
+        2025,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
       "2024": 2,
-      "2026": 1
+      "2025": 1
     },
     "first_year": 2024,
-    "last_year": 2026
+    "last_year": 2025
+  },
+  {
+    "name": "Pedro Henrique Penna",
+    "display_name": "Pedro Henrique Penna",
+    "affiliation": "Microsoft",
+    "total_memberships": 3,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 2,
+      "2025": 1
+    },
+    "first_year": 2024,
+    "last_year": 2025
   },
   {
     "name": "Pengcheng Wang",
@@ -2768,6 +3868,37 @@
     },
     "first_year": 2022,
     "last_year": 2023
+  },
+  {
+    "name": "Rahul Bothra",
+    "display_name": "Rahul Bothra",
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "total_memberships": 3,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 2,
+      "2025": 1
+    },
+    "first_year": 2024,
+    "last_year": 2025
   },
   {
     "name": "Ravikiran R",
@@ -2834,6 +3965,99 @@
     "last_year": 2023
   },
   {
+    "name": "Ruwen Fan",
+    "display_name": "Ruwen Fan",
+    "affiliation": "Tsinghua University",
+    "total_memberships": 3,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "EUROSYS",
+        2025,
+        "member"
+      ],
+      [
+        "EUROSYS",
+        2026,
+        "member"
+      ],
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 2,
+      "2026": 1
+    },
+    "first_year": 2025,
+    "last_year": 2026
+  },
+  {
+    "name": "Sagar Bharadwaj Kalasibail Seetharam",
+    "display_name": "Sagar Bharadwaj Kalasibail Seetharam",
+    "affiliation": "Carnegie Mellon University",
+    "total_memberships": 3,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 2,
+      "2025": 1
+    },
+    "first_year": 2024,
+    "last_year": 2025
+  },
+  {
+    "name": "Sahil Tyagi",
+    "display_name": "Sahil Tyagi",
+    "affiliation": "Oak Ridge National Laboratory",
+    "total_memberships": 3,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 2,
+      "2025": 1
+    },
+    "first_year": 2024,
+    "last_year": 2025
+  },
+  {
     "name": "Sandeep Polisetty",
     "display_name": "Sandeep Polisetty",
     "affiliation": "University of Massachusetts Amherst",
@@ -2865,6 +4089,37 @@
     "last_year": 2024
   },
   {
+    "name": "Santosh Pandey",
+    "display_name": "Santosh Pandey",
+    "affiliation": "Rutgers University",
+    "total_memberships": 3,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 2,
+      "2025": 1
+    },
+    "first_year": 2024,
+    "last_year": 2025
+  },
+  {
     "name": "Seonjin Na",
     "display_name": "Seonjin Na",
     "affiliation": "Georgia Institute of Technology",
@@ -2884,6 +4139,37 @@
       [
         "OSDI",
         2024,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 2,
+      "2025": 1
+    },
+    "first_year": 2024,
+    "last_year": 2025
+  },
+  {
+    "name": "Shangshu Qian",
+    "display_name": "Shangshu Qian",
+    "affiliation": "Purdue University",
+    "total_memberships": 3,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
         "member"
       ]
     ],
@@ -2925,37 +4211,6 @@
     },
     "first_year": 2023,
     "last_year": 2024
-  },
-  {
-    "name": "Sibendu Paul",
-    "display_name": "Sibendu Paul",
-    "affiliation": "Applied Scientist at Amazon Prime Video",
-    "total_memberships": 3,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "EUROSYS",
-        2025,
-        "member"
-      ],
-      [
-        "OSDI",
-        2024,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2024": 2,
-      "2025": 1
-    },
-    "first_year": 2024,
-    "last_year": 2025
   },
   {
     "name": "Sihang Liu",
@@ -3020,41 +4275,9 @@
     "last_year": 2022
   },
   {
-    "name": "Souptik Sen",
-    "display_name": "Souptik Sen",
-    "affiliation": "Snowflake",
-    "total_memberships": 3,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "EUROSYS",
-        2024,
-        "member"
-      ],
-      [
-        "EUROSYS",
-        2025,
-        "member"
-      ],
-      [
-        "SOSP",
-        2023,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2023": 1,
-      "2024": 1,
-      "2025": 1
-    },
-    "first_year": 2023,
-    "last_year": 2025
-  },
-  {
-    "name": "Stratos Psomadakis",
-    "display_name": "Stratos Psomadakis",
-    "affiliation": "National Technical University of Athens",
+    "name": "Syed Salauddin Mohammad Tariq",
+    "display_name": "Syed Salauddin Mohammad Tariq",
+    "affiliation": "University of Michigan",
     "total_memberships": 3,
     "chair_count": 0,
     "conferences": [
@@ -3064,13 +4287,44 @@
         "member"
       ],
       [
-        "EUROSYS",
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
         2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 2,
+      "2025": 1
+    },
+    "first_year": 2024,
+    "last_year": 2025
+  },
+  {
+    "name": "Tanvi Sharma",
+    "display_name": "Tanvi Sharma",
+    "affiliation": "Purdue University",
+    "total_memberships": 3,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
         "member"
       ],
       [
         "OSDI",
         2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
         "member"
       ]
     ],
@@ -3145,6 +4399,37 @@
     "last_year": 2022
   },
   {
+    "name": "Vishal Rao",
+    "display_name": "Vishal Rao",
+    "affiliation": "Georgia Institute of Technology",
+    "total_memberships": 3,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 2,
+      "2025": 1
+    },
+    "first_year": 2024,
+    "last_year": 2025
+  },
+  {
     "name": "Vishwanath Seshagiri",
     "display_name": "Vishwanath Seshagiri",
     "affiliation": "Emory University",
@@ -3207,9 +4492,9 @@
     "last_year": 2023
   },
   {
-    "name": "Wenhui Zhang",
-    "display_name": "Wenhui Zhang",
-    "affiliation": "ByteDance",
+    "name": "Wahid Uz Zaman",
+    "display_name": "Wahid Uz Zaman",
+    "affiliation": "University of Pennsylvania",
     "total_memberships": 3,
     "chair_count": 0,
     "conferences": [
@@ -3224,23 +4509,116 @@
         "member"
       ],
       [
-        "SOSP",
-        2023,
+        "OSDI",
+        2025,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
-      "2023": 1,
-      "2024": 2
+      "2024": 2,
+      "2025": 1
     },
-    "first_year": 2023,
+    "first_year": 2024,
+    "last_year": 2025
+  },
+  {
+    "name": "Xiangqun Zhang",
+    "display_name": "Xiangqun Zhang",
+    "affiliation": "Syracuse University",
+    "total_memberships": 3,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 2,
+      "2025": 1
+    },
+    "first_year": 2024,
+    "last_year": 2025
+  },
+  {
+    "name": "Xiaoguang Wang",
+    "display_name": "Xiaoguang Wang",
+    "affiliation": "Virginia Tech",
+    "total_memberships": 3,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2021,
+        "member"
+      ],
+      [
+        "SOSP",
+        2019,
+        "member"
+      ],
+      [
+        "SOSP",
+        2021,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1,
+      "2021": 2
+    },
+    "first_year": 2019,
+    "last_year": 2021
+  },
+  {
+    "name": "Xiaolu Li",
+    "display_name": "Xiaolu Li",
+    "affiliation": "Huazhong University of Science and Technology",
+    "total_memberships": 3,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2022,
+        "member"
+      ],
+      [
+        "FAST",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2022,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2022": 2,
+      "2024": 1
+    },
+    "first_year": 2022,
     "last_year": 2024
   },
   {
-    "name": "Xiaoxiang Shi",
-    "display_name": "Xiaoxiang Shi",
-    "affiliation": "Shanghai Jiao Tong University",
+    "name": "Xinying Zheng",
+    "display_name": "Xinying Zheng",
+    "affiliation": "University of Illinois Urbana-Champaign",
     "total_memberships": 3,
     "chair_count": 0,
     "conferences": [
@@ -3255,18 +4633,18 @@
         "member"
       ],
       [
-        "SOSP",
-        2023,
+        "OSDI",
+        2025,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
-      "2023": 1,
-      "2024": 2
+      "2024": 2,
+      "2025": 1
     },
-    "first_year": 2023,
-    "last_year": 2024
+    "first_year": 2024,
+    "last_year": 2025
   },
   {
     "name": "Xuanteng Huang",
@@ -3300,9 +4678,9 @@
     "last_year": 2023
   },
   {
-    "name": "Yibo Huang",
-    "display_name": "Yibo Huang",
-    "affiliation": "University of Texas at Austin",
+    "name": "Yangjie Zhou",
+    "display_name": "Yangjie Zhou",
+    "affiliation": "National University of Singapore",
     "total_memberships": 3,
     "chair_count": 0,
     "conferences": [
@@ -3312,23 +4690,23 @@
         "member"
       ],
       [
-        "EUROSYS",
-        2026,
+        "OSDI",
+        2024,
         "member"
       ],
       [
         "OSDI",
-        2024,
+        2025,
         "member"
       ]
     ],
-    "area": "both",
+    "area": "systems",
     "years": {
       "2024": 2,
-      "2026": 1
+      "2025": 1
     },
     "first_year": 2024,
-    "last_year": 2026
+    "last_year": 2025
   },
   {
     "name": "Yichuan Wang",
@@ -3424,6 +4802,38 @@
     "last_year": 2025
   },
   {
+    "name": "Zewen Jin",
+    "display_name": "Zewen Jin",
+    "affiliation": "University of Science and Technology of China",
+    "total_memberships": 3,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ],
+      [
+        "SC",
+        2021,
+        "member"
+      ],
+      [
+        "SOSP",
+        2023,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2021": 1,
+      "2023": 1,
+      "2025": 1
+    },
+    "first_year": 2021,
+    "last_year": 2025
+  },
+  {
     "name": "Zhifeng Jiang",
     "display_name": "Zhifeng Jiang",
     "affiliation": "Hong Kong University of Science and Technology",
@@ -3453,6 +4863,37 @@
     },
     "first_year": 2021,
     "last_year": 2022
+  },
+  {
+    "name": "Zhihan Jiang",
+    "display_name": "Zhihan Jiang",
+    "affiliation": "Chinese University of Hong Kong",
+    "total_memberships": 3,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "ATC",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2024,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 2,
+      "2025": 1
+    },
+    "first_year": 2024,
+    "last_year": 2025
   },
   {
     "name": "Zhisheng Ye",
@@ -3591,34 +5032,111 @@
     "last_year": 2024
   },
   {
-    "name": "Abu Bakar Siddiqur Rahman",
-    "display_name": "Abu Bakar Siddiqur Rahman",
-    "affiliation": "University of Nebraska Omaha",
+    "name": "Ivo Jimenez",
+    "display_name": "Ivo Jimenez",
+    "affiliation": "University of California, Santa Cruz",
     "total_memberships": 2,
-    "chair_count": 0,
+    "chair_count": 1,
     "conferences": [
       [
-        "ATC",
-        2024,
+        "SOSP",
+        2019,
+        "member"
+      ],
+      [
+        "SOSP",
+        2021,
+        "chair"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1,
+      "2021": 1
+    },
+    "first_year": 2019,
+    "last_year": 2021
+  },
+  {
+    "name": "Ryan Huang",
+    "display_name": "Ryan Huang",
+    "affiliation": "University of Michigan",
+    "total_memberships": 2,
+    "chair_count": 1,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
         "member"
       ],
       [
         "OSDI",
-        2024,
+        2025,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
-      "2024": 2
+      "2025": 2
     },
-    "first_year": 2024,
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Tianyin Xu",
+    "display_name": "Tianyin Xu",
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "total_memberships": 2,
+    "chair_count": 1,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 2
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Valerio Schiavoni",
+    "display_name": "Valerio Schiavoni",
+    "affiliation": "Université de Neuchâtel",
+    "total_memberships": 2,
+    "chair_count": 1,
+    "conferences": [
+      [
+        "EUROSYS",
+        2024,
+        "chair"
+      ],
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1,
+      "2024": 1
+    },
+    "first_year": 2019,
     "last_year": 2024
   },
   {
-    "name": "Aditya Shah",
-    "display_name": "Aditya Shah",
-    "affiliation": "Google",
+    "name": "Abu Bakar Siddiqur Rahman",
+    "display_name": "Abu Bakar Siddiqur Rahman",
+    "affiliation": "University of Nebraska Omaha",
     "total_memberships": 2,
     "chair_count": 0,
     "conferences": [
@@ -3770,32 +5288,6 @@
     "last_year": 2024
   },
   {
-    "name": "Amoghavarsha Suresh",
-    "display_name": "Amoghavarsha Suresh",
-    "affiliation": "Stony Brook University",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "EUROSYS",
-        2022,
-        "member"
-      ],
-      [
-        "SOSP",
-        2021,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2021": 1,
-      "2022": 1
-    },
-    "first_year": 2021,
-    "last_year": 2022
-  },
-  {
     "name": "André Augusto",
     "display_name": "André Augusto",
     "affiliation": "INESC-ID and Instituto Superior Técnico",
@@ -3898,6 +5390,32 @@
     "last_year": 2024
   },
   {
+    "name": "Aravindh Raman",
+    "display_name": "Aravindh Raman",
+    "affiliation": "Telefonica Research",
+    "total_memberships": 2,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "EUROSYS",
+        2021,
+        "member"
+      ],
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1,
+      "2021": 1
+    },
+    "first_year": 2019,
+    "last_year": 2021
+  },
+  {
     "name": "Archit Patke",
     "display_name": "Archit Patke",
     "affiliation": "University of Illinois Urbana-Champaign",
@@ -3947,6 +5465,84 @@
     },
     "first_year": 2022,
     "last_year": 2022
+  },
+  {
+    "name": "Ata Fatahi",
+    "display_name": "Ata Fatahi",
+    "affiliation": "University of Pennsylvania",
+    "total_memberships": 2,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2020,
+        "member"
+      ],
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1,
+      "2020": 1
+    },
+    "first_year": 2019,
+    "last_year": 2020
+  },
+  {
+    "name": "Ayush Bansal",
+    "display_name": "Ayush Bansal",
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "total_memberships": 2,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "EUROSYS",
+        2026,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1,
+      "2026": 1
+    },
+    "first_year": 2025,
+    "last_year": 2026
+  },
+  {
+    "name": "Benjamin Reidys",
+    "display_name": "Benjamin Reidys",
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "total_memberships": 2,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "EUROSYS",
+        2023,
+        "member"
+      ],
+      [
+        "FAST",
+        2024,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2023": 1,
+      "2024": 1
+    },
+    "first_year": 2023,
+    "last_year": 2024
   },
   {
     "name": "Bin Qian",
@@ -4124,31 +5720,6 @@
     "last_year": 2022
   },
   {
-    "name": "Changyuan Lin",
-    "display_name": "Changyuan Lin",
-    "affiliation": "University of British Columbia",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "OSDI",
-        2024,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2024": 2
-    },
-    "first_year": 2024,
-    "last_year": 2024
-  },
-  {
     "name": "Chao Peng",
     "display_name": "Chao Peng",
     "affiliation": "ByteDance",
@@ -4299,32 +5870,6 @@
     },
     "first_year": 2020,
     "last_year": 2021
-  },
-  {
-    "name": "Cláudia Brito",
-    "display_name": "Cláudia Brito",
-    "affiliation": "INESC TEC",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "EUROSYS",
-        2025,
-        "member"
-      ],
-      [
-        "EUROSYS",
-        2026,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2025": 1,
-      "2026": 1
-    },
-    "first_year": 2025,
-    "last_year": 2026
   },
   {
     "name": "Dae R. Jeong",
@@ -4480,31 +6025,6 @@
     "last_year": 2024
   },
   {
-    "name": "Diman Zad Tootaghaj",
-    "display_name": "Diman Zad Tootaghaj",
-    "affiliation": "Hewlett Packard Enterprise Labs",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "OSDI",
-        2024,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2024": 2
-    },
-    "first_year": 2024,
-    "last_year": 2024
-  },
-  {
     "name": "Djob Mvondo",
     "display_name": "Djob Mvondo",
     "affiliation": "University of Edinburgh",
@@ -4632,6 +6152,58 @@
     "last_year": 2021
   },
   {
+    "name": "Emad Heydari Beni",
+    "display_name": "Emad Heydari Beni",
+    "affiliation": "KU Leuven",
+    "total_memberships": 2,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "EUROSYS",
+        2021,
+        "member"
+      ],
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1,
+      "2021": 1
+    },
+    "first_year": 2019,
+    "last_year": 2021
+  },
+  {
+    "name": "Enguang Fan",
+    "display_name": "Enguang Fan",
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "total_memberships": 2,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "EUROSYS",
+        2026,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1,
+      "2026": 1
+    },
+    "first_year": 2025,
+    "last_year": 2026
+  },
+  {
     "name": "Federico De Marchi",
     "display_name": "Federico De Marchi",
     "affiliation": "Max Planck Society",
@@ -4671,6 +6243,32 @@
       [
         "EUROSYS",
         2026,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1,
+      "2026": 1
+    },
+    "first_year": 2025,
+    "last_year": 2026
+  },
+  {
+    "name": "Feng Cheng",
+    "display_name": "Feng Cheng",
+    "affiliation": "Duke University",
+    "total_memberships": 2,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "EUROSYS",
+        2026,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
         "member"
       ]
     ],
@@ -4734,20 +6332,46 @@
     "last_year": 2022
   },
   {
-    "name": "Ghadeer Almusaddar",
-    "display_name": "Ghadeer Almusaddar",
-    "affiliation": "Binghamton University",
+    "name": "Georgios Liargkovas",
+    "display_name": "Georgios Liargkovas",
+    "affiliation": "Columbia University",
     "total_memberships": 2,
     "chair_count": 0,
     "conferences": [
       [
         "EUROSYS",
-        2025,
+        2026,
         "member"
       ],
       [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1,
+      "2026": 1
+    },
+    "first_year": 2025,
+    "last_year": 2026
+  },
+  {
+    "name": "Giannis Roumpos",
+    "display_name": "Giannis Roumpos",
+    "affiliation": "IMDEA Software Institute",
+    "total_memberships": 2,
+    "chair_count": 0,
+    "conferences": [
+      [
         "EUROSYS",
         2026,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
         "member"
       ]
     ],
@@ -4836,31 +6460,6 @@
     "last_year": 2022
   },
   {
-    "name": "Guanzhou Hu",
-    "display_name": "Guanzhou Hu",
-    "affiliation": "University of Wisconsin-Madison",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "OSDI",
-        2024,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2024": 2
-    },
-    "first_year": 2024,
-    "last_year": 2024
-  },
-  {
     "name": "Hamza Sheikh",
     "display_name": "Hamza Sheikh",
     "affiliation": "University of Utah",
@@ -4886,29 +6485,30 @@
     "last_year": 2024
   },
   {
-    "name": "Haocheng Xu",
-    "display_name": "Haocheng Xu",
-    "affiliation": "University of California, Irvine",
+    "name": "Hanchen Xu",
+    "display_name": "Hanchen Xu",
+    "affiliation": "Virginia Tech",
     "total_memberships": 2,
     "chair_count": 0,
     "conferences": [
       [
-        "ATC",
-        2024,
+        "OSDI",
+        2025,
         "member"
       ],
       [
-        "OSDI",
-        2024,
+        "SOSP",
+        2023,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
-      "2024": 2
+      "2023": 1,
+      "2025": 1
     },
-    "first_year": 2024,
-    "last_year": 2024
+    "first_year": 2023,
+    "last_year": 2025
   },
   {
     "name": "Haoran Cai",
@@ -4986,31 +6586,6 @@
     "last_year": 2024
   },
   {
-    "name": "Huibing Dong",
-    "display_name": "Huibing Dong",
-    "affiliation": "University of Minnesota",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "OSDI",
-        2024,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2024": 2
-    },
-    "first_year": 2024,
-    "last_year": 2024
-  },
-  {
     "name": "Iacovos G. Kolokasis",
     "display_name": "Iacovos G. Kolokasis",
     "affiliation": "University of Crete and FORTH-ICS",
@@ -5034,6 +6609,57 @@
     },
     "first_year": 2021,
     "last_year": 2021
+  },
+  {
+    "name": "Iman Tabrizian",
+    "display_name": "Iman Tabrizian",
+    "affiliation": "University of Toronto",
+    "total_memberships": 2,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2020,
+        "member"
+      ],
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1,
+      "2020": 1
+    },
+    "first_year": 2019,
+    "last_year": 2020
+  },
+  {
+    "name": "Ismet Dagli",
+    "display_name": "Ismet Dagli",
+    "affiliation": "Colorado School of Mines",
+    "total_memberships": 2,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "EUROSYS",
+        2025,
+        "member"
+      ],
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 2
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Jae-Won Jang",
@@ -5162,32 +6788,6 @@
     "last_year": 2025
   },
   {
-    "name": "Jiamin Li",
-    "display_name": "Jiamin Li",
-    "affiliation": "City University of Hong Kong",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "EUROSYS",
-        2024,
-        "member"
-      ],
-      [
-        "SOSP",
-        2023,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2023": 1,
-      "2024": 1
-    },
-    "first_year": 2023,
-    "last_year": 2024
-  },
-  {
     "name": "Jiangfei Duan",
     "display_name": "Jiangfei Duan",
     "affiliation": "Chinese University of Hong Kong",
@@ -5211,6 +6811,58 @@
     },
     "first_year": 2024,
     "last_year": 2024
+  },
+  {
+    "name": "Jianshun Zhang",
+    "display_name": "Jianshun Zhang",
+    "affiliation": "Huazhong University of Science and Technology",
+    "total_memberships": 2,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2024,
+        "member"
+      ],
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 1,
+      "2025": 1
+    },
+    "first_year": 2024,
+    "last_year": 2025
+  },
+  {
+    "name": "Jiaqi Deng",
+    "display_name": "Jiaqi Deng",
+    "affiliation": "Georgia Institute of Technology",
+    "total_memberships": 2,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "EUROSYS",
+        2026,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1,
+      "2026": 1
+    },
+    "first_year": 2025,
+    "last_year": 2026
   },
   {
     "name": "Jiatai He",
@@ -5339,56 +6991,6 @@
     "last_year": 2025
   },
   {
-    "name": "Jinnan Guo",
-    "display_name": "Jinnan Guo",
-    "affiliation": "Imperial College London",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "OSDI",
-        2024,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2024": 2
-    },
-    "first_year": 2024,
-    "last_year": 2024
-  },
-  {
-    "name": "Jinsun Yoo",
-    "display_name": "Jinsun Yoo",
-    "affiliation": "Georgia Institute of Technology",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "OSDI",
-        2024,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2024": 2
-    },
-    "first_year": 2024,
-    "last_year": 2024
-  },
-  {
     "name": "Jiyu Hu",
     "display_name": "Jiyu Hu",
     "affiliation": "University of Illinois Urbana-Champaign",
@@ -5439,29 +7041,30 @@
     "last_year": 2022
   },
   {
-    "name": "João Oliveira",
-    "display_name": "João Oliveira",
-    "affiliation": "INESC-ID and Instituto Superior Técnico",
+    "name": "Jungwoo Kim",
+    "display_name": "Jungwoo Kim",
+    "affiliation": "Stanford University",
     "total_memberships": 2,
     "chair_count": 0,
     "conferences": [
       [
-        "ATC",
-        2024,
+        "EUROSYS",
+        2026,
         "member"
       ],
       [
         "OSDI",
-        2024,
+        2025,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
-      "2024": 2
+      "2025": 1,
+      "2026": 1
     },
-    "first_year": 2024,
-    "last_year": 2024
+    "first_year": 2025,
+    "last_year": 2026
   },
   {
     "name": "Junzhi Gong",
@@ -5512,6 +7115,32 @@
     },
     "first_year": 2022,
     "last_year": 2022
+  },
+  {
+    "name": "Ke Han",
+    "display_name": "Ke Han",
+    "affiliation": "Purdue University",
+    "total_memberships": 2,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "EUROSYS",
+        2026,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1,
+      "2026": 1
+    },
+    "first_year": 2025,
+    "last_year": 2026
   },
   {
     "name": "Kenta Ishiguro",
@@ -5592,29 +7221,55 @@
     "last_year": 2022
   },
   {
-    "name": "Kiran Shashi Hombal",
-    "display_name": "Kiran Shashi Hombal",
-    "affiliation": "University of Illinois Urbana-Champaign",
+    "name": "Lana Honcharuk",
+    "display_name": "Lana Honcharuk",
+    "affiliation": "Crusoe",
     "total_memberships": 2,
     "chair_count": 0,
     "conferences": [
       [
-        "ATC",
-        2024,
+        "EUROSYS",
+        2026,
         "member"
       ],
       [
         "OSDI",
-        2024,
+        2025,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
-      "2024": 2
+      "2025": 1,
+      "2026": 1
     },
-    "first_year": 2024,
-    "last_year": 2024
+    "first_year": 2025,
+    "last_year": 2026
+  },
+  {
+    "name": "Lei Huang",
+    "display_name": "Lei Huang",
+    "affiliation": "Boston University",
+    "total_memberships": 2,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 2
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Lianjie Cao",
@@ -5640,6 +7295,32 @@
     },
     "first_year": 2022,
     "last_year": 2022
+  },
+  {
+    "name": "Lingfeng Xiang",
+    "display_name": "Lingfeng Xiang",
+    "affiliation": "University of Texas at Arlington",
+    "total_memberships": 2,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2024,
+        "member"
+      ],
+      [
+        "SOSP",
+        2023,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2023": 1,
+      "2024": 1
+    },
+    "first_year": 2023,
+    "last_year": 2024
   },
   {
     "name": "Linghao Song",
@@ -5690,32 +7371,6 @@
     },
     "first_year": 2022,
     "last_year": 2022
-  },
-  {
-    "name": "Malvika Jadhav",
-    "display_name": "Malvika Jadhav",
-    "affiliation": "University of Florida",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "EUROSYS",
-        2025,
-        "member"
-      ],
-      [
-        "EUROSYS",
-        2026,
-        "member"
-      ]
-    ],
-    "area": "both",
-    "years": {
-      "2025": 1,
-      "2026": 1
-    },
-    "first_year": 2025,
-    "last_year": 2026
   },
   {
     "name": "Mamta Shukla",
@@ -5921,31 +7576,6 @@
     "last_year": 2022
   },
   {
-    "name": "Mingxuan Yang",
-    "display_name": "Mingxuan Yang",
-    "affiliation": "Imperial College London",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "OSDI",
-        2024,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2024": 2
-    },
-    "first_year": 2024,
-    "last_year": 2024
-  },
-  {
     "name": "Muhammad Haseeb",
     "display_name": "Muhammad Haseeb",
     "affiliation": "New York University",
@@ -6021,6 +7651,32 @@
     "last_year": 2024
   },
   {
+    "name": "Nikolaos Pagonas",
+    "display_name": "Nikolaos Pagonas",
+    "affiliation": "Columbia University",
+    "total_memberships": 2,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "EUROSYS",
+        2026,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1,
+      "2026": 1
+    },
+    "first_year": 2025,
+    "last_year": 2026
+  },
+  {
     "name": "Ojas Gupta",
     "display_name": "Ojas Gupta",
     "affiliation": "Juniper Networks",
@@ -6071,31 +7727,6 @@
     },
     "first_year": 2021,
     "last_year": 2022
-  },
-  {
-    "name": "Pedro Henrique Penna",
-    "display_name": "Pedro Henrique Penna",
-    "affiliation": "Microsoft",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "OSDI",
-        2024,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2024": 2
-    },
-    "first_year": 2024,
-    "last_year": 2024
   },
   {
     "name": "Peisen Yao",
@@ -6324,29 +7955,30 @@
     "last_year": 2026
   },
   {
-    "name": "Rahul Bothra",
-    "display_name": "Rahul Bothra",
-    "affiliation": "University of Illinois Urbana-Champaign",
+    "name": "Raja Gond",
+    "display_name": "Raja Gond",
+    "affiliation": "Microsoft",
     "total_memberships": 2,
     "chair_count": 0,
     "conferences": [
       [
-        "ATC",
-        2024,
+        "EUROSYS",
+        2026,
         "member"
       ],
       [
         "OSDI",
-        2024,
+        2025,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
-      "2024": 2
+      "2025": 1,
+      "2026": 1
     },
-    "first_year": 2024,
-    "last_year": 2024
+    "first_year": 2025,
+    "last_year": 2026
   },
   {
     "name": "Rajarshi Saha",
@@ -6551,6 +8183,31 @@
     "last_year": 2022
   },
   {
+    "name": "Rohan Puri",
+    "display_name": "Rohan Puri",
+    "affiliation": "Samsung",
+    "total_memberships": 2,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 2
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Ruidan Li",
     "display_name": "Ruidan Li",
     "affiliation": "University of Chicago",
@@ -6601,131 +8258,30 @@
     "last_year": 2024
   },
   {
-    "name": "Ruiming Lu",
-    "display_name": "Ruiming Lu",
-    "affiliation": "Shanghai Jiao Tong University",
+    "name": "Sachin Kumar Singh",
+    "display_name": "Sachin Kumar Singh",
+    "affiliation": "University of Utah",
     "total_memberships": 2,
     "chair_count": 0,
     "conferences": [
       [
         "EUROSYS",
-        2024,
-        "member"
-      ],
-      [
-        "SOSP",
         2023,
         "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2023": 1,
-      "2024": 1
-    },
-    "first_year": 2023,
-    "last_year": 2024
-  },
-  {
-    "name": "Ruwen Fan",
-    "display_name": "Ruwen Fan",
-    "affiliation": "Tsinghua University",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
+      ],
       [
-        "EUROSYS",
+        "OSDI",
         2025,
         "member"
-      ],
-      [
-        "EUROSYS",
-        2026,
-        "member"
       ]
     ],
-    "area": "systems",
+    "area": "both",
     "years": {
-      "2025": 1,
-      "2026": 1
+      "2023": 1,
+      "2025": 1
     },
-    "first_year": 2025,
-    "last_year": 2026
-  },
-  {
-    "name": "Sagar Bharadwaj Kalasibail Seetharam",
-    "display_name": "Sagar Bharadwaj Kalasibail Seetharam",
-    "affiliation": "Carnegie Mellon University",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "OSDI",
-        2024,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2024": 2
-    },
-    "first_year": 2024,
-    "last_year": 2024
-  },
-  {
-    "name": "Sahil Tyagi",
-    "display_name": "Sahil Tyagi",
-    "affiliation": "Indiana University Bloomington",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "OSDI",
-        2024,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2024": 2
-    },
-    "first_year": 2024,
-    "last_year": 2024
-  },
-  {
-    "name": "Santosh Pandey",
-    "display_name": "Santosh Pandey",
-    "affiliation": "Rutgers University",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "OSDI",
-        2024,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2024": 2
-    },
-    "first_year": 2024,
-    "last_year": 2024
+    "first_year": 2023,
+    "last_year": 2025
   },
   {
     "name": "Sara Mahdizadeh Shahri",
@@ -6905,31 +8461,6 @@
     "last_year": 2024
   },
   {
-    "name": "Shangshu Qian",
-    "display_name": "Shangshu Qian",
-    "affiliation": "Purdue University",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "OSDI",
-        2024,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2024": 2
-    },
-    "first_year": 2024,
-    "last_year": 2024
-  },
-  {
     "name": "Shangwen Wang",
     "display_name": "Shangwen Wang",
     "affiliation": "National University of Defense Technology",
@@ -7003,31 +8534,6 @@
     },
     "first_year": 2022,
     "last_year": 2022
-  },
-  {
-    "name": "Shawn Zhong",
-    "display_name": "Shawn Zhong",
-    "affiliation": "University of Wisconsin-Madison",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "OSDI",
-        2024,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2024": 2
-    },
-    "first_year": 2024,
-    "last_year": 2024
   },
   {
     "name": "Shenghan Zheng",
@@ -7358,56 +8864,6 @@
     "last_year": 2024
   },
   {
-    "name": "Syed Salauddin Mohammad Tariq",
-    "display_name": "Syed Salauddin Mohammad Tariq",
-    "affiliation": "University of Michigan",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "OSDI",
-        2024,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2024": 2
-    },
-    "first_year": 2024,
-    "last_year": 2024
-  },
-  {
-    "name": "Tanvi Sharma",
-    "display_name": "Tanvi Sharma",
-    "affiliation": "Purdue University",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "OSDI",
-        2024,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2024": 2
-    },
-    "first_year": 2024,
-    "last_year": 2024
-  },
-  {
     "name": "Tao Li",
     "display_name": "Tao Li",
     "affiliation": "Nankai University",
@@ -7458,6 +8914,32 @@
     "last_year": 2024
   },
   {
+    "name": "Thamir Qadah",
+    "display_name": "Thamir Qadah",
+    "affiliation": "Purdue University",
+    "total_memberships": 2,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2020,
+        "member"
+      ],
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1,
+      "2020": 1
+    },
+    "first_year": 2019,
+    "last_year": 2020
+  },
+  {
     "name": "Tianhao Huang",
     "display_name": "Tianhao Huang",
     "affiliation": "Massachusetts Institute of Technology",
@@ -7481,6 +8963,32 @@
     },
     "first_year": 2022,
     "last_year": 2022
+  },
+  {
+    "name": "Tingjia Cao",
+    "display_name": "Tingjia Cao",
+    "affiliation": "University of Wisconsin-Madison",
+    "total_memberships": 2,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "EUROSYS",
+        2026,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1,
+      "2026": 1
+    },
+    "first_year": 2025,
+    "last_year": 2026
   },
   {
     "name": "Tony Zhang",
@@ -7586,31 +9094,6 @@
     "last_year": 2021
   },
   {
-    "name": "Vishal Rao",
-    "display_name": "Vishal Rao",
-    "affiliation": "Georgia Institute of Technology",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "OSDI",
-        2024,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2024": 2
-    },
-    "first_year": 2024,
-    "last_year": 2024
-  },
-  {
     "name": "Vivek Jain",
     "display_name": "Vivek Jain",
     "affiliation": "University of California, Riverside",
@@ -7661,29 +9144,30 @@
     "last_year": 2024
   },
   {
-    "name": "Wahid Uz Zaman",
-    "display_name": "Wahid Uz Zaman",
-    "affiliation": "University of Pennsylvania",
+    "name": "Wanning He",
+    "display_name": "Wanning He",
+    "affiliation": "University of Michigan",
     "total_memberships": 2,
     "chair_count": 0,
     "conferences": [
       [
-        "ATC",
-        2024,
+        "OSDI",
+        2025,
         "member"
       ],
       [
-        "OSDI",
-        2024,
+        "SOSP",
+        2023,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
-      "2024": 2
+      "2023": 1,
+      "2025": 1
     },
-    "first_year": 2024,
-    "last_year": 2024
+    "first_year": 2023,
+    "last_year": 2025
   },
   {
     "name": "Weidong Zhu",
@@ -7759,31 +9243,6 @@
     },
     "first_year": 2021,
     "last_year": 2021
-  },
-  {
-    "name": "Wenlong Wang",
-    "display_name": "Wenlong Wang",
-    "affiliation": "University of Minnesota",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "OSDI",
-        2024,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2024": 2
-    },
-    "first_year": 2024,
-    "last_year": 2024
   },
   {
     "name": "Wentao Huang",
@@ -7887,29 +9346,30 @@
     "last_year": 2021
   },
   {
-    "name": "Xiangqun Zhang",
-    "display_name": "Xiangqun Zhang",
-    "affiliation": "Syracuse University",
+    "name": "Xiangyu Zou",
+    "display_name": "Xiangyu Zou",
+    "affiliation": "Harbin Institute of Technology",
     "total_memberships": 2,
     "chair_count": 0,
     "conferences": [
       [
-        "ATC",
+        "FAST",
         2024,
         "member"
       ],
       [
         "OSDI",
-        2024,
+        2025,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
-      "2024": 2
+      "2024": 1,
+      "2025": 1
     },
     "first_year": 2024,
-    "last_year": 2024
+    "last_year": 2025
   },
   {
     "name": "Xianzhong Ding",
@@ -7962,56 +9422,6 @@
     "last_year": 2022
   },
   {
-    "name": "Xiaoguang Wang",
-    "display_name": "Xiaoguang Wang",
-    "affiliation": "Virginia Tech",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "OSDI",
-        2021,
-        "member"
-      ],
-      [
-        "SOSP",
-        2021,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2021": 2
-    },
-    "first_year": 2021,
-    "last_year": 2021
-  },
-  {
-    "name": "Xiaolu Li",
-    "display_name": "Xiaolu Li",
-    "affiliation": "Huazhong University of Science and Technology",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2022,
-        "member"
-      ],
-      [
-        "OSDI",
-        2022,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2022": 2
-    },
-    "first_year": 2022,
-    "last_year": 2022
-  },
-  {
     "name": "Xie Zhang",
     "display_name": "Xie Zhang",
     "affiliation": "Sun Yat-sen University",
@@ -8037,59 +9447,9 @@
     "last_year": 2022
   },
   {
-    "name": "Xinying Zheng",
-    "display_name": "Xinying Zheng",
-    "affiliation": "University of Illinois Urbana-Champaign",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "OSDI",
-        2024,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2024": 2
-    },
-    "first_year": 2024,
-    "last_year": 2024
-  },
-  {
     "name": "Xupeng Li",
     "display_name": "Xupeng Li",
     "affiliation": "Columbia University",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "OSDI",
-        2024,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2024": 2
-    },
-    "first_year": 2024,
-    "last_year": 2024
-  },
-  {
-    "name": "Yangjie Zhou",
-    "display_name": "Yangjie Zhou",
-    "affiliation": "Tencent",
     "total_memberships": 2,
     "chair_count": 0,
     "conferences": [
@@ -8160,6 +9520,32 @@
     },
     "first_year": 2022,
     "last_year": 2022
+  },
+  {
+    "name": "Yi Chen",
+    "display_name": "Yi Chen",
+    "affiliation": "University of Michigan",
+    "total_memberships": 2,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ],
+      [
+        "SOSP",
+        2023,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2023": 1,
+      "2025": 1
+    },
+    "first_year": 2023,
+    "last_year": 2025
   },
   {
     "name": "Yihan Pang",
@@ -8490,6 +9876,32 @@
     "last_year": 2022
   },
   {
+    "name": "Yueying Li",
+    "display_name": "Yueying Li",
+    "affiliation": "Cornell University",
+    "total_memberships": 2,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ],
+      [
+        "SOSP",
+        2023,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2023": 1,
+      "2025": 1
+    },
+    "first_year": 2023,
+    "last_year": 2025
+  },
+  {
     "name": "Yunfei Gu",
     "display_name": "Yunfei Gu",
     "affiliation": "Shanghai Jiao Tong University",
@@ -8565,6 +9977,32 @@
     "last_year": 2022
   },
   {
+    "name": "Yusheng Zheng",
+    "display_name": "Yusheng Zheng",
+    "affiliation": "University of California, Santa Cruz",
+    "total_memberships": 2,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "EUROSYS",
+        2026,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1,
+      "2026": 1
+    },
+    "first_year": 2025,
+    "last_year": 2026
+  },
+  {
     "name": "Zelei Cheng",
     "display_name": "Zelei Cheng",
     "affiliation": "Northwestern University",
@@ -8590,60 +10028,9 @@
     "last_year": 2024
   },
   {
-    "name": "Zewen Jin",
-    "display_name": "Zewen Jin",
-    "affiliation": "University of Science and Technology of China",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "SC",
-        2021,
-        "member"
-      ],
-      [
-        "SOSP",
-        2023,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2021": 1,
-      "2023": 1
-    },
-    "first_year": 2021,
-    "last_year": 2023
-  },
-  {
     "name": "Zeyan Liu",
     "display_name": "Zeyan Liu",
     "affiliation": "University of Kansas",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "OSDI",
-        2024,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2024": 2
-    },
-    "first_year": 2024,
-    "last_year": 2024
-  },
-  {
-    "name": "Zeying Zhu",
-    "display_name": "Zeying Zhu",
-    "affiliation": "University of Maryland",
     "total_memberships": 2,
     "chair_count": 0,
     "conferences": [
@@ -8741,6 +10128,31 @@
     },
     "first_year": 2020,
     "last_year": 2021
+  },
+  {
+    "name": "Zhaokang Ke",
+    "display_name": "Zhaokang Ke",
+    "affiliation": "University of Minnesota",
+    "total_memberships": 2,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ],
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 2
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Zhe Zhao",
@@ -8893,31 +10305,6 @@
     "last_year": 2022
   },
   {
-    "name": "Zhihan Jiang",
-    "display_name": "Zhihan Jiang",
-    "affiliation": "Chinese University of Hong Kong",
-    "total_memberships": 2,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "ATC",
-        2024,
-        "member"
-      ],
-      [
-        "OSDI",
-        2024,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2024": 2
-    },
-    "first_year": 2024,
-    "last_year": 2024
-  },
-  {
     "name": "Zhihao Yao",
     "display_name": "Zhihao Yao",
     "affiliation": "University of California, Irvine",
@@ -8992,6 +10379,31 @@
     },
     "first_year": 2024,
     "last_year": 2024
+  },
+  {
+    "name": "Ziming Mao",
+    "display_name": "Ziming Mao",
+    "affiliation": "University of California, Berkeley",
+    "total_memberships": 2,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "EUROSYS",
+        2025,
+        "member"
+      ],
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 2
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Ziyi Guo",
@@ -9154,6 +10566,26 @@
     "last_year": 2025
   },
   {
+    "name": "Baris Kasikci",
+    "display_name": "Baris Kasikci",
+    "affiliation": "University of Michigan",
+    "total_memberships": 1,
+    "chair_count": 1,
+    "conferences": [
+      [
+        "SOSP",
+        2019,
+        "chair"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1
+    },
+    "first_year": 2019,
+    "last_year": 2019
+  },
+  {
     "name": "Christian Pinto",
     "display_name": "Christian Pinto",
     "affiliation": "IBM",
@@ -9312,26 +10744,6 @@
     },
     "first_year": 2024,
     "last_year": 2024
-  },
-  {
-    "name": "Ivo Jimenez",
-    "display_name": "Ivo Jimenez",
-    "affiliation": "University of California, Santa Cruz",
-    "total_memberships": 1,
-    "chair_count": 1,
-    "conferences": [
-      [
-        "SOSP",
-        2021,
-        "chair"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2021": 1
-    },
-    "first_year": 2021,
-    "last_year": 2021
   },
   {
     "name": "Juncheng Yang",
@@ -9594,6 +11006,26 @@
     "last_year": 2025
   },
   {
+    "name": "Supreeth Shastri",
+    "display_name": "Supreeth Shastri",
+    "affiliation": "University of Texas at Austin",
+    "total_memberships": 1,
+    "chair_count": 1,
+    "conferences": [
+      [
+        "SOSP",
+        2019,
+        "chair"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1
+    },
+    "first_year": 2019,
+    "last_year": 2019
+  },
+  {
     "name": "Tanu Malik",
     "display_name": "Tanu Malik",
     "affiliation": "DePaul University",
@@ -9634,24 +11066,24 @@
     "last_year": 2025
   },
   {
-    "name": "Valerio Schiavoni",
-    "display_name": "Valerio Schiavoni",
-    "affiliation": "Université de Neuchâtel",
+    "name": "Vijay Chidambaram",
+    "display_name": "Vijay Chidambaram",
+    "affiliation": "University of Texas at Austin",
     "total_memberships": 1,
     "chair_count": 1,
     "conferences": [
       [
-        "EUROSYS",
-        2024,
+        "SOSP",
+        2019,
         "chair"
       ]
     ],
     "area": "systems",
     "years": {
-      "2024": 1
+      "2019": 1
     },
-    "first_year": 2024,
-    "last_year": 2024
+    "first_year": 2019,
+    "last_year": 2019
   },
   {
     "name": "Vincenzo Gulisano",
@@ -9674,24 +11106,24 @@
     "last_year": 2023
   },
   {
-    "name": "Aakash Sharma",
-    "display_name": "Aakash Sharma",
-    "affiliation": "UiT The Arctic University of Norway",
+    "name": "Abhinav Jangda",
+    "display_name": "Abhinav Jangda",
+    "affiliation": "UMass Amherst",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
       [
-        "OSDI",
-        2021,
+        "SOSP",
+        2019,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
-      "2021": 1
+      "2019": 1
     },
-    "first_year": 2021,
-    "last_year": 2021
+    "first_year": 2019,
+    "last_year": 2019
   },
   {
     "name": "Abhishek Chanda",
@@ -9954,6 +11386,26 @@
     "last_year": 2021
   },
   {
+    "name": "Akshitha Sriraman",
+    "display_name": "Akshitha Sriraman",
+    "affiliation": "University of Michigan",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1
+    },
+    "first_year": 2019,
+    "last_year": 2019
+  },
+  {
     "name": "Al Amjad Tawfiq Isstaif",
     "display_name": "Al Amjad Tawfiq Isstaif",
     "affiliation": "University of Cambridge",
@@ -9972,6 +11424,26 @@
     },
     "first_year": 2021,
     "last_year": 2021
+  },
+  {
+    "name": "Alan Wang",
+    "display_name": "Alan Wang",
+    "affiliation": "Northeastern University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Alex Bernat",
@@ -10054,6 +11526,46 @@
     "last_year": 2024
   },
   {
+    "name": "Alireza Sanaee",
+    "display_name": "Alireza Sanaee",
+    "affiliation": "University of Illinois at Chicago",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1
+    },
+    "first_year": 2019,
+    "last_year": 2019
+  },
+  {
+    "name": "Alok Ranjan",
+    "display_name": "Alok Ranjan",
+    "affiliation": "Carnegie Mellon University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Amin Mosayyebzadeh",
     "display_name": "Amin Mosayyebzadeh",
     "affiliation": "Boston University",
@@ -10082,6 +11594,26 @@
     "conferences": [
       [
         "EUROSYS",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Amit Warke",
+    "display_name": "Amit Warke",
+    "affiliation": "Hitachi",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
         2025,
         "member"
       ]
@@ -10294,6 +11826,26 @@
     "last_year": 2023
   },
   {
+    "name": "Andrew Quinn",
+    "display_name": "Andrew Quinn",
+    "affiliation": "University of Michigan",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1
+    },
+    "first_year": 2019,
+    "last_year": 2019
+  },
+  {
     "name": "Andrew Younge",
     "display_name": "Andrew Younge",
     "affiliation": "Sandia National Laboratories",
@@ -10312,6 +11864,26 @@
     },
     "first_year": 2021,
     "last_year": 2021
+  },
+  {
+    "name": "Andrzej Jackowski",
+    "display_name": "Andrzej Jackowski",
+    "affiliation": "University of Warsaw",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2024,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 1
+    },
+    "first_year": 2024,
+    "last_year": 2024
   },
   {
     "name": "Anish Athalye",
@@ -10352,6 +11924,26 @@
     },
     "first_year": 2023,
     "last_year": 2023
+  },
+  {
+    "name": "Anlan Zhang",
+    "display_name": "Anlan Zhang",
+    "affiliation": "University of Southern California",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2024,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 1
+    },
+    "first_year": 2024,
+    "last_year": 2024
   },
   {
     "name": "Annajiat Alim Rasel",
@@ -10454,24 +12046,24 @@
     "last_year": 2021
   },
   {
-    "name": "Aravindh Raman",
-    "display_name": "Aravindh Raman",
-    "affiliation": "Telefonica Research",
+    "name": "Archit Bhatnagar",
+    "display_name": "Archit Bhatnagar",
+    "affiliation": "University of Michigan",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
       [
-        "EUROSYS",
-        2021,
+        "OSDI",
+        2025,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
-      "2021": 1
+      "2025": 1
     },
-    "first_year": 2021,
-    "last_year": 2021
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Ariel Szekely",
@@ -10534,6 +12126,26 @@
     "last_year": 2024
   },
   {
+    "name": "Arohi Kumar",
+    "display_name": "Arohi Kumar",
+    "affiliation": "Google",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Arslan Khan",
     "display_name": "Arslan Khan",
     "affiliation": "Purdue University",
@@ -10594,6 +12206,26 @@
     "last_year": 2023
   },
   {
+    "name": "Ashish Kashinath",
+    "display_name": "Ashish Kashinath",
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Ashwin Poduval",
     "display_name": "Ashwin Poduval",
     "affiliation": "University of Wisconsin-Madison",
@@ -10612,46 +12244,6 @@
     },
     "first_year": 2025,
     "last_year": 2025
-  },
-  {
-    "name": "Ata Fatahi",
-    "display_name": "Ata Fatahi",
-    "affiliation": "University of Pennsylvania",
-    "total_memberships": 1,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "OSDI",
-        2020,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2020": 1
-    },
-    "first_year": 2020,
-    "last_year": 2020
-  },
-  {
-    "name": "Ayush Bansal",
-    "display_name": "Ayush Bansal",
-    "affiliation": "University of Illinois Urbana-Champaign",
-    "total_memberships": 1,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "EUROSYS",
-        2026,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2026": 1
-    },
-    "first_year": 2026,
-    "last_year": 2026
   },
   {
     "name": "Basavesh Ammanaghatta Shivakumar",
@@ -10674,24 +12266,24 @@
     "last_year": 2020
   },
   {
-    "name": "Benjamin Reidys",
-    "display_name": "Benjamin Reidys",
-    "affiliation": "University of Illinois Urbana-Champaign",
+    "name": "Benixon Arul dhas",
+    "display_name": "Benixon Arul dhas",
+    "affiliation": "Samsung",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
       [
-        "EUROSYS",
-        2023,
+        "FAST",
+        2025,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
-      "2023": 1
+      "2025": 1
     },
-    "first_year": 2023,
-    "last_year": 2023
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Benoit Martin",
@@ -10754,6 +12346,46 @@
     "last_year": 2021
   },
   {
+    "name": "Binong Kiri Bey",
+    "display_name": "Binong Kiri Bey",
+    "affiliation": "Indian Institute of Technology",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Bo Peng",
+    "display_name": "Bo Peng",
+    "affiliation": "Shanghai Jiao Tong University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2024,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 1
+    },
+    "first_year": 2024,
+    "last_year": 2024
+  },
+  {
     "name": "Bo Zhang",
     "display_name": "Bo Zhang",
     "affiliation": "Northwestern Polytechnical University",
@@ -10792,6 +12424,26 @@
     },
     "first_year": 2023,
     "last_year": 2023
+  },
+  {
+    "name": "Borui Li",
+    "display_name": "Borui Li",
+    "affiliation": "Southeast University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Brian Chang",
@@ -10834,6 +12486,26 @@
     "last_year": 2024
   },
   {
+    "name": "Bunjamin Memishi",
+    "display_name": "Bunjamin Memishi",
+    "affiliation": "German Aerospace Center",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1
+    },
+    "first_year": 2019,
+    "last_year": 2019
+  },
+  {
     "name": "ByeongKeon Lee",
     "display_name": "ByeongKeon Lee",
     "affiliation": "KAIST",
@@ -10852,6 +12524,46 @@
     },
     "first_year": 2021,
     "last_year": 2021
+  },
+  {
+    "name": "Caeden Whitaker",
+    "display_name": "Caeden Whitaker",
+    "affiliation": "University of Wisconsin-Madison",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Cathy Cai",
+    "display_name": "Cathy Cai",
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Chang Lou",
@@ -10882,6 +12594,46 @@
     "conferences": [
       [
         "EUROSYS",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Chao Wu",
+    "display_name": "Chao Wu",
+    "affiliation": "Nanjing University of Science and Technology",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Chen Zhong",
+    "display_name": "Chen Zhong",
+    "affiliation": "University of Texas at Arlington",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
         2025,
         "member"
       ]
@@ -10954,6 +12706,26 @@
     "last_year": 2021
   },
   {
+    "name": "Chia-Che Tsai",
+    "display_name": "Chia-Che Tsai",
+    "affiliation": "Texas A&M University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1
+    },
+    "first_year": 2019,
+    "last_year": 2019
+  },
+  {
     "name": "Chibin Zhang",
     "display_name": "Chibin Zhang",
     "affiliation": "EPFL",
@@ -10972,6 +12744,26 @@
     },
     "first_year": 2023,
     "last_year": 2023
+  },
+  {
+    "name": "Chiyue Wei",
+    "display_name": "Chiyue Wei",
+    "affiliation": "Duke University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Chloi Alverti",
@@ -11014,24 +12806,84 @@
     "last_year": 2021
   },
   {
-    "name": "Chunfeng Du",
-    "display_name": "Chunfeng Du",
-    "affiliation": "Xiamen University",
+    "name": "Christopher Meiklejohn",
+    "display_name": "Christopher Meiklejohn",
+    "affiliation": "Carnegie Mellon University",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
       [
         "SOSP",
-        2021,
+        2019,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
-      "2021": 1
+      "2019": 1
     },
-    "first_year": 2021,
-    "last_year": 2021
+    "first_year": 2019,
+    "last_year": 2019
+  },
+  {
+    "name": "Chuanqi Cong",
+    "display_name": "Chuanqi Cong",
+    "affiliation": "Beihang University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Chung Hwan Kim",
+    "display_name": "Chung Hwan Kim",
+    "affiliation": "NEC Labs America",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1
+    },
+    "first_year": 2019,
+    "last_year": 2019
+  },
+  {
+    "name": "Congyu Liu",
+    "display_name": "Congyu Liu",
+    "affiliation": "Purdue University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2024,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 1
+    },
+    "first_year": 2024,
+    "last_year": 2024
   },
   {
     "name": "Cristian Assaiante",
@@ -11052,6 +12904,26 @@
     },
     "first_year": 2023,
     "last_year": 2023
+  },
+  {
+    "name": "Da Zhang",
+    "display_name": "Da Zhang",
+    "affiliation": "Samsung",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Daixuan Li",
@@ -11154,6 +13026,26 @@
     "last_year": 2021
   },
   {
+    "name": "Danning Xie",
+    "display_name": "Danning Xie",
+    "affiliation": "Purdue University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2024,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 1
+    },
+    "first_year": 2024,
+    "last_year": 2024
+  },
+  {
     "name": "David Beserra",
     "display_name": "David Beserra",
     "affiliation": "École Pour l'Informatique et les Techniques Avancées",
@@ -11212,6 +13104,26 @@
     },
     "first_year": 2022,
     "last_year": 2022
+  },
+  {
+    "name": "Deepanjali Mishra",
+    "display_name": "Deepanjali Mishra",
+    "affiliation": "Carnegie Mellon University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Devashree Tripathy",
@@ -11294,6 +13206,46 @@
     "last_year": 2022
   },
   {
+    "name": "Dingwen Tao",
+    "display_name": "Dingwen Tao",
+    "affiliation": "Indiana University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2024,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 1
+    },
+    "first_year": 2024,
+    "last_year": 2024
+  },
+  {
+    "name": "Divyaank Tiwari",
+    "display_name": "Divyaank Tiwari",
+    "affiliation": "Stony Brook University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Dmitry Ivanov",
     "display_name": "Dmitry Ivanov",
     "affiliation": "Huawei",
@@ -11354,26 +13306,6 @@
     "last_year": 2021
   },
   {
-    "name": "Emad Heydari Beni",
-    "display_name": "Emad Heydari Beni",
-    "affiliation": "KU Leuven",
-    "total_memberships": 1,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "EUROSYS",
-        2021,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2021": 1
-    },
-    "first_year": 2021,
-    "last_year": 2021
-  },
-  {
     "name": "Eman Maali",
     "display_name": "Eman Maali",
     "affiliation": "Imperial College London",
@@ -11392,26 +13324,6 @@
     },
     "first_year": 2021,
     "last_year": 2021
-  },
-  {
-    "name": "Enguang Fan",
-    "display_name": "Enguang Fan",
-    "affiliation": "University of Illinois Urbana-Champaign",
-    "total_memberships": 1,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "EUROSYS",
-        2026,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2026": 1
-    },
-    "first_year": 2026,
-    "last_year": 2026
   },
   {
     "name": "Erfan Sharafzadeh",
@@ -11494,6 +13406,26 @@
     "last_year": 2021
   },
   {
+    "name": "Fabio Pierazzi",
+    "display_name": "Fabio Pierazzi",
+    "affiliation": "King's College London",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "both",
+    "years": {
+      "2019": 1
+    },
+    "first_year": 2019,
+    "last_year": 2019
+  },
+  {
     "name": "Fanjiang Ye",
     "display_name": "Fanjiang Ye",
     "affiliation": "Rice University",
@@ -11514,24 +13446,24 @@
     "last_year": 2026
   },
   {
-    "name": "Feng Cheng",
-    "display_name": "Feng Cheng",
-    "affiliation": "Duke University",
+    "name": "Farzad Mohammadi",
+    "display_name": "Farzad Mohammadi",
+    "affiliation": "Imperial College London",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
       [
-        "EUROSYS",
-        2026,
+        "OSDI",
+        2025,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
-      "2026": 1
+      "2025": 1
     },
-    "first_year": 2026,
-    "last_year": 2026
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Filippo Carloni",
@@ -11614,44 +13546,24 @@
     "last_year": 2025
   },
   {
-    "name": "Georgios Liargkovas",
-    "display_name": "Georgios Liargkovas",
-    "affiliation": "Columbia University",
+    "name": "Ghazal Abdollahi",
+    "display_name": "Ghazal Abdollahi",
+    "affiliation": "University of Utah",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
       [
-        "EUROSYS",
-        2026,
+        "OSDI",
+        2025,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
-      "2026": 1
+      "2025": 1
     },
-    "first_year": 2026,
-    "last_year": 2026
-  },
-  {
-    "name": "Giannis Roumpos",
-    "display_name": "Giannis Roumpos",
-    "affiliation": "IMDEA Software Institute",
-    "total_memberships": 1,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "EUROSYS",
-        2026,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2026": 1
-    },
-    "first_year": 2026,
-    "last_year": 2026
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Gina Yuan",
@@ -11734,6 +13646,26 @@
     "last_year": 2021
   },
   {
+    "name": "Gongjin Sun",
+    "display_name": "Gongjin Sun",
+    "affiliation": "Samsung",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Grace Liu",
     "display_name": "Grace Liu",
     "affiliation": "Carnegie Mellon University",
@@ -11752,6 +13684,46 @@
     },
     "first_year": 2020,
     "last_year": 2020
+  },
+  {
+    "name": "Grigoris Ntousakis",
+    "display_name": "Grigoris Ntousakis",
+    "affiliation": "Brown University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "both",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Guanglei Xu",
+    "display_name": "Guanglei Xu",
+    "affiliation": "Huazhong University of Science and Technology",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Guangpu Li",
@@ -11774,6 +13746,66 @@
     "last_year": 2022
   },
   {
+    "name": "Guangyang Deng",
+    "display_name": "Guangyang Deng",
+    "affiliation": "Xiamen University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Guangyu Hu",
+    "display_name": "Guangyu Hu",
+    "affiliation": "Hong Kong University of Science and Technology",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Haitian Jiang",
+    "display_name": "Haitian Jiang",
+    "affiliation": "New York University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Hamidreza Almasi",
     "display_name": "Hamidreza Almasi",
     "affiliation": "University of Illinois at Chicago",
@@ -11794,24 +13826,44 @@
     "last_year": 2021
   },
   {
-    "name": "Hanchen Xu",
-    "display_name": "Hanchen Xu",
-    "affiliation": "University of California, Los Angeles",
+    "name": "Hanchen Li",
+    "display_name": "Hanchen Li",
+    "affiliation": "University of California, Berkeley",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
       [
-        "SOSP",
-        2023,
+        "OSDI",
+        2025,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
-      "2023": 1
+      "2025": 1
     },
-    "first_year": 2023,
-    "last_year": 2023
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Hanfei Yu",
+    "display_name": "Hanfei Yu",
+    "affiliation": "Stevens Institute of Technology",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Hanmei Yang",
@@ -11832,6 +13884,46 @@
     },
     "first_year": 2024,
     "last_year": 2024
+  },
+  {
+    "name": "Hao Hu",
+    "display_name": "Hao Hu",
+    "affiliation": "Harare Institute of Technology",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Hao Huang",
+    "display_name": "Hao Huang",
+    "affiliation": "Harbin Institute of Technology",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Haoran Zhang",
@@ -11872,6 +13964,66 @@
     },
     "first_year": 2023,
     "last_year": 2023
+  },
+  {
+    "name": "Haoyu Gong",
+    "display_name": "Haoyu Gong",
+    "affiliation": "University of Minnesota Twin Cities",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Hariharan Ragothaman",
+    "display_name": "Hariharan Ragothaman",
+    "affiliation": "Athenahealth and Northeastern University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Harisankar Sadasivan",
+    "display_name": "Harisankar Sadasivan",
+    "affiliation": "AMD",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Hasan Al Maruf",
@@ -11934,6 +14086,26 @@
     "last_year": 2021
   },
   {
+    "name": "Hengfeng Wei",
+    "display_name": "Hengfeng Wei",
+    "affiliation": "Nanjing University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Hetvi Shastri",
     "display_name": "Hetvi Shastri",
     "affiliation": "University of Massachusetts Amherst",
@@ -11972,6 +14144,26 @@
     },
     "first_year": 2026,
     "last_year": 2026
+  },
+  {
+    "name": "Hojin Park",
+    "display_name": "Hojin Park",
+    "affiliation": "Carnegie Mellon University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Hongwei Wu",
@@ -12114,26 +14306,6 @@
     "last_year": 2020
   },
   {
-    "name": "Iman Tabrizian",
-    "display_name": "Iman Tabrizian",
-    "affiliation": "University of Toronto",
-    "total_memberships": 1,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "OSDI",
-        2020,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2020": 1
-    },
-    "first_year": 2020,
-    "last_year": 2020
-  },
-  {
     "name": "Iman Vakilinia",
     "display_name": "Iman Vakilinia",
     "affiliation": "University of North Florida",
@@ -12174,6 +14346,26 @@
     "last_year": 2023
   },
   {
+    "name": "Ioannis Zarkadas",
+    "display_name": "Ioannis Zarkadas",
+    "affiliation": "Columbia University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Isaac Sheff",
     "display_name": "Isaac Sheff",
     "affiliation": "Max Planck Society",
@@ -12194,26 +14386,6 @@
     "last_year": 2021
   },
   {
-    "name": "Ismet Dagli",
-    "display_name": "Ismet Dagli",
-    "affiliation": "Colorado School of Mines",
-    "total_memberships": 1,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "EUROSYS",
-        2025,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2025": 1
-    },
-    "first_year": 2025,
-    "last_year": 2025
-  },
-  {
     "name": "JUST Maxime",
     "display_name": "JUST Maxime",
     "affiliation": "France",
@@ -12232,6 +14404,26 @@
     },
     "first_year": 2026,
     "last_year": 2026
+  },
+  {
+    "name": "Jackson Clark",
+    "display_name": "Jackson Clark",
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Jaehyun Song",
@@ -12354,6 +14546,26 @@
     "last_year": 2021
   },
   {
+    "name": "Jeff J. Ma",
+    "display_name": "Jeff J. Ma",
+    "affiliation": "University of Michigan",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Jeff Zhang",
     "display_name": "Jeff Zhang",
     "affiliation": "New York University",
@@ -12392,6 +14604,26 @@
     },
     "first_year": 2023,
     "last_year": 2023
+  },
+  {
+    "name": "Jia Yin",
+    "display_name": "Jia Yin",
+    "affiliation": "Renmin University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Jiacheng Ma",
@@ -12434,6 +14666,46 @@
     "last_year": 2022
   },
   {
+    "name": "Jiaheng Lu",
+    "display_name": "Jiaheng Lu",
+    "affiliation": "University of Michigan",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Jiajun Li",
+    "display_name": "Jiajun Li",
+    "affiliation": "Carnegie Mellon University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Jiaming Xie",
     "display_name": "Jiaming Xie",
     "affiliation": "Sun Yat-sen University",
@@ -12452,6 +14724,26 @@
     },
     "first_year": 2023,
     "last_year": 2023
+  },
+  {
+    "name": "Jian Gao",
+    "display_name": "Jian Gao",
+    "affiliation": "Tsinghua University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2024,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 1
+    },
+    "first_year": 2024,
+    "last_year": 2024
   },
   {
     "name": "Jiang Jianyu",
@@ -12474,24 +14766,84 @@
     "last_year": 2021
   },
   {
-    "name": "Jiaqi Deng",
-    "display_name": "Jiaqi Deng",
-    "affiliation": "Georgia Institute of Technology",
+    "name": "Jianian Zhu",
+    "display_name": "Jianian Zhu",
+    "affiliation": "Huazhong University of Science and Technology",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
       [
-        "EUROSYS",
-        2026,
+        "OSDI",
+        2025,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
-      "2026": 1
+      "2025": 1
     },
-    "first_year": 2026,
-    "last_year": 2026
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Jiansen Song",
+    "display_name": "Jiansen Song",
+    "affiliation": "Chinese Academy of Sciences",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Jiansong Li",
+    "display_name": "Jiansong Li",
+    "affiliation": "Li Auto Inc",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Jiaqi Pan",
+    "display_name": "Jiaqi Pan",
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Jiawei Xiao",
@@ -12814,6 +15166,26 @@
     "last_year": 2023
   },
   {
+    "name": "Jonah Rosenblum",
+    "display_name": "Jonah Rosenblum",
+    "affiliation": "University of Michigan",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Jongho Baik",
     "display_name": "Jongho Baik",
     "affiliation": "Korea University",
@@ -12852,6 +15224,26 @@
     },
     "first_year": 2021,
     "last_year": 2021
+  },
+  {
+    "name": "Joshua Lind",
+    "display_name": "Joshua Lind",
+    "affiliation": "Imperial College London",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1
+    },
+    "first_year": 2019,
+    "last_year": 2019
   },
   {
     "name": "Josiane Kouam",
@@ -12914,24 +15306,24 @@
     "last_year": 2022
   },
   {
-    "name": "Jungwoo Kim",
-    "display_name": "Jungwoo Kim",
-    "affiliation": "Stanford University",
+    "name": "Juechu Dong",
+    "display_name": "Juechu Dong",
+    "affiliation": "University of Michigan",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
       [
-        "EUROSYS",
-        2026,
+        "OSDI",
+        2025,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
-      "2026": 1
+      "2025": 1
     },
-    "first_year": 2026,
-    "last_year": 2026
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Junhong Liu",
@@ -12994,6 +15386,106 @@
     "last_year": 2021
   },
   {
+    "name": "Junxuan Liao",
+    "display_name": "Junxuan Liao",
+    "affiliation": "University of Wisconsin-Madison",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Junyao Zhang",
+    "display_name": "Junyao Zhang",
+    "affiliation": "Duke University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Junzhe Li",
+    "display_name": "Junzhe Li",
+    "affiliation": "The University of Hong Kong",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Kabilan Mahathevan",
+    "display_name": "Kabilan Mahathevan",
+    "affiliation": "National University of Singapore",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Kai Mast",
+    "display_name": "Kai Mast",
+    "affiliation": "Cornell University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1
+    },
+    "first_year": 2019,
+    "last_year": 2019
+  },
+  {
     "name": "Kaicheng Yang",
     "display_name": "Kaicheng Yang",
     "affiliation": "Peking University",
@@ -13012,6 +15504,46 @@
     },
     "first_year": 2021,
     "last_year": 2021
+  },
+  {
+    "name": "Kaihui Gao",
+    "display_name": "Kaihui Gao",
+    "affiliation": "Zhongguancun Laboratory",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Kaiwen Xue",
+    "display_name": "Kaiwen Xue",
+    "affiliation": "University of Michigan",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Kan Wu",
@@ -13054,6 +15586,26 @@
     "last_year": 2022
   },
   {
+    "name": "Kartik Sathyanarayanan",
+    "display_name": "Kartik Sathyanarayanan",
+    "affiliation": "Netflix",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Kavya Shekar",
     "display_name": "Kavya Shekar",
     "affiliation": "Virginia Tech",
@@ -13094,26 +15646,6 @@
     "last_year": 2026
   },
   {
-    "name": "Ke Han",
-    "display_name": "Ke Han",
-    "affiliation": "Purdue University",
-    "total_memberships": 1,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "EUROSYS",
-        2026,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2026": 1
-    },
-    "first_year": 2026,
-    "last_year": 2026
-  },
-  {
     "name": "Keisuke Kamahori",
     "display_name": "Keisuke Kamahori",
     "affiliation": "University of Washington",
@@ -13134,6 +15666,26 @@
     "last_year": 2026
   },
   {
+    "name": "Kiran Hombal",
+    "display_name": "Kiran Hombal",
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Kiril Dichev",
     "display_name": "Kiril Dichev",
     "affiliation": "University of Cambridge",
@@ -13152,6 +15704,26 @@
     },
     "first_year": 2021,
     "last_year": 2021
+  },
+  {
+    "name": "Konstantinos Kanellis",
+    "display_name": "Konstantinos Kanellis",
+    "affiliation": "University of Wisconsin-Madison",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Konstantinos Parasyris",
@@ -13194,6 +15766,26 @@
     "last_year": 2025
   },
   {
+    "name": "Kostis Kaffes",
+    "display_name": "Kostis Kaffes",
+    "affiliation": "Stanford University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1
+    },
+    "first_year": 2019,
+    "last_year": 2019
+  },
+  {
     "name": "Krijn Doekemeijer",
     "display_name": "Krijn Doekemeijer",
     "affiliation": "Vrije Universiteit Amsterdam",
@@ -13227,26 +15819,6 @@
       ]
     ],
     "area": "both",
-    "years": {
-      "2026": 1
-    },
-    "first_year": 2026,
-    "last_year": 2026
-  },
-  {
-    "name": "Lana Honcharuk",
-    "display_name": "Lana Honcharuk",
-    "affiliation": "Crusoe",
-    "total_memberships": 1,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "EUROSYS",
-        2026,
-        "member"
-      ]
-    ],
-    "area": "systems",
     "years": {
       "2026": 1
     },
@@ -13294,6 +15866,26 @@
     "last_year": 2021
   },
   {
+    "name": "Lichen Pan",
+    "display_name": "Lichen Pan",
+    "affiliation": "Peking University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Lilia Tang",
     "display_name": "Lilia Tang",
     "affiliation": "University of Illinois Urbana-Champaign",
@@ -13332,26 +15924,6 @@
     },
     "first_year": 2021,
     "last_year": 2021
-  },
-  {
-    "name": "Lingfeng Xiang",
-    "display_name": "Lingfeng Xiang",
-    "affiliation": "University of Texas at Arlington",
-    "total_memberships": 1,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "SOSP",
-        2023,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2023": 1
-    },
-    "first_year": 2023,
-    "last_year": 2023
   },
   {
     "name": "Lingyun Yang",
@@ -13454,6 +16026,26 @@
     "last_year": 2023
   },
   {
+    "name": "Lokesh Nagappa Jaliminche",
+    "display_name": "Lokesh Nagappa Jaliminche",
+    "affiliation": "University of California, Santa Cruz",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Luanzheng Guo",
     "display_name": "Luanzheng Guo",
     "affiliation": "PNNL",
@@ -13512,6 +16104,26 @@
     },
     "first_year": 2021,
     "last_year": 2021
+  },
+  {
+    "name": "Lukas Rupprecht",
+    "display_name": "Lukas Rupprecht",
+    "affiliation": "IBM",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1
+    },
+    "first_year": 2019,
+    "last_year": 2019
   },
   {
     "name": "Lukas Werling",
@@ -13574,6 +16186,26 @@
     "last_year": 2025
   },
   {
+    "name": "Magdalena Pasternak",
+    "display_name": "Magdalena Pasternak",
+    "affiliation": "University of Florida",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Mahathir Monjur",
     "display_name": "Mahathir Monjur",
     "affiliation": "UNC Chapel Hill",
@@ -13612,6 +16244,26 @@
     },
     "first_year": 2026,
     "last_year": 2026
+  },
+  {
+    "name": "Mai Zheng",
+    "display_name": "Mai Zheng",
+    "affiliation": "Iowa State University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2024,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 1
+    },
+    "first_year": 2024,
+    "last_year": 2024
   },
   {
     "name": "Manish Adawadkar",
@@ -13712,6 +16364,26 @@
     },
     "first_year": 2026,
     "last_year": 2026
+  },
+  {
+    "name": "Marcus Paradies",
+    "display_name": "Marcus Paradies",
+    "affiliation": "TU Darmstadt",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2024,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 1
+    },
+    "first_year": 2024,
+    "last_year": 2024
   },
   {
     "name": "Marion Weinzierl",
@@ -13914,6 +16586,26 @@
     "last_year": 2021
   },
   {
+    "name": "Melissa Z. Pan",
+    "display_name": "Melissa Z. Pan",
+    "affiliation": "University of California, Berkeley",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Miao Yu",
     "display_name": "Miao Yu",
     "affiliation": "The Ohio State University",
@@ -13994,6 +16686,26 @@
     "last_year": 2021
   },
   {
+    "name": "Minhao Jin",
+    "display_name": "Minhao Jin",
+    "affiliation": "Princeton University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Minwoo Ahn",
     "display_name": "Minwoo Ahn",
     "affiliation": "Sungkyunkwan University",
@@ -14052,6 +16764,26 @@
     },
     "first_year": 2021,
     "last_year": 2021
+  },
+  {
+    "name": "Mohammad Shahrad",
+    "display_name": "Mohammad Shahrad",
+    "affiliation": "Princeton University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1
+    },
+    "first_year": 2019,
+    "last_year": 2019
   },
   {
     "name": "Mohammadkazem Taram",
@@ -14174,6 +16906,26 @@
     "last_year": 2026
   },
   {
+    "name": "Naiqian Zheng",
+    "display_name": "Naiqian Zheng",
+    "affiliation": "Peking University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Neea Rusch",
     "display_name": "Neea Rusch",
     "affiliation": "Augusta University",
@@ -14212,26 +16964,6 @@
     },
     "first_year": 2023,
     "last_year": 2023
-  },
-  {
-    "name": "Nikolaos Pagonas",
-    "display_name": "Nikolaos Pagonas",
-    "affiliation": "Columbia University",
-    "total_memberships": 1,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "EUROSYS",
-        2026,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2026": 1
-    },
-    "first_year": 2026,
-    "last_year": 2026
   },
   {
     "name": "Nikos Vasilakis",
@@ -14314,6 +17046,26 @@
     "last_year": 2021
   },
   {
+    "name": "Omkar Desai",
+    "display_name": "Omkar Desai",
+    "affiliation": "Syracuse University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Ozgur O. Kilic",
     "display_name": "Ozgur O. Kilic",
     "affiliation": "PNNL",
@@ -14332,6 +17084,26 @@
     },
     "first_year": 2021,
     "last_year": 2021
+  },
+  {
+    "name": "Panagiotis Garefalakis",
+    "display_name": "Panagiotis Garefalakis",
+    "affiliation": "Imperial College London",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1
+    },
+    "first_year": 2019,
+    "last_year": 2019
   },
   {
     "name": "Patanjali SLPSK",
@@ -14372,6 +17144,26 @@
     },
     "first_year": 2021,
     "last_year": 2021
+  },
+  {
+    "name": "Peizhe Liu",
+    "display_name": "Peizhe Liu",
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Phaedra Curlin",
@@ -14432,6 +17224,26 @@
     },
     "first_year": 2022,
     "last_year": 2022
+  },
+  {
+    "name": "Pierre-Louis Aublin",
+    "display_name": "Pierre-Louis Aublin",
+    "affiliation": "Keio University Japan",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1
+    },
+    "first_year": 2019,
+    "last_year": 2019
   },
   {
     "name": "Pietro Liguori",
@@ -14534,6 +17346,46 @@
     "last_year": 2021
   },
   {
+    "name": "Prabhu Rajasekaran",
+    "display_name": "Prabhu Rajasekaran",
+    "affiliation": "University of California, Irvine",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1
+    },
+    "first_year": 2019,
+    "last_year": 2019
+  },
+  {
+    "name": "Pradeep Kumar Goudagunta",
+    "display_name": "Pradeep Kumar Goudagunta",
+    "affiliation": "Dropbox",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Prajwal Challa",
     "display_name": "Prajwal Challa",
     "affiliation": "University of Texas at Arlington",
@@ -14594,6 +17446,26 @@
     "last_year": 2021
   },
   {
+    "name": "Priyanka Jayaswal",
+    "display_name": "Priyanka Jayaswal",
+    "affiliation": "Microsoft",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Pu Yi",
     "display_name": "Pu Yi",
     "affiliation": "Stanford University",
@@ -14632,6 +17504,26 @@
     },
     "first_year": 2026,
     "last_year": 2026
+  },
+  {
+    "name": "Qing Wang",
+    "display_name": "Qing Wang",
+    "affiliation": "Tsinghua University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Qingjie Lu",
@@ -14674,6 +17566,46 @@
     "last_year": 2021
   },
   {
+    "name": "Qingxiao Sun",
+    "display_name": "Qingxiao Sun",
+    "affiliation": "China University of Petroleum",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Qixuan Chen",
+    "display_name": "Qixuan Chen",
+    "affiliation": "Boston University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Quanlu Zhang",
     "display_name": "Quanlu Zhang",
     "affiliation": "Microsoft",
@@ -14694,6 +17626,46 @@
     "last_year": 2021
   },
   {
+    "name": "Quinn Burke",
+    "display_name": "Quinn Burke",
+    "affiliation": "University of Wisconsin-Madison",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "R. Madhava Krishnan",
+    "display_name": "R. Madhava Krishnan",
+    "affiliation": "Oracle",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2024,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 1
+    },
+    "first_year": 2024,
+    "last_year": 2024
+  },
+  {
     "name": "Rafael Lourenço de Lima Chehab",
     "display_name": "Rafael Lourenço de Lima Chehab",
     "affiliation": "Huawei",
@@ -14712,6 +17684,26 @@
     },
     "first_year": 2021,
     "last_year": 2021
+  },
+  {
+    "name": "Rahul Bhadani",
+    "display_name": "Rahul Bhadani",
+    "affiliation": "The University of Alabama in Huntsville",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Rahul Mittal",
@@ -14757,26 +17749,6 @@
     "name": "Raj Kumar Pandey",
     "display_name": "Raj Kumar Pandey",
     "affiliation": "University of Pennsylvania",
-    "total_memberships": 1,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "EUROSYS",
-        2026,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2026": 1
-    },
-    "first_year": 2026,
-    "last_year": 2026
-  },
-  {
-    "name": "Raja Gond",
-    "display_name": "Raja Gond",
-    "affiliation": "Microsoft",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
@@ -14854,6 +17826,26 @@
     "last_year": 2020
   },
   {
+    "name": "Ramnatthan Alagappan",
+    "display_name": "Ramnatthan Alagappan",
+    "affiliation": "University of Wisconsin-Madison",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1
+    },
+    "first_year": 2019,
+    "last_year": 2019
+  },
+  {
     "name": "Rana Tallal Javed",
     "display_name": "Rana Tallal Javed",
     "affiliation": "University of Oslo",
@@ -14872,6 +17864,66 @@
     },
     "first_year": 2023,
     "last_year": 2023
+  },
+  {
+    "name": "Reza Salkhordeh",
+    "display_name": "Reza Salkhordeh",
+    "affiliation": "Johannes Gutenberg University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2024,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 1
+    },
+    "first_year": 2024,
+    "last_year": 2024
+  },
+  {
+    "name": "Rishabh Iyer",
+    "display_name": "Rishabh Iyer",
+    "affiliation": "EPFL",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1
+    },
+    "first_year": 2019,
+    "last_year": 2019
+  },
+  {
+    "name": "Rishika Varma Kalidindi",
+    "display_name": "Rishika Varma Kalidindi",
+    "affiliation": "University of Michigan",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Roberto Rodrigues Filho",
@@ -14934,6 +17986,26 @@
     "last_year": 2021
   },
   {
+    "name": "Rodrigo Moreira",
+    "display_name": "Rodrigo Moreira",
+    "affiliation": "Federal University of Uberlandia",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1
+    },
+    "first_year": 2019,
+    "last_year": 2019
+  },
+  {
     "name": "Rohan Dilip Bhosle",
     "display_name": "Rohan Dilip Bhosle",
     "affiliation": "Microsoft",
@@ -14946,7 +18018,7 @@
         "member"
       ]
     ],
-    "area": "systems",
+    "area": "both",
     "years": {
       "2026": 1
     },
@@ -14972,6 +18044,26 @@
     },
     "first_year": 2024,
     "last_year": 2024
+  },
+  {
+    "name": "Ron Yifeng Wang",
+    "display_name": "Ron Yifeng Wang",
+    "affiliation": "Stanford University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Rossen Boykov",
@@ -15012,6 +18104,26 @@
     },
     "first_year": 2021,
     "last_year": 2021
+  },
+  {
+    "name": "Ruihong Wang",
+    "display_name": "Ruihong Wang",
+    "affiliation": "Purdue University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Rukshani Somarathna",
@@ -15074,26 +18186,6 @@
     "last_year": 2026
   },
   {
-    "name": "Sachin Kumar Singh",
-    "display_name": "Sachin Kumar Singh",
-    "affiliation": "University of Utah",
-    "total_memberships": 1,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "EUROSYS",
-        2023,
-        "member"
-      ]
-    ],
-    "area": "both",
-    "years": {
-      "2023": 1
-    },
-    "first_year": 2023,
-    "last_year": 2023
-  },
-  {
     "name": "Sai Venkata Krishnan V",
     "display_name": "Sai Venkata Krishnan V",
     "affiliation": "Indian Institute of Technology Madras",
@@ -15134,6 +18226,26 @@
     "last_year": 2025
   },
   {
+    "name": "Sanjith Athlur",
+    "display_name": "Sanjith Athlur",
+    "affiliation": "Carnegie Mellon University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Sankalpa Timilsina",
     "display_name": "Sankalpa Timilsina",
     "affiliation": "Tennessee Technological University",
@@ -15152,6 +18264,66 @@
     },
     "first_year": 2026,
     "last_year": 2026
+  },
+  {
+    "name": "Sarthak Chakraborty",
+    "display_name": "Sarthak Chakraborty",
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Sarvesh Tandon",
+    "display_name": "Sarvesh Tandon",
+    "affiliation": "Carnegie Mellon University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Saurabh Jha",
+    "display_name": "Saurabh Jha",
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1
+    },
+    "first_year": 2019,
+    "last_year": 2019
   },
   {
     "name": "Saurabh Raje",
@@ -15334,6 +18506,46 @@
     "last_year": 2021
   },
   {
+    "name": "Shady Issa",
+    "display_name": "Shady Issa",
+    "affiliation": "INESC-ID Portugal",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1
+    },
+    "first_year": 2019,
+    "last_year": 2019
+  },
+  {
+    "name": "Shail Shah",
+    "display_name": "Shail Shah",
+    "affiliation": "Microsoft",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Shan Huang PC",
     "display_name": "Shan Huang PC",
     "affiliation": "Stevens Institute of Technology",
@@ -15414,6 +18626,46 @@
     "last_year": 2025
   },
   {
+    "name": "Shaokang Xie",
+    "display_name": "Shaokang Xie",
+    "affiliation": "University of California, Davis",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Shashwat Jaiswal",
+    "display_name": "Shashwat Jaiswal",
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "both",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Shawn Rasheed",
     "display_name": "Shawn Rasheed",
     "affiliation": "Massey University",
@@ -15454,6 +18706,46 @@
     "last_year": 2021
   },
   {
+    "name": "Shazibul Islam Shamim",
+    "display_name": "Shazibul Islam Shamim",
+    "affiliation": "Kennesaw State University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Shehbaz Jaffer",
+    "display_name": "Shehbaz Jaffer",
+    "affiliation": "University of Toronto",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1
+    },
+    "first_year": 2019,
+    "last_year": 2019
+  },
+  {
     "name": "Sheikh Muhammad Farjad",
     "display_name": "Sheikh Muhammad Farjad",
     "affiliation": "University of Nebraska at Omaha",
@@ -15472,6 +18764,26 @@
     },
     "first_year": 2026,
     "last_year": 2026
+  },
+  {
+    "name": "Shen Fu",
+    "display_name": "Shen Fu",
+    "affiliation": "University of Science and Technology of China",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Sheng Jiang",
@@ -15494,6 +18806,26 @@
     "last_year": 2026
   },
   {
+    "name": "Sheng Yao",
+    "display_name": "Sheng Yao",
+    "affiliation": "Hong Kong University of Science and Technology",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Shengda Zhu",
     "display_name": "Shengda Zhu",
     "affiliation": "The University of Edinburgh",
@@ -15512,6 +18844,26 @@
     },
     "first_year": 2026,
     "last_year": 2026
+  },
+  {
+    "name": "Shengkai Li",
+    "display_name": "Shengkai Li",
+    "affiliation": "University of Chinese Academy of Sciences",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Shengyu Fan",
@@ -15554,6 +18906,26 @@
     "last_year": 2021
   },
   {
+    "name": "Shivani Mehendarge",
+    "display_name": "Shivani Mehendarge",
+    "affiliation": "Amazon",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Shiwu Lo",
     "display_name": "Shiwu Lo",
     "affiliation": "Chung-Cheng University",
@@ -15594,6 +18966,26 @@
     "last_year": 2022
   },
   {
+    "name": "Shouxi Luo",
+    "display_name": "Shouxi Luo",
+    "affiliation": "Shanghai Jiao Tong University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Shu Anzai",
     "display_name": "Shu Anzai",
     "affiliation": "University of Tokyo",
@@ -15612,6 +19004,46 @@
     },
     "first_year": 2023,
     "last_year": 2023
+  },
+  {
+    "name": "Shuai Wang",
+    "display_name": "Shuai Wang",
+    "affiliation": "Hong Kong University of Science and Technology",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1
+    },
+    "first_year": 2019,
+    "last_year": 2019
+  },
+  {
+    "name": "Shubhendra Pal Singhal",
+    "display_name": "Shubhendra Pal Singhal",
+    "affiliation": "Georgia Institute of Technology",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Shujian Qian",
@@ -15654,6 +19086,46 @@
     "last_year": 2025
   },
   {
+    "name": "Siddhant Ray",
+    "display_name": "Siddhant Ray",
+    "affiliation": "University of Chicago",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Sijia Li",
+    "display_name": "Sijia Li",
+    "affiliation": "Virginia Tech",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Simon Eismann",
     "display_name": "Simon Eismann",
     "affiliation": "University of Würzburg",
@@ -15672,6 +19144,86 @@
     },
     "first_year": 2020,
     "last_year": 2020
+  },
+  {
+    "name": "Siqi Zhu",
+    "display_name": "Siqi Zhu",
+    "affiliation": "Tsinghua University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Siyuan Zhang",
+    "display_name": "Siyuan Zhang",
+    "affiliation": "The Ohio State University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Songhao Zhang",
+    "display_name": "Songhao Zhang",
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Songlin Huang",
+    "display_name": "Songlin Huang",
+    "affiliation": "The University of Hong Kong",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Soo Yee Lim",
@@ -15712,6 +19264,66 @@
     },
     "first_year": 2021,
     "last_year": 2021
+  },
+  {
+    "name": "Srinjoy Sarkar",
+    "display_name": "Srinjoy Sarkar",
+    "affiliation": "Indian Institute of Technology",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Sriram Devata",
+    "display_name": "Sriram Devata",
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Sriram Rangarajan",
+    "display_name": "Sriram Rangarajan",
+    "affiliation": "Netflix",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Sruthi P C",
@@ -15802,6 +19414,26 @@
     "conferences": [
       [
         "EUROSYS",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Suyan Qu",
+    "display_name": "Suyan Qu",
+    "affiliation": "University of Wisconsin-Madison",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
         2025,
         "member"
       ]
@@ -15914,6 +19546,26 @@
     "last_year": 2026
   },
   {
+    "name": "Tanvir Khan",
+    "display_name": "Tanvir Khan",
+    "affiliation": "University of Michigan",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1
+    },
+    "first_year": 2019,
+    "last_year": 2019
+  },
+  {
     "name": "Tanwi Mallick",
     "display_name": "Tanwi Mallick",
     "affiliation": "ANL",
@@ -16014,24 +19666,84 @@
     "last_year": 2023
   },
   {
-    "name": "Thamir Qadah",
-    "display_name": "Thamir Qadah",
-    "affiliation": "Purdue University",
+    "name": "Tej Chajed",
+    "display_name": "Tej Chajed",
+    "affiliation": "Massachusetts Institute of Technology",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
       [
-        "OSDI",
-        2020,
+        "SOSP",
+        2019,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
-      "2020": 1
+      "2019": 1
     },
-    "first_year": 2020,
-    "last_year": 2020
+    "first_year": 2019,
+    "last_year": 2019
+  },
+  {
+    "name": "Tejas Chopra",
+    "display_name": "Tejas Chopra",
+    "affiliation": "Netflix",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Teng \"Sebastian\" Jiang",
+    "display_name": "Teng \"Sebastian\" Jiang",
+    "affiliation": "Columbia University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Teng Ma",
+    "display_name": "Teng Ma",
+    "affiliation": "Alibaba",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2024,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 1
+    },
+    "first_year": 2024,
+    "last_year": 2024
   },
   {
     "name": "Theodore Michailidis",
@@ -16094,6 +19806,26 @@
     "last_year": 2024
   },
   {
+    "name": "Thomas Lemberger",
+    "display_name": "Thomas Lemberger",
+    "affiliation": "LMU Munich",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1
+    },
+    "first_year": 2019,
+    "last_year": 2019
+  },
+  {
     "name": "Tianao Ge",
     "display_name": "Tianao Ge",
     "affiliation": "Hong Kong University of Science and Technology",
@@ -16112,6 +19844,46 @@
     },
     "first_year": 2023,
     "last_year": 2023
+  },
+  {
+    "name": "Tiancheng Hu",
+    "display_name": "Tiancheng Hu",
+    "affiliation": "Peking University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Tianru Zhang",
+    "display_name": "Tianru Zhang",
+    "affiliation": "Uppsala University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Tianrui Wei",
@@ -16254,26 +20026,6 @@
     "last_year": 2026
   },
   {
-    "name": "Tingjia Cao",
-    "display_name": "Tingjia Cao",
-    "affiliation": "University of Wisconsin-Madison",
-    "total_memberships": 1,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "EUROSYS",
-        2026,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2026": 1
-    },
-    "first_year": 2026,
-    "last_year": 2026
-  },
-  {
     "name": "Tiziano De Matteis",
     "display_name": "Tiziano De Matteis",
     "affiliation": "ETH Zurich",
@@ -16314,6 +20066,66 @@
     "last_year": 2021
   },
   {
+    "name": "Tomoya Suzuki",
+    "display_name": "Tomoya Suzuki",
+    "affiliation": "University of California, San Diego",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2024,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 1
+    },
+    "first_year": 2024,
+    "last_year": 2024
+  },
+  {
+    "name": "Tong Sun",
+    "display_name": "Tong Sun",
+    "affiliation": "Zhejiang University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "both",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Tony Hong",
+    "display_name": "Tony Hong",
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Tuan Tran",
     "display_name": "Tuan Tran",
     "affiliation": "University of California, Santa Cruz",
@@ -16334,6 +20146,26 @@
     "last_year": 2022
   },
   {
+    "name": "Tuo Li",
+    "display_name": "Tuo Li",
+    "affiliation": "Tsinghua University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "both",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Tuowei Wang",
     "display_name": "Tuowei Wang",
     "affiliation": "Tsinghua University",
@@ -16352,6 +20184,26 @@
     },
     "first_year": 2026,
     "last_year": 2026
+  },
+  {
+    "name": "Utkarsh Mittal",
+    "display_name": "Utkarsh Mittal",
+    "affiliation": "BCS",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Utpal Bora",
@@ -16534,6 +20386,26 @@
     "last_year": 2021
   },
   {
+    "name": "Vikranth Srivatsa",
+    "display_name": "Vikranth Srivatsa",
+    "affiliation": "University of California, San Diego",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Viktor Reusch",
     "display_name": "Viktor Reusch",
     "affiliation": "Barkhausen Institut",
@@ -16552,6 +20424,26 @@
     },
     "first_year": 2025,
     "last_year": 2025
+  },
+  {
+    "name": "Vinay Banakar",
+    "display_name": "Vinay Banakar",
+    "affiliation": "Hewlett Packard Enterprise",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1
+    },
+    "first_year": 2019,
+    "last_year": 2019
   },
   {
     "name": "Vincent Lannurien",
@@ -16632,26 +20524,6 @@
     },
     "first_year": 2021,
     "last_year": 2021
-  },
-  {
-    "name": "Wanning He",
-    "display_name": "Wanning He",
-    "affiliation": "University of Michigan",
-    "total_memberships": 1,
-    "chair_count": 0,
-    "conferences": [
-      [
-        "SOSP",
-        2023,
-        "member"
-      ]
-    ],
-    "area": "systems",
-    "years": {
-      "2023": 1
-    },
-    "first_year": 2023,
-    "last_year": 2023
   },
   {
     "name": "Waqar Aqeel",
@@ -16752,6 +20624,26 @@
     },
     "first_year": 2023,
     "last_year": 2023
+  },
+  {
+    "name": "Weiwu Pang",
+    "display_name": "Weiwu Pang",
+    "affiliation": "University of Southern California",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2024,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 1
+    },
+    "first_year": 2024,
+    "last_year": 2024
   },
   {
     "name": "Wen-Chuan Lee",
@@ -16934,6 +20826,66 @@
     "last_year": 2026
   },
   {
+    "name": "Xiang Chen",
+    "display_name": "Xiang Chen",
+    "affiliation": "Hong Kong University of Science and Technology",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "both",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Xiangyu Gao",
+    "display_name": "Xiangyu Gao",
+    "affiliation": "University of Washington",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Xiao Zhang",
+    "display_name": "Xiao Zhang",
+    "affiliation": "University of Texas at Austin",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Xiao Zhu",
     "display_name": "Xiao Zhu",
     "affiliation": "University of Michigan",
@@ -16974,6 +20926,46 @@
     "last_year": 2021
   },
   {
+    "name": "Xingyu Xiang",
+    "display_name": "Xingyu Xiang",
+    "affiliation": "Harvard University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Xinkai Wang",
+    "display_name": "Xinkai Wang",
+    "affiliation": "Shanghai Jiao Tong University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Xinxin Liu",
     "display_name": "Xinxin Liu",
     "affiliation": "Huazhong University of Science and Technology",
@@ -17012,6 +21004,26 @@
     },
     "first_year": 2021,
     "last_year": 2021
+  },
+  {
+    "name": "Xuechen Zhang",
+    "display_name": "Xuechen Zhang",
+    "affiliation": "Washington State University Vancouver",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2024,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 1
+    },
+    "first_year": 2024,
+    "last_year": 2024
   },
   {
     "name": "Xuesong Bai",
@@ -17134,6 +21146,46 @@
     "last_year": 2026
   },
   {
+    "name": "Yanqi Pan",
+    "display_name": "Yanqi Pan",
+    "affiliation": "Harbin Institute of Technology",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Yanran Wu",
+    "display_name": "Yanran Wu",
+    "affiliation": "Purdue University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Yanying Lin",
     "display_name": "Yanying Lin",
     "affiliation": "University of Chinese Academy of Sciences",
@@ -17154,24 +21206,24 @@
     "last_year": 2023
   },
   {
-    "name": "Yi Chen",
-    "display_name": "Yi Chen",
-    "affiliation": "University Michigan",
+    "name": "Yi Liu",
+    "display_name": "Yi Liu",
+    "affiliation": "City University of Hong Kong",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
       [
-        "SOSP",
-        2023,
+        "FAST",
+        2025,
         "member"
       ]
     ],
-    "area": "systems",
+    "area": "both",
     "years": {
-      "2023": 1
+      "2025": 1
     },
-    "first_year": 2023,
-    "last_year": 2023
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Yi Zhou",
@@ -17214,6 +21266,46 @@
     "last_year": 2023
   },
   {
+    "name": "Yifan Xie",
+    "display_name": "Yifan Xie",
+    "affiliation": "National University of Defense Technology",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Yifei Sun",
+    "display_name": "Yifei Sun",
+    "affiliation": "Northeastern University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Yigong Hu",
     "display_name": "Yigong Hu",
     "affiliation": "Johns Hopkins University",
@@ -17254,6 +21346,26 @@
     "last_year": 2023
   },
   {
+    "name": "Yilong Luo",
+    "display_name": "Yilong Luo",
+    "affiliation": "Peking University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Yiming Li",
     "display_name": "Yiming Li",
     "affiliation": "Tianjin University",
@@ -17262,6 +21374,66 @@
     "conferences": [
       [
         "EUROSYS",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Yiming Su",
+    "display_name": "Yiming Su",
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Ying Jing",
+    "display_name": "Ying Jing",
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Yiqi Liu",
+    "display_name": "Yiqi Liu",
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
         2025,
         "member"
       ]
@@ -17292,6 +21464,26 @@
     },
     "first_year": 2021,
     "last_year": 2021
+  },
+  {
+    "name": "Yiwei Chen",
+    "display_name": "Yiwei Chen",
+    "affiliation": "Carnegie Mellon University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Yixuan Chen",
@@ -17454,6 +21646,26 @@
     "last_year": 2021
   },
   {
+    "name": "Yuan Feng",
+    "display_name": "Yuan Feng",
+    "affiliation": "University of California, Merced",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Yuang Xu",
     "display_name": "Yuang Xu",
     "affiliation": "University of California, Merced",
@@ -17472,6 +21684,46 @@
     },
     "first_year": 2026,
     "last_year": 2026
+  },
+  {
+    "name": "Yuanliang Zhang",
+    "display_name": "Yuanliang Zhang",
+    "affiliation": "National University of Defense Technology",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Yuchen Ji",
+    "display_name": "Yuchen Ji",
+    "affiliation": "ShanghaiTech University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Yucheng Zhang",
@@ -17514,24 +21766,44 @@
     "last_year": 2026
   },
   {
-    "name": "Yueying Li",
-    "display_name": "Yueying Li",
-    "affiliation": "Cornell / MIT",
+    "name": "Yuhang Song",
+    "display_name": "Yuhang Song",
+    "affiliation": "Boston University",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
       [
-        "SOSP",
-        2023,
+        "OSDI",
+        2025,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
-      "2023": 1
+      "2025": 1
     },
-    "first_year": 2023,
-    "last_year": 2023
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Yuke Li",
+    "display_name": "Yuke Li",
+    "affiliation": "University of California, Merced",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Yulong Tang",
@@ -17552,6 +21824,26 @@
     },
     "first_year": 2026,
     "last_year": 2026
+  },
+  {
+    "name": "Yun Wang",
+    "display_name": "Yun Wang",
+    "affiliation": "Shanghai Jiao Tong University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Yunhong Ji",
@@ -17614,24 +21906,24 @@
     "last_year": 2021
   },
   {
-    "name": "Yusheng Zheng",
-    "display_name": "Yusheng Zheng",
-    "affiliation": "University of California, Santa Cruz",
+    "name": "Yuqing Zhu",
+    "display_name": "Yuqing Zhu",
+    "affiliation": "Tsinghua University",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
       [
-        "EUROSYS",
-        2026,
+        "FAST",
+        2024,
         "member"
       ]
     ],
     "area": "systems",
     "years": {
-      "2026": 1
+      "2024": 1
     },
-    "first_year": 2026,
-    "last_year": 2026
+    "first_year": 2024,
+    "last_year": 2024
   },
   {
     "name": "Yuxuan Jiang",
@@ -17694,6 +21986,26 @@
     "last_year": 2023
   },
   {
+    "name": "Zaifeng Pan",
+    "display_name": "Zaifeng Pan",
+    "affiliation": "University of California, San Diego",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Zebin Ren",
     "display_name": "Zebin Ren",
     "affiliation": "Vrije Universiteit Amsterdam",
@@ -17712,6 +22024,66 @@
     },
     "first_year": 2023,
     "last_year": 2023
+  },
+  {
+    "name": "Zeqing Wu",
+    "display_name": "Zeqing Wu",
+    "affiliation": "Zhengzhou University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Zeyu Li",
+    "display_name": "Zeyu Li",
+    "affiliation": "Hong Kong University of Science and Technology",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
+    "name": "Zhang Cao",
+    "display_name": "Zhang Cao",
+    "affiliation": "Xidian University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
   },
   {
     "name": "Zhao Shixiong",
@@ -17814,6 +22186,46 @@
     "last_year": 2021
   },
   {
+    "name": "Zhenyu Song",
+    "display_name": "Zhenyu Song",
+    "affiliation": "Princeton University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "SOSP",
+        2019,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2019": 1
+    },
+    "first_year": 2019,
+    "last_year": 2019
+  },
+  {
+    "name": "Zhifei Li",
+    "display_name": "Zhifei Li",
+    "affiliation": "University of California, Berkeley",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Zhipeng Zhao",
     "display_name": "Zhipeng Zhao",
     "affiliation": "Carnegie Mellon University",
@@ -17894,6 +22306,26 @@
     "last_year": 2024
   },
   {
+    "name": "Zihe Song",
+    "display_name": "Zihe Song",
+    "affiliation": "University of Texas at Dallas",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "OSDI",
+        2025,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2025": 1
+    },
+    "first_year": 2025,
+    "last_year": 2025
+  },
+  {
     "name": "Ziheng Liu",
     "display_name": "Ziheng Liu",
     "affiliation": "University of Pennsylvania",
@@ -17914,14 +22346,14 @@
     "last_year": 2020
   },
   {
-    "name": "Ziming Mao",
-    "display_name": "Ziming Mao",
-    "affiliation": "University of California, Berkeley",
+    "name": "Ziqiang Wu",
+    "display_name": "Ziqiang Wu",
+    "affiliation": "Huazhong University of Science and Technology",
     "total_memberships": 1,
     "chair_count": 0,
     "conferences": [
       [
-        "EUROSYS",
+        "OSDI",
         2025,
         "member"
       ]
@@ -17932,6 +22364,26 @@
     },
     "first_year": 2025,
     "last_year": 2025
+  },
+  {
+    "name": "Ziyang Jiao",
+    "display_name": "Ziyang Jiao",
+    "affiliation": "Syracuse University",
+    "total_memberships": 1,
+    "chair_count": 0,
+    "conferences": [
+      [
+        "FAST",
+        2024,
+        "member"
+      ]
+    ],
+    "area": "systems",
+    "years": {
+      "2024": 1
+    },
+    "first_year": 2024,
+    "last_year": 2024
   },
   {
     "name": "Ziyue Qiu",

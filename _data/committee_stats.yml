@@ -1,80 +1,80 @@
 last_updated: '2026-04-24'
-total_members: 3023
-total_systems: 1269
-total_security: 1728
-total_conferences: 50
-total_countries: 56
+total_members: 3327
+total_systems: 1573
+total_security: 1754
+total_conferences: 52
+total_countries: 58
 total_continents: 7
-total_institutions: 423
-recurring_members: 1851
-recurring_members_systems: 765
-recurring_members_security: 1129
-recurring_chairs: 67
+total_institutions: 442
+recurring_members: 2034
+recurring_members_systems: 955
+recurring_members_security: 1151
+recurring_chairs: 72
 top_countries:
 - name: United States
-  count: 1379
+  count: 1556
 - name: China
-  count: 228
+  count: 270
 - name: Germany
-  count: 146
+  count: 150
 - name: Hong Kong
-  count: 128
+  count: 139
 - name: United Kingdom
-  count: 80
+  count: 87
 - name: Taiwan, Province of China
-  count: 67
+  count: 74
 - name: Switzerland
-  count: 66
+  count: 67
 - name: Canada
-  count: 54
+  count: 58
 - name: Singapore
-  count: 48
-- name: Australia
-  count: 48
+  count: 50
 - name: Japan
-  count: 47
+  count: 50
+- name: Australia
+  count: 49
 - name: Netherlands
   count: 42
 - name: Italy
   count: 42
 - name: Belgium
-  count: 37
-- name: France
-  count: 29
+  count: 38
+- name: Spain
+  count: 32
 top_countries_systems:
 - name: United States
-  count: 657
+  count: 834
 - name: China
-  count: 135
+  count: 177
 - name: Hong Kong
-  count: 68
+  count: 79
 - name: United Kingdom
-  count: 43
+  count: 50
 - name: Switzerland
-  count: 40
+  count: 41
 - name: Taiwan, Province of China
-  count: 34
+  count: 41
 - name: Singapore
-  count: 28
+  count: 30
 - name: Spain
-  count: 22
+  count: 25
 - name: Canada
-  count: 17
+  count: 21
 - name: Germany
-  count: 14
+  count: 18
 - name: Japan
-  count: 14
-- name: France
-  count: 13
+  count: 17
 - name: Portugal
+  count: 15
+- name: France
   count: 13
 - name: Saudi Arabia
   count: 12
-- name: Greece
-  count: 11
+- name: India
+  count: 12
 top_countries_security:
 - name: United States
-  count: 706
+  count: 722
 - name: Germany
   count: 132
 - name: China
@@ -105,131 +105,131 @@ top_countries_security:
   count: 18
 top_continents:
 - name: North America
-  count: 1433
+  count: 1615
 - name: Asia
-  count: 616
+  count: 686
 - name: Europe
-  count: 577
+  count: 599
 - name: Oceania
-  count: 49
+  count: 50
 - name: Africa
-  count: 30
+  count: 34
 - name: Unknown
-  count: 24
+  count: 25
 - name: South America
   count: 11
 top_continents_systems:
 - name: North America
-  count: 674
+  count: 856
 - name: Asia
-  count: 311
+  count: 381
 - name: Europe
-  count: 199
-- name: Oceania
-  count: 7
+  count: 221
 - name: Africa
-  count: 7
+  count: 11
+- name: Oceania
+  count: 8
 - name: South America
   count: 5
 - name: Unknown
-  count: 4
+  count: 5
 top_continents_security:
 - name: North America
-  count: 743
+  count: 759
 - name: Europe
   count: 378
 - name: Asia
-  count: 304
+  count: 305
 - name: Oceania
   count: 42
 - name: Africa
   count: 23
 - name: Unknown
-  count: 19
+  count: 20
 - name: South America
   count: 6
 top_institutions:
 - name: University of Illinois Urbana-Champaign
-  count: 68
+  count: 91
 - name: Purdue University
-  count: 68
+  count: 76
 - name: University of California, Irvine
-  count: 63
+  count: 66
 - name: cispa helmholtz center for information security
   count: 63
 - name: Georgia Institute of Technology
-  count: 55
+  count: 59
 - name: National Tsinghua University
-  count: 48
+  count: 55
 - name: University of Wisconsin - Madison
-  count: 42
+  count: 55
 - name: institute of parallel and distributed systems, shanghai jiao tong university
-  count: 39
+  count: 46
 - name: The Hong Kong University of Science and Technology
-  count: 38
+  count: 43
+- name: Carnegie Mellon University
+  count: 40
+- name: University of Michigan - Ann Arbor
+  count: 40
 - name: computing and imaging institute - the university of utah
-  count: 36
+  count: 39
 - name: University of Chicago
-  count: 34
+  count: 35
 - name: University of California, Riverside
+  count: 33
+- name: The Chinese University of Hong Kong
   count: 33
 - name: imec-distrinet, ku leuven
-  count: 32
-- name: Carnegie Mellon University
-  count: 31
-- name: The Chinese University of Hong Kong
-  count: 30
-- name: eth zurich
-  count: 29
-- name: West Chester University of Pennsylvania
-  count: 29
-- name: google
-  count: 28
+  count: 33
 - name: University of California, Berkeley
-  count: 27
+  count: 31
+- name: West Chester University of Pennsylvania
+  count: 31
 - name: University of California, San Diego
-  count: 27
+  count: 30
+- name: google
+  count: 30
 top_institutions_systems:
 - name: University of Illinois Urbana-Champaign
-  count: 59
+  count: 82
 - name: Purdue University
-  count: 36
+  count: 44
 - name: institute of parallel and distributed systems, shanghai jiao tong university
-  count: 33
-- name: University of Chicago
-  count: 26
-- name: computing and imaging institute - the university of utah
-  count: 24
-- name: The Hong Kong University of Science and Technology
-  count: 23
-- name: University of California, Irvine
-  count: 23
-- name: Georgia Institute of Technology
-  count: 22
-- name: The Chinese University of Hong Kong
-  count: 21
+  count: 40
 - name: University of Michigan - Ann Arbor
-  count: 20
-- name: microsoft
-  count: 19
-- name: epfl
-  count: 18
+  count: 37
 - name: University of Wisconsin - Madison
-  count: 18
-- name: eth zurich
-  count: 17
-- name: University of California, Berkeley
-  count: 17
-- name: National Sun Yat-Sen University
-  count: 16
-- name: University of California, Riverside
-  count: 16
+  count: 31
+- name: The Hong Kong University of Science and Technology
+  count: 28
+- name: computing and imaging institute - the university of utah
+  count: 27
+- name: University of Chicago
+  count: 27
+- name: Georgia Institute of Technology
+  count: 26
+- name: University of California, Irvine
+  count: 26
+- name: Carnegie Mellon University
+  count: 24
+- name: The Chinese University of Hong Kong
+  count: 24
+- name: microsoft
+  count: 23
 - name: National Tsinghua University
-  count: 16
+  count: 23
+- name: University of California, Berkeley
+  count: 21
+- name: epfl
+  count: 19
+- name: imperial college london
+  count: 19
+- name: Huazhong University of Science and Technology
+  count: 19
 - name: imdea software institute
-  count: 16
+  count: 19
 - name: Cornell University
-  count: 15
+  count: 18
 top_institutions_security:
 - name: cispa helmholtz center for information security
   count: 63
@@ -237,10 +237,10 @@ top_institutions_security:
   count: 40
 - name: Georgia Institute of Technology
   count: 33
+- name: Purdue University
+  count: 32
 - name: National Tsinghua University
   count: 32
-- name: Purdue University
-  count: 31
 - name: imec-distrinet, ku leuven
   count: 30
 - name: University of Wisconsin - Madison
@@ -248,9 +248,11 @@ top_institutions_security:
 - name: George Mason University
   count: 23
 - name: Indiana University - Bloomington
-  count: 21
+  count: 23
 - name: The Hong Kong Polytechnic University
   count: 21
+- name: google
+  count: 20
 - name: Ruhr-Universität Bochum
   count: 20
 - name: Kurume Institute of Technology
@@ -259,8 +261,6 @@ top_institutions_security:
   count: 19
 - name: University of Waterloo
   count: 19
-- name: google
-  count: 18
 - name: Zhejiang University
   count: 18
 - name: University of California, Riverside
@@ -273,8 +273,8 @@ top_institutions_security:
   count: 16
 institution_timeline:
 - year: 2019
-  total: 28
-  systems: 0
+  total: 58
+  systems: 33
   security: 28
 - year: 2020
   total: 68
@@ -293,17 +293,17 @@ institution_timeline:
   systems: 82
   security: 100
 - year: 2024
-  total: 174
-  systems: 89
+  total: 183
+  systems: 102
   security: 127
 - year: 2025
-  total: 205
-  systems: 68
+  total: 232
+  systems: 118
   security: 164
 - year: 2026
   total: 208
   systems: 70
-  security: 168
+  security: 173
 committee_sizes:
 - conference: ACSAC
   year: 2019
@@ -409,12 +409,12 @@ committee_sizes:
   year: 2024
   conf_year: fast2024
   area: systems
-  size: 2
+  size: 33
 - conference: FAST
   year: 2025
   conf_year: fast2025
   area: systems
-  size: 2
+  size: 56
 - conference: NDSS
   year: 2024
   conf_year: ndss2024
@@ -455,6 +455,11 @@ committee_sizes:
   conf_year: osdi2024
   area: systems
   size: 130
+- conference: OSDI
+  year: 2025
+  conf_year: osdi2025
+  area: systems
+  size: 174
 - conference: PETS
   year: 2020
   conf_year: pets2020
@@ -495,6 +500,11 @@ committee_sizes:
   conf_year: sc2021
   area: systems
   size: 48
+- conference: SOSP
+  year: 2019
+  conf_year: sosp2019
+  area: systems
+  size: 45
 - conference: SOSP
   year: 2021
   conf_year: sosp2021
@@ -553,5 +563,5 @@ committee_sizes:
 - conference: VEHICLESEC
   year: 2026
   conf_year: vehiclesec2026
-  area: unknown
+  area: security
   size: 26
