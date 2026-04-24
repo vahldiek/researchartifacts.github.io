@@ -1,15 +1,15 @@
 overall:
   github_repos: 1296
-  total_stars: 126543
+  total_stars: 126544
   total_forks: 16447
   max_stars: 14347
   max_forks: 1854
-  zenodo_repos: 818
-  total_views: 205363
-  total_downloads: 94485
+  zenodo_repos: 813
+  total_views: 209931
+  total_downloads: 186160
   avg_stars: 97.6
   avg_forks: 12.7
-  last_updated: 2026-04-24 14:59:56 UTC
+  last_updated: 2026-04-24 17:52:27 UTC
 by_conference:
 - name: ACSAC
   github_repos: 158
@@ -130,11 +130,11 @@ by_conference:
     pushed_at: '2025-08-16T09:08:03Z'
 - name: ATC
   github_repos: 108
-  total_stars: 4816
+  total_stars: 4815
   total_forks: 832
   avg_stars: 44.6
   avg_forks: 7.7
-  max_stars: 1654
+  max_stars: 1653
   max_forks: 195
   years:
   - year: 2022
@@ -145,7 +145,7 @@ by_conference:
     avg_forks: 5.1
   - year: 2023
     github_repos: 35
-    stars: 3125
+    stars: 3124
     forks: 560
     avg_stars: 89.3
     avg_forks: 16.0
@@ -161,7 +161,7 @@ by_conference:
     conference: ATC
     year: 2023
     area: systems
-    stars: 1654
+    stars: 1653
     forks: 195
     description: 'CIRCL: Cloudflare Interoperable Reusable Cryptographic Library'
     language: Go
@@ -254,7 +254,7 @@ by_conference:
     description: 'PaSh: Light-touch Data-Parallel Shell Processing'
     language: Shell
     name: binpash/pash
-    pushed_at: '2026-03-31T17:19:55Z'
+    pushed_at: '2026-04-24T17:29:31Z'
   - title: 'BetrFS: A Compleat File System for Commodity SSDs'
     url: https://github.com/oscarlab/betrfs
     conference: EUROSYS
@@ -312,7 +312,7 @@ by_conference:
   top_repos: []
 - name: OSDI
   github_repos: 137
-  total_stars: 55243
+  total_stars: 55244
   total_forks: 6984
   avg_stars: 403.2
   avg_forks: 51.0
@@ -321,7 +321,7 @@ by_conference:
   years:
   - year: 2020
     github_repos: 34
-    stars: 27972
+    stars: 27973
     forks: 3372
     avg_stars: 822.7
     avg_forks: 99.2
@@ -485,7 +485,7 @@ by_conference:
     description: Google's differential privacy libraries.
     language: Go
     name: google/differential-privacy
-    pushed_at: '2026-04-23T21:29:00Z'
+    pushed_at: '2026-04-24T17:29:05Z'
   - title: Differentially private partition selection
     url: https://github.com/google/differential-privacy/blob/main/common_docs/partition_selection.md
     conference: PETS
@@ -496,7 +496,7 @@ by_conference:
     description: Google's differential privacy libraries.
     language: Go
     name: google/differential-privacy
-    pushed_at: '2026-04-23T21:29:00Z'
+    pushed_at: '2026-04-24T17:29:05Z'
   - title: 'LLAMA: A Low Latency Math Library for Secure Inference'
     url: https://github.com/mpc-msri/EzPC/tree/master/FSS
     conference: PETS
@@ -804,18 +804,18 @@ by_conference:
     pushed_at: '2026-04-17T20:51:01Z'
 - name: WOOT
   github_repos: 23
-  total_stars: 13606
+  total_stars: 13607
   total_forks: 1148
   avg_stars: 591.6
   avg_forks: 49.9
-  max_stars: 12367
+  max_stars: 12368
   max_forks: 996
   years:
   - year: 2019
     github_repos: 4
-    stars: 12744
+    stars: 12745
     forks: 1047
-    avg_stars: 3186.0
+    avg_stars: 3186.2
     avg_forks: 261.8
   - year: 2021
     github_repos: 1
@@ -853,7 +853,7 @@ by_conference:
     conference: WOOT
     year: 2019
     area: security
-    stars: 12367
+    stars: 12368
     forks: 996
     description: 'Universal Radio Hacker: Investigate Wireless Protocols Like A Boss'
     language: Python
@@ -924,15 +924,15 @@ by_year:
   max_forks: 161
 - year: 2019
   github_repos: 38
-  total_stars: 14642
+  total_stars: 14643
   total_forks: 1571
   avg_stars: 385.3
   avg_forks: 41.3
-  max_stars: 12367
+  max_stars: 12368
   max_forks: 996
 - year: 2020
   github_repos: 91
-  total_stars: 36193
+  total_stars: 36194
   total_forks: 4725
   avg_stars: 397.7
   avg_forks: 51.9
@@ -956,11 +956,11 @@ by_year:
   max_forks: 1854
 - year: 2023
   github_repos: 270
-  total_stars: 11230
+  total_stars: 11229
   total_forks: 1996
   avg_stars: 41.6
   avg_forks: 7.4
-  max_stars: 1654
+  max_stars: 1653
   max_forks: 268
 - year: 2024
   github_repos: 315

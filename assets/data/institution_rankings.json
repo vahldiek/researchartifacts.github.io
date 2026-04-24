@@ -9049,6 +9049,40 @@
     }
   },
   {
+    "affiliation": "NVIDIA",
+    "combined_score": 17,
+    "artifact_score": 11,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 6,
+    "ae_ratio": 1.83,
+    "role": "Balanced",
+    "artifacts": 4,
+    "badges_functional": 4,
+    "badges_reproducible": 4,
+    "ae_memberships": 2,
+    "chair_count": 0,
+    "total_papers": 4,
+    "artifact_rate": 100.0,
+    "num_authors": 5,
+    "conferences": [
+      "OSDI",
+      "SC",
+      "USENIXSEC",
+      "VEHICLESEC"
+    ],
+    "years": {
+      "2025": 0,
+      "2024": 0,
+      "2023": 0,
+      "2022": 0,
+      "2021": 3,
+      "2020": 1,
+      "2019": 0,
+      "2026": 2
+    }
+  },
+  {
     "affiliation": "UNIST",
     "combined_score": 17,
     "artifact_score": 14,
@@ -11283,38 +11317,6 @@
       "2021": 4,
       "2020": 0,
       "2019": 0
-    }
-  },
-  {
-    "affiliation": "NVIDIA",
-    "combined_score": 12,
-    "artifact_score": 9,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 3,
-    "ae_ratio": 3.0,
-    "role": "Producer",
-    "artifacts": 3,
-    "badges_functional": 3,
-    "badges_reproducible": 3,
-    "ae_memberships": 1,
-    "chair_count": 0,
-    "total_papers": 3,
-    "artifact_rate": 100.0,
-    "num_authors": 4,
-    "conferences": [
-      "SC",
-      "USENIXSEC"
-    ],
-    "years": {
-      "2025": 0,
-      "2024": 0,
-      "2023": 0,
-      "2022": 0,
-      "2021": 3,
-      "2020": 0,
-      "2019": 0,
-      "2026": 1
     }
   },
   {

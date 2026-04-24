@@ -1125,6 +1125,43 @@
     }
   },
   {
+    "affiliation": "Indiana University Bloomington",
+    "combined_score": 80,
+    "artifact_score": 17,
+    "artifact_citations": 0,
+    "citation_score": 0,
+    "ae_score": 63,
+    "ae_ratio": 0.27,
+    "role": "Consumer",
+    "artifacts": 7,
+    "badges_functional": 5,
+    "badges_reproducible": 5,
+    "ae_memberships": 21,
+    "chair_count": 0,
+    "total_papers": 9,
+    "artifact_rate": 77.8,
+    "num_authors": 14,
+    "conferences": [
+      "ACSAC",
+      "NDSS",
+      "PETS",
+      "USENIXSEC",
+      "VEHICLESEC"
+    ],
+    "years": {
+      "2026": 7,
+      "2025": 6,
+      "2024": 3,
+      "2023": 6,
+      "2022": 4,
+      "2021": 0,
+      "2020": 0,
+      "2019": 0,
+      "2018": 0,
+      "2017": 0
+    }
+  },
+  {
     "affiliation": "Nanyang Technological University",
     "combined_score": 79,
     "artifact_score": 61,
@@ -1229,43 +1266,6 @@
       "2021": 1,
       "2020": 1,
       "2019": 1,
-      "2018": 0,
-      "2017": 0
-    }
-  },
-  {
-    "affiliation": "Indiana University Bloomington",
-    "combined_score": 77,
-    "artifact_score": 14,
-    "artifact_citations": 0,
-    "citation_score": 0,
-    "ae_score": 63,
-    "ae_ratio": 0.22,
-    "role": "Consumer",
-    "artifacts": 6,
-    "badges_functional": 4,
-    "badges_reproducible": 4,
-    "ae_memberships": 21,
-    "chair_count": 0,
-    "total_papers": 8,
-    "artifact_rate": 75.0,
-    "num_authors": 13,
-    "conferences": [
-      "ACSAC",
-      "NDSS",
-      "PETS",
-      "USENIXSEC",
-      "VEHICLESEC"
-    ],
-    "years": {
-      "2026": 7,
-      "2025": 6,
-      "2024": 2,
-      "2023": 6,
-      "2022": 4,
-      "2021": 0,
-      "2020": 0,
-      "2019": 0,
       "2018": 0,
       "2017": 0
     }
