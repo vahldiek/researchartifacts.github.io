@@ -18,6 +18,7 @@ Data is automatically collected from:
 - [secartifacts.github.io](https://secartifacts.github.io) — Security conferences (ACSAC, CHES, NDSS, PETS, …)
 - [USENIX](https://www.usenix.org) — Direct scraping for conferences like FAST
 - [DBLP](https://dblp.org) — Computer science bibliography for author statistics
+- [OpenAlex](https://openalex.org) — Open scholarly metadata for citation statistics
 
 ## Technology Stack
 
@@ -60,6 +61,10 @@ bundle exec jekyll serve
 │   ├── systems_authors.yml  # Systems area author rankings
 │   ├── security_authors.yml # Security area author rankings
 │   ├── repo_stats.yml       # GitHub repo metadata
+│   ├── participation_stats.yml  # AE participation rates
+│   ├── committee_stats.yml  # AE committee statistics
+│   ├── combined_summary.yml # Combined summary across areas
+│   ├── coverage.yml         # Data coverage metrics
 │   └── navigation.yml       # Dropdown navigation structure
 ├── assets/
 │   ├── charts/              # Generated SVG visualizations
@@ -70,10 +75,13 @@ bundle exec jekyll serve
 ├── security/                # Per-conference pages (ACSAC, CHES, NDSS, …)
 ├── index.md                 # Homepage
 ├── statistics.md            # Statistics dashboard
-├── systems.md               # Systems area overview
-├── security.md              # Security area overview
-├── systems_authors.md       # Systems prolific authors
-├── security_authors.md      # Security prolific authors
+├── authors.md               # Prolific authors overview
+├── author.md                # Individual author profile page
+├── ae_members.md            # AE committee members
+├── committee.md             # Committee statistics
+├── combined_rankings.md     # Combined multi-source rankings
+├── institution_rankings.md  # Institution-level rankings
+├── institution.md           # Individual institution profile page
 ├── repo_stats.md            # Repository statistics overview
 ├── methodology.md           # How data is collected
 └── about.md                 # About the project
@@ -109,9 +117,9 @@ Apache License 2.0 — see [LICENSE](LICENSE) for details.
 ## Related Projects
 
 - [reprodb-pipeline](https://github.com/reprodb/reprodb-pipeline) — Data collection and analysis pipeline
+- [data-schemas](https://github.com/reprodb/data-schemas) — JSON Schema definitions for pipeline data
 - [sysartifacts.github.io](https://github.com/sysartifacts/sysartifacts.github.io) — Systems artifact evaluation results
 - [secartifacts.github.io](https://github.com/secartifacts/secartifacts.github.io) — Security artifact evaluation results
-- [secartifacts.github.io](https://github.com/secartifacts/secartifacts.github.io) - Security artifact evaluation results
 
 ## Acknowledgments
 
