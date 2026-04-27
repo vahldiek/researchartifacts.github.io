@@ -231,3 +231,209 @@ html {
 a[href="#footer"] {
   display: none !important;
 }
+
+// ---------------------------------------------------------------------------
+// Dark mode
+//
+// Supports three modes:
+//   1. OS preference (prefers-color-scheme) — default when no toggle used
+//   2. Manual dark  — user clicks toggle → data-theme="dark"
+//   3. Manual light — user clicks toggle → data-theme="light"
+//
+// Minimal Mistakes 4.x doesn't support runtime skin switching, so this is a
+// thin overlay that re-paints background/text/borders. Charts, flag-icons,
+// and external imagery are left untouched.
+// ---------------------------------------------------------------------------
+@mixin dark-theme {
+  &, body {
+    background-color: #1a1d21 !important;
+    color: #d6d9dc !important;
+  }
+
+  // Page chrome
+  .masthead,
+  .greedy-nav,
+  #hamburger-menu,
+  .masthead__submenu,
+  .page__footer {
+    background: #23272d !important;
+    color: #d6d9dc !important;
+    border-color: #383c43 !important;
+  }
+  .greedy-nav a,
+  .greedy-nav__toggle,
+  #hamburger-menu a,
+  .masthead__submenu a,
+  .page__footer a {
+    color: #d6d9dc !important;
+  }
+  #hamburger-menu > li > a:hover,
+  .masthead__submenu li a:hover {
+    background: #2c3038 !important;
+  }
+  .greedy-nav .site-title,
+  .site-subtitle {
+    color: #f0f0f0 !important;
+  }
+
+  // Body text + headings
+  .page__content,
+  .archive,
+  .archive__item-excerpt,
+  h1, h2, h3, h4, h5, h6 {
+    color: #d6d9dc !important;
+  }
+  .page__content a,
+  .archive__item-title a {
+    color: #6cb6ff !important;
+  }
+  .page__content a:visited {
+    color: #b083eb !important;
+  }
+  .page__content a:hover {
+    color: #99d1ff !important;
+  }
+
+  // Code / pre
+  pre, code, kbd, samp {
+    background: #23272d !important;
+    color: #e8e8e8 !important;
+    border-color: #383c43 !important;
+  }
+
+  // Form elements
+  input, select, textarea, button {
+    background: #23272d !important;
+    color: #d6d9dc !important;
+    border-color: #4a4f57 !important;
+  }
+  input::placeholder { color: #8a8e95 !important; }
+
+  // Generic tables: invert striping + headers
+  table {
+    background: transparent !important;
+    color: #d6d9dc !important;
+  }
+  table thead th,
+  th {
+    background-color: #2c3038 !important;
+    color: #f0f0f0 !important;
+    border-color: #4a4f57 !important;
+  }
+  table tbody tr:nth-child(even) td,
+  table tr:nth-child(even) {
+    background-color: #23272d !important;
+  }
+  table tbody tr:nth-child(odd) td,
+  table tr:nth-child(odd) {
+    background-color: #1f2227 !important;
+  }
+  table td, table th {
+    border-color: #383c43 !important;
+  }
+
+  // ReproDB-specific table tweaks
+  #institutionTable th,
+  #combinedTable th,
+  #aeTable th,
+  .reprodb-sortable th {
+    background-color: #2c3038 !important;
+    color: #f0f0f0 !important;
+  }
+  #institutionTable .inst-row:hover,
+  #combinedTable tr:hover,
+  #aeTable tr:hover {
+    background-color: #2f3a44 !important;
+  }
+  #institutionTable .expanded-row {
+    background-color: #1f2227 !important;
+  }
+
+  // Score cards / info boxes
+  .score-card,
+  .notice,
+  .notice--info,
+  .notice--primary {
+    background: #23272d !important;
+    color: #d6d9dc !important;
+    border-color: #383c43 !important;
+  }
+
+  // Chart wrapper background
+  .reprodb-chart svg rect[fill="#fff"] {
+    fill: #1f2227 !important;
+  }
+
+  // Logo ring for dark backgrounds
+  .site-logo img {
+    border: 1.5px solid #4a4f57 !important;
+    border-radius: 10px;
+  }
+
+  // Toggle icon color
+  .theme-toggle__icon { color: #d6d9dc !important; }
+}
+
+// Apply dark theme when OS prefers dark AND user hasn't forced light
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) {
+    color-scheme: dark;
+    @include dark-theme;
+  }
+}
+// Apply dark theme when user explicitly chooses dark
+html[data-theme="dark"] {
+  color-scheme: dark;
+  @include dark-theme;
+}
+
+// ---------------------------------------------------------------------------
+// Theme toggle button
+// ---------------------------------------------------------------------------
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  margin-left: 4px;
+  color: #333;
+  vertical-align: middle;
+}
+.theme-toggle__icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+// Hide both icons by default; JS shows the correct one
+.theme-toggle__sun { display: none; }
+.theme-toggle__moon { display: none; }
+// Hamburger toggle labels hidden by default; JS shows the right one
+.theme-toggle__label { display: none; }
+// Inside hamburger: full-width row matching other items
+#hamburger-menu .theme-toggle-item {
+  border-bottom: 1px solid #eee;
+}
+#hamburger-menu .theme-toggle-item .theme-toggle {
+  display: flex;
+  width: 100%;
+  padding: 0.7em 1em;
+  font-size: 0.9em;
+  gap: 0.5em;
+  color: #333;
+  text-decoration: none;
+}
+html[data-theme="dark"] #hamburger-menu .theme-toggle-item,
+html[data-theme="dark"] #hamburger-menu .theme-toggle-item .theme-toggle {
+  border-color: #383c43;
+  color: #d6d9dc;
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) #hamburger-menu .theme-toggle-item,
+  html:not([data-theme="light"]) #hamburger-menu .theme-toggle-item .theme-toggle {
+    border-color: #383c43;
+    color: #d6d9dc;
+  }
+}
