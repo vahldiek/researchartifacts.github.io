@@ -1,7 +1,6 @@
 ---
 title: "Author Profile"
 permalink: /author.html
-layout: default
 ---
 
 <style>

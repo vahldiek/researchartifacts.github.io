@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Institution Ranking
 institution_data_url: /assets/data/institution_rankings.json
 systems_data_url: /assets/data/systems_institution_rankings.json

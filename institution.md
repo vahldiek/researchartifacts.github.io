@@ -1,7 +1,6 @@
 ---
 title: "Institution Profile"
 permalink: /institution.html
-layout: default
 ---
 
 <style>
