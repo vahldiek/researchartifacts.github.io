@@ -364,11 +364,9 @@ a[href="#footer"] {
     fill: #1f2227 !important;
   }
 
-  // Logo ring for dark backgrounds
-  .site-logo img {
-    border: 1.5px solid #4a4f57 !important;
-    border-radius: 10px;
-  }
+  // Logo: swap R and background colours; DB stays light blue
+  .site-logo .logo-bg { fill: #e2e8f0 !important; }
+  .site-logo .logo-r  { fill: #1a2332 !important; }
 
   // Toggle icon color
   .theme-toggle__icon { color: #d6d9dc !important; }
