@@ -93,11 +93,7 @@
     updatePageInfo();
   }
 
-  function escHtml(s) {
-    var d = document.createElement('div');
-    d.appendChild(document.createTextNode(s));
-    return d.innerHTML;
-  }
+  var escHtml = ReproDB.escHtml;
 
   function sortData() {
     var key = cols[sortCol].key;

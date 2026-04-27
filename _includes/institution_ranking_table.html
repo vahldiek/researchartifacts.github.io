@@ -9,7 +9,6 @@
 {% endcomment %}
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.0.0/css/flag-icons.min.css">
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
 
 <div id="institution-controls" style="margin-bottom:6px; display:none; font-size:1em;">
   <div style="display:flex; flex-wrap:wrap; gap:8px; align-items:center;">
@@ -661,11 +660,7 @@
     updatePageInfo();
   }
 
-  function escHtml(s) {
-    var d = document.createElement('div');
-    d.appendChild(document.createTextNode(s));
-    return d.innerHTML;
-  }
+  var escHtml = ReproDB.escHtml;
 
   function sortData(colIdx, asc) {
     sortedData = filteredData.slice();

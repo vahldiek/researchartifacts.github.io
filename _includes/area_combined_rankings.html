@@ -1,0 +1,24 @@
+{% comment %}
+  Shared combined rankings page content.
+
+  Required page variables:
+    page.area              — 'systems' or 'security'
+    page.area_label        — 'Systems' or 'Security'
+    page.combined_data_url — overall combined rankings JSON
+    page.systems_data_url  — systems-specific JSON
+    page.security_data_url — security-specific JSON
+{% endcomment %}
+
+{% assign area = page.area %}
+{% assign area_label = page.area_label %}
+
+Researchers ranked by weighted contributions (artifact authorship + AE committee service) at {{ area }} conferences. **Scoring:** Each badge (Available, Functional, Reproduced) = 1 pt, each citation = 1 pt; AE membership = 3 pts, AE chair = 5 pts.
+
+<div markdown="0">
+{% include combined_ranking_table.html %}
+</div>
+
+---
+
+{% assign data_key = area | append: '_data_url' %}
+**Data:** [{{ area_label }}]({{ page[data_key] | relative_url }})

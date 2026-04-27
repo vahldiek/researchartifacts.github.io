@@ -159,11 +159,7 @@
     updatePageInfo();
   }
 
-  function escHtml(s) {
-    var d = document.createElement('div');
-    d.appendChild(document.createTextNode(s));
-    return d.innerHTML;
-  }
+  var escHtml = ReproDB.escHtml;
 
   function applyFilter() {
     // Step 1: filter by contribution type (no text search yet)

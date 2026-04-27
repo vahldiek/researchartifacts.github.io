@@ -69,11 +69,7 @@ title: ""
   var availabilityLoaded = false;
   var availabilityCheckedAt = '';
 
-  function escHtml(s) {
-    var d = document.createElement('div');
-    d.appendChild(document.createTextNode(s || ''));
-    return d.innerHTML;
-  }
+  var escHtml = ReproDB.escHtml;
 
   function normalizeText(s) {
     return (s || '').toLowerCase().replace(/[^a-z0-9 ]/g, ' ');

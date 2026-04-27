@@ -93,7 +93,6 @@ layout: default
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
 <script>
 (function() {
   var DATA_URL = '{{ "/assets/data/author_profiles.json" | relative_url }}';
@@ -114,10 +113,7 @@ layout: default
   var chart = null;
   var historyChart = null;
 
-  function escHtml(s) {
-    if (!s) return '';
-    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-  }
+  var escHtml = ReproDB.escHtml;
 
   function cleanName(n) {
     return n.replace(/\s+\d{4}$/, '').replace(/\t/g, ' ');

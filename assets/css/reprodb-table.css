@@ -1,0 +1,33 @@
+/* reprodb-table.css — Shared table styles for ranking/data tables. */
+
+.rdb-tbl {
+  font-size: 0.78em;
+  border-collapse: collapse;
+  width: 100%;
+}
+.rdb-tbl th,
+.rdb-tbl td {
+  padding: 2px 4px;
+  border: 1px solid #ddd;
+  white-space: nowrap;
+}
+.rdb-tbl td.wrap-cell {
+  white-space: normal;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.rdb-tbl th {
+  background-color: #f2f2f2;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.rdb-tbl tr:nth-child(even) { background-color: #f9f9f9; }
+.rdb-tbl tr:hover { background-color: #e8f4f8; }
+
+/* Sortable column headers */
+.cp-sortable { cursor: pointer; }
+.cp-sortable::after { content: '\2195'; opacity: 0.3; margin-left: 2px; font-size: 0.75em; }
+.cp-sorted-asc::after { content: '\2191'; opacity: 1; }
+.cp-sorted-desc::after { content: '\2193'; opacity: 1; }

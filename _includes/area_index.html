@@ -1,0 +1,120 @@
+{% comment %}
+  Shared area index page content.
+
+  Required page variables:
+    page.area          — 'systems' or 'security'
+    page.area_label    — 'Systems' or 'Security'
+    page.chart_colors  — comma-separated hex colors for the conference chart
+    page.rankings_url  — path to combined rankings JSON
+    page.top_repos_url — path to top repos JSON
+{% endcomment %}
+
+{% assign area = page.area %}
+{% assign area_label = page.area_label %}
+{% assign summary_key = area | append: "_conferences" %}
+
+Artifact evaluation statistics for {{ area }} conferences ({{ site.data.summary[summary_key] | join: ", " }}).
+
+Each cell shows **total (available, functional, reproduced)**.
+
+{% if site.data.artifacts_by_conference %}
+
+## Artifacts per Conference
+
+<div style="width:100%; max-width:400px; margin:1em 0;">
+<canvas id="areaConfChart" height="200"></canvas>
+</div>
+
+| Conference | Total | {% for y in site.data.artifacts_by_year reversed %}{{ y.year }} | {% endfor %}
+|---|:---:|{% for y in site.data.artifacts_by_year reversed %}:---:|{% endfor %}
+{% for conf in site.data.artifacts_by_conference %}{% if conf.category == area %}{% assign _conf_url = '/' | append: conf.category | append: '/' | append: conf.name | downcase | append: '.html' %}| [**{{ conf.name }}**]({{ _conf_url | relative_url }}) | {% assign _ct = 0 %}{% assign _ca = 0 %}{% assign _cf = 0 %}{% assign _cr = 0 %}{% for yd in conf.years %}{% assign _ct = _ct | plus: yd.total %}{% assign _ca = _ca | plus: yd.available %}{% assign _cf = _cf | plus: yd.functional %}{% assign _cr = _cr | plus: yd.reproducible %}{% endfor %}**{{ _ct }}** ({{ _ca }}, {{ _cf }}, {{ _cr }}) | {% for y in site.data.artifacts_by_year reversed %}{% assign _found = false %}{% for yd in conf.years %}{% if yd.year == y.year %}{% assign _found = true %}{{ yd.total }} ({{ yd.available }}, {{ yd.functional }}, {{ yd.reproducible }}){% endif %}{% endfor %}{% unless _found %}&ndash;{% endunless %} | {% endfor %}
+{% endif %}{% endfor %}
+
+{% else %}
+
+*Statistics data is being generated. Please check back soon.*
+
+{% endif %}
+
+
+## Top 10 Most Prolific Contributors
+
+Ranked by combined score (artifacts published + AE committee memberships) at {{ area }} conferences. See the full [{{ area }} combined rankings]({{ '/' | append: area | append: '/combined_rankings.html' | relative_url }}) for more.
+
+<table id="areaTop10Table">
+<thead><tr><th>#</th><th>Name</th><th>Affiliation</th><th>Artifacts</th><th>AE&nbsp;Memberships</th><th>AE&nbsp;Chair</th><th>Score</th><th>Conferences</th></tr></thead>
+<tbody><tr><td colspan="8"><em>Loading…</em></td></tr></tbody>
+</table>
+
+<script>
+(function(){
+  fetch('{{ page.rankings_url | relative_url }}')
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      data.sort(function(a,b){ return (b.combined_score||0) - (a.combined_score||0); });
+      var top = data.slice(0, 10);
+      var tbody = document.querySelector('#areaTop10Table tbody');
+      tbody.innerHTML = '';
+      top.forEach(function(e, i){
+        var name = (e.name || '').replace(/\t/g, ' ').replace(/\s+\d{4}$/, '');
+        var aff  = (e.affiliation || '').replace(/^_/, '');
+        var confs = (e.conferences || []).join(', ');
+        var tr = document.createElement('tr');
+        tr.innerHTML = '<td>' + (i+1) + '</td>'
+          + '<td>' + ReproDB.escHtml(name) + '</td>'
+          + '<td>' + ReproDB.escHtml(aff) + '</td>'
+          + '<td>' + (e.artifacts||0) + '</td>'
+          + '<td>' + (e.ae_memberships||0) + '</td>'
+          + '<td>' + (e.chair_count||0) + '</td>'
+          + '<td><strong>' + (e.combined_score||0) + '</strong></td>'
+          + '<td>' + ReproDB.escHtml(confs) + '</td>';
+        tbody.appendChild(tr);
+      });
+    });
+})();
+</script>
+
+## Repository Statistics
+
+{% if site.data.repo_stats.by_conference.size > 0 %}
+High-level GitHub repository metrics for {{ area }} conferences. See the full [{{ area }} repository statistics]({{ '/' | append: area | append: '/repo_stats.html' | relative_url }}) for charts and details.
+
+| Conference | GitHub Repos | Total Stars | Avg Stars | Total Forks | Avg Forks | Max Stars |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|
+{% for c in site.data.repo_stats.by_conference %}{% assign _match = false %}{% for conf in site.data.artifacts_by_conference %}{% if conf.name == c.name and conf.category == area %}{% assign _match = true %}{% endif %}{% endfor %}{% if _match %}| **{{ c.name }}** | {{ c.github_repos }} | {{ c.total_stars }} | {{ c.avg_stars }} | {{ c.total_forks }} | {{ c.avg_forks }} | {{ c.max_stars }} |
+{% endif %}{% endfor %}
+{% else %}
+*Repository statistics not yet available.*
+{% endif %}
+
+{% if site.data.artifacts_by_conference %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var years = [{% for y in site.data.artifacts_by_year %}"{{ y.year }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+  var confColors = '{{ page.chart_colors }}'.split(',');
+  var confDatasets = [];
+  {% assign ci = 0 %}{% for conf in site.data.artifacts_by_conference %}{% if conf.category == area %}
+  (function(){
+    var data = [];
+    var confYears = { {% for yd in conf.years %}"{{ yd.year }}": {{ yd.total }}{% unless forloop.last %},{% endunless %}{% endfor %} };
+    years.forEach(function(yr){ data.push(confYears[yr] || 0); });
+    confDatasets.push({ label: "{{ conf.name }}", data: data, borderColor: confColors[{{ ci }}%confColors.length], fill: false, tension: 0.2 });
+  })();
+  {% assign ci = ci | plus: 1 %}{% endif %}{% endfor %}
+
+  new Chart(document.getElementById('areaConfChart'), {
+    type: 'line',
+    data: { labels: years, datasets: confDatasets },
+    options: {
+      responsive: true,
+      plugins: { title: { display: true, text: '{{ area_label }}: Artifacts per Conference' } },
+      scales: { y: { beginAtZero: true, title: { display: true, text: 'Artifacts' } } }
+    }
+  });
+});
+</script>
+{% endif %}
+
+---
+
+**Data:** [Artifacts by Conference]({{ '/assets/data/artifacts.json' | relative_url }}) | [Rankings]({{ page.rankings_url | relative_url }}) | [Repository Stats]({{ page.top_repos_url | relative_url }})

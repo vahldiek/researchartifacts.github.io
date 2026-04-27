@@ -8,7 +8,6 @@ data_url: /assets/data/institution_rankings.json
 This page aggregates institution ranking data by country and continent, showing how artifact evaluation engagement is distributed geographically.
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.0.0/css/flag-icons.min.css">
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 
 <div id="geo-loading"><em>Loading institution data…</em></div>
 
