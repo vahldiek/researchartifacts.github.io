@@ -22,9 +22,6 @@ collections:
     output: true
     permalink: /:path
 
-exclude:
-  - _data/all_results_cache.yml
-
 # Apply the default layout to all files
 defaults:
   - scope:
