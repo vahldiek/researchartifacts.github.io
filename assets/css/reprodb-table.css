@@ -26,8 +26,11 @@
 .rdb-tbl tr:nth-child(even) { background-color: #f9f9f9; }
 .rdb-tbl tr:hover { background-color: #e8f4f8; }
 
-/* Sortable column headers */
-.cp-sortable { cursor: pointer; }
-.cp-sortable::after { content: '\2195'; opacity: 0.3; margin-left: 2px; font-size: 0.75em; }
-.cp-sorted-asc::after { content: '\2191'; opacity: 1; }
-.cp-sorted-desc::after { content: '\2193'; opacity: 1; }
+/* Sortable column headers — canonical class used across all ReproDB tables.
+   Apply class="reprodb-sortable" to a <th>; toggle "sorted-asc" / "sorted-desc"
+   to display the active indicator. Bound automatically by
+   ReproDB.bindSortableHeaders (assets/js/reprodb-utils.js). */
+.reprodb-sortable { cursor: pointer; }
+.reprodb-sortable::after { content: '\2195'; opacity: 0.3; margin-left: 2px; font-size: 0.75em; }
+.reprodb-sortable.sorted-asc::after { content: '\2191'; opacity: 1; }
+.reprodb-sortable.sorted-desc::after { content: '\2193'; opacity: 1; }

@@ -292,36 +292,21 @@
 
   function buildHeader() {
     var tr = document.getElementById('combinedHead');
-    tr.innerHTML = '';
     var allCols = fixedCols.slice();
     // Update score column tooltip dynamically
     allCols[3].tip = getScoreLabel();
     for (var i = 0; i < yearColumns.length; i++) {
       allCols.push({label: shortenYear(yearColumns[i]), key:'_y' + yearColumns[i], type:'num'});
     }
-    for (var ci = 0; ci < allCols.length; ci++) {
-      var th = document.createElement('th');
-      th.innerHTML = allCols[ci].label;
-      th.className = 'c-sortable';
-      th.dataset.colIdx = ci;
-      th.style.cursor = 'pointer';
-      th.title = allCols[ci].tip || '';
-      if (ci === sortCol) th.classList.add(sortAsc ? 'c-sorted-asc' : 'c-sorted-desc');
-      th.addEventListener('click', (function(idx) {
-        return function(e) {
-          if (sortCol === idx) { sortAsc = !sortAsc; }
-          else { sortCol = idx; sortAsc = false; }
-          sortData(sortCol, sortAsc);
-          assignRanks();
-          currentPage = 0;
-          render();
-          var ths = document.getElementById('combinedHead').querySelectorAll('.c-sortable');
-          ths.forEach(function(h) { h.classList.remove('c-sorted-asc','c-sorted-desc'); });
-          e.currentTarget.classList.add(sortAsc ? 'c-sorted-asc' : 'c-sorted-desc');
-        };
-      })(ci));
-      tr.appendChild(th);
-    }
+    ReproDB.bindSortableHeaders(tr, allCols, { col: sortCol, asc: sortAsc }, function(idx) {
+      if (sortCol === idx) { sortAsc = !sortAsc; }
+      else { sortCol = idx; sortAsc = false; }
+      sortData(sortCol, sortAsc);
+      assignRanks();
+      currentPage = 0;
+      render();
+      return sortAsc;
+    });
   }
 
   function assignRanks() {
@@ -449,6 +434,7 @@
 </script>
 
 <style>
+/* Sortable header rules live in assets/css/reprodb-table.css (.reprodb-sortable). */
 #combinedTable { font-size: 0.78em; border-collapse: collapse; width: 100%; }
 #combinedTable th, #combinedTable td { padding: 2px 4px; border: 1px solid #ddd; }
 #combinedTable th:nth-child(3), #combinedTable td:nth-child(3) { max-width: 200px; word-wrap: break-word; white-space: normal; }
@@ -456,7 +442,4 @@
 #combinedTable th { background-color: #f2f2f2; position: sticky; top: 0; z-index: 1; }
 #combinedTable tr:nth-child(even) { background-color: #f9f9f9; }
 #combinedTable tr:hover { background-color: #e8f4f8; }
-.c-sortable::after { content: '\2195'; opacity: 0.3; margin-left: 2px; font-size: 0.75em; }
-.c-sorted-asc::after { content: '\2191'; opacity: 1; }
-.c-sorted-desc::after { content: '\2193'; opacity: 1; }
 </style>

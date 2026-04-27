@@ -88,20 +88,9 @@
     var col = this.cols[this.sortCol];
     if (!col) return;
     var key = col.key, type = col.type, asc = this.sortAsc;
-    var cmp = function(a, b) {
-      var av = a[key], bv = b[key];
-      if (av == null) av = type === 'alpha' ? '' : 0;
-      if (bv == null) bv = type === 'alpha' ? '' : 0;
-      if (type === 'alpha') { av = String(av).toLowerCase(); bv = String(bv).toLowerCase(); }
-      if (av < bv) return asc ? -1 : 1;
-      if (av > bv) return asc ? 1 : -1;
-      return 0;
-    };
-    var full = this.allData.slice();
-    full.sort(cmp);
+    var full = R.sortRows(this.allData.slice(), key, type, asc);
     for (var i = 0; i < full.length; i++) full[i]._rank = i + 1;
-    this.sorted = this.filtered.slice();
-    this.sorted.sort(cmp);
+    this.sorted = R.sortRows(this.filtered.slice(), key, type, asc);
   };
 
   Top10Table.prototype.render = function() {
@@ -128,27 +117,14 @@
   Top10Table.prototype.buildHeader = function() {
     var self = this;
     var tr = document.getElementById(this.headId);
-    tr.innerHTML = '';
-    for (var c = 0; c < this.cols.length; c++) {
-      var th = document.createElement('th');
-      th.textContent = this.cols[c].label;
-      th.className = 'cp-sortable';
-      if (this.cols[c].tip) th.title = this.cols[c].tip;
-      if (c === this.sortCol) th.classList.add(this.sortAsc ? 'cp-sorted-asc' : 'cp-sorted-desc');
-      th.addEventListener('click', (function(idx) {
-        return function(e) {
-          if (self.sortCol === idx) self.sortAsc = !self.sortAsc;
-          else { self.sortCol = idx; self.sortAsc = false; }
-          self.doSort();
-          self.page = 0;
-          self.render();
-          var ths = document.getElementById(self.headId).querySelectorAll('.cp-sortable');
-          ths.forEach(function(h) { h.classList.remove('cp-sorted-asc', 'cp-sorted-desc'); });
-          e.currentTarget.classList.add(self.sortAsc ? 'cp-sorted-asc' : 'cp-sorted-desc');
-        };
-      })(c));
-      tr.appendChild(th);
-    }
+    R.bindSortableHeaders(tr, this.cols, { col: this.sortCol, asc: this.sortAsc }, function(idx) {
+      if (self.sortCol === idx) self.sortAsc = !self.sortAsc;
+      else { self.sortCol = idx; self.sortAsc = false; }
+      self.doSort();
+      self.page = 0;
+      self.render();
+      return self.sortAsc;
+    });
   };
 
   R.Top10Table = Top10Table;

@@ -729,36 +729,21 @@
 
   function buildHeader() {
     var tr = document.getElementById('institutionHead');
-    tr.innerHTML = '';
     var allCols = fixedCols.slice();
     // Update score column tooltip dynamically
     allCols[2].tip = getScoreLabel();
     for (var i = 0; i < yearColumns.length; i++) {
       allCols.push({label: shortenYear(yearColumns[i]), key:'_y' + yearColumns[i], type:'num'});
     }
-    for (var ci = 0; ci < allCols.length; ci++) {
-      var th = document.createElement('th');
-      th.innerHTML = allCols[ci].label;
-      th.className = 'i-sortable';
-      th.dataset.colIdx = ci;
-      th.style.cursor = 'pointer';
-      th.title = allCols[ci].tip || '';
-      if (ci === sortCol) th.classList.add(sortAsc ? 'i-sorted-asc' : 'i-sorted-desc');
-      th.addEventListener('click', (function(idx) {
-        return function(e) {
-          if (sortCol === idx) { sortAsc = !sortAsc; }
-          else { sortCol = idx; sortAsc = false; }
-          sortData(sortCol, sortAsc);
-          assignRanks();
-          currentPage = 0;
-          render();
-          var ths = document.getElementById('institutionHead').querySelectorAll('.i-sortable');
-          ths.forEach(function(h) { h.classList.remove('i-sorted-asc','i-sorted-desc'); });
-          e.currentTarget.classList.add(sortAsc ? 'i-sorted-asc' : 'i-sorted-desc');
-        };
-      })(ci));
-      tr.appendChild(th);
-    }
+    ReproDB.bindSortableHeaders(tr, allCols, { col: sortCol, asc: sortAsc }, function(idx) {
+      if (sortCol === idx) { sortAsc = !sortAsc; }
+      else { sortCol = idx; sortAsc = false; }
+      sortData(sortCol, sortAsc);
+      assignRanks();
+      currentPage = 0;
+      render();
+      return sortAsc;
+    });
   }
 
   function assignRanks() {
@@ -906,6 +891,7 @@
 </script>
 
 <style>
+/* Sortable header rules live in assets/css/reprodb-table.css (.reprodb-sortable). */
 #institutionTable { font-size: 0.78em; border-collapse: collapse; width: 100%; }
 #institutionTable th, #institutionTable td { padding: 2px 4px; border: 1px solid #ddd; }
 #institutionTable th:nth-child(2), #institutionTable td:nth-child(2) { max-width: 200px; word-wrap: break-word; white-space: normal; }
@@ -915,9 +901,6 @@
 #institutionTable .inst-row:hover { background-color: #e8f4f8; }
 #institutionTable .expanded-row { background-color: #f9f9f9 !important; }
 #institutionTable .expanded-row:hover { background-color: #f9f9f9 !important; }
-.i-sortable::after { content: '\2195'; opacity: 0.3; margin-left: 2px; font-size: 0.75em; }
-.i-sorted-asc::after { content: '\2191'; opacity: 1; }
-.i-sorted-desc::after { content: '\2193'; opacity: 1; }
 .expand-btn { display: inline-block; font-size: 0.8em; color: #666; }
 .expand-btn:hover { color: #000; }
 /* Flag icons styling */

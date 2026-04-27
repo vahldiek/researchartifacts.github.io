@@ -169,34 +169,19 @@
 
   function buildHeader() {
     var tr = document.getElementById('memberHead');
-    tr.innerHTML = '';
     var allCols = fixedCols.slice();
     for (var i = 0; i < yearColumns.length; i++) {
       allCols.push({label: shortenYear(yearColumns[i]), key:'_y' + yearColumns[i], type:'num'});
     }
-    for (var c = 0; c < allCols.length; c++) {
-      var th = document.createElement('th');
-      th.innerHTML = allCols[c].label;
-      th.className = 'sortable';
-      th.dataset.colIdx = c;
-      th.style.cursor = 'pointer';
-      if (allCols[c].tip) th.title = allCols[c].tip;
-      if (c === sortCol) th.classList.add(sortAsc ? 'sorted-asc' : 'sorted-desc');
-      th.addEventListener('click', (function(idx) {
-        return function(e) {
-          if (sortCol === idx) { sortAsc = !sortAsc; }
-          else { sortCol = idx; sortAsc = false; }
-          sortData(sortCol, sortAsc);
-          assignRanks();
-          currentPage = 0;
-          render();
-          var ths = document.getElementById('memberHead').querySelectorAll('.sortable');
-          ths.forEach(function(h) { h.classList.remove('sorted-asc','sorted-desc'); });
-          e.currentTarget.classList.add(sortAsc ? 'sorted-asc' : 'sorted-desc');
-        };
-      })(c));
-      tr.appendChild(th);
-    }
+    ReproDB.bindSortableHeaders(tr, allCols, { col: sortCol, asc: sortAsc }, function(idx) {
+      if (sortCol === idx) { sortAsc = !sortAsc; }
+      else { sortCol = idx; sortAsc = false; }
+      sortData(sortCol, sortAsc);
+      assignRanks();
+      currentPage = 0;
+      render();
+      return sortAsc;
+    });
   }
 
   function assignRanks() {
@@ -270,6 +255,7 @@
 </script>
 
 <style>
+/* Sortable header rules live in assets/css/reprodb-table.css (.reprodb-sortable). */
 #memberTable { font-size: 0.78em; border-collapse: collapse; width: 100%; }
 #memberTable th, #memberTable td { padding: 2px 4px; border: 1px solid #ddd; }
 #memberTable th:nth-child(5), #memberTable td:nth-child(5) { max-width: 200px; word-wrap: break-word; white-space: normal; }
@@ -277,6 +263,4 @@
 #memberTable th { background-color: #f2f2f2; position: sticky; top: 0; z-index: 1; }
 #memberTable tr:nth-child(even) { background-color: #f9f9f9; }
 #memberTable tr:hover { background-color: #e8f4f8; }
-.sortable::after { content: '\2195'; opacity: 0.3; margin-left: 2px; font-size: 0.75em; }
-.sorted-desc::after { content: '\2193'; opacity: 1; }
 </style>
