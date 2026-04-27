@@ -1,7 +1,9 @@
-FROM jekyll/jekyll:4
+FROM ruby:3.3-slim
 
-# Copy Gemfile and install dependencies into the image
-COPY Gemfile /srv/jekyll/Gemfile
-RUN bundle install --jobs 4 --retry 3
+RUN apt-get update && apt-get install -y --no-install-recommends \
+      build-essential git && \
+    rm -rf /var/lib/apt/lists/*
 
 WORKDIR /srv/jekyll
+COPY Gemfile /srv/jekyll/Gemfile
+RUN bundle install --jobs 4 --retry 3

@@ -29,10 +29,13 @@ fi
 echo "Starting Jekyll at http://localhost:${PORT}${BASEURL}/"
 echo "Press Ctrl+C to stop."
 
+# Build the image if it doesn't exist or Dockerfile/Gemfile changed
+docker build -t reprodb-jekyll "$SITE_DIR"
+
 docker run --rm \
     -v "$SITE_DIR:/srv/jekyll:Z" \
     -p "${PORT}:${PORT}" \
     -p 35729:35729 \
     -e JEKYLL_ENV=development \
-    jekyll/jekyll:4 \
-    jekyll serve $JEKYLL_ARGS
+    reprodb-jekyll \
+    bundle exec jekyll serve $JEKYLL_ARGS
