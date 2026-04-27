@@ -58,10 +58,12 @@
 <script>
 (function() {
   var DATA_URLS = {
-    'all': '{{ page.combined_data_url | relative_url }}',
-    'systems': '{{ page.systems_data_url | relative_url }}',
-    'security': '{{ page.security_data_url | relative_url }}'
+    'all': '{{ page.combined_data_url | default: "/assets/data/combined_rankings.json" | relative_url }}',
+    'systems': '{{ "/assets/data/combined_rankings_scoped.json" | relative_url }}',
+    'security': '{{ "/assets/data/combined_rankings_scoped.json" | relative_url }}'
   };
+  /* When loading a non-'all' area, filter the consolidated scoped file by scope. */
+  var DATA_SCOPE = { 'systems': 'systems', 'security': 'security' };
   var HISTORY_URL = '{{ "/assets/data/ranking_history.json" | relative_url }}';
   var currentArea = '{{ page.default_area | default: "all" }}';
   var baseUrl = '{{ "" | relative_url }}';
@@ -368,6 +370,10 @@
     
     fetch(DATA_URLS[area])
       .then(function(r) { return r.json(); })
+      .then(function(rows) {
+        var scope = DATA_SCOPE[area];
+        return scope ? window.ReproDB.filterByScope(rows, scope) : rows;
+      })
       .then(init)
       .catch(function(e) {
         document.getElementById('combinedLoading').innerHTML =

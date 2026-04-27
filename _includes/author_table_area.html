@@ -186,12 +186,13 @@
     }).init(rawData);
   }
 
-  /* ── Load data ─────────────────────────────────────────────────────── */
-  var authorUrl = '{{ page.author_data_url | relative_url }}';
-  var instUrl = '{{ page.institution_data_url | relative_url }}';
+  /* ── Load data (filtered from consolidated scoped files) ───────────── */
+  var R = window.ReproDB;
+  var dataBase = '{{ "/assets/data/" | relative_url }}';
+  var scope = '{{ page.scope | default: page.area }}';
   Promise.all([
-    fetch(authorUrl).then(function(r) { return r.json(); }),
-    fetch(instUrl).then(function(r) { return r.json(); })
+    R.fetchScoped(dataBase + 'combined_rankings_scoped.json', scope),
+    R.fetchScoped(dataBase + 'institution_rankings_scoped.json', scope)
   ]).then(function(results) {
     initAuthors(results[0]);
     initInstitutions(results[1]);

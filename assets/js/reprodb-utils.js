@@ -24,6 +24,54 @@
   };
 
   /**
+   * Filter a scoped dataset by `scope` and strip the tag from the result.
+   * The scoped JSON files (combined_rankings_scoped.json,
+   * institution_rankings_scoped.json) consolidate per-area and per-conference
+   * rankings into one file. Each row carries `scope` ∈ {'systems','security',
+   * 'osdi', 'usenixsec', ...}. After filtering, the rows are shape-compatible
+   * with the legacy per-scope files.
+   *
+   * @param {Array} rows  - rows from a *_scoped.json file
+   * @param {string} scope - tag to keep
+   * @returns {Array} new array of rows with `scope` removed
+   */
+  R.filterByScope = function(rows, scope) {
+    if (!Array.isArray(rows)) return [];
+    var out = [];
+    for (var i = 0; i < rows.length; i++) {
+      if (rows[i] && rows[i].scope === scope) {
+        var clone = {};
+        for (var k in rows[i]) {
+          if (k !== 'scope' && Object.prototype.hasOwnProperty.call(rows[i], k)) {
+            clone[k] = rows[i][k];
+          }
+        }
+        out.push(clone);
+      }
+    }
+    return out;
+  };
+
+  /**
+   * Cached fetch of a scoped JSON file. Subsequent calls for the same URL
+   * resolve from the in-memory cache, so callers can request multiple scopes
+   * from the same file without triggering multiple HTTP requests.
+   *
+   * @param {string} url - path to a *_scoped.json file
+   * @param {string} scope - scope to return
+   * @returns {Promise<Array>} promise resolving to filtered rows
+   */
+  R._scopedCache = {};
+  R.fetchScoped = function(url, scope) {
+    if (!R._scopedCache[url]) {
+      R._scopedCache[url] = R.fetchJSON(url);
+    }
+    return R._scopedCache[url].then(function(rows) {
+      return R.filterByScope(rows, scope);
+    });
+  };
+
+  /**
    * Generic null-safe sort, in place. Mirrors the comparator used by
    * ReproDB.Top10Table.doSort: missing values default to '' (alpha) or 0 (num),
    * and alpha keys are compared case-insensitively.

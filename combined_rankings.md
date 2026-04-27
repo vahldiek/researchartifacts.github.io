@@ -2,8 +2,6 @@
 title: "Author Rankings"
 permalink: /combined_rankings.html
 combined_data_url: /assets/data/combined_rankings.json
-systems_data_url: /assets/data/systems_combined_rankings.json
-security_data_url: /assets/data/security_combined_rankings.json
 ---
 
 Researchers ranked by weighted contributions (artifact authorship + AE committee service). **Scoring:** Each badge = 1 pt; AE membership = 3 pts; AE chair = 5 pts. Minimum combined score ≥ 3 required.
@@ -18,4 +16,4 @@ Researchers ranked by weighted contributions (artifact authorship + AE committee
 
 ---
 
-**Data:** [All Conferences]({{ '/assets/data/combined_rankings.json' | relative_url }}) | [Systems]({{ '/assets/data/systems_combined_rankings.json' | relative_url }}) | [Security]({{ '/assets/data/security_combined_rankings.json' | relative_url }})
+**Data:** [All Conferences]({{ '/assets/data/combined_rankings.json' | relative_url }}) | [Per-area / per-conference]({{ '/assets/data/combined_rankings_scoped.json' | relative_url }}) (filter by `scope`)

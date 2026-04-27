@@ -20,5 +20,4 @@ Researchers ranked by weighted contributions (artifact authorship + AE committee
 
 ---
 
-{% assign data_key = area | append: '_data_url' %}
-**Data:** [{{ area_label }}]({{ page[data_key] | relative_url }})
+**Data:** [{{ area_label }}]({{ '/assets/data/combined_rankings_scoped.json' | relative_url }}) (filter `scope: "{{ area }}"`) | [All]({{ '/assets/data/combined_rankings.json' | relative_url }})

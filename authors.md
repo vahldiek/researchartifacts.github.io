@@ -18,4 +18,4 @@ Authors ranked by number of evaluated artifacts, split by research area. Click a
 
 ---
 
-**Data:** [All Conferences]({{ '/assets/data/combined_rankings.json' | relative_url }}) | [Systems]({{ '/assets/data/systems_combined_rankings.json' | relative_url }}) | [Security]({{ '/assets/data/security_combined_rankings.json' | relative_url }})
+**Data:** [All Conferences]({{ '/assets/data/combined_rankings.json' | relative_url }}) | [Per-area / per-conference]({{ '/assets/data/combined_rankings_scoped.json' | relative_url }}) (filter by `scope`)

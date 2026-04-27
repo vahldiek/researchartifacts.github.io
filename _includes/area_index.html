@@ -48,8 +48,9 @@ Ranked by combined score (artifacts published + AE committee memberships) at {{ 
 
 <script>
 (function(){
-  fetch('{{ page.rankings_url | relative_url }}')
-    .then(function(r){ return r.json(); })
+  /* Load the consolidated scoped file and filter for this area. */
+  var scope = '{{ page.scope | default: page.area }}';
+  ReproDB.fetchScoped('{{ "/assets/data/combined_rankings_scoped.json" | relative_url }}', scope)
     .then(function(data){
       data.sort(function(a,b){ return (b.combined_score||0) - (a.combined_score||0); });
       var top = data.slice(0, 10);
@@ -117,4 +118,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ---
 
-**Data:** [Artifacts by Conference]({{ '/assets/data/artifacts.json' | relative_url }}) | [Rankings]({{ page.rankings_url | relative_url }}) | [Repository Stats]({{ page.top_repos_url | relative_url }})
+**Data:** [Artifacts by Conference]({{ '/assets/data/artifacts.json' | relative_url }}) | [Rankings]({{ '/assets/data/combined_rankings_scoped.json' | relative_url }}) (filter `scope: "{{ page.scope | default: page.area }}"`) | [Repository Stats]({{ page.top_repos_url | relative_url }})

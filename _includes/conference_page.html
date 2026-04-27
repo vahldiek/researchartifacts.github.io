@@ -231,8 +231,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   /* ── AUTHORS — from pre-computed per-conference combined rankings ──── */
   function initAuthors(rawData) {
-    /* rawData is e.g. osdi_combined_rankings.json — already has
-       combined_score, artifact_score, ae_score, rank, years, etc. */
+    /* rawData is the slice of combined_rankings_scoped.json filtered for this
+       conference; rows already have combined_score, artifact_score, ae_score,
+       rank, years, etc. (the `scope` field has been stripped by filterByScope). */
     var yrs = {};
     for (var i = 0; i < rawData.length; i++) {
       var d = rawData[i];
@@ -401,10 +402,11 @@ document.addEventListener('DOMContentLoaded', function() {
   /* ── Load all data in parallel ─────────────────────────────────────── */
   var dataBase = '{{ "/assets/data/" | relative_url }}';
   var confLower = CONF.toLowerCase();
+  var R = window.ReproDB;
   Promise.all([
-    fetch(dataBase + confLower + '_combined_rankings.json').then(function(r) { return r.json(); }),
-    fetch(dataBase + confLower + '_institution_rankings.json').then(function(r) { return r.json(); }),
-    fetch(dataBase + 'ae_members.json').then(function(r) { return r.json(); })
+    R.fetchScoped(dataBase + 'combined_rankings_scoped.json', confLower),
+    R.fetchScoped(dataBase + 'institution_rankings_scoped.json', confLower),
+    R.fetchJSON(dataBase + 'ae_members.json')
   ]).then(function(results) {
     initAuthors(results[0]);
     initInstitutions(results[1]);
