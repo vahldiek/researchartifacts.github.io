@@ -211,7 +211,10 @@ document.addEventListener('DOMContentLoaded', function() {
     options: {
       responsive: true,
       plugins: { title: { display: true, text: '{{ conf_display }}: Artifacts by Year' } },
-      scales: { y: { beginAtZero: true, title: { display: true, text: 'Count' } } }
+      scales: {
+        y: { beginAtZero: true, title: { display: true, text: 'Count' } },
+        x: { ticks: { maxRotation: 45, minRotation: 0 } }
+      }
     }
   });
 });
