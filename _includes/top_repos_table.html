@@ -85,7 +85,7 @@
       cells.push('<td>' + (r.forks || 0) + '</td>');
       cells.push('<td>' + escHtml(r.conference || '') + '</td>');
       cells.push('<td>' + (r.year || '') + '</td>');
-      cells.push('<td>' + escHtml(r.badges || '') + '</td>');
+      cells.push('<td>' + badgeHtml(r.badges || '') + '</td>');
       cells.push('<td>' + escHtml(r.last_active || '') + '</td>');
       rows.push('<tr>' + cells.join('') + '</tr>');
     }
@@ -97,6 +97,19 @@
     var d = document.createElement('div');
     d.appendChild(document.createTextNode(s));
     return d.innerHTML;
+  }
+
+  function badgeHtml(badges) {
+    if (!badges) return '';
+    var list = Array.isArray(badges) ? badges : badges.split(',');
+    return list.map(function(b) {
+      var bl = b.trim().toLowerCase();
+      if (!bl) return '';
+      var cls = 'badge-available';
+      if (bl.indexOf('functional') >= 0) cls = 'badge-functional';
+      else if (bl.indexOf('reproduc') >= 0 || bl.indexOf('reusable') >= 0) cls = 'badge-reproducible';
+      return '<span class="badge-tag ' + cls + '">' + escHtml(b.trim()) + '</span>';
+    }).join(' ');
   }
 
   function sortData() {
