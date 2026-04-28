@@ -38,7 +38,7 @@ layout: default
 
   <div id="inst-history-section" style="display:none;">
     <h3>Ranking History</h3>
-    <div class="chart-container"><canvas id="instHistoryChart" height="290"></canvas></div>
+    <div class="chart-container"><canvas id="instHistoryChart"></canvas></div>
   </div>
 
   <div id="inst-contributors-section" style="display:none;">
@@ -258,6 +258,7 @@ layout: default
       },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
         interaction: { mode: 'index', intersect: false },
         plugins: { legend: { display: true } },
         scales: {

@@ -38,7 +38,7 @@ layout: default
 
   <div id="chart-section" style="display:none;">
     <h3>Contributions Over Time</h3>
-    <div class="chart-container"><canvas id="timelineChart" height="290"></canvas></div>
+    <div class="chart-container"><canvas id="timelineChart"></canvas></div>
   </div>
 
   <div id="papers-section" style="display:none;">
@@ -69,7 +69,7 @@ layout: default
 
   <div id="history-section" style="display:none;">
     <h3>Ranking History</h3>
-    <div class="chart-container"><canvas id="historyChart" height="290"></canvas></div>
+    <div class="chart-container"><canvas id="historyChart"></canvas></div>
   </div>
 </div>
 
@@ -275,6 +275,7 @@ layout: default
       data: { labels: allYears.map(String), datasets: datasets },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: { legend: { display: datasets.length > 1 }, title: { display: false } },
         scales: { y: { beginAtZero: true, ticks: { stepSize: 1, precision: 0 } } }
       }
@@ -329,6 +330,7 @@ layout: default
       },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
         interaction: { mode: 'index', intersect: false },
         plugins: { legend: { display: true } },
         scales: {
