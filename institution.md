@@ -4,29 +4,15 @@ permalink: /institution.html
 layout: default
 ---
 
+{% include profile_common.html %}
+
 <style>
-#inst-search-box { padding:8px 14px; font-size:1em; width:100%; max-width:480px; border:1px solid #ccc; border-radius:4px; }
-#inst-search-results { list-style:none; padding:0; margin:4px 0 0 0; max-height:260px; overflow-y:auto; border:1px solid #ddd; border-radius:4px; display:none; position:absolute; background:#fff; z-index:100; width:100%; max-width:480px; }
-#inst-search-results li { padding:8px 14px; cursor:pointer; border-bottom:1px solid #f0f0f0; }
-#inst-search-results li:hover, #inst-search-results li.active { background:#e8f4f8; }
-#inst-profile { display:none; margin-top:20px; }
-.profile-header { margin-bottom:18px; }
-.profile-header h2 { margin-bottom:2px; }
-.score-cards { display:flex; flex-wrap:wrap; gap:12px; margin:16px 0; }
-.score-card { background:#f7f7f7; border:1px solid #e0e0e0; border-radius:6px; padding:12px 18px; min-width:110px; text-align:center; }
-.score-card .val { font-size:1.6em; font-weight:bold; color:#2c3e50; }
-.score-card .lbl { font-size:0.78em; color:#777; margin-top:2px; }
+/* Institution-specific styles */
 .inst-table { font-size:0.88em; border-collapse:collapse; width:100%; margin:10px 0; }
 .inst-table th, .inst-table td { padding:6px 10px; border:1px solid #ddd; text-align:left; }
 .inst-table th { background:#f2f2f2; white-space:nowrap; cursor:pointer; }
 .inst-table tr:nth-child(even) { background:#fafafa; }
 .inst-table tr:hover { background:#e8f4f8; }
-.badge-tag { display:inline-block; padding:2px 8px; border-radius:3px; font-size:0.8em; margin:1px 2px; color:#fff; }
-.badge-available { background:#3498db; }
-.badge-functional { background:#27ae60; }
-.badge-reproducible, .badge-reproduced, .badge-reusable { background:#8e44ad; }
-.chart-container { max-width:1050px; margin:16px 0; }
-#inst-loading { color:#888; font-style:italic; }
 .pag-controls { margin:8px 0; font-size:0.9em; }
 .pag-controls button { padding:2px 8px; font-size:0.9em; }
 .pag-controls span { margin:0 8px; }
@@ -37,15 +23,15 @@ layout: default
 </style>
 
 <div style="position:relative;">
-  <input type="text" id="inst-search-box" placeholder="Search for an institution..." autocomplete="off">
-  <ul id="inst-search-results"></ul>
+  <input type="text" id="inst-search-box" class="profile-search-box" placeholder="Search for an institution..." autocomplete="off">
+  <ul id="inst-search-results" class="profile-search-results"></ul>
 </div>
 
-<div id="inst-loading">Loading institution data…</div>
+<div id="inst-loading" class="profile-loading">Loading institution data…</div>
 
-<div id="inst-profile">
+<div id="inst-profile" class="profile-container">
   <div class="profile-header">
-    <h2 id="inst-name"></h2>
+    <h2 id="inst-name"></h2><span id="share-btn" class="share-btn" title="Copy link to this profile">&#128279; Share<span class="share-tip">Link copied!</span></span>
   </div>
 
   <div class="score-cards" id="inst-score-cards"></div>
@@ -121,6 +107,11 @@ layout: default
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
 <script>
 (function() {
+  var escHtml = ReproDBProfile.escHtml;
+  var cleanName = ReproDBProfile.cleanName;
+  var badgeHtml = ReproDBProfile.badgeHtml;
+  var card = ReproDBProfile.card;
+
   var INST_URL = '{{ "/assets/data/institution_rankings.json" | relative_url }}';
   var PROFILES_URL = '{{ "/assets/data/author_profiles.json" | relative_url }}';
   var HISTORY_URL = '{{ "/assets/data/institution_ranking_history.json" | relative_url }}';
@@ -131,7 +122,7 @@ layout: default
   var instMap = {};
   var allProfiles = [];
   var instHistory = [];
-  var artifactUrlMap = {};  // title -> artifact_url
+  var artifactUrlMap = {};
   var historyChart = null;
 
   // Pagination state
@@ -142,34 +133,11 @@ layout: default
   // Contributor sort state
   var contribSortCol = 'combined_score', contribSortAsc = false;
 
-  function escHtml(s) {
-    if (!s) return '';
-    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-  }
-  function cleanName(n) { return (n||'').replace(/\s+\d{4}$/, '').replace(/\t/g, ' '); }
-
-  function badgeHtml(badges) {
-    if (!badges) return '';
-    var list = Array.isArray(badges) ? badges : badges.split(',');
-    return list.map(function(b) {
-      var bl = b.trim().toLowerCase();
-      var cls = 'badge-available', label = b.trim().replace(/^Badges:\s*/i, '');
-      if (bl.indexOf('functional') >= 0) cls = 'badge-functional';
-      else if (bl.indexOf('reproduc') >= 0 || bl.indexOf('reusable') >= 0) cls = 'badge-reproducible';
-      return '<span class="badge-tag ' + cls + '">' + escHtml(label) + '</span>';
-    }).join(' ');
-  }
-
-  function card(value, label) {
-    return '<div class="score-card"><div class="val">' + value + '</div><div class="lbl">' + label + '</div></div>';
-  }
-
   function paginate(data, page, pageSize, bodyId, infoId, renderFn) {
     var start = page * pageSize;
     var end = Math.min(start + pageSize, data.length);
     var slice = data.slice(start, end);
     document.getElementById(bodyId).innerHTML = renderFn(slice, start);
-    var pages = Math.ceil(data.length / pageSize);
     document.getElementById(infoId).textContent = (start+1) + '–' + end + ' of ' + data.length;
   }
 
@@ -237,7 +205,7 @@ layout: default
   }
 
   // ── AE Detail ─────────────────────────────────────────────────────────
-  function renderAE(slice, startIdx) {
+  function renderAE(slice) {
     return slice.map(function(a) {
       var roleLabel = a.role === 'chair' ? '★ Chair' : 'Member';
       return '<tr>' +
@@ -320,7 +288,6 @@ layout: default
     cards += card(inst.ae_score || 0, 'AE Score');
     var aeRatio = (inst.ae_ratio === null || inst.ae_ratio === undefined) ? '∞' : inst.ae_ratio;
     cards += card(aeRatio, 'A:E Ratio');
-    // Researchers card will be populated after counting profiles
     cards += card(inst.artifact_count || 0, 'Artifacts');
     cards += card(inst.total_papers || 0, 'Total Papers');
     cards += card((inst.artifact_pct || 0) + '%', 'Artifact Rate');
@@ -353,9 +320,8 @@ layout: default
       return p.affiliation === inst.affiliation;
     });
 
-    // Insert researchers count card (position 5, after A:E Ratio)
+    // Insert researchers count card (position after A:E Ratio)
     var researchersCard = card(affProfiles.length, 'Researchers');
-    // Find position after A:E Ratio card
     var insertPos = cards.indexOf('A:E Ratio</div></div>') + 'A:E Ratio</div></div>'.length;
     cards = cards.slice(0, insertPos) + researchersCard + cards.slice(insertPos);
     document.getElementById('inst-score-cards').innerHTML = cards;
@@ -364,10 +330,12 @@ layout: default
     contribData = affProfiles.slice().map(function(p) {
       return {
         name: p.name,
+        author_id: p.author_id,
         combined_score: p.combined_score || 0,
         artifact_score: p.artifact_score || 0,
         ae_score: p.ae_score || 0,
         artifacts: p.artifact_count || 0,
+        artifact_count: p.artifact_count || 0,
         total_papers: p.total_papers || 0,
         ae_memberships: p.ae_memberships || 0,
         chair_count: p.chair_count || 0
@@ -412,7 +380,7 @@ layout: default
       document.getElementById('inst-artifacts-section').style.display = 'none';
     }
 
-    // AE involvement — collect all AE conference entries from affiliated authors
+    // AE involvement
     aeData = [];
     var totalAEMemberships = 0, totalChairs = 0;
     var aeConferences = {};
@@ -423,18 +391,12 @@ layout: default
           var yr = Array.isArray(entry) ? entry[1] : '';
           var role = (Array.isArray(entry) && entry.length > 2) ? entry[2] : 'member';
           aeConferences[conf] = true;
-          aeData.push({
-            authorName: p.name,
-            conference: conf,
-            year: yr,
-            role: role
-          });
+          aeData.push({ authorName: p.name, conference: conf, year: yr, role: role });
         });
       }
       totalAEMemberships += (p.ae_memberships || 0);
       totalChairs += (p.chair_count || 0);
     });
-    // Sort by year desc, then conference
     aeData.sort(function(a, b) {
       if (b.year !== a.year) return (b.year || 0) - (a.year || 0);
       return (a.conference || '').localeCompare(b.conference || '');
@@ -454,64 +416,40 @@ layout: default
     }
   }
 
-  // ── Search / autocomplete ─────────────────────────────────────────────
-  var searchBox = document.getElementById('inst-search-box');
-  var resultsList = document.getElementById('inst-search-results');
-  var activeIdx = -1;
-
-  function showResults(matches) {
-    resultsList.innerHTML = '';
-    if (matches.length === 0) { resultsList.style.display = 'none'; return; }
-    activeIdx = -1;
-    var shown = matches.slice(0, 20);
-    for (var i = 0; i < shown.length; i++) {
-      var li = document.createElement('li');
-      li.dataset.name = shown[i].affiliation;
-      li.innerHTML = '<strong>' + escHtml(shown[i].affiliation) + '</strong>' +
-        ' <span style="color:#888;font-size:0.85em">(' + (shown[i].author_count||0) + ' researchers, score ' + (shown[i].combined_score||0) + ')</span>';
-      li.addEventListener('click', function() { selectInst(this.dataset.name); });
-      resultsList.appendChild(li);
-    }
-    if (matches.length > 20) {
-      var more = document.createElement('li');
-      more.style.color = '#999';
-      more.textContent = '… and ' + (matches.length - 20) + ' more';
-      resultsList.appendChild(more);
-    }
-    resultsList.style.display = 'block';
-  }
-
-  function selectInst(name) {
-    resultsList.style.display = 'none';
-    searchBox.value = name;
-    var inst = instMap[name];
-    if (inst) {
+  // ── Search setup (uses shared ReproDBProfile.initSearch) ──────────────
+  var search = ReproDBProfile.initSearch({
+    searchBoxId: 'inst-search-box',
+    resultsListId: 'inst-search-results',
+    shareBtnId: 'share-btn',
+    loadingId: 'inst-loading',
+    maxResults: 20,
+    filterItems: function(q) {
+      return allInstitutions.filter(function(inst) {
+        return (inst.affiliation || '').toLowerCase().indexOf(q) !== -1;
+      }).slice(0, 50);
+    },
+    renderResult: function(item) {
+      return {
+        key: item.affiliation,
+        html: '<strong>' + escHtml(item.affiliation) + '</strong>' +
+              ' <span class="sr-detail">(' + (item.author_count||0) + ' researchers, score ' + (item.combined_score||0) + ')</span>'
+      };
+    },
+    onSelect: function(key) {
+      var inst = instMap[key];
+      if (!inst) return null;
       renderProfile(inst);
-      var url = new URL(window.location);
-      url.searchParams.set('name', name);
-      history.replaceState(null, '', url);
+      return { displayValue: key };
+    },
+    resolveFromUrl: function(params) {
+      var nameParam = params.get('name');
+      if (!nameParam) return null;
+      if (instMap[nameParam]) return { key: nameParam, displayValue: nameParam };
+      var lower = nameParam.toLowerCase();
+      var match = allInstitutions.find(function(inst) { return inst.affiliation.toLowerCase() === lower; });
+      if (match) return { key: match.affiliation, displayValue: match.affiliation };
+      return { search: nameParam };
     }
-  }
-
-  searchBox.addEventListener('input', function() {
-    var q = this.value.trim().toLowerCase();
-    if (q.length < 2) { resultsList.style.display = 'none'; return; }
-    var matches = allInstitutions.filter(function(inst) {
-      return (inst.affiliation || '').toLowerCase().indexOf(q) !== -1;
-    }).slice(0, 50);
-    showResults(matches);
-  });
-
-  searchBox.addEventListener('keydown', function(e) {
-    var items = resultsList.querySelectorAll('li[data-name]');
-    if (e.key === 'ArrowDown') { e.preventDefault(); activeIdx = Math.min(activeIdx + 1, items.length - 1); items.forEach(function(li, i) { li.classList.toggle('active', i === activeIdx); }); }
-    else if (e.key === 'ArrowUp') { e.preventDefault(); activeIdx = Math.max(activeIdx - 1, 0); items.forEach(function(li, i) { li.classList.toggle('active', i === activeIdx); }); }
-    else if (e.key === 'Enter') { e.preventDefault(); if (activeIdx >= 0 && items[activeIdx]) selectInst(items[activeIdx].dataset.name); }
-    else if (e.key === 'Escape') { resultsList.style.display = 'none'; }
-  });
-
-  document.addEventListener('click', function(e) {
-    if (!searchBox.contains(e.target) && !resultsList.contains(e.target)) resultsList.style.display = 'none';
   });
 
   // ── Pagination controls ───────────────────────────────────────────────
@@ -550,7 +488,6 @@ layout: default
     allProfiles = results[1];
     instHistory = results[2] || [];
 
-    // Build title -> artifact URL map (normalize by stripping trailing period)
     var artifacts = results[3] || [];
     artifactUrlMap = {};
     for (var i = 0; i < artifacts.length; i++) {
@@ -562,21 +499,7 @@ layout: default
       }
     }
 
-    document.getElementById('inst-loading').style.display = 'none';
-    searchBox.style.display = '';
-
-    // Check for ?name= parameter
-    var params = new URLSearchParams(window.location.search);
-    var nameParam = params.get('name');
-    if (nameParam && instMap[nameParam]) {
-      searchBox.value = nameParam;
-      renderProfile(instMap[nameParam]);
-    } else if (nameParam) {
-      var lower = nameParam.toLowerCase();
-      var match = allInstitutions.find(function(inst) { return inst.affiliation.toLowerCase() === lower; });
-      if (match) { searchBox.value = match.affiliation; renderProfile(match); }
-      else { searchBox.value = nameParam; searchBox.dispatchEvent(new Event('input')); }
-    }
+    search.activate();
   }).catch(function(err) {
     document.getElementById('inst-loading').textContent = 'Error loading institution data.';
     console.error(err);

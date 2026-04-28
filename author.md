@@ -4,41 +4,17 @@ permalink: /author.html
 layout: default
 ---
 
+{% include profile_common.html %}
+
 <style>
-#author-search-box { padding:8px 14px; font-size:1em; width:100%; max-width:480px; border:1px solid #ccc; border-radius:4px; }
+/* Author-specific styles */
 .avail-warn { position:relative; cursor:help; font-size:0.8em; color:#b26a00; background:#fff8e1; padding:1px 5px; border-radius:3px; border:1px solid #ffe0b2; }
 .avail-warn .avail-tip { display:none; position:absolute; bottom:125%; left:50%; transform:translateX(-50%); background:#333; color:#fff; font-size:0.85em; padding:4px 8px; border-radius:4px; white-space:nowrap; z-index:100; pointer-events:none; }
 .avail-warn:hover .avail-tip { display:block; }
-#search-results { list-style:none; padding:0; margin:4px 0 0 0; max-height:260px; overflow-y:auto; border:1px solid #ddd; border-radius:4px; display:none; position:absolute; background:#fff; z-index:100; width:100%; max-width:480px; }
-#search-results li { padding:8px 14px; cursor:pointer; border-bottom:1px solid #f0f0f0; }
-#search-results li:hover, #search-results li.active { background:#e8f4f8; }
-#search-results li .sr-affil { font-size:0.82em; color:#666; }
-#profile-container { display:none; margin-top:20px; }
-.profile-header { margin-bottom:18px; }
-.profile-header h2 { margin-bottom:2px; }
-.profile-header .affil { color:#555; font-size:0.95em; }
-.score-cards { display:flex; flex-wrap:wrap; gap:12px; margin:16px 0; }
-.score-card { background:#f7f7f7; border:1px solid #e0e0e0; border-radius:6px; padding:12px 18px; min-width:110px; text-align:center; }
-.score-card .val { font-size:1.6em; font-weight:bold; color:#2c3e50; }
-.score-card .lbl { font-size:0.78em; color:#777; margin-top:2px; }
-.badge-tag { display:inline-block; padding:2px 8px; border-radius:3px; font-size:0.8em; margin:1px 2px; color:#fff; }
-.badge-available { background:#3498db; }
-.badge-functional { background:#27ae60; }
-.badge-reproducible, .badge-reproduced, .badge-reusable { background:#8e44ad; }
-.paper-table { font-size:0.88em; border-collapse:collapse; width:100%; margin:10px 0; }
-.paper-table th, .paper-table td { padding:6px 10px; border:1px solid #ddd; text-align:left; }
-.paper-table th { background:#f2f2f2; white-space:nowrap; }
-.paper-table tr:nth-child(even) { background:#fafafa; }
 .ae-table { font-size:0.88em; border-collapse:collapse; width:100%; margin:10px 0; }
 .ae-table th, .ae-table td { padding:6px 10px; border:1px solid #ddd; text-align:left; }
 .ae-table th { background:#f2f2f2; }
 .ae-table tr:nth-child(even) { background:#fafafa; }
-.chart-container { max-width:1050px; margin:16px 0; }
-#loading-msg { color:#888; font-style:italic; }
-#share-btn { display:inline-block; margin-left:10px; padding:3px 10px; font-size:0.7em; cursor:pointer; background:#f0f0f0; border:1px solid #ccc; border-radius:4px; color:#555; vertical-align:middle; position:relative; }
-#share-btn:hover { background:#e0e0e0; }
-#share-btn .share-tip { display:none; position:absolute; bottom:125%; left:50%; transform:translateX(-50%); background:#333; color:#fff; font-size:0.85em; padding:4px 8px; border-radius:4px; white-space:nowrap; z-index:100; pointer-events:none; }
-#share-btn.copied .share-tip { display:block; }
 .category-tag { display:inline-block; padding:1px 7px; border-radius:3px; font-size:0.78em; color:#fff; margin-left:6px; }
 .cat-systems { background:#2980b9; }
 .cat-security { background:#c0392b; }
@@ -46,15 +22,15 @@ layout: default
 </style>
 
 <div style="position:relative;">
-  <input type="text" id="author-search-box" placeholder="Search for an author..." autocomplete="off">
-  <ul id="search-results"></ul>
+  <input type="text" id="author-search-box" class="profile-search-box" placeholder="Search for an author..." autocomplete="off">
+  <ul id="search-results" class="profile-search-results"></ul>
 </div>
 
-<div id="loading-msg">Loading author data…</div>
+<div id="loading-msg" class="profile-loading">Loading author data…</div>
 
-<div id="profile-container">
+<div id="profile-container" class="profile-container">
   <div class="profile-header">
-    <h2 id="prof-name" style="display:inline;"></h2><span id="share-btn" style="display:none" title="Copy link to this profile">&#128279; Share<span class="share-tip">Link copied!</span></span>
+    <h2 id="prof-name"></h2><span id="share-btn" class="share-btn" title="Copy link to this profile">&#128279; Share<span class="share-tip">Link copied!</span></span>
     <div class="affil" id="prof-affil"></div>
   </div>
 
@@ -67,7 +43,7 @@ layout: default
 
   <div id="papers-section" style="display:none;">
     <h3>Artifact Papers</h3>
-    <table class="paper-table">
+    <table class="profile-table">
       <thead><tr><th>#</th><th>Title</th><th>Conference</th><th>Year</th><th>Badges</th></tr></thead>
       <tbody id="papers-body"></tbody>
     </table>
@@ -85,7 +61,7 @@ layout: default
   <div id="citations-section" style="display:none;">
     <h3>Cited Artifacts</h3>
     <p id="citations-summary"></p>
-    <table class="paper-table" id="citations-table">
+    <table class="profile-table" id="citations-table">
       <thead><tr><th>#</th><th>Artifact Title</th><th>Conference</th><th>Year</th><th>Citations</th></tr></thead>
       <tbody id="citations-body"></tbody>
     </table>
@@ -100,6 +76,11 @@ layout: default
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
 <script>
 (function() {
+  var escHtml = ReproDBProfile.escHtml;
+  var cleanName = ReproDBProfile.cleanName;
+  var badgeHtml = ReproDBProfile.badgeHtml;
+  var card = ReproDBProfile.card;
+
   var DATA_URL = '{{ "/assets/data/author_profiles.json" | relative_url }}';
   var CITED_ARTIFACTS_URL = '{{ "/assets/data/cited_artifacts_by_author.json" | relative_url }}';
   var HISTORY_URL = '{{ "/assets/data/ranking_history.json" | relative_url }}';
@@ -108,53 +89,29 @@ layout: default
   var AVAILABILITY_URL = '{{ "/assets/data/artifact_availability.json" | relative_url }}';
   var allProfiles = [];
   var profileMap = {};
+  var idMap = {};
   var citedArtifactsMap = {};
   var artifactUrlMap = {};
-  var paperIndex = {};  // paper_id -> paper object
+  var paperIndex = {};
   var rankHistory = [];
-  var urlAccessible = {};  // url -> boolean
+  var urlAccessible = {};
   var availabilityLoaded = false;
   var availabilityCheckedAt = '';
   var chart = null;
   var historyChart = null;
 
-  function escHtml(s) {
-    if (!s) return '';
-    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-  }
-
-  function cleanName(n) {
-    return n.replace(/\s+\d{4}$/, '').replace(/\t/g, ' ');
-  }
-
-  function badgeHtml(badges) {
-    if (!badges) return '';
-    var list = Array.isArray(badges) ? badges : badges.split(',');
-    return list.map(function(b) {
-      var bl = b.trim().toLowerCase();
-      var cls = 'badge-available';
-      var label = b.trim();
-      if (bl.indexOf('functional') >= 0) cls = 'badge-functional';
-      else if (bl.indexOf('reproduc') >= 0 || bl.indexOf('reusable') >= 0) cls = 'badge-reproducible';
-      // Clean up "Badges: " prefix
-      label = label.replace(/^Badges:\s*/i, '');
-      return '<span class="badge-tag ' + cls + '">' + escHtml(label) + '</span>';
-    }).join(' ');
-  }
-
   function renderProfile(p) {
     document.getElementById('profile-container').style.display = 'block';
     document.getElementById('prof-name').textContent = cleanName(p.name);
-    
+
     var catTag = '';
     if (p.category === 'both') catTag = '<span class="category-tag cat-both">Systems & Security</span>';
     else if (p.category === 'systems') catTag = '<span class="category-tag cat-systems">Systems</span>';
     else if (p.category === 'security') catTag = '<span class="category-tag cat-security">Security</span>';
     document.getElementById('prof-name').innerHTML = escHtml(cleanName(p.name)) + catTag;
-    
+
     document.getElementById('prof-affil').textContent = p.affiliation || '';
 
-    // Score cards
     var cards = '';
     if (p.combined_score !== undefined) {
       cards += card(p.combined_score, 'Combined Score');
@@ -171,7 +128,7 @@ layout: default
     if (p.chair_count) cards += card(p.chair_count, 'Chair Roles');
     document.getElementById('score-cards').innerHTML = cards;
 
-    // Papers table — resolve from paper index if paper_ids available
+    // Papers table
     var papers = [];
     if (p.paper_ids && p.paper_ids.length > 0) {
       for (var pi = 0; pi < p.paper_ids.length; pi++) {
@@ -184,7 +141,6 @@ layout: default
     if (papers.length > 0) {
       document.getElementById('papers-section').style.display = 'block';
       var rows = '';
-      // Sort by year desc
       papers.sort(function(a,b) { return (b.year||0) - (a.year||0); });
       for (var i = 0; i < papers.length; i++) {
         var pp = papers[i];
@@ -200,8 +156,6 @@ layout: default
     } else {
       document.getElementById('papers-section').style.display = 'none';
     }
-
-
 
     // AE service
     var aeYears = p.ae_years || {};
@@ -250,29 +204,24 @@ layout: default
     var authorData = citedArtifactsMap[p.name];
     if (authorData && authorData.cited_artifacts && authorData.cited_artifacts.length > 0) {
       document.getElementById('citations-section').style.display = 'block';
-      
-      var summary = '<p><strong>' + authorData.total_citations + '</strong> total citation' + 
-        (authorData.total_citations > 1 ? 's' : '') + ' to <strong>' + authorData.cited_artifacts.length + 
+      var citSummary = '<p><strong>' + authorData.total_citations + '</strong> total citation' +
+        (authorData.total_citations > 1 ? 's' : '') + ' to <strong>' + authorData.cited_artifacts.length +
         '</strong> artifact' + (authorData.cited_artifacts.length > 1 ? 's' : '') + '.</p>';
-      document.getElementById('citations-summary').innerHTML = summary;
-      
-      var rows = '';
+      document.getElementById('citations-summary').innerHTML = citSummary;
+      var citRows = '';
       var artifacts = authorData.cited_artifacts.sort(function(a, b) { return (b.citations || 0) - (a.citations || 0); });
       for (var k = 0; k < artifacts.length; k++) {
         var art = artifacts[k];
-        rows += '<tr><td>' + (k+1) + '</td><td>' + escHtml(art.title) + '</td><td>' +
-          escHtml(art.conference || '') + '</td><td>' + (art.year || '') + '</td><td><strong>' + 
+        citRows += '<tr><td>' + (k+1) + '</td><td>' + escHtml(art.title) + '</td><td>' +
+          escHtml(art.conference || '') + '</td><td>' + (art.year || '') + '</td><td><strong>' +
           (art.citations || 0) + '</strong></td></tr>';
       }
-      document.getElementById('citations-body').innerHTML = rows;
+      document.getElementById('citations-body').innerHTML = citRows;
     } else {
       document.getElementById('citations-section').style.display = 'none';
     }
 
-    // Timeline chart
     renderChart(p);
-
-    // Ranking history chart
     renderHistoryChart(p);
   }
 
@@ -287,49 +236,38 @@ layout: default
       papers = p.papers || [];
     }
     var aeYears = p.ae_years || {};
-    
-    // Collect all years
     var yearSet = {};
     papers.forEach(function(pp) { if (pp.year) yearSet[pp.year] = true; });
     Object.keys(aeYears).forEach(function(y) { yearSet[y] = true; });
-    
     var years = Object.keys(yearSet).map(Number).sort();
     if (years.length < 1) {
       document.getElementById('chart-section').style.display = 'none';
       return;
     }
-    // Fill gaps
     var minY = years[0], maxY = years[years.length - 1];
     var allYears = [];
     for (var y = minY; y <= maxY; y++) allYears.push(y);
-    
-    // Count papers per year
     var paperCounts = {};
     papers.forEach(function(pp) {
       if (pp.year) paperCounts[pp.year] = (paperCounts[pp.year] || 0) + 1;
     });
-    
     var datasets = [];
-    var artifactData = allYears.map(function(y) { return paperCounts[y] || 0; });
     datasets.push({
       label: 'Artifact Papers',
-      data: artifactData,
+      data: allYears.map(function(y) { return paperCounts[y] || 0; }),
       backgroundColor: 'rgba(52, 152, 219, 0.7)',
       borderColor: 'rgba(52, 152, 219, 1)',
       borderWidth: 1
     });
-    
     if (Object.keys(aeYears).length > 0) {
-      var aeData = allYears.map(function(y) { return aeYears[y] || 0; });
       datasets.push({
         label: 'AE Committee Service',
-        data: aeData,
+        data: allYears.map(function(y) { return aeYears[y] || 0; }),
         backgroundColor: 'rgba(46, 204, 113, 0.7)',
         borderColor: 'rgba(46, 204, 113, 1)',
         borderWidth: 1
       });
     }
-
     document.getElementById('chart-section').style.display = '';
     var ctx = document.getElementById('timelineChart').getContext('2d');
     if (chart) chart.destroy();
@@ -338,13 +276,8 @@ layout: default
       data: { labels: allYears.map(String), datasets: datasets },
       options: {
         responsive: true,
-        plugins: {
-          legend: { display: datasets.length > 1 },
-          title: { display: false }
-        },
-        scales: {
-          y: { beginAtZero: true, ticks: { stepSize: 1, precision: 0 } }
-        }
+        plugins: { legend: { display: datasets.length > 1 }, title: { display: false } },
+        scales: { y: { beginAtZero: true, ticks: { stepSize: 1, precision: 0 } } }
       }
     });
   }
@@ -365,12 +298,7 @@ layout: default
       document.getElementById('history-section').style.display = 'none';
       return;
     }
-    // Collect data points for this author across all snapshots
-    var labels = [];
-    var scores = [];
-    var ranks = [];
-    var artScores = [];
-    var aeScores = [];
+    var labels = [], scores = [], ranks = [], artScores = [], aeScores = [];
     for (var i = 0; i < rankHistory.length; i++) {
       var snap = rankHistory[i];
       var e = snap.entries[p.name];
@@ -412,118 +340,6 @@ layout: default
     });
   }
 
-  function card(value, label) {
-    return '<div class="score-card"><div class="val">' + value + '</div><div class="lbl">' + label + '</div></div>';
-  }
-
-  // --- Share button ---
-  var shareBtn = document.getElementById('share-btn');
-  function showShareButton() {
-    shareBtn.style.display = 'inline-block';
-  }
-  shareBtn.addEventListener('click', function() {
-    var url = window.location.href;
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(url).then(function() { flashCopied(); });
-    } else {
-      var ta = document.createElement('textarea');
-      ta.value = url; ta.style.position = 'fixed'; ta.style.opacity = '0';
-      document.body.appendChild(ta); ta.select();
-      document.execCommand('copy'); document.body.removeChild(ta);
-      flashCopied();
-    }
-  });
-  function flashCopied() {
-    shareBtn.classList.add('copied');
-    setTimeout(function() { shareBtn.classList.remove('copied'); }, 1500);
-  }
-
-  // --- Search / autocomplete ---
-  var searchBox = document.getElementById('author-search-box');
-  var resultsList = document.getElementById('search-results');
-  var activeIdx = -1;
-
-  function showResults(matches) {
-    resultsList.innerHTML = '';
-    if (matches.length === 0) { resultsList.style.display = 'none'; return; }
-    activeIdx = -1;
-    var shown = matches.slice(0, 30);
-    for (var i = 0; i < shown.length; i++) {
-      var li = document.createElement('li');
-      li.dataset.name = shown[i].name;
-      li.innerHTML = '<strong>' + escHtml(cleanName(shown[i].name)) + '</strong>' +
-        (shown[i].affiliation ? '<br><span class="sr-affil">' + escHtml(shown[i].affiliation) + '</span>' : '');
-      li.addEventListener('click', function() {
-        selectAuthor(this.dataset.name);
-      });
-      resultsList.appendChild(li);
-    }
-    if (matches.length > 30) {
-      var more = document.createElement('li');
-      more.style.color = '#999';
-      more.textContent = '… and ' + (matches.length - 30) + ' more — type to narrow';
-      resultsList.appendChild(more);
-    }
-    resultsList.style.display = 'block';
-  }
-
-  function selectAuthor(name) {
-    resultsList.style.display = 'none';
-    searchBox.value = cleanName(name);
-    var p = profileMap[name];
-    if (p) {
-      renderProfile(p);
-      // Update URL without reload
-      var url = new URL(window.location);
-      url.searchParams.delete('q');
-      url.searchParams.set('name', name);
-      history.pushState(null, '', url);
-      showShareButton();
-    }
-  }
-
-  searchBox.addEventListener('input', function() {
-    var q = this.value.trim().toLowerCase();
-    if (q.length < 2) { resultsList.style.display = 'none'; return; }
-    var matches = allProfiles.filter(function(p) {
-      return p.name.toLowerCase().indexOf(q) >= 0 ||
-             (p.affiliation && p.affiliation.toLowerCase().indexOf(q) >= 0);
-    }).slice(0, 100);
-    showResults(matches);
-    // Update URL with search query
-    var url = new URL(window.location);
-    url.searchParams.set('q', this.value.trim());
-    url.searchParams.delete('name');
-    url.searchParams.delete('id');
-    history.replaceState(null, '', url);
-  });
-
-  searchBox.addEventListener('keydown', function(e) {
-    var items = resultsList.querySelectorAll('li[data-name]');
-    if (e.key === 'ArrowDown') {
-      e.preventDefault();
-      activeIdx = Math.min(activeIdx + 1, items.length - 1);
-      items.forEach(function(li, i) { li.classList.toggle('active', i === activeIdx); });
-    } else if (e.key === 'ArrowUp') {
-      e.preventDefault();
-      activeIdx = Math.max(activeIdx - 1, 0);
-      items.forEach(function(li, i) { li.classList.toggle('active', i === activeIdx); });
-    } else if (e.key === 'Enter') {
-      e.preventDefault();
-      if (activeIdx >= 0 && items[activeIdx]) {
-        selectAuthor(items[activeIdx].dataset.name);
-      }
-    } else if (e.key === 'Escape') {
-      resultsList.style.display = 'none';
-    }
-  });
-
-  document.addEventListener('click', function(e) {
-    if (!searchBox.contains(e.target) && !resultsList.contains(e.target)) {
-      resultsList.style.display = 'none';
-    }
-  });
-
   function availabilityTag(url) {
     if (!availabilityLoaded || !url) return '';
     var normalUrl = url.replace(/\/+$/, '');
@@ -534,7 +350,56 @@ layout: default
     return '';
   }
 
-  // --- Load data & init ---
+  // ── Search setup (uses shared ReproDBProfile.initSearch) ──────────────
+  var search = ReproDBProfile.initSearch({
+    searchBoxId: 'author-search-box',
+    resultsListId: 'search-results',
+    shareBtnId: 'share-btn',
+    loadingId: 'loading-msg',
+    maxResults: 30,
+    filterItems: function(q) {
+      return allProfiles.filter(function(p) {
+        return p.name.toLowerCase().indexOf(q) >= 0 ||
+               (p.affiliation && p.affiliation.toLowerCase().indexOf(q) >= 0);
+      }).slice(0, 100);
+    },
+    renderResult: function(item) {
+      return {
+        key: item.name,
+        html: '<strong>' + escHtml(cleanName(item.name)) + '</strong>' +
+              (item.affiliation ? '<br><span class="sr-detail">' + escHtml(item.affiliation) + '</span>' : '')
+      };
+    },
+    onSelect: function(key) {
+      var p = profileMap[key];
+      if (!p) return null;
+      renderProfile(p);
+      var params = {};
+      if (p.author_id != null) params.id = p.author_id;
+      return { displayValue: cleanName(key), urlParams: params };
+    },
+    resolveFromUrl: function(params) {
+      var idParam = params.get('id');
+      var nameParam = params.get('name');
+      if (nameParam) nameParam = nameParam.replace(/[\t\n\r]+/g, ' ').replace(/  +/g, ' ').trim();
+
+      var resolved = null;
+      if (idParam && idMap[parseInt(idParam)]) {
+        resolved = idMap[parseInt(idParam)];
+      } else if (nameParam && profileMap[nameParam]) {
+        resolved = profileMap[nameParam];
+      } else if (nameParam) {
+        var lower = nameParam.toLowerCase();
+        resolved = allProfiles.find(function(p) { return p.name.toLowerCase() === lower || cleanName(p.name).toLowerCase() === lower; });
+      }
+
+      if (resolved) return { key: resolved.name, displayValue: cleanName(resolved.name) };
+      if (nameParam) return { search: nameParam };
+      return null;
+    }
+  });
+
+  // ── Load data & init ──────────────────────────────────────────────────
   Promise.all([
     fetch(DATA_URL).then(function(r) { return r.json(); }),
     fetch(CITED_ARTIFACTS_URL).then(function(r) { return r.json(); }).catch(function() { return {}; }),
@@ -547,7 +412,6 @@ layout: default
       citedArtifactsMap = results[1] || {};
       rankHistory = results[2] || [];
 
-      // Build title -> artifact URL map (normalize by stripping trailing period)
       var artList = results[3] || [];
       artifactUrlMap = {};
       for (var ai = 0; ai < artList.length; ai++) {
@@ -559,14 +423,12 @@ layout: default
         }
       }
 
-      // Build paper index (id -> paper object)
       var papersList = results[4] || [];
       paperIndex = {};
       for (var pi = 0; pi < papersList.length; pi++) {
         paperIndex[papersList[pi].id] = papersList[pi];
       }
 
-      // Build URL accessibility map
       var avail = results[5] || {};
       availabilityCheckedAt = (avail.summary && avail.summary.checked_at) ? avail.summary.checked_at.replace(/ UTC$/, '') : '';
       (avail.records || []).forEach(function(rec) {
@@ -587,40 +449,7 @@ layout: default
       }
     })
     .then(function() {
-      document.getElementById('loading-msg').style.display = 'none';
-      searchBox.style.display = '';
-
-      // Check for ?id=, ?name=, or ?q= parameter
-      var params = new URLSearchParams(window.location.search);
-      var idParam = params.get('id');
-      var nameParam = params.get('name');
-      var qParam = params.get('q');
-      // Normalise whitespace: tabs/newlines → space, collapse runs
-      if (nameParam) { nameParam = nameParam.replace(/[\t\n\r]+/g, ' ').replace(/  +/g, ' ').trim(); }
-
-      // Resolve by ID first (stable link), then by name
-      var resolved = null;
-      if (idParam && idMap[parseInt(idParam)]) {
-        resolved = idMap[parseInt(idParam)];
-      } else if (nameParam && profileMap[nameParam]) {
-        resolved = profileMap[nameParam];
-      } else if (nameParam) {
-        // Try partial match
-        var lower = nameParam.toLowerCase();
-        resolved = allProfiles.find(function(p) { return p.name.toLowerCase() === lower || cleanName(p.name).toLowerCase() === lower; });
-      }
-
-      if (resolved) {
-        searchBox.value = cleanName(resolved.name);
-        renderProfile(resolved);
-        showShareButton();
-      } else if (nameParam) {
-        searchBox.value = nameParam;
-        searchBox.dispatchEvent(new Event('input'));
-      } else if (qParam) {
-        searchBox.value = qParam;
-        searchBox.dispatchEvent(new Event('input'));
-      }
+      search.activate();
     })
     .catch(function(err) {
       document.getElementById('loading-msg').textContent = 'Error loading author data.';
