@@ -213,11 +213,21 @@
     // --- Determine size from canvas / parent ---
     var rect = this.canvas.getBoundingClientRect();
     var width = Math.max(280, Math.floor(rect.width)) || DEFAULT_W;
-    // Chart.js default aspect ratio for line/bar is 2:1
-    var height = this.canvas.height
-      ? Math.floor(this.canvas.height)
-      : Math.max(180, Math.round(width / 2));
-    if (height > 500) height = Math.round(width / 2);
+    // maintainAspectRatio: false → use parent container's height
+    var maintainAR = options.maintainAspectRatio !== false;
+    var parentRect = this.canvas.parentNode ? this.canvas.parentNode.getBoundingClientRect() : null;
+    var height;
+    if (!maintainAR && parentRect && parentRect.height > 50) {
+      height = Math.floor(parentRect.height);
+    } else if (this.canvas.height) {
+      height = Math.floor(this.canvas.height);
+    } else {
+      height = Math.max(180, Math.round(width / 2));
+    }
+    if (maintainAR && height > 500) height = Math.round(width / 2);
+
+    // indexAxis: 'y' means horizontal bars
+    var indexAxis = options.indexAxis || 'x';
 
     // --- Build wrapper that replaces the <canvas> visually ---
     var wrap = document.createElement('div');
@@ -286,7 +296,10 @@
 
     var padTop = titleH + (legendPos === 'top' ? legendH : 6) + 4;
     var padBottom = (xAxisTitle ? 18 : 6) + 22 + (legendPos === 'bottom' ? legendH : 0);
-    var padLeft = 44 + (leftAxisTitle ? 16 : 0);
+    // Horizontal bars need wider left padding for category labels
+    var padLeft = (indexAxis === 'y')
+      ? Math.min(200, Math.max(80, labels.reduce(function(m, l) { return Math.max(m, String(l).length * 6); }, 0) + 12))
+      : 44 + (leftAxisTitle ? 16 : 0);
     var padRight = (rightAxisId ? 44 : 12) + (rightAxisTitle ? 16 : 0);
     var plotW = width - padLeft - padRight;
     var plotH = height - padTop - padBottom;
@@ -367,10 +380,13 @@
         tt.textContent = titleText;
       }
     }
-    drawYAxis(leftRange, leftAxisId, 'left', leftAxisTitle);
-    drawYAxis(rightRange, rightAxisId, 'right', rightAxisTitle);
+    if (indexAxis !== 'y') {
+      drawYAxis(leftRange, leftAxisId, 'left', leftAxisTitle);
+      drawYAxis(rightRange, rightAxisId, 'right', rightAxisTitle);
+    }
 
-    // --- X axis ticks + labels ---
+    // --- X axis ticks + labels (skip for horizontal bars — handled separately) ---
+    if (indexAxis !== 'y') {
     var xTickStride = 1;
     if (nLabels > 0) {
       var maxLabelCharW = 7;
@@ -397,6 +413,7 @@
       }, svg);
       xtt.textContent = xAxisTitle;
     }
+    } // end if (indexAxis !== 'y')
 
     // --- Render datasets ---
     if (type === 'line') {
@@ -500,6 +517,77 @@
 
       // Crosshair tooltip on hover
       attachLineTooltip(svg, wrap, datasets, dsPoints, labels, padLeft, padTop, plotW, plotH, this);
+
+    } else if (type === 'bar' && indexAxis === 'y') {
+      // --- Horizontal bars (indexAxis: 'y') ---
+      // X axis = values, Y axis = categories (labels)
+      var hMin = 0, hMax = 0;
+      datasets.forEach(function(ds) {
+        for (var i = 0; i < ds.data.length; i++) {
+          var v = +ds.data[i];
+          if (!isNaN(v)) { if (v > hMax) hMax = v; if (v < hMin) hMin = v; }
+        }
+      });
+      if (scales.x && scales.x.beginAtZero) hMin = Math.min(0, hMin);
+      var hRange = niceTicks(hMin, hMax, 5);
+      if (scales.x && scales.x.beginAtZero && hRange.min > 0) hRange.min = 0;
+
+      function xValScale(v) {
+        return padLeft + ((v - hRange.min) / (hRange.max - hRange.min)) * plotW;
+      }
+      function yBandCenter(i) {
+        var bh = plotH / Math.max(1, nLabels);
+        return padTop + bh * (i + 0.5);
+      }
+
+      // X-axis value ticks + gridlines
+      var hPrecision = scales.x && scales.x.ticks && scales.x.ticks.precision;
+      hRange.ticks.forEach(function(hv) {
+        var hx = xValScale(hv);
+        el('line', { x1: hx, x2: hx, y1: padTop, y2: padTop + plotH, stroke: T().grid, 'stroke-width': 1 }, svg);
+        el('line', { x1: hx, x2: hx, y1: padTop + plotH, y2: padTop + plotH + 3, stroke: T().tick, 'stroke-width': 1 }, svg);
+        var hvt = el('text', { x: hx, y: padTop + plotH + 14, 'text-anchor': 'middle', style: FONT, fill: T().textSec }, svg);
+        hvt.textContent = fmtNum(hv, hPrecision);
+      });
+
+      // Y-axis category labels
+      var bandH = plotH / Math.max(1, nLabels);
+      for (var hli = 0; hli < nLabels; hli++) {
+        var hy = yBandCenter(hli);
+        var hlt = el('text', { x: padLeft - 6, y: hy + 3, 'text-anchor': 'end', style: FONT, fill: T().textSec }, svg);
+        hlt.textContent = String(labels[hli]);
+      }
+
+      // X axis title
+      if (xAxisTitle) {
+        var hxtt = el('text', {
+          x: padLeft + plotW / 2, y: height - (legendPos === 'bottom' ? legendH + 6 : 6),
+          'text-anchor': 'middle', style: FONT, fill: T().textSec
+        }, svg);
+        hxtt.textContent = xAxisTitle;
+      }
+
+      // Draw horizontal bars
+      var hGroupPad = 0.18;
+      var hInnerH = bandH * (1 - hGroupPad);
+      var hBarH = hInnerH / Math.max(1, datasets.length);
+
+      datasets.forEach(function(ds, di) {
+        var fillCol = colorOf(ds.backgroundColor, '#2563eb');
+        for (var i = 0; i < ds.data.length; i++) {
+          var v = +ds.data[i];
+          if (isNaN(v)) continue;
+          var cy = yBandCenter(i);
+          var barY = cy - hInnerH / 2 + di * hBarH;
+          var x0 = xValScale(0);
+          var x1 = xValScale(v);
+          el('rect', {
+            x: Math.min(x0, x1), y: barY,
+            width: Math.abs(x1 - x0), height: Math.max(1, hBarH - 1),
+            fill: fillCol, stroke: 'none'
+          }, svg);
+        }
+      });
 
     } else if (type === 'bar') {
       // Grouped or stacked bars
