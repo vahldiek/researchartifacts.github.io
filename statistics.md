@@ -41,6 +41,9 @@ This page aggregates institution ranking data by country and continent, showing 
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Combined</th>
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Artifacts</th>
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Papers</th>
+  <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">AR%</th>
+  <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Func%</th>
+  <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Repro%</th>
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">AE Members</th>
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Chairs</th>
 </tr></thead>
@@ -79,6 +82,9 @@ This page aggregates institution ranking data by country and continent, showing 
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Combined</th>
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Artifacts</th>
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Papers</th>
+  <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">AR%</th>
+  <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Func%</th>
+  <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Repro%</th>
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">AE Members</th>
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Chairs</th>
 </tr></thead>
@@ -294,17 +300,20 @@ This page aggregates institution ranking data by country and continent, showing 
           code: code, name: codeToName[code] || code,
           continent: codeToContinent[code] || 'Unknown',
           institutions: 0, researchers: 0, combined: 0,
-          artifacts: 0, papers: 0, ae: 0, chairs: 0, years: {}
+          artifacts: 0, papers: 0, ae: 0, chairs: 0,
+          functional: 0, reproducible: 0, years: {}
         };
       }
       var c = byCountry[code];
       c.institutions++;
-      c.researchers += inst.num_authors || 0;
+      c.researchers += inst.author_count || 0;
       c.combined += inst.combined_score || 0;
-      c.artifacts += inst.artifacts || 0;
+      c.artifacts += inst.artifact_count || 0;
       c.papers += inst.total_papers || 0;
       c.ae += inst.ae_memberships || 0;
       c.chairs += inst.chair_count || 0;
+      c.functional += inst.badges_functional || 0;
+      c.reproducible += inst.badges_reproducible || 0;
       if (inst.years) { for (var y in inst.years) c.years[y] = (c.years[y] || 0) + inst.years[y]; }
     });
     if (unknown.length) console.log('Unknown country (' + unknown.length + '):', unknown.slice(0, 20));
@@ -314,16 +323,20 @@ This page aggregates institution ranking data by country and continent, showing 
       var cont = c.continent;
       if (!byContinent[cont]) {
         byContinent[cont] = { name: cont, countries: 0, institutions: 0, researchers: 0,
-          combined: 0, artifacts: 0, papers: 0, ae: 0, chairs: 0, years: {} };
+          combined: 0, artifacts: 0, papers: 0, ae: 0, chairs: 0,
+          functional: 0, reproducible: 0, years: {} };
       }
       var g = byContinent[cont];
       g.countries++; g.institutions += c.institutions; g.researchers += c.researchers;
       g.combined += c.combined; g.artifacts += c.artifacts; g.papers += c.papers;
       g.ae += c.ae; g.chairs += c.chairs;
+      g.functional += c.functional; g.reproducible += c.reproducible;
       for (var y in c.years) g.years[y] = (g.years[y] || 0) + c.years[y];
     });
     return { byCountry: Object.values(byCountry), byContinent: Object.values(byContinent) };
   }
+
+  function pct(num, den) { return den > 0 ? (num / den * 100).toFixed(1) + '%' : '–'; }
 
   /* ── Sorting ────────────────────────────────────────────────────── */
   function sorter(key) {
@@ -350,6 +363,9 @@ This page aggregates institution ranking data by country and continent, showing 
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;"><strong>' + c.combined + '</strong></td>' +
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + c.artifacts + '</td>' +
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + c.papers + '</td>' +
+        '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + pct(c.artifacts, c.papers) + '</td>' +
+        '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + pct(c.functional, c.artifacts) + '</td>' +
+        '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + pct(c.reproducible, c.artifacts) + '</td>' +
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + c.ae + '</td>' +
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + c.chairs + '</td></tr>';
     }).join('');
@@ -384,9 +400,12 @@ This page aggregates institution ranking data by country and continent, showing 
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;"><strong>' + c.combined + '</strong></td>' +
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + c.artifacts + '</td>' +
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + c.papers + '</td>' +
+        '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + pct(c.artifacts, c.papers) + '</td>' +
+        '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + pct(c.functional, c.artifacts) + '</td>' +
+        '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + pct(c.reproducible, c.artifacts) + '</td>' +
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + c.ae + '</td>' +
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + c.chairs + '</td></tr>';
-    }).join('') || '<tr><td colspan="10" style="text-align:center;padding:12px;color:#999;">No results</td></tr>';
+    }).join('') || '<tr><td colspan="13" style="text-align:center;padding:12px;color:#999;">No results</td></tr>';
     updateCountryPaging();
   }
 
