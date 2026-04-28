@@ -3,22 +3,23 @@ title: "Contribute"
 permalink: /about.html
 ---
 
-## Data Availability
+ReproDB is fully open source. We welcome contributions of all kinds!
 
-All data and code are open source. Browse all repositories at [github.com/orgs/ReproDB/repositories](https://github.com/orgs/ReproDB/repositories).
+### Report Issues or Fix Bugs
 
-- **Analysis Pipeline**: [github.com/ReproDB/reprodb-pipeline](https://github.com/ReproDB/reprodb-pipeline) — Scraping, analysis, and generation scripts
-- **Pipeline Documentation**: [reprodb.github.io/reprodb-pipeline](https://reprodb.github.io/reprodb-pipeline/) — CLI reference, API docs, and data models
-- **Data Schemas**: [reprodb.github.io/data-schemas](https://reprodb.github.io/data-schemas/) — JSON Schema definitions for all output formats
-- **Pipeline Results**: [github.com/ReproDB/reprodb-pipeline-results](https://github.com/ReproDB/reprodb-pipeline-results) — Archived outputs from each pipeline run
-- **Website Source**: [github.com/ReproDB/reprodb.github.io](https://github.com/ReproDB/reprodb.github.io)
-- **Raw Data**: Available in `/assets/data/` directory (JSON format)
+Found incorrect data, a broken page, or a scraping bug? Open an issue or pull request on the relevant repository:
 
-## How to Contribute
+- [reprodb-pipeline](https://github.com/ReproDB/reprodb-pipeline) — scraping, analysis, and data generation
+- [reprodb-pipeline-results](https://github.com/ReproDB/reprodb-pipeline-results) — archived outputs from each pipeline run
+- [reprodb.github.io](https://github.com/ReproDB/reprodb.github.io) — this website
 
-We welcome contributions:
+### Add Conference Data
 
-- **Report Issues**: Found incorrect data? [Open an issue](https://github.com/ReproDB/reprodb-pipeline/issues)
-- **Add Conferences**: Know of other conferences with artifact evaluation? Add them via [sysartifacts](https://github.com/sysartifacts/sysartifacts.github.io) or [secartifacts](https://github.com/secartifacts/secartifacts.github.io), or extend our scraping pipeline to support additional sources.
-- **Improve Scripts**: Make scraping more robust or add features
-- **Suggest Analyses**: What other statistics would be interesting?
+AE results and committee lists live in the upstream community sites. Contribute new conferences or corrections there:
+
+- [sysartifacts.github.io](https://github.com/sysartifacts/sysartifacts.github.io) — systems conferences (OSDI, SOSP, ATC, EuroSys, FAST, …)
+- [secartifacts.github.io](https://github.com/secartifacts/secartifacts.github.io) — security conferences (USENIX Security, CCS, NDSS, S&P, …)
+
+### Suggest New Analyses
+
+Have an idea for a new statistic, visualization, or ranking? [Open a discussion](https://github.com/ReproDB/reprodb-pipeline/issues) and tell us what you'd like to see.
