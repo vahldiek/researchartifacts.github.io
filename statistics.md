@@ -55,7 +55,6 @@ html[data-theme="dark"] #geo-content { --tbl-border: #4a4f57; --row-alt: #23272d
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Artifacts</th>
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Papers</th>
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">AR%</th>
-  <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Func%</th>
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Repro%</th>
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">AE Members</th>
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Chairs</th>
@@ -96,7 +95,6 @@ html[data-theme="dark"] #geo-content { --tbl-border: #4a4f57; --row-alt: #23272d
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Artifacts</th>
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Papers</th>
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">AR%</th>
-  <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Func%</th>
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Repro%</th>
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">AE Members</th>
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Chairs</th>
@@ -373,7 +371,6 @@ html[data-theme="dark"] #geo-content { --tbl-border: #4a4f57; --row-alt: #23272d
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + c.artifacts + '</td>' +
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + c.papers + '</td>' +
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + (c.papers > 0 ? (c.artifacts / c.papers * 100).toFixed(1) + '%' : '–') + '</td>' +
-        '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + (c.artifacts > 0 ? (c.functional / c.artifacts * 100).toFixed(1) + '%' : '–') + '</td>' +
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + (c.artifacts > 0 ? (c.reproducible / c.artifacts * 100).toFixed(1) + '%' : '–') + '</td>' +
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + c.ae + '</td>' +
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + c.chairs + '</td></tr>';
@@ -409,11 +406,10 @@ html[data-theme="dark"] #geo-content { --tbl-border: #4a4f57; --row-alt: #23272d
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + c.artifacts + '</td>' +
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + c.papers + '</td>' +
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + (c.papers > 0 ? (c.artifacts / c.papers * 100).toFixed(1) + '%' : '–') + '</td>' +
-        '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + (c.artifacts > 0 ? (c.functional / c.artifacts * 100).toFixed(1) + '%' : '–') + '</td>' +
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + (c.artifacts > 0 ? (c.reproducible / c.artifacts * 100).toFixed(1) + '%' : '–') + '</td>' +
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + c.ae + '</td>' +
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + c.chairs + '</td></tr>';
-    }).join('') || '<tr><td colspan="13" style="text-align:center;padding:12px;color:#999;">No results</td></tr>';
+    }).join('') || '<tr><td colspan="12" style="text-align:center;padding:12px;color:#999;">No results</td></tr>';
     updateCountryPaging();
   }
 
