@@ -53,7 +53,7 @@ Ranked by combined score (artifacts published + AE committee memberships) at sec
         tr.innerHTML = '<td>' + (i+1) + '</td>'
           + '<td>' + name + '</td>'
           + '<td>' + aff + '</td>'
-          + '<td>' + (e.artifacts||0) + '</td>'
+          + '<td>' + (e.artifact_count||0) + '</td>'
           + '<td>' + (e.ae_memberships||0) + '</td>'
           + '<td>' + (e.chair_count||0) + '</td>'
           + '<td><strong>' + (e.combined_score||0) + '</strong></td>'

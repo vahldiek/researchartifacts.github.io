@@ -413,11 +413,11 @@ document.addEventListener('DOMContentLoaded', function() {
       {label:'Researcher',  key:'_display',       type:'alpha'},
       {label:'Affiliation', key:'affiliation',    type:'alpha'},
       {label:'S',           key:'combined_score', type:'num', tip:'Combined Score (artifacts + AE service)'},
-      {label:'Ar',          key:'artifacts',      type:'num', tip:'Artifacts at this conference'},
+      {label:'Ar',          key:'artifact_count', type:'num', tip:'Artifacts at this conference'},
       {label:'P',           key:'total_papers',   type:'num', tip:'Papers at this conference'},
       {label:'AE',          key:'ae_memberships', type:'num', tip:'AE memberships'},
-      {label:'AR%',         key:'artifact_rate',  type:'num', tip:'Artifact rate'},
-      {label:'RR%',         key:'repro_rate',     type:'num', tip:'Reproducibility rate'}
+      {label:'AR%',         key:'artifact_pct',   type:'num', tip:'Artifact rate'},
+      {label:'RR%',         key:'repro_pct',      type:'num', tip:'Reproducibility rate'}
     ];
     for (var j = 0; j < yearCols.length; j++) {
       cols.push({label: '' + yearCols[j], key: '_y' + yearCols[j], type: 'num'});
@@ -439,11 +439,11 @@ document.addEventListener('DOMContentLoaded', function() {
         cells += '<td><a href="' + url + '">' + esc(d._display) + '</a></td>';
         cells += '<td class="wrap-cell">' + esc(d.affiliation || '') + '</td>';
         cells += '<td><strong>' + (d.combined_score||0) + '</strong></td>';
-        cells += '<td>' + (d.artifacts||'') + '</td>';
+        cells += '<td>' + (d.artifact_count||'') + '</td>';
         cells += '<td>' + (d.total_papers||'') + '</td>';
         cells += '<td>' + (d.ae_memberships ? d.ae_memberships : '') + '</td>';
-        cells += '<td>' + (d.total_papers > 0 ? d.artifact_rate + '%' : '') + '</td>';
-        cells += '<td>' + (d.repro_rate||0) + '%</td>';
+        cells += '<td>' + (d.total_papers > 0 ? d.artifact_pct + '%' : '') + '</td>';
+        cells += '<td>' + (d.repro_pct||0) + '%</td>';
         for (var j = 0; j < yearCols.length; j++) {
           var cnt = d['_y' + yearCols[j]] || 0;
           cells += '<td>' + (cnt > 0 ? cnt : '') + '</td>';
@@ -470,8 +470,8 @@ document.addEventListener('DOMContentLoaded', function() {
       {label:'#',           key:'_rank',          type:'num'},
       {label:'Institution', key:'affiliation',    type:'alpha'},
       {label:'S',           key:'combined_score', type:'num', tip:'Combined Score (artifacts + AE service)'},
-      {label:'R',           key:'num_authors',    type:'num', tip:'Researchers'},
-      {label:'Ar',          key:'artifacts',      type:'num', tip:'Artifacts'},
+      {label:'R',           key:'author_count',   type:'num', tip:'Researchers'},
+      {label:'Ar',          key:'artifact_count', type:'num', tip:'Artifacts'},
       {label:'P',           key:'total_papers',   type:'num', tip:'Papers'},
       {label:'AE',          key:'ae_memberships', type:'num', tip:'AE memberships'},
       {label:'Ch',          key:'chair_count',    type:'num', tip:'Times chaired'}
@@ -495,8 +495,8 @@ document.addEventListener('DOMContentLoaded', function() {
         var cells = '<td>' + d._rank + '</td>';
         cells += '<td class="wrap-cell"><a href="' + url + '">' + esc(d.affiliation) + '</a></td>';
         cells += '<td><strong>' + (d.combined_score||0) + '</strong></td>';
-        cells += '<td>' + (d.num_authors||'') + '</td>';
-        cells += '<td>' + (d.artifacts||'') + '</td>';
+        cells += '<td>' + (d.author_count||'') + '</td>';
+        cells += '<td>' + (d.artifact_count||'') + '</td>';
         cells += '<td>' + (d.total_papers||'') + '</td>';
         cells += '<td>' + (d.ae_memberships||'') + '</td>';
         cells += '<td>' + (d.chair_count > 0 ? d.chair_count + ' \u2605' : '') + '</td>';

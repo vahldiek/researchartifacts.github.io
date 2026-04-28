@@ -774,6 +774,12 @@
       var aff = (inst.affiliation || '').toLowerCase();
       return aff && aff !== 'unknown' && !aff.startsWith('_unknown');
     });
+    // Precompute repro_rate for sorting (% of artifacts that are reproducible)
+    for (var j = 0; j < allData.length; j++) {
+      var d = allData[j];
+      var total_badges = (d.badges_functional || 0) + (d.badges_reproducible || 0);
+      d.repro_rate = total_badges > 0 ? Math.round((d.badges_reproducible || 0) / total_badges * 100) : 0;
+    }
     buildGeoFilterOptions();
     applySearch();
     
