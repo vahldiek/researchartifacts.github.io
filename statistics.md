@@ -446,7 +446,7 @@ This page aggregates institution ranking data by country and continent, showing 
         plugins: { title: { display: true, text: 'Activity Over Time \u2013 Top 8 Countries' },
                    legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } } },
         scales: { y: { beginAtZero: true, title: { display: true, text: 'Active contributions' } },
-                  x: { title: { display: true, text: 'Year' } } }
+                  x: { title: { display: true, text: 'Year' }, ticks: { maxRotation: 45, minRotation: 45 } } }
       }
     }));
 
@@ -470,7 +470,7 @@ This page aggregates institution ranking data by country and continent, showing 
         plugins: { title: { display: true, text: 'Activity Over Time by Continent' },
                    legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } } },
         scales: { y: { beginAtZero: true, title: { display: true, text: 'Active contributions' } },
-                  x: { title: { display: true, text: 'Year' } } }
+                  x: { title: { display: true, text: 'Year' }, ticks: { maxRotation: 45, minRotation: 45 } } }
       }
     }));
 
@@ -490,7 +490,7 @@ This page aggregates institution ranking data by country and continent, showing 
         maintainAspectRatio: false,
         plugins: { title: { display: true, text: 'Top 15 Countries: Artifacts vs AE Service' },
                    legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } } },
-        scales: { y: { beginAtZero: true }, x: { ticks: { maxRotation: 45, font: { size: 10 } } } }
+        scales: { y: { beginAtZero: true }, x: { ticks: { maxRotation: 45, minRotation: 45, font: { size: 10 } } } }
       }
     }));
 
@@ -511,7 +511,7 @@ This page aggregates institution ranking data by country and continent, showing 
         maintainAspectRatio: false,
         plugins: { title: { display: true, text: 'Continent Breakdown: Artifacts, AE Service & Chairs' },
                    legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } } },
-        scales: { y: { beginAtZero: true, stacked: true }, x: { stacked: true } }
+        scales: { y: { beginAtZero: true, stacked: true }, x: { stacked: true, ticks: { maxRotation: 45, minRotation: 45 } } }
       }
     }));
   }
