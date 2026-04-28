@@ -44,8 +44,8 @@ The table below shows the number of AE committee members per conference per year
 {% for c in _conf_list %}| **{{ c }}** | {% for s in site.data.committee_stats.committee_sizes %}{% if s.conference == c %}{{ s.area | slice: 0, 3 }}{% break %}{% endif %}{% endfor %} | {% for y in _year_list %}{% assign y_num = y | plus: 0 %}{% assign _found = false %}{% for s in site.data.committee_stats.committee_sizes %}{% if s.conference == c and s.year == y_num %}{% assign _found = true %}{% if s.size < 5 %}<span title="Possibly incomplete">{{ s.size }}†</span>{% else %}{{ s.size }}{% endif %}{% endif %}{% endfor %}{% unless _found %}–{% endunless %} | {% endfor %}{% assign _total = 0 %}{% for s in site.data.committee_stats.committee_sizes %}{% if s.conference == c %}{% if s.size >= 5 %}{% assign _total = _total | plus: s.size %}{% endif %}{% endif %}{% endfor %}**{{ _total }}** |
 {% endfor %}
 
-<div style="width:100%; max-width:1200px; margin:1em auto;">
-  <canvas id="committeeSizesChart" height="340"></canvas>
+<div style="width:100%; max-width:1400px; margin:1em auto; height:520px;">
+  <canvas id="committeeSizesChart"></canvas>
 </div>
 
 ---
@@ -80,8 +80,8 @@ These gaps mean the **systems** committee count ({{ site.data.committee_stats.to
 
 ## Top Countries
 
-<div style="width:100%; max-width:1200px; margin:1em auto;">
-  <canvas id="committeeCountriesChart" height="390"></canvas>
+<div style="width:100%; max-width:1200px; margin:1em auto; height:480px;">
+  <canvas id="committeeCountriesChart"></canvas>
 </div>
 
 | Country | Members |
@@ -93,8 +93,8 @@ These gaps mean the **systems** committee count ({{ site.data.committee_stats.to
 
 ## Top Institutions
 
-<div style="width:100%; max-width:1200px; margin:1em auto;">
-  <canvas id="committeeInstitutionsChart" height="420"></canvas>
+<div style="width:100%; max-width:1200px; margin:1em auto; height:580px;">
+  <canvas id="committeeInstitutionsChart"></canvas>
 </div>
 
 | Institution | Members |
