@@ -138,12 +138,12 @@
       // Display infinity symbol for null ae_ratio (no AE service)
       var aeRatioDisplay = (c.ae_ratio === null || c.ae_ratio === undefined) ? '∞' : (c.ae_ratio === 0 ? '0' : c.ae_ratio);
       cells.push('<td>' + aeRatioDisplay + '</td>');
-      cells.push('<td>' + (c.artifact_count || '') + '</td>');
-      cells.push('<td>' + (c.total_papers || '') + '</td>');
-      cells.push('<td>' + (c.total_papers > 0 ? c.artifact_pct + '%' : '') + '</td>');
-      cells.push('<td>' + ((c.repro_pct !== undefined && c.repro_pct !== null) ? (c.repro_pct + '%') : '') + '</td>');
-      cells.push('<td>' + (c.ae_memberships || '') + '</td>');
-      var chairLabel = c.chair_count > 0 ? c.chair_count + ' ★' : '';
+      cells.push('<td>' + (c.artifact_count || '–') + '</td>');
+      cells.push('<td>' + (c.total_papers || '–') + '</td>');
+      cells.push('<td>' + (c.total_papers > 0 ? c.artifact_pct + '%' : '–') + '</td>');
+      cells.push('<td>' + ((c.repro_pct !== undefined && c.repro_pct !== null) ? (c.repro_pct + '%') : '–') + '</td>');
+      cells.push('<td>' + (c.ae_memberships || '–') + '</td>');
+      var chairLabel = c.chair_count > 0 ? c.chair_count + ' ★' : '–';
       cells.push('<td>' + chairLabel + '</td>');
       for (var j = 0; j < yearColumns.length; j++) {
         var yr = yearColumns[j];
@@ -151,7 +151,7 @@
         if (c.years) {
           cnt = c.years[yr] || c.years[String(yr)] || 0;
         }
-        cells.push('<td>' + (cnt > 0 ? cnt : '') + '</td>');
+        cells.push('<td>' + (cnt > 0 ? cnt : '–') + '</td>');
       }
       rows.push('<tr>' + cells.join('') + '</tr>');
     }
