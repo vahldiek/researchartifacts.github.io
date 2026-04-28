@@ -54,8 +54,7 @@ layout: default
 
 <div id="profile-container">
   <div class="profile-header">
-    <h2 id="prof-name"></h2>
-    <span id="share-btn" style="display:none" title="Copy link to this profile">&#128279; Share<span class="share-tip">Link copied!</span></span>
+    <h2 id="prof-name" style="display:inline;"></h2><span id="share-btn" style="display:none" title="Copy link to this profile">&#128279; Share<span class="share-tip">Link copied!</span></span>
     <div class="affil" id="prof-affil"></div>
   </div>
 
