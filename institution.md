@@ -196,7 +196,7 @@ layout: default
         '<td><strong>' + (p.combined_score || 0) + '</strong></td>' +
         '<td>' + (p.artifact_score || 0) + '</td>' +
         '<td>' + (p.ae_score || 0) + '</td>' +
-        '<td>' + (p.artifacts || p.artifact_count || 0) + '</td>' +
+        '<td>' + (p.artifact_count || 0) + '</td>' +
         '<td>' + (p.total_papers || 0) + '</td>' +
         '<td>' + (p.ae_memberships || 0) + '</td>' +
         '<td>' + (p.chair_count ? p.chair_count + ' ★' : '') + '</td>' +
@@ -321,11 +321,11 @@ layout: default
     var aeRatio = (inst.ae_ratio === null || inst.ae_ratio === undefined) ? '∞' : inst.ae_ratio;
     cards += card(aeRatio, 'A:E Ratio');
     // Researchers card will be populated after counting profiles
-    cards += card(inst.artifacts || 0, 'Artifacts');
+    cards += card(inst.artifact_count || 0, 'Artifacts');
     cards += card(inst.total_papers || 0, 'Total Papers');
-    cards += card((inst.artifact_rate || 0) + '%', 'Artifact Rate');
+    cards += card((inst.artifact_pct || 0) + '%', 'Artifact Rate');
     var reproRate = 0;
-    if (inst.artifacts > 0) reproRate = Math.round(((inst.badges_reproducible || 0) / inst.artifacts) * 100);
+    if (inst.artifact_count > 0) reproRate = Math.round(((inst.badges_reproducible || 0) / inst.artifact_count) * 100);
     cards += card(reproRate + '%', 'Repro Rate');
     cards += card(inst.ae_memberships || 0, 'AE Memberships');
     if (inst.chair_count) cards += card(inst.chair_count, 'Chair Roles');
@@ -468,7 +468,7 @@ layout: default
       var li = document.createElement('li');
       li.dataset.name = shown[i].affiliation;
       li.innerHTML = '<strong>' + escHtml(shown[i].affiliation) + '</strong>' +
-        ' <span style="color:#888;font-size:0.85em">(' + (shown[i].num_authors||0) + ' researchers, score ' + (shown[i].combined_score||0) + ')</span>';
+        ' <span style="color:#888;font-size:0.85em">(' + (shown[i].author_count||0) + ' researchers, score ' + (shown[i].combined_score||0) + ')</span>';
       li.addEventListener('click', function() { selectInst(this.dataset.name); });
       resultsList.appendChild(li);
     }
