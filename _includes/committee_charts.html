@@ -75,7 +75,12 @@
         type: 'bar',
         data: { labels: years.map(String), datasets: datasets },
         options: {
-          plugins: { title: { display: true, text: 'Committee Sizes by Conference and Year' } },
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            title: { display: true, text: 'Committee Sizes by Conference and Year' },
+            legend: { position: 'bottom', labels: { boxWidth: 12, padding: 8, font: { size: 11 } } }
+          },
           scales: { y: { beginAtZero: true, title: { display: true, text: 'Members' } } }
         }
       });
@@ -155,11 +160,14 @@
         }]
       },
       options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
         plugins: {
           title: { display: true, text: 'Top 15 Countries' },
           legend: { display: false }
         },
-        scales: { y: { beginAtZero: true, title: { display: true, text: 'Members' } } }
+        scales: { x: { beginAtZero: true, title: { display: true, text: 'Members' } } }
       }
     });
 
@@ -169,7 +177,7 @@
     // Truncate long institution names
     var instLabels = institutions.map(function(inst) {
       var n = inst.name;
-      return n.length > 30 ? n.substring(0, 28) + '\u2026' : n;
+      return n.length > 40 ? n.substring(0, 38) + '\u2026' : n;
     });
     new Chart(document.getElementById('committeeInstitutionsChart'), {
       type: 'bar',
@@ -184,11 +192,14 @@
         }]
       },
       options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
         plugins: {
           title: { display: true, text: 'Top 20 Institutions' },
           legend: { display: false }
         },
-        scales: { y: { beginAtZero: true, title: { display: true, text: 'Members' } } }
+        scales: { x: { beginAtZero: true, title: { display: true, text: 'Members' } } }
       }
     });
 
