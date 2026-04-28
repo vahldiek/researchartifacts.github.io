@@ -8,7 +8,6 @@ data_url: /assets/data/institution_rankings.json
 This page aggregates institution ranking data by country and continent, showing how artifact evaluation engagement is distributed geographically.
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.0.0/css/flag-icons.min.css">
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 
 <div id="geo-loading"><em>Loading institution data…</em></div>
 
@@ -41,9 +40,6 @@ This page aggregates institution ranking data by country and continent, showing 
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Combined</th>
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Artifacts</th>
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Papers</th>
-  <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">AR%</th>
-  <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Func%</th>
-  <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Repro%</th>
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">AE Members</th>
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Chairs</th>
 </tr></thead>
@@ -82,9 +78,6 @@ This page aggregates institution ranking data by country and continent, showing 
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Combined</th>
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Artifacts</th>
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Papers</th>
-  <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">AR%</th>
-  <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Func%</th>
-  <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Repro%</th>
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">AE Members</th>
   <th style="border:1px solid #ddd; padding:4px 6px; text-align:center;">Chairs</th>
 </tr></thead>
@@ -98,13 +91,12 @@ This page aggregates institution ranking data by country and continent, showing 
   <span id="cTotal" style="margin-left:12px; color:#666;"></span>
 </div>
 
-## Trends Over Time
-
-<div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; margin:18px 0;">
-  <div style="position:relative; min-height:250px;"><canvas id="chartCountryTrend"></canvas></div>
-  <div style="position:relative; min-height:250px;"><canvas id="chartContinentTrend"></canvas></div>
-  <div style="position:relative; min-height:250px;"><canvas id="chartCountryBar"></canvas></div>
-  <div style="position:relative; min-height:250px;"><canvas id="chartContinentBar"></canvas></div>
+<h2>Trends Over Time</h2>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; margin:0 0 18px 0;">
+  <div style="position:relative; height:280px;"><canvas id="chartCountryTrend"></canvas></div>
+  <div style="position:relative; height:280px;"><canvas id="chartContinentTrend"></canvas></div>
+  <div style="position:relative; height:280px;"><canvas id="chartCountryBar"></canvas></div>
+  <div style="position:relative; height:280px;"><canvas id="chartContinentBar"></canvas></div>
 </div>
 
 </div><!-- /geo-content -->
@@ -300,20 +292,17 @@ This page aggregates institution ranking data by country and continent, showing 
           code: code, name: codeToName[code] || code,
           continent: codeToContinent[code] || 'Unknown',
           institutions: 0, researchers: 0, combined: 0,
-          artifacts: 0, papers: 0, ae: 0, chairs: 0,
-          functional: 0, reproducible: 0, years: {}
+          artifacts: 0, papers: 0, ae: 0, chairs: 0, years: {}
         };
       }
       var c = byCountry[code];
       c.institutions++;
-      c.researchers += inst.author_count || 0;
+      c.researchers += inst.num_authors || 0;
       c.combined += inst.combined_score || 0;
-      c.artifacts += inst.artifact_count || 0;
+      c.artifacts += inst.artifacts || 0;
       c.papers += inst.total_papers || 0;
       c.ae += inst.ae_memberships || 0;
       c.chairs += inst.chair_count || 0;
-      c.functional += inst.badges_functional || 0;
-      c.reproducible += inst.badges_reproducible || 0;
       if (inst.years) { for (var y in inst.years) c.years[y] = (c.years[y] || 0) + inst.years[y]; }
     });
     if (unknown.length) console.log('Unknown country (' + unknown.length + '):', unknown.slice(0, 20));
@@ -323,20 +312,16 @@ This page aggregates institution ranking data by country and continent, showing 
       var cont = c.continent;
       if (!byContinent[cont]) {
         byContinent[cont] = { name: cont, countries: 0, institutions: 0, researchers: 0,
-          combined: 0, artifacts: 0, papers: 0, ae: 0, chairs: 0,
-          functional: 0, reproducible: 0, years: {} };
+          combined: 0, artifacts: 0, papers: 0, ae: 0, chairs: 0, years: {} };
       }
       var g = byContinent[cont];
       g.countries++; g.institutions += c.institutions; g.researchers += c.researchers;
       g.combined += c.combined; g.artifacts += c.artifacts; g.papers += c.papers;
       g.ae += c.ae; g.chairs += c.chairs;
-      g.functional += c.functional; g.reproducible += c.reproducible;
       for (var y in c.years) g.years[y] = (g.years[y] || 0) + c.years[y];
     });
     return { byCountry: Object.values(byCountry), byContinent: Object.values(byContinent) };
   }
-
-  function pct(num, den) { return den > 0 ? (num / den * 100).toFixed(1) + '%' : '–'; }
 
   /* ── Sorting ────────────────────────────────────────────────────── */
   function sorter(key) {
@@ -363,9 +348,6 @@ This page aggregates institution ranking data by country and continent, showing 
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;"><strong>' + c.combined + '</strong></td>' +
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + c.artifacts + '</td>' +
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + c.papers + '</td>' +
-        '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + pct(c.artifacts, c.papers) + '</td>' +
-        '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + pct(c.functional, c.artifacts) + '</td>' +
-        '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + pct(c.reproducible, c.artifacts) + '</td>' +
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + c.ae + '</td>' +
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + c.chairs + '</td></tr>';
     }).join('');
@@ -400,12 +382,9 @@ This page aggregates institution ranking data by country and continent, showing 
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;"><strong>' + c.combined + '</strong></td>' +
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + c.artifacts + '</td>' +
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + c.papers + '</td>' +
-        '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + pct(c.artifacts, c.papers) + '</td>' +
-        '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + pct(c.functional, c.artifacts) + '</td>' +
-        '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + pct(c.reproducible, c.artifacts) + '</td>' +
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + c.ae + '</td>' +
         '<td style="border:1px solid #ddd; padding:4px 6px; text-align:center;">' + c.chairs + '</td></tr>';
-    }).join('') || '<tr><td colspan="13" style="text-align:center;padding:12px;color:#999;">No results</td></tr>';
+    }).join('') || '<tr><td colspan="10" style="text-align:center;padding:12px;color:#999;">No results</td></tr>';
     updateCountryPaging();
   }
 
@@ -447,6 +426,7 @@ This page aggregates institution ranking data by country and continent, showing 
       },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: { title: { display: true, text: 'Activity Over Time \u2013 Top 8 Countries' },
                    legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } } },
         scales: { y: { beginAtZero: true, title: { display: true, text: 'Active contributions' } },
@@ -470,6 +450,7 @@ This page aggregates institution ranking data by country and continent, showing 
       },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: { title: { display: true, text: 'Activity Over Time by Continent' },
                    legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } } },
         scales: { y: { beginAtZero: true, title: { display: true, text: 'Active contributions' } },
@@ -490,6 +471,7 @@ This page aggregates institution ranking data by country and continent, showing 
       },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: { title: { display: true, text: 'Top 15 Countries: Artifacts vs AE Service' },
                    legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } } },
         scales: { y: { beginAtZero: true }, x: { ticks: { maxRotation: 45, font: { size: 10 } } } }
@@ -510,6 +492,7 @@ This page aggregates institution ranking data by country and continent, showing 
       },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: { title: { display: true, text: 'Continent Breakdown: Artifacts, AE Service & Chairs' },
                    legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } } },
         scales: { y: { beginAtZero: true, stacked: true }, x: { stacked: true } }
@@ -541,11 +524,9 @@ This page aggregates institution ranking data by country and continent, showing 
       countryData = agg.byCountry;
       renderContinents();
       renderCountries();
+      drawCharts();
       document.getElementById('geo-loading').style.display = 'none';
       document.getElementById('geo-content').style.display = '';
-      // Delay chart rendering until after browser completes layout reflow
-      // (Chart.js needs non-zero container dimensions to size canvases)
-      requestAnimationFrame(function() { drawCharts(); });
     })
     .catch(function(e) {
       document.getElementById('geo-loading').innerHTML =
