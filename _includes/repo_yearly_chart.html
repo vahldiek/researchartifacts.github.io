@@ -7,14 +7,14 @@
     page.yearly_chart_area — 'all', 'systems', or 'security'
 {% endcomment %}
 
-<div id="repoChartCombinedWrap" style="width:100%; max-width:1410px; margin:1.0em 0; display:none;">
-  <canvas id="yearlyRepoCombinedChart" height="380"></canvas>
+<div id="repoChartCombinedWrap" style="position:relative; width:100%; max-width:1410px; height:380px; margin:1.0em 0; display:none;">
+  <canvas id="yearlyRepoCombinedChart"></canvas>
 </div>
-<div id="repoChartStarsWrap" style="width:100%; max-width:1410px; margin:0.8em 0; display:none;">
-  <canvas id="yearlyRepoStarsChart" height="290"></canvas>
+<div id="repoChartStarsWrap" style="position:relative; width:100%; max-width:1410px; height:290px; margin:0.8em 0; display:none;">
+  <canvas id="yearlyRepoStarsChart"></canvas>
 </div>
-<div id="repoChartForksWrap" style="width:100%; max-width:1410px; margin:0.8em 0; display:none;">
-  <canvas id="yearlyRepoForksChart" height="290"></canvas>
+<div id="repoChartForksWrap" style="position:relative; width:100%; max-width:1410px; height:290px; margin:0.8em 0; display:none;">
+  <canvas id="yearlyRepoForksChart"></canvas>
 </div>
 
 <script>
@@ -130,6 +130,7 @@
       },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
         interaction: { mode: 'index', intersect: false },
         plugins: {
           title: { display: true, text: areaLabel + ': Yearly Stars & Forks (Avg + Median with P25-P75 bands)' },
@@ -196,6 +197,7 @@
       data: { labels: labels, datasets: starsDatasets },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
         interaction: { mode: 'index', intersect: false },
         plugins: { title: { display: true, text: areaLabel + ': Conference-specific Stars by Year' }, legend: { position: 'bottom' } },
         scales: {
@@ -210,6 +212,7 @@
       data: { labels: labels, datasets: forksDatasets },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
         interaction: { mode: 'index', intersect: false },
         plugins: { title: { display: true, text: areaLabel + ': Conference-specific Forks by Year' }, legend: { position: 'bottom' } },
         scales: {
