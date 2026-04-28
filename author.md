@@ -162,7 +162,7 @@ layout: default
     }
     cards += card(p.artifact_count, 'Artifacts');
     cards += card(p.total_papers, 'Total Papers');
-    cards += card(p.artifact_rate + '%', 'Artifact Rate');
+    cards += card(p.artifact_pct + '%', 'Artifact Rate');
     if (p.ae_memberships) cards += card(p.ae_memberships, 'AE Memberships');
     if (p.chair_count) cards += card(p.chair_count, 'Chair Roles');
     document.getElementById('score-cards').innerHTML = cards;
@@ -211,7 +211,8 @@ layout: default
         var confNames = [];
         var seen = {};
         for (var ci = 0; ci < p.ae_conferences.length; ci++) {
-          var cn = Array.isArray(p.ae_conferences[ci]) ? p.ae_conferences[ci][0] : p.ae_conferences[ci];
+          var item = p.ae_conferences[ci];
+          var cn = Array.isArray(item) ? item[0] : (item.conference || item);
           if (!seen[cn]) { seen[cn] = true; confNames.push(cn); }
         }
         summary += '<p>Conferences: ' + confNames.map(function(c){ return '<strong>'+escHtml(c)+'</strong>';}).join(', ') +'</p>';
@@ -221,17 +222,17 @@ layout: default
       if (p.ae_conferences && p.ae_conferences.length) {
         document.getElementById('ae-table').style.display = '';
         var sorted = p.ae_conferences.slice().sort(function(a,b) {
-          var ya = Array.isArray(a) ? a[1] : 0, yb = Array.isArray(b) ? b[1] : 0;
+          var ya = Array.isArray(a) ? a[1] : (a.year || 0), yb = Array.isArray(b) ? b[1] : (b.year || 0);
           if (yb !== ya) return yb - ya;
-          var na = Array.isArray(a) ? a[0] : a, nb = Array.isArray(b) ? b[0] : b;
+          var na = Array.isArray(a) ? a[0] : (a.conference || a), nb = Array.isArray(b) ? b[0] : (b.conference || b);
           return na < nb ? -1 : na > nb ? 1 : 0;
         });
         var arows = '';
         for (var j = 0; j < sorted.length; j++) {
           var entry = sorted[j];
-          var conf = Array.isArray(entry) ? entry[0] : entry;
-          var yr = Array.isArray(entry) ? entry[1] : '';
-          var role = (Array.isArray(entry) && entry.length > 2) ? entry[2] : 'member';
+          var conf = Array.isArray(entry) ? entry[0] : (entry.conference || entry);
+          var yr = Array.isArray(entry) ? entry[1] : (entry.year || '');
+          var role = Array.isArray(entry) ? (entry.length > 2 ? entry[2] : 'member') : (entry.role || 'member');
           var roleLabel = role === 'chair' ? '★ Chair' : 'Member';
           arows += '<tr><td>' + escHtml(conf) + '</td><td>' + escHtml(String(yr)) + '</td><td>' + roleLabel + '</td></tr>';
         }
@@ -448,8 +449,9 @@ layout: default
       renderProfile(p);
       // Update URL without reload
       var url = new URL(window.location);
+      url.searchParams.delete('q');
       url.searchParams.set('name', name);
-      history.replaceState(null, '', url);
+      history.pushState(null, '', url);
     }
   }
 
@@ -461,6 +463,12 @@ layout: default
              (p.affiliation && p.affiliation.toLowerCase().indexOf(q) >= 0);
     }).slice(0, 100);
     showResults(matches);
+    // Update URL with search query
+    var url = new URL(window.location);
+    url.searchParams.set('q', this.value.trim());
+    url.searchParams.delete('name');
+    url.searchParams.delete('id');
+    history.replaceState(null, '', url);
   });
 
   searchBox.addEventListener('keydown', function(e) {
@@ -555,10 +563,11 @@ layout: default
       document.getElementById('loading-msg').style.display = 'none';
       searchBox.style.display = '';
 
-      // Check for ?id= or ?name= parameter
+      // Check for ?id=, ?name=, or ?q= parameter
       var params = new URLSearchParams(window.location.search);
       var idParam = params.get('id');
       var nameParam = params.get('name');
+      var qParam = params.get('q');
       // Normalise whitespace: tabs/newlines → space, collapse runs
       if (nameParam) { nameParam = nameParam.replace(/[\t\n\r]+/g, ' ').replace(/  +/g, ' ').trim(); }
 
@@ -579,6 +588,9 @@ layout: default
         renderProfile(resolved);
       } else if (nameParam) {
         searchBox.value = nameParam;
+        searchBox.dispatchEvent(new Event('input'));
+      } else if (qParam) {
+        searchBox.value = qParam;
         searchBox.dispatchEvent(new Event('input'));
       }
     })
