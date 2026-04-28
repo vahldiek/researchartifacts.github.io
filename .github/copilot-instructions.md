@@ -8,7 +8,6 @@ via GitHub Actions. Manual edits **will be overwritten**.
 
 - **`_data/*.yml`** (except `navigation.yml`) — statistics, rankings, repo stats
 - **`assets/data/*.json`** — machine-readable data exports
-- **`assets/js/reprodb-chart.js`** — lightweight SVG-based Chart.js shim with dark-mode support
 
 To update these files, re-run the pipeline in reprodb-pipeline.
 
@@ -45,7 +44,7 @@ When adding a new conference page, also add it to `_data/navigation.yml`.
 ## JavaScript Patterns
 
 - All JS is **vanilla JavaScript**, inline in `_includes/*.html` — no frameworks.
-- Charts use **`assets/js/reprodb-chart.js`** (SVG shim with Chart.js-compatible API). Do NOT add CDN script tags — CSP blocks them.
+- Charts use **Chart.js v4** from CDN (loaded globally via `_includes/head/custom.html`) with the **chartjs-plugin-datalabels** plugin. CSP allows `https://cdn.jsdelivr.net`. Do NOT add extra CDN script tags per page — they are loaded once globally.
 - Dynamic tables load JSON from `assets/data/` via `fetch()` and render client-side.
 - Page frontmatter provides data URLs (e.g., `page.author_data_url`) — ensure the
   referenced JSON file exists in `assets/data/` before linking.
