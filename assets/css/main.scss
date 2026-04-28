@@ -262,6 +262,25 @@ a[href="#footer"] {
     color: #d6d9dc !important;
   }
 
+  // Force light text for elements that use inline gray text colors
+  // (color:#333..#999) in HTML or <style> blocks. Exclude elements whose
+  // color is set intentionally (badges, rank-change arrows, etc.) by using
+  // a broad selector + individual exceptions below.
+  [style*="color:#555"],
+  [style*="color:#666"],
+  [style*="color:#444"],
+  [style*="color:#999"],
+  [style*="color:#888"],
+  [style*="color:#777"],
+  [style*="color: #555"],
+  [style*="color: #666"],
+  [style*="color: #444"],
+  [style*="color: #999"],
+  [style*="color: #888"],
+  [style*="color: #777"] {
+    color: #aab0b8 !important;
+  }
+
   // Page chrome
   .masthead,
   .greedy-nav,
@@ -375,7 +394,15 @@ a[href="#footer"] {
     color: #d6d9dc !important;
   }
   .score-card .lbl {
-    color: #d6d9dc !important;
+    color: #aab0b8 !important;
+  }
+  // Search autocomplete in profiles
+  .profile-search-results li:hover,
+  .profile-search-results li.active {
+    background: #2c3038 !important;
+  }
+  .profile-search-results li {
+    border-color: #383c43 !important;
   }
 
   // Legend / total-info text beside tables (override inline color:#555/#666)
@@ -448,6 +475,34 @@ a[href="#footer"] {
   }
   .expand-btn:hover {
     color: #d6d9dc !important;
+  }
+
+  // Profile page: loading indicator
+  .profile-loading {
+    color: #9ca3ab !important;
+  }
+
+  // Index / search page: status text, sort controls, no-results
+  #searchStatus, #noResults, #sort-controls {
+    color: #aab0b8 !important;
+  }
+
+  // Institution profile: role tags keep their background colors but ensure readability
+  .role-tag {
+    color: #fff !important;
+  }
+
+  // Availability warning tooltip on index
+  .avail-warn {
+    background: #3d2f00 !important;
+    border-color: #665200 !important;
+    color: #ffc107 !important;
+  }
+
+  // Links with inline color:#0066cc — override to match dark mode link color
+  a[style*="color:#0066cc"],
+  a[style*="color: #0066cc"] {
+    color: #6cb6ff !important;
   }
 
   // Logo: swap R and background colours; DB stays light blue
