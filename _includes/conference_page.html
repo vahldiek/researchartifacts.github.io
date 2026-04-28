@@ -210,7 +210,10 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     options: {
       responsive: true,
-      plugins: { title: { display: true, text: '{{ conf_display }}: Artifacts by Year' } },
+      plugins: {
+        title: { display: true, text: '{{ conf_display }}: Artifacts by Year' },
+        legend: { position: 'bottom', labels: { boxWidth: 12, padding: 8, font: { size: 11 } } }
+      },
       scales: {
         y: { beginAtZero: true, title: { display: true, text: 'Count' } },
         x: { ticks: { maxRotation: 45, minRotation: 0 } }
