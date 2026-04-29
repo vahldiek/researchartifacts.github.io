@@ -11,7 +11,7 @@ overall:
   avg_forks: 14.1
   median_stars: 7
   median_forks: 1
-  last_updated: 2026-04-29 20:20:26 UTC
+  last_updated: 2026-04-29 20:43:06 UTC
 by_conference:
 - name: ACSAC
   github_repos: 205
@@ -30,54 +30,72 @@ by_conference:
     total_forks: 20
     avg_stars: 9.6
     avg_forks: 4.0
+    median_stars: 6
+    median_forks: 3
   - year: 2018
     github_repos: 13
     total_stars: 806
     total_forks: 218
     avg_stars: 62.0
     avg_forks: 16.8
+    median_stars: 13
+    median_forks: 4
   - year: 2019
     github_repos: 15
     total_stars: 493
     total_forks: 124
     avg_stars: 32.9
     avg_forks: 8.3
+    median_stars: 10
+    median_forks: 4
   - year: 2020
     github_repos: 18
     total_stars: 935
     total_forks: 241
     avg_stars: 51.9
     avg_forks: 13.4
+    median_stars: 6.5
+    median_forks: 1.5
   - year: 2021
     github_repos: 16
     total_stars: 223
     total_forks: 40
     avg_stars: 13.9
     avg_forks: 2.5
+    median_stars: 7.0
+    median_forks: 1.5
   - year: 2022
     github_repos: 33
     total_stars: 245
     total_forks: 50
     avg_stars: 7.4
     avg_forks: 1.5
+    median_stars: 2
+    median_forks: 0
   - year: 2023
     github_repos: 27
     total_stars: 152
     total_forks: 28
     avg_stars: 5.6
     avg_forks: 1.0
+    median_stars: 3
+    median_forks: 0
   - year: 2024
     github_repos: 31
     total_stars: 109
     total_forks: 11
     avg_stars: 3.5
     avg_forks: 0.4
+    median_stars: 2
+    median_forks: 0
   - year: 2025
     github_repos: 47
     total_stars: 81
     total_forks: 15
     avg_stars: 1.7
     avg_forks: 0.3
+    median_stars: 0
+    median_forks: 0
   top_repos:
   - title: Finding The Greedy, Prodigal, and Suicidal Contracts at Scale
     url: https://github.com/MAIAN-tool/MAIAN
@@ -193,18 +211,24 @@ by_conference:
     total_forks: 188
     avg_stars: 24.1
     avg_forks: 4.9
+    median_stars: 10.0
+    median_forks: 2.5
   - year: 2023
     github_repos: 35
     total_stars: 3123
     total_forks: 562
     avg_stars: 89.2
     avg_forks: 16.1
+    median_stars: 15
+    median_forks: 3
   - year: 2024
     github_repos: 37
     total_stars: 787
     total_forks: 87
     avg_stars: 21.3
     avg_forks: 2.4
+    median_stars: 7
+    median_forks: 1
   top_repos:
   - title: 'Portunus: Re-imagining Access Control in Distributed Systems'
     url: https://github.com/cloudflare/circl/tree/main/abe/cpabe/tkn20
@@ -346,30 +370,40 @@ by_conference:
     total_forks: 150
     avg_stars: 48.0
     avg_forks: 7.1
+    median_stars: 6
+    median_forks: 2
   - year: 2022
     github_repos: 39
     total_stars: 1667
     total_forks: 303
     avg_stars: 42.7
     avg_forks: 7.8
+    median_stars: 17
+    median_forks: 4
   - year: 2023
     github_repos: 16
     total_stars: 286
     total_forks: 300
     avg_stars: 17.9
     avg_forks: 18.8
+    median_stars: 5.5
+    median_forks: 1.0
   - year: 2024
     github_repos: 14
     total_stars: 215
     total_forks: 43
     avg_stars: 15.4
     avg_forks: 3.1
+    median_stars: 7.0
+    median_forks: 1.0
   - year: 2025
     github_repos: 35
     total_stars: 748
     total_forks: 132
     avg_stars: 21.4
     avg_forks: 3.8
+    median_stars: 6
+    median_forks: 1
   top_repos:
   - title: 'PaSh: Light-touch Data-Parallel Shell Processing'
     url: https://github.com/andromeda/pash
@@ -502,18 +536,24 @@ by_conference:
     total_forks: 125
     avg_stars: 19.7
     avg_forks: 6.0
+    median_stars: 11
+    median_forks: 1
   - year: 2025
     github_repos: 20
     total_stars: 3190
     total_forks: 1170
     avg_stars: 159.5
     avg_forks: 58.5
+    median_stars: 9.5
+    median_forks: 2.0
   - year: 2026
     github_repos: 28
     total_stars: 429
     total_forks: 48
     avg_stars: 15.3
     avg_forks: 1.7
+    median_stars: 2.0
+    median_forks: 0.0
   top_repos:
   - title: Interventional Root Cause Analysis of Failures in Multi-Sensor Fusion Perception
       Systems
@@ -633,30 +673,40 @@ by_conference:
     total_forks: 3371
     avg_stars: 822.9
     avg_forks: 99.1
+    median_stars: 37.5
+    median_forks: 5.0
   - year: 2021
     github_repos: 18
     total_stars: 801
     total_forks: 171
     avg_stars: 44.5
     avg_forks: 9.5
+    median_stars: 26.0
+    median_forks: 5.5
   - year: 2022
     github_repos: 31
     total_stars: 22594
     total_forks: 2920
     avg_stars: 728.8
     avg_forks: 94.2
+    median_stars: 28
+    median_forks: 6
   - year: 2023
     github_repos: 26
     total_stars: 1785
     total_forks: 284
     avg_stars: 68.7
     avg_forks: 10.9
+    median_stars: 31.0
+    median_forks: 3.5
   - year: 2024
     github_repos: 30
     total_stars: 2187
     total_forks: 256
     avg_stars: 72.9
     avg_forks: 8.5
+    median_stars: 27.0
+    median_forks: 4.0
   top_repos:
   - title: 'Retiarii: A Deep Learning Exploratory-Training Framework'
     url: https://github.com/microsoft/nni/tree/retiarii_artifact
@@ -788,42 +838,56 @@ by_conference:
     total_forks: 471
     avg_stars: 232.6
     avg_forks: 31.4
+    median_stars: 4
+    median_forks: 3
   - year: 2021
     github_repos: 21
     total_stars: 13145
     total_forks: 722
     avg_stars: 626.0
     avg_forks: 34.4
+    median_stars: 7
+    median_forks: 2
   - year: 2022
     github_repos: 35
     total_stars: 3897
     total_forks: 595
     avg_stars: 111.3
     avg_forks: 17.0
+    median_stars: 2
+    median_forks: 1
   - year: 2023
     github_repos: 39
     total_stars: 559
     total_forks: 111
     avg_stars: 14.3
     avg_forks: 2.8
+    median_stars: 3
+    median_forks: 1
   - year: 2024
     github_repos: 59
     total_stars: 421
     total_forks: 91
     avg_stars: 7.1
     avg_forks: 1.5
+    median_stars: 2
+    median_forks: 0
   - year: 2025
     github_repos: 90
     total_stars: 389
     total_forks: 79
     avg_stars: 4.3
     avg_forks: 0.9
+    median_stars: 0.0
+    median_forks: 0.0
   - year: 2026
     github_repos: 36
     total_stars: 87
     total_forks: 20
     avg_stars: 2.4
     avg_forks: 0.6
+    median_stars: 0.0
+    median_forks: 0.0
   top_repos:
   - title: Who Can Find My Devices? Security and Privacy of Apple's Crowd-Sourced
       Bluetooth Location Tracking System
@@ -927,24 +991,32 @@ by_conference:
     total_forks: 400
     avg_stars: 73.9
     avg_forks: 21.1
+    median_stars: 48
+    median_forks: 8
   - year: 2021
     github_repos: 35
     total_stars: 2257
     total_forks: 391
     avg_stars: 64.5
     avg_forks: 11.2
+    median_stars: 18
+    median_forks: 6
   - year: 2023
     github_repos: 28
     total_stars: 1149
     total_forks: 209
     avg_stars: 41.0
     avg_forks: 7.5
+    median_stars: 18.0
+    median_forks: 3.5
   - year: 2024
     github_repos: 24
     total_stars: 1871
     total_forks: 298
     avg_stars: 78.0
     avg_forks: 12.4
+    median_stars: 15.0
+    median_forks: 3.0
   top_repos:
   - title: The Demikernel Library OS Architecture for Microsecond, Kernel-Bypass Datacenter
       Systems
@@ -1061,18 +1133,24 @@ by_conference:
     total_forks: 11
     avg_stars: 7.3
     avg_forks: 1.8
+    median_stars: 3.5
+    median_forks: 1.0
   - year: 2025
     github_repos: 5
     total_stars: 11
     total_forks: 1
     avg_stars: 2.2
     avg_forks: 0.2
+    median_stars: 0
+    median_forks: 0
   - year: 2026
     github_repos: 6
     total_stars: 5
     total_forks: 2
     avg_stars: 0.8
     avg_forks: 0.3
+    median_stars: 0.5
+    median_forks: 0.0
   top_repos:
   - title: 'SNPGuard: Remote Attestation of SEV-SNP VMs Using Open Source Tools'
     url: https://github.com/SNPGuard/snp-guard/tree/v0.1.3
@@ -1160,42 +1238,56 @@ by_conference:
     total_forks: 643
     avg_stars: 158.3
     avg_forks: 26.8
+    median_stars: 40.5
+    median_forks: 10.0
   - year: 2021
     github_repos: 25
     total_stars: 2051
     total_forks: 281
     avg_stars: 82.0
     avg_forks: 11.2
+    median_stars: 25
+    median_forks: 6
   - year: 2022
     github_repos: 92
     total_stars: 7862
     total_forks: 1084
     avg_stars: 85.5
     avg_forks: 11.8
+    median_stars: 13.5
+    median_forks: 2.0
   - year: 2023
     github_repos: 122
     total_stars: 4847
     total_forks: 853
     avg_stars: 39.7
     avg_forks: 7.0
+    median_stars: 13.5
+    median_forks: 2.0
   - year: 2024
     github_repos: 128
     total_stars: 15540
     total_forks: 2551
     avg_stars: 121.4
     avg_forks: 19.9
+    median_stars: 9.0
+    median_forks: 2.0
   - year: 2025
     github_repos: 95
     total_stars: 24460
     total_forks: 4099
     avg_stars: 257.5
     avg_forks: 43.1
+    median_stars: 10
+    median_forks: 2
   - year: 2026
     github_repos: 28
     total_stars: 3065
     total_forks: 405
     avg_stars: 109.5
     avg_forks: 14.5
+    median_stars: 2.5
+    median_forks: 0.0
   top_repos:
   - title: 'PentestGPT: Evaluating and Harnessing Large Language Models for Automated
       Penetration Testing'
@@ -1325,36 +1417,48 @@ by_conference:
     total_forks: 1048
     avg_stars: 3189.5
     avg_forks: 262.0
+    median_stars: 170.5
+    median_forks: 22.5
   - year: 2021
     github_repos: 1
     total_stars: 19
     total_forks: 0
     avg_stars: 19.0
     avg_forks: 0.0
+    median_stars: 19
+    median_forks: 0
   - year: 2022
     github_repos: 3
     total_stars: 24
     total_forks: 11
     avg_stars: 8.0
     avg_forks: 3.7
+    median_stars: 10
+    median_forks: 3
   - year: 2023
     github_repos: 5
     total_stars: 577
     total_forks: 40
     avg_stars: 115.4
     avg_forks: 8.0
+    median_stars: 20
+    median_forks: 1
   - year: 2024
     github_repos: 9
     total_stars: 2119
     total_forks: 132
     avg_stars: 235.4
     avg_forks: 14.7
+    median_stars: 8
+    median_forks: 1
   - year: 2025
     github_repos: 9
     total_stars: 722
     total_forks: 72
     avg_stars: 80.2
     avg_forks: 8.0
+    median_stars: 1
+    median_forks: 0
   top_repos:
   - title: Automatic Wireless Protocol Reverse Engineering
     url: https://github.com/jopohl/urh/releases/tag/v2.7.3
@@ -1542,3 +1646,18 @@ by_year:
   median_forks: 0.0
   max_stars: 1376
   max_forks: 107
+by_area:
+- name: systems
+  github_repos: 481
+  total_stars: 71776
+  total_forks: 10231
+  median_stars: 16
+  median_forks: 3
+  max_stars: 14349
+- name: security
+  github_repos: 1133
+  total_stars: 107076
+  total_forks: 15428
+  median_stars: 5
+  median_forks: 1
+  max_stars: 12895
