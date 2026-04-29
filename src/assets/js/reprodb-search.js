@@ -367,7 +367,7 @@
         '<div class="avatar inst-avatar">' + escHtml(initials) + '</div>' +
         '<div class="card-info">' +
           '<div class="card-name">' + escHtml(inst.affiliation) + '</div>' +
-          '<div class="card-detail">' + (inst.author_count || 0) + ' researchers &middot; Score ' + (inst.combined_score || 0) + '</div>' +
+          '<div class="card-detail">' + (inst.author_count || 0) + ' researchers</div>' +
         '</div></a>';
     });
 
@@ -378,7 +378,7 @@
         '<div class="avatar author-avatar">' + escHtml(getInitials(cleanN)) + '</div>' +
         '<div class="card-info">' +
           '<div class="card-name">' + escHtml(cleanN) + '</div>' +
-          '<div class="card-detail">' + escHtml(p.affiliation || '') + (p.combined_score ? ' &middot; Score ' + p.combined_score : '') + '</div>' +
+          '<div class="card-detail">' + escHtml(p.affiliation || '') + '</div>' +
         '</div></a>';
     });
 
