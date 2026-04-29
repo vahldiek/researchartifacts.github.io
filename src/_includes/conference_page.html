@@ -435,8 +435,8 @@ document.addEventListener('DOMContentLoaded', function() {
       totalId: 'authorTotal', searchId: 'authorSearch',
       cols: cols, sortCol: 3, sortAsc: false,
       renderRow: function(d) {
-        var url = BASE + '/author.html?name=' + encodeURIComponent(d.name);
-        var instUrl = BASE + '/institution.html?name=' + encodeURIComponent(d.affiliation || '');
+        var url = BASE + '/profile.html?name=' + encodeURIComponent(d.name);
+        var instUrl = BASE + '/profile.html?type=institution&name=' + encodeURIComponent(d.affiliation || '');
         var cells = '<td>' + d._rank + '</td>';
         cells += '<td><a href="' + url + '">' + esc(d._display) + '</a></td>';
         cells += '<td class="wrap-cell"><a href="' + instUrl + '">' + esc(d.affiliation || '') + '</a></td>';
@@ -494,7 +494,7 @@ document.addEventListener('DOMContentLoaded', function() {
       totalId: 'instTotal', searchId: 'instSearch',
       cols: cols, sortCol: 2, sortAsc: false,
       renderRow: function(d) {
-        var url = BASE + '/institution.html?name=' + encodeURIComponent(d.affiliation);
+        var url = BASE + '/profile.html?type=institution&name=' + encodeURIComponent(d.affiliation);
         var cells = '<td>' + d._rank + '</td>';
         cells += '<td class="wrap-cell"><a href="' + url + '">' + esc(d.affiliation) + '</a></td>';
         cells += '<td><strong>' + (d.combined_score||0) + '</strong></td>';
@@ -552,8 +552,8 @@ document.addEventListener('DOMContentLoaded', function() {
       ],
       sortCol: 3, sortAsc: false,
       renderRow: function(d) {
-        var memUrl = BASE + '/author.html?name=' + encodeURIComponent(d._display);
-        var memInstUrl = BASE + '/institution.html?name=' + encodeURIComponent(d.affiliation || '');
+        var memUrl = BASE + '/profile.html?name=' + encodeURIComponent(d._display);
+        var memInstUrl = BASE + '/profile.html?type=institution&name=' + encodeURIComponent(d.affiliation || '');
         return '<td>' + d._rank + '</td>' +
           '<td><a href="' + memUrl + '">' + esc(d._display) + '</a></td>' +
           '<td class="wrap-cell"><a href="' + memInstUrl + '">' + esc(d.affiliation) + '</a></td>' +
@@ -604,7 +604,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var authors = (match.authors || []).slice(0, 3);
         if (authCell) {
           authCell.innerHTML = authors.map(function(a) {
-            return '<a href="' + BASE + '/author.html?name=' + encodeURIComponent(a) + '">' + esc(a) + '</a>';
+            return '<a href="' + BASE + '/profile.html?name=' + encodeURIComponent(a) + '">' + esc(a) + '</a>';
           }).join(', ') + (match.authors.length > 3 ? ' <em>et al.</em>' : '');
         }
         var badges = match.badges || [];

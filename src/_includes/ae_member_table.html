@@ -74,7 +74,7 @@
       var m = page[i];
       var cells = [];
       cells.push('<td>' + (m._originalRank || (start + i + 1)) + '</td>');
-      var profileUrl = baseUrl + '/author.html?name=' + encodeURIComponent(m.name) + (m.author_id != null ? '&id=' + m.author_id : '');
+      var profileUrl = baseUrl + '/profile.html?name=' + encodeURIComponent(m.name) + (m.author_id != null ? '&id=' + m.author_id : '');
       var displayName = m.display_name || m.name;
       cells.push('<td><a href="' + profileUrl + '">' + escHtml(displayName) + '</a></td>');
       cells.push('<td>' + escHtml(m.affiliation || '') + '</td>');

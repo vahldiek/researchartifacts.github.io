@@ -1,0 +1,86 @@
+/* reprodb-profile.css — Styles for the unified profile page and profile_common. */
+
+/* ── Search box ────────────────────────────────────────────────────────── */
+.profile-search-box { padding:8px 14px; font-size:1em; width:100%; max-width:480px; border:1px solid #ccc; border-radius:4px; }
+
+/* ── Autocomplete results ──────────────────────────────────────────────── */
+.profile-search-results { list-style:none; padding:0; margin:4px 0 0 0; max-height:260px; overflow-y:auto; border:1px solid #ddd; border-radius:4px; display:none; position:absolute; background:#fff; z-index:100; width:100%; max-width:480px; }
+.profile-search-results li { padding:8px 14px; cursor:pointer; border-bottom:1px solid #f0f0f0; }
+.profile-search-results li:hover,
+.profile-search-results li.active { background:#e8f4f8; }
+.profile-search-results .sr-detail { font-size:0.82em; color:#666; }
+
+/* ── Profile layout ────────────────────────────────────────────────────── */
+.profile-container { display:none; margin-top:20px; }
+.profile-header { margin-bottom:18px; }
+.profile-header h2 { margin-bottom:2px; display:inline; }
+.profile-header .affil { color:#555; font-size:0.95em; }
+
+/* ── Score cards ───────────────────────────────────────────────────────── */
+.score-cards { display:flex; flex-wrap:wrap; gap:12px; margin:16px 0; }
+.score-card { background:#f7f7f7; border:1px solid #e0e0e0; border-radius:6px; padding:12px 18px; min-width:110px; text-align:center; }
+.score-card .val { font-size:1.6em; font-weight:bold; color:#2c3e50; }
+.score-card .lbl { font-size:0.78em; color:#777; margin-top:2px; }
+
+/* ── Badges ────────────────────────────────────────────────────────────── */
+.badge-tag { display:inline-block; padding:2px 8px; border-radius:3px; font-size:0.8em; margin:1px 2px; color:#fff; }
+.badge-available { background:#3498db; }
+.badge-functional { background:#27ae60; }
+.badge-reproducible,
+.badge-reproduced,
+.badge-reusable { background:#8e44ad; }
+
+/* ── Chart ─────────────────────────────────────────────────────────────── */
+.chart-container { max-width:1050px; margin:16px 0; position:relative; height:290px; }
+
+/* ── Loading ───────────────────────────────────────────────────────────── */
+.profile-loading { color:#888; font-style:italic; }
+
+/* ── Share button ──────────────────────────────────────────────────────── */
+.share-btn { display:none; margin-left:10px; padding:3px 10px; font-size:0.7em; cursor:pointer; background:#f0f0f0; border:1px solid #ccc; border-radius:4px; color:#555; vertical-align:middle; position:relative; }
+.share-btn:hover { background:#e0e0e0; }
+.share-btn .share-tip { display:none; position:absolute; bottom:125%; left:50%; transform:translateX(-50%); background:#333; color:#fff; font-size:0.85em; padding:4px 8px; border-radius:4px; white-space:nowrap; z-index:100; pointer-events:none; }
+.share-btn.copied .share-tip { display:block; }
+
+/* ── Tables (shared) ──────────────────────────────────────────────────── */
+.profile-table { font-size:0.88em; border-collapse:collapse; width:100%; margin:10px 0; }
+.profile-table th,
+.profile-table td { padding:6px 10px; border:1px solid #ddd; text-align:left; }
+.profile-table th { background:#f2f2f2; white-space:nowrap; }
+.profile-table tr:nth-child(even) { background:#fafafa; }
+
+/* ── Availability warnings ─────────────────────────────────────────────── */
+.avail-warn { position:relative; cursor:help; font-size:0.8em; color:#b26a00; background:#fff8e1; padding:1px 5px; border-radius:3px; border:1px solid #ffe0b2; }
+.avail-warn .avail-tip { display:none; position:absolute; bottom:125%; left:50%; transform:translateX(-50%); background:#333; color:#fff; font-size:0.85em; padding:4px 8px; border-radius:4px; white-space:nowrap; z-index:100; pointer-events:none; }
+.avail-warn:hover .avail-tip { display:block; }
+
+/* ── Author-specific ───────────────────────────────────────────────────── */
+.ae-table { font-size:0.88em; border-collapse:collapse; width:100%; margin:10px 0; }
+.ae-table th,
+.ae-table td { padding:6px 10px; border:1px solid #ddd; text-align:left; }
+.ae-table th { background:#f2f2f2; }
+.ae-table tr:nth-child(even) { background:#fafafa; }
+.category-tag { display:inline-block; padding:1px 7px; border-radius:3px; font-size:0.78em; color:#fff; margin-left:6px; }
+.cat-systems { background:#2980b9; }
+.cat-security { background:#c0392b; }
+.cat-both { background:#8e44ad; }
+
+/* ── Institution-specific ──────────────────────────────────────────────── */
+.inst-table { font-size:0.88em; border-collapse:collapse; width:100%; margin:10px 0; }
+.inst-table th,
+.inst-table td { padding:6px 10px; border:1px solid #ddd; text-align:left; }
+.inst-table th { background:#f2f2f2; white-space:nowrap; cursor:pointer; }
+.inst-table tr:nth-child(even) { background:#fafafa; }
+.inst-table tr:hover { background:#e8f4f8; }
+.pag-controls { margin:8px 0; font-size:0.9em; }
+.pag-controls button { padding:2px 8px; font-size:0.9em; }
+.pag-controls span { margin:0 8px; }
+.role-tag { display:inline-block; padding:1px 7px; border-radius:3px; font-size:0.78em; color:#fff; margin-left:6px; }
+.role-balanced { background:#8e44ad; }
+.role-artifact { background:#2980b9; }
+.role-evaluation { background:#27ae60; }
+
+/* ── Unified search result type labels ─────────────────────────────────── */
+.sr-type { display:inline-block; padding:1px 6px; border-radius:3px; font-size:0.72em; color:#fff; margin-right:6px; vertical-align:middle; }
+.sr-type-author { background:#2980b9; }
+.sr-type-inst { background:#27ae60; }

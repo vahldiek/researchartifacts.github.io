@@ -270,8 +270,8 @@
       totalId: 'authorTotal', searchId: 'authorSearch',
       cols: cols, sortCol: 3, sortAsc: false,
       renderRow: function(d) {
-        var url = BASE + '/author.html?name=' + encodeURIComponent(d.name);
-        var instUrl = BASE + '/institution.html?name=' + encodeURIComponent(d.affiliation || '');
+        var url = BASE + '/profile.html?name=' + encodeURIComponent(d.name);
+        var instUrl = BASE + '/profile.html?type=institution&name=' + encodeURIComponent(d.affiliation || '');
         var cells = '<td>' + d._rank + '</td>';
         cells += '<td><a href="' + url + '">' + esc(d._display) + '</a></td>';
         cells += '<td class="wrap-cell"><a href="' + instUrl + '">' + esc(d.affiliation || '') + '</a></td>';
@@ -328,7 +328,7 @@
       totalId: 'instTotal', searchId: 'instSearch',
       cols: cols, sortCol: 2, sortAsc: false,
       renderRow: function(d) {
-        var url = BASE + '/institution.html?name=' + encodeURIComponent(d.affiliation);
+        var url = BASE + '/profile.html?type=institution&name=' + encodeURIComponent(d.affiliation);
         var cells = '<td>' + d._rank + '</td>';
         cells += '<td class="wrap-cell"><a href="' + url + '">' + esc(d.affiliation) + '</a></td>';
         cells += '<td><strong>' + (d.combined_score||0) + '</strong></td>';

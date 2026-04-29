@@ -527,7 +527,7 @@
       
       var aff = (inst.affiliation || 'Unknown').replace(/^_/, '');
       var flag = getFlagForInstitution(aff);
-      var instUrl = baseUrl + '/institution.html?name=' + encodeURIComponent(inst.affiliation);
+      var instUrl = baseUrl + '/profile.html?type=institution&name=' + encodeURIComponent(inst.affiliation);
       cells.push('<td>' + (flag || '') + '<a href="' + instUrl + '">' + escHtml(aff) + '</a></td>');
       // S column (combined_score) - bold when filterMode is 'both'
       cells.push('<td>' + (filterMode === 'both' ? '<strong>' : '') + (inst.combined_score || 0) + (filterMode === 'both' ? '</strong>' : '') + '</td>');
@@ -570,14 +570,14 @@
       if (isExpanded && instAuthors.length > 0) {
         var expandedContent = '<td colspan="' + numCols + '" style="padding:8px 16px; background-color:#f9f9f9;">';
         var showCount = Math.min(instAuthors.length, 10);
-        expandedContent += '<div style="margin-left:20px;"><strong>Top ' + showCount + ' of ' + instAuthors.length + ' Researchers:</strong> <a href="' + baseUrl + '/institution.html?name=' + encodeURIComponent(inst.affiliation) + '" style="font-size:0.85em;">View all →</a><br>';
+        expandedContent += '<div style="margin-left:20px;"><strong>Top ' + showCount + ' of ' + instAuthors.length + ' Researchers:</strong> <a href="' + baseUrl + '/profile.html?type=institution&name=' + encodeURIComponent(inst.affiliation) + '" style="font-size:0.85em;">View all →</a><br>';
         expandedContent += '<table style="margin-top:8px; font-size:0.9em; border-collapse:collapse; width:auto;">';
         expandedContent += '<thead><tr style="background-color:#e8e8e8;"><th style="padding:4px 8px;border:1px solid #ccc;">Name</th><th style="padding:4px 8px;border:1px solid #ccc;">Combined</th><th style="padding:4px 8px;border:1px solid #ccc;">Artifacts</th><th style="padding:4px 8px;border:1px solid #ccc;">AE Service</th><th style="padding:4px 8px;border:1px solid #ccc;">Papers</th></tr></thead><tbody>';
         
         for (var k = 0; k < showCount; k++) {
           var author = instAuthors[k];
           var displayName = (author.name || '').replace(/\s+\d{4}$/, '').replace(/\t/g, ' ');
-          var profileUrl = baseUrl + '/author.html?name=' + encodeURIComponent(author.name) + (author.author_id != null ? '&id=' + author.author_id : '');
+          var profileUrl = baseUrl + '/profile.html?name=' + encodeURIComponent(author.name) + (author.author_id != null ? '&id=' + author.author_id : '');
           expandedContent += '<tr style="' + (k % 2 === 0 ? 'background-color:#fff;' : 'background-color:#f5f5f5;') + '">';
           expandedContent += '<td style="padding:4px 8px;border:1px solid #ccc;"><a href="' + profileUrl + '">' + escHtml(displayName) + '</a></td>';
           expandedContent += '<td style="padding:4px 8px;border:1px solid #ccc;text-align:center;"><strong>' + (author.combined_score || 0) + '</strong></td>';
