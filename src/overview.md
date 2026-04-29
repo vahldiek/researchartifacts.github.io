@@ -237,7 +237,12 @@ Top-10 institutions by combined score (artifact creation + AE service) for each 
 <div style="position:relative; width:100%; max-width:900px; margin:2em auto; height:400px;">
   <canvas id="instScatterChart"></canvas>
 </div>
-<p style="text-align:center; font-size:0.9em; color:#666;">Each bubble is an institution. X = artifact score, Y = AE service score, size = combined score. Only institutions with combined score &ge; 50 are shown.</p>
+<div style="text-align:center; margin:0.5em 0;">
+  <span style="font-size:0.85em; color:#666; margin-right:8px;">Security</span>
+  <canvas id="instScatterLegend" style="vertical-align:middle;"></canvas>
+  <span style="font-size:0.85em; color:#666; margin-left:8px;">Systems</span>
+</div>
+<p style="text-align:center; font-size:0.9em; color:#666;">Each bubble is an institution. X = artifact score, Y = AE service score, size = combined score. Color indicates the systems/security balance. Only institutions with combined score &ge; 50 are shown.</p>
 
 {% else %}
 
@@ -428,26 +433,71 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function makeInstScatter(sysData, secData) {
     var minScore = 50;
-    function toPoints(data, area) {
-      return data.filter(function(e){ return (e.combined_score||0) >= minScore; })
-        .map(function(e){ return { x: e.artifact_score||0, y: e.ae_score||0, r: Math.max(3, Math.sqrt(e.combined_score||0) * 0.8), label: e.affiliation, area: area }; });
+
+    /* Merge institutions: compute combined scores across both areas */
+    var instMap = {};
+    function addToMap(data, area) {
+      data.forEach(function(e) {
+        var name = e.affiliation;
+        if (!instMap[name]) instMap[name] = { affiliation: name, sys_artifact: 0, sys_ae: 0, sys_combined: 0, sec_artifact: 0, sec_ae: 0, sec_combined: 0 };
+        instMap[name][area + '_artifact'] += (e.artifact_score || 0);
+        instMap[name][area + '_ae'] += (e.ae_score || 0);
+        instMap[name][area + '_combined'] += (e.combined_score || 0);
+      });
     }
-    var sysPoints = toPoints(sysData, 'systems');
-    var secPoints = toPoints(secData, 'security');
+    addToMap(sysData, 'sys');
+    addToMap(secData, 'sec');
+
+    /* Color interpolation: blue (systems) ↔ red (security) */
+    function lerpColor(ratio) {
+      /* ratio: 0 = pure security, 1 = pure systems */
+      var sR = 41, sG = 128, sB = 185;   /* systems blue */
+      var eR = 192, eG = 57, eB = 43;    /* security red */
+      var r = Math.round(eR + (sR - eR) * ratio);
+      var g = Math.round(eG + (sG - eG) * ratio);
+      var b = Math.round(eB + (sB - eB) * ratio);
+      return { bg: 'rgba(' + r + ',' + g + ',' + b + ',0.5)', border: 'rgb(' + r + ',' + g + ',' + b + ')' };
+    }
+
+    var points = [];
+    Object.keys(instMap).forEach(function(name) {
+      var inst = instMap[name];
+      var totalCombined = inst.sys_combined + inst.sec_combined;
+      if (totalCombined < minScore) return;
+      var sysRatio = totalCombined > 0 ? inst.sys_combined / totalCombined : 0.5;
+      var col = lerpColor(sysRatio);
+      points.push({
+        x: inst.sys_artifact + inst.sec_artifact,
+        y: inst.sys_ae + inst.sec_ae,
+        r: Math.max(3, Math.sqrt(totalCombined) * 0.8),
+        label: name,
+        sysRatio: sysRatio,
+        bgColor: col.bg,
+        borderColor: col.border
+      });
+    });
 
     new Chart(document.getElementById('instScatterChart'), {
       type: 'bubble',
       data: {
-        datasets: [
-          { label: 'Systems', data: sysPoints, backgroundColor: 'rgba(41,128,185,0.45)', borderColor: SYS_COLOR },
-          { label: 'Security', data: secPoints, backgroundColor: 'rgba(192,57,43,0.45)', borderColor: SEC_COLOR }
-        ]
+        datasets: [{
+          label: 'Institutions',
+          data: points,
+          backgroundColor: points.map(function(p) { return p.bgColor; }),
+          borderColor: points.map(function(p) { return p.borderColor; }),
+          borderWidth: 1
+        }]
       },
       options: {
         responsive: true, maintainAspectRatio: false,
         plugins: {
           title: { display: true, text: 'Institutional Ecosystem: Artifact Creation vs. AE Service' },
-          tooltip: { callbacks: { label: function(ctx) { var p = ctx.raw; return p.label + ' (artifacts: ' + p.x + ', AE: ' + p.y + ')'; } } }
+          legend: { display: false },
+          tooltip: { callbacks: { label: function(ctx) {
+            var p = ctx.raw;
+            var pct = Math.round(p.sysRatio * 100);
+            return p.label + ' (artifacts: ' + p.x + ', AE: ' + p.y + ', ' + pct + '% systems)';
+          } } }
         },
         scales: {
           x: { title: { display: true, text: 'Artifact Score' }, beginAtZero: true },
@@ -455,6 +505,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
     });
+
+    /* Draw gradient legend below the chart */
+    var legendCanvas = document.getElementById('instScatterLegend');
+    if (legendCanvas) {
+      var lw = 200, lh = 12;
+      legendCanvas.width = lw * 2;
+      legendCanvas.height = lh * 2;
+      legendCanvas.style.width = lw + 'px';
+      legendCanvas.style.height = lh + 'px';
+      var lctx = legendCanvas.getContext('2d');
+      lctx.scale(2, 2);
+      for (var i = 0; i < lw; i++) {
+        var c = lerpColor(i / (lw - 1));
+        lctx.fillStyle = c.border;
+        lctx.fillRect(i, 0, 1, lh);
+      }
+    }
   }
 
   Promise.all([
