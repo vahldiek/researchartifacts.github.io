@@ -6,7 +6,7 @@
     page.top_repos_url  — path to the JSON file (e.g., /assets/data/top_repos.json)
 {% endcomment %}
 
-<div id="repo-controls" class="at-controls" style="display:none;">
+<div id="repo-controls" class="at-controls rdb-hidden">
   <div class="at-controls-row">
     <div class="at-control-group">
       <label class="at-label" for="repoPageSizeSelect">Show</label>
@@ -29,14 +29,14 @@
 
 <div id="repoLoading"><em>Loading repository data…</em></div>
 
-<table id="repoTable" style="display:none;">
+<table id="repoTable" class="rdb-hidden">
 <thead><tr id="repoHead"></tr></thead>
 <tbody id="repoBody"></tbody>
 </table>
 
-<div id="repo-controls-bottom" class="at-controls" style="display:none;">
+<div id="repo-controls-bottom" class="at-controls rdb-hidden">
   <div class="at-controls-row">
-    <div class="at-control-group at-page-nav" style="margin-left:0;">
+    <div class="at-control-group at-page-nav">
       <button id="repoPrevBtnB" class="at-btn">&laquo; Prev</button>
       <span id="repoPageInfoB" class="at-page-info"></span>
       <button id="repoNextBtnB" class="at-btn">Next &raquo;</button>
@@ -134,7 +134,7 @@
     for (var i = 0; i < cols.length; i++) {
       var arrow = (i === sortCol) ? (sortAsc ? ' &#9650;' : ' &#9660;') : '';
       var tip = cols[i].tip ? ' title="' + cols[i].tip + '"' : '';
-      cells.push('<th data-col="' + i + '" style="cursor:pointer;"' + tip + '>' + cols[i].label + arrow + '</th>');
+      cells.push('<th data-col="' + i + '" class="reprodb-sortable"' + tip + '>' + cols[i].label + arrow + '</th>');
     }
     tr.innerHTML = cells.join('');
     tr.querySelectorAll('th').forEach(function(th) {
@@ -175,10 +175,10 @@
       sortData();
       buildHeader();
 
-      document.getElementById('repoLoading').style.display = 'none';
-      document.getElementById('repoTable').style.display = '';
-      document.getElementById('repo-controls').style.display = '';
-      document.getElementById('repo-controls-bottom').style.display = '';
+      document.getElementById('repoLoading').classList.add('rdb-hidden');
+      document.getElementById('repoTable').classList.remove('rdb-hidden');
+      document.getElementById('repo-controls').classList.remove('rdb-hidden');
+      document.getElementById('repo-controls-bottom').classList.remove('rdb-hidden');
 
       document.getElementById('repoPageSizeSelect').addEventListener('change', function() {
         pageSize = parseInt(this.value);

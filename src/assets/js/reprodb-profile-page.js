@@ -52,13 +52,13 @@
   // ═══════════════════════════════════════════════════════════════════════
 
   function hideAllProfiles() {
-    document.getElementById('author-profile').style.display = 'none';
-    document.getElementById('inst-profile').style.display = 'none';
+    document.getElementById('author-profile').classList.add('rdb-hidden');
+    document.getElementById('inst-profile').classList.add('rdb-hidden');
   }
 
   function renderAuthorProfile(p) {
     hideAllProfiles();
-    document.getElementById('author-profile').style.display = 'block';
+    document.getElementById('author-profile').classList.remove('rdb-hidden');
     document.getElementById('prof-name').textContent = cleanName(p.name);
 
     var catTag = '';
@@ -96,7 +96,7 @@
       papers = p.papers || [];
     }
     if (papers.length > 0) {
-      document.getElementById('papers-section').style.display = 'block';
+      document.getElementById('papers-section').classList.remove('rdb-hidden');
       var rows = '';
       papers.sort(function(a,b) { return (b.year||0) - (a.year||0); });
       for (var i = 0; i < papers.length; i++) {
@@ -111,13 +111,13 @@
       }
       document.getElementById('papers-body').innerHTML = rows;
     } else {
-      document.getElementById('papers-section').style.display = 'none';
+      document.getElementById('papers-section').classList.add('rdb-hidden');
     }
 
     // AE service
     var hasAE = p.ae_memberships && p.ae_memberships > 0;
     if (hasAE) {
-      document.getElementById('ae-section').style.display = 'block';
+      document.getElementById('ae-section').classList.remove('rdb-hidden');
       var summary = '<p><strong>' + p.ae_memberships + '</strong> AE committee membership' + (p.ae_memberships > 1 ? 's' : '');
       if (p.chair_count) summary += ', <strong>' + p.chair_count + '</strong> as chair/co-chair';
       summary += '.</p>';
@@ -134,7 +134,7 @@
       document.getElementById('ae-summary').innerHTML = summary;
 
       if (p.ae_conferences && p.ae_conferences.length) {
-        document.getElementById('ae-table').style.display = '';
+        document.getElementById('ae-table').classList.remove('rdb-hidden');
         var sorted = p.ae_conferences.slice().sort(function(a,b) {
           var ya = Array.isArray(a) ? a[1] : (a.year || 0), yb = Array.isArray(b) ? b[1] : (b.year || 0);
           if (yb !== ya) return yb - ya;
@@ -153,13 +153,13 @@
         document.getElementById('ae-body').innerHTML = arows;
       }
     } else {
-      document.getElementById('ae-section').style.display = 'none';
+      document.getElementById('ae-section').classList.add('rdb-hidden');
     }
 
     // Cited artifacts
     var authorData = citedArtifactsMap[p.name];
     if (authorData && authorData.cited_artifacts && authorData.cited_artifacts.length > 0) {
-      document.getElementById('citations-section').style.display = 'block';
+      document.getElementById('citations-section').classList.remove('rdb-hidden');
       var citSummary = '<p><strong>' + authorData.total_citations + '</strong> total citation' +
         (authorData.total_citations > 1 ? 's' : '') + ' to <strong>' + authorData.cited_artifacts.length +
         '</strong> artifact' + (authorData.cited_artifacts.length > 1 ? 's' : '') + '.</p>';
@@ -174,7 +174,7 @@
       }
       document.getElementById('citations-body').innerHTML = citRows;
     } else {
-      document.getElementById('citations-section').style.display = 'none';
+      document.getElementById('citations-section').classList.add('rdb-hidden');
     }
 
     renderAuthorChart(p);
@@ -197,7 +197,7 @@
     Object.keys(aeYears).forEach(function(y) { yearSet[y] = true; });
     var years = Object.keys(yearSet).map(Number).sort();
     if (years.length < 1) {
-      document.getElementById('chart-section').style.display = 'none';
+      document.getElementById('chart-section').classList.add('rdb-hidden');
       return;
     }
     var minY = years[0], maxY = years[years.length - 1];
@@ -224,7 +224,7 @@
         borderWidth: 1
       });
     }
-    document.getElementById('chart-section').style.display = '';
+    document.getElementById('chart-section').classList.remove('rdb-hidden');
     var ctx = document.getElementById('timelineChart').getContext('2d');
     if (authorChart) authorChart.destroy();
     authorChart = new Chart(ctx, {
@@ -245,14 +245,14 @@
     var prev = authorRankHistory[authorRankHistory.length - 2].entries[name];
     if (!curr || !prev) return null;
     var diff = prev.rank - curr.rank;
-    if (diff > 0) return { html: '<span style="color:#27ae60">▲' + diff + '</span>' };
-    if (diff < 0) return { html: '<span style="color:#e74c3c">▼' + (-diff) + '</span>' };
-    return { html: '<span style="color:#999">–</span>' };
+    if (diff > 0) return { html: '<span class="rdb-rank-up">▲' + diff + '</span>' };
+    if (diff < 0) return { html: '<span class="rdb-rank-down">▼' + (-diff) + '</span>' };
+    return { html: '<span class="rank-unchanged">–</span>' };
   }
 
   function renderAuthorHistoryChart(p) {
     if (authorRankHistory.length < 2) {
-      document.getElementById('author-history-section').style.display = 'none';
+      document.getElementById('author-history-section').classList.add('rdb-hidden');
       return;
     }
     var labels = [], scores = [], ranks = [], artScores = [], aeScores = [];
@@ -268,10 +268,10 @@
       }
     }
     if (labels.length < 2) {
-      document.getElementById('author-history-section').style.display = 'none';
+      document.getElementById('author-history-section').classList.add('rdb-hidden');
       return;
     }
-    document.getElementById('author-history-section').style.display = '';
+    document.getElementById('author-history-section').classList.remove('rdb-hidden');
     var ctx = document.getElementById('authorHistoryChart').getContext('2d');
     if (authorHistoryChart) authorHistoryChart.destroy();
     authorHistoryChart = new Chart(ctx, {
@@ -362,7 +362,7 @@
           var roleLabel = role === 'chair' ? '★ Chair' : 'Member';
           return '<tr><td>' + escHtml(String(conf)) + '</td><td>' + yr + '</td><td>' + roleLabel + '</td></tr>';
         }).join('');
-        detailRow = '<tr id="' + rowId + '" class="ae-detail-row" style="display:none;">' +
+        detailRow = '<tr id="' + rowId + '" class="ae-detail-row rdb-hidden">' +
           '<td colspan="9"><table class="ae-inline-table"><thead><tr><th>Conference</th><th>Year</th><th>Role</th></tr></thead><tbody>' +
           aeRows + '</tbody></table></td></tr>';
       }
@@ -419,7 +419,7 @@
 
   function renderInstHistoryChart(instName) {
     if (instHistory.length < 2) {
-      document.getElementById('inst-history-section').style.display = 'none';
+      document.getElementById('inst-history-section').classList.add('rdb-hidden');
       return;
     }
     var labels = [], scores = [], artScores = [], aeScores = [], ranks = [];
@@ -435,10 +435,10 @@
       }
     }
     if (labels.length < 2) {
-      document.getElementById('inst-history-section').style.display = 'none';
+      document.getElementById('inst-history-section').classList.add('rdb-hidden');
       return;
     }
-    document.getElementById('inst-history-section').style.display = '';
+    document.getElementById('inst-history-section').classList.remove('rdb-hidden');
     var ctx = document.getElementById('instHistoryChart').getContext('2d');
     if (instHistoryChart) instHistoryChart.destroy();
     instHistoryChart = new Chart(ctx, {
@@ -467,7 +467,7 @@
 
   function renderInstProfile(inst) {
     hideAllProfiles();
-    document.getElementById('inst-profile').style.display = 'block';
+    document.getElementById('inst-profile').classList.remove('rdb-hidden');
     document.getElementById('inst-name').textContent = inst.affiliation;
 
     var roleTag = '';
@@ -498,9 +498,9 @@
       if (curr && prev) {
         var diff = prev.rank - curr.rank;
         var changeHtml;
-        if (diff > 0) changeHtml = '<span style="color:#27ae60">▲' + diff + '</span>';
-        else if (diff < 0) changeHtml = '<span style="color:#e74c3c">▼' + (-diff) + '</span>';
-        else changeHtml = '<span style="color:#999">–</span>';
+        if (diff > 0) changeHtml = '<span class="rdb-rank-up">▲' + diff + '</span>';
+        else if (diff < 0) changeHtml = '<span class="rdb-rank-down">▼' + (-diff) + '</span>';
+        else changeHtml = '<span class="rank-unchanged">–</span>';
         cards += card(changeHtml, 'Rank Change');
       }
     }
@@ -536,10 +536,10 @@
     contribSortCol = 'combined_score';
     contribSortAsc = false;
     if (contribData.length > 0) {
-      document.getElementById('inst-contributors-section').style.display = '';
+      document.getElementById('inst-contributors-section').classList.remove('rdb-hidden');
       refreshContributors();
     } else {
-      document.getElementById('inst-contributors-section').style.display = 'none';
+      document.getElementById('inst-contributors-section').classList.add('rdb-hidden');
     }
 
     // Artifacts
@@ -565,10 +565,10 @@
     artData.sort(function(a, b) { return (b.year || 0) - (a.year || 0); });
     artPage = 0;
     if (artData.length > 0) {
-      document.getElementById('inst-artifacts-section').style.display = '';
+      document.getElementById('inst-artifacts-section').classList.remove('rdb-hidden');
       refreshArtifacts();
     } else {
-      document.getElementById('inst-artifacts-section').style.display = 'none';
+      document.getElementById('inst-artifacts-section').classList.add('rdb-hidden');
     }
 
     // AE involvement
@@ -594,7 +594,7 @@
     });
     aePage = 0;
     if (aeData.length > 0) {
-      document.getElementById('inst-ae-section').style.display = '';
+      document.getElementById('inst-ae-section').classList.remove('rdb-hidden');
       var confList = Object.keys(aeConferences).sort();
       var summaryHtml = '<p><strong>' + totalAEMemberships + '</strong> total AE memberships across <strong>' + affProfiles.filter(function(p){ return p.ae_memberships > 0; }).length + '</strong> researchers';
       if (totalChairs > 0) summaryHtml += ', <strong>' + totalChairs + '</strong> chair roles';
@@ -603,7 +603,7 @@
       document.getElementById('ae-summary-text').innerHTML = summaryHtml;
       refreshAE();
     } else {
-      document.getElementById('inst-ae-section').style.display = 'none';
+      document.getElementById('inst-ae-section').classList.add('rdb-hidden');
     }
   }
 
@@ -645,7 +645,7 @@
           key: 'author:' + p.name,
           html: '<span class="sr-type sr-type-author">Author</span>' +
                 '<strong>' + escHtml(cleanName(p.name)) + '</strong>' +
-                (p.affiliation ? '<br><span class="sr-detail" style="margin-left:58px;">' + escHtml(p.affiliation) + '</span>' : '')
+                (p.affiliation ? '<br><span class="sr-detail sr-detail-indent">' + escHtml(p.affiliation) + '</span>' : '')
         };
       }
     },
@@ -657,7 +657,7 @@
         renderInstProfile(inst);
         // Show institution share button
         var instShareBtn = document.getElementById('inst-share-btn');
-        if (instShareBtn) instShareBtn.style.display = 'inline-block';
+        if (instShareBtn) instShareBtn.classList.remove('rdb-hidden');
         return { displayValue: instName, urlParams: { name: instName, type: 'institution' } };
       } else {
         var authorName = key.substring(7);
@@ -716,7 +716,7 @@
     if (!toggle) return;
     e.preventDefault();
     var target = document.getElementById(toggle.dataset.target);
-    if (target) target.style.display = target.style.display === 'none' ? '' : 'none';
+    if (target) target.classList.toggle('rdb-hidden');
   });
 
   // ── Pagination controls ───────────────────────────────────────────────

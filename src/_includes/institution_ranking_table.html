@@ -12,51 +12,51 @@
       integrity="sha384-aQuvIWWIbpu/mSqULLDiUveyYiPoJzPKAWjUmGJ+Elm+N/LJhzfZqsutsfw870JS"
       crossorigin="anonymous">
 
-<div id="institution-controls" style="margin-bottom:6px; display:none; font-size:1em;">
-  <div style="display:flex; flex-wrap:wrap; gap:8px; align-items:center;">
-    <div style="white-space:nowrap;">
-      <label style="font-weight:bold; margin-right:4px; font-size:1em;">Area:</label>
-      <select id="areaFilter" style="padding:2px 6px; font-size:1em;">
+<div id="institution-controls" class="rdb-controls rdb-hidden">
+  <div class="rdb-controls-row">
+    <div class="rdb-control-group">
+      <label class="rdb-label">Area:</label>
+      <select id="areaFilter" class="rdb-select">
         <option value="all" selected>All Conferences</option>
         <option value="systems">Systems Only</option>
         <option value="security">Security Only</option>
       </select>
     </div>
-    <div style="white-space:nowrap;">
-      <label style="font-weight:bold; margin-right:4px; font-size:1em;">Geo:</label>
-      <select id="geoFilter" style="padding:2px 6px; font-size:1em;"></select>
+    <div class="rdb-control-group">
+      <label class="rdb-label">Geo:</label>
+      <select id="geoFilter" class="rdb-select"></select>
     </div>
-    <div style="white-space:nowrap;">
-      <label style="font-weight:bold; margin-right:4px; font-size:1em;">Contribution Type:</label>
-      <select id="contributionFilter" style="padding:2px 6px; font-size:1em;">
+    <div class="rdb-control-group">
+      <label class="rdb-label">Contribution Type:</label>
+      <select id="contributionFilter" class="rdb-select">
         <option value="both" selected>Both (Artifacts + AE)</option>
         <option value="artifacts_only">Artifacts Only</option>
         <option value="ae_only">AE Service Only</option>
       </select>
     </div>
-    <div style="white-space:nowrap;">
-      <label style="font-weight:bold; margin-right:4px; font-size:1em;">Search:</label>
-      <input type="text" id="affiliationSearch" placeholder="Filter by institution name..." style="padding:2px 6px; font-size:1em; width:200px;">
+    <div class="rdb-control-group">
+      <label class="rdb-label">Search:</label>
+      <input type="text" id="affiliationSearch" placeholder="Filter by institution name..." class="rdb-input">
     </div>
   </div>
 </div>
 
-<div id="institution-legend" style="margin:0 0 6px 0; display:none; font-size:0.85em; color:#555;">
+<div id="institution-legend" class="rdb-legend rdb-hidden">
   Legend: #=Rank, S=Combined Score, AS=Artifact Score, AES=AE Service Score, A:E=Artifact:Evaluation Ratio, R=Researchers, Ar=Artifacts, P=Papers, AR%=Artifact Rate, RR%=Repro. Rate, AE=AE Memberships, Ch=Chairs
 </div>
 
 <div id="institutionLoading"><em>Loading institution ranking data…</em></div>
 
-<table id="institutionTable" style="display:none;">
+<table id="institutionTable" class="rdb-hidden">
 <thead><tr id="institutionHead"></tr></thead>
 <tbody id="institutionBody"></tbody>
 </table>
 
-<div id="institution-controls-bottom" style="margin-top:4px; display:none; font-size:0.9em;">
-  <button id="iPrevBtnB" style="padding:2px 6px; font-size:0.9em;">&laquo; Prev</button>
-  <span id="iPageInfoB" style="margin:0 6px;"></span>
-  <button id="iNextBtnB" style="padding:2px 6px; font-size:0.9em;">Next &raquo;</button>
-  <span id="iTotalInfo" style="margin-left:12px; color:#666;"></span>
+<div id="institution-controls-bottom" class="rdb-pager rdb-hidden">
+  <button id="iPrevBtnB" class="rdb-pager-btn">&laquo; Prev</button>
+  <span id="iPageInfoB" class="rdb-pager-info"></span>
+  <button id="iNextBtnB" class="rdb-pager-btn">Next &raquo;</button>
+  <span id="iTotalInfo" class="rdb-pager-total"></span>
 </div>
 
 <script>
@@ -111,7 +111,7 @@
   // Country code to flag HTML (using flag-icons CSS library)
   function countryCodeToFlagHtml(code) {
     if (!code || code.length !== 2) return '';
-    return '<span class="fi fi-' + code.toLowerCase() + '" title="' + code + '" style="margin-right:4px;"></span>';
+    return '<span class="fi fi-' + code.toLowerCase() + '" title="' + code + '"></span>';
   }
 
   // Country name to code mapping (comprehensive)
@@ -510,8 +510,8 @@
       
       // Rank column with expand button
       var expandIcon = (profilesByAffiliation[inst.affiliation] && profilesByAffiliation[inst.affiliation].length > 0)
-        ? '<span class="expand-btn" style="cursor:pointer;margin-right:4px;">' + (isExpanded ? '▼' : '▶') + '</span>'
-        : '<span style="margin-right:12px;"></span>';
+        ? '<span class="expand-btn">' + (isExpanded ? '▼' : '▶') + '</span>'
+        : '<span class="expand-btn-spacer"></span>';
       var instRankVal = inst._originalRank || (start + i + 1);
       // Show rank on: first item per page, or first item in a tie group
       var showRank = (i === 0) || (inst._showRank !== false);
@@ -519,9 +519,9 @@
       if (showRank && prevInstSnapshot && prevInstSnapshot[inst.affiliation]) {
         var oldInstRank = prevInstSnapshot[inst.affiliation].rank;
         var instDiff = oldInstRank - instRankVal;
-        if (instDiff > 0) instRankChange = ' <span style="color:#27ae60;font-size:0.8em" title="Up ' + instDiff + ' from #' + oldInstRank + '">▲' + instDiff + '</span>';
-        else if (instDiff < 0) instRankChange = ' <span style="color:#e74c3c;font-size:0.8em" title="Down ' + (-instDiff) + ' from #' + oldInstRank + '">▼' + (-instDiff) + '</span>';
-        else instRankChange = ' <span class="rank-unchanged" style="font-size:0.8em" title="Unchanged">–</span>';
+        if (instDiff > 0) instRankChange = ' <span class="rdb-rank-up" title="Up ' + instDiff + ' from #' + oldInstRank + '">▲' + instDiff + '</span>';
+        else if (instDiff < 0) instRankChange = ' <span class="rdb-rank-down" title="Down ' + (-instDiff) + ' from #' + oldInstRank + '">▼' + (-instDiff) + '</span>';
+        else instRankChange = ' <span class="rank-unchanged" title="Unchanged">–</span>';
       }
       cells.push('<td>' + expandIcon + (showRank ? instRankVal + instRankChange : '') + '</td>');
       
@@ -563,27 +563,27 @@
         cells.push('<td>' + (cnt > 0 ? cnt : '') + '</td>');
       }
       
-      rows.push('<tr class="inst-row" data-inst-id="' + instId + '" style="cursor:pointer;">' + cells.join('') + '</tr>');
+      rows.push('<tr class="inst-row" data-inst-id="' + instId + '">' + cells.join('') + '</tr>');
       
       // Add expanded row if needed
       var instAuthors = profilesByAffiliation[inst.affiliation] || [];
       if (isExpanded && instAuthors.length > 0) {
-        var expandedContent = '<td colspan="' + numCols + '" style="padding:8px 16px; background-color:#f9f9f9;">';
+        var expandedContent = '<td colspan="' + numCols + '" class="rdb-expanded-cell">';
         var showCount = Math.min(instAuthors.length, 10);
-        expandedContent += '<div style="margin-left:20px;"><strong>Top ' + showCount + ' of ' + instAuthors.length + ' Researchers:</strong> <a href="' + baseUrl + '/profile.html?type=institution&name=' + encodeURIComponent(inst.affiliation) + '" style="font-size:0.85em;">View all →</a><br>';
-        expandedContent += '<table style="margin-top:8px; font-size:0.9em; border-collapse:collapse; width:auto;">';
-        expandedContent += '<thead><tr style="background-color:#e8e8e8;"><th style="padding:4px 8px;border:1px solid #ccc;">Name</th><th style="padding:4px 8px;border:1px solid #ccc;">Combined</th><th style="padding:4px 8px;border:1px solid #ccc;">Artifacts</th><th style="padding:4px 8px;border:1px solid #ccc;">AE Service</th><th style="padding:4px 8px;border:1px solid #ccc;">Papers</th></tr></thead><tbody>';
+        expandedContent += '<div class="rdb-expanded-content"><strong>Top ' + showCount + ' of ' + instAuthors.length + ' Researchers:</strong> <a href="' + baseUrl + '/profile.html?type=institution&name=' + encodeURIComponent(inst.affiliation) + '" class="rdb-expanded-link">View all →</a><br>';
+        expandedContent += '<table class="rdb-expanded-tbl">';
+        expandedContent += '<thead><tr><th>Name</th><th>Combined</th><th>Artifacts</th><th>AE Service</th><th>Papers</th></tr></thead><tbody>';
         
         for (var k = 0; k < showCount; k++) {
           var author = instAuthors[k];
           var displayName = (author.name || '').replace(/\s+\d{4}$/, '').replace(/\t/g, ' ');
           var profileUrl = baseUrl + '/profile.html?name=' + encodeURIComponent(author.name) + (author.author_id != null ? '&id=' + author.author_id : '');
-          expandedContent += '<tr style="' + (k % 2 === 0 ? 'background-color:#fff;' : 'background-color:#f5f5f5;') + '">';
-          expandedContent += '<td style="padding:4px 8px;border:1px solid #ccc;"><a href="' + profileUrl + '">' + escHtml(displayName) + '</a></td>';
-          expandedContent += '<td style="padding:4px 8px;border:1px solid #ccc;text-align:center;"><strong>' + (author.combined_score || 0) + '</strong></td>';
-          expandedContent += '<td style="padding:4px 8px;border:1px solid #ccc;text-align:center;">' + (author.artifact_count || 0) + '</td>';
-          expandedContent += '<td style="padding:4px 8px;border:1px solid #ccc;text-align:center;">' + (author.ae_memberships || 0) + '</td>';
-          expandedContent += '<td style="padding:4px 8px;border:1px solid #ccc;text-align:center;">' + (author.total_papers || 0) + '</td>';
+          expandedContent += '<tr>';
+          expandedContent += '<td><a href="' + profileUrl + '">' + escHtml(displayName) + '</a></td>';
+          expandedContent += '<td><strong>' + (author.combined_score || 0) + '</strong></td>';
+          expandedContent += '<td>' + (author.artifact_count || 0) + '</td>';
+          expandedContent += '<td>' + (author.ae_memberships || 0) + '</td>';
+          expandedContent += '<td>' + (author.total_papers || 0) + '</td>';
           expandedContent += '</tr>';
         }
         
@@ -605,8 +605,8 @@
           }
           if (histLabels.length >= 2) {
             var chartId = 'instChart-' + instId;
-            expandedContent += '<div style="margin-top:12px;"><strong>Score History:</strong>';
-            expandedContent += '<div style="max-width:500px;"><canvas id="' + chartId + '" height="150"></canvas></div></div>';
+            expandedContent += '<div class="rdb-chart-wrap"><strong>Score History:</strong>';
+            expandedContent += '<div class="rdb-chart-canvas"><canvas id="' + chartId + '" height="150"></canvas></div></div>';
           }
         }
         expandedContent += '</div></td>';
@@ -800,22 +800,22 @@
     assignRanks();
     render();
 
-    document.getElementById('institutionLoading').style.display = 'none';
-    document.getElementById('institutionTable').style.display = '';
-    document.getElementById('institution-controls').style.display = '';
-    document.getElementById('institution-legend').style.display = '';
-    document.getElementById('institution-controls-bottom').style.display = '';
+    document.getElementById('institutionLoading').classList.add('rdb-hidden');
+    document.getElementById('institutionTable').classList.remove('rdb-hidden');
+    document.getElementById('institution-controls').classList.remove('rdb-hidden');
+    document.getElementById('institution-legend').classList.remove('rdb-hidden');
+    document.getElementById('institution-controls-bottom').classList.remove('rdb-hidden');
   }
 
   function loadArea(area) {
     currentArea = area;
     expandedRows.clear(); // Clear expanded state when switching areas
-    document.getElementById('institutionLoading').style.display = '';
+    document.getElementById('institutionLoading').classList.remove('rdb-hidden');
     document.getElementById('institutionLoading').innerHTML = '<em>Loading ' + area + ' institution ranking data…</em>';
-    document.getElementById('institutionTable').style.display = 'none';
-    document.getElementById('institution-controls').style.display = 'none';
-    document.getElementById('institution-legend').style.display = 'none';
-    document.getElementById('institution-controls-bottom').style.display = 'none';
+    document.getElementById('institutionTable').classList.add('rdb-hidden');
+    document.getElementById('institution-controls').classList.add('rdb-hidden');
+    document.getElementById('institution-legend').classList.add('rdb-hidden');
+    document.getElementById('institution-controls-bottom').classList.add('rdb-hidden');
     
     fetch(DATA_URLS[area])
       .then(function(r) { return r.json(); })
@@ -921,21 +921,3 @@
   }
 })();
 </script>
-
-<style>
-/* Sortable header rules live in assets/css/reprodb-table.css (.reprodb-sortable). */
-#institutionTable { font-size: 0.78em; border-collapse: collapse; width: 100%; }
-#institutionTable th, #institutionTable td { padding: 2px 4px; border: 1px solid #ddd; }
-#institutionTable th:nth-child(2), #institutionTable td:nth-child(2) { max-width: 200px; word-wrap: break-word; white-space: normal; }
-#institutionTable td { white-space: nowrap; }
-#institutionTable th { background-color: #f2f2f2; position: sticky; top: 0; z-index: 1; }
-#institutionTable tr:nth-child(even) { background-color: #f9f9f9; }
-#institutionTable .inst-row:hover { background-color: #e8f4f8; }
-#institutionTable .expanded-row { background-color: #f9f9f9 !important; }
-#institutionTable .expanded-row:hover { background-color: #f9f9f9 !important; }
-.expand-btn { display: inline-block; font-size: 0.8em; color: #666; }
-.expand-btn:hover { color: #000; }
-.rank-unchanged { color: #999; }
-/* Flag icons styling */
-.fi { width: 1em; height: 1em; display: inline-block; margin-right: 4px; vertical-align: -0.125em; }
-</style>

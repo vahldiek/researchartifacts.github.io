@@ -7,13 +7,13 @@
     page.yearly_chart_area — 'all', 'systems', or 'security'
 {% endcomment %}
 
-<div id="repoChartCombinedWrap" style="position:relative; width:100%; max-width:1410px; height:380px; margin:1.0em 0; display:none;">
+<div id="repoChartCombinedWrap" class="rdb-repo-chart rdb-repo-chart--tall rdb-hidden">
   <canvas id="yearlyRepoCombinedChart"></canvas>
 </div>
-<div id="repoChartStarsWrap" style="position:relative; width:100%; max-width:1410px; height:290px; margin:0.8em 0; display:none;">
+<div id="repoChartStarsWrap" class="rdb-repo-chart rdb-hidden">
   <canvas id="yearlyRepoStarsChart"></canvas>
 </div>
-<div id="repoChartForksWrap" style="position:relative; width:100%; max-width:1410px; height:290px; margin:0.8em 0; display:none;">
+<div id="repoChartForksWrap" class="rdb-repo-chart rdb-hidden">
   <canvas id="yearlyRepoForksChart"></canvas>
 </div>
 
@@ -111,7 +111,7 @@
       return (v === null || p25Forks[i] === null) ? null : toFixed1(v - p25Forks[i]);
     });
 
-    document.getElementById('repoChartCombinedWrap').style.display = '';
+    document.getElementById('repoChartCombinedWrap').classList.remove('rdb-hidden');
 
     new Chart(document.getElementById('yearlyRepoCombinedChart'), {
       type: 'line',
@@ -189,8 +189,8 @@
       });
     }
 
-    document.getElementById('repoChartStarsWrap').style.display = '';
-    document.getElementById('repoChartForksWrap').style.display = '';
+    document.getElementById('repoChartStarsWrap').classList.remove('rdb-hidden');
+    document.getElementById('repoChartForksWrap').classList.remove('rdb-hidden');
 
     new Chart(document.getElementById('yearlyRepoStarsChart'), {
       type: 'line',

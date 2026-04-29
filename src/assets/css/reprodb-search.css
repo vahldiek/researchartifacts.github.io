@@ -1,6 +1,96 @@
 /* reprodb-search.css — Styles for the main search / index page. */
 
+/* ── Search container ──────────────────────────────────────────────────── */
+#search-container {
+  max-width: 720px;
+  margin: 2em auto;
+  text-align: center;
+}
+.rdb-search-box-wrap {
+  position: relative;
+  width: 100%;
+}
+#searchBox {
+  display: block;
+  width: 100%;
+  padding: 14px 48px 14px 20px;
+  font-size: 1.1em;
+  border: 2px solid #ddd;
+  border-radius: 28px;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: box-shadow 0.2s, border-color 0.2s;
+  box-sizing: border-box;
+}
+#searchBox:focus {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  border-color: #4285f4;
+}
+.rdb-search-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+#clearIcon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* ── Filters row ───────────────────────────────────────────────────────── */
+#filters {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+#filters select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95em;
+  background: #fff;
+}
+
+/* ── Status & action buttons ───────────────────────────────────────────── */
+#searchStatus {
+  margin-top: 8px;
+  font-size: 0.9em;
+  color: #666;
+  display: inline;
+}
+.rdb-search-action-btn {
+  margin-left: 10px;
+  padding: 4px 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.9em;
+  vertical-align: middle;
+}
+#shareBtn.rdb-search-action-btn { margin-left: 6px; }
+
+/* ── Sort controls ─────────────────────────────────────────────────────── */
+#sort-controls {
+  margin-top: 1em;
+  margin-bottom: 8px;
+  font-size: 0.9em;
+  color: #555;
+}
+#sort-controls a { margin-left: 6px; }
+
 /* ── Profile cards (author/institution cards in search results) ─────── */
+#profileCards {
+  max-width: 720px;
+  margin: 0 auto 16px;
+}
 .profile-cards-row { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
 .profile-card { display:flex; align-items:center; gap:8px; background:#fff; border:1px solid #e0e0e0; border-radius:10px; padding:8px 12px; min-width:180px; flex:1 1 0; text-decoration:none; color:inherit; transition: box-shadow 0.2s, border-color 0.2s; cursor:pointer; }
 .profile-card:hover { box-shadow:0 2px 12px rgba(0,0,0,0.10); border-color:#4285f4; }
@@ -10,3 +100,39 @@
 .profile-card .card-info { overflow:hidden; min-width:0; }
 .profile-card .card-name { font-weight:600; font-size:0.95em; word-wrap:break-word; overflow-wrap:break-word; }
 .profile-card .card-detail { font-size:0.8em; color:#666; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+
+/* ── Results ───────────────────────────────────────────────────────────── */
+#noResults {
+  padding: 16px;
+  text-align: center;
+  color: #999;
+}
+.rdb-result-entry { padding: 10px 0; }
+.rdb-result-entry a { color: #0066cc; text-decoration: none; }
+.rdb-result-title { font-weight: bold; font-size: 1em; line-height: 1.4; }
+.rdb-result-authors { font-style: italic; color: #444; font-size: 0.92em; line-height: 1.4; margin-top: 2px; }
+.rdb-result-meta { font-size: 0.9em; color: #555; margin-top: 2px; }
+.rdb-result-links { font-size: 0.88em; margin-top: 2px; }
+.rdb-badge { display: inline-block; padding: 1px 5px; margin: 0 2px; border-radius: 3px; background: #e8f5e9; font-size: 0.85em; }
+.rdb-badge--award { background: #fff3e0; }
+
+/* ── Pagination ────────────────────────────────────────────────────────── */
+#pagination {
+  margin-top: 12px;
+  text-align: center;
+}
+#pagination button {
+  padding: 6px 16px;
+  margin: 0 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+}
+#pageInfo {
+  margin: 0 10px;
+  font-size: 0.95em;
+}
+
+/* ── Hidden data element ───────────────────────────────────────────────── */
+#search-data-urls { display: none; }

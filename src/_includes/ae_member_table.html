@@ -6,35 +6,35 @@
     page.member_data_url  — path to the JSON file (e.g., /assets/data/systems_ae_members.json)
 {% endcomment %}
 
-<div id="member-controls" style="margin-bottom:6px; display:none; font-size:1em;">
-  <div style="display:flex; flex-wrap:wrap; gap:8px; align-items:center;">
-    <div style="white-space:nowrap;">
-      <label style="font-weight:bold; margin-right:4px; font-size:1em;">Member:</label>
-      <input id="mNameSearch" type="text" placeholder="Search by name…" style="padding:2px 6px; font-size:1em; width:160px;">
+<div id="member-controls" class="rdb-controls rdb-hidden">
+  <div class="rdb-controls-row">
+    <div class="rdb-control-group">
+      <label class="rdb-label">Member:</label>
+      <input id="mNameSearch" type="text" placeholder="Search by name…" class="rdb-input">
     </div>
-    <div style="white-space:nowrap;">
-      <label style="font-weight:bold; margin-right:4px; font-size:1em;">Affiliation:</label>
-      <input id="mAffSearch" type="text" placeholder="Search by affiliation…" style="padding:2px 6px; font-size:1em; width:180px;">
+    <div class="rdb-control-group">
+      <label class="rdb-label">Affiliation:</label>
+      <input id="mAffSearch" type="text" placeholder="Search by affiliation…" class="rdb-input">
     </div>
   </div>
 </div>
 
-<div id="ae-legend" style="margin:0 0 6px 0; display:none; font-size:0.85em; color:#555;">
+<div id="ae-legend" class="rdb-legend rdb-hidden">
   Legend: #=Rank, AE=AE Service, Ch=Chaired, F=First Year, L=Last Year
 </div>
 
 <div id="memberLoading"><em>Loading AE member data…</em></div>
 
-<table id="memberTable" style="display:none;">
+<table id="memberTable" class="rdb-hidden">
 <thead><tr id="memberHead"></tr></thead>
 <tbody id="memberBody"></tbody>
 </table>
 
-<div id="member-controls-bottom" style="margin-top:4px; display:none; font-size:0.9em;">
-  <button id="mPrevBtnB" style="padding:2px 6px; font-size:0.9em;">&laquo; Prev</button>
-  <span id="mPageInfoB" style="margin:0 6px;"></span>
-  <button id="mNextBtnB" style="padding:2px 6px; font-size:0.9em;">Next &raquo;</button>
-  <span id="mTotalInfo" style="margin-left:12px; color:#666;"></span>
+<div id="member-controls-bottom" class="rdb-pager rdb-hidden">
+  <button id="mPrevBtnB" class="rdb-pager-btn">&laquo; Prev</button>
+  <span id="mPageInfoB" class="rdb-pager-info"></span>
+  <button id="mNextBtnB" class="rdb-pager-btn">Next &raquo;</button>
+  <span id="mTotalInfo" class="rdb-pager-total"></span>
 </div>
 
 <script>
@@ -232,11 +232,11 @@
     assignRanks();
     render();
 
-    document.getElementById('memberLoading').style.display = 'none';
-    document.getElementById('ae-legend').style.display = '';
-    document.getElementById('memberTable').style.display = '';
-    document.getElementById('member-controls').style.display = '';
-    document.getElementById('member-controls-bottom').style.display = '';
+    document.getElementById('memberLoading').classList.add('rdb-hidden');
+    document.getElementById('ae-legend').classList.remove('rdb-hidden');
+    document.getElementById('memberTable').classList.remove('rdb-hidden');
+    document.getElementById('member-controls').classList.remove('rdb-hidden');
+    document.getElementById('member-controls-bottom').classList.remove('rdb-hidden');
   }
 
   // Name / affiliation search
@@ -272,15 +272,3 @@
     });
 })();
 </script>
-
-<style>
-#memberTable { font-size: 0.78em; border-collapse: collapse; width: 100%; }
-#memberTable th, #memberTable td { padding: 2px 4px; border: 1px solid #ddd; }
-#memberTable th:nth-child(5), #memberTable td:nth-child(5) { max-width: 200px; word-wrap: break-word; white-space: normal; }
-#memberTable td { white-space: nowrap; }
-#memberTable th { background-color: #f2f2f2; position: sticky; top: 0; z-index: 1; }
-#memberTable tr:nth-child(even) { background-color: #f9f9f9; }
-#memberTable tr:hover { background-color: #e8f4f8; }
-.sortable::after { content: '\2195'; opacity: 0.3; margin-left: 2px; font-size: 0.75em; }
-.sorted-desc::after { content: '\2193'; opacity: 1; }
-</style>

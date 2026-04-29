@@ -52,7 +52,7 @@ var ReproDBProfile = (function() {
     var activeIdx = -1;
 
     function showShare() {
-      if (shareBtn) shareBtn.style.display = 'inline-block';
+      if (shareBtn) shareBtn.classList.remove('rdb-hidden');
     }
 
     if (shareBtn) {
@@ -78,7 +78,7 @@ var ReproDBProfile = (function() {
 
     function showResults(matches) {
       resultsList.innerHTML = '';
-      if (matches.length === 0) { resultsList.style.display = 'none'; return; }
+      if (matches.length === 0) { resultsList.classList.add('rdb-hidden'); return; }
       activeIdx = -1;
       var shown = matches.slice(0, maxResults);
       for (var i = 0; i < shown.length; i++) {
@@ -95,11 +95,11 @@ var ReproDBProfile = (function() {
         more.textContent = '\u2026 and ' + (matches.length - maxResults) + ' more \u2014 type to narrow';
         resultsList.appendChild(more);
       }
-      resultsList.style.display = 'block';
+      resultsList.classList.remove('rdb-hidden');
     }
 
     function doSelect(key) {
-      resultsList.style.display = 'none';
+      resultsList.classList.add('rdb-hidden');
       var result = cfg.onSelect(key);
       if (!result) return;
       if (result.displayValue !== undefined) searchBox.value = result.displayValue;
@@ -119,7 +119,7 @@ var ReproDBProfile = (function() {
 
     searchBox.addEventListener('input', function() {
       var q = this.value.trim().toLowerCase();
-      if (q.length < 2) { resultsList.style.display = 'none'; return; }
+      if (q.length < 2) { resultsList.classList.add('rdb-hidden'); return; }
       var matches = cfg.filterItems(q);
       showResults(matches);
       var url = new URL(window.location);
@@ -143,21 +143,21 @@ var ReproDBProfile = (function() {
         e.preventDefault();
         if (activeIdx >= 0 && items[activeIdx]) doSelect(items[activeIdx].dataset.key);
       } else if (e.key === 'Escape') {
-        resultsList.style.display = 'none';
+        resultsList.classList.add('rdb-hidden');
       }
     });
 
     document.addEventListener('click', function(e) {
       if (!searchBox.contains(e.target) && !resultsList.contains(e.target)) {
-        resultsList.style.display = 'none';
+        resultsList.classList.add('rdb-hidden');
       }
     });
 
     return {
       /** Call after data is loaded to activate the page. */
       activate: function() {
-        document.getElementById(cfg.loadingId).style.display = 'none';
-        searchBox.style.display = '';
+        document.getElementById(cfg.loadingId).classList.add('rdb-hidden');
+        searchBox.classList.remove('rdb-hidden');
         var params = new URLSearchParams(window.location.search);
         var resolved = cfg.resolveFromUrl(params);
         if (resolved && resolved.key) {

@@ -8,51 +8,51 @@
     page.security_data_url  — path to the security JSON file
 {% endcomment %}
 
-<div id="combined-controls" style="margin-bottom:6px; display:none; font-size:1em;">
-  <div style="display:flex; flex-wrap:wrap; gap:8px; align-items:center;">
-    <div style="white-space:nowrap;">
-      <label style="font-weight:bold; margin-right:4px; font-size:1em;">Area:</label>
-      <select id="areaFilter" style="padding:2px 6px; font-size:1em;">
+<div id="combined-controls" class="rdb-controls rdb-hidden">
+  <div class="rdb-controls-row">
+    <div class="rdb-control-group">
+      <label class="rdb-label">Area:</label>
+      <select id="areaFilter" class="rdb-select">
         <option value="all" selected>All Conferences</option>
         <option value="systems">Systems Only</option>
         <option value="security">Security Only</option>
       </select>
     </div>
-    <div style="white-space:nowrap;">
-      <label style="font-weight:bold; margin-right:4px; font-size:1em;">Contribution Type:</label>
-      <select id="contributionFilter" style="padding:2px 6px; font-size:1em;">
+    <div class="rdb-control-group">
+      <label class="rdb-label">Contribution Type:</label>
+      <select id="contributionFilter" class="rdb-select">
         <option value="both" selected>Both (Artifacts + AE)</option>
         <option value="artifacts_only">Artifacts Only</option>
         <option value="ae_only">AE Service Only</option>
       </select>
     </div>
-    <div style="white-space:nowrap;">
-      <label style="font-weight:bold; margin-right:4px; font-size:1em;">Researcher:</label>
-      <input id="cNameSearch" type="text" placeholder="Search by name…" style="padding:2px 6px; font-size:1em; width:160px;">
+    <div class="rdb-control-group">
+      <label class="rdb-label">Researcher:</label>
+      <input id="cNameSearch" type="text" placeholder="Search by name…" class="rdb-input">
     </div>
-    <div style="white-space:nowrap;">
-      <label style="font-weight:bold; margin-right:4px; font-size:1em;">Affiliation:</label>
-      <input id="cAffSearch" type="text" placeholder="Search by affiliation…" style="padding:2px 6px; font-size:1em; width:180px;">
+    <div class="rdb-control-group">
+      <label class="rdb-label">Affiliation:</label>
+      <input id="cAffSearch" type="text" placeholder="Search by affiliation…" class="rdb-input">
     </div>
   </div>
 </div>
 
-<div id="combined-legend" style="margin:0 0 6px 0; display:none; font-size:0.85em; color:#555;">
+<div id="combined-legend" class="rdb-legend rdb-hidden">
   <span id="combined-legend-text">Legend: #=Rank, S=Combined Score, AS=Artifact Score, AES=AE Service Score, A:E=Artifact:Evaluation Ratio, Ar=Artifacts, P=Papers, AR%=Artifact Rate, RR%=Repro Rate, AE=AE Service, Ch=Chaired</span>
 </div>
 
-<div id="combinedLoading" style="font-size:0.9em;"><em>Loading combined ranking data…</em></div>
+<div id="combinedLoading"><em>Loading combined ranking data…</em></div>
 
-<table id="combinedTable" style="display:none;">
+<table id="combinedTable" class="rdb-hidden">
 <thead><tr id="combinedHead"></tr></thead>
 <tbody id="combinedBody"></tbody>
 </table>
 
-<div id="combined-controls-bottom" style="margin-top:4px; display:none; font-size:0.9em;">
-  <button id="cPrevBtnB" style="padding:2px 6px; font-size:0.9em;">&laquo; Prev</button>
-  <span id="cPageInfoB" style="margin:0 6px;"></span>
-  <button id="cNextBtnB" style="padding:2px 6px; font-size:0.9em;">Next &raquo;</button>
-  <span id="cTotalInfo" style="margin-left:12px; color:#666;"></span>
+<div id="combined-controls-bottom" class="rdb-pager rdb-hidden">
+  <button id="cPrevBtnB" class="rdb-pager-btn">&laquo; Prev</button>
+  <span id="cPageInfoB" class="rdb-pager-info"></span>
+  <button id="cNextBtnB" class="rdb-pager-btn">Next &raquo;</button>
+  <span id="cTotalInfo" class="rdb-pager-total"></span>
 </div>
 
 <script>
@@ -119,9 +119,9 @@
       if (showRank && prevSnapshot && prevSnapshot[c.name]) {
         var oldRank = prevSnapshot[c.name].rank;
         var diff = oldRank - rankVal;
-        if (diff > 0) rankChange = ' <span style="color:#27ae60;font-size:0.8em" title="Up ' + diff + ' from #' + oldRank + '">▲' + diff + '</span>';
-        else if (diff < 0) rankChange = ' <span style="color:#e74c3c;font-size:0.8em" title="Down ' + (-diff) + ' from #' + oldRank + '">▼' + (-diff) + '</span>';
-        else rankChange = ' <span class="rank-unchanged" style="font-size:0.8em" title="Unchanged">–</span>';
+        if (diff > 0) rankChange = ' <span class="rdb-rank-up" title="Up ' + diff + ' from #' + oldRank + '">▲' + diff + '</span>';
+        else if (diff < 0) rankChange = ' <span class="rdb-rank-down" title="Down ' + (-diff) + ' from #' + oldRank + '">▼' + (-diff) + '</span>';
+        else rankChange = ' <span class="rank-unchanged" title="Unchanged">–</span>';
       }
       cells.push('<td>' + (showRank ? rankVal + rankChange : '') + '</td>');
       var displayName = (c.display_name || c.name || '').replace(/\t/g, ' ');
@@ -370,20 +370,20 @@
     assignRanks();
     render();
 
-    document.getElementById('combinedLoading').style.display = 'none';
-    document.getElementById('combinedTable').style.display = '';
-    document.getElementById('combined-controls').style.display = '';
-    document.getElementById('combined-legend').style.display = '';
-    document.getElementById('combined-controls-bottom').style.display = '';
+    document.getElementById('combinedLoading').classList.add('rdb-hidden');
+    document.getElementById('combinedTable').classList.remove('rdb-hidden');
+    document.getElementById('combined-controls').classList.remove('rdb-hidden');
+    document.getElementById('combined-legend').classList.remove('rdb-hidden');
+    document.getElementById('combined-controls-bottom').classList.remove('rdb-hidden');
   }
 
   function loadArea(area) {
     currentArea = area;
-    document.getElementById('combinedLoading').style.display = '';
+    document.getElementById('combinedLoading').classList.remove('rdb-hidden');
     document.getElementById('combinedLoading').innerHTML = '<em>Loading ' + area + ' combined ranking data…</em>';
-    document.getElementById('combinedTable').style.display = 'none';
-    document.getElementById('combined-controls').style.display = 'none';
-    document.getElementById('combined-controls-bottom').style.display = 'none';
+    document.getElementById('combinedTable').classList.add('rdb-hidden');
+    document.getElementById('combined-controls').classList.add('rdb-hidden');
+    document.getElementById('combined-controls-bottom').classList.add('rdb-hidden');
     
     fetch(DATA_URLS[area])
       .then(function(r) { return r.json(); })
@@ -451,17 +451,3 @@
     .finally(function() { loadArea(currentArea); });
 })();
 </script>
-
-<style>
-#combinedTable { font-size: 0.78em; border-collapse: collapse; width: 100%; }
-#combinedTable th, #combinedTable td { padding: 2px 4px; border: 1px solid #ddd; }
-#combinedTable th:nth-child(3), #combinedTable td:nth-child(3) { max-width: 200px; word-wrap: break-word; white-space: normal; }
-#combinedTable td { white-space: nowrap; }
-#combinedTable th { background-color: #f2f2f2; position: sticky; top: 0; z-index: 1; }
-#combinedTable tr:nth-child(even) { background-color: #f9f9f9; }
-#combinedTable tr:hover { background-color: #e8f4f8; }
-.c-sortable::after { content: '\2195'; opacity: 0.3; margin-left: 2px; font-size: 0.75em; }
-.c-sorted-asc::after { content: '\2191'; opacity: 1; }
-.c-sorted-desc::after { content: '\2193'; opacity: 1; }
-.rank-unchanged { color: #999; }
-</style>

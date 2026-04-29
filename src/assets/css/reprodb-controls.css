@@ -1,0 +1,81 @@
+/* reprodb-controls.css — Shared filter, pager, and control-bar styles.
+   Loaded globally via _includes/head/custom.html. */
+
+/* ── Filter / control bar ──────────────────────────────────────────────── */
+.rdb-controls {
+  margin-bottom: 6px;
+  font-size: 1em;
+}
+.rdb-controls-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.rdb-control-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+.rdb-label {
+  font-weight: bold;
+  margin-right: 4px;
+  font-size: 1em;
+}
+.rdb-select {
+  padding: 2px 6px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.rdb-input {
+  padding: 2px 6px;
+  font-size: 1em;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* ── Pagination controls ───────────────────────────────────────────────── */
+.rdb-pager {
+  margin-top: 4px;
+  font-size: 0.9em;
+}
+.rdb-pager-btn {
+  padding: 2px 6px;
+  font-size: 0.9em;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: #fff;
+  cursor: pointer;
+}
+.rdb-pager-btn:hover:not(:disabled) { background: #f0f0f0; }
+.rdb-pager-btn:disabled { opacity: 0.5; cursor: default; }
+.rdb-pager-info {
+  margin: 0 6px;
+}
+.rdb-pager-total {
+  margin-left: 12px;
+  color: #666;
+}
+
+/* ── Legend / description bar ──────────────────────────────────────────── */
+.rdb-legend {
+  margin: 0 0 6px 0;
+  font-size: 0.85em;
+  color: #555;
+}
+
+/* ── at-* aliases (used by top_repos_table) ────────────────────────────── */
+.at-controls { margin-bottom: 6px; font-size: 1em; }
+.at-controls-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.at-control-group { display: flex; align-items: center; gap: 4px; white-space: nowrap; }
+.at-label { font-weight: 500; font-size: 0.85em; color: #495057; }
+.at-select { padding: 2px 6px; font-size: 0.9em; border: 1px solid #ccc; border-radius: 3px; }
+.at-btn { padding: 2px 8px; font-size: 0.9em; border: 1px solid #ccc; border-radius: 3px; background: #fff; cursor: pointer; }
+.at-btn:hover:not(:disabled) { background: #f0f0f0; }
+.at-btn:disabled { opacity: 0.5; cursor: default; }
+.at-page-info { margin: 0 6px; font-size: 0.9em; }
+.at-total-info { margin-left: 8px; color: #666; font-size: 0.85em; }
+.at-page-nav { margin-left: auto; }

@@ -156,13 +156,13 @@
     var areaVal = document.getElementById('areaFilter').value;
 
     if (!query && !yearVal && !venueVal && !areaVal) {
-      list.style.display = 'none';
-      noRes.style.display = 'none';
-      pagination.style.display = 'none';
-      sortCtrl.style.display = 'none';
-      document.getElementById('downloadBtn').style.display = 'none';
-      document.getElementById('shareBtn').style.display = 'none';
-      document.getElementById('profileCards').style.display = 'none';
+      list.classList.add('rdb-hidden');
+      noRes.classList.add('rdb-hidden');
+      pagination.classList.add('rdb-hidden');
+      sortCtrl.classList.add('rdb-hidden');
+      document.getElementById('downloadBtn').classList.add('rdb-hidden');
+      document.getElementById('shareBtn').classList.add('rdb-hidden');
+      document.getElementById('profileCards').classList.add('rdb-hidden');
       document.getElementById('profileCards').innerHTML = '';
       status.textContent = allData.length + ' artifacts available. Type a query or select a filter to search.';
       return;
@@ -174,12 +174,12 @@
 
     list.innerHTML = '';
     if (filtered.length === 0) {
-      list.style.display = 'none';
-      noRes.style.display = 'block';
-      pagination.style.display = 'none';
-      sortCtrl.style.display = 'none';
-      document.getElementById('downloadBtn').style.display = 'none';
-      document.getElementById('shareBtn').style.display = 'none';
+      list.classList.add('rdb-hidden');
+      noRes.classList.remove('rdb-hidden');
+      pagination.classList.add('rdb-hidden');
+      sortCtrl.classList.add('rdb-hidden');
+      document.getElementById('downloadBtn').classList.add('rdb-hidden');
+      document.getElementById('shareBtn').classList.add('rdb-hidden');
       // Still show profile cards even when no artifact results
       renderProfileCards(query, terms);
       var pcCount = document.getElementById('profileCards').querySelectorAll('.profile-card').length;
@@ -190,40 +190,40 @@
     // Render profile cards above results
     renderProfileCards(query, terms);
 
-    noRes.style.display = 'none';
+    noRes.classList.add('rdb-hidden');
     pageData.forEach(function(d) {
       var entry = document.createElement('div');
-      entry.style.cssText = 'padding:10px 0;';
+      entry.className = 'rdb-result-entry';
 
       // Line 1: Bold title (linked to artifact)
       var artUrls = d.artifact_urls || [];
       var titleLink = artUrls.length > 0 ? artUrls[0] : (d.repository_url || d.artifact_url || '');
       var titleHtml = titleLink
-        ? '<a href="' + escHtml(titleLink) + '" target="_blank" rel="noopener" style="color:#0066cc; text-decoration:none;">' + escHtml(d.title) + '</a>'
+        ? '<a href="' + escHtml(titleLink) + '" target="_blank" rel="noopener">' + escHtml(d.title) + '</a>'
         : escHtml(d.title);
 
       // Line 2: Authors (clickable)
       var authorsArr = d.authors || [];
       var authorsHtml = authorsArr.map(function(a) {
         var profileUrl = baseUrl + '/profile.html?name=' + encodeURIComponent(a);
-        return '<a href="' + profileUrl + '" style="color:#0066cc; text-decoration:none;">' + escHtml(a) + '</a>';
+        return '<a href="' + profileUrl + '">' + escHtml(a) + '</a>';
       }).join(', ');
       var authorsLine = authorsHtml || '';
 
       // Line 3: Venue, Year, Badges
       var badges = (d.badges || []).map(function(b) {
-        return '<span style="display:inline-block; padding:1px 5px; margin:0 2px; border-radius:3px; background:#e8f5e9; font-size:0.85em;">' + badgeLabel(b) + '</span>';
+        return '<span class="rdb-badge">' + badgeLabel(b) + '</span>';
       }).join(' ');
-      var awardTag = d.award ? ' <span style="display:inline-block; padding:1px 5px; margin:0 2px; border-radius:3px; background:#fff3e0; font-size:0.85em;">🏆 ' + escHtml(d.award) + '</span>' : '';
+      var awardTag = d.award ? ' <span class="rdb-badge rdb-badge--award">🏆 ' + escHtml(d.award) + '</span>' : '';
       var metaLine = escHtml(d.conference) + ' ' + d.year + (badges ? ' &middot; ' + badges : '') + awardTag;
 
       // Line 4: Links
       var links = [];
       // Paper link: prefer doi_url, fall back to paper_url
       if (d.doi_url) {
-        links.push('<a href="' + escHtml(d.doi_url) + '" target="_blank" rel="noopener" style="color:#0066cc; text-decoration:none;">📄 Paper</a>');
+        links.push('<a href="' + escHtml(d.doi_url) + '" target="_blank" rel="noopener">📄 Paper</a>');
       } else if (d.paper_url) {
-        links.push('<a href="' + escHtml(d.paper_url) + '" target="_blank" rel="noopener" style="color:#0066cc; text-decoration:none;">📄 Paper</a>');
+        links.push('<a href="' + escHtml(d.paper_url) + '" target="_blank" rel="noopener">📄 Paper</a>');
       }
       // Artifact URLs (unified list)
       var artUrlList = d.artifact_urls || [];
@@ -231,7 +231,7 @@
         var isGH = artUrlList[0].indexOf('github.com') !== -1;
         var lbl = isGH ? '💻 GitHub' : '📦 Artifact';
         var avail1 = availabilityTag(artUrlList[0]);
-        links.push('<a href="' + escHtml(artUrlList[0]) + '" target="_blank" rel="noopener" style="color:#0066cc; text-decoration:none;">' + lbl + '</a>' + avail1);
+        links.push('<a href="' + escHtml(artUrlList[0]) + '" target="_blank" rel="noopener">' + lbl + '</a>' + avail1);
       } else {
         artUrlList.forEach(function(u, i) {
           if (u) {
@@ -239,30 +239,30 @@
             var lbl = isGH ? '💻 GitHub' : '📦 Artifact';
             if (artUrlList.length > 1) lbl += ' #' + (i+1);
             var availN = availabilityTag(u);
-            links.push('<a href="' + escHtml(u) + '" target="_blank" rel="noopener" style="color:#0066cc; text-decoration:none;">' + lbl + '</a>' + availN);
+            links.push('<a href="' + escHtml(u) + '" target="_blank" rel="noopener">' + lbl + '</a>' + availN);
           }
         });
       }
-      if (d.appendix_url) links.push('<a href="' + escHtml(d.appendix_url) + '" target="_blank" rel="noopener" style="color:#0066cc; text-decoration:none;">📋 Appendix</a>');
+      if (d.appendix_url) links.push('<a href="' + escHtml(d.appendix_url) + '" target="_blank" rel="noopener">📋 Appendix</a>');
       var linksLine = links.length > 0 ? links.join(' &middot; ') : '';
 
       entry.innerHTML =
-        '<div style="font-weight:bold; font-size:1em; line-height:1.4;">' + titleHtml + '</div>' +
-        (authorsLine ? '<div style="font-style:italic; color:#444; font-size:0.92em; line-height:1.4; margin-top:2px;">' + authorsLine + '</div>' : '') +
-        '<div style="font-size:0.9em; color:#555; margin-top:2px;">' + metaLine + '</div>' +
-        (linksLine ? '<div style="font-size:0.88em; margin-top:2px;">' + linksLine + '</div>' : '');
+        '<div class="rdb-result-title">' + titleHtml + '</div>' +
+        (authorsLine ? '<div class="rdb-result-authors">' + authorsLine + '</div>' : '') +
+        '<div class="rdb-result-meta">' + metaLine + '</div>' +
+        (linksLine ? '<div class="rdb-result-links">' + linksLine + '</div>' : '');
 
       list.appendChild(entry);
     });
 
-    list.style.display = 'block';
-    sortCtrl.style.display = 'block';
+    list.classList.remove('rdb-hidden');
+    sortCtrl.classList.remove('rdb-hidden');
     var profileCardCount = document.getElementById('profileCards').querySelectorAll('.profile-card').length;
     var statusExtra = profileCardCount > 0 ? ' (' + profileCardCount + ' matching profile' + (profileCardCount !== 1 ? 's' : '') + ')' : '';
     status.textContent = filtered.length + ' result' + (filtered.length !== 1 ? 's' : '') + ' found' + statusExtra;
-    document.getElementById('downloadBtn').style.display = filtered.length > 0 ? 'inline-block' : 'none';
-    document.getElementById('shareBtn').style.display = filtered.length > 0 ? 'inline-block' : 'none';
-    pagination.style.display = maxPage > 1 ? 'block' : 'none';
+    document.getElementById('downloadBtn').classList.toggle('rdb-hidden', filtered.length <= 0);
+    document.getElementById('shareBtn').classList.toggle('rdb-hidden', filtered.length <= 0);
+    pagination.classList.toggle('rdb-hidden', maxPage <= 1);
     document.getElementById('pageInfo').textContent = 'Page ' + currentPage + ' of ' + maxPage;
     document.getElementById('prevBtn').disabled = currentPage <= 1;
     document.getElementById('nextBtn').disabled = currentPage >= maxPage;
@@ -316,8 +316,8 @@
 
   function updateSearchIcon() {
     var hasText = document.getElementById('searchBox').value.length > 0;
-    document.getElementById('searchIcon').style.display = hasText ? 'none' : 'block';
-    document.getElementById('clearIcon').style.display = hasText ? 'block' : 'none';
+    document.getElementById('searchIcon').classList.toggle('rdb-hidden', hasText);
+    document.getElementById('clearIcon').classList.toggle('rdb-hidden', !hasText);
   }
 
   window.clearSearch = function() {
@@ -337,7 +337,7 @@
   function renderProfileCards(query, terms) {
     var container = document.getElementById('profileCards');
     if (!terms || terms.length === 0 || query.trim().length < 2) {
-      container.style.display = 'none';
+      container.classList.add('rdb-hidden');
       container.innerHTML = '';
       return;
     }
@@ -376,7 +376,7 @@
     candidates = candidates.slice(0, 3);
 
     if (candidates.length === 0) {
-      container.style.display = 'none';
+      container.classList.add('rdb-hidden');
       container.innerHTML = '';
       return;
     }
@@ -408,7 +408,7 @@
     });
     html += '</div>';
     container.innerHTML = html;
-    container.style.display = 'block';
+    container.classList.remove('rdb-hidden');
   }
 
   function availabilityTag(url) {

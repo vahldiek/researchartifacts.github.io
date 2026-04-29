@@ -4,14 +4,15 @@
 .profile-search-box { padding:8px 14px; font-size:1em; width:100%; max-width:480px; border:1px solid #ccc; border-radius:4px; }
 
 /* ── Autocomplete results ──────────────────────────────────────────────── */
-.profile-search-results { list-style:none; padding:0; margin:4px 0 0 0; max-height:260px; overflow-y:auto; border:1px solid #ddd; border-radius:4px; display:none; position:absolute; background:#fff; z-index:100; width:100%; max-width:480px; }
+.profile-search-results { list-style:none; padding:0; margin:4px 0 0 0; max-height:260px; overflow-y:auto; border:1px solid #ddd; border-radius:4px; position:absolute; background:#fff; z-index:100; width:100%; max-width:480px; }
 .profile-search-results li { padding:8px 14px; cursor:pointer; border-bottom:1px solid #f0f0f0; }
 .profile-search-results li:hover,
 .profile-search-results li.active { background:#e8f4f8; }
 .profile-search-results .sr-detail { font-size:0.82em; color:#666; }
+.profile-search-results .sr-detail-indent { margin-left:58px; }
 
 /* ── Profile layout ────────────────────────────────────────────────────── */
-.profile-container { display:none; margin-top:20px; }
+.profile-container { margin-top:20px; }
 .profile-header { margin-bottom:18px; }
 .profile-header h2 { margin-bottom:2px; display:inline; }
 .profile-header .affil { color:#555; font-size:0.95em; }
@@ -37,7 +38,7 @@
 .profile-loading { color:#888; font-style:italic; }
 
 /* ── Share button ──────────────────────────────────────────────────────── */
-.share-btn { display:none; margin-left:10px; padding:3px 10px; font-size:0.7em; cursor:pointer; background:#f0f0f0; border:1px solid #ccc; border-radius:4px; color:#555; vertical-align:middle; position:relative; }
+.share-btn { display:inline-block; margin-left:10px; padding:3px 10px; font-size:0.7em; cursor:pointer; background:#f0f0f0; border:1px solid #ccc; border-radius:4px; color:#555; vertical-align:middle; position:relative; }
 .share-btn:hover { background:#e0e0e0; }
 .share-btn .share-tip { display:none; position:absolute; bottom:125%; left:50%; transform:translateX(-50%); background:#333; color:#fff; font-size:0.85em; padding:4px 8px; border-radius:4px; white-space:nowrap; z-index:100; pointer-events:none; }
 .share-btn.copied .share-tip { display:block; }

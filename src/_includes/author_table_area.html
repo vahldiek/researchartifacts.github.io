@@ -8,74 +8,61 @@
 
 ### Authors
 
-<div id="author-controls" style="margin-bottom:6px; display:none; font-size:1em;">
-  <div style="display:flex; flex-wrap:wrap; gap:8px; align-items:center;">
-    <div style="white-space:nowrap;">
-      <label style="font-weight:bold; margin-right:4px; font-size:1em;">Search:</label>
-      <input id="authorSearch" type="text" placeholder="Name or affiliation…" style="padding:2px 6px; font-size:1em; width:200px;">
+<div id="author-controls" class="rdb-controls rdb-hidden">
+  <div class="rdb-controls-row">
+    <div class="rdb-control-group">
+      <label class="rdb-label">Search:</label>
+      <input id="authorSearch" type="text" placeholder="Name or affiliation…" class="rdb-input">
     </div>
   </div>
 </div>
 
-<div id="author-legend" style="margin:0 0 6px 0; display:none; font-size:0.85em; color:#555;">
+<div id="author-legend" class="rdb-legend rdb-hidden">
   Legend: #=Rank, S=Combined Score (artifacts + AE service), Ar=Artifacts, P=Papers, AE=AE Memberships, AR%=Artifact Rate, RR%=Repro Rate
 </div>
 
-<div id="authorLoading" style="font-size:0.9em;"><em>Loading author data…</em></div>
+<div id="authorLoading"><em>Loading author data…</em></div>
 
-<table id="authorTable" class="area-tbl" style="display:none;">
+<table id="authorTable" class="area-tbl rdb-hidden">
 <thead><tr id="authorHead"></tr></thead>
 <tbody id="authorBody"></tbody>
 </table>
 
-<div id="author-pager" style="margin-top:4px; display:none; font-size:0.9em;">
-  <button id="authorPrev" style="padding:2px 6px; font-size:0.9em;">&laquo; Prev</button>
-  <span id="authorPageInfo" style="margin:0 6px;"></span>
-  <button id="authorNext" style="padding:2px 6px; font-size:0.9em;">Next &raquo;</button>
-  <span id="authorTotal" style="margin-left:8px; color:#666;"></span>
+<div id="author-pager" class="rdb-pager rdb-hidden">
+  <button id="authorPrev" class="rdb-pager-btn">&laquo; Prev</button>
+  <span id="authorPageInfo" class="rdb-pager-info"></span>
+  <button id="authorNext" class="rdb-pager-btn">Next &raquo;</button>
+  <span id="authorTotal" class="rdb-pager-total"></span>
 </div>
 
 ### Institutions
 
-<div id="inst-controls" style="margin-bottom:6px; display:none; font-size:1em;">
-  <div style="display:flex; flex-wrap:wrap; gap:8px; align-items:center;">
-    <div style="white-space:nowrap;">
-      <label style="font-weight:bold; margin-right:4px; font-size:1em;">Search:</label>
-      <input id="instSearch" type="text" placeholder="Institution name…" style="padding:2px 6px; font-size:1em; width:200px;">
+<div id="inst-controls" class="rdb-controls rdb-hidden">
+  <div class="rdb-controls-row">
+    <div class="rdb-control-group">
+      <label class="rdb-label">Search:</label>
+      <input id="instSearch" type="text" placeholder="Institution name…" class="rdb-input">
     </div>
   </div>
 </div>
 
-<div id="inst-legend" style="margin:0 0 6px 0; display:none; font-size:0.85em; color:#555;">
+<div id="inst-legend" class="rdb-legend rdb-hidden">
   Legend: #=Rank, S=Combined Score, R=Researchers, Ar=Artifacts, P=Papers, AE=AE Memberships, Ch=Chairs
 </div>
 
-<div id="instLoading" style="font-size:0.9em;"><em>Loading institution data…</em></div>
+<div id="instLoading"><em>Loading institution data…</em></div>
 
-<table id="instTable" class="area-tbl" style="display:none;">
+<table id="instTable" class="area-tbl rdb-hidden">
 <thead><tr id="instHead"></tr></thead>
 <tbody id="instBody"></tbody>
 </table>
 
-<div id="inst-pager" style="margin-top:4px; display:none; font-size:0.9em;">
-  <button id="instPrev" style="padding:2px 6px; font-size:0.9em;">&laquo; Prev</button>
-  <span id="instPageInfo" style="margin:0 6px;"></span>
-  <button id="instNext" style="padding:2px 6px; font-size:0.9em;">Next &raquo;</button>
-  <span id="instTotal" style="margin-left:8px; color:#666;"></span>
+<div id="inst-pager" class="rdb-pager rdb-hidden">
+  <button id="instPrev" class="rdb-pager-btn">&laquo; Prev</button>
+  <span id="instPageInfo" class="rdb-pager-info"></span>
+  <button id="instNext" class="rdb-pager-btn">Next &raquo;</button>
+  <span id="instTotal" class="rdb-pager-total"></span>
 </div>
-
-<style>
-.area-tbl { font-size: 0.78em; border-collapse: collapse; }
-.area-tbl th, .area-tbl td { padding: 2px 4px; border: 1px solid #ddd; white-space: nowrap; }
-.area-tbl td.wrap-cell { white-space: normal; max-width: 200px; overflow: hidden; text-overflow: ellipsis; }
-.area-tbl th { background-color: #f2f2f2; position: sticky; top: 0; z-index: 1; }
-.area-tbl tr:nth-child(even) { background-color: #f9f9f9; }
-.area-tbl tr:hover { background-color: #e8f4f8; }
-.cp-sortable { cursor: pointer; }
-.cp-sortable::after { content: '\2195'; opacity: 0.3; margin-left: 2px; font-size: 0.75em; }
-.cp-sorted-asc::after { content: '\2191'; opacity: 1; }
-.cp-sorted-desc::after { content: '\2193'; opacity: 1; }
-</style>
 
 <script>
 (function() {
@@ -143,11 +130,11 @@
     this.buildHeader();
     this.doSort();
     this.render();
-    document.getElementById(this.loadingId).style.display = 'none';
-    document.getElementById(this.tableId).style.display = '';
-    document.getElementById(this.controlsId).style.display = '';
-    if (this.legendId) document.getElementById(this.legendId).style.display = '';
-    document.getElementById(this.pagerDivId).style.display = '';
+    document.getElementById(this.loadingId).classList.add('rdb-hidden');
+    document.getElementById(this.tableId).classList.remove('rdb-hidden');
+    document.getElementById(this.controlsId).classList.remove('rdb-hidden');
+    if (this.legendId) document.getElementById(this.legendId).classList.remove('rdb-hidden');
+    document.getElementById(this.pagerDivId).classList.remove('rdb-hidden');
   };
 
   Top10Table.prototype.applyFilter = function() {

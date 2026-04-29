@@ -17,7 +17,7 @@ Geographic and institutional diversity of Artifact Evaluation Committee members 
 
 ## Members by Continent
 
-<div style="position:relative; width:100%; max-width:600px; margin:1em auto; height:340px;">
+<div class="rdb-md-chart" style="max-width:600px; height:340px;">
   <canvas id="committeeContinentsChart"></canvas>
 </div>
 
@@ -30,7 +30,7 @@ Geographic and institutional diversity of Artifact Evaluation Committee members 
 
 ## Top Countries
 
-<div style="position:relative; width:100%; max-width:1200px; margin:1em auto; height:480px;">
+<div class="rdb-md-chart" style="max-width:1200px; height:480px;">
   <canvas id="committeeCountriesChart"></canvas>
 </div>
 
@@ -43,7 +43,7 @@ Geographic and institutional diversity of Artifact Evaluation Committee members 
 
 ## Top Institutions
 
-<div style="position:relative; width:100%; max-width:1200px; margin:1em auto; height:580px;">
+<div class="rdb-md-chart" style="max-width:1200px; height:580px;">
   <canvas id="committeeInstitutionsChart"></canvas>
 </div>
 
@@ -63,11 +63,3 @@ Geographic and institutional diversity of Artifact Evaluation Committee members 
 ---
 
 **Data:** [Security]({{ '/assets/data/committee_stats.json' | relative_url }})
-
-<style>
-table { font-size: 0.85em; white-space: nowrap; border-collapse: collapse; }
-table th, table td { padding: 3px 8px; border: 1px solid #ddd; }
-table th { background-color: #f2f2f2; position: sticky; top: 0; }
-table tr:nth-child(even) { background-color: #f9f9f9; }
-table tr:hover { background-color: #e8f4f8; }
-</style>

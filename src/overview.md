@@ -103,9 +103,9 @@ Top-10 institutions by combined score (artifact creation + AE service) for each 
   <canvas id="instScatterChart"></canvas>
 </div>
 <div class="rdb-scatter-legend">
-  <span style="margin-right:8px;">Security</span>
+  <span>Security</span>
   <canvas id="instScatterLegend"></canvas>
-  <span style="margin-left:8px;">Systems</span>
+  <span>Systems</span>
 </div>
 <p class="rdb-scatter-caption">Each bubble is an institution. X = artifact score, Y = AE service score, size = combined score. Color indicates the systems/security balance. Only institutions with combined score &ge; 50 are shown.</p>
 

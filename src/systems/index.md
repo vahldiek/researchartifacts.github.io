@@ -11,7 +11,7 @@ Each cell shows **total (available, functional, reproduced)**.
 
 ## Artifacts per Conference
 
-<div style="width:100%; max-width:600px; margin:1em 0;">
+<div class="rdb-md-chart" style="max-width:600px;">
 <canvas id="sysConfChart" height="260"></canvas>
 </div>
 
@@ -106,29 +106,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 {% endif %}
-
-<style>
-table {
-  font-size: 0.78em;
-  white-space: nowrap;
-  border-collapse: collapse;
-}
-table th, table td {
-  padding: 3px 6px;
-  border: 1px solid #ddd;
-}
-table th {
-  background-color: #f2f2f2;
-  position: sticky;
-  top: 0;
-}
-table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-table tr:hover {
-  background-color: #e8f4f8;
-}
-</style>
 
 ---
 

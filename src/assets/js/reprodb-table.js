@@ -65,11 +65,11 @@
     this.buildHeader();
     this.doSort();
     this.render();
-    document.getElementById(this.loadingId).style.display = 'none';
-    document.getElementById(this.tableId).style.display = '';
-    document.getElementById(this.controlsId).style.display = '';
-    if (this.legendId) document.getElementById(this.legendId).style.display = '';
-    document.getElementById(this.pagerDivId).style.display = '';
+    document.getElementById(this.loadingId).classList.add('rdb-hidden');
+    document.getElementById(this.tableId).classList.remove('rdb-hidden');
+    document.getElementById(this.controlsId).classList.remove('rdb-hidden');
+    if (this.legendId) document.getElementById(this.legendId).classList.remove('rdb-hidden');
+    document.getElementById(this.pagerDivId).classList.remove('rdb-hidden');
   };
 
   Top10Table.prototype.applyFilter = function() {

@@ -76,6 +76,12 @@
   font-size: 0.85em;
   color: var(--rdb-muted);
 }
+.rdb-scatter-legend span:first-child {
+  margin-right: 8px;
+}
+.rdb-scatter-legend span:last-child {
+  margin-left: 8px;
+}
 .rdb-scatter-legend canvas {
   vertical-align: middle;
 }
@@ -117,6 +123,25 @@
 .rdb-country-card .info { min-width: 0; }
 .rdb-country-card .name { font-weight: 600; font-size: 0.95em; }
 .rdb-country-card .stats { font-size: 0.8em; color: var(--rdb-muted); }
+
+/* ── Show more button ──────────────────────────────────────────────── */
+.rdb-show-more {
+  flex-basis: 100%;
+  padding: 10px 20px;
+  border: 1px dashed var(--rdb-border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--rdb-accent, #2563eb);
+  font-size: 0.9em;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.15s, border-color 0.15s;
+}
+.rdb-show-more:hover {
+  background: var(--rdb-bg-alt, #f8fafc);
+  border-color: var(--rdb-accent, #2563eb);
+}
 
 /* ── Search / filter bar ───────────────────────────────────────────── */
 .rdb-filter-bar {

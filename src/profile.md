@@ -8,28 +8,28 @@ layout: default
 
 
 
-<div style="position:relative;">
+<div class="rdb-search-box-wrap">
   <input type="text" id="profile-search-box" class="profile-search-box" placeholder="Search for an author or institution..." autocomplete="off">
-  <ul id="search-results" class="profile-search-results"></ul>
+  <ul id="search-results" class="profile-search-results rdb-hidden"></ul>
 </div>
 
 <div id="loading-msg" class="profile-loading">Loading profile data…</div>
 
 <!-- ═══════════════ AUTHOR PROFILE SECTION ═══════════════ -->
-<div id="author-profile" class="profile-container">
+<div id="author-profile" class="profile-container rdb-hidden">
   <div class="profile-header">
-    <h2 id="prof-name"></h2><span id="share-btn" class="share-btn" title="Copy link to this profile">&#128279; Share<span class="share-tip">Link copied!</span></span>
+    <h2 id="prof-name"></h2><span id="share-btn" class="share-btn rdb-hidden" title="Copy link to this profile">&#128279; Share<span class="share-tip">Link copied!</span></span>
     <div class="affil" id="prof-affil"></div>
   </div>
 
   <div class="score-cards" id="score-cards"></div>
 
-  <div id="chart-section" style="display:none;">
+  <div id="chart-section" class="rdb-hidden">
     <h3>Contributions Over Time</h3>
     <div class="chart-container"><canvas id="timelineChart"></canvas></div>
   </div>
 
-  <div id="papers-section" style="display:none;">
+  <div id="papers-section" class="rdb-hidden">
     <h3>Artifact Papers</h3>
     <table class="profile-table">
       <thead><tr><th>#</th><th>Title</th><th>Conference</th><th>Year</th><th>Badges</th></tr></thead>
@@ -37,16 +37,16 @@ layout: default
     </table>
   </div>
 
-  <div id="ae-section" style="display:none;">
+  <div id="ae-section" class="rdb-hidden">
     <h3>AE Committee Service</h3>
     <div id="ae-summary"></div>
-    <table class="ae-table" id="ae-table" style="display:none;">
+    <table class="ae-table rdb-hidden" id="ae-table">
       <thead><tr><th>Conference</th><th>Year</th><th>Role</th></tr></thead>
       <tbody id="ae-body"></tbody>
     </table>
   </div>
 
-  <div id="citations-section" style="display:none;">
+  <div id="citations-section" class="rdb-hidden">
     <h3>Cited Artifacts</h3>
     <p id="citations-summary"></p>
     <table class="profile-table" id="citations-table">
@@ -55,26 +55,26 @@ layout: default
     </table>
   </div>
 
-  <div id="author-history-section" style="display:none;">
+  <div id="author-history-section" class="rdb-hidden">
     <h3>Ranking History</h3>
     <div class="chart-container"><canvas id="authorHistoryChart"></canvas></div>
   </div>
 </div>
 
 <!-- ═══════════════ INSTITUTION PROFILE SECTION ═══════════════ -->
-<div id="inst-profile" class="profile-container">
+<div id="inst-profile" class="profile-container rdb-hidden">
   <div class="profile-header">
-    <h2 id="inst-name"></h2><span id="inst-share-btn" class="share-btn" title="Copy link to this profile">&#128279; Share<span class="share-tip">Link copied!</span></span>
+    <h2 id="inst-name"></h2><span id="inst-share-btn" class="share-btn rdb-hidden" title="Copy link to this profile">&#128279; Share<span class="share-tip">Link copied!</span></span>
   </div>
 
   <div class="score-cards" id="inst-score-cards"></div>
 
-  <div id="inst-history-section" style="display:none;">
+  <div id="inst-history-section" class="rdb-hidden">
     <h3>Ranking History</h3>
     <div class="chart-container"><canvas id="instHistoryChart"></canvas></div>
   </div>
 
-  <div id="inst-contributors-section" style="display:none;">
+  <div id="inst-contributors-section" class="rdb-hidden">
     <h3>Top Contributors</h3>
     <table class="inst-table" id="contributors-table">
       <thead><tr>
@@ -97,7 +97,7 @@ layout: default
     </div>
   </div>
 
-  <div id="inst-artifacts-section" style="display:none;">
+  <div id="inst-artifacts-section" class="rdb-hidden">
     <h3>Artifact Papers</h3>
     <table class="inst-table" id="artifacts-table">
       <thead><tr>
@@ -117,7 +117,7 @@ layout: default
     </div>
   </div>
 
-  <div id="inst-ae-section" style="display:none;">
+  <div id="inst-ae-section" class="rdb-hidden">
     <h3>AE Committee Involvement</h3>
     <div id="ae-summary-text"></div>
     <table class="inst-table" id="ae-detail-table">
@@ -138,7 +138,7 @@ layout: default
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
-<div id="profile-data-urls" style="display:none"
+<div id="profile-data-urls" class="rdb-hidden"
   data-base-url='{{ "" | relative_url }}'
   data-author-profiles='{{ "/assets/data/author_profiles.json" | relative_url }}'
   data-cited-artifacts='{{ "/assets/data/cited_artifacts_by_author.json" | relative_url }}'

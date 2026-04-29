@@ -1,5 +1,8 @@
-/* reprodb-table.css — Shared table styles for ranking/data tables. */
+/* reprodb-table.css — Shared table styles for ranking/data tables.
+   Loaded globally via _includes/head/custom.html.
+   All page-specific <style> blocks have been consolidated here. */
 
+/* ── Base table ────────────────────────────────────────────────────────── */
 .rdb-tbl {
   font-size: 0.78em;
   border-collapse: collapse;
@@ -26,11 +29,142 @@
 .rdb-tbl tr:nth-child(even) { background-color: #f9f9f9; }
 .rdb-tbl tr:hover { background-color: #e8f4f8; }
 
-/* Sortable column headers — canonical class used across all ReproDB tables.
-   Apply class="reprodb-sortable" to a <th>; toggle "sorted-asc" / "sorted-desc"
+/* ── Sortable column headers ───────────────────────────────────────────── */
+/* Canonical class: "reprodb-sortable". Toggle "sorted-asc" / "sorted-desc"
    to display the active indicator. Bound automatically by
    ReproDB.bindSortableHeaders (assets/js/reprodb-utils.js). */
 .reprodb-sortable { cursor: pointer; }
 .reprodb-sortable::after { content: '\2195'; opacity: 0.3; margin-left: 2px; font-size: 0.75em; }
 .reprodb-sortable.sorted-asc::after { content: '\2191'; opacity: 1; }
 .reprodb-sortable.sorted-desc::after { content: '\2193'; opacity: 1; }
+
+/* ── Markdown-rendered tables (committee pages, overview pages) ─────── */
+/* These style bare <table> elements output by Jekyll/Kramdown. */
+.page__content table {
+  font-size: 0.85em;
+  white-space: nowrap;
+  border-collapse: collapse;
+}
+.page__content table th,
+.page__content table td {
+  padding: 3px 8px;
+  border: 1px solid #ddd;
+}
+.page__content table th {
+  background-color: #f2f2f2;
+  position: sticky;
+  top: 0;
+}
+.page__content table tr:nth-child(even) { background-color: #f9f9f9; }
+.page__content table tr:hover { background-color: #e8f4f8; }
+
+/* ── Institution ranking table ─────────────────────────────────────────── */
+#institutionTable { font-size: 0.78em; border-collapse: collapse; width: 100%; }
+#institutionTable th, #institutionTable td { padding: 2px 4px; border: 1px solid #ddd; }
+#institutionTable th:nth-child(2), #institutionTable td:nth-child(2) { max-width: 200px; word-wrap: break-word; white-space: normal; }
+#institutionTable td { white-space: nowrap; }
+#institutionTable th { background-color: #f2f2f2; position: sticky; top: 0; z-index: 1; }
+#institutionTable tr:nth-child(even) { background-color: #f9f9f9; }
+#institutionTable .inst-row:hover { background-color: #e8f4f8; }
+#institutionTable .expanded-row { background-color: #f9f9f9 !important; }
+#institutionTable .expanded-row:hover { background-color: #f9f9f9 !important; }
+
+/* ── Combined ranking table ────────────────────────────────────────────── */
+#combinedTable { font-size: 0.78em; border-collapse: collapse; width: 100%; }
+#combinedTable th, #combinedTable td { padding: 2px 4px; border: 1px solid #ddd; }
+#combinedTable th:nth-child(3), #combinedTable td:nth-child(3) { max-width: 200px; word-wrap: break-word; white-space: normal; }
+#combinedTable td { white-space: nowrap; }
+#combinedTable th { background-color: #f2f2f2; position: sticky; top: 0; z-index: 1; }
+#combinedTable tr:nth-child(even) { background-color: #f9f9f9; }
+#combinedTable tr:hover { background-color: #e8f4f8; }
+
+/* ── AE member table ──────────────────────────────────────────────────── */
+#memberTable { font-size: 0.78em; border-collapse: collapse; width: 100%; }
+#memberTable th, #memberTable td { padding: 2px 4px; border: 1px solid #ddd; }
+#memberTable th:nth-child(5), #memberTable td:nth-child(5) { max-width: 200px; word-wrap: break-word; white-space: normal; }
+#memberTable td { white-space: nowrap; }
+#memberTable th { background-color: #f2f2f2; position: sticky; top: 0; z-index: 1; }
+#memberTable tr:nth-child(even) { background-color: #f9f9f9; }
+#memberTable tr:hover { background-color: #e8f4f8; }
+
+/* ── Conference page table (.conf-tbl) ─────────────────────────────────── */
+.conf-tbl { font-size: 0.78em; border-collapse: collapse; }
+.conf-tbl th, .conf-tbl td { padding: 2px 4px; border: 1px solid #ddd; white-space: nowrap; }
+.conf-tbl td.wrap-cell { white-space: normal; max-width: 200px; overflow: hidden; text-overflow: ellipsis; }
+.conf-tbl th { background-color: #f2f2f2; position: sticky; top: 0; z-index: 1; }
+.conf-tbl tr:nth-child(even) { background-color: #f9f9f9; }
+.conf-tbl tr:hover { background-color: #e8f4f8; }
+
+/* ── Area author table (.area-tbl) ─────────────────────────────────────── */
+.area-tbl { font-size: 0.78em; border-collapse: collapse; }
+.area-tbl th, .area-tbl td { padding: 2px 4px; border: 1px solid #ddd; white-space: nowrap; }
+.area-tbl td.wrap-cell { white-space: normal; max-width: 200px; overflow: hidden; text-overflow: ellipsis; }
+.area-tbl th { background-color: #f2f2f2; position: sticky; top: 0; z-index: 1; }
+.area-tbl tr:nth-child(even) { background-color: #f9f9f9; }
+.area-tbl tr:hover { background-color: #e8f4f8; }
+
+/* ── Top repos table column overrides ──────────────────────────────────── */
+#topReposTable td:nth-child(2) { max-width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#topReposTable td:nth-child(3) { max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#topReposTable td:nth-child(7) { white-space: nowrap; }
+
+/* ── Sort indicator aliases (all map to the canonical pattern) ──────── */
+/* conference_page + author_table_area use .cp-sortable */
+.cp-sortable { cursor: pointer; }
+.cp-sortable::after { content: '\2195'; opacity: 0.3; margin-left: 2px; font-size: 0.75em; }
+.cp-sorted-asc::after { content: '\2191'; opacity: 1; }
+.cp-sorted-desc::after { content: '\2193'; opacity: 1; }
+
+/* combined_ranking_table uses .c-sortable */
+.c-sortable { cursor: pointer; }
+.c-sortable::after { content: '\2195'; opacity: 0.3; margin-left: 2px; font-size: 0.75em; }
+.c-sorted-asc::after { content: '\2191'; opacity: 1; }
+.c-sorted-desc::after { content: '\2193'; opacity: 1; }
+
+/* ae_member_table uses .sortable */
+.sortable { cursor: pointer; }
+.sortable::after { content: '\2195'; opacity: 0.3; margin-left: 2px; font-size: 0.75em; }
+.sortable.sorted-asc::after { content: '\2191'; opacity: 1; }
+.sortable.sorted-desc::after { content: '\2193'; opacity: 1; }
+
+/* ── Utility classes ───────────────────────────────────────────────────── */
+.expand-btn { display: inline-block; font-size: 0.8em; color: #666; cursor: pointer; margin-right: 4px; }
+.expand-btn:hover { color: #000; }
+.expand-btn-spacer { display: inline-block; width: 12px; }
+.rank-unchanged { color: #999; }
+
+/* Flag icons sizing */
+.fi { width: 1em; height: 1em; display: inline-block; margin-right: 4px; vertical-align: -0.125em; }
+
+/* Hide elements until JS reveals them (progressive enhancement) */
+.rdb-hidden { display: none; }
+
+/* Inline markers */
+.rdb-flag-inaccurate { color: #c0392b; }
+.rdb-error { color: #d00; }
+
+/* ── Expanded row (institution detail) ─────────────────────────────────── */
+.inst-row { cursor: pointer; }
+.rdb-expanded-cell { padding: 8px 16px; background-color: #f9f9f9; }
+.rdb-expanded-content { margin-left: 20px; }
+.rdb-expanded-link { font-size: 0.85em; }
+.rdb-expanded-tbl { margin-top: 8px; font-size: 0.9em; border-collapse: collapse; width: auto; }
+.rdb-expanded-tbl th,
+.rdb-expanded-tbl td { padding: 4px 8px; border: 1px solid #ccc; }
+.rdb-expanded-tbl thead tr { background-color: #e8e8e8; }
+.rdb-expanded-tbl tbody tr:nth-child(odd) { background-color: #fff; }
+.rdb-expanded-tbl tbody tr:nth-child(even) { background-color: #f5f5f5; }
+.rdb-expanded-tbl td:not(:first-child) { text-align: center; }
+.rdb-chart-wrap { margin-top: 12px; }
+.rdb-chart-canvas { max-width: 500px; }
+
+/* ── Rank change indicators ────────────────────────────────────────────── */
+.rdb-rank-up { color: #27ae60; font-size: 0.8em; }
+.rdb-rank-down { color: #e74c3c; font-size: 0.8em; }
+.rank-unchanged { color: #999; font-size: 0.8em; }
+
+/* ── Chart container ───────────────────────────────────────────────────── */
+.rdb-chart-container { width: 100%; max-width: 600px; margin: 1em 0; }
+.rdb-repo-chart { position: relative; width: 100%; max-width: 1410px; height: 290px; margin: 0.8em 0; }
+.rdb-repo-chart--tall { height: 380px; margin: 1em 0; }
+.rdb-md-chart { position: relative; width: 100%; margin: 1em auto; }

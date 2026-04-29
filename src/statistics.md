@@ -11,7 +11,7 @@ How artifact evaluation engagement is distributed geographically — aggregated 
 
 <div id="geo-loading"><em>Loading institution data…</em></div>
 
-<div id="geo-content" style="display:none;" markdown="1">
+<div id="geo-content" class="rdb-hidden" markdown="1">
 
 ## At a Glance
 
@@ -65,9 +65,9 @@ The top 15 countries by combined activity score (artifact creation + AE committe
 
 ---
 
-## Reproducibility vs. Volume
+## Availability vs. Reproducibility
 
-Each bubble is a country (≥5 artifacts). X-axis = total artifacts produced, Y-axis = reproducibility rate (% of artifacts that achieved the "reproduced" badge), bubble size = number of institutions. Colored by continent.
+Each bubble is a country (≥5 artifacts). X-axis = artifact availability rate (% of papers with an artifact), Y-axis = reproducibility rate (% of artifacts that achieved the "reproduced" badge), bubble size = number of institutions. Colored by continent.
 
 <div class="rdb-chart-wide rdb-chart-wrap--xl">
   <canvas id="chartReproBubble"></canvas>

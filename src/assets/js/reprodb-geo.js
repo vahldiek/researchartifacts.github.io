@@ -256,12 +256,13 @@
     }));
   }
 
-  /* ── Render: Reproducibility bubble ──────────────────────────────── */
+  /* ── Render: Availability vs Reproducibility bubble ──────────────── */
   function renderReproBubble(countries) {
     var filtered = countries.filter(function(c) { return c.artifacts >= 5; });
     var points = filtered.map(function(c) {
+      var availPct = c.papers > 0 ? Math.round(c.artifacts / c.papers * 100) : 0;
       var reproPct = c.artifacts > 0 ? Math.round(c.reproducible / c.artifacts * 100) : 0;
-      return { x: c.artifacts, y: reproPct, r: Math.max(4, Math.sqrt(c.institutions) * 3), label: c.name, code: c.code };
+      return { x: availPct, y: reproPct, r: Math.max(4, Math.sqrt(c.institutions) * 3), label: c.name, code: c.code };
     });
     charts.push(new Chart(document.getElementById('chartReproBubble'), {
       type: 'bubble',
@@ -283,10 +284,10 @@
         plugins: {
           title: { display: false },
           legend: { display: false },
-          tooltip: { enabled: true, callbacks: { label: function(ctx) { var p = ctx.raw; return p.label + ': ' + p.y + '% repro, ' + p.x + ' artifacts, ' + Math.round(p.r*p.r/9) + ' inst'; } } }
+          tooltip: { enabled: true, callbacks: { label: function(ctx) { var p = ctx.raw; return p.label + ': ' + p.x + '% available, ' + p.y + '% repro, ' + Math.round(p.r*p.r/9) + ' inst'; } } }
         },
         scales: {
-          x: { title: { display: true, text: 'Total Artifacts' }, beginAtZero: true },
+          x: { title: { display: true, text: 'Artifact Availability %' }, beginAtZero: true, max: 100 },
           y: { title: { display: true, text: 'Reproducibility %' }, beginAtZero: true, max: 100 }
         }
       }
@@ -364,18 +365,36 @@
     var container = document.getElementById('countryCardsContainer');
     var searchInput = document.getElementById('geoSearch');
     var sorted = countries.slice().sort(function(a,b) { return b.combined - a.combined; });
+    var INITIAL_SHOW = 12;
+
+    function cardHtml(c) {
+      var reproPct = c.artifacts > 0 ? Math.round(c.reproducible / c.artifacts * 100) : 0;
+      var partPct = c.papers > 0 ? Math.round(c.artifacts / c.papers * 100) : 0;
+      return '<div class="rdb-country-card">' +
+        '<span class="flag fi fi-' + c.code.toLowerCase() + '"></span>' +
+        '<div class="info"><div class="name">' + c.name + '</div>' +
+        '<div class="stats">' + c.institutions + ' inst · ' + c.artifacts + ' artifacts · ' + reproPct + '% repro · ' + partPct + '% participation</div></div></div>';
+    }
 
     function render(filter) {
       var f = (filter || '').toLowerCase();
       var items = sorted.filter(function(c) { return !f || c.name.toLowerCase().indexOf(f) !== -1 || c.continent.toLowerCase().indexOf(f) !== -1; });
-      container.innerHTML = items.map(function(c) {
-        var reproPct = c.artifacts > 0 ? Math.round(c.reproducible / c.artifacts * 100) : 0;
-        var partPct = c.papers > 0 ? Math.round(c.artifacts / c.papers * 100) : 0;
-        return '<div class="rdb-country-card">' +
-          '<span class="flag fi fi-' + c.code.toLowerCase() + '"></span>' +
-          '<div class="info"><div class="name">' + c.name + '</div>' +
-          '<div class="stats">' + c.institutions + ' inst · ' + c.artifacts + ' artifacts · ' + reproPct + '% repro · ' + partPct + '% participation</div></div></div>';
-      }).join('');
+      var isFiltered = f.length > 0;
+      var limit = isFiltered ? items.length : INITIAL_SHOW;
+      var visible = items.slice(0, limit);
+      var remaining = items.length - limit;
+
+      var html = visible.map(cardHtml).join('');
+      if (remaining > 0) {
+        html += '<button class="rdb-show-more" id="geoShowMore">Show all ' + items.length + ' countries &hellip;</button>';
+      }
+      container.innerHTML = html;
+
+      if (remaining > 0) {
+        document.getElementById('geoShowMore').addEventListener('click', function() {
+          container.innerHTML = items.map(cardHtml).join('');
+        });
+      }
     }
 
     render('');
@@ -400,8 +419,8 @@
     var aeData = aggregateAE(aeMembers);
 
     // Show content
-    document.getElementById('geo-loading').style.display = 'none';
-    document.getElementById('geo-content').style.display = '';
+    document.getElementById('geo-loading').classList.add('rdb-hidden');
+    document.getElementById('geo-content').classList.remove('rdb-hidden');
 
     // Render summary numbers
     document.getElementById('statCountries').textContent = countries.length;
@@ -422,6 +441,6 @@
       renderCountryCards(countries);
     }); });
   }).catch(function(e) {
-    document.getElementById('geo-loading').innerHTML = '<em style="color:#d00;">Failed to load data: ' + e + '</em>';
+    document.getElementById('geo-loading').innerHTML = '<em class="rdb-error">Failed to load data: ' + e + '</em>';
   });
 })();
