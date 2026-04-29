@@ -386,7 +386,8 @@
       if (c.type === 'institution') {
         var inst = c.data;
         var url = baseUrl + '/profile.html?name=' + encodeURIComponent(inst.affiliation) + '&type=institution';
-        var initials = (inst.affiliation || '?')[0].toUpperCase();
+        var caps = (inst.affiliation || '').replace(/[^A-Z]/g, '');
+        var initials = caps.length > 0 ? caps.slice(0, 4) : (inst.affiliation || '?')[0].toUpperCase();
         html += '<a class="profile-card" href="' + url + '">' +
           '<div class="avatar inst-avatar">' + escHtml(initials) + '</div>' +
           '<div class="card-info">' +
