@@ -7,6 +7,6 @@
 .profile-card .avatar { width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.1em; font-weight:bold; color:#fff; flex-shrink:0; }
 .profile-card .avatar.author-avatar { background:#2980b9; }
 .profile-card .avatar.inst-avatar { background:#27ae60; }
-.profile-card .card-info { overflow:hidden; }
-.profile-card .card-name { font-weight:600; font-size:0.95em; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.profile-card .card-info { overflow:hidden; min-width:0; }
+.profile-card .card-name { font-weight:600; font-size:0.95em; word-wrap:break-word; overflow-wrap:break-word; }
 .profile-card .card-detail { font-size:0.8em; color:#666; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
