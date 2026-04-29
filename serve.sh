@@ -20,7 +20,7 @@ while [ $# -gt 0 ]; do
     esac
 done
 
-JEKYLL_ARGS="--host 0.0.0.0 --port $PORT --livereload"
+JEKYLL_ARGS="--source src --host 0.0.0.0 --port $PORT --livereload"
 if [ -n "$BASEURL" ]; then
     JEKYLL_ARGS="$JEKYLL_ARGS --baseurl $BASEURL"
     echo "Serving with baseurl: $BASEURL"

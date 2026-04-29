@@ -3,9 +3,6 @@ repository: 'reprodb/reprodb.github.io'
 # Do NOT set them here — they differ between org (reprodb.github.io/) and
 # forks (e.g. vahldiek.github.io/reprodb.github.io/).
 
-# All Jekyll source content lives under src/ to keep the repo root clean.
-source: src
-
 markdown: kramdown
 remote_theme: "mmistakes/minimal-mistakes@4.27.0"
 plugins:
