@@ -9,7 +9,9 @@ overall:
   total_downloads: 168759
   avg_stars: 97.6
   avg_forks: 14.1
-  last_updated: 2026-04-29 19:45:51 UTC
+  median_stars: 7
+  median_forks: 1
+  last_updated: 2026-04-29 20:05:47 UTC
 by_conference:
 - name: ACSAC
   github_repos: 205
@@ -17,6 +19,8 @@ by_conference:
   total_forks: 747
   avg_stars: 15.1
   avg_forks: 3.6
+  median_stars: 2
+  median_forks: 0
   max_stars: 566
   max_forks: 161
   years:
@@ -178,6 +182,8 @@ by_conference:
   total_forks: 837
   avg_stars: 43.9
   avg_forks: 7.6
+  median_stars: 9.5
+  median_forks: 1.0
   max_stars: 1652
   max_forks: 197
   years:
@@ -329,6 +335,8 @@ by_conference:
   total_forks: 928
   avg_stars: 31.4
   avg_forks: 7.4
+  median_stars: 7
+  median_forks: 2
   max_stars: 596
   max_forks: 274
   years:
@@ -483,6 +491,8 @@ by_conference:
   total_forks: 1343
   avg_stars: 58.4
   avg_forks: 19.5
+  median_stars: 5
+  median_forks: 1
   max_stars: 1606
   max_forks: 887
   years:
@@ -612,6 +622,8 @@ by_conference:
   total_forks: 4807
   avg_stars: 288.6
   avg_forks: 35.6
+  median_stars: 30.5
+  median_forks: 5.0
   max_stars: 14349
   max_forks: 1854
   years:
@@ -765,6 +777,8 @@ by_conference:
   total_forks: 1667
   avg_stars: 63.5
   avg_forks: 5.7
+  median_stars: 1
+  median_forks: 0
   max_stars: 12895
   max_forks: 641
   years:
@@ -902,6 +916,8 @@ by_conference:
   total_forks: 1298
   avg_stars: 63.0
   avg_forks: 12.2
+  median_stars: 19.5
+  median_forks: 5.0
   max_stars: 1219
   max_forks: 166
   years:
@@ -1034,6 +1050,8 @@ by_conference:
   total_forks: 14
   avg_stars: 3.5
   avg_forks: 0.8
+  median_stars: 1
+  median_forks: 0
   max_stars: 27
   max_forks: 6
   years:
@@ -1131,6 +1149,8 @@ by_conference:
   total_forks: 9916
   avg_stars: 119.9
   avg_forks: 19.3
+  median_stars: 12.0
+  median_forks: 2.0
   max_stars: 12867
   max_forks: 2196
   years:
@@ -1294,6 +1314,8 @@ by_conference:
   total_forks: 1303
   avg_stars: 523.2
   avg_forks: 42.0
+  median_stars: 10
+  median_forks: 1
   max_stars: 12381
   max_forks: 997
   years:
@@ -1426,6 +1448,8 @@ by_year:
   total_forks: 20
   avg_stars: 9.6
   avg_forks: 4.0
+  median_stars: 6
+  median_forks: 3
   max_stars: 19
   max_forks: 8
 - year: 2018
@@ -1434,6 +1458,8 @@ by_year:
   total_forks: 218
   avg_stars: 62.0
   avg_forks: 16.8
+  median_stars: 13
+  median_forks: 4
   max_stars: 566
   max_forks: 161
 - year: 2019
@@ -1442,6 +1468,8 @@ by_year:
   total_forks: 1572
   avg_stars: 385.7
   avg_forks: 41.4
+  median_stars: 40.5
+  median_forks: 7.0
   max_stars: 12381
   max_forks: 997
 - year: 2020
@@ -1450,6 +1478,8 @@ by_year:
   total_forks: 4726
   avg_stars: 397.8
   avg_forks: 51.9
+  median_stars: 19
+  median_forks: 4
   max_stars: 14349
   max_forks: 1854
 - year: 2021
@@ -1458,6 +1488,8 @@ by_year:
   total_forks: 1755
   avg_stars: 142.4
   avg_forks: 12.8
+  median_stars: 13
+  median_forks: 4
   max_stars: 12895
   max_forks: 641
 - year: 2022
@@ -1466,6 +1498,8 @@ by_year:
   total_forks: 5151
   avg_stars: 137.3
   avg_forks: 19.0
+  median_stars: 9
+  median_forks: 2
   max_stars: 14349
   max_forks: 1854
 - year: 2023
@@ -1474,6 +1508,8 @@ by_year:
   total_forks: 2387
   avg_stars: 41.9
   avg_forks: 8.0
+  median_stars: 10.0
+  median_forks: 2.0
   max_stars: 1652
   max_forks: 274
 - year: 2024
@@ -1482,6 +1518,8 @@ by_year:
   total_forks: 3605
   avg_stars: 66.0
   avg_forks: 10.0
+  median_stars: 7
+  median_forks: 1
   max_stars: 12867
   max_forks: 2196
 - year: 2025
@@ -1490,6 +1528,8 @@ by_year:
   total_forks: 5568
   avg_stars: 98.3
   avg_forks: 18.5
+  median_stars: 2
+  median_forks: 0
   max_stars: 4638
   max_forks: 887
 - year: 2026
@@ -1498,5 +1538,7 @@ by_year:
   total_forks: 475
   avg_stars: 36.6
   avg_forks: 4.8
+  median_stars: 1.0
+  median_forks: 0.0
   max_stars: 1376
   max_forks: 107
