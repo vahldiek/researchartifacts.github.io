@@ -11,7 +11,7 @@ How artifact evaluation engagement is distributed geographically — aggregated 
 
 <div id="geo-loading"><em>Loading institution data…</em></div>
 
-<div id="geo-content" style="display:none;">
+<div id="geo-content" style="display:none;" markdown="1">
 
 ## At a Glance
 
