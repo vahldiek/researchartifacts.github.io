@@ -72,6 +72,13 @@
 .inst-table th { background:#f2f2f2; white-space:nowrap; cursor:pointer; }
 .inst-table tr:nth-child(even) { background:#fafafa; }
 .inst-table tr:hover { background:#e8f4f8; }
+.ae-detail-row td { padding:4px 10px 12px 30px; background:#f9f9f9; }
+.ae-detail-row:hover { background:#f9f9f9; }
+.ae-inline-table { font-size:0.9em; border-collapse:collapse; width:auto; margin:4px 0; }
+.ae-inline-table th,
+.ae-inline-table td { padding:3px 8px; border:1px solid #e0e0e0; text-align:left; }
+.ae-inline-table th { background:#eee; }
+.ae-toggle { text-decoration:underline; cursor:pointer; }
 .pag-controls { margin:8px 0; font-size:0.9em; }
 .pag-controls button { padding:2px 8px; font-size:0.9em; }
 .pag-controls span { margin:0 8px; }

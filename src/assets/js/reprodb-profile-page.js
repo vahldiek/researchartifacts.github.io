@@ -336,7 +336,8 @@
     return slice.map(function(p, i) {
       var dn = cleanName(p.name);
       var url = baseUrl + '/profile.html?name=' + encodeURIComponent(p.name) + (p.author_id != null ? '&id=' + p.author_id : '');
-      return '<tr>' +
+      var rowId = 'contrib-ae-' + (startIdx + i);
+      var mainRow = '<tr>' +
         '<td>' + (startIdx + i + 1) + '</td>' +
         '<td><a href="' + url + '">' + escHtml(dn) + '</a></td>' +
         '<td><strong>' + (p.combined_score || 0) + '</strong></td>' +
@@ -344,9 +345,28 @@
         '<td>' + (p.ae_score || 0) + '</td>' +
         '<td>' + (p.artifact_count || 0) + '</td>' +
         '<td>' + (p.total_papers || 0) + '</td>' +
-        '<td>' + (p.ae_memberships || 0) + '</td>' +
+        '<td>' + (p.ae_memberships ? '<a href="#" class="ae-toggle" data-target="' + rowId + '">' + p.ae_memberships + '</a>' : '0') + '</td>' +
         '<td>' + (p.chair_count ? p.chair_count + ' ★' : '') + '</td>' +
         '</tr>';
+      var detailRow = '';
+      if (p.ae_conferences && p.ae_conferences.length > 0) {
+        var sorted = p.ae_conferences.slice().sort(function(a, b) {
+          var ya = Array.isArray(a) ? a[1] : 0;
+          var yb = Array.isArray(b) ? b[1] : 0;
+          return yb - ya;
+        });
+        var aeRows = sorted.map(function(entry) {
+          var conf = Array.isArray(entry) ? entry[0] : entry;
+          var yr = Array.isArray(entry) ? entry[1] : '';
+          var role = (Array.isArray(entry) && entry.length > 2) ? entry[2] : 'member';
+          var roleLabel = role === 'chair' ? '★ Chair' : 'Member';
+          return '<tr><td>' + escHtml(conf) + '</td><td>' + yr + '</td><td>' + roleLabel + '</td></tr>';
+        }).join('');
+        detailRow = '<tr id="' + rowId + '" class="ae-detail-row" style="display:none;">' +
+          '<td colspan="9"><table class="ae-inline-table"><thead><tr><th>Conference</th><th>Year</th><th>Role</th></tr></thead><tbody>' +
+          aeRows + '</tbody></table></td></tr>';
+      }
+      return mainRow + detailRow;
     }).join('');
   }
 
@@ -508,7 +528,8 @@
         artifact_count: p.artifact_count || 0,
         total_papers: p.total_papers || 0,
         ae_memberships: p.ae_memberships || 0,
-        chair_count: p.chair_count || 0
+        chair_count: p.chair_count || 0,
+        ae_conferences: p.ae_conferences || []
       };
     });
     contribPage = 0;
@@ -678,6 +699,15 @@
       if (nameParam) return { search: nameParam };
       return null;
     }
+  });
+
+  // ── AE toggle in contributors table ────────────────────────────────────
+  document.getElementById('contributors-table').addEventListener('click', function(e) {
+    var toggle = e.target.closest('.ae-toggle');
+    if (!toggle) return;
+    e.preventDefault();
+    var target = document.getElementById(toggle.dataset.target);
+    if (target) target.style.display = target.style.display === 'none' ? '' : 'none';
   });
 
   // ── Pagination controls ───────────────────────────────────────────────
