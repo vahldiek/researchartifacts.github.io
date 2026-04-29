@@ -114,8 +114,6 @@ Top-10 institutions by combined score (artifact creation + AE service) for each 
 </div>
 <p style="text-align:center; font-size:0.9em; color:#666;">Each bubble is an institution. X = artifact score, Y = AE service score, size = combined score. Only institutions with combined score &ge; 50 are shown.</p>
 
-See the full [Institution Rankings]({{ '/institution_rankings.html' | relative_url }}) for details, or explore the [Systems]({{ '/systems/' | relative_url }}) and [Security]({{ '/security/' | relative_url }}) area pages.
-
 {% else %}
 
 *Statistics data is being generated. Please check back soon.*
