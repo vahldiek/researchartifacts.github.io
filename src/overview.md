@@ -48,17 +48,17 @@ Total evaluated artifacts per year, split by area. Security adopted AE earlier (
 Percentage of artifacts receiving each badge type, by area. Systems conferences consistently show higher badge depth, while security venues have been converging in recent years.
 
 <div style="display:flex; flex-wrap:wrap; gap:16px; justify-content:center;">
-  <div style="flex:1; min-width:400px; max-width:600px;">
-    <h4 style="text-align:center;">Systems</h4>
-    <canvas id="badgeChartSys" height="280"></canvas>
+  <div style="position:relative; flex:1; min-width:400px; max-width:600px; height:260px;">
+    <h4 style="text-align:center; margin-bottom:4px;">Systems</h4>
+    <canvas id="badgeChartSys"></canvas>
   </div>
-  <div style="flex:1; min-width:400px; max-width:600px;">
-    <h4 style="text-align:center;">Security</h4>
-    <canvas id="badgeChartSec" height="280"></canvas>
+  <div style="position:relative; flex:1; min-width:400px; max-width:600px; height:260px;">
+    <h4 style="text-align:center; margin-bottom:4px;">Security</h4>
+    <canvas id="badgeChartSec"></canvas>
   </div>
 </div>
 
-<div style="position:relative; width:100%; max-width:900px; margin:2em auto; height:380px;">
+<div style="position:relative; width:100%; max-width:900px; margin:2em auto; height:300px;">
   <canvas id="badgeRateCompareChart"></canvas>
 </div>
 
