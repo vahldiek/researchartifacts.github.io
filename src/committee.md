@@ -3,119 +3,142 @@ title: "AE Committee Statistics"
 permalink: /committee.html
 ---
 
-Geographic and institutional diversity of Artifact Evaluation Committee members across all tracked conferences.
+<link rel="stylesheet" href="{{ '/assets/css/reprodb-charts.css' | relative_url }}">
+
+A cross-community analysis of Artifact Evaluation Committee composition, retention, and geographic diversity — comparing **systems** and **security** conferences tracked in ReproDB.
 
 {% if site.data.committee_stats %}
 
 ## Overview
 
-| | |
-|---|---|
-| **Total Committee Members** | {{ site.data.committee_stats.total_members }} |
-| **Countries Represented** | {{ site.data.committee_stats.total_countries }} |
-| **Continents** | {{ site.data.committee_stats.total_continents }} |
-| **Institutions** | {{ site.data.committee_stats.total_institutions }} |
-| **Conference-Years Tracked** | {{ site.data.committee_stats.total_conferences }} |
+<div class="rdb-cards">
+  <div class="rdb-card">
+    <div class="rdb-card-value">{{ site.data.committee_stats.unique_members }}</div>
+    <div class="rdb-card-label">Unique Members</div>
+  </div>
+  <div class="rdb-card">
+    <div class="rdb-card-value">{{ site.data.committee_stats.total_countries }}</div>
+    <div class="rdb-card-label">Countries</div>
+  </div>
+  <div class="rdb-card">
+    <div class="rdb-card-value">{{ site.data.committee_stats.total_institutions }}</div>
+    <div class="rdb-card-label">Institutions</div>
+  </div>
+  <div class="rdb-card">
+    <div class="rdb-card-value">{{ site.data.committee_stats.total_conferences }}</div>
+    <div class="rdb-card-label">Conference-Years</div>
+  </div>
+</div>
+
+| | Systems | Security |
+|---|:---:|:---:|
+| **Total Assignments** | {{ site.data.committee_stats.total_systems }} | {{ site.data.committee_stats.total_security }} |
+| **Unique Members** | {{ site.data.committee_stats.unique_members_systems }} | {{ site.data.committee_stats.unique_members_security }} |
 
 ---
 
-## Committee Sizes by Conference and Year
+## Committee Sizes by Conference
 
-The table below shows the number of AE committee members per conference per year. Cells marked with **–** indicate missing committee data; cells with a <span class="rdb-flag-inaccurate">†</span> flag values that may be inaccurate (chairs-only or placeholder entries). An asterisk (*) marks conference-years where no artifact results exist yet (e.g. upcoming editions).
+Darker cells indicate larger committees. Cells below 5 members (likely incomplete data) are omitted.
 
-{% assign _years = "" %}
-{% for s in site.data.committee_stats.committee_sizes %}
-  {% unless _years contains s.year %}
-    {% if _years == "" %}{% assign _years = s.year %}{% else %}{% assign _years = _years | append: "," | append: s.year %}{% endif %}
-  {% endunless %}
-{% endfor %}
-{% assign _year_list = _years | split: "," | sort %}
+<div class="rdb-chart-wide" style="overflow-x:auto;">
+  <canvas id="committeeSizesHeatmap"></canvas>
+</div>
 
-{% assign _confs = "" %}
-{% for s in site.data.committee_stats.committee_sizes %}
-  {% unless _confs contains s.conference %}
-    {% if _confs == "" %}{% assign _confs = s.conference %}{% else %}{% assign _confs = _confs | append: "," | append: s.conference %}{% endif %}
-  {% endunless %}
-{% endfor %}
-{% assign _conf_list = _confs | split: "," | sort %}
+---
 
-| Conference | Area | {% for y in _year_list %}{{ y }} | {% endfor %}Total |
-|---|---|{% for y in _year_list %}---:|{% endfor %}---:|
-{% for c in _conf_list %}| **{{ c }}** | {% for s in site.data.committee_stats.committee_sizes %}{% if s.conference == c %}{{ s.area | slice: 0, 3 }}{% break %}{% endif %}{% endfor %} | {% for y in _year_list %}{% assign y_num = y | plus: 0 %}{% assign _found = false %}{% for s in site.data.committee_stats.committee_sizes %}{% if s.conference == c and s.year == y_num %}{% assign _found = true %}{% if s.size < 5 %}<span title="Possibly incomplete">{{ s.size }}†</span>{% else %}{{ s.size }}{% endif %}{% endif %}{% endfor %}{% unless _found %}–{% endunless %} | {% endfor %}{% assign _total = 0 %}{% for s in site.data.committee_stats.committee_sizes %}{% if s.conference == c %}{% if s.size >= 5 %}{% assign _total = _total | plus: s.size %}{% endif %}{% endif %}{% endfor %}**{{ _total }}** |
-{% endfor %}
+## Committee Growth
 
-<div class="rdb-md-chart" style="max-width:1400px; height:520px;">
-  <canvas id="committeeSizesChart"></canvas>
+Total committee assignments per year, split by area. Growth reflects both new conferences adopting AE processes and existing committees scaling up.
+
+<div class="rdb-chart-wide rdb-chart-wrap--xl">
+  <canvas id="committeeGrowthChart"></canvas>
+</div>
+
+---
+
+## Service Frequency
+
+How many terms do evaluators serve? Most serve once, but a growing cohort returns repeatedly — building institutional knowledge.
+
+<div class="rdb-chart-wide rdb-chart-wrap--lg">
+  <canvas id="serviceFrequencyChart"></canvas>
+</div>
+
+---
+
+## Retention Trends
+
+Year-over-year retention: what fraction of each year's committee served in the same area the previous year? Rising retention indicates growing evaluator commitment and community stability.
+
+<div class="rdb-chart-wide rdb-chart-wrap--lg">
+  <canvas id="retentionChart"></canvas>
+</div>
+
+---
+
+## Geographic Diversity
+
+<div class="rdb-chart-row">
+  <div class="rdb-chart-col">
+    <div class="rdb-chart-wrap rdb-chart-wrap--sm">
+      <canvas id="continentSysChart"></canvas>
+    </div>
+  </div>
+  <div class="rdb-chart-col">
+    <div class="rdb-chart-wrap rdb-chart-wrap--sm">
+      <canvas id="continentSecChart"></canvas>
+    </div>
+  </div>
+</div>
+
+<div style="display:none;"><canvas id="committeeContinentsChart"></canvas></div>
+
+---
+
+## Top Countries — Systems vs Security
+
+North America dominates both areas, but geographic profiles differ: Europe has a larger share in security committees.
+
+<div class="rdb-chart-wide rdb-chart-wrap--xl">
+  <canvas id="committeeCountriesChart"></canvas>
+</div>
+
+---
+
+## Top Institutions by Area
+
+<div class="rdb-chart-row">
+  <div class="rdb-chart-col">
+    <div class="rdb-chart-wrap rdb-chart-wrap--lg">
+      <canvas id="instSysChart"></canvas>
+    </div>
+  </div>
+  <div class="rdb-chart-col">
+    <div class="rdb-chart-wrap rdb-chart-wrap--lg">
+      <canvas id="instSecChart"></canvas>
+    </div>
+  </div>
+</div>
+
+<div style="display:none;"><canvas id="committeeInstitutionsChart"></canvas></div>
+
+---
+
+## Cross-Community Overlap
+
+Only a small fraction of evaluators serve in both systems and security — the two communities have largely separate AE member pools.
+
+<div class="rdb-chart-wide rdb-chart-wrap--md">
+  <canvas id="crossOverlapChart"></canvas>
 </div>
 
 ---
 
 ## Data Coverage Notes
 
-Some discrepancies exist between artifact results and committee data:
-
 - **ATC & OSDI** share the same AE committee at USENIX, so committee members appear under both conferences for years 2022–2024.
 - Some conference-years show only chairs (no full committee): ATC 2023, OSDI 2023, SOSP 2024–2026.
-
-These gaps mean the **systems** committee count ({{ site.data.committee_stats.total_systems }}) is somewhat inflated (ATC/OSDI duplication).
-
----
-
-## Members by Continent
-
-<div class="rdb-md-chart" style="max-width:600px; height:340px;">
-  <canvas id="committeeContinentsChart"></canvas>
-</div>
-
-<div class="rdb-md-chart" style="max-width:1200px; height:390px;">
-  <canvas id="committeeContinentTimelineChart"></canvas>
-</div>
-
-| Continent | Members |
-|---|:---:|
-{% for c in site.data.committee_stats.top_continents %}| {{ c.name }} | {{ c.count }} |
-{% endfor %}
-
----
-
-## Top Countries
-
-<div class="rdb-md-chart" style="max-width:1200px; height:480px;">
-  <canvas id="committeeCountriesChart"></canvas>
-</div>
-
-| Country | Members |
-|---|:---:|
-{% for c in site.data.committee_stats.top_countries %}| {{ c.name }} | {{ c.count }} |
-{% endfor %}
-
----
-
-## Top Institutions
-
-<div class="rdb-md-chart" style="max-width:1200px; height:580px;">
-  <canvas id="committeeInstitutionsChart"></canvas>
-</div>
-
-| Institution | Members |
-|---|:---:|
-{% for i in site.data.committee_stats.top_institutions %}| {{ i.name }} | {{ i.count }} |
-{% endfor %}
-
----
-
-## Per-Area Breakdown
-
-- **[Systems Committee Stats]({{ '/systems_committee.html' | relative_url }})** — {{ site.data.committee_stats.total_systems }} members
-- **[Security Committee Stats]({{ '/security_committee.html' | relative_url }})** — {{ site.data.committee_stats.total_security }} members
-
----
-
-## Download Data
-
-- **[committee_stats.json]({{ '/assets/data/committee_stats.json' | relative_url }})** — Complete committee dataset (countries, continents, institutions, per-year breakdowns)
-
-{% include committee_charts.html area="overall" sizes=true timeline=true %}
 
 {% else %}
 
@@ -123,6 +146,15 @@ These gaps mean the **systems** committee count ({{ site.data.committee_stats.to
 
 {% endif %}
 
+<script id="committee-page-data" type="application/json">
+{
+  "area": "overall",
+  "committeeStatsUrl": "{{ '/assets/data/committee_stats.json' | relative_url }}",
+  "aeMembersUrl": "{{ '/assets/data/ae_members.json' | relative_url }}"
+}
+</script>
+<script src="{{ '/assets/js/reprodb-committee.js' | relative_url }}"></script>
+
 ---
 
-**Data:** [All Conferences]({{ '/assets/data/committee_stats.json' | relative_url }}) | [Systems]({{ '/assets/data/committee_stats.json' | relative_url }}) | [Security]({{ '/assets/data/committee_stats.json' | relative_url }})
+**Data:** [Committee Statistics]({{ '/assets/data/committee_stats.json' | relative_url }}) | [AE Members]({{ '/assets/data/ae_members.json' | relative_url }})
