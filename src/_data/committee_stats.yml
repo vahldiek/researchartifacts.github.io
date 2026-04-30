@@ -1,82 +1,83 @@
-last_updated: '2026-04-29'
+last_updated: '2026-04-30'
 total_members: 4393
 total_systems: 2289
 total_security: 2104
 total_conferences: 67
 total_countries: 59
 total_continents: 7
-total_institutions: 469
+total_institutions: 476
 unique_members: 2458
 unique_members_systems: 1201
 unique_members_security: 1348
+unique_members_both: 91
 recurring_chairs: 82
 top_countries:
 - name: United States
-  count: 2106
+  count: 2111
 - name: China
   count: 373
+- name: Germany
+  count: 216
 - name: Hong Kong
   count: 189
-- name: Germany
-  count: 180
 - name: United Kingdom
   count: 111
 - name: Taiwan, Province of China
   count: 91
 - name: Switzerland
-  count: 87
+  count: 88
 - name: Singapore
   count: 68
 - name: Canada
   count: 68
 - name: Japan
   count: 63
+- name: Italy
+  count: 61
 - name: Australia
   count: 57
-- name: Italy
-  count: 56
 - name: Netherlands
   count: 49
+- name: France
+  count: 46
 - name: Belgium
   count: 45
-- name: France
-  count: 43
 top_countries_systems:
 - name: United States
-  count: 1243
+  count: 1247
 - name: China
   count: 272
 - name: Hong Kong
   count: 126
 - name: United Kingdom
   count: 60
+- name: Switzerland
+  count: 58
 - name: Taiwan, Province of China
   count: 58
-- name: Switzerland
-  count: 57
 - name: Singapore
   count: 45
+- name: Germany
+  count: 32
 - name: Spain
   count: 30
 - name: Canada
   count: 26
 - name: Japan
   count: 23
-- name: Germany
-  count: 20
 - name: Portugal
   count: 20
+- name: France
+  count: 19
 - name: Greece
   count: 17
-- name: France
-  count: 16
 - name: India
   count: 15
 top_countries_security:
 - name: United States
-  count: 863
+  count: 864
 - name: Germany
-  count: 160
+  count: 184
 - name: China
   count: 101
 - name: Hong Kong
@@ -84,7 +85,7 @@ top_countries_security:
 - name: United Kingdom
   count: 51
 - name: Italy
-  count: 45
+  count: 50
 - name: Australia
   count: 45
 - name: Netherlands
@@ -105,11 +106,11 @@ top_countries_security:
   count: 23
 top_continents:
 - name: North America
-  count: 2176
+  count: 2181
 - name: Asia
   count: 908
 - name: Europe
-  count: 752
+  count: 797
 - name: Oceania
   count: 58
 - name: Africa
@@ -120,11 +121,11 @@ top_continents:
   count: 14
 top_continents_systems:
 - name: North America
-  count: 1270
+  count: 1274
 - name: Asia
   count: 570
 - name: Europe
-  count: 269
+  count: 285
 - name: Africa
   count: 18
 - name: Oceania
@@ -135,9 +136,9 @@ top_continents_systems:
   count: 8
 top_continents_security:
 - name: North America
-  count: 906
+  count: 907
 - name: Europe
-  count: 483
+  count: 512
 - name: Asia
   count: 338
 - name: Oceania
@@ -243,12 +244,14 @@ top_institutions_security:
   count: 35
 - name: National Tsinghua University
   count: 32
-- name: "Ruhr-Universit\xE4t Bochum"
+- name: Ruhr-Universität Bochum
   count: 30
 - name: University of Wisconsin - Madison
   count: 26
 - name: Boston University
   count: 25
+- name: max planck society
+  count: 24
 - name: tu darmstadt
   count: 24
 - name: George Mason University
@@ -269,8 +272,6 @@ top_institutions_security:
   count: 20
 - name: University of Twente
   count: 19
-- name: The Hong Kong University of Science and Technology
-  count: 18
 institution_timeline:
 - year: 2017
   total: 9
@@ -281,37 +282,37 @@ institution_timeline:
   systems: 0
   security: 12
 - year: 2019
-  total: 64
+  total: 65
   systems: 34
-  security: 33
+  security: 34
 - year: 2020
   total: 79
   systems: 30
   security: 60
 - year: 2021
-  total: 155
-  systems: 118
+  total: 157
+  systems: 120
   security: 58
 - year: 2022
-  total: 157
-  systems: 88
-  security: 103
+  total: 158
+  systems: 89
+  security: 104
 - year: 2023
-  total: 170
-  systems: 105
-  security: 105
-- year: 2024
-  total: 192
-  systems: 109
-  security: 133
-- year: 2025
-  total: 245
-  systems: 135
-  security: 169
-- year: 2026
-  total: 221
+  total: 172
   systems: 106
-  security: 171
+  security: 106
+- year: 2024
+  total: 194
+  systems: 111
+  security: 134
+- year: 2025
+  total: 247
+  systems: 137
+  security: 170
+- year: 2026
+  total: 224
+  systems: 107
+  security: 173
 committee_sizes:
 - conference: ACSAC
   year: 2017
@@ -654,11 +655,17 @@ chair_stats:
   total_chairs_security: 30
   repeat_chairs: 23
   repeat_chairs_pct: 28.0
+  repeat_chairs_systems: 13
+  repeat_chairs_security: 11
   cross_conference_chairs: 13
   pipeline_promoted: 31
   pipeline_promoted_pct: 37.8
   pipeline_avg_years: 2.7
   avg_chairs_per_edition: 2.2
+  avg_chairs_per_edition_systems: 2.6
+  avg_chairs_per_edition_security: 1.7
+  total_countries: 16
+  total_continents: 3
   year_trends:
   - year: 2017
     new_chairs: 1
