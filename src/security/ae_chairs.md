@@ -1,5 +1,5 @@
 ---
-title: "Security: AE Chair Ranking"
+title: "Security: List of AE Chairs"
 permalink: /security/ae_chairs.html
 chair_data_url: /assets/data/security_ae_chairs.json
 chair_stats_url: /assets/data/chair_stats.json

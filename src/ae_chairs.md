@@ -55,9 +55,9 @@ Of all chairs, **{{ site.data.committee_stats.chair_stats.pipeline_promoted_pct 
 
 ---
 
-## Chair Ranking
+## List of AE Chairs
 
-Ranked by number of times served as AE chair. The **Pipeline** column shows years from first AE member role to first chair role (— = started directly as chair).
+All AE chairs across tracked conferences. The **Pipeline** column shows years from first AE member role to first chair role (— = started directly as chair).
 
 {% include ae_chair_table.html %}
 

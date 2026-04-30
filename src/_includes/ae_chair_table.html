@@ -21,7 +21,7 @@
 </div>
 
 <div id="chair-legend" class="rdb-legend rdb-hidden">
-  Legend: #=Rank, Ch=Times Chaired, Mem=Times as Member, Series=Conference Series Chaired, F=First Year, L=Last Year
+  Legend: #=Row, Ch=Times Chaired, Mem=Times as Member, Series=Conference Series Chaired, F=First Year, L=Last Year
 </div>
 
 <div id="chairLoading"><em>Loading AE chair data…</em></div>
@@ -54,7 +54,7 @@
 
   // Column definitions
   var fixedCols = [
-    {label:'#',           key:'rank',              type:'num',   tip:'Rank'},
+    {label:'#',           key:'rank',              type:'num',   tip:'Row number'},
     {label:'Name',        key:'name',              type:'alpha', tip:'Chair Name'},
     {label:'Affiliation', key:'affiliation',       type:'alpha', tip:'Current Affiliation'},
     {label:'Ch',          key:'chair_count',       type:'num',   tip:'Times served as AE Chair'},

@@ -1,5 +1,5 @@
 ---
-title: "Systems: AE Chair Ranking"
+title: "Systems: List of AE Chairs"
 permalink: /systems/ae_chairs.html
 chair_data_url: /assets/data/systems_ae_chairs.json
 chair_stats_url: /assets/data/chair_stats.json
