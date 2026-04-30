@@ -69,7 +69,7 @@ How many terms do evaluators serve? Most serve once, but a growing cohort return
 
 ## Retention Trends
 
-Year-over-year retention: what fraction of each year's committee served in the same area the previous year? Rising retention indicates growing evaluator commitment and community stability.
+Year-over-year retention: what fraction of each year's committee served the previous year? The "overall" line tracks retention across area boundaries (e.g., a security evaluator who switches to systems counts as retained).
 
 <div class="rdb-chart-wide rdb-chart-wrap--lg">
   <canvas id="retentionChart"></canvas>

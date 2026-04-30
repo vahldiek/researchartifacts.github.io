@@ -257,13 +257,15 @@
     var canvas = document.getElementById('retentionChart');
     if (!canvas) return;
 
-    /* Build year→set-of-members for each area */
-    var sysYears = {}, secYears = {};
+    /* Build year→set-of-members for each area and overall (any area) */
+    var sysYears = {}, secYears = {}, allYears = {};
     aeMembers.forEach(function(m) {
       var isSys = m.area === 'systems' || m.area === 'both';
       var isSec = m.area === 'security' || m.area === 'both';
       if (m.years) {
         Object.keys(m.years).forEach(function(y) {
+          if (!allYears[y]) allYears[y] = {};
+          allYears[y][m.name] = true;
           if (isSys) { if (!sysYears[y]) sysYears[y] = {}; sysYears[y][m.name] = true; }
           if (isSec) { if (!secYears[y]) secYears[y] = {}; secYears[y][m.name] = true; }
         });
@@ -285,13 +287,31 @@
       return { labels: labels, data: data };
     }
 
+    /* Cross-area retention: did member serve anywhere last year? */
+    function crossRetentionSeries(areaYearMap, allYearMap) {
+      var yrs = Object.keys(areaYearMap).sort();
+      var labels = [], data = [];
+      for (var i = 1; i < yrs.length; i++) {
+        var prevAll = allYearMap[yrs[i - 1]] || {};
+        var curr = areaYearMap[yrs[i]] || {};
+        var currNames = Object.keys(curr);
+        if (currNames.length === 0) continue;
+        var retained = currNames.filter(function(n) { return prevAll[n]; }).length;
+        labels.push(yrs[i]);
+        data.push(Math.round(retained / currNames.length * 100));
+      }
+      return { labels: labels, data: data };
+    }
+
     var sysRet = retentionSeries(sysYears);
     var secRet = retentionSeries(secYears);
+    var allRet = retentionSeries(allYears);
 
     /* Merge labels */
     var allLabels = {};
     sysRet.labels.forEach(function(l) { allLabels[l] = true; });
     secRet.labels.forEach(function(l) { allLabels[l] = true; });
+    allRet.labels.forEach(function(l) { allLabels[l] = true; });
     var labels = Object.keys(allLabels).sort();
 
     function alignToLabels(series) {
@@ -303,13 +323,21 @@
     var datasets;
     if (area === 'overall') {
       datasets = [
+        { label: 'Overall — Retained %', data: alignToLabels(allRet), borderColor: '#333', borderWidth: 2, borderDash: [5, 3], fill: false, tension: 0.3, spanGaps: true },
         { label: 'Systems — Retained %', data: alignToLabels(sysRet), borderColor: SYS_COLOR, borderWidth: 2, fill: false, tension: 0.3, spanGaps: true },
         { label: 'Security — Retained %', data: alignToLabels(secRet), borderColor: SEC_COLOR, borderWidth: 2, fill: false, tension: 0.3, spanGaps: true }
       ];
     } else {
-      var series = area === 'systems' ? sysRet : secRet;
+      var areaYears = area === 'systems' ? sysYears : secYears;
+      var sameAreaRet = area === 'systems' ? sysRet : secRet;
+      var crossRet = crossRetentionSeries(areaYears, allYears);
       var color = area === 'systems' ? SYS_COLOR : SEC_COLOR;
-      datasets = [{ label: 'Retained %', data: alignToLabels(series), borderColor: color, borderWidth: 2, fill: false, tension: 0.3, spanGaps: true }];
+      crossRet.labels.forEach(function(l) { allLabels[l] = true; });
+      labels = Object.keys(allLabels).sort();
+      datasets = [
+        { label: 'Retained (same area) %', data: alignToLabels(sameAreaRet), borderColor: color, borderWidth: 2, fill: false, tension: 0.3, spanGaps: true },
+        { label: 'Retained (any area) %', data: alignToLabels(crossRet), borderColor: color, borderWidth: 2, borderDash: [5, 3], fill: false, tension: 0.3, spanGaps: true }
+      ];
     }
 
     new Chart(canvas, {
