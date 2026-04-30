@@ -57,67 +57,90 @@ Of all chairs, **{{ site.data.committee_stats.chair_stats.pipeline_promoted_pct 
 
 ## Geographic Diversity
 
-<div id="geo-loading">Loading geographic data…</div>
-<div id="geo-section" style="display:none;">
+Chairs represent **{{ site.data.committee_stats.chair_stats.total_countries }} countries** across **{{ site.data.committee_stats.chair_stats.total_continents }} continents**.
 
-Chairs represent <strong><span id="geo-countries"></span> countries</strong> across <strong><span id="geo-continents"></span> continents</strong>.
-
-### By Continent
-
-<div class="table-responsive">
-<table class="table table-sm" id="geo-continent-table">
-<thead><tr><th>Continent</th><th>Chairs</th><th>Share</th></tr></thead>
-<tbody></tbody>
-</table>
-</div>
-
-### By Country
-
-<div class="table-responsive">
-<table class="table table-sm" id="geo-country-table">
-<thead><tr><th>Country</th><th>Chairs</th><th>Share</th></tr></thead>
-<tbody></tbody>
-</table>
-</div>
+<div class="rdb-chart-row">
+  <div class="rdb-chart-col">
+    <div class="rdb-chart-wrap rdb-chart-wrap--sm">
+      <canvas id="chairContinentChart"></canvas>
+    </div>
+  </div>
+  <div class="rdb-chart-col">
+    <div class="rdb-chart-wrap rdb-chart-wrap--lg">
+      <canvas id="chairCountryChart"></canvas>
+    </div>
+  </div>
 </div>
 
 <script>
 (function() {
+  var SYS_COLOR  = '#2980b9';
+  var CONTINENT_COLORS = {
+    'North America': '#2980b9',
+    'Europe': '#27ae60',
+    'Asia': '#f39c12',
+    'South America': '#8e44ad',
+    'Oceania': '#16a085',
+    'Africa': '#d35400'
+  };
+
   fetch('{{ "/assets/data/chair_stats.json" | relative_url }}')
-    .then(r => r.json())
-    .then(data => {
-      const geo = data.geographic;
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      var geo = data.geographic;
       if (!geo) return;
-      document.getElementById('geo-loading').style.display = 'none';
-      document.getElementById('geo-section').style.display = '';
-      document.getElementById('geo-countries').textContent = geo.total_countries;
-      document.getElementById('geo-continents').textContent = geo.total_continents;
 
-      const total = Object.values(geo.by_continent).reduce((a,b) => a+b, 0);
-
-      // Continent table
-      const cBody = document.querySelector('#geo-continent-table tbody');
-      Object.entries(geo.by_continent)
-        .sort((a,b) => b[1]-a[1])
-        .forEach(([name, count]) => {
-          const pct = (100*count/total).toFixed(1);
-          cBody.insertAdjacentHTML('beforeend',
-            `<tr><td>${name}</td><td>${count}</td><td>${pct}%</td></tr>`);
+      // Continent doughnut
+      var continentCanvas = document.getElementById('chairContinentChart');
+      if (continentCanvas) {
+        var continents = Object.entries(geo.by_continent).sort(function(a,b) { return b[1]-a[1]; });
+        new Chart(continentCanvas, {
+          type: 'doughnut',
+          data: {
+            labels: continents.map(function(c) { return c[0]; }),
+            datasets: [{
+              data: continents.map(function(c) { return c[1]; }),
+              backgroundColor: continents.map(function(c) { return CONTINENT_COLORS[c[0]] || '#95a5a6'; })
+            }]
+          },
+          options: {
+            responsive: true, maintainAspectRatio: false,
+            plugins: {
+              title: { display: true, text: 'Chairs by Continent' },
+              legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } }
+            }
+          }
         });
+      }
 
-      // Country table
-      const kBody = document.querySelector('#geo-country-table tbody');
-      Object.entries(geo.by_country)
-        .sort((a,b) => b[1]-a[1])
-        .forEach(([name, count]) => {
-          const pct = (100*count/total).toFixed(1);
-          kBody.insertAdjacentHTML('beforeend',
-            `<tr><td>${name}</td><td>${count}</td><td>${pct}%</td></tr>`);
+      // Country horizontal bar
+      var countryCanvas = document.getElementById('chairCountryChart');
+      if (countryCanvas) {
+        var countries = Object.entries(geo.by_country).sort(function(a,b) { return b[1]-a[1]; }).slice(0, 15);
+        new Chart(countryCanvas, {
+          type: 'bar',
+          data: {
+            labels: countries.map(function(c) { return c[0]; }),
+            datasets: [{
+              label: 'Chairs',
+              data: countries.map(function(c) { return c[1]; }),
+              backgroundColor: SYS_COLOR
+            }]
+          },
+          options: {
+            indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+            plugins: {
+              title: { display: true, text: 'Top Countries' },
+              legend: { display: false }
+            },
+            scales: {
+              x: { beginAtZero: true, title: { display: true, text: 'Chairs' } }
+            }
+          }
         });
+      }
     })
-    .catch(() => {
-      document.getElementById('geo-loading').textContent = 'Geographic data not available.';
-    });
+    .catch(function() {});
 })();
 </script>
 
