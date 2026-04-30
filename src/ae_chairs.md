@@ -131,4 +131,4 @@ All AE chairs across tracked conferences. The **Pipeline** column shows years fr
 
 ---
 
-**Data:** [All Chairs]({{ '/assets/data/ae_chairs.json' | relative_url }}) | [Systems]({{ '/assets/data/systems_ae_chairs.json' | relative_url }}) | [Security]({{ '/assets/data/security_ae_chairs.json' | relative_url }}) | [Chair Stats]({{ '/assets/data/chair_stats.json' | relative_url }})
+**Data:** [All Chairs]({{ '/assets/data/ae_chairs.json' | relative_url }}) | [Chair Stats]({{ '/assets/data/chair_stats.json' | relative_url }})
