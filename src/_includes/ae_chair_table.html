@@ -1,0 +1,237 @@
+{% comment %}
+  Dynamic AE Chair table loaded from JSON with sorting and pagination.
+  Shows AE chairs with chair-specific analytics (pipeline, cross-conference, tenure).
+
+  Required page variables:
+    page.chair_data_url   — path to the chair JSON (e.g., /assets/data/ae_chairs.json)
+    page.chair_stats_url  — path to chair_stats.json for summary cards
+{% endcomment %}
+
+<div id="chair-controls" class="rdb-controls rdb-hidden">
+  <div class="rdb-controls-row">
+    <div class="rdb-control-group">
+      <label class="rdb-label">Name:</label>
+      <input id="cNameSearch" type="text" placeholder="Search by name…" class="rdb-input">
+    </div>
+    <div class="rdb-control-group">
+      <label class="rdb-label">Affiliation:</label>
+      <input id="cAffSearch" type="text" placeholder="Search by affiliation…" class="rdb-input">
+    </div>
+  </div>
+</div>
+
+<div id="chair-legend" class="rdb-legend rdb-hidden">
+  Legend: #=Rank, Ch=Times Chaired, Mem=Times as Member, Series=Conference Series Chaired, F=First Year, L=Last Year
+</div>
+
+<div id="chairLoading"><em>Loading AE chair data…</em></div>
+
+<table id="chairTable" class="rdb-hidden">
+<thead><tr id="chairHead"></tr></thead>
+<tbody id="chairBody"></tbody>
+</table>
+
+<div id="chair-controls-bottom" class="rdb-pager rdb-hidden">
+  <button id="cPrevBtn" class="rdb-pager-btn">&laquo; Prev</button>
+  <span id="cPageInfo" class="rdb-pager-info"></span>
+  <button id="cNextBtn" class="rdb-pager-btn">Next &raquo;</button>
+  <span id="cTotalInfo" class="rdb-pager-total"></span>
+</div>
+
+<script>
+(function() {
+  var DATA_URL = '{{ page.chair_data_url | relative_url }}';
+  var baseUrl = '{{ "" | relative_url }}';
+  var allChairs = [];
+  var filteredChairs = [];
+  var sortedChairs = [];
+  var currentPage = 0;
+  var pageSize = 50;
+  var sortCol = 3; // default sort: chair_count
+  var sortAsc = false;
+  var nameQuery = '';
+  var affQuery = '';
+
+  // Column definitions
+  var fixedCols = [
+    {label:'#',           key:'rank',              type:'num',   tip:'Rank'},
+    {label:'Name',        key:'name',              type:'alpha', tip:'Chair Name'},
+    {label:'Affiliation', key:'affiliation',       type:'alpha', tip:'Current Affiliation'},
+    {label:'Ch',          key:'chair_count',       type:'num',   tip:'Times served as AE Chair'},
+    {label:'Mem',         key:'member_count',      type:'num',   tip:'Times served as regular AE member'},
+    {label:'Series',      key:'chaired_series',    type:'num',   tip:'Number of different conference series chaired'},
+    {label:'F',           key:'first_year',        type:'num',   tip:'First year in AE (any role)'},
+    {label:'L',           key:'last_year',         type:'num',   tip:'Last year in AE (any role)'},
+    {label:'Pipeline',    key:'promoted',          type:'alpha', tip:'Was member before becoming chair?'}
+  ];
+
+  function render() {
+    var start = pageSize > 0 ? currentPage * pageSize : 0;
+    var end = pageSize > 0 ? start + pageSize : sortedChairs.length;
+    var page = sortedChairs.slice(start, end);
+
+    var tbody = document.getElementById('chairBody');
+    var rows = [];
+    for (var i = 0; i < page.length; i++) {
+      var c = page[i];
+      var cells = [];
+      cells.push('<td>' + (c._rank || (start + i + 1)) + '</td>');
+      var profileUrl = baseUrl + '/profile.html?name=' + encodeURIComponent(c.name);
+      cells.push('<td><a href="' + profileUrl + '">' + escHtml(c.display_name || c.name) + '</a></td>');
+      cells.push('<td>' + escHtml(c.affiliation || '') + '</td>');
+      cells.push('<td><strong>' + c.chair_count + '</strong></td>');
+      cells.push('<td>' + (c.member_count || 0) + '</td>');
+      var series = c.chaired_series || [];
+      cells.push('<td title="' + escHtml(series.join(', ')) + '">' + series.length + '</td>');
+      cells.push('<td>' + (c.first_year ? shortenYear(c.first_year) : '') + '</td>');
+      cells.push('<td>' + (c.last_year ? shortenYear(c.last_year) : '') + '</td>');
+      var pipeLabel = c.promoted_from_member ? (c.years_to_chair + 'yr') : '—';
+      cells.push('<td>' + pipeLabel + '</td>');
+      rows.push('<tr>' + cells.join('') + '</tr>');
+    }
+    tbody.innerHTML = rows.join('');
+    updatePageInfo();
+  }
+
+  function escHtml(s) {
+    var d = document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+
+  function applyFilter() {
+    filteredChairs = allChairs.slice();
+    if (nameQuery) {
+      filteredChairs = filteredChairs.filter(function(c) {
+        return (c.display_name || c.name || '').toLowerCase().indexOf(nameQuery) !== -1;
+      });
+    }
+    if (affQuery) {
+      filteredChairs = filteredChairs.filter(function(c) {
+        return (c.affiliation || '').toLowerCase().indexOf(affQuery) !== -1;
+      });
+    }
+    sortedChairs = filteredChairs.slice();
+    sortData(sortCol, sortAsc);
+    currentPage = 0;
+  }
+
+  function sortData(colIdx, asc) {
+    var key = fixedCols[colIdx].key;
+    sortedChairs.sort(function(a, b) {
+      var av, bv;
+      if (key === 'name' || key === 'affiliation') {
+        av = (a[key] || '').toLowerCase();
+        bv = (b[key] || '').toLowerCase();
+      } else if (key === 'chaired_series') {
+        av = (a.chaired_series || []).length;
+        bv = (b.chaired_series || []).length;
+      } else if (key === 'promoted') {
+        av = a.promoted_from_member ? a.years_to_chair : 999;
+        bv = b.promoted_from_member ? b.years_to_chair : 999;
+      } else {
+        av = a[key] || 0;
+        bv = b[key] || 0;
+      }
+      if (av < bv) return asc ? -1 : 1;
+      if (av > bv) return asc ? 1 : -1;
+      return 0;
+    });
+    assignRanks();
+  }
+
+  function assignRanks() {
+    for (var i = 0; i < sortedChairs.length; i++) {
+      sortedChairs[i]._rank = i + 1;
+    }
+  }
+
+  function updatePageInfo() {
+    var total = sortedChairs.length;
+    var start = pageSize > 0 ? currentPage * pageSize : 0;
+    var end = pageSize > 0 ? Math.min(start + pageSize, total) : total;
+    var info = (start+1) + '–' + end + ' of ' + total;
+    document.getElementById('cPageInfo').textContent = info;
+    document.getElementById('cTotalInfo').textContent = total + ' chairs total';
+    var pages = pageSize > 0 ? Math.ceil(total / pageSize) : 1;
+    document.getElementById('cPrevBtn').disabled = currentPage <= 0;
+    document.getElementById('cNextBtn').disabled = currentPage >= pages - 1;
+  }
+
+  function shortenYear(yr) { return '' + yr % 100; }
+
+  function buildHeader() {
+    var tr = document.getElementById('chairHead');
+    tr.innerHTML = '';
+    for (var c = 0; c < fixedCols.length; c++) {
+      var th = document.createElement('th');
+      th.innerHTML = fixedCols[c].label;
+      th.className = 'sortable';
+      th.style.cursor = 'pointer';
+      if (fixedCols[c].tip) th.title = fixedCols[c].tip;
+      if (c === sortCol) th.classList.add(sortAsc ? 'sorted-asc' : 'sorted-desc');
+      th.addEventListener('click', (function(idx) {
+        return function(e) {
+          if (sortCol === idx) { sortAsc = !sortAsc; }
+          else { sortCol = idx; sortAsc = false; }
+          sortData(sortCol, sortAsc);
+          currentPage = 0;
+          render();
+          var ths = document.getElementById('chairHead').querySelectorAll('.sortable');
+          ths.forEach(function(h) { h.classList.remove('sorted-asc','sorted-desc'); });
+          e.currentTarget.classList.add(sortAsc ? 'sorted-asc' : 'sorted-desc');
+        };
+      })(c));
+      tr.appendChild(th);
+    }
+  }
+
+  function init(data) {
+    allChairs = data;
+    filteredChairs = data.slice();
+    sortedChairs = data.slice();
+    buildHeader();
+    applyFilter();
+    sortData(sortCol, sortAsc);
+    render();
+
+    document.getElementById('chairLoading').classList.add('rdb-hidden');
+    document.getElementById('chair-legend').classList.remove('rdb-hidden');
+    document.getElementById('chairTable').classList.remove('rdb-hidden');
+    document.getElementById('chair-controls').classList.remove('rdb-hidden');
+    document.getElementById('chair-controls-bottom').classList.remove('rdb-hidden');
+  }
+
+  // Search handlers
+  var _timer = null;
+  function onSearch() {
+    clearTimeout(_timer);
+    _timer = setTimeout(function() {
+      nameQuery = (document.getElementById('cNameSearch').value || '').toLowerCase().trim();
+      affQuery = (document.getElementById('cAffSearch').value || '').toLowerCase().trim();
+      applyFilter();
+      render();
+    }, 200);
+  }
+  document.getElementById('cNameSearch').addEventListener('input', onSearch);
+  document.getElementById('cAffSearch').addEventListener('input', onSearch);
+
+  // Pagination
+  document.getElementById('cPrevBtn').addEventListener('click', function() {
+    if (currentPage > 0) { currentPage--; render(); }
+  });
+  document.getElementById('cNextBtn').addEventListener('click', function() {
+    var pages = pageSize > 0 ? Math.ceil(sortedChairs.length / pageSize) : 1;
+    if (currentPage < pages - 1) { currentPage++; render(); }
+  });
+
+  // Load data
+  fetch(DATA_URL)
+    .then(function(r) { return r.json(); })
+    .then(init)
+    .catch(function(e) {
+      document.getElementById('chairLoading').innerHTML =
+        '<em>Failed to load chair data. ' + e + '</em>';
+    });
+})();
+</script>

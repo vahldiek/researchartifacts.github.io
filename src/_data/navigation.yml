@@ -61,14 +61,20 @@ main:
         url: committee.html
       - title: "Ranking"
         url: ae_members.html
+      - title: "Chair Statistics"
+        url: ae_chairs.html
       - title: "Systems Statistics"
         url: systems/committee.html
       - title: "Systems Ranking"
         url: systems/ae_members.html
+      - title: "Systems Chairs"
+        url: systems/ae_chairs.html
       - title: "Security Statistics"
         url: security/committee.html
       - title: "Security Ranking"
         url: security/ae_members.html
+      - title: "Security Chairs"
+        url: security/ae_chairs.html
   - title: "Repository Stats"
     url: repo_stats.html
     children:
