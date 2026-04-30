@@ -95,4 +95,4 @@ Composition, retention, and geographic diversity of Artifact Evaluation Committe
 
 ---
 
-**Data:** [Committee Statistics]({{ '/assets/data/committee_stats.json' | relative_url }})
+**Data:** [Committee Statistics]({{ '/assets/data/committee_stats.json' | relative_url }}) | [AE Members]({{ '/assets/data/ae_members.json' | relative_url }})

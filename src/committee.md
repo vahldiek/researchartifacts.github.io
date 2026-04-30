@@ -133,13 +133,6 @@ Only a small fraction of evaluators serve in both systems and security — the t
   <canvas id="crossOverlapChart"></canvas>
 </div>
 
----
-
-## Data Coverage Notes
-
-- **ATC & OSDI** share the same AE committee at USENIX, so committee members appear under both conferences for years 2022–2024.
-- Some conference-years show only chairs (no full committee): ATC 2023, OSDI 2023, SOSP 2024–2026.
-
 {% else %}
 
 *Committee statistics data is being generated. Please check back soon.*
