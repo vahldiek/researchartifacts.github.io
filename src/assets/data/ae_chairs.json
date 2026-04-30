@@ -1561,6 +1561,65 @@
     "years_to_chair": 1
   },
   {
+    "name": "Lennert Wouters",
+    "display_name": "Lennert Wouters",
+    "affiliation": "KU Leuven",
+    "country": "Belgium",
+    "continent": "Europe",
+    "total_memberships": 5,
+    "chair_count": 1,
+    "member_count": 4,
+    "conferences": [
+      {
+        "conference": "CHES",
+        "year": 2021,
+        "role": "member"
+      },
+      {
+        "conference": "CHES",
+        "year": 2022,
+        "role": "member"
+      },
+      {
+        "conference": "CHES",
+        "year": 2024,
+        "role": "member"
+      },
+      {
+        "conference": "CHES",
+        "year": 2025,
+        "role": "chair"
+      },
+      {
+        "conference": "WOOT",
+        "year": 2024,
+        "role": "member"
+      }
+    ],
+    "area": "security",
+    "years": {
+      "2021": 1,
+      "2022": 1,
+      "2024": 2,
+      "2025": 1
+    },
+    "first_year": 2021,
+    "last_year": 2025,
+    "first_chair_year": 2025,
+    "chaired_series": [
+      "CHES"
+    ],
+    "chaired_conferences": [
+      {
+        "conference": "CHES",
+        "year": 2025,
+        "role": "chair"
+      }
+    ],
+    "promoted_from_member": true,
+    "years_to_chair": 4
+  },
+  {
     "name": "Alexios Voulimeneas",
     "display_name": "Alexios Voulimeneas",
     "affiliation": "KU Leuven",
@@ -1712,6 +1771,53 @@
     ],
     "promoted_from_member": true,
     "years_to_chair": 2
+  },
+  {
+    "name": "Marton Bognar",
+    "display_name": "Marton Bognar",
+    "affiliation": "KU Leuven",
+    "country": "Belgium",
+    "continent": "Europe",
+    "total_memberships": 3,
+    "chair_count": 1,
+    "member_count": 2,
+    "conferences": [
+      {
+        "conference": "NDSS",
+        "year": 2025,
+        "role": "member"
+      },
+      {
+        "conference": "SYSTEX",
+        "year": 2026,
+        "role": "chair"
+      },
+      {
+        "conference": "USENIXSEC",
+        "year": 2025,
+        "role": "member"
+      }
+    ],
+    "area": "security",
+    "years": {
+      "2025": 2,
+      "2026": 1
+    },
+    "first_year": 2025,
+    "last_year": 2026,
+    "first_chair_year": 2026,
+    "chaired_series": [
+      "SYSTEX"
+    ],
+    "chaired_conferences": [
+      {
+        "conference": "SYSTEX",
+        "year": 2026,
+        "role": "chair"
+      }
+    ],
+    "promoted_from_member": true,
+    "years_to_chair": 1
   },
   {
     "name": "Matthew Burke",
@@ -2587,42 +2693,6 @@
     "years_to_chair": null
   },
   {
-    "name": "Carol C",
-    "display_name": "Carol C",
-    "affiliation": "Uni C",
-    "country": null,
-    "continent": null,
-    "total_memberships": 1,
-    "chair_count": 1,
-    "member_count": 0,
-    "conferences": [
-      {
-        "conference": "CHES",
-        "year": 2025,
-        "role": "chair"
-      }
-    ],
-    "area": "security",
-    "years": {
-      "2025": 1
-    },
-    "first_year": 2025,
-    "last_year": 2025,
-    "first_chair_year": 2025,
-    "chaired_series": [
-      "CHES"
-    ],
-    "chaired_conferences": [
-      {
-        "conference": "CHES",
-        "year": 2025,
-        "role": "chair"
-      }
-    ],
-    "promoted_from_member": false,
-    "years_to_chair": null
-  },
-  {
     "name": "Christian Pinto",
     "display_name": "Christian Pinto",
     "affiliation": "IBM",
@@ -2911,8 +2981,8 @@
     "years_to_chair": null
   },
   {
-    "name": "Haryadi Gunawi",
-    "display_name": "Haryadi Gunawi",
+    "name": "Haryadi S. Gunawi",
+    "display_name": "Haryadi S. Gunawi",
     "affiliation": "University of Chicago",
     "country": "United States",
     "continent": "North America",
