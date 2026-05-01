@@ -12,7 +12,7 @@
 ## Statistics
 
 <div class="rdb-chart-container">
-<canvas id="confYearChart" height="260"></canvas>
+<canvas id="confYearChart" height="156"></canvas>
 </div>
 
 | Year | Total | Available | Functional | Reproduced | Reusable |
@@ -194,17 +194,25 @@ document.addEventListener('DOMContentLoaded', function() {
   var available = [{% for yd in conf_data.years %}{{ yd.available }}{% unless forloop.last %},{% endunless %}{% endfor %}];
   var functional = [{% for yd in conf_data.years %}{{ yd.functional }}{% unless forloop.last %},{% endunless %}{% endfor %}];
   var reproduced = [{% for yd in conf_data.years %}{{ yd.reproducible }}{% unless forloop.last %},{% endunless %}{% endfor %}];
+  var reusable = [{% for yd in conf_data.years %}{{ yd.reusable | default: 0 }}{% unless forloop.last %},{% endunless %}{% endfor %}];
+
+  var hasReusable = reusable.some(function(v) { return v > 0; });
+
+  var datasets = [
+    { label: 'Total', data: totals, backgroundColor: 'rgba(51,51,51,0.7)' },
+    { label: 'Available', data: available, backgroundColor: 'rgba(241,92,36,0.7)' },
+    { label: 'Functional', data: functional, backgroundColor: 'rgba(18,116,187,0.7)' },
+    { label: 'Reproduced', data: reproduced, backgroundColor: 'rgba(108,64,153,0.7)' }
+  ];
+  if (hasReusable) {
+    datasets.push({ label: 'Reusable', data: reusable, backgroundColor: 'rgba(142,68,173,0.5)' });
+  }
 
   new Chart(document.getElementById('confYearChart'), {
     type: 'bar',
     data: {
       labels: years,
-      datasets: [
-        { label: 'Total', data: totals, backgroundColor: 'rgba(51,51,51,0.7)' },
-        { label: 'Available', data: available, backgroundColor: 'rgba(241,92,36,0.7)' },
-        { label: 'Functional', data: functional, backgroundColor: 'rgba(18,116,187,0.7)' },
-        { label: 'Reproduced', data: reproduced, backgroundColor: 'rgba(108,64,153,0.7)' }
-      ]
+      datasets: datasets
     },
     options: {
       responsive: true,
