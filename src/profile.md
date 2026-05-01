@@ -71,13 +71,6 @@ layout: default
 
   <div class="score-cards" id="inst-score-cards"></div>
 
-  <div id="inst-history-section" class="rdb-hidden">
-    <details class="ranking-history-details">
-      <summary><h3>Ranking History</h3></summary>
-      <div class="chart-container"><canvas id="instHistoryChart"></canvas></div>
-    </details>
-  </div>
-
   <div id="inst-contributors-section" class="rdb-hidden">
     <h3>Top Contributors</h3>
     <table class="inst-table" id="contributors-table">
@@ -138,6 +131,13 @@ layout: default
       <span id="ae-info"></span>
       <button id="ae-next">Next &raquo;</button>
     </div>
+  </div>
+
+  <div id="inst-history-section" class="rdb-hidden">
+    <details class="ranking-history-details">
+      <summary><h3>Ranking History</h3></summary>
+      <div class="chart-container"><canvas id="instHistoryChart"></canvas></div>
+    </details>
   </div>
 </div>
 
