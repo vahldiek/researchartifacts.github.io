@@ -748,24 +748,11 @@
   }
 
   function assignRanks() {
-    // When searching/filtering by geo, use the stable _baseRank from the full list.
-    // When not searching, compute tied ranks over the visible sorted data.
-    var isSearching = !!(searchFilter || geoFilter !== 'world');
-    if (isSearching) {
-      for (var i = 0; i < sortedData.length; i++) {
-        sortedData[i]._originalRank = sortedData[i]._baseRank || (i + 1);
-        sortedData[i]._showRank = true;
-      }
-    } else {
-      var rank = 1;
-      for (var i = 0; i < sortedData.length; i++) {
-        var cur = sortedData[i][scoreKey] || 0;
-        if (i > 0 && cur < (sortedData[i - 1][scoreKey] || 0)) {
-          rank = i + 1;
-        }
-        sortedData[i]._originalRank = rank;
-        sortedData[i]._showRank = (i === 0 || cur !== (sortedData[i - 1][scoreKey] || 0));
-      }
+    // Always use _baseRank (combined_score based) for display.
+    // Rank and rank-change indicators are never affected by sorting or filtering.
+    for (var i = 0; i < sortedData.length; i++) {
+      sortedData[i]._originalRank = sortedData[i]._baseRank || (i + 1);
+      sortedData[i]._showRank = true;
     }
   }
 
