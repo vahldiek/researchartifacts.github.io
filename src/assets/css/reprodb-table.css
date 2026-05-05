@@ -163,10 +163,10 @@
 .rdb-rank-down { color: #e74c3c; font-size: 0.8em; }
 .rank-unchanged { color: #999; font-size: 0.8em; }
 
-/* Rank cell: number left, indicator right-aligned */
-.rdb-rank-cell { display: inline-flex; width: 100%; justify-content: space-between; align-items: baseline; gap: 0.3em; }
-.rdb-rank-num { min-width: 1.5em; }
-.rdb-rank-indicator { min-width: 2.5em; text-align: right; }
+/* Rank cell: number and indicator side by side, no overflow */
+.rdb-rank-cell { display: inline-flex; align-items: baseline; gap: 0.2em; white-space: nowrap; }
+.rdb-rank-num { }
+.rdb-rank-indicator { }
 
 /* ── Chart container ───────────────────────────────────────────────────── */
 .rdb-chart-container { width: 100%; max-width: 600px; margin: 1em 0; }
