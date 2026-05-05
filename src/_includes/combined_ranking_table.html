@@ -117,14 +117,14 @@
       var showRank = (i === 0) || (c._showRank !== false);
       var rankChange = '';
       // Always use _baseRank for rank change indicator (not affected by sort)
-      if (showRank && prevSnapshot && prevSnapshot[c.name] && c._baseRank) {
+      if (prevSnapshot && prevSnapshot[c.name] && c._baseRank) {
         var oldRank = prevSnapshot[c.name].rank;
         var diff = oldRank - c._baseRank;
         if (diff > 0) rankChange = ' <span class="rdb-rank-up" title="Up ' + diff + ' from #' + oldRank + '">▲' + diff + '</span>';
         else if (diff < 0) rankChange = ' <span class="rdb-rank-down" title="Down ' + (-diff) + ' from #' + oldRank + '">▼' + (-diff) + '</span>';
         else rankChange = ' <span class="rank-unchanged" title="Unchanged">–</span>';
       }
-      cells.push('<td>' + (showRank ? rankVal + rankChange : '') + '</td>');
+      cells.push('<td>' + (showRank ? rankVal : '') + rankChange + '</td>');
       var displayName = (c.display_name || c.name || '').replace(/\t/g, ' ');
       var profileUrl = baseUrl + '/profile.html?name=' + encodeURIComponent(c.name) + (c.author_id != null ? '&id=' + c.author_id : '');
       cells.push('<td><a href="' + profileUrl + '">' + escHtml(displayName) + '</a></td>');
@@ -333,9 +333,12 @@
   function assignRanks() {
     // Always use _baseRank (combined_score based) for display.
     // Rank and rank-change indicators are never affected by sorting or filtering.
+    // Show rank number only for the first entry in each tie group (same combined_score).
     for (var i = 0; i < sortedData.length; i++) {
       sortedData[i]._originalRank = sortedData[i]._baseRank || (i + 1);
-      sortedData[i]._showRank = true;
+      var prevScore = (i > 0) ? (sortedData[i - 1].combined_score || 0) : null;
+      var curScore = sortedData[i].combined_score || 0;
+      sortedData[i]._showRank = (i === 0 || curScore !== prevScore);
     }
   }
 
