@@ -60,7 +60,7 @@
 </div>
 
 <script>
-(function() {
+document.addEventListener('DOMContentLoaded', function() {
   var escHtml = ReproDB.escHtml;
   var baseUrl = '{{ "" | relative_url }}';
 
@@ -274,5 +274,5 @@
       return cells.join('');
     }
   }).boot();
-})();
+});
 </script>
