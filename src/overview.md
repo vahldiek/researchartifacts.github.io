@@ -3,8 +3,6 @@ title: "Systems vs. Security — Longitudinal Comparison"
 permalink: /overview.html
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/reprodb-charts.css' | relative_url }}">
-
 A side-by-side longitudinal comparison of artifact evaluation across **systems** and **security** conferences tracked in ReproDB ({{ site.data.summary.year_range }}).
 
 {% if site.data.summary %}

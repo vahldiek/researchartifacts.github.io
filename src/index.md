@@ -1,5 +1,6 @@
 ---
 title: ""
+skip_chartjs: true
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/reprodb-profile.css' | relative_url }}">

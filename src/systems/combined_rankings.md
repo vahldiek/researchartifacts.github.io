@@ -1,6 +1,7 @@
 ---
 title: "Systems: Combined Rankings"
 permalink: /systems/combined_rankings.html
+skip_chartjs: true
 default_area: systems
 combined_data_url: /assets/data/combined_rankings.json
 systems_data_url: /assets/data/systems_combined_rankings.json

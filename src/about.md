@@ -1,6 +1,7 @@
 ---
 title: "Contribute"
 permalink: /about.html
+skip_chartjs: true
 ---
 
 ReproDB is fully open source. We welcome contributions of all kinds!

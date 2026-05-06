@@ -3,8 +3,6 @@ title: "Security: AE Committee Statistics"
 permalink: /security/committee.html
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/reprodb-charts.css' | relative_url }}">
-
 Composition, retention, and geographic diversity of Artifact Evaluation Committee members at **security** conferences.
 
 {% if site.data.committee_stats %}

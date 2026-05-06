@@ -1,6 +1,7 @@
 ---
 title: "Systems: Artifact Authors"
 permalink: /systems/authors.html
+skip_chartjs: true
 author_data_url: /assets/data/systems_combined_rankings.json
 institution_data_url: /assets/data/systems_institution_rankings.json
 ---

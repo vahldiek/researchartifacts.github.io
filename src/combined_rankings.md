@@ -1,6 +1,7 @@
 ---
 title: "Author Rankings"
 permalink: /combined_rankings.html
+skip_chartjs: true
 combined_data_url: /assets/data/combined_rankings.json
 systems_data_url: /assets/data/systems_combined_rankings.json
 security_data_url: /assets/data/security_combined_rankings.json

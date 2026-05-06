@@ -4,7 +4,6 @@ permalink: /statistics/
 description: Institution statistics aggregated by country and continent
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/reprodb-charts.css' | relative_url }}">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.0.0/css/flag-icons.min.css">
 
 How artifact evaluation engagement is distributed geographically — aggregated from {{ site.data.summary.total_conferences }} conferences and {{ site.data.summary.total_artifacts }} artifacts.

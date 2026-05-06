@@ -1,6 +1,7 @@
 ---
 title: "AE Service Ranking"
 permalink: /ae_members.html
+skip_chartjs: true
 member_data_url: /assets/data/ae_members.json
 ---
 

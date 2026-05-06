@@ -5,8 +5,6 @@ chair_data_url: /assets/data/ae_chairs.json
 chair_stats_url: /assets/data/chair_stats.json
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/reprodb-charts.css' | relative_url }}">
-
 A dedicated view of **Artifact Evaluation Committee chairs** — the people who organize and lead the AE process across systems and security conferences.
 
 {% if site.data.committee_stats.chair_stats %}

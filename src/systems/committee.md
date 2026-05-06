@@ -3,8 +3,6 @@ title: "Systems: AE Committee Statistics"
 permalink: /systems/committee.html
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/reprodb-charts.css' | relative_url }}">
-
 Composition, retention, and geographic diversity of Artifact Evaluation Committee members at **systems** conferences.
 
 {% if site.data.committee_stats %}

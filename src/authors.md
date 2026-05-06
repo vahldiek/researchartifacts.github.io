@@ -1,6 +1,7 @@
 ---
 title: "Artifact Authors"
 permalink: /authors.html
+skip_chartjs: true
 ---
 
 # Artifact Authors

@@ -1,6 +1,7 @@
 ---
 title: "Security: Artifact Authors"
 permalink: /security/authors.html
+skip_chartjs: true
 author_data_url: /assets/data/security_combined_rankings.json
 institution_data_url: /assets/data/security_institution_rankings.json
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Security: AE Service Ranking"
 permalink: /security/ae_members.html
+skip_chartjs: true
 member_data_url: /assets/data/security_ae_members.json
 ---
 

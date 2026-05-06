@@ -1,6 +1,7 @@
 ---
 title: "Methodology"
 permalink: /methodology.html
+skip_chartjs: true
 ---
 
 This page explains how we collect, process, and analyze artifact evaluation data, including detailed calculation formulas for all metrics displayed on this site.

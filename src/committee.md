@@ -3,8 +3,6 @@ title: "AE Committee Statistics"
 permalink: /committee.html
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/reprodb-charts.css' | relative_url }}">
-
 A cross-community analysis of Artifact Evaluation Committee composition, retention, and geographic diversity — comparing **systems** and **security** conferences tracked in ReproDB.
 
 {% if site.data.committee_stats %}

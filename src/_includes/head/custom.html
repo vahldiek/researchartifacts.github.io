@@ -32,12 +32,13 @@
 <link rel="stylesheet" href="{{ '/assets/css/reprodb-table.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/reprodb-controls.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/reprodb-search.css' | relative_url }}">
-<link rel="stylesheet" href="{{ '/assets/css/reprodb-charts.css' | relative_url }}">
 <script src="{{ '/assets/js/reprodb-utils.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/reprodb-table.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/reprodb-ranking.js' | relative_url }}"></script>
 
-<!-- Chart.js v4 + datalabels plugin (CDN) -->
+{% unless page.skip_chartjs %}
+<!-- Chart.js v4 + datalabels plugin (CDN) — skipped on data-table-only pages -->
+<link rel="stylesheet" href="{{ '/assets/css/reprodb-charts.css' | relative_url }}">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 <script>
@@ -45,3 +46,4 @@
 ChartDataLabels && Chart.register(ChartDataLabels);
 Chart.defaults.plugins.datalabels = { display: false };
 </script>
+{% endunless %}
