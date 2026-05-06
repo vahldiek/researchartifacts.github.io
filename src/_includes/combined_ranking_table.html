@@ -57,365 +57,122 @@
 
 <script>
 (function() {
-  var DATA_URLS = {
-    'all': '{{ page.combined_data_url | relative_url }}',
-    'systems': '{{ page.systems_data_url | relative_url }}',
-    'security': '{{ page.security_data_url | relative_url }}'
-  };
-  var HISTORY_URL = '{{ "/assets/data/ranking_history.json" | relative_url }}';
-  var currentArea = '{{ page.default_area | default: "all" }}';
+  var escHtml = ReproDB.escHtml;
   var baseUrl = '{{ "" | relative_url }}';
-  var allData = [];
-  var filteredData = [];
-  var sortedData = [];
-  var yearColumns = [];
-  var currentPage = 0;
-  var pageSize = 100;
-  var sortCol = 3; // default: Combined Score
-  var sortAsc = false;
-  var filterMode = 'both';
   var nameQuery = '';
   var affQuery = '';
-  var scoreKey = 'combined_score'; // Track which score to display
-  var rankHistory = []; // Array of {date, entries} snapshots
-  var prevSnapshot = null; // Previous month's snapshot entries
 
-  var fixedCols = [
-    {label:'#',                key:'rank',              type:'num',   tip:'Rank'},
-    {label:'Researcher',       key:'name',              type:'alpha', tip:'Researcher'},
-    {label:'Affiliation',      key:'affiliation',       type:'alpha', tip:'Affiliation'},
-    {label:'S',                key:'combined_score',    type:'num',   tip:'Combined score: ∑(A+F+R) + ∑(AE×3 + Chair×5)'},
-    {label:'AS',               key:'artifact_score',    type:'num',   tip:'Artifact score: Available×1 + Functional×1 + Reproduced×1'},
-    {label:'AES',              key:'ae_score',          type:'num',   tip:'AE service score: Member×3 + Chair×5'},
-    {label:'A:E',              key:'ae_ratio',          type:'num',   tip:'Artifact:Evaluation ratio (artifact_score/ae_score)'},
-    {label:'Ar',               key:'artifacts',         type:'num',   tip:'Total artifacts'},
-    {label:'P',                key:'total_papers',      type:'num',   tip:'Total papers'},
-    {label:'AR%',              key:'artifact_pct',     type:'num',   tip:'Artifact rate: % papers with artifact'},
-    {label:'RR%',              key:'repro_pct',        type:'num',   tip:'Reproducibility rate: % artifacts Reproduced'},
-    {label:'AE',               key:'ae_memberships',    type:'num',   tip:'AE memberships'},
-    {label:'Ch',               key:'chair_count',       type:'num',   tip:'Times chaired (★)'}
-  ];
+  new ReproDB.RankingTable({
+    dataUrls: {
+      'all': '{{ page.combined_data_url | relative_url }}',
+      'systems': '{{ page.systems_data_url | relative_url }}',
+      'security': '{{ page.security_data_url | relative_url }}'
+    },
+    historyUrl: '{{ "/assets/data/ranking_history.json" | relative_url }}',
+    baseUrl: baseUrl,
+    nameKey: 'name',
+    historyLookupKey: 'name',
+    scoreColIdx: 3,
+    defaultArea: '{{ page.default_area | default: "all" }}',
+    totalLabel: 'people',
+    fixedCols: [
+      {label:'#',   key:'rank',           type:'num',   tip:'Rank'},
+      {label:'Researcher', key:'name',     type:'alpha', tip:'Researcher'},
+      {label:'Affiliation', key:'affiliation', type:'alpha', tip:'Affiliation'},
+      {label:'S',   key:'combined_score',  type:'num',   tip:'Combined score: ∑(A+F+R) + ∑(AE×3 + Chair×5)'},
+      {label:'AS',  key:'artifact_score',  type:'num',   tip:'Artifact score: Available×1 + Functional×1 + Reproduced×1'},
+      {label:'AES', key:'ae_score',        type:'num',   tip:'AE service score: Member×3 + Chair×5'},
+      {label:'A:E', key:'ae_ratio',        type:'num',   tip:'Artifact:Evaluation ratio (artifact_score/ae_score)'},
+      {label:'Ar',  key:'artifacts',       type:'num',   tip:'Total artifacts'},
+      {label:'P',   key:'total_papers',    type:'num',   tip:'Total papers'},
+      {label:'AR%', key:'artifact_pct',    type:'num',   tip:'Artifact rate: % papers with artifact'},
+      {label:'RR%', key:'repro_pct',       type:'num',   tip:'Reproducibility rate: % artifacts Reproduced'},
+      {label:'AE',  key:'ae_memberships',  type:'num',   tip:'AE memberships'},
+      {label:'Ch',  key:'chair_count',     type:'num',   tip:'Times chaired (★)'}
+    ],
 
-  function getScoreLabel() {
-    if (filterMode === 'artifacts_only') return 'Artifact Score';
-    if (filterMode === 'ae_only') return 'AE Service Score';
-    return 'Combined Score';
-  }
+    // DOM element IDs
+    headId: 'combinedHead',
+    bodyId: 'combinedBody',
+    tableId: 'combinedTable',
+    loadingId: 'combinedLoading',
+    controlsId: 'combined-controls',
+    legendId: 'combined-legend',
+    pagerId: 'combined-controls-bottom',
+    prevBtnId: 'cPrevBtnB',
+    nextBtnId: 'cNextBtnB',
+    pageInfoId: 'cPageInfoB',
+    totalInfoId: 'cTotalInfo',
+    areaFilterId: 'areaFilter',
+    contributionFilterId: 'contributionFilter',
 
-  function render() {
-    var start = pageSize > 0 ? currentPage * pageSize : 0;
-    var end = pageSize > 0 ? start + pageSize : sortedData.length;
-    var page = sortedData.slice(start, end);
+    applyExtraFilters: function(baseFiltered) {
+      var filtered = baseFiltered;
+      if (nameQuery) {
+        filtered = filtered.filter(function(c) {
+          return (c.name || '').toLowerCase().indexOf(nameQuery) !== -1;
+        });
+      }
+      if (affQuery) {
+        filtered = filtered.filter(function(c) {
+          return (c.affiliation || '').toLowerCase().indexOf(affQuery) !== -1;
+        });
+      }
+      return filtered;
+    },
 
-    var tbody = document.getElementById('combinedBody');
-    var rows = [];
-    for (var i = 0; i < page.length; i++) {
-      var c = page[i];
+    bindExtraEvents: function(table) {
+      var _searchTimer = null;
+      function onSearchInput() {
+        clearTimeout(_searchTimer);
+        _searchTimer = setTimeout(function() {
+          nameQuery = (document.getElementById('cNameSearch').value || '').toLowerCase().trim();
+          affQuery  = (document.getElementById('cAffSearch').value  || '').toLowerCase().trim();
+          table.applyFilter();
+          table.assignRanks();
+          table.render();
+        }, 200);
+      }
+      document.getElementById('cNameSearch').addEventListener('input', onSearchInput);
+      document.getElementById('cAffSearch').addEventListener('input', onSearchInput);
+
+      // Set initial area selection
+      document.getElementById('areaFilter').value = table.currentArea;
+    },
+
+    renderRow: function(c, index, table) {
       var cells = [];
-      var rankVal = c._originalRank || (start + i + 1);
-      // Show rank on: first item per page, or first item in a tie group
-      var showRank = (i === 0) || (c._showRank !== false);
-      // Build rank change indicator using shared helper
-      var oldRank = (prevSnapshot && prevSnapshot[c.name]) ? prevSnapshot[c.name].rank : undefined;
+      var rankVal = c._originalRank || (index + 1);
+      var showRank = (index === table.currentPage * table.pageSize) || (c._showRank !== false);
+      var oldRank = (table.prevSnapshot && table.prevSnapshot[c.name]) ? table.prevSnapshot[c.name].rank : undefined;
       var rankChange = ReproDB.rankChangeHtml(c._baseRank, oldRank);
       cells.push('<td><span class="rdb-rank-cell"><span class="rdb-rank-num">' + (showRank ? rankVal : '') + '</span><span class="rdb-rank-indicator">' + rankChange + '</span></span></td>');
+
       var displayName = (c.display_name || c.name || '').replace(/\t/g, ' ');
       var profileUrl = baseUrl + '/profile.html?name=' + encodeURIComponent(c.name) + (c.author_id != null ? '&id=' + c.author_id : '');
       cells.push('<td><a href="' + profileUrl + '">' + escHtml(displayName) + '</a></td>');
       var aff = (c.display_affiliation || c.affiliation || '').replace(/^_/, '');
       cells.push('<td>' + escHtml(aff) + '</td>');
-      // S column (combined_score) - bold when filterMode is 'both'
-      cells.push('<td>' + (filterMode === 'both' ? '<strong>' : '') + (c.combined_score || 0) + (filterMode === 'both' ? '</strong>' : '') + '</td>');
-      // AS column (artifact_score) - bold when filterMode is 'artifacts_only'
-      cells.push('<td>' + (filterMode === 'artifacts_only' ? '<strong>' : '') + (c.artifact_score || 0) + (filterMode === 'artifacts_only' ? '</strong>' : '') + '</td>');
-      // AES column (ae_score) - bold when filterMode is 'ae_only'
-      cells.push('<td>' + (filterMode === 'ae_only' ? '<strong>' : '') + (c.ae_score || 0) + (filterMode === 'ae_only' ? '</strong>' : '') + '</td>');
-      // Display infinity symbol for null ae_ratio (no AE service)
+
+      var fm = table.filterMode;
+      cells.push('<td>' + (fm === 'both' ? '<strong>' : '') + (c.combined_score || 0) + (fm === 'both' ? '</strong>' : '') + '</td>');
+      cells.push('<td>' + (fm === 'artifacts_only' ? '<strong>' : '') + (c.artifact_score || 0) + (fm === 'artifacts_only' ? '</strong>' : '') + '</td>');
+      cells.push('<td>' + (fm === 'ae_only' ? '<strong>' : '') + (c.ae_score || 0) + (fm === 'ae_only' ? '</strong>' : '') + '</td>');
       var aeRatioDisplay = (c.ae_ratio === null || c.ae_ratio === undefined) ? '∞' : (c.ae_ratio === 0 ? '0' : c.ae_ratio);
       cells.push('<td>' + aeRatioDisplay + '</td>');
-      cells.push('<td>' + (c.artifact_count || '–') + '</td>');
-      cells.push('<td>' + (c.total_papers || '–') + '</td>');
-      cells.push('<td>' + (c.total_papers > 0 ? c.artifact_pct + '%' : '–') + '</td>');
-      cells.push('<td>' + ((c.repro_pct !== undefined && c.repro_pct !== null) ? (c.repro_pct + '%') : '–') + '</td>');
-      cells.push('<td>' + (c.ae_memberships || '–') + '</td>');
-      var chairLabel = c.chair_count > 0 ? c.chair_count + ' ★' : '–';
-      cells.push('<td>' + chairLabel + '</td>');
-      for (var j = 0; j < yearColumns.length; j++) {
-        var yr = yearColumns[j];
-        var cnt = 0;
-        if (c.years) {
-          cnt = c.years[yr] || c.years[String(yr)] || 0;
-        }
-        cells.push('<td>' + (cnt > 0 ? cnt : '–') + '</td>');
+      cells.push('<td>' + (c.artifact_count || '\u2013') + '</td>');
+      cells.push('<td>' + (c.total_papers || '\u2013') + '</td>');
+      cells.push('<td>' + (c.total_papers > 0 ? c.artifact_pct + '%' : '\u2013') + '</td>');
+      cells.push('<td>' + ((c.repro_pct !== undefined && c.repro_pct !== null) ? (c.repro_pct + '%') : '\u2013') + '</td>');
+      cells.push('<td>' + (c.ae_memberships || '\u2013') + '</td>');
+      cells.push('<td>' + (c.chair_count > 0 ? c.chair_count + ' \u2605' : '\u2013') + '</td>');
+      for (var j = 0; j < table.yearColumns.length; j++) {
+        var yr = table.yearColumns[j];
+        var cnt = c.years ? (c.years[yr] || c.years[String(yr)] || 0) : 0;
+        cells.push('<td>' + (cnt > 0 ? cnt : '\u2013') + '</td>');
       }
-      rows.push('<tr>' + cells.join('') + '</tr>');
+      return cells.join('');
     }
-    tbody.innerHTML = rows.join('');
-    updatePageInfo();
-  }
-
-  function escHtml(s) {
-    var d = document.createElement('div');
-    d.appendChild(document.createTextNode(s));
-    return d.innerHTML;
-  }
-
-  function applyFilter() {
-    // Step 1: filter by contribution type (no text search yet)
-    var baseFiltered;
-    if (filterMode === 'both') {
-      baseFiltered = allData.filter(function(c) {
-        return c.combined_score > 0;
-      });
-      scoreKey = 'combined_score';
-      sortCol = 3;
-    } else if (filterMode === 'artifacts_only') {
-      baseFiltered = allData.filter(function(c) {
-        return c.artifact_score > 0;
-      });
-      scoreKey = 'artifact_score';
-      sortCol = 3;
-    } else if (filterMode === 'ae_only') {
-      baseFiltered = allData.filter(function(c) {
-        return c.ae_score > 0;
-      });
-      scoreKey = 'ae_score';
-      sortCol = 3;
-    } else {
-      baseFiltered = allData.filter(function(c) {
-        return c.combined_score > 0;
-      });
-      scoreKey = 'combined_score';
-      sortCol = 3;
-    }
-
-    // Step 2: assign stable dense ranks based on combined_score.
-    // _baseRank is always based on combined_score so rank-change indicators remain stable.
-    ReproDB.assignDenseRanks(baseFiltered, 'name');
-
-    // Step 3: apply text search filters
-    filteredData = baseFiltered;
-    if (nameQuery) {
-      filteredData = filteredData.filter(function(c) {
-        return (c.name || '').toLowerCase().indexOf(nameQuery) !== -1;
-      });
-    }
-    if (affQuery) {
-      filteredData = filteredData.filter(function(c) {
-        return (c.affiliation || '').toLowerCase().indexOf(affQuery) !== -1;
-      });
-    }
-    sortedData = filteredData.slice();
-    sortData(sortCol, sortAsc);
-    currentPage = 0;
-  }
-
-  function sortData(colIdx, asc) {
-    var key;
-    if (colIdx < fixedCols.length) {
-      // Use dynamic scoreKey for Score column (index 3) to sort by correct score based on filter mode
-      if (colIdx === 3) {
-        key = scoreKey; // Will be combined_score, artifact_score, or ae_score
-      } else {
-        key = fixedCols[colIdx].key;
-      }
-    } else {
-      var yIdx = colIdx - fixedCols.length;
-      var yr = yearColumns[yIdx];
-      key = '_y' + yr;
-    }
-    sortedData.sort(function(a, b) {
-      var av, bv;
-      if (key.startsWith('_y')) {
-        var y = key.slice(2);
-        av = (a.years || {})[y] || (a.years || {})[parseInt(y)] || 0;
-        bv = (b.years || {})[y] || (b.years || {})[parseInt(y)] || 0;
-      } else if (key === 'name' || key === 'affiliation') {
-        av = (a[key] || '').toLowerCase();
-        bv = (b[key] || '').toLowerCase();
-      } else if (key === 'num_conferences') {
-        av = a.conferences ? a.conferences.length : 0;
-        bv = b.conferences ? b.conferences.length : 0;
-      } else if (key === 'ae_ratio') {
-        av = (a.ae_ratio === null || a.ae_ratio === undefined) ? Number.POSITIVE_INFINITY : a.ae_ratio;
-        bv = (b.ae_ratio === null || b.ae_ratio === undefined) ? Number.POSITIVE_INFINITY : b.ae_ratio;
-      } else {
-        av = a[key] || 0;
-        bv = b[key] || 0;
-      }
-      if (av < bv) return asc ? -1 : 1;
-      if (av > bv) return asc ? 1 : -1;
-      // Secondary sort: alphabetical by name
-      var an = (a.display_name || a.name || '').toLowerCase();
-      var bn = (b.display_name || b.name || '').toLowerCase();
-      if (an < bn) return -1;
-      if (an > bn) return 1;
-      return 0;
-    });
-  }
-
-  function updatePageInfo() {
-    var total = sortedData.length;
-    var start = pageSize > 0 ? currentPage * pageSize : 0;
-    var end = pageSize > 0 ? Math.min(start + pageSize, total) : total;
-    var pages = pageSize > 0 ? Math.ceil(total / pageSize) : 1;
-    var info = (start+1) + '–' + end + ' of ' + total;
-    document.getElementById('cPageInfoB').textContent = info;
-    document.getElementById('cTotalInfo').textContent = total + ' people total';
-    var atFirst = currentPage <= 0;
-    var atLast = pageSize <= 0 || currentPage >= pages - 1;
-    document.getElementById('cPrevBtnB').disabled = atFirst;
-    document.getElementById('cNextBtnB').disabled = atLast;
-  }
-
-  function shortenYear(yr) {
-    return '' + yr % 100;
-  }
-
-  function buildHeader() {
-    var tr = document.getElementById('combinedHead');
-    tr.innerHTML = '';
-    var allCols = fixedCols.slice();
-    // Update score column tooltip dynamically
-    allCols[3].tip = getScoreLabel();
-    for (var i = 0; i < yearColumns.length; i++) {
-      allCols.push({label: shortenYear(yearColumns[i]), key:'_y' + yearColumns[i], type:'num'});
-    }
-    for (var ci = 0; ci < allCols.length; ci++) {
-      var th = document.createElement('th');
-      th.innerHTML = allCols[ci].label;
-      th.className = 'c-sortable';
-      th.dataset.colIdx = ci;
-      th.style.cursor = 'pointer';
-      th.title = allCols[ci].tip || '';
-      if (ci === sortCol) th.classList.add(sortAsc ? 'c-sorted-asc' : 'c-sorted-desc');
-      th.addEventListener('click', (function(idx) {
-        return function(e) {
-          if (sortCol === idx) { sortAsc = !sortAsc; }
-          else { sortCol = idx; sortAsc = false; }
-          sortData(sortCol, sortAsc);
-          assignRanks();
-          currentPage = 0;
-          render();
-          var ths = document.getElementById('combinedHead').querySelectorAll('.c-sortable');
-          ths.forEach(function(h) { h.classList.remove('c-sorted-asc','c-sorted-desc'); });
-          e.currentTarget.classList.add(sortAsc ? 'c-sorted-asc' : 'c-sorted-desc');
-        };
-      })(ci));
-      tr.appendChild(th);
-    }
-  }
-
-  function assignRanks() {
-    // Always use _baseRank (combined_score based) for display.
-    // Rank and rank-change indicators are never affected by sorting or filtering.
-    // Show rank number only for the first entry in each tie group (same combined_score).
-    for (var i = 0; i < sortedData.length; i++) {
-      sortedData[i]._originalRank = sortedData[i]._baseRank || (i + 1);
-      var prevScore = (i > 0) ? (sortedData[i - 1].combined_score || 0) : null;
-      var curScore = sortedData[i].combined_score || 0;
-      sortedData[i]._showRank = (i === 0 || curScore !== prevScore);
-    }
-  }
-
-  function init(data) {
-    allData = data;
-    // Extract year columns
-    var yrs = {};
-    for (var i = 0; i < data.length; i++) {
-      if (data[i].years) {
-        for (var y in data[i].years) {
-          yrs[y] = true;
-        }
-      }
-    }
-    yearColumns = Object.keys(yrs).map(function(y){ return parseInt(y) || y; })
-      .sort(function(a,b){return b-a;});
-
-    buildHeader();
-    applyFilter();
-    sortData(sortCol, sortAsc);
-    assignRanks();
-    render();
-
-    document.getElementById('combinedLoading').classList.add('rdb-hidden');
-    document.getElementById('combinedTable').classList.remove('rdb-hidden');
-    document.getElementById('combined-controls').classList.remove('rdb-hidden');
-    document.getElementById('combined-legend').classList.remove('rdb-hidden');
-    document.getElementById('combined-controls-bottom').classList.remove('rdb-hidden');
-  }
-
-  function loadArea(area) {
-    currentArea = area;
-    document.getElementById('combinedLoading').classList.remove('rdb-hidden');
-    document.getElementById('combinedLoading').innerHTML = '<em>Loading ' + area + ' combined ranking data…</em>';
-    document.getElementById('combinedTable').classList.add('rdb-hidden');
-    document.getElementById('combined-controls').classList.add('rdb-hidden');
-    document.getElementById('combined-controls-bottom').classList.add('rdb-hidden');
-    
-    fetch(DATA_URLS[area])
-      .then(function(r) { return r.json(); })
-      .then(init)
-      .catch(function(e) {
-        document.getElementById('combinedLoading').innerHTML =
-          '<em>Failed to load ' + area + ' combined ranking data. ' + e + '</em>';
-      });
-  }
-
-  // Area filter
-  document.getElementById('areaFilter').addEventListener('change', function() {
-    loadArea(this.value);
-  });
-
-  // Contribution type filter
-  document.getElementById('contributionFilter').addEventListener('change', function() {
-    filterMode = this.value;
-    currentPage = 0;
-    buildHeader(); // Rebuild header to update score column tooltip
-    applyFilter();
-    sortData(sortCol, sortAsc);
-    assignRanks();
-    render();
-  });
-
-  // Name / affiliation search
-  var _searchTimer = null;
-  function onSearchInput() {
-    clearTimeout(_searchTimer);
-    _searchTimer = setTimeout(function() {
-      nameQuery = (document.getElementById('cNameSearch').value || '').toLowerCase().trim();
-      affQuery  = (document.getElementById('cAffSearch').value  || '').toLowerCase().trim();
-      applyFilter();
-      sortData(sortCol, sortAsc);
-      assignRanks();
-      render();
-    }, 200);
-  }
-  document.getElementById('cNameSearch').addEventListener('input', onSearchInput);
-  document.getElementById('cAffSearch').addEventListener('input', onSearchInput);
-
-  // Controls
-  function goPrev() { if (currentPage > 0) { currentPage--; render(); } }
-  function goNext() {
-    var pages = pageSize > 0 ? Math.ceil(sortedData.length / pageSize) : 1;
-    if (currentPage < pages - 1) { currentPage++; render(); }
-  }
-  document.getElementById('cPrevBtnB').addEventListener('click', goPrev);
-  document.getElementById('cNextBtnB').addEventListener('click', goNext);
-
-  // Set initial area selection
-  document.getElementById('areaFilter').value = currentArea;
-
-  // Load ranking history, then initial data
-  fetch(HISTORY_URL)
-    .then(function(r) { return r.json(); })
-    .then(function(history) {
-      rankHistory = history || [];
-      if (rankHistory.length >= 2) {
-        prevSnapshot = rankHistory[rankHistory.length - 2].entries;
-      }
-    })
-    .catch(function() { rankHistory = []; })
-    .finally(function() { loadArea(currentArea); });
+  }).boot();
 })();
 </script>
