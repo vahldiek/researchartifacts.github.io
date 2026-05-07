@@ -45,11 +45,28 @@
 // Disable datalabels globally — opt-in per chart via plugins.datalabels.display
 ChartDataLabels && Chart.register(ChartDataLabels);
 Chart.defaults.plugins.datalabels = { display: false };
-// Apply dark-mode aware defaults once reprodb-utils.js is ready
-document.addEventListener('DOMContentLoaded', function() {
-  if (window.ReproDB && window.ReproDB.applyChartDefaults) {
-    window.ReproDB.applyChartDefaults();
+// Apply dark-mode aware defaults immediately (before any chart JS runs)
+(function() {
+  var t = document.documentElement.getAttribute('data-theme');
+  var dark = t === 'dark' || (t !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  if (dark) {
+    var txt = '#d6d9dc';
+    var grid = '#383c43';
+    Chart.defaults.color = txt;
+    Chart.defaults.borderColor = grid;
+    Chart.defaults.plugins.title = Chart.defaults.plugins.title || {};
+    Chart.defaults.plugins.title.color = txt;
+    Chart.defaults.plugins.legend = Chart.defaults.plugins.legend || {};
+    Chart.defaults.plugins.legend.labels = Chart.defaults.plugins.legend.labels || {};
+    Chart.defaults.plugins.legend.labels.color = txt;
+    Chart.defaults.scale = Chart.defaults.scale || {};
+    Chart.defaults.scale.ticks = Chart.defaults.scale.ticks || {};
+    Chart.defaults.scale.ticks.color = txt;
+    Chart.defaults.scale.grid = Chart.defaults.scale.grid || {};
+    Chart.defaults.scale.grid.color = grid;
+    Chart.defaults.scale.title = Chart.defaults.scale.title || {};
+    Chart.defaults.scale.title.color = txt;
   }
-});
+})();
 </script>
 {% endunless %}

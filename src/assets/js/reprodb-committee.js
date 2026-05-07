@@ -190,6 +190,7 @@
         if (s.area === 'systems') sysByYear[s.year] = (sysByYear[s.year] || 0) + s.size;
         else secByYear[s.year] = (secByYear[s.year] || 0) + s.size;
       });
+      var tc = ReproDB.themeColors();
       new Chart(canvas, {
         type: 'bar',
         data: {
@@ -201,8 +202,11 @@
         },
         options: {
           responsive: true, maintainAspectRatio: false,
-          plugins: { title: { display: true, text: 'Total Committee Assignments per Year' } },
-          scales: { x: { stacked: true }, y: { stacked: true, beginAtZero: true, title: { display: true, text: 'Members' } } }
+          color: tc.text,
+          plugins: { title: { display: true, text: 'Total Committee Assignments per Year', color: tc.text },
+                     legend: { labels: { color: tc.text } } },
+          scales: { x: { stacked: true, ticks: { color: tc.text }, grid: { color: tc.grid } },
+                    y: { stacked: true, beginAtZero: true, ticks: { color: tc.text }, grid: { color: tc.grid }, title: { display: true, text: 'Members', color: tc.text } } }
         }
       });
     } else {
@@ -213,6 +217,7 @@
         byYear[s.year] = (byYear[s.year] || 0) + s.size;
       });
       var color = area === 'systems' ? SYS_COLOR : SEC_COLOR;
+      var tc = ReproDB.themeColors();
       new Chart(canvas, {
         type: 'bar',
         data: {
@@ -221,8 +226,11 @@
         },
         options: {
           responsive: true, maintainAspectRatio: false,
-          plugins: { title: { display: true, text: 'Total Committee Assignments per Year' } },
-          scales: { y: { beginAtZero: true, title: { display: true, text: 'Members' } } }
+          color: tc.text,
+          plugins: { title: { display: true, text: 'Total Committee Assignments per Year', color: tc.text },
+                     legend: { labels: { color: tc.text } } },
+          scales: { x: { ticks: { color: tc.text }, grid: { color: tc.grid } },
+                    y: { beginAtZero: true, ticks: { color: tc.text }, grid: { color: tc.grid }, title: { display: true, text: 'Members', color: tc.text } } }
         }
       });
     }
