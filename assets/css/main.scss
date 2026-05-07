@@ -490,8 +490,24 @@ a[href="#footer"] {
   // Table hover rows (override light-mode #e8f4f8)
   .area-tbl tr:hover,
   .conf-tbl tr:hover,
-  #memberTable tr:hover {
+  #memberTable tr:hover,
+  .inst-table tr:hover,
+  .ae-table tr:hover,
+  .profile-table tr:hover {
     background-color: #2f3a44 !important;
+  }
+
+  // Profile page detail rows and inline tables
+  .ae-detail-row td,
+  .ae-detail-row:hover {
+    background: #1f2227 !important;
+  }
+  .ae-inline-table th {
+    background: #2c3038 !important;
+    color: #f0f0f0 !important;
+  }
+  .ae-inline-table td {
+    border-color: #4a4f57 !important;
   }
 
   // Expand button in institution table
@@ -536,6 +552,92 @@ a[href="#footer"] {
 
   // Toggle icon color
   .theme-toggle__icon { color: #d6d9dc !important; }
+
+  // ── Controls, pager, legend text ──────────────────────────────────────
+  .rdb-pager-total,
+  .rdb-legend,
+  .at-label,
+  .at-total-info,
+  .rdb-pager-info {
+    color: #aab0b8 !important;
+  }
+  .rdb-pager-btn,
+  .at-btn,
+  .rdb-select,
+  .at-select,
+  .rdb-input {
+    background: #23272d !important;
+    color: #d6d9dc !important;
+    border-color: #4a4f57 !important;
+  }
+  .rdb-pager-btn:hover:not(:disabled),
+  .at-btn:hover:not(:disabled) {
+    background: #2c3038 !important;
+  }
+
+  // ── Search results text ────────────────────────────────────────────────
+  .rdb-result-authors {
+    color: #aab0b8 !important;
+  }
+  .rdb-result-meta,
+  #sort-controls a {
+    color: #9ca3ab !important;
+  }
+  .rdb-result-entry a {
+    color: #6cb6ff !important;
+  }
+  .profile-card {
+    background: #23272d !important;
+    border-color: #4a4f57 !important;
+    color: #d6d9dc !important;
+  }
+  .profile-card:hover {
+    border-color: #6cb6ff !important;
+  }
+  .profile-card .card-detail {
+    color: #9ca3ab !important;
+  }
+  .profile-card .card-name {
+    color: #d6d9dc !important;
+  }
+
+  // ── Search box ─────────────────────────────────────────────────────────
+  #searchBox {
+    background: #23272d !important;
+    color: #d6d9dc !important;
+    border-color: #4a4f57 !important;
+  }
+  #searchBox:focus {
+    border-color: #6cb6ff !important;
+  }
+
+  // ── Profile page misc ──────────────────────────────────────────────────
+  .profile-search-box {
+    background: #23272d !important;
+    color: #d6d9dc !important;
+    border-color: #4a4f57 !important;
+  }
+  .ranking-history-details summary::before {
+    color: #9ca3ab !important;
+  }
+
+  // ── Badge pills ────────────────────────────────────────────────────────
+  .rdb-badge {
+    background: #1e3a29 !important;
+    color: #a3d9b1 !important;
+  }
+  .rdb-badge--award {
+    background: #3d2f00 !important;
+    color: #ffc107 !important;
+  }
+
+  // ── Scatter legend / caption ───────────────────────────────────────────
+  .rdb-scatter-legend span,
+  .rdb-scatter-caption,
+  .ov-scatter-legend span,
+  .ov-scatter-caption {
+    color: #aab0b8 !important;
+  }
 }
 
 // Apply dark theme when OS prefers dark AND user hasn't forced light

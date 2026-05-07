@@ -45,5 +45,11 @@
 // Disable datalabels globally — opt-in per chart via plugins.datalabels.display
 ChartDataLabels && Chart.register(ChartDataLabels);
 Chart.defaults.plugins.datalabels = { display: false };
+// Apply dark-mode aware defaults once reprodb-utils.js is ready
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.ReproDB && window.ReproDB.applyChartDefaults) {
+    window.ReproDB.applyChartDefaults();
+  }
+});
 </script>
 {% endunless %}

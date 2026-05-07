@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var hasReusable = reusable.some(function(v) { return v > 0; });
 
   var datasets = [
-    { label: 'Total', data: totals, backgroundColor: 'rgba(51,51,51,0.7)' },
+    { label: 'Total', data: totals, backgroundColor: ReproDB.themeColors().totalBar },
     { label: 'Available', data: available, backgroundColor: 'rgba(241,92,36,0.7)' },
     { label: 'Functional', data: functional, backgroundColor: 'rgba(18,116,187,0.7)' },
     { label: 'Reproduced', data: reproduced, backgroundColor: 'rgba(108,64,153,0.7)' }

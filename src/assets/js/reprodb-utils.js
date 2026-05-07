@@ -138,4 +138,62 @@
     if (diff < 0) return '<span class="rdb-rank-down" title="Down ' + (-diff) + ' from #' + oldRank + '">\u25BC' + (-diff) + '</span>';
     return '<span class="rank-unchanged" title="Unchanged">\u2013</span>';
   };
+
+  /* ─── Dark-mode theme helpers ─────────────────────────────────────── */
+
+  /**
+   * Returns true if the page is currently in dark mode.
+   */
+  R.isDark = function() {
+    var t = document.documentElement.getAttribute('data-theme');
+    if (t === 'dark') return true;
+    if (t === 'light') return false;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  };
+
+  /**
+   * Returns a palette of theme-aware colors for charts and canvas drawing.
+   * All colors are safe for the current background (dark or light).
+   */
+  R.themeColors = function() {
+    var dark = R.isDark();
+    return {
+      text:       dark ? '#d6d9dc' : '#333',
+      textMuted:  dark ? '#aab0b8' : '#666',
+      line:       dark ? '#d6d9dc' : '#333',
+      grid:       dark ? '#383c43' : '#e0e0e0',
+      border:     dark ? '#4a4f57' : '#ddd',
+      // A "dark" dataset color that is still visible on dark backgrounds
+      totalLine:  dark ? '#aab0b8' : '#333',
+      totalBar:   dark ? 'rgba(170,176,184,0.7)' : 'rgba(51,51,51,0.7)',
+      // Combined score line on profile pages
+      combined:   dark ? '#7fb3d3' : '#2c3e50',
+      separator:  dark ? '#6b7280' : '#999'
+    };
+  };
+
+  /**
+   * Apply Chart.js global defaults for the current theme.
+   * Call once on DOMContentLoaded and again on theme change if charts are
+   * rebuilt.
+   */
+  R.applyChartDefaults = function() {
+    if (typeof Chart === 'undefined') return;
+    var tc = R.themeColors();
+    Chart.defaults.color = tc.text;
+    Chart.defaults.borderColor = tc.grid;
+    Chart.defaults.plugins.title = Chart.defaults.plugins.title || {};
+    Chart.defaults.plugins.title.color = tc.text;
+    Chart.defaults.plugins.legend = Chart.defaults.plugins.legend || {};
+    Chart.defaults.plugins.legend.labels = Chart.defaults.plugins.legend.labels || {};
+    Chart.defaults.plugins.legend.labels.color = tc.text;
+    // Scale defaults
+    Chart.defaults.scale = Chart.defaults.scale || {};
+    Chart.defaults.scale.ticks = Chart.defaults.scale.ticks || {};
+    Chart.defaults.scale.ticks.color = tc.text;
+    Chart.defaults.scale.grid = Chart.defaults.scale.grid || {};
+    Chart.defaults.scale.grid.color = tc.grid;
+    Chart.defaults.scale.title = Chart.defaults.scale.title || {};
+    Chart.defaults.scale.title.color = tc.text;
+  };
 })();

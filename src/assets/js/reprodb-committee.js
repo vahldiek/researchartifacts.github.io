@@ -96,10 +96,11 @@
     var ctx = canvas.getContext('2d');
     ctx.scale(2, 2);
 
+    var tc = ReproDB.themeColors();
     /* Year headers */
     ctx.font = '11px sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('color') || '#333';
+    ctx.fillStyle = tc.text;
     years.forEach(function(y, yi) {
       ctx.fillText(y, padL + yi * cellW + cellW / 2, padT - 10);
     });
@@ -113,7 +114,7 @@
       if (confArea === 'systems') sysCount = ci + 1;
 
       ctx.font = '11px sans-serif';
-      ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('color') || '#333';
+      ctx.fillStyle = tc.text;
       ctx.textAlign = 'right';
       ctx.fillText(conf, padL - 6, rowY + cellH / 2 + 4);
 
@@ -127,7 +128,7 @@
         ctx.strokeRect(cellX + 1, rowY + 1, cellW - 2, cellH - 2);
         if (v > 0) {
           ctx.font = '10px sans-serif';
-          ctx.fillStyle = v / maxVal > 0.6 ? '#fff' : '#333';
+          ctx.fillStyle = v / maxVal > 0.6 ? '#fff' : tc.text;
           ctx.textAlign = 'center';
           ctx.fillText(v, cellX + cellW / 2, rowY + cellH / 2 + 4);
         }
@@ -137,7 +138,7 @@
     /* Separator line between areas */
     if (area === 'overall' && sysCount > 0 && sysCount < confs.length) {
       var sepY = padT + sysCount * cellH;
-      ctx.strokeStyle = '#999';
+      ctx.strokeStyle = tc.separator;
       ctx.lineWidth = 1.5;
       ctx.beginPath();
       ctx.moveTo(padL, sepY);
@@ -147,7 +148,7 @@
   }
 
   function heatColor(v, maxVal, confArea) {
-    if (v === 0) return 'rgba(220,220,220,0.2)';
+    if (v === 0) return ReproDB.isDark() ? 'rgba(50,55,65,0.4)' : 'rgba(220,220,220,0.2)';
     var t = v / maxVal;
     if (confArea === 'security') {
       return 'rgba(192,57,43,' + (0.15 + t * 0.7) + ')';
@@ -326,7 +327,7 @@
     var datasets;
     if (area === 'overall') {
       datasets = [
-        { label: 'Overall — Retained %', data: alignToLabels(allRet), borderColor: '#333', borderWidth: 2, borderDash: [5, 3], fill: false, tension: 0.3, spanGaps: true },
+        { label: 'Overall — Retained %', data: alignToLabels(allRet), borderColor: ReproDB.themeColors().totalLine, borderWidth: 2, borderDash: [5, 3], fill: false, tension: 0.3, spanGaps: true },
         { label: 'Systems — Retained %', data: alignToLabels(sysRet), borderColor: SYS_COLOR, borderWidth: 2, fill: false, tension: 0.3, spanGaps: true },
         { label: 'Security — Retained %', data: alignToLabels(secRet), borderColor: SEC_COLOR, borderWidth: 2, fill: false, tension: 0.3, spanGaps: true }
       ];

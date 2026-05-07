@@ -277,7 +277,7 @@
       data: {
         labels: labels,
         datasets: [
-          { label: 'Combined Score', data: scores, borderColor: '#2c3e50', backgroundColor: 'rgba(44,62,80,0.1)', fill: false, tension: 0.2, yAxisID: 'y' },
+          { label: 'Combined Score', data: scores, borderColor: ReproDB.themeColors().combined, backgroundColor: 'rgba(44,62,80,0.1)', fill: false, tension: 0.2, yAxisID: 'y' },
           { label: 'Artifact Score', data: artScores, borderColor: '#3498db', backgroundColor: 'rgba(52,152,219,0.1)', fill: false, tension: 0.2, yAxisID: 'y' },
           { label: 'AE Score', data: aeScores, borderColor: '#27ae60', backgroundColor: 'rgba(39,174,96,0.1)', fill: false, tension: 0.2, yAxisID: 'y' },
           { label: 'Rank', data: ranks, borderColor: '#e74c3c', backgroundColor: 'rgba(231,76,60,0.1)', fill: false, tension: 0.2, borderDash: [5,3], yAxisID: 'y1' }
@@ -444,7 +444,7 @@
       data: {
         labels: labels,
         datasets: [
-          { label: 'Combined Score', data: scores, borderColor: '#2c3e50', fill: false, tension: 0.2, yAxisID: 'y' },
+          { label: 'Combined Score', data: scores, borderColor: ReproDB.themeColors().combined, fill: false, tension: 0.2, yAxisID: 'y' },
           { label: 'Artifact Score', data: artScores, borderColor: '#3498db', fill: false, tension: 0.2, yAxisID: 'y' },
           { label: 'AE Score', data: aeScores, borderColor: '#27ae60', fill: false, tension: 0.2, yAxisID: 'y' },
           { label: 'Rank', data: ranks, borderColor: '#e74c3c', fill: false, tension: 0.2, borderDash: [5,3], yAxisID: 'y1' }

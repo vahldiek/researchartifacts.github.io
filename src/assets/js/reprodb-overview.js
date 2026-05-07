@@ -51,7 +51,7 @@
           datasets: [
             { label: 'Systems', data: D.sysCounts, backgroundColor: SYS_COLOR, stack: 'stack0', order: 2 },
             { label: 'Security', data: D.secCounts, backgroundColor: SEC_COLOR, stack: 'stack0', order: 2 },
-            { label: 'Total', data: D.totCounts, type: 'line', borderColor: '#333', borderWidth: 2, pointRadius: 3, fill: false, order: 1 }
+            { label: 'Total', data: D.totCounts, type: 'line', borderColor: ReproDB.themeColors().totalLine, borderWidth: 2, pointRadius: 3, fill: false, order: 1 }
           ]
         },
         options: {
@@ -348,8 +348,16 @@
       });
 
       function cellColor(v) {
-        if (v === 0) return 'rgba(220,220,220,0.3)';
+        var dark = ReproDB.isDark();
+        if (v === 0) return dark ? 'rgba(50,55,65,0.5)' : 'rgba(220,220,220,0.3)';
         var t = v / maxVal;
+        if (dark) {
+          // Dark mode: deep navy → bright blue
+          var r = Math.round(30 + 10 * t);
+          var g = Math.round(40 + 60 * t);
+          var b = Math.round(70 + 140 * t);
+          return 'rgb(' + r + ',' + g + ',' + b + ')';
+        }
         var r = Math.round(220 - 180 * t);
         var g = Math.round(235 - 155 * t);
         var b = Math.round(255 - 50 * t);
@@ -367,8 +375,9 @@
       var ctx = hmCanvas.getContext('2d');
       ctx.scale(2, 2);
 
+      var tc = ReproDB.themeColors();
       ctx.font = '11px sans-serif';
-      ctx.fillStyle = '#333';
+      ctx.fillStyle = tc.text;
       ctx.textAlign = 'center';
       years.forEach(function(y, yi) {
         ctx.fillText(y, padL + yi * cellW + cellW / 2, padT - 8);
@@ -377,7 +386,7 @@
       confData.forEach(function(c, ci) {
         var rowY = padT + ci * cellH;
         ctx.font = '11px sans-serif';
-        ctx.fillStyle = '#333';
+        ctx.fillStyle = tc.text;
         ctx.textAlign = 'right';
         ctx.fillText(c.name, padL - 6, rowY + cellH / 2 + 4);
 
@@ -386,12 +395,12 @@
           var cellX = padL + yi * cellW;
           ctx.fillStyle = cellColor(v);
           ctx.fillRect(cellX + 1, rowY + 1, cellW - 2, cellH - 2);
-          ctx.strokeStyle = '#e0e0e0';
+          ctx.strokeStyle = tc.grid;
           ctx.lineWidth = 0.5;
           ctx.strokeRect(cellX + 1, rowY + 1, cellW - 2, cellH - 2);
           if (v > 0) {
             ctx.font = '10px sans-serif';
-            ctx.fillStyle = v / maxVal > 0.65 ? '#fff' : '#333';
+            ctx.fillStyle = v / maxVal > 0.65 ? '#fff' : tc.text;
             ctx.textAlign = 'center';
             ctx.fillText(v, cellX + cellW / 2, rowY + cellH / 2 + 4);
           }
@@ -401,7 +410,7 @@
       var sysCount = confData.filter(function(c) { return c.category === 'systems'; }).length;
       if (sysCount > 0 && sysCount < confData.length) {
         var sepY = padT + sysCount * cellH;
-        ctx.strokeStyle = '#999';
+        ctx.strokeStyle = tc.separator;
         ctx.lineWidth = 1.5;
         ctx.beginPath();
         ctx.moveTo(padL, sepY);
