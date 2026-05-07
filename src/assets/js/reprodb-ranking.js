@@ -121,9 +121,7 @@
   RankingTable.prototype.assignRanks = function() {
     for (var i = 0; i < this.sortedData.length; i++) {
       this.sortedData[i]._originalRank = this.sortedData[i]._baseRank || (i + 1);
-      var prevScore = (i > 0) ? (this.sortedData[i - 1].combined_score || 0) : null;
-      var curScore = this.sortedData[i].combined_score || 0;
-      this.sortedData[i]._showRank = (i === 0 || curScore !== prevScore);
+      this.sortedData[i]._showRank = true;
     }
   };
 
@@ -149,10 +147,7 @@
     }
     this.sortCol = this.scoreColIdx;
 
-    // Step 2: assign stable dense ranks
-    R.assignDenseRanks(baseFiltered, this.nameKey);
-
-    // Step 3: apply page-specific extra filters (search, geo, etc.)
+    // Step 2: apply page-specific extra filters (search, geo, etc.)
     if (this.cfg.applyExtraFilters) {
       this.filteredData = this.cfg.applyExtraFilters(baseFiltered, this);
     } else {
@@ -242,6 +237,10 @@
     }
     this.yearColumns = Object.keys(yrs).map(function(y) { return parseInt(y) || y; })
       .sort(function(a, b) { return b - a; });
+
+    // Assign stable dense ranks once on the full dataset so that
+    // contribution-type filtering preserves original ranks.
+    R.assignDenseRanks(this.allData, this.nameKey);
 
     this.applyFilter();
     this.buildHeader();
