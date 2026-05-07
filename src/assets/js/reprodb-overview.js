@@ -370,76 +370,81 @@
         return 'rgba(41,128,185,' + (0.15 + t * 0.7) + ')';
       }
 
-      var cellW = 40, cellH = 28, padL = 90, padT = 30, padB = 10, padR = 10;
-      var canvasW = padL + years.length * cellW + padR;
-      var canvasH = padT + confData.length * cellH + padB;
+      function drawTimelineHeatmap() {
+        var cellW = 40, cellH = 28, padL = 90, padT = 30, padB = 10, padR = 10;
+        var canvasW = padL + years.length * cellW + padR;
+        var canvasH = padT + confData.length * cellH + padB;
 
-      hmCanvas.width  = canvasW * 2;
-      hmCanvas.height = canvasH * 2;
-      hmCanvas.style.width  = canvasW + 'px';
-      hmCanvas.style.height = canvasH + 'px';
-      var ctx = hmCanvas.getContext('2d');
-      ctx.scale(2, 2);
+        hmCanvas.width  = canvasW * 2;
+        hmCanvas.height = canvasH * 2;
+        hmCanvas.style.width  = canvasW + 'px';
+        hmCanvas.style.height = canvasH + 'px';
+        var ctx = hmCanvas.getContext('2d');
+        ctx.scale(2, 2);
 
-      var tc = ReproDB.themeColors();
-      ctx.font = '11px sans-serif';
-      ctx.fillStyle = tc.text;
-      ctx.textAlign = 'center';
-      years.forEach(function(y, yi) {
-        ctx.fillText(y, padL + yi * cellW + cellW / 2, padT - 8);
-      });
-
-      confData.forEach(function(c, ci) {
-        var rowY = padT + ci * cellH;
+        var tc = ReproDB.themeColors();
         ctx.font = '11px sans-serif';
         ctx.fillStyle = tc.text;
-        ctx.textAlign = 'right';
-        ctx.fillText(c.name, padL - 6, rowY + cellH / 2 + 4);
-
+        ctx.textAlign = 'center';
         years.forEach(function(y, yi) {
-          var v = c.years[y] || 0;
-          var cellX = padL + yi * cellW;
-          ctx.fillStyle = cellColor(v, c.category);
-          ctx.fillRect(cellX + 1, rowY + 1, cellW - 2, cellH - 2);
-          ctx.strokeStyle = tc.grid;
-          ctx.lineWidth = 0.5;
-          ctx.strokeRect(cellX + 1, rowY + 1, cellW - 2, cellH - 2);
-          if (v > 0) {
-            ctx.font = '10px sans-serif';
-            var textThreshold = ReproDB.isDark() ? 0.25 : 0.6;
-            ctx.fillStyle = v / maxVal > textThreshold ? '#fff' : tc.text;
-            ctx.textAlign = 'center';
-            ctx.fillText(v, cellX + cellW / 2, rowY + cellH / 2 + 4);
-          }
+          ctx.fillText(y, padL + yi * cellW + cellW / 2, padT - 8);
         });
-      });
 
-      var sysCount = confData.filter(function(c) { return c.category === 'systems'; }).length;
-      if (sysCount > 0 && sysCount < confData.length) {
-        var sepY = padT + sysCount * cellH;
-        ctx.strokeStyle = tc.separator;
-        ctx.lineWidth = 1.5;
-        ctx.beginPath();
-        ctx.moveTo(padL, sepY);
-        ctx.lineTo(padL + years.length * cellW, sepY);
-        ctx.stroke();
+        confData.forEach(function(c, ci) {
+          var rowY = padT + ci * cellH;
+          ctx.font = '11px sans-serif';
+          ctx.fillStyle = tc.text;
+          ctx.textAlign = 'right';
+          ctx.fillText(c.name, padL - 6, rowY + cellH / 2 + 4);
 
-        ctx.font = 'bold 10px sans-serif';
-        ctx.fillStyle = '#888';
-        ctx.save();
-        ctx.translate(10, padT + sysCount * cellH / 2);
-        ctx.rotate(-Math.PI / 2);
-        ctx.textAlign = 'center';
-        ctx.fillText('Systems', 0, 0);
-        ctx.restore();
-        ctx.save();
-        var secCount = confData.length - sysCount;
-        ctx.translate(10, padT + sysCount * cellH + secCount * cellH / 2);
-        ctx.rotate(-Math.PI / 2);
-        ctx.textAlign = 'center';
-        ctx.fillText('Security', 0, 0);
-        ctx.restore();
+          years.forEach(function(y, yi) {
+            var v = c.years[y] || 0;
+            var cellX = padL + yi * cellW;
+            ctx.fillStyle = cellColor(v, c.category);
+            ctx.fillRect(cellX + 1, rowY + 1, cellW - 2, cellH - 2);
+            ctx.strokeStyle = tc.grid;
+            ctx.lineWidth = 0.5;
+            ctx.strokeRect(cellX + 1, rowY + 1, cellW - 2, cellH - 2);
+            if (v > 0) {
+              ctx.font = '10px sans-serif';
+              var textThreshold = ReproDB.isDark() ? 0.25 : 0.6;
+              ctx.fillStyle = v / maxVal > textThreshold ? '#fff' : tc.text;
+              ctx.textAlign = 'center';
+              ctx.fillText(v, cellX + cellW / 2, rowY + cellH / 2 + 4);
+            }
+          });
+        });
+
+        var sysCount = confData.filter(function(c) { return c.category === 'systems'; }).length;
+        if (sysCount > 0 && sysCount < confData.length) {
+          var sepY = padT + sysCount * cellH;
+          ctx.strokeStyle = tc.separator;
+          ctx.lineWidth = 1.5;
+          ctx.beginPath();
+          ctx.moveTo(padL, sepY);
+          ctx.lineTo(padL + years.length * cellW, sepY);
+          ctx.stroke();
+
+          ctx.font = 'bold 10px sans-serif';
+          ctx.fillStyle = tc.textMuted;
+          ctx.save();
+          ctx.translate(10, padT + sysCount * cellH / 2);
+          ctx.rotate(-Math.PI / 2);
+          ctx.textAlign = 'center';
+          ctx.fillText('Systems', 0, 0);
+          ctx.restore();
+          ctx.save();
+          var secCount = confData.length - sysCount;
+          ctx.translate(10, padT + sysCount * cellH + secCount * cellH / 2);
+          ctx.rotate(-Math.PI / 2);
+          ctx.textAlign = 'center';
+          ctx.fillText('Security', 0, 0);
+          ctx.restore();
+        }
       }
+
+      drawTimelineHeatmap();
+      ReproDB.onThemeChange(drawTimelineHeatmap);
     }
   });
 })();

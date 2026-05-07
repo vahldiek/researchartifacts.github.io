@@ -196,4 +196,41 @@
     Chart.defaults.scale.title = Chart.defaults.scale.title || {};
     Chart.defaults.scale.title.color = tc.text;
   };
+
+  /**
+   * Listen for runtime theme changes and update all Chart.js instances + redraw
+   * canvas heatmaps. Page-specific scripts can register redraw callbacks via
+   * ReproDB.onThemeChange(fn).
+   */
+  var themeCallbacks = [];
+  R.onThemeChange = function(fn) { themeCallbacks.push(fn); };
+
+  window.addEventListener('reprodb-theme-change', function() {
+    // Update Chart.js global defaults
+    R.applyChartDefaults();
+    // Update all existing Chart.js instances
+    if (typeof Chart !== 'undefined') {
+      var tc = R.themeColors();
+      Object.keys(Chart.instances || {}).forEach(function(id) {
+        var chart = Chart.instances[id];
+        var opts = chart.options;
+        // Update scales
+        Object.keys(opts.scales || {}).forEach(function(axis) {
+          var s = opts.scales[axis];
+          if (s.ticks) s.ticks.color = tc.text;
+          if (s.grid) s.grid.color = tc.grid;
+          if (s.title) s.title.color = tc.text;
+        });
+        // Update plugins
+        if (opts.plugins) {
+          if (opts.plugins.title) opts.plugins.title.color = tc.text;
+          if (opts.plugins.legend && opts.plugins.legend.labels) opts.plugins.legend.labels.color = tc.text;
+          if (opts.plugins.datalabels) opts.plugins.datalabels.color = tc.text;
+        }
+        chart.update('none');
+      });
+    }
+    // Fire page-specific callbacks (heatmap redraws, etc.)
+    themeCallbacks.forEach(function(fn) { fn(); });
+  });
 })();

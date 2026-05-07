@@ -52,6 +52,10 @@
     if (area === 'overall') {
       renderCrossOverlap(aeMembers);
     }
+    // Register for runtime theme changes (redraw heatmap canvas)
+    ReproDB.onThemeChange(function() {
+      renderSizesHeatmap(stats, area);
+    });
   }
 
   /* ===== Committee Sizes Heatmap ===== */

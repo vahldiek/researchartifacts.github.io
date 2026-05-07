@@ -87,6 +87,8 @@
 
   function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
+    // Notify charts/heatmaps to redraw
+    window.dispatchEvent(new CustomEvent('reprodb-theme-change', { detail: { theme: theme } }));
     // Update all toggle icons: show sun in dark mode, moon in light mode
     document.querySelectorAll('.theme-toggle__sun').forEach(function(el) {
       el.style.display = theme === 'dark' ? 'block' : 'none';
