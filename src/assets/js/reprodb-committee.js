@@ -128,7 +128,8 @@
         ctx.strokeRect(cellX + 1, rowY + 1, cellW - 2, cellH - 2);
         if (v > 0) {
           ctx.font = '10px sans-serif';
-          ctx.fillStyle = v / maxVal > 0.6 ? '#fff' : tc.text;
+          var textThreshold = ReproDB.isDark() ? 0.25 : 0.6;
+          ctx.fillStyle = v / maxVal > textThreshold ? '#fff' : tc.text;
           ctx.textAlign = 'center';
           ctx.fillText(v, cellX + cellW / 2, rowY + cellH / 2 + 4);
         }
@@ -150,8 +151,23 @@
   function heatColor(v, maxVal, confArea) {
     if (v === 0) return ReproDB.isDark() ? 'rgba(50,55,65,0.4)' : 'rgba(220,220,220,0.2)';
     var t = v / maxVal;
+    var dark = ReproDB.isDark();
     if (confArea === 'security') {
+      if (dark) {
+        // Dark mode: muted dark red → bright red
+        var r = Math.round(80 + 140 * t);
+        var g = Math.round(20 + 20 * t);
+        var b = Math.round(20 + 15 * t);
+        return 'rgb(' + r + ',' + g + ',' + b + ')';
+      }
       return 'rgba(192,57,43,' + (0.15 + t * 0.7) + ')';
+    }
+    if (dark) {
+      // Dark mode: muted dark blue → bright blue
+      var r = Math.round(20 + 20 * t);
+      var g = Math.round(50 + 70 * t);
+      var b = Math.round(80 + 130 * t);
+      return 'rgb(' + r + ',' + g + ',' + b + ')';
     }
     return 'rgba(41,128,185,' + (0.15 + t * 0.7) + ')';
   }
