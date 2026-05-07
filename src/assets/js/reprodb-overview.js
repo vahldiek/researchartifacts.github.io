@@ -347,21 +347,27 @@
         years.forEach(function(y) { if (c.years[y] && c.years[y] > maxVal) maxVal = c.years[y]; });
       });
 
-      function cellColor(v) {
+      function cellColor(v, category) {
         var dark = ReproDB.isDark();
         if (v === 0) return dark ? 'rgba(50,55,65,0.5)' : 'rgba(220,220,220,0.3)';
         var t = v / maxVal;
+        if (category === 'security') {
+          if (dark) {
+            var r = Math.round(80 + 140 * t);
+            var g = Math.round(20 + 20 * t);
+            var b = Math.round(20 + 15 * t);
+            return 'rgb(' + r + ',' + g + ',' + b + ')';
+          }
+          return 'rgba(192,57,43,' + (0.15 + t * 0.7) + ')';
+        }
+        // systems (blue)
         if (dark) {
-          // Dark mode: deep navy → bright blue
-          var r = Math.round(30 + 10 * t);
-          var g = Math.round(40 + 60 * t);
-          var b = Math.round(70 + 140 * t);
+          var r = Math.round(20 + 20 * t);
+          var g = Math.round(50 + 70 * t);
+          var b = Math.round(80 + 130 * t);
           return 'rgb(' + r + ',' + g + ',' + b + ')';
         }
-        var r = Math.round(220 - 180 * t);
-        var g = Math.round(235 - 155 * t);
-        var b = Math.round(255 - 50 * t);
-        return 'rgb(' + r + ',' + g + ',' + b + ')';
+        return 'rgba(41,128,185,' + (0.15 + t * 0.7) + ')';
       }
 
       var cellW = 40, cellH = 28, padL = 90, padT = 30, padB = 10, padR = 10;
@@ -393,14 +399,15 @@
         years.forEach(function(y, yi) {
           var v = c.years[y] || 0;
           var cellX = padL + yi * cellW;
-          ctx.fillStyle = cellColor(v);
+          ctx.fillStyle = cellColor(v, c.category);
           ctx.fillRect(cellX + 1, rowY + 1, cellW - 2, cellH - 2);
           ctx.strokeStyle = tc.grid;
           ctx.lineWidth = 0.5;
           ctx.strokeRect(cellX + 1, rowY + 1, cellW - 2, cellH - 2);
           if (v > 0) {
             ctx.font = '10px sans-serif';
-            ctx.fillStyle = v / maxVal > 0.65 ? '#fff' : tc.text;
+            var textThreshold = ReproDB.isDark() ? 0.25 : 0.6;
+            ctx.fillStyle = v / maxVal > textThreshold ? '#fff' : tc.text;
             ctx.textAlign = 'center';
             ctx.fillText(v, cellX + cellW / 2, rowY + cellH / 2 + 4);
           }
