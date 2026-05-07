@@ -266,16 +266,19 @@
       datasets = [{ label: 'Members', data: labels.map(function(l) { return target[l]; }), backgroundColor: color }];
     }
 
+    var tc = ReproDB.themeColors();
     new Chart(canvas, {
       type: 'bar',
       data: { labels: labels, datasets: datasets },
       options: {
         responsive: true, maintainAspectRatio: false,
         plugins: {
-          title: { display: true, text: 'Service Frequency — Terms Served per Member' },
-          datalabels: { display: true, anchor: 'end', align: 'end', font: { size: 11 } }
+          title: { display: true, text: 'Service Frequency — Terms Served per Member', color: tc.text },
+          legend: { labels: { color: tc.text } },
+          datalabels: { display: true, anchor: 'end', align: 'end', color: tc.text, font: { size: 11 } }
         },
-        scales: { y: { beginAtZero: true, title: { display: true, text: 'Members' } }, x: { title: { display: true, text: 'Terms' } } }
+        scales: { y: { beginAtZero: true, ticks: { color: tc.text }, grid: { color: tc.grid }, title: { display: true, text: 'Members', color: tc.text } },
+                  x: { ticks: { color: tc.text }, grid: { color: tc.grid }, title: { display: true, text: 'Terms', color: tc.text } } }
       }
     });
   }
@@ -368,13 +371,16 @@
       ];
     }
 
+    var tc = ReproDB.themeColors();
     new Chart(canvas, {
       type: 'line',
       data: { labels: labels, datasets: datasets },
       options: {
         responsive: true, maintainAspectRatio: false,
-        plugins: { title: { display: true, text: 'Year-over-Year Retention — % of Committee from Prior Year' } },
-        scales: { y: { beginAtZero: true, max: 100, title: { display: true, text: '% Retained' } } }
+        plugins: { title: { display: true, text: 'Year-over-Year Retention — % of Committee from Prior Year', color: tc.text },
+                   legend: { labels: { color: tc.text } } },
+        scales: { x: { ticks: { color: tc.text }, grid: { color: tc.grid } },
+                  y: { beginAtZero: true, max: 100, ticks: { color: tc.text }, grid: { color: tc.grid }, title: { display: true, text: '% Retained', color: tc.text } } }
       }
     });
   }
@@ -402,6 +408,7 @@
     var key = area === 'overall' ? 'overall' : area;
     var continents = (stats.by_continent || {})[key] || [];
 
+    var tc = ReproDB.themeColors();
     new Chart(canvas, {
       type: 'doughnut',
       data: {
@@ -414,8 +421,8 @@
       options: {
         responsive: true, maintainAspectRatio: false,
         plugins: {
-          title: { display: true, text: 'Members by Continent' },
-          legend: { position: 'right', labels: { boxWidth: 14, font: { size: 12 } } }
+          title: { display: true, text: 'Members by Continent', color: tc.text },
+          legend: { position: 'right', labels: { color: tc.text, boxWidth: 14, font: { size: 12 } } }
         }
       }
     });
@@ -432,7 +439,7 @@
             labels: sysCont.map(function(c) { return c.name; }),
             datasets: [{ data: sysCont.map(function(c) { return c.count; }), backgroundColor: sysCont.map(function(c) { return continentColor(c.name); }) }]
           },
-          options: { responsive: true, maintainAspectRatio: false, plugins: { title: { display: true, text: 'Systems' }, legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } } } }
+          options: { responsive: true, maintainAspectRatio: false, plugins: { title: { display: true, text: 'Systems', color: tc.text }, legend: { position: 'bottom', labels: { color: tc.text, boxWidth: 12, font: { size: 11 } } } } }
         });
       }
       if (secCanvas) {
@@ -443,7 +450,7 @@
             labels: secCont.map(function(c) { return c.name; }),
             datasets: [{ data: secCont.map(function(c) { return c.count; }), backgroundColor: secCont.map(function(c) { return continentColor(c.name); }) }]
           },
-          options: { responsive: true, maintainAspectRatio: false, plugins: { title: { display: true, text: 'Security' }, legend: { display: false } } }
+          options: { responsive: true, maintainAspectRatio: false, plugins: { title: { display: true, text: 'Security', color: tc.text }, legend: { display: false } } }
         });
       }
     }
@@ -472,6 +479,7 @@
       sorted.sort(function(a, b) { return b.total - a.total; });
       sorted = sorted.slice(0, 12);
 
+      var tc = ReproDB.themeColors();
       new Chart(canvas, {
         type: 'bar',
         data: {
@@ -483,12 +491,13 @@
         },
         options: {
           indexAxis: 'y', responsive: true, maintainAspectRatio: false,
-          plugins: { title: { display: true, text: 'Top Countries — Systems vs Security' }, legend: { position: 'bottom' } },
-          scales: { x: { stacked: true, beginAtZero: true, title: { display: true, text: 'Members' } }, y: { stacked: true } }
+          plugins: { title: { display: true, text: 'Top Countries — Systems vs Security', color: tc.text }, legend: { position: 'bottom', labels: { color: tc.text } } },
+          scales: { x: { stacked: true, beginAtZero: true, ticks: { color: tc.text }, grid: { color: tc.grid }, title: { display: true, text: 'Members', color: tc.text } }, y: { stacked: true, ticks: { color: tc.text }, grid: { color: tc.grid } } }
         }
       });
     } else {
       var color = area === 'systems' ? SYS_COLOR : SEC_COLOR;
+      var tc = ReproDB.themeColors();
       new Chart(canvas, {
         type: 'bar',
         data: {
@@ -497,8 +506,8 @@
         },
         options: {
           indexAxis: 'y', responsive: true, maintainAspectRatio: false,
-          plugins: { title: { display: true, text: 'Top 15 Countries' }, legend: { display: false } },
-          scales: { x: { beginAtZero: true, title: { display: true, text: 'Members' } } }
+          plugins: { title: { display: true, text: 'Top 15 Countries', color: tc.text }, legend: { display: false } },
+          scales: { x: { beginAtZero: true, ticks: { color: tc.text }, grid: { color: tc.grid }, title: { display: true, text: 'Members', color: tc.text } }, y: { ticks: { color: tc.text }, grid: { color: tc.grid } } }
         }
       });
     }
@@ -531,6 +540,7 @@
 
   function makeInstBar(canvas, data, title, color) {
     var labels = data.map(function(i) { var n = i.name; return n.length > 35 ? n.substring(0, 33) + '…' : n; });
+    var tc = ReproDB.themeColors();
     new Chart(canvas, {
       type: 'bar',
       data: {
@@ -539,8 +549,8 @@
       },
       options: {
         indexAxis: 'y', responsive: true, maintainAspectRatio: false,
-        plugins: { title: { display: true, text: title }, legend: { display: false } },
-        scales: { x: { beginAtZero: true, title: { display: true, text: 'Members' } } }
+        plugins: { title: { display: true, text: title, color: tc.text }, legend: { display: false } },
+        scales: { x: { beginAtZero: true, ticks: { color: tc.text }, grid: { color: tc.grid }, title: { display: true, text: 'Members', color: tc.text } }, y: { ticks: { color: tc.text }, grid: { color: tc.grid } } }
       }
     });
   }
@@ -557,6 +567,7 @@
       else if (m.area === 'security') secOnly++;
     });
 
+    var tc = ReproDB.themeColors();
     new Chart(canvas, {
       type: 'bar',
       data: {
@@ -568,8 +579,8 @@
       },
       options: {
         responsive: true, maintainAspectRatio: false,
-        plugins: { title: { display: true, text: 'Cross-Community Membership' }, legend: { display: false } },
-        scales: { y: { beginAtZero: true, title: { display: true, text: 'Members' } } }
+        plugins: { title: { display: true, text: 'Cross-Community Membership', color: tc.text }, legend: { display: false } },
+        scales: { x: { ticks: { color: tc.text }, grid: { color: tc.grid } }, y: { beginAtZero: true, ticks: { color: tc.text }, grid: { color: tc.grid }, title: { display: true, text: 'Members', color: tc.text } } }
       }
     });
   }
