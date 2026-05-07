@@ -42,7 +42,7 @@
 </div>
 
 <div id="institution-legend" class="rdb-legend rdb-hidden">
-  Legend: #=Rank, S=Combined Score, AS=Artifact Score, AES=AE Service Score, A:E=Artifact:Evaluation Ratio, R=Researchers, Ar=Artifacts, P=Papers, AR%=Artifact Rate, RR%=Repro. Rate, AE=AE Memberships, Ch=Chairs
+  Legend: #=Rank, Δ=Rank Change, S=Combined Score, AS=Artifact Score, AES=AE Service Score, A:E=Artifact:Evaluation Ratio, R=Researchers, Ar=Artifacts, P=Papers, AR%=Artifact Rate, RR%=Repro. Rate, AE=AE Memberships, Ch=Chairs
 </div>
 
 <div id="institutionLoading"><em>Loading institution ranking data…</em></div>
@@ -157,10 +157,11 @@ document.addEventListener('DOMContentLoaded', function() {
     baseUrl: baseUrl,
     nameKey: 'affiliation',
     historyLookupKey: 'affiliation',
-    scoreColIdx: 2,
+    scoreColIdx: 3,
     totalLabel: 'institutions',
     fixedCols: [
       {label:'#',   key:'rank',           type:'num',   tip:'Rank'},
+      {label:'Δ',   key:'_trend',         type:'num',   tip:'Rank change from previous month'},
       {label:'Institution', key:'affiliation', type:'alpha', tip:'Institution'},
       {label:'S',   key:'combined_score',  type:'num',   tip:'Combined score: ∑(A+F+R) + ∑(AE memberships×3 + Chairs×5)'},
       {label:'AS',  key:'artifact_score',  type:'num',   tip:'Artifact score: sum of all artifact badges'},
@@ -243,7 +244,8 @@ document.addEventListener('DOMContentLoaded', function() {
       var showRank = (index === table.currentPage * table.pageSize) || (inst._showRank !== false);
       var oldRank = (table.prevSnapshot && table.prevSnapshot[inst.affiliation]) ? table.prevSnapshot[inst.affiliation].rank : undefined;
       var rankChange = ReproDB.rankChangeHtml(inst._baseRank, oldRank);
-      cells.push('<td><span class="rdb-rank-cell"><span class="rdb-rank-num">' + (showRank ? rankVal : '') + '</span><span class="rdb-rank-indicator">' + rankChange + '</span></span></td>');
+      cells.push('<td>' + (showRank ? rankVal : '') + '</td>');
+      cells.push('<td>' + rankChange + '</td>');
 
       var aff = (inst.affiliation || 'Unknown').replace(/^_/, '');
       var flag = countryCodeToFlagHtml(inst.country_code || '');

@@ -38,7 +38,7 @@
 </div>
 
 <div id="combined-legend" class="rdb-legend rdb-hidden">
-  <span id="combined-legend-text">Legend: #=Rank, S=Combined Score, AS=Artifact Score, AES=AE Service Score, A:E=Artifact:Evaluation Ratio, Ar=Artifacts, P=Papers, AR%=Artifact Rate, RR%=Repro Rate, AE=AE Service, Ch=Chaired</span>
+  <span id="combined-legend-text">Legend: #=Rank, Δ=Rank Change, S=Combined Score, AS=Artifact Score, AES=AE Service Score, A:E=Artifact:Evaluation Ratio, Ar=Artifacts, P=Papers, AR%=Artifact Rate, RR%=Repro Rate, AE=AE Service, Ch=Chaired</span>
 </div>
 
 <div id="combinedLoading"><em>Loading combined ranking data…</em></div>
@@ -72,11 +72,12 @@ document.addEventListener('DOMContentLoaded', function() {
     baseUrl: baseUrl,
     nameKey: 'name',
     historyLookupKey: 'name',
-    scoreColIdx: 3,
+    scoreColIdx: 4,
     defaultArea: '{{ page.default_area | default: "all" }}',
     totalLabel: 'people',
     fixedCols: [
       {label:'#',   key:'rank',           type:'num',   tip:'Rank'},
+      {label:'Δ',   key:'_trend',         type:'num',   tip:'Rank change from previous month'},
       {label:'Researcher', key:'name',     type:'alpha', tip:'Researcher'},
       {label:'Affiliation', key:'affiliation', type:'alpha', tip:'Affiliation'},
       {label:'S',   key:'combined_score',  type:'num',   tip:'Combined score: ∑(A+F+R) + ∑(AE×3 + Chair×5)'},
@@ -146,7 +147,8 @@ document.addEventListener('DOMContentLoaded', function() {
       var showRank = (index === table.currentPage * table.pageSize) || (c._showRank !== false);
       var oldRank = (table.prevSnapshot && table.prevSnapshot[c.name]) ? table.prevSnapshot[c.name].rank : undefined;
       var rankChange = ReproDB.rankChangeHtml(c._baseRank, oldRank);
-      cells.push('<td><span class="rdb-rank-cell"><span class="rdb-rank-num">' + (showRank ? rankVal : '') + '</span><span class="rdb-rank-indicator">' + rankChange + '</span></span></td>');
+      cells.push('<td>' + (showRank ? rankVal : '') + '</td>');
+      cells.push('<td>' + rankChange + '</td>');
 
       var displayName = (c.display_name || c.name || '').replace(/\t/g, ' ');
       var profileUrl = baseUrl + '/profile.html?name=' + encodeURIComponent(c.name) + (c.author_id != null ? '&id=' + c.author_id : '');
