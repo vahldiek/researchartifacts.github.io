@@ -1,7 +1,9 @@
 /**
  * reprodb-utils.js — Shared utility functions for ReproDB website.
  *
- * Provides: window.ReproDB.escHtml, window.ReproDB.fetchJSON
+ * Provides: window.ReproDB.escHtml, .fetchJSON, .isDark, .themeColors,
+ *           .echartsTheme, .onThemeChange, .assignDenseRanks, .rankChangeHtml,
+ *           .createTable (Tabulator wrapper)
  */
 (function() {
   'use strict';
@@ -23,85 +25,235 @@
     });
   };
 
-  /**
-   * Generic null-safe sort, in place. Mirrors the comparator used by
-   * ReproDB.Top10Table.doSort: missing values default to '' (alpha) or 0 (num),
-   * and alpha keys are compared case-insensitively.
-   *
-   * @param {Array} rows  - array of objects to sort in place
-   * @param {string} key  - object property to sort by
-   * @param {string} type - 'alpha' for case-insensitive string compare; otherwise numeric
-   * @param {boolean} asc - true for ascending, false for descending
-   * @returns {Array} the same array (sorted)
-   */
-  R.sortRows = function(rows, key, type, asc) {
-    var alpha = type === 'alpha';
-    rows.sort(function(a, b) {
-      var av = a[key], bv = b[key];
-      if (av == null) av = alpha ? '' : 0;
-      if (bv == null) bv = alpha ? '' : 0;
-      if (alpha) { av = String(av).toLowerCase(); bv = String(bv).toLowerCase(); }
-      if (av < bv) return asc ? -1 : 1;
-      if (av > bv) return asc ? 1 : -1;
-      return 0;
+  /* ─── Dark-mode theme helpers ─────────────────────────────────────── */
+
+  R.isDark = function() {
+    var t = document.documentElement.getAttribute('data-theme');
+    if (t === 'dark') return true;
+    if (t === 'light') return false;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  };
+
+  R.themeColors = function() {
+    var dark = R.isDark();
+    return {
+      text:       dark ? '#d6d9dc' : '#333',
+      textMuted:  dark ? '#aab0b8' : '#666',
+      line:       dark ? '#d6d9dc' : '#333',
+      grid:       dark ? '#383c43' : '#e0e0e0',
+      border:     dark ? '#4a4f57' : '#ddd',
+      bg:         dark ? '#1e2127' : '#fff',
+      totalLine:  dark ? '#aab0b8' : '#333',
+      totalBar:   dark ? 'rgba(170,176,184,0.7)' : 'rgba(51,51,51,0.7)',
+      combined:   dark ? '#7fb3d3' : '#2c3e50',
+      separator:  dark ? '#6b7280' : '#999'
+    };
+  };
+
+  /** Build an ECharts theme object for the current light/dark mode. */
+  R.echartsTheme = function() {
+    var tc = R.themeColors();
+    return {
+      backgroundColor: 'transparent',
+      textStyle: { color: tc.text },
+      title: { textStyle: { color: tc.text }, subtextStyle: { color: tc.textMuted } },
+      legend: { textStyle: { color: tc.text } },
+      categoryAxis: {
+        axisLine: { lineStyle: { color: tc.grid } },
+        axisTick: { lineStyle: { color: tc.grid } },
+        axisLabel: { color: tc.text },
+        splitLine: { lineStyle: { color: tc.grid } }
+      },
+      valueAxis: {
+        axisLine: { lineStyle: { color: tc.grid } },
+        axisTick: { lineStyle: { color: tc.grid } },
+        axisLabel: { color: tc.text },
+        splitLine: { lineStyle: { color: tc.grid } }
+      },
+      tooltip: {
+        backgroundColor: R.isDark() ? '#2a2d34' : '#fff',
+        borderColor: tc.border,
+        textStyle: { color: tc.text }
+      }
+    };
+  };
+
+  /** Convenience: init an ECharts instance with theme and auto-resize. */
+  R.initEChart = function(el) {
+    if (typeof el === 'string') el = document.getElementById(el);
+    if (!el) return null;
+    var chart = echarts.init(el, null, { renderer: 'canvas' });
+
+    // Wrap setOption so every call automatically re-applies theme text
+    // colors to title and legend.  ECharts replaces (rather than deep-
+    // merges) textStyle inside title/legend components, so any caller
+    // that sets e.g. { title: { textStyle: { fontSize: 14 } } } would
+    // otherwise wipe the color.
+    var _origSetOption = chart.setOption.bind(chart);
+    chart.setOption = function(opts, notMerge, lazyUpdate) {
+      _origSetOption(opts, notMerge, lazyUpdate);
+      var tc = R.themeColors();
+      var patch = {};
+      var cur = chart.getOption();
+      if (cur.legend && cur.legend.length) {
+        patch.legend = cur.legend.map(function() { return { textStyle: { color: tc.text } }; });
+      }
+      if (cur.title && cur.title.length) {
+        patch.title = cur.title.map(function() {
+          return { textStyle: { color: tc.text }, subtextStyle: { color: tc.textMuted } };
+        });
+      }
+      if (patch.legend || patch.title) _origSetOption(patch);
+    };
+
+    // Apply theme colors so first render matches current light/dark mode
+    var theme = R.echartsTheme();
+    _origSetOption({
+      textStyle: theme.textStyle,
+      title: theme.title,
+      legend: theme.legend,
+      tooltip: theme.tooltip
     });
-    return rows;
+    // Auto-resize (debounced to avoid cascading layout thrashing)
+    var resizeTimer;
+    var ro = new ResizeObserver(function() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function() { chart.resize(); }, 100);
+    });
+    ro.observe(el);
+
+    // Clean up ResizeObserver when chart is disposed
+    var _origDispose = chart.dispose.bind(chart);
+    chart.dispose = function() { ro.disconnect(); return _origDispose(); };
+
+    return chart;
   };
 
-  /**
-   * Build sortable <th> cells inside a <tr> and wire up click handlers.
-   * Each header gets the class `reprodb-sortable`; the currently active
-   * column gets `sorted-asc` or `sorted-desc` (see assets/css/reprodb-table.css).
-   *
-   * @param {HTMLTableRowElement} headTr - the <tr> in <thead> to populate (innerHTML cleared)
-   * @param {Array<{label:string, html?:string, tip?:string}>} cols - column descriptors
-   * @param {{col:number, asc:boolean}} initial - initial active column / direction
-   * @param {function(number):boolean} onSort - invoked on click with the column
-   *     index. The callback should update its own sort state and return the
-   *     resulting `asc` flag for indicator display.
-   * @returns {{setActive: function(number, boolean): void}}
-   */
-  R.bindSortableHeaders = function(headTr, cols, initial, onSort) {
-    headTr.innerHTML = '';
-    var ths = [];
-    function setActive(idx, asc) {
-      for (var i = 0; i < ths.length; i++) {
-        ths[i].classList.remove('sorted-asc', 'sorted-desc');
-      }
-      if (idx >= 0 && idx < ths.length) {
-        ths[idx].classList.add(asc ? 'sorted-asc' : 'sorted-desc');
-      }
-    }
-    for (var c = 0; c < cols.length; c++) {
-      var th = document.createElement('th');
-      var col = cols[c];
-      if (col.html != null) th.innerHTML = col.html;
-      else th.textContent = col.label;
-      th.className = 'reprodb-sortable';
-      if (col.tip) th.title = col.tip;
-      th.addEventListener('click', (function(idx) {
-        return function() {
-          var asc = onSort(idx);
-          setActive(idx, asc);
-        };
-      })(c));
-      ths.push(th);
-      headTr.appendChild(th);
-    }
-    if (initial && initial.col >= 0 && initial.col < ths.length) {
-      setActive(initial.col, !!initial.asc);
-    }
-    return { setActive: setActive };
+  /* ─── Theme change listener ───────────────────────────────────────── */
+
+  var themeCallbacks = [];
+  R.onThemeChange = function(fn) { themeCallbacks.push(fn); };
+  var echartsInstances = [];
+  R.registerEChart = function(chart) {
+    echartsInstances.push(chart);
   };
 
-  /**
-   * Assign dense ranks to an array based on combined_score.
-   * Items are sorted by combined_score descending, then by nameKey alphabetically.
-   * Each item gets _baseRank (dense: 1,1,2,3 not 1,1,3,4).
-   *
-   * @param {Array} items - array of objects to rank (modified in place)
-   * @param {string} nameKey - property to use for alphabetical tie-breaking
-   */
+  window.addEventListener('reprodb-theme-change', function() {
+    // Update ECharts instances
+    var theme = R.echartsTheme();
+    echartsInstances.forEach(function(chart) {
+      if (chart && !chart.isDisposed()) {
+        var opt = chart.getOption();
+        // Merge theme colors into existing options
+        chart.setOption({
+          textStyle: theme.textStyle,
+          title: opt.title ? [theme.title] : undefined,
+          legend: opt.legend ? (opt.legend).map(function(l) {
+            return { textStyle: theme.legend.textStyle };
+          }) : undefined,
+          tooltip: theme.tooltip,
+          xAxis: (opt.xAxis || []).map(function() {
+            return { axisLine: theme.categoryAxis.axisLine, axisTick: theme.categoryAxis.axisTick,
+                     axisLabel: theme.categoryAxis.axisLabel, splitLine: theme.categoryAxis.splitLine };
+          }),
+          yAxis: (opt.yAxis || []).map(function() {
+            return { axisLine: theme.valueAxis.axisLine, axisTick: theme.valueAxis.axisTick,
+                     axisLabel: theme.valueAxis.axisLabel, splitLine: theme.valueAxis.splitLine };
+          })
+        });
+      }
+    });
+    // Fire page-specific callbacks
+    themeCallbacks.forEach(function(fn) { fn(); });
+  });
+
+  /* ─── Shared color palette ──────────────────────────────────────── */
+
+  R.COLORS = {
+    systems:      '#2980b9',
+    security:     '#c0392b',
+    both:         '#8e44ad',
+    badges: {
+      evaluated:    '#95a5a6',
+      available:    '#27ae60',
+      functional:   '#2980b9',
+      reproducible: '#8e44ad',
+      reusable:     '#e67e22'
+    }
+  };
+
+  /* ─── Debounce utility ────────────────────────────────────────────── */
+
+  R.DEBOUNCE_MS = 200;
+
+  R.debounce = function(fn, ms) {
+    var timer;
+    return function() {
+      var ctx = this, args = arguments;
+      clearTimeout(timer);
+      timer = setTimeout(function() { fn.apply(ctx, args); }, ms || R.DEBOUNCE_MS);
+    };
+  };
+
+  /* ─── Profile URL builder ─────────────────────────────────────────── */
+
+  R.profileUrl = function(baseUrl, name, opts) {
+    var url = (baseUrl || '') + '/profile.html?name=' + encodeURIComponent(name);
+    if (opts && opts.id != null) url += '&id=' + opts.id;
+    if (opts && opts.type) url += '&type=' + encodeURIComponent(opts.type);
+    return url;
+  };
+
+  /* ─── Country / continent geo maps (shared across pages) ──────────── */
+
+  R.CODE_TO_NAME = {
+    US:'United States',CN:'China',JP:'Japan',GB:'United Kingdom',
+    DE:'Germany',FR:'France',CA:'Canada',AU:'Australia',IN:'India',
+    SG:'Singapore',KR:'South Korea',CH:'Switzerland',NL:'Netherlands',
+    SE:'Sweden',NO:'Norway',DK:'Denmark',FI:'Finland',BE:'Belgium',
+    AT:'Austria',IL:'Israel',IT:'Italy',ES:'Spain',PT:'Portugal',
+    GR:'Greece',HK:'Hong Kong',TW:'Taiwan',TH:'Thailand',BR:'Brazil',
+    MX:'Mexico',AR:'Argentina',CL:'Chile',IE:'Ireland',NZ:'New Zealand',
+    ZA:'South Africa',RU:'Russia',UA:'Ukraine',PL:'Poland',RO:'Romania',
+    CZ:'Czechia',HU:'Hungary',TR:'Turkey',PK:'Pakistan',MY:'Malaysia',
+    ID:'Indonesia',VN:'Vietnam',PH:'Philippines',BD:'Bangladesh',
+    LK:'Sri Lanka',IR:'Iran',SA:'Saudi Arabia',AE:'United Arab Emirates',
+    EG:'Egypt',KE:'Kenya',NG:'Nigeria',MA:'Morocco',CO:'Colombia',
+    PE:'Peru',VE:'Venezuela',RW:'Rwanda',QA:'Qatar',LU:'Luxembourg',CY:'Cyprus',
+    BG:'Bulgaria',CI:'Ivory Coast',EE:'Estonia',ET:'Ethiopia',
+    GH:'Ghana',HR:'Croatia',IQ:'Iraq',JO:'Jordan',LB:'Lebanon',
+    LI:'Liechtenstein',LR:'Liberia',MO:'Macau',MT:'Malta',PA:'Panama',
+    SY:'Syria',UG:'Uganda',UZ:'Uzbekistan',ZW:'Zimbabwe'
+  };
+
+  R.CODE_TO_CONTINENT = {
+    US:'North America',CA:'North America',MX:'North America',PA:'North America',
+    CN:'Asia',JP:'Asia',KR:'Asia',SG:'Asia',IN:'Asia',TW:'Asia',
+    HK:'Asia',TH:'Asia',PK:'Asia',MY:'Asia',ID:'Asia',VN:'Asia',
+    PH:'Asia',BD:'Asia',LK:'Asia',IR:'Asia',SA:'Asia',AE:'Asia',
+    IQ:'Asia',JO:'Asia',LB:'Asia',MO:'Asia',QA:'Asia',SY:'Asia',UZ:'Asia',
+    GB:'Europe',DE:'Europe',FR:'Europe',CH:'Europe',NL:'Europe',
+    SE:'Europe',NO:'Europe',DK:'Europe',FI:'Europe',BE:'Europe',
+    AT:'Europe',IL:'Europe',IT:'Europe',ES:'Europe',PT:'Europe',
+    GR:'Europe',IE:'Europe',RU:'Europe',UA:'Europe',PL:'Europe',
+    RO:'Europe',CZ:'Europe',HU:'Europe',TR:'Europe',
+    BG:'Europe',CY:'Europe',EE:'Europe',HR:'Europe',LI:'Europe',
+    LU:'Europe',MT:'Europe',
+    AU:'Oceania',NZ:'Oceania',
+    BR:'South America',AR:'South America',CL:'South America',
+    CO:'South America',PE:'South America',VE:'South America',
+    ZA:'Africa',KE:'Africa',NG:'Africa',MA:'Africa',EG:'Africa',
+    CI:'Africa',ET:'Africa',GH:'Africa',LR:'Africa',RW:'Africa',
+    UG:'Africa',ZW:'Africa'
+  };
+
+  R.flagHtml = function(code) {
+    if (!code || code.length !== 2) return '';
+    return '<span class="fi fi-' + code.toLowerCase() + '" title="' + (R.CODE_TO_NAME[code] || code) + '"></span> ';
+  };
+
+  /* ─── Ranking helpers (used by ranking table formatters) ──────────── */
+
   R.assignDenseRanks = function(items, nameKey) {
     var sorted = items.slice();
     sorted.sort(function(a, b) {
@@ -116,21 +268,11 @@
     });
     var rank = 1;
     for (var i = 0; i < sorted.length; i++) {
-      if (i > 0 && (sorted[i].combined_score || 0) < (sorted[i - 1].combined_score || 0)) {
-        rank++;
-      }
+      if (i > 0 && (sorted[i].combined_score || 0) < (sorted[i - 1].combined_score || 0)) rank++;
       sorted[i]._baseRank = rank;
     }
   };
 
-  /**
-   * Produce rank-change indicator HTML for a single entry.
-   * Compares current _baseRank against previous snapshot rank.
-   *
-   * @param {number} baseRank - current dense rank
-   * @param {number|undefined} oldRank - rank from previous snapshot
-   * @returns {string} HTML string (may be empty)
-   */
   R.rankChangeHtml = function(baseRank, oldRank) {
     if (!baseRank || oldRank == null) return '';
     var diff = oldRank - baseRank;
@@ -139,98 +281,43 @@
     return '<span class="rank-unchanged" title="Unchanged">\u2013</span>';
   };
 
-  /* ─── Dark-mode theme helpers ─────────────────────────────────────── */
+  /* ─── Tabulator helper ────────────────────────────────────────────── */
 
   /**
-   * Returns true if the page is currently in dark mode.
+   * Create a Tabulator instance with ReproDB default settings.
+   *
+   * @param {string|HTMLElement} el - selector or element
+   * @param {object} opts - Tabulator options (columns, data, etc.)
+   * @returns {Tabulator}
    */
-  R.isDark = function() {
-    var t = document.documentElement.getAttribute('data-theme');
-    if (t === 'dark') return true;
-    if (t === 'light') return false;
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
-  };
-
-  /**
-   * Returns a palette of theme-aware colors for charts and canvas drawing.
-   * All colors are safe for the current background (dark or light).
-   */
-  R.themeColors = function() {
-    var dark = R.isDark();
-    return {
-      text:       dark ? '#d6d9dc' : '#333',
-      textMuted:  dark ? '#aab0b8' : '#666',
-      line:       dark ? '#d6d9dc' : '#333',
-      grid:       dark ? '#383c43' : '#e0e0e0',
-      border:     dark ? '#4a4f57' : '#ddd',
-      // A "dark" dataset color that is still visible on dark backgrounds
-      totalLine:  dark ? '#aab0b8' : '#333',
-      totalBar:   dark ? 'rgba(170,176,184,0.7)' : 'rgba(51,51,51,0.7)',
-      // Combined score line on profile pages
-      combined:   dark ? '#7fb3d3' : '#2c3e50',
-      separator:  dark ? '#6b7280' : '#999'
-    };
-  };
-
-  /**
-   * Apply Chart.js global defaults for the current theme.
-   * Call once on DOMContentLoaded and again on theme change if charts are
-   * rebuilt.
-   */
-  R.applyChartDefaults = function() {
-    if (typeof Chart === 'undefined') return;
-    var tc = R.themeColors();
-    Chart.defaults.color = tc.text;
-    Chart.defaults.borderColor = tc.grid;
-    Chart.defaults.plugins.title = Chart.defaults.plugins.title || {};
-    Chart.defaults.plugins.title.color = tc.text;
-    Chart.defaults.plugins.legend = Chart.defaults.plugins.legend || {};
-    Chart.defaults.plugins.legend.labels = Chart.defaults.plugins.legend.labels || {};
-    Chart.defaults.plugins.legend.labels.color = tc.text;
-    // Scale defaults
-    Chart.defaults.scale = Chart.defaults.scale || {};
-    Chart.defaults.scale.ticks = Chart.defaults.scale.ticks || {};
-    Chart.defaults.scale.ticks.color = tc.text;
-    Chart.defaults.scale.grid = Chart.defaults.scale.grid || {};
-    Chart.defaults.scale.grid.color = tc.grid;
-    Chart.defaults.scale.title = Chart.defaults.scale.title || {};
-    Chart.defaults.scale.title.color = tc.text;
-  };
-
-  /**
-   * Listen for runtime theme changes and update all Chart.js instances + redraw
-   * canvas heatmaps. Page-specific scripts can register redraw callbacks via
-   * ReproDB.onThemeChange(fn).
-   */
-  var themeCallbacks = [];
-  R.onThemeChange = function(fn) { themeCallbacks.push(fn); };
-
-  window.addEventListener('reprodb-theme-change', function() {
-    // Update Chart.js global defaults
-    R.applyChartDefaults();
-    // Update all existing Chart.js instances
-    if (typeof Chart !== 'undefined') {
-      var tc = R.themeColors();
-      Object.keys(Chart.instances || {}).forEach(function(id) {
-        var chart = Chart.instances[id];
-        var opts = chart.options;
-        // Update scales
-        Object.keys(opts.scales || {}).forEach(function(axis) {
-          var s = opts.scales[axis];
-          if (s.ticks) s.ticks.color = tc.text;
-          if (s.grid) s.grid.color = tc.grid;
-          if (s.title) s.title.color = tc.text;
-        });
-        // Update plugins
-        if (opts.plugins) {
-          if (opts.plugins.title) opts.plugins.title.color = tc.text;
-          if (opts.plugins.legend && opts.plugins.legend.labels) opts.plugins.legend.labels.color = tc.text;
-          if (opts.plugins.datalabels) opts.plugins.datalabels.color = tc.text;
-        }
-        chart.update('none');
-      });
+  R.createTable = function(el, opts) {
+    if (typeof Tabulator === 'undefined') {
+      throw new Error('Tabulator not loaded yet — ensure createTable is called after DOMContentLoaded');
     }
-    // Fire page-specific callbacks (heatmap redraws, etc.)
-    themeCallbacks.forEach(function(fn) { fn(); });
+    var defaults = {
+      layout: 'fitColumns',
+      pagination: true,
+      paginationSize: opts.paginationSize || 50,
+      paginationSizeSelector: [10, 25, 50, 100],
+      paginationCounter: 'rows',
+      movableColumns: false,
+      placeholder: 'No data available',
+      headerSortClickElement: 'header'
+    };
+    var merged = Object.assign({}, defaults, opts);
+    return new Tabulator(el, merged);
+  };
+
+  /**
+   * Promise that resolves when deferred CDN scripts (Tabulator, ECharts)
+   * are available.  Deferred scripts execute before DOMContentLoaded, so
+   * waiting for that event guarantees they are ready.
+   */
+  R.ready = new Promise(function(resolve) {
+    if (document.readyState === 'interactive' || document.readyState === 'complete') {
+      resolve();
+    } else {
+      document.addEventListener('DOMContentLoaded', resolve);
+    }
   });
 })();

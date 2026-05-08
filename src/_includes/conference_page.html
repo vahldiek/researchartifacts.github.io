@@ -12,7 +12,7 @@
 ## Statistics
 
 <div class="rdb-chart-container">
-<canvas id="confYearChart" height="156"></canvas>
+<div id="confYearChart" style="height:300px"></div>
 </div>
 
 | Year | Total | Available | Functional | Reproduced | Reusable |
@@ -30,93 +30,75 @@
 
 Authors who contributed evaluated artifacts at {{ conf_display }}, ranked by artifact score.
 
-<div id="author-controls" class="rdb-controls rdb-hidden">
-  <div class="rdb-controls-row">
-    <div class="rdb-control-group">
-      <label class="rdb-label">Search:</label>
-      <input id="authorSearch" type="text" placeholder="Name or affiliation…" class="rdb-input">
+<div x-data="confSection('author')" x-init="boot()">
+  <div class="rdb-controls" x-show="loaded" x-cloak>
+    <div class="rdb-controls-row">
+      <div class="rdb-control-group">
+        <label class="rdb-label">Search:</label>
+        <input type="text" placeholder="Name or affiliation…" class="rdb-input"
+               x-ref="searchInput" @input="onSearchInput()">
+      </div>
     </div>
   </div>
-</div>
 
-<div id="author-legend" class="rdb-legend rdb-hidden">
-  Legend: #=Rank, S=Artifact Score, Ar=Artifacts, P=Papers, AR%=Artifact Rate, RR%=Repro Rate, AvR%=Available/Functional Rate
-</div>
+  <div class="rdb-legend" x-show="loaded" x-cloak>
+    Legend: #=Rank, S=Artifact Score, Ar=Artifacts, P=Papers, AR%=Artifact Rate, RR%=Repro Rate
+  </div>
 
-<div id="authorLoading"><em>Loading author data…</em></div>
-
-<table id="authorTable" class="conf-tbl rdb-hidden">
-<thead><tr id="authorHead"></tr></thead>
-<tbody id="authorBody"></tbody>
-</table>
-
-<div id="author-pager" class="rdb-pager rdb-hidden">
-  <button id="authorPrev" class="rdb-pager-btn">&laquo; Prev</button>
-  <span id="authorPageInfo" class="rdb-pager-info"></span>
-  <button id="authorNext" class="rdb-pager-btn">Next &raquo;</button>
-  <span id="authorTotal" class="rdb-pager-total"></span>
+  <div x-show="!loaded" x-ref="loading">
+    <em x-text="loadingMsg"></em>
+  </div>
+  <div x-ref="tableEl" x-show="loaded" x-cloak></div>
 </div>
 
 ## Institutions
 
 Institutions at {{ conf_display }}, ranked by conference-specific artifact score.
 
-<div id="inst-controls" class="rdb-controls rdb-hidden">
-  <div class="rdb-controls-row">
-    <div class="rdb-control-group">
-      <label class="rdb-label">Search:</label>
-      <input id="instSearch" type="text" placeholder="Institution name…" class="rdb-input">
+<div x-data="confSection('inst')" x-init="boot()">
+  <div class="rdb-controls" x-show="loaded" x-cloak>
+    <div class="rdb-controls-row">
+      <div class="rdb-control-group">
+        <label class="rdb-label">Search:</label>
+        <input type="text" placeholder="Institution name…" class="rdb-input"
+               x-ref="searchInput" @input="onSearchInput()">
+      </div>
     </div>
   </div>
-</div>
 
-<div id="inst-legend" class="rdb-legend rdb-hidden">
-  Legend: #=Rank, S=Artifact Score (conference-specific), R=Researchers, Ar=Artifacts, P=Papers, AE=AE Memberships, Ch=Chairs
-</div>
+  <div class="rdb-legend" x-show="loaded" x-cloak>
+    Legend: #=Rank, S=Artifact Score (conference-specific), R=Researchers, Ar=Artifacts, P=Papers, AE=AE Memberships, Ch=Chairs
+  </div>
 
-<div id="instLoading"><em>Loading institution data…</em></div>
-
-<table id="instTable" class="conf-tbl rdb-hidden">
-<thead><tr id="instHead"></tr></thead>
-<tbody id="instBody"></tbody>
-</table>
-
-<div id="inst-pager" class="rdb-pager rdb-hidden">
-  <button id="instPrev" class="rdb-pager-btn">&laquo; Prev</button>
-  <span id="instPageInfo" class="rdb-pager-info"></span>
-  <button id="instNext" class="rdb-pager-btn">Next &raquo;</button>
-  <span id="instTotal" class="rdb-pager-total"></span>
+  <div x-show="!loaded" x-ref="loading">
+    <em x-text="loadingMsg"></em>
+  </div>
+  <div x-ref="tableEl" x-show="loaded" x-cloak></div>
 </div>
 
 ## AE Committee
 
 Artifact evaluation committee members at {{ conf_display }}, ranked by number of service terms.
 
-<div id="ae-controls" class="rdb-controls rdb-hidden">
-  <div class="rdb-controls-row">
-    <div class="rdb-control-group">
-      <label class="rdb-label">Search:</label>
-      <input id="aeSearch" type="text" placeholder="Name or affiliation…" class="rdb-input">
+<div x-data="confSection('ae')" x-init="boot()">
+  <div class="rdb-controls" x-show="loaded" x-cloak>
+    <div class="rdb-controls-row">
+      <div class="rdb-control-group">
+        <label class="rdb-label">Search:</label>
+        <input type="text" placeholder="Name or affiliation…" class="rdb-input"
+               x-ref="searchInput" @input="onSearchInput()">
+      </div>
     </div>
   </div>
-</div>
 
-<div id="ae-legend" class="rdb-legend rdb-hidden">
-  Legend: #=Rank, Terms=AE Memberships, Ch=Times Chaired (★), First/Last=Year Range
-</div>
+  <div class="rdb-legend" x-show="loaded" x-cloak>
+    Legend: #=Rank, Terms=AE Memberships, Ch=Times Chaired (★), First/Last=Year Range
+  </div>
 
-<div id="aeLoading"><em>Loading AE data…</em></div>
-
-<table id="aeTable" class="conf-tbl rdb-hidden">
-<thead><tr id="aeHead"></tr></thead>
-<tbody id="aeBody"></tbody>
-</table>
-
-<div id="ae-pager" class="rdb-pager rdb-hidden">
-  <button id="aePrev" class="rdb-pager-btn">&laquo; Prev</button>
-  <span id="aePageInfo" class="rdb-pager-info"></span>
-  <button id="aeNext" class="rdb-pager-btn">Next &raquo;</button>
-  <span id="aeTotal" class="rdb-pager-total"></span>
+  <div x-show="!loaded" x-ref="loading">
+    <em x-text="loadingMsg"></em>
+  </div>
+  <div x-ref="tableEl" x-show="loaded" x-cloak></div>
 </div>
 
 ## Repository Statistics
@@ -143,25 +125,10 @@ Artifact evaluation committee members at {{ conf_display }}, ranked by number of
 {% if conf_repo.top_repos.size > 0 %}
 ### Top {{ conf_repo.top_repos.size }} Repositories by Stars
 
-<table id="topReposTable" class="conf-tbl">
-<thead>
-<tr><th>#</th><th>Repository</th><th>Authors</th><th>Year</th><th>Stars</th><th>Forks</th><th>Badges</th><th>Last Active</th></tr>
-</thead>
-<tbody>
-{% for repo in conf_repo.top_repos %}
-<tr data-repo-title="{{ repo.title | escape }}">
-<td>{{ forloop.index }}</td>
-<td><a href="{{ repo.url }}">{{ repo.title | truncate: 55 }}</a></td>
-<td class="repo-authors"><em>loading…</em></td>
-<td>{{ repo.year }}</td>
-<td>{{ repo.stars | default: 0 }}</td>
-<td>{{ repo.forks | default: 0 }}</td>
-<td class="repo-badges"><em>loading…</em></td>
-<td>{% if repo.pushed_at %}{{ repo.pushed_at | date: "%Y-%m-%d" }}{% else %}—{% endif %}</td>
-</tr>
-{% endfor %}
-</tbody>
-</table>
+<div id="topReposTable"></div>
+<script id="topReposData" type="application/json">
+[{% for repo in conf_repo.top_repos %}{"title":{{ repo.title | jsonify }},"url":{{ repo.url | jsonify }},"year":{{ repo.year | jsonify }},"stars":{{ repo.stars | default: 0 }},"forks":{{ repo.forks | default: 0 }},"pushed_at":{{ repo.pushed_at | date: "%Y-%m-%d" | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]
+</script>
 {% endif %}
 
 {% else %}
@@ -197,35 +164,31 @@ document.addEventListener('DOMContentLoaded', function() {
   var reusable = [{% for yd in conf_data.years %}{{ yd.reusable | default: 0 }}{% unless forloop.last %},{% endunless %}{% endfor %}];
 
   var hasReusable = reusable.some(function(v) { return v > 0; });
+  var tc = ReproDB.themeColors();
 
-  var datasets = [
-    { label: 'Total', data: totals, backgroundColor: ReproDB.themeColors().totalBar },
-    { label: 'Available', data: available, backgroundColor: 'rgba(241,92,36,0.7)' },
-    { label: 'Functional', data: functional, backgroundColor: 'rgba(18,116,187,0.7)' },
-    { label: 'Reproduced', data: reproduced, backgroundColor: 'rgba(108,64,153,0.7)' }
+  var series = [
+    { name: 'Total', type: 'bar', data: totals, itemStyle: { color: tc.totalBar } },
+    { name: 'Available', type: 'bar', data: available, itemStyle: { color: 'rgba(241,92,36,0.7)' } },
+    { name: 'Functional', type: 'bar', data: functional, itemStyle: { color: 'rgba(18,116,187,0.7)' } },
+    { name: 'Reproduced', type: 'bar', data: reproduced, itemStyle: { color: 'rgba(108,64,153,0.7)' } }
   ];
   if (hasReusable) {
-    datasets.push({ label: 'Reusable', data: reusable, backgroundColor: 'rgba(142,68,173,0.5)' });
+    series.push({ name: 'Reusable', type: 'bar', data: reusable, itemStyle: { color: 'rgba(142,68,173,0.5)' } });
   }
 
-  new Chart(document.getElementById('confYearChart'), {
-    type: 'bar',
-    data: {
-      labels: years,
-      datasets: datasets
-    },
-    options: {
-      responsive: true,
-      plugins: {
-        title: { display: true, text: '{{ conf_display }}: Artifacts by Year' },
-        legend: { position: 'bottom', labels: { boxWidth: 12, padding: 8, font: { size: 11 } } }
-      },
-      scales: {
-        y: { beginAtZero: true, title: { display: true, text: 'Count' } },
-        x: { ticks: { maxRotation: 45, minRotation: 0 } }
-      }
-    }
-  });
+  var chart = ReproDB.initEChart('confYearChart');
+  if (chart) {
+    chart.setOption({
+      title: { text: '{{ conf_display }}: Artifacts by Year', left: 'center', textStyle: { fontSize: 14 } },
+      tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+      legend: { bottom: 0, itemWidth: 12 },
+      grid: { containLabel: true, top: 40, bottom: 50, left: 20, right: 20 },
+      xAxis: { type: 'category', data: years, axisLabel: { rotate: 45 } },
+      yAxis: { type: 'value', name: 'Count', minInterval: 1 },
+      series: series
+    });
+    ReproDB.registerEChart(chart);
+  }
 });
 </script>
 {% endif %}
@@ -234,386 +197,347 @@ document.addEventListener('DOMContentLoaded', function() {
 (function() {
   var CONF = '{{ conf_name }}';
   var BASE = '{{ "" | relative_url }}';
-  var TOP_N = 10;
+  var escHtml = ReproDB.escHtml;
+  var dash = '\u2013';
+  var dataBase = '{{ "/assets/data/" | relative_url }}';
+  var confLower = CONF.toLowerCase();
 
-  function esc(s) {
-    var d = document.createElement('div');
-    d.appendChild(document.createTextNode(s));
-    return d.innerHTML;
+  /* ── Wire Alpine search ref to a Tabulator instance ──────────────── */
+  function wireSearch(inputRef, table, fields) {
+    if (!inputRef) return;
+    var timer = null;
+    inputRef.addEventListener('input', function() {
+      clearTimeout(timer);
+      var val = this.value;
+      timer = setTimeout(function() {
+        var q = val.toLowerCase().trim();
+        if (!q) { table.clearFilter(); return; }
+        table.setFilter(function(data) {
+          for (var i = 0; i < fields.length; i++) {
+            if ((data[fields[i]] || '').toLowerCase().indexOf(q) >= 0) return true;
+          }
+          return false;
+        });
+      }, 200);
+    });
   }
 
-  /* ── Paginated sortable table ────────────────────────────────────────── */
-  function Top10Table(cfg) {
-    this.headId = cfg.headId;
-    this.bodyId = cfg.bodyId;
-    this.controlsId = cfg.controlsId;
-    this.legendId = cfg.legendId;
-    this.loadingId = cfg.loadingId;
-    this.tableId = cfg.tableId;
-    this.pagerDivId = cfg.pagerDivId;
-    this.prevBtnId = cfg.prevBtnId;
-    this.nextBtnId = cfg.nextBtnId;
-    this.pageInfoId = cfg.pageInfoId;
-    this.totalId = cfg.totalId;
-    this.searchId = cfg.searchId;
-    this.cols = cfg.cols;
-    this.renderRow = cfg.renderRow;
-    this.sortCol = cfg.sortCol || 0;
-    this.sortAsc = cfg.sortAsc !== undefined ? cfg.sortAsc : false;
-    this.allData = [];
-    this.filtered = [];
-    this.sorted = [];
-    this.page = 0;
-    this.pageSize = TOP_N;
-    this.searchQuery = '';
+  /* ── Extract year columns + flatten into yr_ fields ──────────────── */
+  function extractYears(data) {
+    var yrs = {};
+    data.forEach(function(d) {
+      if (d.years) Object.keys(d.years).forEach(function(y) { if ((d.years[y] || 0) > 0) yrs[y] = true; });
+    });
+    var yearCols = Object.keys(yrs).map(Number).sort(function(a, b) { return b - a; });
+    data.forEach(function(d) {
+      yearCols.forEach(function(y) { d['yr_' + y] = (d.years || {})[y] || 0; });
+    });
+    return yearCols;
+  }
 
-    var self = this;
-    document.getElementById(this.prevBtnId).addEventListener('click', function() {
-      if (self.page > 0) { self.page--; self.render(); }
-    });
-    document.getElementById(this.nextBtnId).addEventListener('click', function() {
-      var pages = Math.ceil(self.sorted.length / self.pageSize);
-      if (self.page < pages - 1) { self.page++; self.render(); }
-    });
-    if (this.searchId) {
-      var timer = null;
-      document.getElementById(this.searchId).addEventListener('input', function() {
-        clearTimeout(timer);
-        var val = this.value;
-        timer = setTimeout(function() {
-          self.searchQuery = val.toLowerCase().trim();
-          self.applyFilter();
-          self.page = 0;
-          self.doSort();
-          self.render();
-        }, 200);
+  /* ── Shared data promise (fetch once, share across sections) ─────── */
+  var dataPromise = Promise.all([
+    ReproDB.fetchJSON(dataBase + confLower + '_combined_rankings.json'),
+    ReproDB.fetchJSON(dataBase + confLower + '_institution_rankings.json'),
+    ReproDB.fetchJSON(dataBase + 'ae_members.json'),
+    ReproDB.fetchJSON(dataBase + 'paper_authors_map.json')
+  ]);
+
+  /* ── Section builders ────────────────────────────────────────────── */
+
+  function initAuthorTable(ctx, rawData) {
+    if (!rawData.length) {
+      ctx.loadingMsg = 'No author data for this conference.';
+      return;
+    }
+    var yearCols = extractYears(rawData);
+    rawData.forEach(function(d) { d._display = d.display_name || d.name; });
+
+    var cols = [
+      { title: '#', field: '_rank', sorter: 'number', width: 50 },
+      { title: 'Researcher', field: '_display', sorter: 'string', minWidth: 140,
+        formatter: function(cell) {
+          var d = cell.getRow().getData();
+          var url = BASE + '/profile.html?name=' + encodeURIComponent(d.name);
+          return '<a href="' + url + '">' + escHtml(d._display) + '</a>';
+        }
+      },
+      { title: 'Affiliation', field: 'affiliation', sorter: 'string', minWidth: 120,
+        formatter: function(cell) {
+          var d = cell.getRow().getData();
+          var url = BASE + '/profile.html?type=institution&name=' + encodeURIComponent(d.affiliation || '');
+          return '<a href="' + url + '">' + escHtml(d.affiliation || '') + '</a>';
+        }
+      },
+      { title: 'S', field: 'combined_score', sorter: 'number',
+        tooltip: 'Combined Score (artifacts + AE service)',
+        formatter: function(cell) { return '<strong>' + (cell.getValue() || 0) + '</strong>'; }
+      },
+      { title: 'Ar', field: 'artifact_count', sorter: 'number', tooltip: 'Artifacts',
+        formatter: function(cell) { return cell.getValue() || dash; }
+      },
+      { title: 'P', field: 'total_papers', sorter: 'number', tooltip: 'Papers',
+        formatter: function(cell) { return cell.getValue() || dash; }
+      },
+      { title: 'AE', field: 'ae_memberships', sorter: 'number', tooltip: 'AE memberships',
+        formatter: function(cell) { return cell.getValue() || dash; }
+      },
+      { title: 'AR%', field: 'artifact_pct', sorter: 'number', tooltip: 'Artifact rate',
+        formatter: function(cell) {
+          var d = cell.getRow().getData();
+          return d.total_papers > 0 ? (cell.getValue() + '%') : dash;
+        }
+      },
+      { title: 'RR%', field: 'repro_pct', sorter: 'number', tooltip: 'Reproducibility rate',
+        formatter: function(cell) {
+          var v = cell.getValue();
+          return (v !== undefined && v !== null) ? (v + '%') : dash;
+        }
+      }
+    ];
+    yearCols.forEach(function(yr) {
+      cols.push({
+        title: '\'' + (yr % 100), field: 'yr_' + yr, sorter: 'number',
+        formatter: function(cell) { var v = cell.getValue(); return v > 0 ? v : dash; }
       });
-    }
-  }
-
-  Top10Table.prototype.init = function(data) {
-    this.allData = data;
-    this.applyFilter();
-    this.buildHeader();
-    this.doSort();
-    this.render();
-    document.getElementById(this.loadingId).classList.add('rdb-hidden');
-    document.getElementById(this.tableId).classList.remove('rdb-hidden');
-    document.getElementById(this.controlsId).classList.remove('rdb-hidden');
-    if (this.legendId) document.getElementById(this.legendId).classList.remove('rdb-hidden');
-    document.getElementById(this.pagerDivId).classList.remove('rdb-hidden');
-  };
-
-  Top10Table.prototype.applyFilter = function() {
-    if (!this.searchQuery) { this.filtered = this.allData.slice(); return; }
-    var q = this.searchQuery;
-    var searchKeys = this.cols.filter(function(c) { return c.type === 'alpha'; }).map(function(c) { return c.key; });
-    this.filtered = this.allData.filter(function(d) {
-      for (var i = 0; i < searchKeys.length; i++) {
-        if ((d[searchKeys[i]] || '').toLowerCase().indexOf(q) >= 0) return true;
-      }
-      return false;
     });
-  };
 
-  Top10Table.prototype.doSort = function() {
-    var col = this.cols[this.sortCol];
-    if (!col) return;
-    var key = col.key, type = col.type, asc = this.sortAsc;
-    var cmp = function(a, b) {
-      var av = a[key], bv = b[key];
-      if (av == null) av = type === 'alpha' ? '' : 0;
-      if (bv == null) bv = type === 'alpha' ? '' : 0;
-      if (type === 'alpha') { av = String(av).toLowerCase(); bv = String(bv).toLowerCase(); }
-      if (av < bv) return asc ? -1 : 1;
-      if (av > bv) return asc ? 1 : -1;
-      return 0;
-    };
-    var full = this.allData.slice();
-    full.sort(cmp);
-    for (var i = 0; i < full.length; i++) full[i]._rank = i + 1;
-    this.sorted = this.filtered.slice();
-    this.sorted.sort(cmp);
-  };
+    rawData.sort(function(a, b) { return (b.combined_score || 0) - (a.combined_score || 0); });
+    rawData.forEach(function(d, i) { d._rank = i + 1; });
 
-  Top10Table.prototype.render = function() {
-    var total = this.sorted.length;
-    var pages = Math.max(1, Math.ceil(total / this.pageSize));
-    if (this.page >= pages) this.page = pages - 1;
-    if (this.page < 0) this.page = 0;
-    var start = this.page * this.pageSize;
-    var end = Math.min(start + this.pageSize, total);
-    var display = this.sorted.slice(start, end);
-    var rows = [];
-    for (var i = 0; i < display.length; i++) {
-      rows.push('<tr>' + this.renderRow(display[i], start + i) + '</tr>');
-    }
-    document.getElementById(this.bodyId).innerHTML = rows.join('');
-    document.getElementById(this.prevBtnId).disabled = this.page <= 0;
-    document.getElementById(this.nextBtnId).disabled = this.page >= pages - 1;
-    var info = total > 0 ? (start + 1) + '\u2013' + end + ' of ' + total : '0';
-    document.getElementById(this.pageInfoId).textContent = info;
-    document.getElementById(this.totalId).textContent =
-      this.searchQuery ? total + ' matching' : this.allData.length + ' total';
-  };
-
-  Top10Table.prototype.buildHeader = function() {
-    var self = this;
-    var tr = document.getElementById(this.headId);
-    tr.innerHTML = '';
-    for (var c = 0; c < this.cols.length; c++) {
-      var th = document.createElement('th');
-      th.textContent = this.cols[c].label;
-      th.className = 'cp-sortable';
-      if (this.cols[c].tip) th.title = this.cols[c].tip;
-      if (c === this.sortCol) th.classList.add(this.sortAsc ? 'cp-sorted-asc' : 'cp-sorted-desc');
-      th.addEventListener('click', (function(idx) {
-        return function(e) {
-          if (self.sortCol === idx) self.sortAsc = !self.sortAsc;
-          else { self.sortCol = idx; self.sortAsc = false; }
-          self.doSort();
-          self.page = 0;
-          self.render();
-          var ths = document.getElementById(self.headId).querySelectorAll('.cp-sortable');
-          ths.forEach(function(h) { h.classList.remove('cp-sorted-asc', 'cp-sorted-desc'); });
-          e.currentTarget.classList.add(self.sortAsc ? 'cp-sorted-asc' : 'cp-sorted-desc');
-        };
-      })(c));
-      tr.appendChild(th);
-    }
-  };
-
-  /* ── AUTHORS — from pre-computed per-conference combined rankings ──── */
-  function initAuthors(rawData) {
-    /* rawData is e.g. osdi_combined_rankings.json — already has
-       combined_score, artifact_score, ae_score, rank, years, etc. */
-    var yrs = {};
-    for (var i = 0; i < rawData.length; i++) {
-      var d = rawData[i];
-      d._display = d.display_name || d.name;
-      var yrObj = d.years || {};
-      for (var y in yrObj) { if (yrObj[y] > 0) yrs[y] = true; }
-    }
-    var yearCols = Object.keys(yrs).map(Number).sort(function(a,b){return b-a;});
-    /* Flatten year data into sortable keys */
-    for (var k = 0; k < rawData.length; k++) {
-      for (var yj = 0; yj < yearCols.length; yj++) {
-        rawData[k]['_y' + yearCols[yj]] = (rawData[k].years || {})[yearCols[yj]] || 0;
-      }
-    }
-    var cols = [
-      {label:'#',           key:'_rank',          type:'num'},
-      {label:'Researcher',  key:'_display',       type:'alpha'},
-      {label:'Affiliation', key:'affiliation',    type:'alpha'},
-      {label:'S',           key:'combined_score', type:'num', tip:'Combined Score (artifacts + AE service)'},
-      {label:'Ar',          key:'artifact_count', type:'num', tip:'Artifacts at this conference'},
-      {label:'P',           key:'total_papers',   type:'num', tip:'Papers at this conference'},
-      {label:'AE',          key:'ae_memberships', type:'num', tip:'AE memberships'},
-      {label:'AR%',         key:'artifact_pct',   type:'num', tip:'Artifact rate'},
-      {label:'RR%',         key:'repro_pct',      type:'num', tip:'Reproducibility rate'}
-    ];
-    for (var j = 0; j < yearCols.length; j++) {
-      cols.push({label: '' + yearCols[j], key: '_y' + yearCols[j], type: 'num'});
-    }
-    if (rawData.length === 0) {
-      document.getElementById('authorLoading').textContent = 'No author data for this conference.';
-      return;
-    }
-    new Top10Table({
-      headId: 'authorHead', bodyId: 'authorBody',
-      controlsId: 'author-controls', legendId: 'author-legend',
-      loadingId: 'authorLoading', tableId: 'authorTable',
-      pagerDivId: 'author-pager', prevBtnId: 'authorPrev', nextBtnId: 'authorNext', pageInfoId: 'authorPageInfo',
-      totalId: 'authorTotal', searchId: 'authorSearch',
-      cols: cols, sortCol: 3, sortAsc: false,
-      renderRow: function(d) {
-        var url = BASE + '/profile.html?name=' + encodeURIComponent(d.name);
-        var instUrl = BASE + '/profile.html?type=institution&name=' + encodeURIComponent(d.affiliation || '');
-        var cells = '<td>' + d._rank + '</td>';
-        cells += '<td><a href="' + url + '">' + esc(d._display) + '</a></td>';
-        cells += '<td class="wrap-cell"><a href="' + instUrl + '">' + esc(d.affiliation || '') + '</a></td>';
-        cells += '<td><strong>' + (d.combined_score||0) + '</strong></td>';
-        cells += '<td>' + (d.artifact_count||'') + '</td>';
-        cells += '<td>' + (d.total_papers||'') + '</td>';
-        cells += '<td>' + (d.ae_memberships ? d.ae_memberships : '') + '</td>';
-        cells += '<td>' + (d.total_papers > 0 ? d.artifact_pct + '%' : '') + '</td>';
-        cells += '<td>' + (d.repro_pct||0) + '%</td>';
-        for (var j = 0; j < yearCols.length; j++) {
-          var cnt = d['_y' + yearCols[j]] || 0;
-          cells += '<td>' + (cnt > 0 ? cnt : '') + '</td>';
-        }
-        return cells;
-      }
-    }).init(rawData);
+    var tbl = ReproDB.createTable(ctx.$refs.tableEl, {
+      columns: cols, data: rawData, paginationSize: 10,
+      initialSort: [{ column: 'combined_score', dir: 'desc' }]
+    });
+    wireSearch(ctx.$refs.searchInput, tbl, ['_display', 'affiliation']);
+    ctx.loaded = true;
+    ctx.$nextTick(function() { tbl.redraw(true); });
   }
 
-  /* ── INSTITUTIONS — from pre-computed per-conference institution rankings */
-  function initInstitutions(rawData) {
-    var yrs = {};
-    for (var i = 0; i < rawData.length; i++) {
-      var yrObj = rawData[i].years || {};
-      for (var y in yrObj) { if (yrObj[y] > 0) yrs[y] = true; }
-    }
-    var yearCols = Object.keys(yrs).map(Number).sort(function(a,b){return b-a;});
-    for (var k = 0; k < rawData.length; k++) {
-      for (var yj = 0; yj < yearCols.length; yj++) {
-        rawData[k]['_y' + yearCols[yj]] = (rawData[k].years || {})[yearCols[yj]] || 0;
-      }
-    }
-    var cols = [
-      {label:'#',           key:'_rank',          type:'num'},
-      {label:'Institution', key:'affiliation',    type:'alpha'},
-      {label:'S',           key:'combined_score', type:'num', tip:'Combined Score (artifacts + AE service)'},
-      {label:'R',           key:'author_count',   type:'num', tip:'Researchers'},
-      {label:'Ar',          key:'artifact_count', type:'num', tip:'Artifacts'},
-      {label:'P',           key:'total_papers',   type:'num', tip:'Papers'},
-      {label:'AR%',         key:'artifact_pct',   type:'num', tip:'Artifact rate: % papers with artifact'},
-      {label:'AE',          key:'ae_memberships', type:'num', tip:'AE memberships'},
-      {label:'Ch',          key:'chair_count',    type:'num', tip:'Times chaired'}
-    ];
-    for (var jc = 0; jc < yearCols.length; jc++) {
-      cols.push({label: '' + yearCols[jc], key: '_y' + yearCols[jc], type: 'num'});
-    }
-    if (rawData.length === 0) {
-      document.getElementById('instLoading').textContent = 'No institution data for this conference.';
+  function initInstTable(ctx, rawData) {
+    if (!rawData.length) {
+      ctx.loadingMsg = 'No institution data for this conference.';
       return;
     }
-    new Top10Table({
-      headId: 'instHead', bodyId: 'instBody',
-      controlsId: 'inst-controls', legendId: 'inst-legend',
-      loadingId: 'instLoading', tableId: 'instTable',
-      pagerDivId: 'inst-pager', prevBtnId: 'instPrev', nextBtnId: 'instNext', pageInfoId: 'instPageInfo',
-      totalId: 'instTotal', searchId: 'instSearch',
-      cols: cols, sortCol: 2, sortAsc: false,
-      renderRow: function(d) {
-        var url = BASE + '/profile.html?type=institution&name=' + encodeURIComponent(d.affiliation);
-        var cells = '<td>' + d._rank + '</td>';
-        cells += '<td class="wrap-cell"><a href="' + url + '">' + esc(d.affiliation) + '</a></td>';
-        cells += '<td><strong>' + (d.combined_score||0) + '</strong></td>';
-        cells += '<td>' + (d.author_count||'') + '</td>';
-        cells += '<td>' + (d.artifact_count||'') + '</td>';
-        cells += '<td>' + (d.total_papers||'') + '</td>';
-        cells += '<td>' + (d.total_papers > 0 ? d.artifact_pct + '%' : '') + '</td>';
-        cells += '<td>' + (d.ae_memberships||'') + '</td>';
-        cells += '<td>' + (d.chair_count > 0 ? d.chair_count + ' \u2605' : '') + '</td>';
-        for (var j = 0; j < yearCols.length; j++) {
-          var cnt = d['_y' + yearCols[j]] || 0;
-          cells += '<td>' + (cnt > 0 ? cnt : '') + '</td>';
+    var yearCols = extractYears(rawData);
+
+    var cols = [
+      { title: '#', field: '_rank', sorter: 'number', width: 50 },
+      { title: 'Institution', field: 'affiliation', sorter: 'string', minWidth: 180,
+        formatter: function(cell) {
+          var d = cell.getRow().getData();
+          var url = BASE + '/profile.html?type=institution&name=' + encodeURIComponent(d.affiliation);
+          return '<a href="' + url + '">' + escHtml(d.affiliation) + '</a>';
         }
-        return cells;
+      },
+      { title: 'S', field: 'combined_score', sorter: 'number', tooltip: 'Combined Score',
+        formatter: function(cell) { return '<strong>' + (cell.getValue() || 0) + '</strong>'; }
+      },
+      { title: 'R', field: 'author_count', sorter: 'number', tooltip: 'Researchers',
+        formatter: function(cell) { return cell.getValue() || dash; }
+      },
+      { title: 'Ar', field: 'artifact_count', sorter: 'number', tooltip: 'Artifacts',
+        formatter: function(cell) { return cell.getValue() || dash; }
+      },
+      { title: 'P', field: 'total_papers', sorter: 'number', tooltip: 'Papers',
+        formatter: function(cell) { return cell.getValue() || dash; }
+      },
+      { title: 'AR%', field: 'artifact_pct', sorter: 'number', tooltip: 'Artifact rate',
+        formatter: function(cell) {
+          var d = cell.getRow().getData();
+          return d.total_papers > 0 ? (cell.getValue() + '%') : dash;
+        }
+      },
+      { title: 'AE', field: 'ae_memberships', sorter: 'number', tooltip: 'AE memberships',
+        formatter: function(cell) { return cell.getValue() || dash; }
+      },
+      { title: 'Ch', field: 'chair_count', sorter: 'number', tooltip: 'Times chaired',
+        formatter: function(cell) {
+          var v = cell.getValue();
+          return v > 0 ? (v + ' \u2605') : dash;
+        }
       }
-    }).init(rawData);
+    ];
+    yearCols.forEach(function(yr) {
+      cols.push({
+        title: '\'' + (yr % 100), field: 'yr_' + yr, sorter: 'number',
+        formatter: function(cell) { var v = cell.getValue(); return v > 0 ? v : dash; }
+      });
+    });
+
+    rawData.sort(function(a, b) { return (b.combined_score || 0) - (a.combined_score || 0); });
+    rawData.forEach(function(d, i) { d._rank = i + 1; });
+
+    var tbl = ReproDB.createTable(ctx.$refs.tableEl, {
+      columns: cols, data: rawData, paginationSize: 10,
+      initialSort: [{ column: 'combined_score', dir: 'desc' }]
+    });
+    wireSearch(ctx.$refs.searchInput, tbl, ['affiliation']);
+    ctx.loaded = true;
+    ctx.$nextTick(function() { tbl.redraw(true); });
   }
 
-  /* ── AE COMMITTEE — filtered from ae_members.json ──────────────────── */
-  function initAE(rawData) {
+  function initAETable(ctx, rawData) {
     var filtered = [];
     for (var i = 0; i < rawData.length; i++) {
       var m = rawData[i];
-      var entries = (m.conferences||[]).filter(function(c) { return (c.conference || c[0]) === CONF; });
+      var entries = (m.conferences || []).filter(function(c) { return (c.conference || c[0]) === CONF; });
       if (entries.length === 0) continue;
       var chairs = entries.filter(function(c) { return (c.role || c[2]) === 'chair'; }).length;
       var years = entries.map(function(c) { return c.year || c[1]; });
       filtered.push({
-        _display: m.display_name||m.name,
-        affiliation: m.affiliation||'',
+        _display: m.display_name || m.name,
+        name: m.name,
+        affiliation: m.affiliation || '',
         terms: entries.length,
         chairs: chairs,
         first_year: Math.min.apply(null, years),
         last_year: Math.max.apply(null, years)
       });
     }
-    if (filtered.length === 0) {
-      document.getElementById('aeLoading').textContent = 'No AE data for this conference.';
+    if (!filtered.length) {
+      ctx.loadingMsg = 'No AE data for this conference.';
       return;
     }
-    new Top10Table({
-      headId: 'aeHead', bodyId: 'aeBody',
-      controlsId: 'ae-controls', legendId: 'ae-legend',
-      loadingId: 'aeLoading', tableId: 'aeTable',
-      pagerDivId: 'ae-pager', prevBtnId: 'aePrev', nextBtnId: 'aeNext', pageInfoId: 'aePageInfo',
-      totalId: 'aeTotal', searchId: 'aeSearch',
-      cols: [
-        {label:'#',           key:'_rank',          type:'num'},
-        {label:'Member',      key:'_display',       type:'alpha'},
-        {label:'Affiliation', key:'affiliation',    type:'alpha'},
-        {label:'Terms',       key:'terms',          type:'num', tip:'AE memberships at this conference'},
-        {label:'Ch',          key:'chairs',         type:'num', tip:'Times chaired'},
-        {label:'First',       key:'first_year',     type:'num', tip:'First year'},
-        {label:'Last',        key:'last_year',      type:'num', tip:'Last year'}
+
+    filtered.sort(function(a, b) { return b.terms - a.terms; });
+    filtered.forEach(function(d, i) { d._rank = i + 1; });
+
+    var tbl = ReproDB.createTable(ctx.$refs.tableEl, {
+      columns: [
+        { title: '#', field: '_rank', sorter: 'number', width: 50 },
+        { title: 'Member', field: '_display', sorter: 'string', minWidth: 140,
+          formatter: function(cell) {
+            var d = cell.getRow().getData();
+            var url = BASE + '/profile.html?name=' + encodeURIComponent(d.name || d._display);
+            return '<a href="' + url + '">' + escHtml(d._display) + '</a>';
+          }
+        },
+        { title: 'Affiliation', field: 'affiliation', sorter: 'string', minWidth: 120,
+          formatter: function(cell) {
+            var d = cell.getRow().getData();
+            var url = BASE + '/profile.html?type=institution&name=' + encodeURIComponent(d.affiliation || '');
+            return '<a href="' + url + '">' + escHtml(d.affiliation) + '</a>';
+          }
+        },
+        { title: 'Terms', field: 'terms', sorter: 'number', tooltip: 'AE memberships',
+          formatter: function(cell) { return '<strong>' + cell.getValue() + '</strong>'; }
+        },
+        { title: 'Ch', field: 'chairs', sorter: 'number', tooltip: 'Times chaired',
+          formatter: function(cell) {
+            var v = cell.getValue();
+            return v > 0 ? (v + ' \u2605') : '';
+          }
+        },
+        { title: 'First', field: 'first_year', sorter: 'number', tooltip: 'First year' },
+        { title: 'Last', field: 'last_year', sorter: 'number', tooltip: 'Last year' }
       ],
-      sortCol: 3, sortAsc: false,
-      renderRow: function(d) {
-        var memUrl = BASE + '/profile.html?name=' + encodeURIComponent(d._display);
-        var memInstUrl = BASE + '/profile.html?type=institution&name=' + encodeURIComponent(d.affiliation || '');
-        return '<td>' + d._rank + '</td>' +
-          '<td><a href="' + memUrl + '">' + esc(d._display) + '</a></td>' +
-          '<td class="wrap-cell"><a href="' + memInstUrl + '">' + esc(d.affiliation) + '</a></td>' +
-          '<td><strong>' + d.terms + '</strong></td>' +
-          '<td>' + (d.chairs > 0 ? d.chairs + ' \u2605' : '') + '</td>' +
-          '<td>' + d.first_year + '</td>' +
-          '<td>' + d.last_year + '</td>';
-      }
-    }).init(filtered);
+      data: filtered, paginationSize: 10,
+      initialSort: [{ column: 'terms', dir: 'desc' }]
+    });
+    wireSearch(ctx.$refs.searchInput, tbl, ['_display', 'affiliation']);
+    ctx.loaded = true;
+    ctx.$nextTick(function() { tbl.redraw(true); });
   }
 
-  /* ── Load all data in parallel ─────────────────────────────────────── */
-  var dataBase = '{{ "/assets/data/" | relative_url }}';
-  var confLower = CONF.toLowerCase();
-  Promise.all([
-    fetch(dataBase + confLower + '_combined_rankings.json').then(function(r) { return r.json(); }),
-    fetch(dataBase + confLower + '_institution_rankings.json').then(function(r) { return r.json(); }),
-    fetch(dataBase + 'ae_members.json').then(function(r) { return r.json(); }),
-    fetch(dataBase + 'paper_authors_map.json').then(function(r) { return r.json(); })
-  ]).then(function(results) {
-    initAuthors(results[0]);
-    initInstitutions(results[1]);
-    initAE(results[2]);
-    enrichTopRepos(results[3]);
-  }).catch(function(e) {
-    ['authorLoading','instLoading','aeLoading'].forEach(function(id) {
-      document.getElementById(id).textContent = 'Error loading data: ' + e.message;
+  /* ── Top repos table (Tabulator) ───────────────────────────────── */
+  var topReposTbl = null;
+  function initTopRepos() {
+    var el = document.getElementById('topReposData');
+    if (!el) return;
+    var repos = JSON.parse(el.textContent);
+    repos.forEach(function(d, i) { d._rank = i + 1; d._authors = ''; d._badges = ''; });
+    topReposTbl = ReproDB.createTable('#topReposTable', {
+      pagination: false,
+      data: repos,
+      columns: [
+        { title: '#', field: '_rank', sorter: 'number', width: 40, headerSort: false },
+        { title: 'Repository', field: 'title', sorter: 'string', minWidth: 140, widthGrow: 3,
+          formatter: function(cell) {
+            var d = cell.getRow().getData();
+            var t = (d.title || '').length > 55 ? d.title.substring(0, 52) + '\u2026' : d.title;
+            return d.url ? '<a href="' + escHtml(d.url) + '">' + escHtml(t) + '</a>' : escHtml(t);
+          }
+        },
+        { title: 'Authors', field: '_authors', headerSort: false, minWidth: 100, widthGrow: 2,
+          formatter: 'html'
+        },
+        { title: 'Year', field: 'year', sorter: 'number', width: 55 },
+        { title: 'Stars', field: 'stars', sorter: 'number', width: 60 },
+        { title: 'Forks', field: 'forks', sorter: 'number', width: 60 },
+        { title: 'Badges', field: '_badges', headerSort: false, minWidth: 80, widthGrow: 2,
+          formatter: 'html'
+        },
+        { title: 'Last Active', field: 'pushed_at', sorter: 'string', width: 90,
+          formatter: function(cell) { return cell.getValue() || '\u2014'; }
+        }
+      ],
+      initialSort: [{ column: 'stars', dir: 'desc' }]
     });
-  });
+  }
 
-  /* ── Enrich top repos table with authors & badges from paper_authors_map ── */
   function enrichTopRepos(paperMap) {
-    var rows = document.querySelectorAll('#topReposTable tbody tr[data-repo-title]');
-    if (!rows.length || !paperMap) return;
-    // Build a title lookup (normalized)
+    if (!topReposTbl || !paperMap) return;
     var byTitle = {};
     for (var i = 0; i < paperMap.length; i++) {
       var nt = (paperMap[i].normalized_title || paperMap[i].title || '').toLowerCase().replace(/[^a-z0-9]/g, '');
       byTitle[nt] = paperMap[i];
     }
+    var rows = topReposTbl.getRows();
     rows.forEach(function(row) {
-      var title = row.getAttribute('data-repo-title') || '';
-      var norm = title.toLowerCase().replace(/[^a-z0-9]/g, '');
+      var d = row.getData();
+      var norm = (d.title || '').toLowerCase().replace(/[^a-z0-9]/g, '');
       var match = byTitle[norm];
-      var authCell = row.querySelector('.repo-authors');
-      var badgeCell = row.querySelector('.repo-badges');
+      var update = {};
       if (match) {
         var authors = (match.authors || []).slice(0, 3);
-        if (authCell) {
-          authCell.innerHTML = authors.map(function(a) {
-            return '<a href="' + BASE + '/profile.html?name=' + encodeURIComponent(a) + '">' + esc(a) + '</a>';
-          }).join(', ') + (match.authors.length > 3 ? ' <em>et al.</em>' : '');
-        }
+        update._authors = authors.map(function(a) {
+          return '<a href="' + BASE + '/profile.html?name=' + encodeURIComponent(a) + '">' + escHtml(a) + '</a>';
+        }).join(', ') + (match.authors.length > 3 ? ' <em>et al.</em>' : '');
         var badges = match.badges || [];
-        if (badgeCell) {
-          badgeCell.innerHTML = badges.length > 0 ? badges.map(function(b) {
-            var bl = b.trim().toLowerCase();
-            var cls = 'badge-available';
-            if (bl.indexOf('functional') >= 0) cls = 'badge-functional';
-            else if (bl.indexOf('reproduc') >= 0 || bl.indexOf('reusable') >= 0) cls = 'badge-reproducible';
-            return '<span class="badge-tag ' + cls + '">' + esc(b.trim()) + '</span>';
-          }).join(' ') : '—';
-        }
+        update._badges = badges.length > 0 ? badges.map(function(b) {
+          var bl = b.trim().toLowerCase();
+          var cls = 'badge-available';
+          if (bl.indexOf('functional') >= 0) cls = 'badge-functional';
+          else if (bl.indexOf('reproduc') >= 0 || bl.indexOf('reusable') >= 0) cls = 'badge-reproducible';
+          return '<span class="badge-tag ' + cls + '">' + escHtml(b.trim()) + '</span>';
+        }).join(' ') : '\u2014';
       } else {
-        if (authCell) authCell.textContent = '—';
-        if (badgeCell) badgeCell.textContent = '—';
+        update._authors = '\u2014';
+        update._badges = '\u2014';
       }
+      row.update(update);
     });
   }
+
+  /* ── Init top repos table after Tabulator loads (deferred) ──────── */
+  document.addEventListener('DOMContentLoaded', function() {
+    initTopRepos();
+    dataPromise.then(function(r) { enrichTopRepos(r[3]); });
+  });
+
+  /* ── Alpine.js component factory for each section ──────────────── */
+  var sectionInitFns = {
+    author: function(ctx) { dataPromise.then(function(r) { initAuthorTable(ctx, r[0]); }).catch(function(e) { ctx.loadingMsg = 'Error: ' + e.message; }); },
+    inst:   function(ctx) { dataPromise.then(function(r) { initInstTable(ctx, r[1]); }).catch(function(e) { ctx.loadingMsg = 'Error: ' + e.message; }); },
+    ae:     function(ctx) { dataPromise.then(function(r) { initAETable(ctx, r[2]); }).catch(function(e) { ctx.loadingMsg = 'Error: ' + e.message; }); }
+  };
+
+  window.confSection = function(kind) {
+    var labels = { author: 'author', inst: 'institution', ae: 'AE' };
+    return {
+      loaded: false,
+      loadingMsg: 'Loading ' + labels[kind] + ' data\u2026',
+      _searchTimer: null,
+
+      boot: function() {
+        sectionInitFns[kind](this);
+      },
+
+      onSearchInput: function() {
+        /* handled by wireSearch after table init */
+      }
+    };
+  };
 })();
 </script>

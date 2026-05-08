@@ -3,7 +3,7 @@
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
+      <nav id="site-nav" class="greedy-nav" x-data="{ menuOpen: false }">
         {% unless logo_path == empty %}
           <a class="site-logo" href="{{ '/' | relative_url }}">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="40" height="40" role="img" aria-label="{{ site.masthead_title | default: site.title }}">
@@ -41,13 +41,17 @@
           <svg class="theme-toggle__icon theme-toggle__sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
           <svg class="theme-toggle__icon theme-toggle__moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
-        <button class="greedy-nav__toggle" type="button" aria-label="Toggle menu">
+        <button class="greedy-nav__toggle" type="button" aria-label="Toggle menu"
+                @click.stop="menuOpen = !menuOpen">
           <div class="navicon"></div>
         </button>
         <!-- Decoy for theme's greedy-nav JS (kept empty and invisible) -->
         <ul class="hidden-links hidden" style="display:none!important;"></ul>
         <!-- Hamburger dropdown: all items rendered server-side via Liquid -->
-        <ul id="hamburger-menu">
+        <ul id="hamburger-menu" x-show="menuOpen" x-cloak
+            :style="menuOpen ? 'display:block' : 'display:none'"
+            @click.outside="menuOpen = false"
+            x-transition>
           {%- for link in site.data.navigation.main -%}
             <li class="masthead__menu-item{% if link.children %} masthead__menu-item--has-children{% endif %}">
               <a href="{{ link.url | relative_url }}">{{ link.title }}</a>
@@ -152,28 +156,6 @@
       document.querySelectorAll('#hamburger-menu .masthead__submenu').forEach(function(s) { s.style.display = 'none'; });
       submenu.style.display = open ? 'none' : 'block';
     });
-  });
-
-  /* --- Hamburger toggle button --- */
-  var toggleBtn = document.querySelector('.greedy-nav__toggle');
-  var hamburger = document.getElementById('hamburger-menu');
-  if (toggleBtn && hamburger) {
-    // Start hidden
-    hamburger.classList.add('hidden');
-    toggleBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      e.stopImmediatePropagation(); // prevent theme's greedy-nav JS from also handling
-      hamburger.classList.toggle('hidden');
-    });
-  }
-
-  /* --- Close hamburger when clicking outside --- */
-  document.addEventListener('click', function(e) {
-    if (hamburger && !hamburger.classList.contains('hidden') &&
-        !e.target.closest('#hamburger-menu') &&
-        !e.target.closest('.greedy-nav__toggle')) {
-      hamburger.classList.add('hidden');
-    }
   });
 })();
 </script>

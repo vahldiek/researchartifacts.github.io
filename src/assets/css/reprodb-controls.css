@@ -28,6 +28,8 @@
   font-size: 1em;
   border: 1px solid #ccc;
   border-radius: 3px;
+  background-color: #fff;
+  color: #333;
 }
 .rdb-input {
   padding: 2px 6px;
@@ -35,6 +37,8 @@
   width: 200px;
   border: 1px solid #ccc;
   border-radius: 3px;
+  background-color: #fff;
+  color: #333;
 }
 
 /* ── Pagination controls ───────────────────────────────────────────────── */
@@ -79,3 +83,60 @@
 .at-page-info { margin: 0 6px; font-size: 0.9em; }
 .at-total-info { margin-left: 8px; color: #666; font-size: 0.85em; }
 .at-page-nav { margin-left: auto; }
+
+/* ── Area checkboxes ────────────────────────────────────────────────────── */
+.rdb-area-checks {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+}
+.rdb-area-checks label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ── Dark-mode overrides ───────────────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .rdb-legend { color: #aab0b8; }
+  html:not([data-theme="light"]) .rdb-pager-total { color: #aab0b8; }
+  html:not([data-theme="light"]) .rdb-select,
+  html:not([data-theme="light"]) .rdb-input {
+    background-color: #1e2127; color: #d6d9dc; border-color: #4a4f57;
+  }
+  html:not([data-theme="light"]) .rdb-pager-btn {
+    background-color: #1e2127; color: #d6d9dc; border-color: #4a4f57;
+  }
+  html:not([data-theme="light"]) .rdb-pager-btn:hover:not(:disabled) { background-color: #2a3038; }
+  html:not([data-theme="light"]) .at-label { color: #aab0b8; }
+  html:not([data-theme="light"]) .at-select {
+    background-color: #1e2127; color: #d6d9dc; border-color: #4a4f57;
+  }
+  html:not([data-theme="light"]) .at-btn {
+    background-color: #1e2127; color: #d6d9dc; border-color: #4a4f57;
+  }
+  html:not([data-theme="light"]) .at-btn:hover:not(:disabled) { background-color: #2a3038; }
+  html:not([data-theme="light"]) .at-total-info { color: #aab0b8; }
+}
+html[data-theme="dark"] .rdb-legend { color: #aab0b8; }
+html[data-theme="dark"] .rdb-pager-total { color: #aab0b8; }
+html[data-theme="dark"] .rdb-select,
+html[data-theme="dark"] .rdb-input {
+  background-color: #1e2127; color: #d6d9dc; border-color: #4a4f57;
+}
+html[data-theme="dark"] .rdb-pager-btn {
+  background-color: #1e2127; color: #d6d9dc; border-color: #4a4f57;
+}
+html[data-theme="dark"] .rdb-pager-btn:hover:not(:disabled) { background-color: #2a3038; }
+html[data-theme="dark"] .at-label { color: #aab0b8; }
+html[data-theme="dark"] .at-select {
+  background-color: #1e2127; color: #d6d9dc; border-color: #4a4f57;
+}
+html[data-theme="dark"] .at-btn {
+  background-color: #1e2127; color: #d6d9dc; border-color: #4a4f57;
+}
+html[data-theme="dark"] .at-btn:hover:not(:disabled) { background-color: #2a3038; }
+html[data-theme="dark"] .at-total-info { color: #aab0b8; }

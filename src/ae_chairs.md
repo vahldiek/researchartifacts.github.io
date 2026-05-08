@@ -53,6 +53,16 @@ Of all chairs, **{{ site.data.committee_stats.chair_stats.pipeline_promoted_pct 
 
 ---
 
+## Chair Flow Across Conferences
+
+How do AE chairs flow between conferences? This Sankey diagram shows shared chairs between conference AECs in consecutive years.
+
+<div class="rdb-chart-wide">
+  <div id="chairFlowSankey" style="width:100%;height:500px"></div>
+</div>
+
+---
+
 ## Geographic Diversity
 
 Chairs represent **{{ site.data.committee_stats.chair_stats.total_countries }} countries** across **{{ site.data.committee_stats.chair_stats.total_continents }} continents**.
@@ -60,19 +70,27 @@ Chairs represent **{{ site.data.committee_stats.chair_stats.total_countries }} c
 <div class="rdb-chart-row">
   <div class="rdb-chart-col">
     <div class="rdb-chart-wrap rdb-chart-wrap--xl">
-      <canvas id="chairContinentChart"></canvas>
+      <div id="chairContinentChart" style="height:300px"></div>
     </div>
   </div>
   <div class="rdb-chart-col">
     <div class="rdb-chart-wrap rdb-chart-wrap--xl">
-      <canvas id="chairCountryChart"></canvas>
+      <div id="chairCountryChart" style="height:300px"></div>
     </div>
   </div>
 </div>
 
 <script>
-(function() {
-  var SYS_COLOR  = '#2980b9';
+document.addEventListener('DOMContentLoaded', function() {
+  var CONF_COLORS = {
+    'ATC': '#2563eb', 'OSDI': '#1d4ed8', 'EUROSYS': '#3b82f6',
+    'SOSP': '#60a5fa', 'FAST': '#93c5fd', 'SC': '#7dd3fc',
+    'USENIXSEC': '#dc2626', 'NDSS': '#ef4444', 'ACSAC': '#f87171',
+    'CHES': '#fb923c', 'PETS': '#f97316', 'WOOT': '#fdba74',
+    'SYSTEX': '#a78bfa', 'VEHICLESEC': '#c084fc', 'CAIS': '#e9d5ff'
+  };
+  function confColor(name) { return CONF_COLORS[name] || '#6b7280'; }
+
   var CONTINENT_COLORS = {
     'North America': '#2980b9',
     'Europe': '#27ae60',
@@ -88,58 +106,141 @@ Chairs represent **{{ site.data.committee_stats.chair_stats.total_countries }} c
       var geo = data.geographic;
       if (!geo) return;
 
-      // Continent doughnut
-      var continentCanvas = document.getElementById('chairContinentChart');
-      if (continentCanvas) {
+      // Continent doughnut (ECharts pie)
+      var continentEl = document.getElementById('chairContinentChart');
+      if (continentEl) {
         var continents = Object.entries(geo.by_continent).sort(function(a,b) { return b[1]-a[1]; });
-        new Chart(continentCanvas, {
-          type: 'doughnut',
-          data: {
-            labels: continents.map(function(c) { return c[0]; }),
-            datasets: [{
-              data: continents.map(function(c) { return c[1]; }),
-              backgroundColor: continents.map(function(c) { return CONTINENT_COLORS[c[0]] || '#95a5a6'; })
-            }]
-          },
-          options: {
-            responsive: true, maintainAspectRatio: false,
-            plugins: {
-              title: { display: true, text: 'Chairs by Continent' },
-              legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } }
-            }
-          }
+        var chart = ReproDB.initEChart(continentEl);
+        chart.setOption({
+          title: { text: 'Chairs by Continent', left: 'center' },
+          tooltip: { trigger: 'item', formatter: '{b}: {c} ({d}%)' },
+          legend: { bottom: 0, type: 'scroll' },
+          series: [{
+            type: 'pie', radius: ['35%', '65%'],
+            data: continents.map(function(c) { return { name: c[0], value: c[1], itemStyle: { color: CONTINENT_COLORS[c[0]] || '#95a5a6' } }; }),
+            label: { show: false }, emphasis: { label: { show: true, fontSize: 13 } }
+          }]
         });
+        ReproDB.registerEChart(chart);
       }
 
-      // Country horizontal bar
-      var countryCanvas = document.getElementById('chairCountryChart');
-      if (countryCanvas) {
-        var countries = Object.entries(geo.by_country).sort(function(a,b) { return b[1]-a[1]; }).slice(0, 15);
-        new Chart(countryCanvas, {
-          type: 'bar',
-          data: {
-            labels: countries.map(function(c) { return c[0]; }),
-            datasets: [{
-              label: 'Chairs',
-              data: countries.map(function(c) { return c[1]; }),
-              backgroundColor: SYS_COLOR
-            }]
-          },
-          options: {
-            indexAxis: 'y', responsive: true, maintainAspectRatio: false,
-            plugins: {
-              title: { display: true, text: 'Top Countries' },
-              legend: { display: false }
-            },
-            scales: {
-              x: { beginAtZero: true, title: { display: true, text: 'Chairs' } }
-            }
-          }
+      // Country horizontal bar (ECharts)
+      var countryEl = document.getElementById('chairCountryChart');
+      if (countryEl) {
+        var countries = Object.entries(geo.by_country).sort(function(a,b) { return b[1]-a[1]; }).slice(0, 15).reverse();
+        var chart2 = ReproDB.initEChart(countryEl);
+        chart2.setOption({
+          title: { text: 'Top Countries', left: 'center' },
+          tooltip: { trigger: 'axis' },
+          grid: { left: 100, right: 20, bottom: 50, top: 40 },
+          xAxis: { type: 'value', name: 'Chairs', min: 0, nameLocation: 'center', nameGap: 25 },
+          yAxis: { type: 'category', data: countries.map(function(c) { return c[0]; }) },
+          series: [{ type: 'bar', data: countries.map(function(c) { return c[1]; }), itemStyle: { color: '#2980b9' } }]
         });
+        ReproDB.registerEChart(chart2);
       }
     })
     .catch(function() {});
-})();
+
+  // Chair flow Sankey
+  fetch('{{ "/assets/data/ae_chairs.json" | relative_url }}')
+    .then(function(r) { return r.json(); })
+    .then(function(chairs) {
+      var el = document.getElementById('chairFlowSankey');
+      if (!el || !chairs.length) return;
+
+      var confYear = {};
+      chairs.forEach(function(ch) {
+        (ch.conferences || []).forEach(function(c) {
+          if (c.role !== 'chair') return;
+          var key = c.conference + '|' + c.year;
+          if (!confYear[key]) confYear[key] = {};
+          confYear[key][ch.name] = true;
+        });
+      });
+
+      var yearSet = {};
+      Object.keys(confYear).forEach(function(k) { yearSet[k.split('|')[1]] = true; });
+      var years = Object.keys(yearSet).map(Number).sort(function(a, b) { return a - b; });
+      if (years.length < 2) return;
+
+      var nodes = [], links = [], nodeSet = {};
+      function addNode(name, depth) {
+        if (!nodeSet[name]) { nodeSet[name] = true; nodes.push({ name: name, depth: depth }); }
+      }
+
+      Object.keys(confYear).forEach(function(key) {
+        var parts = key.split('|');
+        var label = parts[0] + ' ' + parts[1];
+        addNode(label, years.indexOf(Number(parts[1])));
+      });
+
+      for (var i = 0; i < years.length - 1; i++) {
+        var y1 = years[i], y2 = years[i + 1];
+        var confs1 = [], confs2 = [];
+        Object.keys(confYear).forEach(function(key) {
+          var parts = key.split('|');
+          if (Number(parts[1]) === y1) confs1.push(parts[0]);
+          if (Number(parts[1]) === y2) confs2.push(parts[0]);
+        });
+        confs1.forEach(function(c1) {
+          var m1 = confYear[c1 + '|' + y1] || {};
+          confs2.forEach(function(c2) {
+            var m2 = confYear[c2 + '|' + y2] || {};
+            var shared = 0;
+            Object.keys(m1).forEach(function(n) { if (m2[n]) shared++; });
+            if (shared >= 1) {
+              links.push({ source: c1 + ' ' + y1, target: c2 + ' ' + y2, value: shared });
+            }
+          });
+        });
+      }
+
+      var linkedNodes = {};
+      links.forEach(function(l) { linkedNodes[l.source] = true; linkedNodes[l.target] = true; });
+      nodes = nodes.filter(function(n) { return linkedNodes[n.name]; });
+
+      if (nodes.length === 0) return;
+
+      var chart = ReproDB.initEChart(el);
+      function setOption() {
+        var tc = ReproDB.themeColors();
+        chart.setOption({
+          title: {
+            text: 'AE Chair Flow Across Conferences',
+            subtext: 'Shared chairs between conference AECs in consecutive years',
+            left: 'center',
+            textStyle: { fontSize: 14, color: tc.text },
+            subtextStyle: { fontSize: 11, color: tc.textMuted }
+          },
+          tooltip: {
+            trigger: 'item',
+            formatter: function(params) {
+              if (params.dataType === 'edge')
+                return params.data.source + ' \u2192 ' + params.data.target + '<br/>' + params.data.value + ' shared chair(s)';
+              return params.name + '<br/>' + params.value + ' chair links';
+            }
+          },
+          series: [{
+            type: 'sankey',
+            top: 60, bottom: 20, left: 60, right: 60,
+            nodeGap: 14, nodeWidth: 18,
+            emphasis: { focus: 'adjacency' },
+            data: nodes.map(function(n) {
+              return { name: n.name, depth: n.depth, itemStyle: { color: confColor(n.name.split(' ')[0]) } };
+            }),
+            links: links,
+            lineStyle: { color: 'source', opacity: 0.3, curveness: 0.5 },
+            label: { show: true, fontSize: 10, color: tc.text }
+          }]
+        });
+      }
+      setOption();
+      ReproDB.registerEChart(chart);
+      ReproDB.onThemeChange(setOption);
+    })
+    .catch(function() {});
+});
 </script>
 
 ---

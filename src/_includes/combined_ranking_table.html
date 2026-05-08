@@ -1,5 +1,5 @@
 {% comment %}
-  Dynamic combined ranking table loaded from JSON with sorting and pagination.
+  Dynamic combined ranking table loaded from JSON using Tabulator + Alpine.js.
   Shows people ranked by combined_score (artifacts + AE committee memberships).
 
   Required page variables:
@@ -8,173 +8,327 @@
     page.security_data_url  — path to the security JSON file
 {% endcomment %}
 
-<div id="combined-controls" class="rdb-controls rdb-hidden">
-  <div class="rdb-controls-row">
-    <div class="rdb-control-group">
-      <label class="rdb-label">Area:</label>
-      <select id="areaFilter" class="rdb-select">
-        <option value="all" selected>All Conferences</option>
-        <option value="systems">Systems Only</option>
-        <option value="security">Security Only</option>
-      </select>
-    </div>
-    <div class="rdb-control-group">
-      <label class="rdb-label">Contribution Type:</label>
-      <select id="contributionFilter" class="rdb-select">
-        <option value="both" selected>Both (Artifacts + AE)</option>
-        <option value="artifacts_only">Artifacts Only</option>
-        <option value="ae_only">AE Service Only</option>
-      </select>
-    </div>
-    <div class="rdb-control-group">
-      <label class="rdb-label">Researcher:</label>
-      <input id="cNameSearch" type="text" placeholder="Search by name…" class="rdb-input">
-    </div>
-    <div class="rdb-control-group">
-      <label class="rdb-label">Affiliation:</label>
-      <input id="cAffSearch" type="text" placeholder="Search by affiliation…" class="rdb-input">
+<div markdown="0" x-data="combinedRanking()" x-init="boot()">
+  <div class="rdb-controls" x-show="loaded" x-cloak>
+    <div class="rdb-controls-row">
+      <div class="rdb-control-group">
+        <label class="rdb-label">Area:</label>
+        <span class="rdb-area-checks" role="group" aria-label="Area filter">
+          <label><input type="checkbox" x-model="areaSystems" @change="onAreaChange()"> Systems</label>
+          <label><input type="checkbox" x-model="areaSecurity" @change="onAreaChange()"> Security</label>
+        </span>
+      </div>
+      <div class="rdb-control-group">
+        <label class="rdb-label">Contribution:</label>
+        <span class="rdb-area-checks" role="group" aria-label="Contribution filter">
+          <label><input type="checkbox" x-model="contribArtifacts" @change="onContribChange()"> Artifacts</label>
+          <label><input type="checkbox" x-model="contribAE" @change="onContribChange()"> AE Service</label>
+        </span>
+      </div>
+      <div class="rdb-control-group">
+        <label class="rdb-label">Search:</label>
+        <input type="text" placeholder="Name or affiliation…" class="rdb-input"
+               x-ref="searchInput" @input="onSearchInput()" aria-label="Search rankings">
+      </div>
     </div>
   </div>
-</div>
 
-<div id="combined-legend" class="rdb-legend rdb-hidden">
-  <span id="combined-legend-text">Legend: #=Rank, Δ=Rank Change, S=Combined Score, AS=Artifact Score, AES=AE Service Score, A:E=Artifact:Evaluation Ratio, Ar=Artifacts, P=Papers, AR%=Artifact Rate, RR%=Repro Rate, AE=AE Service, Ch=Chaired</span>
-</div>
+  <div class="rdb-legend" x-show="loaded" x-cloak>
+    <span>Legend: #=Rank, Δ=Rank Change, S=Combined Score, AS=Artifact Score, AES=AE Service Score, A:E=Artifact:Evaluation Ratio, Ar=Artifacts, P=Papers, AR%=Artifact Rate, RR%=Repro Rate, AE=AE Service, Ch=Chaired</span>
+  </div>
 
-<div id="combinedLoading"><em>Loading combined ranking data…</em></div>
+  <div x-ref="loading" x-show="!loaded">
+    <em x-text="loadingMsg"></em>
+  </div>
 
-<table id="combinedTable" class="rdb-hidden">
-<thead><tr id="combinedHead"></tr></thead>
-<tbody id="combinedBody"></tbody>
-</table>
-
-<div id="combined-controls-bottom" class="rdb-pager rdb-hidden">
-  <button id="cPrevBtnB" class="rdb-pager-btn">&laquo; Prev</button>
-  <span id="cPageInfoB" class="rdb-pager-info"></span>
-  <button id="cNextBtnB" class="rdb-pager-btn">Next &raquo;</button>
-  <span id="cTotalInfo" class="rdb-pager-total"></span>
+  <div x-ref="tableEl" x-show="loaded" x-cloak></div>
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+function combinedRanking() {
   var escHtml = ReproDB.escHtml;
-  var baseUrl = '{{ "" | relative_url }}';
-  var nameQuery = '';
-  var affQuery = '';
+  var dataUrls = {
+    all:      '{{ page.combined_data_url | relative_url }}',
+    systems:  '{{ page.systems_data_url  | relative_url }}',
+    security: '{{ page.security_data_url | relative_url }}'
+  };
+  var historyUrl = '{{ "/assets/data/ranking_history.json" | relative_url }}';
+  var baseUrl    = '{{ "" | relative_url }}';
 
-  new ReproDB.RankingTable({
-    dataUrls: {
-      'all': '{{ page.combined_data_url | relative_url }}',
-      'systems': '{{ page.systems_data_url | relative_url }}',
-      'security': '{{ page.security_data_url | relative_url }}'
+  return {
+    area: '{{ page.default_area | default: "all" }}',
+    areaSystems: {% if page.default_area == "security" %}false{% else %}true{% endif %},
+    areaSecurity: {% if page.default_area == "systems" %}false{% else %}true{% endif %},
+    contribArtifacts: true,
+    contribAE: true,
+    contribFilter: 'both',
+    _searchTimer: null,
+    loaded: false,
+    loadingMsg: 'Loading combined ranking data…',
+    table: null,
+    allData: [],
+    prevSnapshot: null,
+    yearColumns: [],
+
+    /* ── lifecycle ─────────────────────────────────────────────────── */
+
+    boot: function() {
+      var self = this;
+      var el = this.$refs.loading;
+      if ('IntersectionObserver' in window && el) {
+        var io = new IntersectionObserver(function(entries) {
+          for (var i = 0; i < entries.length; i++) {
+            if (entries[i].isIntersecting) { io.disconnect(); self._doLoad(); break; }
+          }
+        }, { rootMargin: '300px 0px' });
+        io.observe(el);
+      } else {
+        this._doLoad();
+      }
     },
-    historyUrl: '{{ "/assets/data/ranking_history.json" | relative_url }}',
-    baseUrl: baseUrl,
-    nameKey: 'name',
-    historyLookupKey: 'name',
-    scoreColIdx: 4,
-    defaultArea: '{{ page.default_area | default: "all" }}',
-    totalLabel: 'people',
-    fixedCols: [
-      {label:'#',   key:'rank',           type:'num',   tip:'Rank'},
-      {label:'Δ',   key:'_trend',         type:'num',   tip:'Rank change from previous month'},
-      {label:'Researcher', key:'name',     type:'alpha', tip:'Researcher'},
-      {label:'Affiliation', key:'affiliation', type:'alpha', tip:'Affiliation'},
-      {label:'S',   key:'combined_score',  type:'num',   tip:'Combined score: ∑(A+F+R) + ∑(AE×3 + Chair×5)'},
-      {label:'AS',  key:'artifact_score',  type:'num',   tip:'Artifact score: Available×1 + Functional×1 + Reproduced×1'},
-      {label:'AES', key:'ae_score',        type:'num',   tip:'AE service score: Member×3 + Chair×5'},
-      {label:'A:E', key:'ae_ratio',        type:'num',   tip:'Artifact:Evaluation ratio (artifact_score/ae_score)'},
-      {label:'Ar',  key:'artifacts',       type:'num',   tip:'Total artifacts'},
-      {label:'P',   key:'total_papers',    type:'num',   tip:'Total papers'},
-      {label:'AR%', key:'artifact_pct',    type:'num',   tip:'Artifact rate: % papers with artifact'},
-      {label:'RR%', key:'repro_pct',       type:'num',   tip:'Reproducibility rate: % artifacts Reproduced'},
-      {label:'AE',  key:'ae_memberships',  type:'num',   tip:'AE memberships'},
-      {label:'Ch',  key:'chair_count',     type:'num',   tip:'Times chaired (★)'}
-    ],
 
-    // DOM element IDs
-    headId: 'combinedHead',
-    bodyId: 'combinedBody',
-    tableId: 'combinedTable',
-    loadingId: 'combinedLoading',
-    controlsId: 'combined-controls',
-    legendId: 'combined-legend',
-    pagerId: 'combined-controls-bottom',
-    prevBtnId: 'cPrevBtnB',
-    nextBtnId: 'cNextBtnB',
-    pageInfoId: 'cPageInfoB',
-    totalInfoId: 'cTotalInfo',
-    areaFilterId: 'areaFilter',
-    contributionFilterId: 'contributionFilter',
+    _doLoad: function() {
+      this.loadArea();
+      this._loadHistory();
+    },
 
-    applyExtraFilters: function(baseFiltered) {
-      var filtered = baseFiltered;
-      if (nameQuery) {
-        filtered = filtered.filter(function(c) {
-          return (c.name || '').toLowerCase().indexOf(nameQuery) !== -1;
+    onAreaChange: function() {
+      if (this.areaSystems && this.areaSecurity) this.area = 'all';
+      else if (this.areaSystems) this.area = 'systems';
+      else if (this.areaSecurity) this.area = 'security';
+      else this.area = 'all'; // neither checked → show all
+      this.loadArea();
+    },
+
+    _loadHistory: function() {
+      var self = this;
+      if (!historyUrl) return;
+      fetch(historyUrl).then(function(r) { return r.json(); }).catch(function() { return []; })
+        .then(function(h) {
+          if (h && h.length >= 2) {
+            self.prevSnapshot = h[h.length - 2].entries;
+            if (self.table) self.table.redraw(true);
+          }
+        });
+    },
+
+    /* ── data loading ──────────────────────────────────────────────── */
+
+    loadArea: function() {
+      var self = this;
+      if (!this.table) {
+        this.loaded = false;
+        this.loadingMsg = 'Loading ' + this.area + ' ranking data…';
+      }
+      ReproDB.fetchJSON(dataUrls[this.area])
+        .then(function(data) { self._initTable(data); })
+        .catch(function(e)   { self.loadingMsg = 'Failed to load data: ' + e; });
+    },
+
+    _initTable: function(data) {
+      this.allData = data;
+
+      // Extract year columns
+      var yrs = {};
+      data.forEach(function(d) {
+        if (d.years) Object.keys(d.years).forEach(function(y) { yrs[y] = true; });
+      });
+      this.yearColumns = Object.keys(yrs).map(function(y) { return parseInt(y) || y; })
+        .sort(function(a, b) { return b - a; });
+
+      // Assign dense ranks on full dataset (stable across filters)
+      ReproDB.assignDenseRanks(data, 'name');
+
+      var cols = this._buildColumns();
+      var rows = this._processData();
+
+      if (this.table) {
+        this.table.setColumns(cols);
+        this.table.replaceData(rows);
+      } else {
+        this.table = ReproDB.createTable(this.$refs.tableEl, {
+          columns: cols,
+          data: rows,
+          initialSort: [{ column: 'combined_score', dir: 'desc' }],
+          layout: 'fitColumns'
         });
       }
-      if (affQuery) {
-        filtered = filtered.filter(function(c) {
-          return (c.affiliation || '').toLowerCase().indexOf(affQuery) !== -1;
-        });
-      }
-      return filtered;
+      this.loaded = true;
+      this.applyFilters();
+      var tbl = this.table;
+      this.$nextTick(function() { tbl.redraw(true); });
     },
 
-    bindExtraEvents: function(table) {
-      var _searchTimer = null;
-      function onSearchInput() {
-        clearTimeout(_searchTimer);
-        _searchTimer = setTimeout(function() {
-          nameQuery = (document.getElementById('cNameSearch').value || '').toLowerCase().trim();
-          affQuery  = (document.getElementById('cAffSearch').value  || '').toLowerCase().trim();
-          table.applyFilter();
-          table.assignRanks();
-          table.render();
-        }, 200);
-      }
-      document.getElementById('cNameSearch').addEventListener('input', onSearchInput);
-      document.getElementById('cAffSearch').addEventListener('input', onSearchInput);
+    /* ── data processing ───────────────────────────────────────────── */
 
-      // Set initial area selection
-      document.getElementById('areaFilter').value = table.currentArea;
+    _processData: function() {
+      var yrs = this.yearColumns;
+      return this.allData.map(function(d) {
+        var row = Object.assign({}, d);
+        row._rank = d._baseRank || 0;
+        // Flatten years into yr_YYYY columns
+        for (var i = 0; i < yrs.length; i++) {
+          var y = yrs[i];
+          row['yr_' + y] = (d.years && (d.years[y] || d.years[String(y)])) || 0;
+        }
+        return row;
+      });
     },
 
-    renderRow: function(c, index, table) {
-      var cells = [];
-      var rankVal = c._originalRank || (index + 1);
-      var showRank = (index === table.currentPage * table.pageSize) || (c._showRank !== false);
-      var oldRank = (table.prevSnapshot && table.prevSnapshot[c.name]) ? table.prevSnapshot[c.name].rank : undefined;
-      var rankChange = ReproDB.rankChangeHtml(c._baseRank, oldRank);
-      cells.push('<td>' + (showRank ? rankVal : '') + '</td>');
-      cells.push('<td>' + rankChange + '</td>');
+    /* ── column definitions ────────────────────────────────────────── */
 
-      var displayName = (c.display_name || c.name || '').replace(/\t/g, ' ');
-      var profileUrl = baseUrl + '/profile.html?name=' + encodeURIComponent(c.name) + (c.author_id != null ? '&id=' + c.author_id : '');
-      cells.push('<td><a href="' + profileUrl + '">' + escHtml(displayName) + '</a></td>');
-      var aff = (c.display_affiliation || c.affiliation || '').replace(/^_/, '');
-      cells.push('<td>' + escHtml(aff) + '</td>');
+    _buildColumns: function() {
+      var self = this;
+      var dash = '\u2013';
 
-      var fm = table.filterMode;
-      cells.push('<td>' + (fm === 'both' ? '<strong>' : '') + (c.combined_score || 0) + (fm === 'both' ? '</strong>' : '') + '</td>');
-      cells.push('<td>' + (fm === 'artifacts_only' ? '<strong>' : '') + (c.artifact_score || 0) + (fm === 'artifacts_only' ? '</strong>' : '') + '</td>');
-      cells.push('<td>' + (fm === 'ae_only' ? '<strong>' : '') + (c.ae_score || 0) + (fm === 'ae_only' ? '</strong>' : '') + '</td>');
-      var aeRatioDisplay = (c.ae_ratio === null || c.ae_ratio === undefined) ? '∞' : (c.ae_ratio === 0 ? '0' : c.ae_ratio);
-      cells.push('<td>' + aeRatioDisplay + '</td>');
-      cells.push('<td>' + (c.artifact_count || '\u2013') + '</td>');
-      cells.push('<td>' + (c.total_papers || '\u2013') + '</td>');
-      cells.push('<td>' + (c.total_papers > 0 ? c.artifact_pct + '%' : '\u2013') + '</td>');
-      cells.push('<td>' + ((c.repro_pct !== undefined && c.repro_pct !== null) ? (c.repro_pct + '%') : '\u2013') + '</td>');
-      cells.push('<td>' + (c.ae_memberships || '\u2013') + '</td>');
-      cells.push('<td>' + (c.chair_count > 0 ? c.chair_count + ' \u2605' : '\u2013') + '</td>');
-      for (var j = 0; j < table.yearColumns.length; j++) {
-        var yr = table.yearColumns[j];
-        var cnt = c.years ? (c.years[yr] || c.years[String(yr)] || 0) : 0;
-        cells.push('<td>' + (cnt > 0 ? cnt : '\u2013') + '</td>');
+      var cols = [
+        { title: '#', field: '_rank', sorter: 'number', width: 40,
+          tooltip: 'Rank', headerSort: true },
+        { title: '\u0394', field: '_rank', sorter: 'number', width: 40,
+          tooltip: 'Rank change from previous month',
+          formatter: function(cell) {
+            var d = cell.getRow().getData();
+            var old = self.prevSnapshot && self.prevSnapshot[d.name]
+                    ? self.prevSnapshot[d.name].rank : undefined;
+            return ReproDB.rankChangeHtml(d._baseRank, old);
+          }
+        },
+        { title: 'Researcher', field: 'name', sorter: 'string', minWidth: 140,
+          tooltip: 'Researcher',
+          formatter: function(cell) {
+            var d = cell.getRow().getData();
+            var dn = (d.display_name || d.name || '').replace(/\t/g, ' ');
+            var url = baseUrl + '/profile.html?name=' + encodeURIComponent(d.name) +
+                      (d.author_id != null ? '&id=' + d.author_id : '');
+            return '<a href="' + url + '">' + escHtml(dn) + '</a>';
+          }
+        },
+        { title: 'Affiliation', field: 'affiliation', sorter: 'string', minWidth: 120,
+          tooltip: 'Affiliation',
+          formatter: function(cell) {
+            var d = cell.getRow().getData();
+            return escHtml((d.display_affiliation || d.affiliation || '').replace(/^_/, ''));
+          }
+        },
+        { title: 'S', field: 'combined_score', sorter: 'number', width: 45,
+          tooltip: 'Combined score: \u2211(A+F+R) + \u2211(AE\u00d73 + Chair\u00d75)',
+          formatter: function(cell) {
+            var v = cell.getValue() || 0;
+            return self.contribFilter === 'both' ? '<strong>' + v + '</strong>' : '' + v;
+          }
+        },
+        { title: 'AS', field: 'artifact_score', sorter: 'number', width: 45,
+          tooltip: 'Artifact score: Available\u00d71 + Functional\u00d71 + Reproduced\u00d71',
+          formatter: function(cell) {
+            var v = cell.getValue() || 0;
+            return self.contribFilter === 'artifacts_only' ? '<strong>' + v + '</strong>' : '' + v;
+          }
+        },
+        { title: 'AES', field: 'ae_score', sorter: 'number', width: 50,
+          tooltip: 'AE service score: Member\u00d73 + Chair\u00d75',
+          formatter: function(cell) {
+            var v = cell.getValue() || 0;
+            return self.contribFilter === 'ae_only' ? '<strong>' + v + '</strong>' : '' + v;
+          }
+        },
+        { title: 'A:E', field: 'ae_ratio', sorter: 'number', width: 45,
+          tooltip: 'Artifact:Evaluation ratio (artifact_score/ae_score)',
+          formatter: function(cell) {
+            var v = cell.getValue();
+            if (v === null || v === undefined) return '\u221E';
+            return v === 0 ? '0' : '' + v;
+          },
+          sorterParams: { alignEmptyValues: 'bottom' }
+        },
+        { title: 'Ar', field: 'artifact_count', sorter: 'number', width: 40,
+          tooltip: 'Total artifacts',
+          formatter: function(cell) { return cell.getValue() || dash; }
+        },
+        { title: 'P', field: 'total_papers', sorter: 'number', width: 40,
+          tooltip: 'Total papers',
+          formatter: function(cell) { return cell.getValue() || dash; }
+        },
+        { title: 'AR%', field: 'artifact_pct', sorter: 'number', width: 50,
+          tooltip: 'Artifact rate: % papers with artifact',
+          formatter: function(cell) {
+            var d = cell.getRow().getData();
+            return d.total_papers > 0 ? (cell.getValue() + '%') : dash;
+          }
+        },
+        { title: 'RR%', field: 'repro_pct', sorter: 'number', width: 50,
+          tooltip: 'Reproducibility rate: % artifacts Reproduced',
+          formatter: function(cell) {
+            var v = cell.getValue();
+            return (v !== undefined && v !== null) ? (v + '%') : dash;
+          }
+        },
+        { title: 'AE', field: 'ae_memberships', sorter: 'number', width: 40,
+          tooltip: 'AE memberships',
+          formatter: function(cell) { return cell.getValue() || dash; }
+        },
+        { title: 'Ch', field: 'chair_count', sorter: 'number', width: 45,
+          tooltip: 'Times chaired (\u2605)',
+          formatter: function(cell) {
+            var v = cell.getValue();
+            return v > 0 ? (v + ' \u2605') : dash;
+          }
+        }
+      ];
+
+      // Dynamic year columns
+      for (var i = 0; i < this.yearColumns.length; i++) {
+        (function(yr) {
+          cols.push({
+            title: '\'' + (yr % 100), field: 'yr_' + yr, sorter: 'number', width: 40,
+            formatter: function(cell) { var v = cell.getValue(); return v > 0 ? v : dash; }
+          });
+        })(this.yearColumns[i]);
       }
-      return cells.join('');
+
+      return cols;
+    },
+
+    /* ── filtering ─────────────────────────────────────────────────── */
+
+    onContribChange: function() {
+      if (this.contribArtifacts && this.contribAE) this.contribFilter = 'both';
+      else if (this.contribArtifacts) this.contribFilter = 'artifacts_only';
+      else if (this.contribAE) this.contribFilter = 'ae_only';
+      else this.contribFilter = 'both';
+      if (!this.table) return;
+      var sortField = this.contribFilter === 'artifacts_only' ? 'artifact_score' :
+                      this.contribFilter === 'ae_only' ? 'ae_score' : 'combined_score';
+      this.table.blockRedraw();
+      this.table.setSort(sortField, 'desc');
+      this.applyFilters();
+      this.table.restoreRedraw();
+    },
+
+    applyFilters: function() {
+      if (!this.table) return;
+      var fm = this.contribFilter;
+      var scoreField = fm === 'artifacts_only' ? 'artifact_score' :
+                       fm === 'ae_only'        ? 'ae_score' : 'combined_score';
+      var searchVal = (this.$refs.searchInput ? this.$refs.searchInput.value : '').trim().toLowerCase();
+
+      this.table.setFilter(function(data) {
+        // Contribution type
+        if (!(data[scoreField] > 0)) return false;
+        // Text search
+        if (searchVal) {
+          if ((data.name || '').toLowerCase().indexOf(searchVal) < 0 &&
+              (data.display_name || '').toLowerCase().indexOf(searchVal) < 0 &&
+              (data.affiliation || '').toLowerCase().indexOf(searchVal) < 0) return false;
+        }
+        return true;
+      });
+    },
+
+    onSearchInput: function() {
+      var self = this;
+      clearTimeout(this._searchTimer);
+      this._searchTimer = setTimeout(function() { self.applyFilters(); }, 200);
     }
-  }).boot();
-});
+  };
+}
 </script>

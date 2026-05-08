@@ -123,6 +123,7 @@ html {
   position: relative;
 }
 #hamburger-menu {
+  display: none;  /* default hidden; Alpine x-show overrides via inline style */
   list-style: none;
   padding: 0;
   margin: 0;
@@ -138,14 +139,7 @@ html {
   box-shadow: 0 4px 12px rgba(0,0,0,0.12);
   overflow: visible;
 }
-/* Initially hidden */
-#hamburger-menu.hidden {
-  display: none;
-}
-/* Shown when toggle opens it */
-#hamburger-menu:not(.hidden) {
-  display: block;
-}
+/* Visibility controlled by Alpine.js x-show="menuOpen" */
 #hamburger-menu .masthead__menu-item {
   border-bottom: 1px solid #eee;
   padding: 0;
@@ -341,7 +335,7 @@ a[href="#footer"] {
     color: #6cb6ff !important;
   }
   .page__content a:visited {
-    color: #b083eb !important;
+    color: #4a9ede !important;
   }
   .page__content a:hover {
     color: #99d1ff !important;

@@ -1,10 +1,70 @@
 /* reprodb-profile.css — Styles for the unified profile page and profile_common. */
 
+/* ── Search hero container ─────────────────────────────────────────────── */
+.profile-search-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+  text-align: center;
+  transition: min-height 0.4s ease, padding 0.4s ease;
+  padding: 0 16px;
+}
+.profile-search-hero.has-profile {
+  min-height: 0;
+  padding-top: 8px;
+  padding-bottom: 0;
+}
+.profile-search-hero-inner {
+  width: 100%;
+  max-width: 600px;
+  transition: max-width 0.4s ease;
+}
+.profile-search-hero.has-profile .profile-search-hero-inner {
+  max-width: 480px;
+}
+.profile-search-heading {
+  font-size: 1.4em;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 16px;
+  transition: font-size 0.4s ease, margin 0.4s ease, opacity 0.3s ease;
+}
+.profile-search-hero.has-profile .profile-search-heading {
+  font-size: 0;
+  margin: 0;
+  opacity: 0;
+  overflow: hidden;
+  height: 0;
+}
+
 /* ── Search box ────────────────────────────────────────────────────────── */
-.profile-search-box { padding:8px 14px; font-size:1em; width:100%; max-width:480px; border:1px solid #ccc; border-radius:4px; }
+.profile-search-box {
+  display: block;
+  width: 100%;
+  padding: 14px 48px 14px 20px;
+  font-size: 1.1em;
+  border: 2px solid #ddd;
+  border-radius: 28px;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: box-shadow 0.2s, border-color 0.2s;
+  box-sizing: border-box;
+}
+.profile-search-box:focus {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  border-color: #4285f4;
+}
+.profile-search-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
 
 /* ── Autocomplete results ──────────────────────────────────────────────── */
-.profile-search-results { list-style:none; padding:0; margin:4px 0 0 0; max-height:260px; overflow-y:auto; border:1px solid #ddd; border-radius:4px; position:absolute; background:#fff; z-index:100; width:100%; max-width:480px; }
+.profile-search-results { list-style:none; padding:0; margin:4px 0 0 0; max-height:260px; overflow-y:auto; border:1px solid #ddd; border-radius:12px; position:absolute; background:#fff; z-index:100; width:100%; box-shadow: 0 4px 16px rgba(0,0,0,0.10); }
 .profile-search-results li { padding:8px 14px; cursor:pointer; border-bottom:1px solid #f0f0f0; }
 .profile-search-results li:hover,
 .profile-search-results li.active { background:#e8f4f8; }
@@ -99,3 +159,77 @@
 .ranking-history-details summary h3 { display:inline; }
 .ranking-history-details summary::before { content:'▶ '; font-size:0.8em; color:#555; }
 .ranking-history-details[open] summary::before { content:'▼ '; }
+
+/* ── Dark-mode overrides ───────────────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .profile-search-heading { color: #aab0b8; }
+  html:not([data-theme="light"]) .profile-search-box {
+    background-color: #1e2127; color: #d6d9dc; border-color: #4a4f57;
+  }
+  html:not([data-theme="light"]) .profile-search-box:focus { border-color: #5a9cf5; box-shadow: 0 4px 16px rgba(0,0,0,0.3); }
+  html:not([data-theme="light"]) .profile-search-icon { stroke: #888; }
+  html:not([data-theme="light"]) .profile-search-results {
+    background: #1e2127; border-color: #4a4f57; color: #d6d9dc; box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  }
+  html:not([data-theme="light"]) .profile-search-results li { border-bottom-color: #383c43; color: #d6d9dc; }
+  html:not([data-theme="light"]) .profile-search-results li:hover,
+  html:not([data-theme="light"]) .profile-search-results li.active { background: #2a3038; }
+  html:not([data-theme="light"]) .profile-search-results .sr-detail { color: #aab0b8; }
+  html:not([data-theme="light"]) .profile-header .affil { color: #aab0b8; }
+  html:not([data-theme="light"]) .score-card { background: #23272d; border-color: #4a4f57; }
+  html:not([data-theme="light"]) .score-card .val { color: #d6d9dc; }
+  html:not([data-theme="light"]) .score-card .lbl { color: #aab0b8; }
+  html:not([data-theme="light"]) .share-btn { background: #23272d; border-color: #4a4f57; color: #aab0b8; }
+  html:not([data-theme="light"]) .share-btn:hover { background: #2a3038; }
+  html:not([data-theme="light"]) .profile-table th,
+  html:not([data-theme="light"]) .ae-table th,
+  html:not([data-theme="light"]) .inst-table th,
+  html:not([data-theme="light"]) .ae-inline-table th { background: #23272d; color: #d6d9dc; border-color: #4a4f57; }
+  html:not([data-theme="light"]) .profile-table td,
+  html:not([data-theme="light"]) .ae-table td,
+  html:not([data-theme="light"]) .inst-table td,
+  html:not([data-theme="light"]) .ae-inline-table td { border-color: #4a4f57; color: #d6d9dc; }
+  html:not([data-theme="light"]) .profile-table tr:nth-child(even),
+  html:not([data-theme="light"]) .ae-table tr:nth-child(even),
+  html:not([data-theme="light"]) .inst-table tr:nth-child(even) { background: #23272d; }
+  html:not([data-theme="light"]) .inst-table tr:hover { background: #2a3038; }
+  html:not([data-theme="light"]) .ae-detail-row td,
+  html:not([data-theme="light"]) .ae-detail-row:hover { background: #23272d; }
+  html:not([data-theme="light"]) .ranking-history-details summary::before { color: #aab0b8; }
+  html:not([data-theme="light"]) .avail-warn { color: #f0c040; background: #332b00; border-color: #665500; }
+}
+html[data-theme="dark"] .profile-search-heading { color: #aab0b8; }
+html[data-theme="dark"] .profile-search-box {
+  background-color: #1e2127; color: #d6d9dc; border-color: #4a4f57;
+}
+html[data-theme="dark"] .profile-search-box:focus { border-color: #5a9cf5; box-shadow: 0 4px 16px rgba(0,0,0,0.3); }
+html[data-theme="dark"] .profile-search-icon { stroke: #888; }
+html[data-theme="dark"] .profile-search-results {
+  background: #1e2127; border-color: #4a4f57; color: #d6d9dc; box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+html[data-theme="dark"] .profile-search-results li { border-bottom-color: #383c43; color: #d6d9dc; }
+html[data-theme="dark"] .profile-search-results li:hover,
+html[data-theme="dark"] .profile-search-results li.active { background: #2a3038; }
+html[data-theme="dark"] .profile-search-results .sr-detail { color: #aab0b8; }
+html[data-theme="dark"] .profile-header .affil { color: #aab0b8; }
+html[data-theme="dark"] .score-card { background: #23272d; border-color: #4a4f57; }
+html[data-theme="dark"] .score-card .val { color: #d6d9dc; }
+html[data-theme="dark"] .score-card .lbl { color: #aab0b8; }
+html[data-theme="dark"] .share-btn { background: #23272d; border-color: #4a4f57; color: #aab0b8; }
+html[data-theme="dark"] .share-btn:hover { background: #2a3038; }
+html[data-theme="dark"] .profile-table th,
+html[data-theme="dark"] .ae-table th,
+html[data-theme="dark"] .inst-table th,
+html[data-theme="dark"] .ae-inline-table th { background: #23272d; color: #d6d9dc; border-color: #4a4f57; }
+html[data-theme="dark"] .profile-table td,
+html[data-theme="dark"] .ae-table td,
+html[data-theme="dark"] .inst-table td,
+html[data-theme="dark"] .ae-inline-table td { border-color: #4a4f57; color: #d6d9dc; }
+html[data-theme="dark"] .profile-table tr:nth-child(even),
+html[data-theme="dark"] .ae-table tr:nth-child(even),
+html[data-theme="dark"] .inst-table tr:nth-child(even) { background: #23272d; }
+html[data-theme="dark"] .inst-table tr:hover { background: #2a3038; }
+html[data-theme="dark"] .ae-detail-row td,
+html[data-theme="dark"] .ae-detail-row:hover { background: #23272d; }
+html[data-theme="dark"] .ranking-history-details summary::before { color: #aab0b8; }
+html[data-theme="dark"] .avail-warn { color: #f0c040; background: #332b00; border-color: #665500; }

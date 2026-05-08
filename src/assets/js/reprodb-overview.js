@@ -1,37 +1,17 @@
 /**
  * reprodb-overview.js — Chart logic for the Systems vs. Security overview page.
  *
- * Depends on: Chart.js v4 (loaded globally via head/custom.html)
+ * Depends on: ECharts 5 (loaded globally via head/custom.html)
  *
  * Reads inline JSON data from a <script id="overview-data" type="application/json">
- * element injected by the Jekyll template. This keeps Liquid data-binding in the
- * .md file while all rendering logic lives here.
- *
- * Data shape expected:
- * {
- *   years: ["2017","2018",...],
- *   sysCounts: [0,0,...],
- *   secCounts: [12,22,...],
- *   totCounts: [12,22,...],
- *   conferences: [{ name, category, years: { "2017": 5, ... } }, ...],
- *   participationUrl: "/assets/data/participation_stats.json",
- *   sysInstUrl: "/assets/data/systems_institution_rankings.json",
- *   secInstUrl: "/assets/data/security_institution_rankings.json"
- * }
+ * element injected by the Jekyll template.
  */
 (function() {
   'use strict';
 
-  /* ---------- colour palette ---------- */
-  var SYS_COLOR  = '#2980b9';
-  var SEC_COLOR  = '#c0392b';
-  var BADGE_COLORS = {
-    evaluated:    '#95a5a6',
-    available:    '#27ae60',
-    functional:   '#2980b9',
-    reproducible: '#8e44ad',
-    reusable:     '#e67e22'
-  };
+  var SYS_COLOR  = ReproDB.COLORS.systems;
+  var SEC_COLOR  = ReproDB.COLORS.security;
+  var BADGE_COLORS = ReproDB.COLORS.badges;
 
   document.addEventListener('DOMContentLoaded', function() {
     var dataEl = document.getElementById('overview-data');
@@ -42,24 +22,22 @@
     var years = D.years;
 
     /* ===== 1. Artifact Growth Chart ===== */
-    var growthCanvas = document.getElementById('artifactGrowthChart');
-    if (growthCanvas) {
-      new Chart(growthCanvas, {
-        type: 'bar',
-        data: {
-          labels: years,
-          datasets: [
-            { label: 'Systems', data: D.sysCounts, backgroundColor: SYS_COLOR, stack: 'stack0', order: 2 },
-            { label: 'Security', data: D.secCounts, backgroundColor: SEC_COLOR, stack: 'stack0', order: 2 },
-            { label: 'Total', data: D.totCounts, type: 'line', borderColor: ReproDB.themeColors().totalLine, borderWidth: 2, pointRadius: 3, fill: false, order: 1 }
-          ]
-        },
-        options: {
-          responsive: true, maintainAspectRatio: false,
-          plugins: { title: { display: true, text: 'Evaluated Artifacts per Year' } },
-          scales: { x: { stacked: true }, y: { stacked: true, beginAtZero: true, title: { display: true, text: 'Artifacts' } } }
-        }
+    var growthEl = document.getElementById('artifactGrowthChart');
+    if (growthEl) {
+      var chart = ReproDB.initEChart(growthEl);
+      chart.setOption({
+        tooltip: { trigger: 'axis' },
+        legend: { bottom: 0, data: ['Systems', 'Security', 'Total'] },
+        grid: { containLabel: true, left: 40, right: 20, bottom: 50, top: 40 },
+        xAxis: { type: 'category', data: years },
+        yAxis: { type: 'value', name: 'Artifacts', min: 0 },
+        series: [
+          { name: 'Systems', type: 'bar', stack: 'artifacts', data: D.sysCounts, itemStyle: { color: SYS_COLOR } },
+          { name: 'Security', type: 'bar', stack: 'artifacts', data: D.secCounts, itemStyle: { color: SEC_COLOR } },
+          { name: 'Total', type: 'line', data: D.totCounts, itemStyle: { color: ReproDB.themeColors().totalLine }, lineStyle: { width: 2 }, symbolSize: 6, z: 10 }
+        ]
       });
+      ReproDB.registerEChart(chart);
     }
 
     /* ===== 2. Badge Distribution (per area, over time) ===== */
@@ -72,7 +50,7 @@
 
     (D.conferences || []).forEach(function(conf) {
       var cat = conf.category;
-      var ydata = conf.years_data; // array of {year, total, available, functional, reproducible, reusable}
+      var ydata = conf.years_data;
       if (!ydata) return;
       ydata.forEach(function(yd) {
         var y = String(yd.year);
@@ -80,8 +58,6 @@
         if (!bucket[y]) return;
         var t = yd.total, a = yd.available, f = yd.functional, r = yd.reproducible, u = yd.reusable;
         bucket[y].total += t;
-        /* If a conference-year has functional==total but no other badges,
-           those are really "evaluated only" (generic AE pass, no ACM badge). */
         var isEvalOnly = (cat === 'security' && a === 0 && r === 0 && u === 0 && f === t && f > 0);
         if (!isEvalOnly) {
           bucket[y].available += a;
@@ -105,25 +81,24 @@
       });
     }
 
-    function makeBadgeChart(canvasId, yearBadges, badges) {
-      var el = document.getElementById(canvasId);
+    function makeBadgeChart(elId, yearBadges, badges) {
+      var el = document.getElementById(elId);
       if (!el) return;
-      new Chart(el, {
-        type: 'line',
-        data: {
-          labels: years,
-          datasets: badges.map(function(badge) {
-            var lbl = badge === 'evaluated' ? 'Evaluated (no badge)' : badge.charAt(0).toUpperCase() + badge.slice(1);
-            var dash = badge === 'evaluated' ? [4, 4] : [];
-            return { label: lbl, data: badgeRateSeries(yearBadges, badge), borderColor: BADGE_COLORS[badge], borderDash: dash, fill: false, tension: 0.2, spanGaps: true };
-          })
-        },
-        options: {
-          responsive: true, maintainAspectRatio: false,
-          plugins: { title: { display: false } },
-          scales: { y: { beginAtZero: true, max: 100, title: { display: true, text: '% of Artifacts' } } }
-        }
+      var chart = ReproDB.initEChart(el);
+      chart.setOption({
+        tooltip: { trigger: 'axis' },
+        legend: { bottom: 0, data: badges.map(function(b) { return b === 'evaluated' ? 'Evaluated (no badge)' : b.charAt(0).toUpperCase() + b.slice(1); }) },
+        grid: { containLabel: true, left: 40, right: 20, bottom: 50, top: 20 },
+        xAxis: { type: 'category', data: years },
+        yAxis: { type: 'value', name: '% of Artifacts', min: 0, max: 100 },
+        series: badges.map(function(badge) {
+          var lbl = badge === 'evaluated' ? 'Evaluated (no badge)' : badge.charAt(0).toUpperCase() + badge.slice(1);
+          var opts = { name: lbl, type: 'line', data: badgeRateSeries(yearBadges, badge), itemStyle: { color: BADGE_COLORS[badge] }, smooth: 0.2, connectNulls: true, symbolSize: 4 };
+          if (badge === 'evaluated') opts.lineStyle = { type: 'dashed' };
+          return opts;
+        })
       });
+      ReproDB.registerEChart(chart);
     }
 
     makeBadgeChart('badgeChartSys', sysYearBadges, ['available', 'functional', 'reproducible', 'reusable']);
@@ -132,33 +107,29 @@
     /* Badge rate comparison overlay */
     var compareEl = document.getElementById('badgeRateCompareChart');
     if (compareEl) {
-      new Chart(compareEl, {
-        type: 'line',
-        data: {
-          labels: years,
-          datasets: [
-            { label: 'Systems — Available %',   data: badgeRateSeries(sysYearBadges, 'available'),    borderColor: SYS_COLOR, borderWidth: 2, borderDash: [2, 2], fill: false, tension: 0.2, spanGaps: true },
-            { label: 'Security — Available %',  data: badgeRateSeries(secYearBadges, 'available'),    borderColor: SEC_COLOR, borderWidth: 2, borderDash: [2, 2], fill: false, tension: 0.2, spanGaps: true },
-            { label: 'Systems — Functional %',  data: badgeRateSeries(sysYearBadges, 'functional'),   borderColor: SYS_COLOR, borderWidth: 2, borderDash: [5, 5], fill: false, tension: 0.2, spanGaps: true },
-            { label: 'Security — Functional %', data: badgeRateSeries(secYearBadges, 'functional'),   borderColor: SEC_COLOR, borderWidth: 2, borderDash: [5, 5], fill: false, tension: 0.2, spanGaps: true },
-            { label: 'Systems — Reproduced %',  data: badgeRateSeries(sysYearBadges, 'reproducible'), borderColor: SYS_COLOR, borderWidth: 3, fill: false, tension: 0.2, spanGaps: true },
-            { label: 'Security — Reproduced %', data: badgeRateSeries(secYearBadges, 'reproducible'), borderColor: SEC_COLOR, borderWidth: 3, fill: false, tension: 0.2, spanGaps: true }
-          ]
-        },
-        options: {
-          responsive: true, maintainAspectRatio: false,
-          interaction: { mode: 'index', intersect: false },
-          plugins: { title: { display: false }, tooltip: { enabled: true } },
-          scales: { y: { beginAtZero: true, max: 100, title: { display: true, text: '% of AE Artifacts' } } }
-        }
+      var cChart = ReproDB.initEChart(compareEl);
+      cChart.setOption({
+        tooltip: { trigger: 'axis' },
+        legend: { bottom: 0, type: 'scroll' },
+        grid: { containLabel: true, left: 40, right: 20, bottom: 60, top: 20 },
+        xAxis: { type: 'category', data: years },
+        yAxis: { type: 'value', name: '% of AE Artifacts', min: 0, max: 100 },
+        series: [
+          { name: 'Systems \u2014 Available %', type: 'line', data: badgeRateSeries(sysYearBadges, 'available'), itemStyle: { color: SYS_COLOR }, lineStyle: { type: 'dashed', width: 2 }, smooth: 0.2, connectNulls: true, symbolSize: 4 },
+          { name: 'Security \u2014 Available %', type: 'line', data: badgeRateSeries(secYearBadges, 'available'), itemStyle: { color: SEC_COLOR }, lineStyle: { type: 'dashed', width: 2 }, smooth: 0.2, connectNulls: true, symbolSize: 4 },
+          { name: 'Systems \u2014 Functional %', type: 'line', data: badgeRateSeries(sysYearBadges, 'functional'), itemStyle: { color: SYS_COLOR }, lineStyle: { type: [5, 5], width: 2 }, smooth: 0.2, connectNulls: true, symbolSize: 4 },
+          { name: 'Security \u2014 Functional %', type: 'line', data: badgeRateSeries(secYearBadges, 'functional'), itemStyle: { color: SEC_COLOR }, lineStyle: { type: [5, 5], width: 2 }, smooth: 0.2, connectNulls: true, symbolSize: 4 },
+          { name: 'Systems \u2014 Reproduced %', type: 'line', data: badgeRateSeries(sysYearBadges, 'reproducible'), itemStyle: { color: SYS_COLOR }, lineStyle: { width: 3 }, smooth: 0.2, connectNulls: true, symbolSize: 4 },
+          { name: 'Security \u2014 Reproduced %', type: 'line', data: badgeRateSeries(secYearBadges, 'reproducible'), itemStyle: { color: SEC_COLOR }, lineStyle: { width: 3 }, smooth: 0.2, connectNulls: true, symbolSize: 4 }
+        ]
       });
+      ReproDB.registerEChart(cChart);
     }
 
-    /* ===== 3. AE Participation Rates (% of all accepted papers) ===== */
+    /* ===== 3. AE Participation Rates ===== */
     function makeCombinedParticipationChart(sysData, secData) {
       var el = document.getElementById('partRateChartCombined');
       if (!el) return;
-      /* Merge year labels from both areas */
       var yrSet = {};
       if (sysData && sysData.years) sysData.years.forEach(function(y) { yrSet[y] = true; });
       if (secData && secData.years) secData.years.forEach(function(y) { yrSet[y] = true; });
@@ -171,65 +142,63 @@
         return yrs.map(function(y) { return map[y] !== undefined ? areaData.participation_pct[map[y]] : null; });
       }
 
-      new Chart(el, {
-        type: 'line',
-        data: {
-          labels: yrs,
-          datasets: [
-            { label: 'Systems — AE Participation',  data: alignData(sysData), borderColor: SYS_COLOR, borderWidth: 3, fill: false, tension: 0.2, spanGaps: true },
-            { label: 'Security — AE Participation', data: alignData(secData), borderColor: SEC_COLOR, borderWidth: 3, fill: false, tension: 0.2, spanGaps: true }
-          ]
-        },
-        options: {
-          responsive: true, maintainAspectRatio: false,
-          plugins: { title: { display: true, text: 'AE Participation — % of All Accepted Papers' } },
-          scales: { y: { beginAtZero: true, max: 100, title: { display: true, text: '%' } } }
-        }
+      var chart = ReproDB.initEChart(el);
+      chart.setOption({
+        title: { text: 'AE Participation \u2014 % of All Accepted Papers', left: 'center', textStyle: { fontSize: 14 } },
+        tooltip: { trigger: 'axis' },
+        legend: { bottom: 0 },
+        grid: { containLabel: true, left: 40, right: 20, bottom: 50, top: 50 },
+        xAxis: { type: 'category', data: yrs },
+        yAxis: { type: 'value', name: '%', min: 0, max: 100 },
+        series: [
+          { name: 'Systems \u2014 AE Participation', type: 'line', data: alignData(sysData), itemStyle: { color: SYS_COLOR }, lineStyle: { width: 3 }, smooth: 0.2, connectNulls: true, symbolSize: 5 },
+          { name: 'Security \u2014 AE Participation', type: 'line', data: alignData(secData), itemStyle: { color: SEC_COLOR }, lineStyle: { width: 3 }, smooth: 0.2, connectNulls: true, symbolSize: 5 }
+        ]
       });
+      ReproDB.registerEChart(chart);
     }
 
     if (D.participationUrl) {
-      fetch(D.participationUrl)
-        .then(function(r) { return r.json(); })
+      ReproDB.fetchJSON(D.participationUrl)
         .then(function(data) {
-          if (data.by_area) {
-            makeCombinedParticipationChart(data.by_area.systems, data.by_area.security);
-          }
+          if (data.by_area) makeCombinedParticipationChart(data.by_area.systems, data.by_area.security);
         });
     }
 
     /* ===== 4. Top Institutions by Area ===== */
-    function makeInstBar(canvasId, data, title, color) {
-      var el = document.getElementById(canvasId);
+    function makeInstBar(elId, data, title, color) {
+      var el = document.getElementById(elId);
       if (!el) return;
       data.sort(function(a, b) { return (b.combined_score || 0) - (a.combined_score || 0); });
       var top = data.slice(0, 10);
-      var labels = top.map(function(e) { var n = e.affiliation || ''; return n.length > 30 ? n.substring(0, 28) + '…' : n; });
-      new Chart(el, {
-        type: 'bar',
-        data: {
-          labels: labels,
-          datasets: [
-            { label: 'Artifact Score',   data: top.map(function(e) { return e.artifact_score || 0; }), backgroundColor: color },
-            { label: 'AE Service Score', data: top.map(function(e) { return e.ae_score || 0; }),       backgroundColor: 'rgba(150,150,150,0.5)' }
-          ]
-        },
-        options: {
-          indexAxis: 'y', responsive: true, maintainAspectRatio: false,
-          plugins: { title: { display: true, text: title + ' — Top 10 by Combined Score' } },
-          scales: { x: { stacked: true, title: { display: true, text: 'Score' } }, y: { stacked: true } }
-        }
+      var labels = top.map(function(e) { var n = e.affiliation || ''; return n.length > 30 ? n.substring(0, 28) + '\u2026' : n; });
+      labels.reverse();
+      var artData = top.map(function(e) { return e.artifact_score || 0; }).reverse();
+      var aeData = top.map(function(e) { return e.ae_score || 0; }).reverse();
+
+      var chart = ReproDB.initEChart(el);
+      chart.setOption({
+        title: { text: title + ' \u2014 Top 10 by Combined Score', left: 'center', textStyle: { fontSize: 13 } },
+        tooltip: { trigger: 'axis' },
+        legend: { show: false },
+        grid: { containLabel: true, left: 40, right: 20, bottom: 50, top: 50 },
+        xAxis: { type: 'value', name: 'Score', nameLocation: 'center', nameGap: 25 },
+        yAxis: { type: 'category', data: labels },
+        series: [
+          { name: 'Artifact Score', type: 'bar', stack: 'total', data: artData, itemStyle: { color: color } },
+          { name: 'AE Service Score', type: 'bar', stack: 'total', data: aeData, itemStyle: { color: 'rgba(150,150,150,0.5)' } }
+        ]
       });
+      ReproDB.registerEChart(chart);
     }
 
     function lerpColor(ratio) {
-      /* ratio: 0 = pure security, 1 = pure systems */
       var sR = 41, sG = 128, sB = 185;
       var eR = 192, eG = 57, eB = 43;
       var r = Math.round(eR + (sR - eR) * ratio);
       var g = Math.round(eG + (sG - eG) * ratio);
       var b = Math.round(eB + (sB - eB) * ratio);
-      return { bg: 'rgba(' + r + ',' + g + ',' + b + ',0.5)', border: 'rgb(' + r + ',' + g + ',' + b + ')' };
+      return 'rgb(' + r + ',' + g + ',' + b + ')';
     }
 
     function makeInstScatter(sysData, secData) {
@@ -250,52 +219,35 @@
       addToMap(sysData, 'sys');
       addToMap(secData, 'sec');
 
-      var points = [];
+      var scatterData = [];
       Object.keys(instMap).forEach(function(name) {
         var inst = instMap[name];
         var totalCombined = inst.sys_combined + inst.sec_combined;
         if (totalCombined < minScore) return;
         var sysRatio = totalCombined > 0 ? inst.sys_combined / totalCombined : 0.5;
-        var col = lerpColor(sysRatio);
-        points.push({
-          x: inst.sys_artifact + inst.sec_artifact,
-          y: inst.sys_ae + inst.sec_ae,
-          r: Math.max(3, Math.sqrt(totalCombined) * 0.8),
+        scatterData.push({
+          value: [inst.sys_artifact + inst.sec_artifact, inst.sys_ae + inst.sec_ae],
+          symbolSize: Math.max(6, Math.sqrt(totalCombined) * 1.6),
+          itemStyle: { color: lerpColor(sysRatio) },
           label: name,
-          sysRatio: sysRatio,
-          bgColor: col.bg,
-          borderColor: col.border
+          sysRatio: sysRatio
         });
       });
 
-      new Chart(el, {
-        type: 'bubble',
-        data: {
-          datasets: [{
-            label: 'Institutions',
-            data: points,
-            backgroundColor: points.map(function(p) { return p.bgColor; }),
-            borderColor: points.map(function(p) { return p.borderColor; }),
-            borderWidth: 1
-          }]
-        },
-        options: {
-          responsive: true, maintainAspectRatio: false,
-          plugins: {
-            title: { display: true, text: 'Institutional Ecosystem: Artifact Creation vs. AE Service' },
-            legend: { display: false },
-            tooltip: { callbacks: { label: function(ctx) {
-              var p = ctx.raw;
-              var pct = Math.round(p.sysRatio * 100);
-              return p.label + ' (artifacts: ' + p.x + ', AE: ' + p.y + ', ' + pct + '% systems)';
-            } } }
-          },
-          scales: {
-            x: { title: { display: true, text: 'Artifact Score' }, beginAtZero: true },
-            y: { title: { display: true, text: 'AE Service Score' }, beginAtZero: true }
-          }
-        }
+      var chart = ReproDB.initEChart(el);
+      chart.setOption({
+        title: { text: 'Institutional Ecosystem: Artifact Creation vs. AE Service', left: 'center', textStyle: { fontSize: 13 } },
+        tooltip: { formatter: function(p) {
+          var d = p.data;
+          var pct = Math.round(d.sysRatio * 100);
+          return d.label + '<br/>Artifacts: ' + d.value[0] + '<br/>AE: ' + d.value[1] + '<br/>' + pct + '% systems';
+        } },
+        grid: { containLabel: true, left: 40, right: 20, bottom: 50, top: 50 },
+        xAxis: { type: 'value', name: 'Artifact Score', min: 0, nameLocation: 'center', nameGap: 25 },
+        yAxis: { type: 'value', name: 'AE Service Score', min: 0 },
+        series: [{ type: 'scatter', data: scatterData }]
       });
+      ReproDB.registerEChart(chart);
 
       /* Draw gradient legend */
       var legendCanvas = document.getElementById('instScatterLegend');
@@ -308,8 +260,7 @@
         var lctx = legendCanvas.getContext('2d');
         lctx.scale(2, 2);
         for (var i = 0; i < lw; i++) {
-          var c = lerpColor(i / (lw - 1));
-          lctx.fillStyle = c.border;
+          lctx.fillStyle = lerpColor(i / (lw - 1));
           lctx.fillRect(i, 0, 1, lh);
         }
       }
@@ -317,8 +268,8 @@
 
     if (D.sysInstUrl && D.secInstUrl) {
       Promise.all([
-        fetch(D.sysInstUrl).then(function(r) { return r.json(); }),
-        fetch(D.secInstUrl).then(function(r) { return r.json(); })
+        ReproDB.fetchJSON(D.sysInstUrl),
+        ReproDB.fetchJSON(D.secInstUrl)
       ]).then(function(results) {
         var sysInst = results[0], secInst = results[1];
         makeInstBar('instChartSys', sysInst, 'Systems', SYS_COLOR);
@@ -327,24 +278,27 @@
       });
     }
 
-    /* ===== 5. Conference Timeline Heatmap ===== */
-    var hmCanvas = document.getElementById('timelineHeatmap');
-    if (hmCanvas && D.conferences) {
+    /* ===== 5. Conference Timeline Heatmap (ECharts) ===== */
+    var hmEl = document.getElementById('timelineHeatmap');
+    if (hmEl && D.conferences) {
       var confs = D.conferences.slice().sort(function(a, b) {
         if (a.category !== b.category) return a.category === 'systems' ? -1 : 1;
         return a.name.localeCompare(b.name);
       });
 
-      /* Build year → count lookup per conference */
-      var confData = confs.map(function(c) {
+      var confNames = confs.map(function(c) { return c.name; });
+      var confCategories = confs.map(function(c) { return c.category; });
+      var rawHeatData = [];
+      var maxVal = 0;
+
+      confs.forEach(function(c, ci) {
         var yrs = {};
         if (c.years_data) c.years_data.forEach(function(yd) { yrs[yd.year] = yd.total; });
-        return { name: c.name, category: c.category, years: yrs };
-      });
-
-      var maxVal = 0;
-      confData.forEach(function(c) {
-        years.forEach(function(y) { if (c.years[y] && c.years[y] > maxVal) maxVal = c.years[y]; });
+        years.forEach(function(y, yi) {
+          var v = yrs[y] || 0;
+          rawHeatData.push({ x: yi, y: ci, v: v, cat: confCategories[ci] });
+          if (v > maxVal) maxVal = v;
+        });
       });
 
       function cellColor(v, category) {
@@ -360,91 +314,73 @@
           }
           return 'rgba(192,57,43,' + (0.15 + t * 0.7) + ')';
         }
-        // systems (blue)
         if (dark) {
-          var r = Math.round(20 + 20 * t);
-          var g = Math.round(50 + 70 * t);
-          var b = Math.round(80 + 130 * t);
-          return 'rgb(' + r + ',' + g + ',' + b + ')';
+          var r2 = Math.round(20 + 20 * t);
+          var g2 = Math.round(50 + 70 * t);
+          var b2 = Math.round(80 + 130 * t);
+          return 'rgb(' + r2 + ',' + g2 + ',' + b2 + ')';
         }
         return 'rgba(41,128,185,' + (0.15 + t * 0.7) + ')';
       }
 
-      function drawTimelineHeatmap() {
-        var cellW = 40, cellH = 28, padL = 90, padT = 30, padB = 10, padR = 10;
-        var canvasW = padL + years.length * cellW + padR;
-        var canvasH = padT + confData.length * cellH + padB;
-
-        hmCanvas.width  = canvasW * 2;
-        hmCanvas.height = canvasH * 2;
-        hmCanvas.style.width  = canvasW + 'px';
-        hmCanvas.style.height = canvasH + 'px';
-        var ctx = hmCanvas.getContext('2d');
-        ctx.scale(2, 2);
-
+      function labelColor(v) {
+        var dark = ReproDB.isDark();
         var tc = ReproDB.themeColors();
-        ctx.font = '11px sans-serif';
-        ctx.fillStyle = tc.text;
-        ctx.textAlign = 'center';
-        years.forEach(function(y, yi) {
-          ctx.fillText(y, padL + yi * cellW + cellW / 2, padT - 8);
-        });
-
-        confData.forEach(function(c, ci) {
-          var rowY = padT + ci * cellH;
-          ctx.font = '11px sans-serif';
-          ctx.fillStyle = tc.text;
-          ctx.textAlign = 'right';
-          ctx.fillText(c.name, padL - 6, rowY + cellH / 2 + 4);
-
-          years.forEach(function(y, yi) {
-            var v = c.years[y] || 0;
-            var cellX = padL + yi * cellW;
-            ctx.fillStyle = cellColor(v, c.category);
-            ctx.fillRect(cellX + 1, rowY + 1, cellW - 2, cellH - 2);
-            ctx.strokeStyle = tc.grid;
-            ctx.lineWidth = 0.5;
-            ctx.strokeRect(cellX + 1, rowY + 1, cellW - 2, cellH - 2);
-            if (v > 0) {
-              ctx.font = '10px sans-serif';
-              var textThreshold = ReproDB.isDark() ? 0.25 : 0.6;
-              ctx.fillStyle = v / maxVal > textThreshold ? '#fff' : tc.text;
-              ctx.textAlign = 'center';
-              ctx.fillText(v, cellX + cellW / 2, rowY + cellH / 2 + 4);
-            }
-          });
-        });
-
-        var sysCount = confData.filter(function(c) { return c.category === 'systems'; }).length;
-        if (sysCount > 0 && sysCount < confData.length) {
-          var sepY = padT + sysCount * cellH;
-          ctx.strokeStyle = tc.separator;
-          ctx.lineWidth = 1.5;
-          ctx.beginPath();
-          ctx.moveTo(padL, sepY);
-          ctx.lineTo(padL + years.length * cellW, sepY);
-          ctx.stroke();
-
-          ctx.font = 'bold 10px sans-serif';
-          ctx.fillStyle = tc.textMuted;
-          ctx.save();
-          ctx.translate(10, padT + sysCount * cellH / 2);
-          ctx.rotate(-Math.PI / 2);
-          ctx.textAlign = 'center';
-          ctx.fillText('Systems', 0, 0);
-          ctx.restore();
-          ctx.save();
-          var secCount = confData.length - sysCount;
-          ctx.translate(10, padT + sysCount * cellH + secCount * cellH / 2);
-          ctx.rotate(-Math.PI / 2);
-          ctx.textAlign = 'center';
-          ctx.fillText('Security', 0, 0);
-          ctx.restore();
-        }
+        var t = maxVal > 0 ? v / maxVal : 0;
+        var textThreshold = dark ? 0.25 : 0.6;
+        return (v > 0 && t > textThreshold) ? '#fff' : tc.text;
       }
 
-      drawTimelineHeatmap();
-      ReproDB.onThemeChange(drawTimelineHeatmap);
+      function buildHeatData() {
+        return rawHeatData.map(function(d) {
+          return { value: [d.x, d.y, d.v], itemStyle: { color: cellColor(d.v, d.cat) }, label: { color: labelColor(d.v) } };
+        });
+      }
+
+      var hmChart = ReproDB.initEChart(hmEl);
+
+      function setHeatmapOption() {
+        var dark = ReproDB.isDark();
+        var tc = ReproDB.themeColors();
+        hmChart.setOption({
+          tooltip: { formatter: function(p) { return confNames[p.value[1]] + ' (' + years[p.value[0]] + '): ' + p.value[2] + ' artifacts'; } },
+          grid: { containLabel: true, left: 20, right: 20, bottom: 80, top: 30 },
+          xAxis: { type: 'category', data: years, splitArea: { show: false } },
+          yAxis: { type: 'category', data: confNames, splitArea: { show: false }, inverse: true },
+          graphic: [
+            /* Systems gradient legend */
+            { type: 'rect', left: 'center', bottom: 28, shape: { width: 120, height: 12 }, z: 100,
+              style: { fill: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+                { offset: 0, color: dark ? 'rgba(50,55,65,0.5)' : 'rgba(220,220,220,0.3)' },
+                { offset: 1, color: dark ? 'rgb(40,120,210)' : 'rgba(41,128,185,0.85)' }
+              ]) }
+            },
+            { type: 'text', left: 'center', bottom: 42, z: 100,
+              style: { text: 'Systems', fill: tc.text, fontSize: 11, textAlign: 'center' } },
+            /* Security gradient legend */
+            { type: 'rect', left: 'center', bottom: 4, shape: { width: 120, height: 12 }, z: 100,
+              style: { fill: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+                { offset: 0, color: dark ? 'rgba(50,55,65,0.5)' : 'rgba(220,220,220,0.3)' },
+                { offset: 1, color: dark ? 'rgb(220,40,35)' : 'rgba(192,57,43,0.85)' }
+              ]) }
+            },
+            { type: 'text', left: 'center', bottom: 18, z: 100,
+              style: { text: 'Security', fill: tc.text, fontSize: 11, textAlign: 'center' } }
+          ],
+          series: [{
+            type: 'heatmap', data: buildHeatData(), label: { show: true, fontSize: 10,
+              formatter: function(p) { return p.value[2] > 0 ? p.value[2] : ''; }
+            },
+            itemStyle: {
+              borderColor: dark ? '#333' : '#fff', borderWidth: 1
+            }
+          }]
+        });
+      }
+
+      setHeatmapOption();
+      ReproDB.registerEChart(hmChart);
+      ReproDB.onThemeChange(setHeatmapOption);
     }
   });
 })();

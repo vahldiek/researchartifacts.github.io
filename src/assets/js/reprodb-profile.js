@@ -5,10 +5,7 @@
 var ReproDBProfile = (function() {
   'use strict';
 
-  function escHtml(s) {
-    if (!s) return '';
-    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-  }
+  var escHtml = ReproDB.escHtml;
 
   function cleanName(n) {
     return (n || '').replace(/\s+\d{4}$/, '').replace(/\t/g, ' ');
@@ -103,6 +100,8 @@ var ReproDBProfile = (function() {
       var result = cfg.onSelect(key);
       if (!result) return;
       if (result.displayValue !== undefined) searchBox.value = result.displayValue;
+      var hero = searchBox.closest('.profile-search-hero');
+      if (hero) hero.classList.add('has-profile');
       var url = new URL(window.location);
       url.searchParams.delete('q');
       url.searchParams.delete('name');
@@ -163,6 +162,8 @@ var ReproDBProfile = (function() {
         if (resolved && resolved.key) {
           searchBox.value = resolved.displayValue;
           cfg.onSelect(resolved.key);
+          var hero = searchBox.closest('.profile-search-hero');
+          if (hero) hero.classList.add('has-profile');
           showShare();
         } else {
           var q = (resolved && resolved.search) || params.get('q');
@@ -177,11 +178,60 @@ var ReproDBProfile = (function() {
     };
   }
 
+  /**
+   * Normalize an AE entry (array or object) to {conference, year, role}.
+   */
+  function parseAEEntry(entry) {
+    if (Array.isArray(entry)) return { conference: entry[0], year: entry[1], role: entry.length > 2 ? entry[2] : 'member' };
+    return { conference: entry.conference || entry, year: entry.year || '', role: entry.role || 'member' };
+  }
+
+  /**
+   * Render a dual-axis ECharts history chart (score + rank).
+   * @param {string} elId        – chart container element ID
+   * @param {string} sectionId   – wrapping section element ID (shown/hidden)
+   * @param {Array}  snapshots   – [{date, entries:{name:{score,rank,as,aes}}}]
+   * @param {string} entityName  – author name or institution name
+   * @returns {object|null} ECharts instance or null
+   */
+  function renderHistoryChart(elId, sectionId, snapshots, entityName) {
+    var sec = document.getElementById(sectionId);
+    if (!snapshots || snapshots.length < 2) { if (sec) sec.classList.add('rdb-hidden'); return null; }
+    var labels = [], scores = [], ranks = [], artScores = [], aeScores = [];
+    for (var i = 0; i < snapshots.length; i++) {
+      var e = snapshots[i].entries[entityName];
+      if (e) { labels.push(snapshots[i].date); scores.push(e.score); ranks.push(e.rank); artScores.push(e.as); aeScores.push(e.aes); }
+    }
+    if (labels.length < 2) { if (sec) sec.classList.add('rdb-hidden'); return null; }
+    if (sec) sec.classList.remove('rdb-hidden');
+    var chart = ReproDB.initEChart(elId);
+    chart.setOption({
+      tooltip: { trigger: 'axis' },
+      legend: { bottom: 0 },
+      grid: { left: 60, right: 60, bottom: 40, top: 20 },
+      xAxis: { type: 'category', data: labels },
+      yAxis: [
+        { type: 'value', name: 'Score', min: 0, position: 'left' },
+        { type: 'value', name: 'Rank (#1 = top)', inverse: true, position: 'right', splitLine: { show: false } }
+      ],
+      series: [
+        { name: 'Combined Score', type: 'line', data: scores, itemStyle: { color: ReproDB.themeColors().combined }, smooth: 0.2 },
+        { name: 'Artifact Score', type: 'line', data: artScores, itemStyle: { color: '#3498db' }, smooth: 0.2 },
+        { name: 'AE Score', type: 'line', data: aeScores, itemStyle: { color: '#27ae60' }, smooth: 0.2 },
+        { name: 'Rank', type: 'line', data: ranks, itemStyle: { color: '#e74c3c' }, lineStyle: { type: 'dashed' }, smooth: 0.2, yAxisIndex: 1 }
+      ]
+    });
+    ReproDB.registerEChart(chart);
+    return chart;
+  }
+
   return {
     escHtml: escHtml,
     cleanName: cleanName,
     badgeHtml: badgeHtml,
     card: card,
-    initSearch: initSearch
+    initSearch: initSearch,
+    parseAEEntry: parseAEEntry,
+    renderHistoryChart: renderHistoryChart
   };
 })();

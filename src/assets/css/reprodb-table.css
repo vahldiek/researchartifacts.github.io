@@ -1,42 +1,5 @@
-/* reprodb-table.css — Shared table styles for ranking/data tables.
-   Loaded globally via _includes/head/custom.html.
-   All page-specific <style> blocks have been consolidated here. */
-
-/* ── Base table ────────────────────────────────────────────────────────── */
-.rdb-tbl {
-  font-size: 0.78em;
-  border-collapse: collapse;
-  width: 100%;
-}
-.rdb-tbl th,
-.rdb-tbl td {
-  padding: 2px 4px;
-  border: 1px solid #ddd;
-  white-space: nowrap;
-}
-.rdb-tbl td.wrap-cell {
-  white-space: normal;
-  max-width: 200px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.rdb-tbl th {
-  background-color: #f2f2f2;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-.rdb-tbl tr:nth-child(even) { background-color: #f9f9f9; }
-.rdb-tbl tr:hover { background-color: #e8f4f8; }
-
-/* ── Sortable column headers ───────────────────────────────────────────── */
-/* Canonical class: "reprodb-sortable". Toggle "sorted-asc" / "sorted-desc"
-   to display the active indicator. Bound automatically by
-   ReproDB.bindSortableHeaders (assets/js/reprodb-utils.js). */
-.reprodb-sortable { cursor: pointer; }
-.reprodb-sortable::after { content: '\2195'; opacity: 0.3; margin-left: 2px; font-size: 0.75em; }
-.reprodb-sortable.sorted-asc::after { content: '\2191'; opacity: 1; }
-.reprodb-sortable.sorted-desc::after { content: '\2193'; opacity: 1; }
+/* reprodb-table.css — Shared utility styles for ReproDB.
+   Loaded globally via _includes/head/custom.html. */
 
 /* ── Markdown-rendered tables (committee pages, overview pages) ─────── */
 /* These style bare <table> elements output by Jekyll/Kramdown. */
@@ -58,80 +21,7 @@
 .page__content table tr:nth-child(even) { background-color: #f9f9f9; }
 .page__content table tr:hover { background-color: #e8f4f8; }
 
-/* ── Institution ranking table ─────────────────────────────────────────── */
-#institutionTable { font-size: 0.78em; border-collapse: collapse; width: 100%; }
-#institutionTable th, #institutionTable td { padding: 2px 4px; border: 1px solid #ddd; }
-#institutionTable th:nth-child(2), #institutionTable td:nth-child(2) { max-width: 200px; word-wrap: break-word; white-space: normal; }
-#institutionTable td { white-space: nowrap; }
-#institutionTable th { background-color: #f2f2f2; position: sticky; top: 0; z-index: 1; }
-#institutionTable tr:nth-child(even) { background-color: #f9f9f9; }
-#institutionTable .inst-row:hover { background-color: #e8f4f8; }
-#institutionTable .expanded-row { background-color: #f9f9f9 !important; }
-#institutionTable .expanded-row:hover { background-color: #f9f9f9 !important; }
-
-/* ── Combined ranking table ────────────────────────────────────────────── */
-#combinedTable { font-size: 0.78em; border-collapse: collapse; width: 100%; }
-#combinedTable th, #combinedTable td { padding: 2px 4px; border: 1px solid #ddd; }
-#combinedTable th:nth-child(3), #combinedTable td:nth-child(3) { max-width: 200px; word-wrap: break-word; white-space: normal; }
-#combinedTable td { white-space: nowrap; }
-#combinedTable th { background-color: #f2f2f2; position: sticky; top: 0; z-index: 1; }
-#combinedTable tr:nth-child(even) { background-color: #f9f9f9; }
-#combinedTable tr:hover { background-color: #e8f4f8; }
-
-/* ── AE member table ──────────────────────────────────────────────────── */
-#memberTable { font-size: 0.78em; border-collapse: collapse; width: 100%; }
-#memberTable th, #memberTable td { padding: 2px 4px; border: 1px solid #ddd; }
-#memberTable th:nth-child(5), #memberTable td:nth-child(5) { max-width: 200px; word-wrap: break-word; white-space: normal; }
-#memberTable td { white-space: nowrap; }
-#memberTable th { background-color: #f2f2f2; position: sticky; top: 0; z-index: 1; }
-#memberTable tr:nth-child(even) { background-color: #f9f9f9; }
-#memberTable tr:hover { background-color: #e8f4f8; }
-
-/* ── Conference page table (.conf-tbl) ─────────────────────────────────── */
-.conf-tbl { font-size: 0.78em; border-collapse: collapse; }
-.conf-tbl th, .conf-tbl td { padding: 2px 4px; border: 1px solid #ddd; white-space: nowrap; }
-.conf-tbl td.wrap-cell { white-space: normal; max-width: 200px; overflow: hidden; text-overflow: ellipsis; }
-.conf-tbl th { background-color: #f2f2f2; position: sticky; top: 0; z-index: 1; }
-.conf-tbl tr:nth-child(even) { background-color: #f9f9f9; }
-.conf-tbl tr:hover { background-color: #e8f4f8; }
-
-/* ── Area author table (.area-tbl) ─────────────────────────────────────── */
-.area-tbl { font-size: 0.78em; border-collapse: collapse; }
-.area-tbl th, .area-tbl td { padding: 2px 4px; border: 1px solid #ddd; white-space: nowrap; }
-.area-tbl td.wrap-cell { white-space: normal; max-width: 200px; overflow: hidden; text-overflow: ellipsis; }
-.area-tbl th { background-color: #f2f2f2; position: sticky; top: 0; z-index: 1; }
-.area-tbl tr:nth-child(even) { background-color: #f9f9f9; }
-.area-tbl tr:hover { background-color: #e8f4f8; }
-
-/* ── Top repos table column overrides ──────────────────────────────────── */
-#topReposTable td:nth-child(2) { max-width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-#topReposTable td:nth-child(3) { max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-#topReposTable td:nth-child(7) { white-space: nowrap; }
-
-/* ── Sort indicator aliases (all map to the canonical pattern) ──────── */
-/* conference_page + author_table_area use .cp-sortable */
-.cp-sortable { cursor: pointer; }
-.cp-sortable::after { content: '\2195'; opacity: 0.3; margin-left: 2px; font-size: 0.75em; }
-.cp-sorted-asc::after { content: '\2191'; opacity: 1; }
-.cp-sorted-desc::after { content: '\2193'; opacity: 1; }
-
-/* combined_ranking_table uses .c-sortable */
-.c-sortable { cursor: pointer; }
-.c-sortable::after { content: '\2195'; opacity: 0.3; margin-left: 2px; font-size: 0.75em; }
-.c-sorted-asc::after { content: '\2191'; opacity: 1; }
-.c-sorted-desc::after { content: '\2193'; opacity: 1; }
-
-/* ae_member_table uses .sortable */
-.sortable { cursor: pointer; }
-.sortable::after { content: '\2195'; opacity: 0.3; margin-left: 2px; font-size: 0.75em; }
-.sortable.sorted-asc::after { content: '\2191'; opacity: 1; }
-.sortable.sorted-desc::after { content: '\2193'; opacity: 1; }
-
 /* ── Utility classes ───────────────────────────────────────────────────── */
-.expand-btn { display: inline-block; font-size: 0.8em; color: #666; cursor: pointer; margin-right: 4px; }
-.expand-btn:hover { color: #000; }
-.expand-btn-spacer { display: inline-block; width: 12px; }
-.rank-unchanged { color: #999; }
 
 /* Flag icons sizing */
 .fi { width: 1em; height: 1em; display: inline-block; margin-right: 4px; vertical-align: -0.125em; }
@@ -143,21 +33,6 @@
 .rdb-flag-inaccurate { color: #c0392b; }
 .rdb-error { color: #d00; }
 
-/* ── Expanded row (institution detail) ─────────────────────────────────── */
-.inst-row { cursor: pointer; }
-.rdb-expanded-cell { padding: 8px 16px; background-color: #f9f9f9; }
-.rdb-expanded-content { margin-left: 20px; }
-.rdb-expanded-link { font-size: 0.85em; }
-.rdb-expanded-tbl { margin-top: 8px; font-size: 0.9em; border-collapse: collapse; width: auto; }
-.rdb-expanded-tbl th,
-.rdb-expanded-tbl td { padding: 4px 8px; border: 1px solid #ccc; }
-.rdb-expanded-tbl thead tr { background-color: #e8e8e8; }
-.rdb-expanded-tbl tbody tr:nth-child(odd) { background-color: #fff; }
-.rdb-expanded-tbl tbody tr:nth-child(even) { background-color: #f5f5f5; }
-.rdb-expanded-tbl td:not(:first-child) { text-align: center; }
-.rdb-chart-wrap { margin-top: 12px; }
-.rdb-chart-canvas { max-width: 500px; }
-
 /* ── Rank change indicators ────────────────────────────────────────────── */
 .rdb-rank-up { color: #27ae60; font-size: 0.8em; }
 .rdb-rank-down { color: #e74c3c; font-size: 0.8em; }
@@ -167,6 +42,174 @@
 .rdb-rank-cell { display: inline-flex; align-items: baseline; gap: 0.2em; white-space: nowrap; }
 .rdb-rank-num { }
 .rdb-rank-indicator { }
+
+/* ── Tabulator: allow text wrapping in cells ───────────────────────────── */
+/* Prevents horizontal scrolling by letting long content (titles, names) wrap. */
+.tabulator .tabulator-header .tabulator-col .tabulator-col-content .tabulator-col-title {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+/* Sortable cols get padding-right:25px for the sort arrow — remove it since we hide arrows */
+.tabulator .tabulator-header .tabulator-col.tabulator-sortable .tabulator-col-title {
+  padding-right: 0;
+}
+.tabulator-row .tabulator-cell {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+/* ── Sort arrows: overlay instead of consuming column width ────────────── */
+/* Without this, the ~15px arrow element squeezes short titles like S, Ar, AE. */
+.tabulator .tabulator-header .tabulator-col .tabulator-col-content {
+  position: relative;
+}
+.tabulator .tabulator-header .tabulator-col.tabulator-sortable .tabulator-col-content {
+  padding-right: 0;
+}
+.tabulator .tabulator-header .tabulator-col .tabulator-col-content .tabulator-col-sorter {
+  display: none;
+}
+
+/* ── Dark-mode overrides ────────────────────────────────────────────────── */
+/* Tabulator tables */
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .tabulator {
+    background-color: #1e2127; color: #d6d9dc; border-color: #4a4f57;
+  }
+  html:not([data-theme="light"]) .tabulator .tabulator-header {
+    background-color: #23272d; color: #d6d9dc; border-color: #4a4f57;
+  }
+  html:not([data-theme="light"]) .tabulator .tabulator-header .tabulator-col {
+    background-color: #23272d; border-color: #4a4f57;
+  }
+  html:not([data-theme="light"]) .tabulator .tabulator-header .tabulator-col .tabulator-col-content .tabulator-col-title {
+    color: #d6d9dc;
+  }
+  html:not([data-theme="light"]) .tabulator .tabulator-header .tabulator-col.tabulator-sortable .tabulator-col-title {
+    color: #d6d9dc;
+  }
+  html:not([data-theme="light"]) .tabulator .tabulator-header .tabulator-col .tabulator-col-content .tabulator-arrow {
+    border-bottom-color: #d6d9dc;
+  }
+  html:not([data-theme="light"]) .tabulator .tabulator-tableholder .tabulator-table .tabulator-row {
+    background-color: #1e2127; color: #d6d9dc; border-color: #4a4f57;
+  }
+  html:not([data-theme="light"]) .tabulator .tabulator-tableholder .tabulator-table .tabulator-row:nth-child(even) {
+    background-color: #23272d;
+  }
+  html:not([data-theme="light"]) .tabulator .tabulator-tableholder .tabulator-table .tabulator-row:hover {
+    background-color: #2a3038;
+  }
+  html:not([data-theme="light"]) .tabulator-row.tabulator-selectable:hover {
+    background-color: #2a3038;
+  }
+  html:not([data-theme="light"]) .tabulator-row.tabulator-selected {
+    background-color: #2a3a4a;
+  }
+  html:not([data-theme="light"]) .tabulator-row.tabulator-selected:hover {
+    background-color: #30404f;
+  }
+  html:not([data-theme="light"]) .tabulator-row .tabulator-cell.tabulator-range-selected:not(.tabulator-range-only-cell-selected) {
+    background-color: #2a3a4a;
+  }
+  html:not([data-theme="light"]) .tabulator .tabulator-tableholder .tabulator-table .tabulator-row .tabulator-cell {
+    border-color: #4a4f57;
+  }
+  html:not([data-theme="light"]) .tabulator .tabulator-footer {
+    background-color: #23272d; color: #d6d9dc; border-color: #4a4f57;
+  }
+  html:not([data-theme="light"]) .tabulator .tabulator-footer .tabulator-page {
+    color: #d6d9dc; border-color: #4a4f57; background-color: #1e2127;
+  }
+  html:not([data-theme="light"]) .tabulator .tabulator-footer .tabulator-page.active {
+    background-color: #2563eb; color: #fff; border-color: #2563eb;
+  }
+  html:not([data-theme="light"]) .tabulator .tabulator-footer .tabulator-page:hover:not(.active):not(.disabled) {
+    background-color: #2a3038;
+  }
+  /* Kramdown markdown tables */
+  html:not([data-theme="light"]) .page__content table th {
+    background-color: #23272d; color: #d6d9dc; border-color: #4a4f57;
+  }
+  html:not([data-theme="light"]) .page__content table td {
+    border-color: #4a4f57; color: #d6d9dc;
+  }
+  html:not([data-theme="light"]) .page__content table tr:nth-child(even) {
+    background-color: #23272d;
+  }
+  html:not([data-theme="light"]) .page__content table tr:hover {
+    background-color: #2a3038;
+  }
+}
+html[data-theme="dark"] .tabulator {
+  background-color: #1e2127; color: #d6d9dc; border-color: #4a4f57;
+}
+html[data-theme="dark"] .tabulator .tabulator-header {
+  background-color: #23272d; color: #d6d9dc; border-color: #4a4f57;
+}
+html[data-theme="dark"] .tabulator .tabulator-header .tabulator-col {
+  background-color: #23272d; border-color: #4a4f57;
+}
+html[data-theme="dark"] .tabulator .tabulator-header .tabulator-col .tabulator-col-content .tabulator-col-title {
+  color: #d6d9dc;
+}
+html[data-theme="dark"] .tabulator .tabulator-header .tabulator-col.tabulator-sortable .tabulator-col-title {
+  color: #d6d9dc;
+}
+html[data-theme="dark"] .tabulator .tabulator-header .tabulator-col .tabulator-col-content .tabulator-arrow {
+  border-bottom-color: #d6d9dc;
+}
+html[data-theme="dark"] .tabulator .tabulator-tableholder .tabulator-table .tabulator-row {
+  background-color: #1e2127; color: #d6d9dc; border-color: #4a4f57;
+}
+html[data-theme="dark"] .tabulator .tabulator-tableholder .tabulator-table .tabulator-row:nth-child(even) {
+  background-color: #23272d;
+}
+html[data-theme="dark"] .tabulator .tabulator-tableholder .tabulator-table .tabulator-row:hover {
+  background-color: #2a3038;
+}
+html[data-theme="dark"] .tabulator-row.tabulator-selectable:hover {
+  background-color: #2a3038;
+}
+html[data-theme="dark"] .tabulator-row.tabulator-selected {
+  background-color: #2a3a4a;
+}
+html[data-theme="dark"] .tabulator-row.tabulator-selected:hover {
+  background-color: #30404f;
+}
+html[data-theme="dark"] .tabulator-row .tabulator-cell.tabulator-range-selected:not(.tabulator-range-only-cell-selected) {
+  background-color: #2a3a4a;
+}
+html[data-theme="dark"] .tabulator .tabulator-tableholder .tabulator-table .tabulator-row .tabulator-cell {
+  border-color: #4a4f57;
+}
+html[data-theme="dark"] .tabulator .tabulator-footer {
+  background-color: #23272d; color: #d6d9dc; border-color: #4a4f57;
+}
+html[data-theme="dark"] .tabulator .tabulator-footer .tabulator-page {
+  color: #d6d9dc; border-color: #4a4f57; background-color: #1e2127;
+}
+html[data-theme="dark"] .tabulator .tabulator-footer .tabulator-page.active {
+  background-color: #2563eb; color: #fff; border-color: #2563eb;
+}
+html[data-theme="dark"] .tabulator .tabulator-footer .tabulator-page:hover:not(.active):not(.disabled) {
+  background-color: #2a3038;
+}
+/* Kramdown markdown tables */
+html[data-theme="dark"] .page__content table th {
+  background-color: #23272d; color: #d6d9dc; border-color: #4a4f57;
+}
+html[data-theme="dark"] .page__content table td {
+  border-color: #4a4f57; color: #d6d9dc;
+}
+html[data-theme="dark"] .page__content table tr:nth-child(even) {
+  background-color: #23272d;
+}
+html[data-theme="dark"] .page__content table tr:hover {
+  background-color: #2a3038;
+}
 
 /* ── Chart container ───────────────────────────────────────────────────── */
 .rdb-chart-container { width: 100%; max-width: 600px; margin: 1em 0; }

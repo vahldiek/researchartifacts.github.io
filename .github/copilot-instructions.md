@@ -45,7 +45,6 @@ When adding a new conference page, also add it to `_data/navigation.yml`.
 
 ## JavaScript & CSS Patterns
 
-- All JS is **vanilla JavaScript** — no frameworks.
 - **Feature JS/CSS** lives in `assets/js/reprodb-*.js` and `assets/css/reprodb-*.css`,
   one file per feature (table, search, profile, overview). Use IIFE pattern.
   Shared utilities live in `reprodb-utils.js` under `window.ReproDB`.

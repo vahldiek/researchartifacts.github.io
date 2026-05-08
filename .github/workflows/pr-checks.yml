@@ -1,0 +1,122 @@
+name: PR Checks
+
+on:
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  jekyll-build:
+    name: Jekyll Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v6
+
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./src
+          destination: ./_site
+
+  validate-data:
+    name: JSON Schema Validation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout website
+        uses: actions/checkout@v6
+
+      - name: Checkout data-schemas
+        uses: actions/checkout@v6
+        with:
+          repository: ReproDB/data-schemas
+          path: data-schemas
+
+      - name: Install jsonschema
+        run: pip install jsonschema
+
+      - name: Validate JSON data files against schemas
+        run: |
+          set -e
+          SCHEMA_DIR=data-schemas/schemas
+          DATA_DIR=src/assets/data
+          ERRORS=0
+
+          validate() {
+            local data_file="$1"
+            local schema_file="$2"
+            if python3 -c "
+          import json, jsonschema, sys
+          with open('$schema_file') as sf:
+              schema = json.load(sf)
+          with open('$data_file') as df:
+              data = json.load(df)
+          try:
+              jsonschema.validate(data, schema)
+          except jsonschema.ValidationError as e:
+              print(f'FAIL: $data_file')
+              print(f'  {e.message[:200]}')
+              sys.exit(1)
+          "; then
+              echo "OK: $data_file"
+            else
+              ERRORS=$((ERRORS + 1))
+            fi
+          }
+
+          # Direct matches (data file name == schema name)
+          for schema in "$SCHEMA_DIR"/*.schema.json; do
+            base=$(basename "$schema" .schema.json)
+            data="$DATA_DIR/${base}.json"
+            if [ -f "$data" ]; then
+              validate "$data" "$schema"
+            fi
+          done
+
+          # Per-conference files that follow naming patterns
+          for data in "$DATA_DIR"/*_combined_rankings.json; do
+            [ -f "$data" ] && validate "$data" "$SCHEMA_DIR/combined_rankings.schema.json"
+          done
+          for data in "$DATA_DIR"/*_conf_authors.json; do
+            [ -f "$data" ] && validate "$data" "$SCHEMA_DIR/conf_authors.schema.json"
+          done
+          for data in "$DATA_DIR"/*_institution_rankings.json; do
+            [ -f "$data" ] && validate "$data" "$SCHEMA_DIR/institution_rankings.schema.json"
+          done
+
+          if [ "$ERRORS" -gt 0 ]; then
+            echo "::error::$ERRORS file(s) failed schema validation"
+            exit 1
+          fi
+          echo "All data files pass schema validation"
+
+  data-immutability:
+    name: Data Immutability Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Check for data file changes
+        run: |
+          # Get the list of changed files in this PR vs base
+          # Only protect pipeline-generated JSON data, not site config like navigation.yml
+          CHANGED=$(git diff --name-only origin/${{ github.base_ref }}...HEAD -- src/assets/data/ src/_data/*.json)
+
+          if [ -n "$CHANGED" ]; then
+            echo "::error::This PR modifies data files. Data updates should come from the reprodb-pipeline, not manual PRs."
+            echo ""
+            echo "Changed data files:"
+            echo "$CHANGED"
+            echo ""
+            echo "If this is intentional (e.g. schema migration), add the 'data-update' label to bypass this check."
+            exit 1
+          fi
+          echo "No data files modified — OK"

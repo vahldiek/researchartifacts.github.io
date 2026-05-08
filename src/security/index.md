@@ -12,13 +12,12 @@ Each cell shows **total (available, functional, reproduced)**.
 ## Artifacts per Conference
 
 <div class="rdb-md-chart" style="max-width:600px;">
-<canvas id="secConfChart" height="260"></canvas>
+<div id="secConfChart" style="height:300px"></div>
 </div>
 
-| Conference | Total | {% for y in site.data.artifacts_by_year reversed %}{{ y.year }} | {% endfor %}
-|---|:---:|{% for y in site.data.artifacts_by_year reversed %}:---:|{% endfor %}
-{% for conf in site.data.artifacts_by_conference %}{% if conf.category == "security" %}{% assign _conf_url = '/' | append: conf.category | append: '/' | append: conf.name | downcase | append: '.html' %}| [**{{ conf.name }}**]({{ _conf_url | relative_url }}) | {% assign _ct = 0 %}{% assign _ca = 0 %}{% assign _cf = 0 %}{% assign _cr = 0 %}{% for yd in conf.years %}{% assign _ct = _ct | plus: yd.total %}{% assign _ca = _ca | plus: yd.available %}{% assign _cf = _cf | plus: yd.functional %}{% assign _cr = _cr | plus: yd.reproducible %}{% endfor %}**{{ _ct }}** ({{ _ca }}, {{ _cf }}, {{ _cr }}) | {% for y in site.data.artifacts_by_year reversed %}{% assign _found = false %}{% for yd in conf.years %}{% if yd.year == y.year %}{% assign _found = true %}{{ yd.total }} ({{ yd.available }}, {{ yd.functional }}, {{ yd.reproducible }}){% endif %}{% endfor %}{% unless _found %}&ndash;{% endunless %} | {% endfor %}
-{% endif %}{% endfor %}
+<div class="rdb-chart-wide rdb-chart-wrap--xl">
+<div id="secConfHeatmap" style="width:100%;height:100%"></div>
+</div>
 
 {% else %}
 
@@ -31,36 +30,34 @@ Each cell shows **total (available, functional, reproduced)**.
 
 Ranked by combined score (artifacts published + AE committee memberships) at security conferences. See the full [security combined rankings]({{ '/security/combined_rankings.html' | relative_url }}) for more.
 
-<table id="secTop10Table">
-<thead><tr><th>#</th><th>Name</th><th>Affiliation</th><th>Artifacts</th><th>AE&nbsp;Memberships</th><th>AE&nbsp;Chair</th><th>Score</th><th>Conferences</th></tr></thead>
-<tbody><tr><td colspan="8"><em>Loading…</em></td></tr></tbody>
-</table>
+<div id="secTop10Table"></div>
 
 <script>
 (function(){
+  var escHtml = ReproDB.escHtml;
   fetch('{{ "/assets/data/security_combined_rankings.json" | relative_url }}')
     .then(function(r){ return r.json(); })
     .then(function(data){
       data.sort(function(a,b){ return (b.combined_score||0) - (a.combined_score||0); });
-      var top = data.slice(0, 10);
-      var tbody = document.querySelector('#secTop10Table tbody');
-      tbody.innerHTML = '';
-      top.forEach(function(e, i){
-        var name = (e.name || '').replace(/\t/g, ' ').replace(/\s+\d{4}$/, '');
-        var aff  = (e.affiliation || '').replace(/^_/, '');
-        var confs = (e.conferences || []).join(', ');
-        var authorUrl = '/profile.html?name=' + encodeURIComponent(e.name);
-        var instUrl   = '/profile.html?type=institution&name=' + encodeURIComponent(e.affiliation);
-        var tr = document.createElement('tr');
-        tr.innerHTML = '<td>' + (i+1) + '</td>'
-          + '<td><a href="' + authorUrl + '">' + name + '</a></td>'
-          + '<td><a href="' + instUrl + '">' + aff + '</a></td>'
-          + '<td>' + (e.artifact_count||0) + '</td>'
-          + '<td>' + (e.ae_memberships||0) + '</td>'
-          + '<td>' + (e.chair_count||0) + '</td>'
-          + '<td><strong>' + (e.combined_score||0) + '</strong></td>'
-          + '<td>' + confs + '</td>';
-        tbody.appendChild(tr);
+      ReproDB.createTable('#secTop10Table', {
+        data: data.slice(0, 10),
+        pagination: false,
+        columns: [
+          { title: '#', formatter: 'rownum', width: 40, headerSort: false },
+          { title: 'Name', field: 'name', formatter: function(cell) {
+            var d = cell.getData(), n = (d.name||'').replace(/\t/g,' ').replace(/\s+\d{4}$/,'');
+            return '<a href="/profile.html?name=' + encodeURIComponent(d.name) + '">' + escHtml(n) + '</a>';
+          }},
+          { title: 'Affiliation', field: 'affiliation', formatter: function(cell) {
+            var d = cell.getData(), a = (d.affiliation||'').replace(/^_/,'');
+            return '<a href="/profile.html?type=institution&name=' + encodeURIComponent(d.affiliation) + '">' + escHtml(a) + '</a>';
+          }},
+          { title: 'Artifacts', field: 'artifact_count', sorter: 'number' },
+          { title: 'AE Memberships', field: 'ae_memberships', sorter: 'number' },
+          { title: 'AE Chair', field: 'chair_count', sorter: 'number' },
+          { title: 'Score', field: 'combined_score', sorter: 'number', formatter: function(cell) { return '<strong>' + (cell.getValue()||0) + '</strong>'; } },
+          { title: 'Conferences', field: 'conferences', formatter: function(cell) { return (cell.getValue()||[]).join(', '); }, headerSort: false }
+        ]
       });
     });
 })();
@@ -94,15 +91,91 @@ document.addEventListener('DOMContentLoaded', function() {
   })();
   {% assign ci = ci | plus: 1 %}{% endif %}{% endfor %}
 
-  new Chart(document.getElementById('secConfChart'), {
-    type: 'line',
-    data: { labels: years, datasets: confDatasets },
-    options: {
-      responsive: true,
-      plugins: { title: { display: true, text: 'Security: Artifacts per Conference' } },
-      scales: { y: { beginAtZero: true, title: { display: true, text: 'Artifacts' } } }
-    }
+  var chart = ReproDB.initEChart('secConfChart');
+  chart.setOption({
+    title: { text: 'Security: Artifacts per Conference', left: 'center' },
+    tooltip: { trigger: 'axis' },
+    legend: { bottom: 0, type: 'scroll' },
+    grid: { containLabel: true, left: 40, right: 20, bottom: 50, top: 40 },
+    xAxis: { type: 'category', data: years },
+    yAxis: { type: 'value', name: 'Artifacts', min: 0 },
+    series: confDatasets.map(function(ds) {
+      return { name: ds.label, type: 'line', data: ds.data, smooth: 0.2, itemStyle: { color: ds.borderColor } };
+    })
   });
+  ReproDB.registerEChart(chart);
+
+  /* ── Heatmap: Artifacts per Conference ── */
+  var hmEl = document.getElementById('secConfHeatmap');
+  if (hmEl) {
+    var confNames = confDatasets.map(function(ds) { return ds.label; });
+    var rawHeatData = [];
+    var maxVal = 0;
+    confDatasets.forEach(function(ds, ci) {
+      ds.data.forEach(function(v, yi) {
+        rawHeatData.push({ x: yi, y: ci, v: v });
+        if (v > maxVal) maxVal = v;
+      });
+    });
+
+    // Lookup badge details per conference/year for tooltips
+    var badgeMap = {};
+    {% for conf in site.data.artifacts_by_conference %}{% if conf.category == "security" %}
+    {% for yd in conf.years %}
+    badgeMap["{{ conf.name }}_{{ yd.year }}"] = { total: {{ yd.total }}, available: {{ yd.available }}, functional: {{ yd.functional }}, reproducible: {{ yd.reproducible }} };
+    {% endfor %}
+    {% endif %}{% endfor %}
+
+    function hmCellColor(v) {
+      var dark = ReproDB.isDark();
+      if (v === 0) return dark ? 'rgba(50,55,65,0.5)' : 'rgba(220,220,220,0.3)';
+      var t = v / maxVal;
+      if (dark) {
+        var r = Math.round(80 + 140 * t);
+        var g = Math.round(20 + 20 * t);
+        var b = Math.round(20 + 15 * t);
+        return 'rgb(' + r + ',' + g + ',' + b + ')';
+      }
+      return 'rgba(192,57,43,' + (0.15 + t * 0.7) + ')';
+    }
+
+    function hmLabelColor(v) {
+      var dark = ReproDB.isDark();
+      var tc = ReproDB.themeColors();
+      var t = maxVal > 0 ? v / maxVal : 0;
+      var textThreshold = dark ? 0.25 : 0.6;
+      return (v > 0 && t > textThreshold) ? '#fff' : tc.text;
+    }
+
+    function buildHmData() {
+      return rawHeatData.map(function(d) {
+        return { value: [d.x, d.y, d.v], itemStyle: { color: hmCellColor(d.v) }, label: { color: hmLabelColor(d.v) } };
+      });
+    }
+
+    var hmChart = ReproDB.initEChart(hmEl);
+    function setSecHeatmap() {
+      var dark = ReproDB.isDark();
+      hmChart.setOption({
+        title: { text: 'Security: Artifacts per Conference × Year', left: 'center', textStyle: { fontSize: 14 } },
+        tooltip: { formatter: function(p) {
+          var cn = confNames[p.value[1]], yr = years[p.value[0]];
+          var key = cn + '_' + yr, b = badgeMap[key];
+          if (b) return cn + ' ' + yr + ': ' + b.total + ' artifacts<br>Available: ' + b.available + ' · Functional: ' + b.functional + ' · Reproduced: ' + b.reproducible;
+          return cn + ' (' + yr + '): ' + p.value[2];
+        }},
+        grid: { containLabel: true, left: 20, right: 20, bottom: 30, top: 40 },
+        xAxis: { type: 'category', data: years, splitArea: { show: false } },
+        yAxis: { type: 'category', data: confNames, splitArea: { show: false }, inverse: true },
+        series: [{ type: 'heatmap', data: buildHmData(), label: { show: true, fontSize: 10,
+          formatter: function(p) { return p.value[2] > 0 ? p.value[2] : ''; }
+        }, itemStyle: { borderColor: dark ? '#333' : '#fff', borderWidth: 1 } }]
+      });
+    }
+    setSecHeatmap();
+    ReproDB.registerEChart(hmChart);
+    ReproDB.onThemeChange(setSecHeatmap);
+  }
 });
 </script>
 {% endif %}

@@ -1,5 +1,5 @@
 {% comment %}
-  Yearly repository stats charts.
+  Yearly repository stats charts using ECharts.
   - all: one compact combined chart with median and P25-P75 bands.
   - systems/security: conference-specific lines only, split into Stars and Forks charts.
 
@@ -8,17 +8,17 @@
 {% endcomment %}
 
 <div id="repoChartCombinedWrap" class="rdb-repo-chart rdb-repo-chart--tall rdb-hidden">
-  <canvas id="yearlyRepoCombinedChart"></canvas>
+  <div id="yearlyRepoCombinedChart" style="width:100%;height:400px;"></div>
 </div>
 <div id="repoChartStarsWrap" class="rdb-repo-chart rdb-hidden">
-  <canvas id="yearlyRepoStarsChart"></canvas>
+  <div id="yearlyRepoStarsChart" style="width:100%;height:350px;"></div>
 </div>
 <div id="repoChartForksWrap" class="rdb-repo-chart rdb-hidden">
-  <canvas id="yearlyRepoForksChart"></canvas>
+  <div id="yearlyRepoForksChart" style="width:100%;height:350px;"></div>
 </div>
 
 <script>
-(function() {
+document.addEventListener('DOMContentLoaded', function() {
   var AREA = '{{ page.yearly_chart_area | default: "all" }}';
   var repoStatsByConference = {{ site.data.repo_stats.by_conference | jsonify }};
   var confCategory = {
@@ -87,75 +87,58 @@
 
   function renderAllCombined(base, areaLabel) {
     var labels = base.labels;
-    var avgStars = [], medStars = [], p25Stars = [], p75Stars = [];
-    var avgForks = [], medForks = [], p25Forks = [], p75Forks = [];
+    var medStars = [], p25Stars = [], p75Stars = [];
+    var medForks = [], p25Forks = [], p75Forks = [];
 
     for (var i = 0; i < labels.length; i++) {
       var y = labels[i];
       var starsVals = base.yearMap[y].stars;
       var forksVals = base.yearMap[y].forks;
-      avgStars.push(toFixed1(mean(starsVals)));
       medStars.push(toFixed1(percentile(starsVals, 0.5)));
       p25Stars.push(toFixed1(percentile(starsVals, 0.25)));
       p75Stars.push(toFixed1(percentile(starsVals, 0.75)));
-      avgForks.push(toFixed1(mean(forksVals)));
       medForks.push(toFixed1(percentile(forksVals, 0.5)));
       p25Forks.push(toFixed1(percentile(forksVals, 0.25)));
       p75Forks.push(toFixed1(percentile(forksVals, 0.75)));
     }
 
-    var starsBand = p75Stars.map(function(v, i) {
-      return (v === null || p25Stars[i] === null) ? null : toFixed1(v - p25Stars[i]);
-    });
-    var forksBand = p75Forks.map(function(v, i) {
-      return (v === null || p25Forks[i] === null) ? null : toFixed1(v - p25Forks[i]);
-    });
-
     document.getElementById('repoChartCombinedWrap').classList.remove('rdb-hidden');
+    var el = document.getElementById('yearlyRepoCombinedChart');
+    var chart = ReproDB.initEChart(el);
 
-    new Chart(document.getElementById('yearlyRepoCombinedChart'), {
-      type: 'line',
-      data: {
-        labels: labels,
-        datasets: [
-          { label: 'Stars P25 (hidden anchor)', data: p25Stars, yAxisID: 'yStars', borderColor: 'rgba(0,0,0,0)', backgroundColor: 'rgba(0,0,0,0)', pointRadius: 0, borderWidth: 0, fill: false },
-          { label: 'Stars P25-P75', data: starsBand, yAxisID: 'yStars', borderColor: 'rgba(31,119,180,0)', backgroundColor: 'rgba(31,119,180,0.13)', pointRadius: 0, borderWidth: 0, fill: '-1' },
-          { label: 'Median Stars', data: medStars, yAxisID: 'yStars', borderColor: 'rgba(31,119,180,1)', backgroundColor: 'rgba(31,119,180,1)', borderWidth: 2, pointRadius: 2.5, tension: 0.22, fill: false },
-          { label: 'Forks P25 (hidden anchor)', data: p25Forks, yAxisID: 'yForks', borderColor: 'rgba(0,0,0,0)', backgroundColor: 'rgba(0,0,0,0)', pointRadius: 0, borderWidth: 0, fill: false },
-          { label: 'Forks P25-P75', data: forksBand, yAxisID: 'yForks', borderColor: 'rgba(255,127,14,0)', backgroundColor: 'rgba(255,127,14,0.13)', pointRadius: 0, borderWidth: 0, fill: '-1' },
-          { label: 'Median Forks', data: medForks, yAxisID: 'yForks', borderColor: 'rgba(255,127,14,1)', backgroundColor: 'rgba(255,127,14,1)', borderWidth: 2, pointRadius: 2.5, tension: 0.22, fill: false }
-        ]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        interaction: { mode: 'index', intersect: false },
-        plugins: {
-          title: { display: true, text: areaLabel + ': Yearly Stars & Forks (Median with P25-P75 bands)' },
-          legend: {
-            position: 'bottom',
-            labels: {
-              filter: function(item) { return item.text.indexOf('(hidden anchor)') === -1; }
-            }
-          }
-        },
-        scales: {
-          yStars: { type: 'linear', position: 'left', beginAtZero: true, title: { display: true, text: 'Stars (median per repo)' } },
-          yForks: { type: 'linear', position: 'right', beginAtZero: true, grid: { drawOnChartArea: false }, title: { display: true, text: 'Forks (median per repo)' } },
-          x: { title: { display: true, text: 'Year' } }
-        }
-      }
+    chart.setOption({
+      title: { text: areaLabel + ': Yearly Stars & Forks (Median with P25\u2013P75 bands)', left: 'center', textStyle: { fontSize: 14 } },
+      tooltip: { trigger: 'axis' },
+      legend: { bottom: 0, data: ['Stars P25\u2013P75', 'Median Stars', 'Forks P25\u2013P75', 'Median Forks'] },
+      grid: { containLabel: true, left: 60, right: 60, bottom: 60, top: 50 },
+      xAxis: { type: 'category', data: labels.map(String), name: 'Year', nameLocation: 'center', nameGap: 25 },
+      yAxis: [
+        { type: 'value', name: 'Stars (median)', position: 'left', min: 0 },
+        { type: 'value', name: 'Forks (median)', position: 'right', min: 0, splitLine: { show: false } }
+      ],
+      series: [
+        { name: 'Stars P25\u2013P75', type: 'line', yAxisIndex: 0, data: p25Stars, lineStyle: { opacity: 0 }, symbol: 'none', stack: 'starsBand', areaStyle: { opacity: 0 } },
+        { name: 'Stars P25\u2013P75', type: 'line', yAxisIndex: 0, data: p75Stars.map(function(v, i) { return v !== null && p25Stars[i] !== null ? toFixed1(v - p25Stars[i]) : null; }), lineStyle: { opacity: 0 }, symbol: 'none', stack: 'starsBand', areaStyle: { color: 'rgba(31,119,180,0.13)', opacity: 1 } },
+        { name: 'Median Stars', type: 'line', yAxisIndex: 0, data: medStars, itemStyle: { color: 'rgba(31,119,180,1)' }, lineStyle: { width: 2 }, smooth: 0.22, symbolSize: 5 },
+        { name: 'Forks P25\u2013P75', type: 'line', yAxisIndex: 1, data: p25Forks, lineStyle: { opacity: 0 }, symbol: 'none', stack: 'forksBand', areaStyle: { opacity: 0 } },
+        { name: 'Forks P25\u2013P75', type: 'line', yAxisIndex: 1, data: p75Forks.map(function(v, i) { return v !== null && p25Forks[i] !== null ? toFixed1(v - p25Forks[i]) : null; }), lineStyle: { opacity: 0 }, symbol: 'none', stack: 'forksBand', areaStyle: { color: 'rgba(255,127,14,0.13)', opacity: 1 } },
+        { name: 'Median Forks', type: 'line', yAxisIndex: 1, data: medForks, itemStyle: { color: 'rgba(255,127,14,1)' }, lineStyle: { width: 2 }, smooth: 0.22, symbolSize: 5 }
+      ]
     });
+    ReproDB.registerEChart(chart);
   }
 
   function renderConferenceOnlySplit(base, areaLabel) {
     var labels = base.labels;
     var confNames = Object.keys(base.conferenceYearValues).sort();
-    var starsDatasets = [];
-    var forksDatasets = [];
+
+    var starsSeries = [];
+    var forksSeries = [];
+    var legendData = [];
 
     for (var i = 0; i < confNames.length; i++) {
       var conf = confNames[i];
+      legendData.push(conf);
       var starsData = [];
       var forksData = [];
       for (var j = 0; j < labels.length; j++) {
@@ -164,61 +147,39 @@
         starsData.push(val ? toFixed1(val.stars) : null);
         forksData.push(val ? toFixed1(val.forks) : null);
       }
-
-      starsDatasets.push({
-        label: conf,
-        data: starsData,
-        borderColor: hslColor(i, confNames.length, 65, 40),
-        backgroundColor: hslColor(i, confNames.length, 65, 40),
-        borderWidth: 1.8,
-        pointRadius: 2,
-        tension: 0.2,
-        fill: false
-      });
-      forksDatasets.push({
-        label: conf,
-        data: forksData,
-        borderColor: hslColor(i, confNames.length, 65, 48),
-        backgroundColor: hslColor(i, confNames.length, 65, 48),
-        borderWidth: 1.8,
-        pointRadius: 2,
-        tension: 0.2,
-        fill: false
-      });
+      var color = hslColor(i, confNames.length, 65, 40);
+      starsSeries.push({ name: conf, type: 'line', data: starsData, itemStyle: { color: color }, lineStyle: { width: 1.8 }, smooth: 0.2, symbolSize: 4, connectNulls: true });
+      forksSeries.push({ name: conf, type: 'line', data: forksData, itemStyle: { color: color }, lineStyle: { width: 1.8 }, smooth: 0.2, symbolSize: 4, connectNulls: true });
     }
 
     document.getElementById('repoChartStarsWrap').classList.remove('rdb-hidden');
     document.getElementById('repoChartForksWrap').classList.remove('rdb-hidden');
 
-    new Chart(document.getElementById('yearlyRepoStarsChart'), {
-      type: 'line',
-      data: { labels: labels, datasets: starsDatasets },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        interaction: { mode: 'index', intersect: false },
-        plugins: { title: { display: true, text: areaLabel + ': Conference-specific Stars by Year' }, legend: { position: 'bottom' } },
-        scales: {
-          y: { beginAtZero: true, title: { display: true, text: 'Stars (median per repo)' } },
-          x: { title: { display: true, text: 'Year' } }
-        }
-      }
+    var starsEl = document.getElementById('yearlyRepoStarsChart');
+    var starsChart = ReproDB.initEChart(starsEl);
+    starsChart.setOption({
+      title: { text: areaLabel + ': Conference-specific Stars by Year', left: 'center', textStyle: { fontSize: 14 } },
+      tooltip: { trigger: 'axis' },
+      legend: { bottom: 0, data: legendData, type: 'scroll' },
+      grid: { containLabel: true, left: 60, right: 20, bottom: 70, top: 50 },
+      xAxis: { type: 'category', data: labels.map(String), name: 'Year', nameLocation: 'center', nameGap: 25 },
+      yAxis: { type: 'value', name: 'Stars (median)', min: 0 },
+      series: starsSeries
     });
+    ReproDB.registerEChart(starsChart);
 
-    new Chart(document.getElementById('yearlyRepoForksChart'), {
-      type: 'line',
-      data: { labels: labels, datasets: forksDatasets },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        interaction: { mode: 'index', intersect: false },
-        plugins: { title: { display: true, text: areaLabel + ': Conference-specific Forks by Year' }, legend: { position: 'bottom' } },
-        scales: {
-          y: { beginAtZero: true, title: { display: true, text: 'Forks (median per repo)' } },
-          x: { title: { display: true, text: 'Year' } }
-        }
-      }
+    var forksEl = document.getElementById('yearlyRepoForksChart');
+    var forksChart = ReproDB.initEChart(forksEl);
+    forksChart.setOption({
+      title: { text: areaLabel + ': Conference-specific Forks by Year', left: 'center', textStyle: { fontSize: 14 } },
+      tooltip: { trigger: 'axis' },
+      legend: { bottom: 0, data: legendData, type: 'scroll' },
+      grid: { containLabel: true, left: 60, right: 20, bottom: 70, top: 50 },
+      xAxis: { type: 'category', data: labels.map(String), name: 'Year', nameLocation: 'center', nameGap: 25 },
+      yAxis: { type: 'value', name: 'Forks (median)', min: 0 },
+      series: forksSeries
     });
+    ReproDB.registerEChart(forksChart);
   }
 
   var areaLabel = AREA === 'all' ? 'All Conferences' : AREA.charAt(0).toUpperCase() + AREA.slice(1);
@@ -226,5 +187,5 @@
 
   if (AREA === 'all') renderAllCombined(base, areaLabel);
   else renderConferenceOnlySplit(base, areaLabel);
-})();
+});
 </script>

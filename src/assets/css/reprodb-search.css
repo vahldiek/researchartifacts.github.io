@@ -21,6 +21,8 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   transition: box-shadow 0.2s, border-color 0.2s;
   box-sizing: border-box;
+  background: #fff;
+  color: #333;
 }
 #searchBox:focus {
   box-shadow: 0 4px 16px rgba(0,0,0,0.12);
@@ -56,6 +58,19 @@
   border-radius: 6px;
   font-size: 0.95em;
   background: #fff;
+}
+.rdb-area-checks {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+}
+.rdb-area-checks label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.95em;
+  cursor: pointer;
+  user-select: none;
 }
 
 /* ── Status & action buttons ───────────────────────────────────────────── */
@@ -136,3 +151,37 @@
 
 /* ── Hidden data element ───────────────────────────────────────────────── */
 #search-data-urls { display: none; }
+
+/* ── Dark mode ─────────────────────────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) #searchBox { background: #1e2127; color: #d6d9dc; border-color: #4a4f57; }
+  html:not([data-theme="light"]) #searchBox:focus { border-color: #5a9cf5; box-shadow: 0 4px 16px rgba(0,0,0,0.3); }
+  html:not([data-theme="light"]) #filters select { background: #1e2127; color: #d6d9dc; border-color: #4a4f57; }
+  html:not([data-theme="light"]) .rdb-search-action-btn { background: #1e2127; color: #d6d9dc; border-color: #4a4f57; }
+  html:not([data-theme="light"]) #pagination button { background: #1e2127; color: #d6d9dc; border-color: #4a4f57; }
+  html:not([data-theme="light"]) .profile-card { background: #23272d; border-color: #4a4f57; color: #d6d9dc; }
+  html:not([data-theme="light"]) .profile-card:hover { border-color: #5a9cf5; }
+  html:not([data-theme="light"]) .profile-card .card-detail { color: #aab0b8; }
+  html:not([data-theme="light"]) .rdb-result-authors { color: #aab0b8; }
+  html:not([data-theme="light"]) .rdb-result-meta { color: #aab0b8; }
+  html:not([data-theme="light"]) .rdb-badge { background: #2e3d2e; color: #c8e6c9; }
+  html:not([data-theme="light"]) .rdb-badge--award { background: #3d3525; color: #ffe0b2; }
+  html:not([data-theme="light"]) #searchStatus { color: #aab0b8; }
+  html:not([data-theme="light"]) #sort-controls { color: #aab0b8; }
+  html:not([data-theme="light"]) #noResults { color: #888; }
+}
+html[data-theme="dark"] #searchBox { background: #1e2127; color: #d6d9dc; border-color: #4a4f57; }
+html[data-theme="dark"] #searchBox:focus { border-color: #5a9cf5; box-shadow: 0 4px 16px rgba(0,0,0,0.3); }
+html[data-theme="dark"] #filters select { background: #1e2127; color: #d6d9dc; border-color: #4a4f57; }
+html[data-theme="dark"] .rdb-search-action-btn { background: #1e2127; color: #d6d9dc; border-color: #4a4f57; }
+html[data-theme="dark"] #pagination button { background: #1e2127; color: #d6d9dc; border-color: #4a4f57; }
+html[data-theme="dark"] .profile-card { background: #23272d; border-color: #4a4f57; color: #d6d9dc; }
+html[data-theme="dark"] .profile-card:hover { border-color: #5a9cf5; }
+html[data-theme="dark"] .profile-card .card-detail { color: #aab0b8; }
+html[data-theme="dark"] .rdb-result-authors { color: #aab0b8; }
+html[data-theme="dark"] .rdb-result-meta { color: #aab0b8; }
+html[data-theme="dark"] .rdb-badge { background: #2e3d2e; color: #c8e6c9; }
+html[data-theme="dark"] .rdb-badge--award { background: #3d3525; color: #ffe0b2; }
+html[data-theme="dark"] #searchStatus { color: #aab0b8; }
+html[data-theme="dark"] #sort-controls { color: #aab0b8; }
+html[data-theme="dark"] #noResults { color: #888; }

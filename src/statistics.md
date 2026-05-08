@@ -42,12 +42,12 @@ Artifact evaluation is heavily concentrated in three regions: North America, Eur
 <div class="rdb-chart-row">
   <div class="rdb-chart-col">
     <div class="rdb-chart-wrap rdb-chart-wrap--lg">
-      <canvas id="chartContinentDonut"></canvas>
+      <div id="chartContinentDonut" style="width:100%;height:100%"></div>
     </div>
   </div>
   <div class="rdb-chart-col">
     <div class="rdb-chart-wrap rdb-chart-wrap--lg">
-      <canvas id="chartContinentBar"></canvas>
+      <div id="chartContinentBar" style="width:100%;height:100%"></div>
     </div>
   </div>
 </div>
@@ -59,7 +59,7 @@ Artifact evaluation is heavily concentrated in three regions: North America, Eur
 The top 15 countries by combined activity score (artifact creation + AE committee service). The United States dominates both, followed by China and Germany.
 
 <div class="rdb-chart-wide rdb-chart-wrap--xl">
-  <canvas id="chartCountryBar"></canvas>
+  <div id="chartCountryBar" style="width:100%;height:100%"></div>
 </div>
 
 ---
@@ -69,7 +69,7 @@ The top 15 countries by combined activity score (artifact creation + AE committe
 Each bubble is a country (≥5 artifacts). X-axis = artifact availability rate (% of papers with an artifact), Y-axis = reproducibility rate (% of artifacts that achieved the "reproduced" badge), bubble size = number of institutions. Colored by continent.
 
 <div class="rdb-chart-wide rdb-chart-wrap--xl">
-  <canvas id="chartReproBubble"></canvas>
+  <div id="chartReproBubble" style="width:100%;height:100%"></div>
 </div>
 
 ---
@@ -79,8 +79,8 @@ Each bubble is a country (≥5 artifacts). X-axis = artifact availability rate (
 Activity growth by continent and by top-8 countries. The rapid expansion of Chinese institutions since 2022 is especially visible, as is the continued dominance of North America and Europe.
 
 <div class="rdb-chart-grid">
-  <div class="rdb-chart-wrap rdb-chart-wrap--lg"><canvas id="chartContinentTrend"></canvas></div>
-  <div class="rdb-chart-wrap rdb-chart-wrap--lg"><canvas id="chartCountryTrend"></canvas></div>
+  <div class="rdb-chart-wrap rdb-chart-wrap--lg"><div id="chartContinentTrend" style="width:100%;height:100%"></div></div>
+  <div class="rdb-chart-wrap rdb-chart-wrap--lg"><div id="chartCountryTrend" style="width:100%;height:100%"></div></div>
 </div>
 
 ### AE Committee Service
@@ -88,7 +88,7 @@ Activity growth by continent and by top-8 countries. The rapid expansion of Chin
 Geographic diversity of AE committee membership over time. Europe and North America provide the majority of evaluators, but Asian participation is growing.
 
 <div class="rdb-chart-wide rdb-chart-wrap--lg">
-  <canvas id="chartAETrend"></canvas>
+  <div id="chartAETrend" style="width:100%;height:100%"></div>
 </div>
 
 ---

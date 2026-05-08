@@ -2,6 +2,9 @@
 <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
 <link rel="apple-touch-icon" href="{{ '/assets/images/favicon.svg' | relative_url }}">
 
+<!-- Alpine.js x-cloak: hide elements until Alpine initializes -->
+<style>[x-cloak] { display: none !important; }</style>
+
 <!-- Prevent FOUC: apply saved theme before any paint -->
 <script>
 (function() {
@@ -14,50 +17,37 @@
 
 <!-- Content Security Policy
      Allows: self-hosted assets, inline scripts/styles (used by Minimal Mistakes
-     theme + per-page data-loading scripts), CDN-hosted Chart.js / flag-icons,
-     and HTTPS images. -->
+     theme + per-page data-loading scripts), CDN-hosted Tabulator / ECharts /
+     Alpine.js / flag-icons, and HTTPS images. -->
 <meta http-equiv="Content-Security-Policy"
       content="default-src 'self';
                script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
                style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;
                font-src 'self' https://cdn.jsdelivr.net https://fonts.gstatic.com data:;
                img-src 'self' data: https:;
-               connect-src 'self';
+               connect-src 'self' https://cdn.jsdelivr.net;
                object-src 'none';
                base-uri 'self';
-               form-action 'self';
-               frame-ancestors 'self'">
+               form-action 'self'">
 
-<!-- ReproDB shared assets (utils, table widget) -->
+<!-- ReproDB shared assets (utils, table helpers) — loaded synchronously so
+     inline page scripts can reference window.ReproDB during parsing. -->
 <link rel="stylesheet" href="{{ '/assets/css/reprodb-table.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/reprodb-controls.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/reprodb-search.css' | relative_url }}">
-<script src="{{ '/assets/js/reprodb-utils.js' | relative_url }}" defer></script>
-<script src="{{ '/assets/js/reprodb-table.js' | relative_url }}" defer></script>
-<script src="{{ '/assets/js/reprodb-ranking.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/reprodb-utils.js' | relative_url }}"></script>
+
+<!-- Tabulator 6 — sortable / paginated / filterable tables -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tabulator-tables@6/dist/css/tabulator_simple.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/tabulator-tables@6/dist/js/tabulator.min.js"></script>
 
 {% unless page.skip_chartjs %}
-<!-- Chart.js v4 + datalabels plugin (CDN) — skipped on data-table-only pages -->
+<!-- ECharts 5 — charts + heatmaps (replaces Chart.js) -->
 <link rel="stylesheet" href="{{ '/assets/css/reprodb-charts.css' | relative_url }}">
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
-<script>
-// Disable datalabels globally — opt-in per chart via plugins.datalabels.display
-ChartDataLabels && Chart.register(ChartDataLabels);
-// Apply dark-mode aware defaults immediately (before any chart JS runs)
-(function() {
-  var t = document.documentElement.getAttribute('data-theme');
-  var dark = t === 'dark' || (t !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
-  var txt = dark ? '#d6d9dc' : '#666';
-  var grid = dark ? '#383c43' : 'rgba(0,0,0,0.1)';
-  Chart.defaults.color = txt;
-  Chart.defaults.borderColor = grid;
-  Chart.defaults.plugins.datalabels = { display: false, color: txt };
-  Chart.defaults.plugins.title.color = txt;
-  Chart.defaults.plugins.legend.labels.color = txt;
-  Chart.defaults.scale.ticks.color = txt;
-  Chart.defaults.scale.grid.color = grid;
-  Chart.defaults.scale.title.color = txt;
-})();
-</script>
+<script defer src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
 {% endunless %}
+
+<!-- Alpine.js 3 — reactive UI bindings. Must load LAST among deferred
+     scripts so Tabulator + ECharts are available when Alpine processes
+     x-data directives and calls component boot() functions. -->
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3/dist/cdn.min.js"></script>

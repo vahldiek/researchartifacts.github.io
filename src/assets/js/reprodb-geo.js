@@ -1,5 +1,5 @@
 /**
- * reprodb-geo.js — Geographic statistics page logic.
+ * reprodb-geo.js — Geographic statistics page logic (ECharts).
  * Reads data URLs from #geo-data element, fetches JSON, renders charts and cards.
  */
 (function() {
@@ -20,40 +20,11 @@
     'Oceania': '#f59e0b', 'South America': '#8b5cf6', 'Africa': '#ec4899'
   };
 
-  /* ── Country code → name / continent maps ────────────────────────── */
-  var CODE_TO_NAME = {
-    US:'United States',CN:'China',JP:'Japan',GB:'United Kingdom',
-    DE:'Germany',FR:'France',CA:'Canada',AU:'Australia',IN:'India',
-    SG:'Singapore',KR:'South Korea',CH:'Switzerland',NL:'Netherlands',
-    SE:'Sweden',NO:'Norway',DK:'Denmark',FI:'Finland',BE:'Belgium',
-    AT:'Austria',IL:'Israel',IT:'Italy',ES:'Spain',PT:'Portugal',
-    GR:'Greece',HK:'Hong Kong',TW:'Taiwan',TH:'Thailand',BR:'Brazil',
-    MX:'Mexico',AR:'Argentina',CL:'Chile',IE:'Ireland',NZ:'New Zealand',
-    ZA:'South Africa',RU:'Russia',UA:'Ukraine',PL:'Poland',RO:'Romania',
-    CZ:'Czechia',HU:'Hungary',TR:'Turkey',PK:'Pakistan',MY:'Malaysia',
-    ID:'Indonesia',VN:'Vietnam',PH:'Philippines',BD:'Bangladesh',
-    LK:'Sri Lanka',IR:'Iran',SA:'Saudi Arabia',AE:'UAE',EG:'Egypt',
-    KE:'Kenya',NG:'Nigeria',MA:'Morocco',CO:'Colombia',PE:'Peru',
-    RW:'Rwanda',QA:'Qatar',LU:'Luxembourg',CY:'Cyprus'
-  };
+  /* ── Country code → name / continent maps (from shared utils) ───── */
+  var CODE_TO_NAME = ReproDB.CODE_TO_NAME;
+  var CODE_TO_CONTINENT = ReproDB.CODE_TO_CONTINENT;
 
-  var CODE_TO_CONTINENT = {
-    US:'North America',CA:'North America',MX:'North America',
-    CN:'Asia',JP:'Asia',KR:'Asia',SG:'Asia',IN:'Asia',TW:'Asia',
-    HK:'Asia',TH:'Asia',PK:'Asia',MY:'Asia',ID:'Asia',VN:'Asia',
-    PH:'Asia',BD:'Asia',LK:'Asia',IR:'Asia',SA:'Asia',AE:'Asia',QA:'Asia',
-    GB:'Europe',DE:'Europe',FR:'Europe',CH:'Europe',NL:'Europe',
-    SE:'Europe',NO:'Europe',DK:'Europe',FI:'Europe',BE:'Europe',
-    AT:'Europe',IL:'Europe',IT:'Europe',ES:'Europe',PT:'Europe',
-    GR:'Europe',IE:'Europe',RU:'Europe',UA:'Europe',PL:'Europe',
-    RO:'Europe',CZ:'Europe',HU:'Europe',TR:'Europe',LU:'Europe',CY:'Europe',
-    AU:'Oceania',NZ:'Oceania',
-    BR:'South America',AR:'South America',CL:'South America',
-    CO:'South America',PE:'South America',
-    ZA:'Africa',KE:'Africa',NG:'Africa',MA:'Africa',EG:'Africa',RW:'Africa'
-  };
-
-  /* ── Institution → country code (abbreviated, common patterns) ───── */
+  /* ── Institution → country code ──────────────────────────────────── */
   var INST_PATTERNS = {
     'mit':'US','stanford':'US','berkeley':'US','carnegie mellon':'US','cmu':'US',
     'harvard':'US','princeton':'US','cornell':'US','columbia':'US',
@@ -103,7 +74,6 @@
     for (var pat in INST_PATTERNS) {
       if (lower.indexOf(pat) !== -1) return INST_PATTERNS[pat];
     }
-    // US state heuristic
     if (/\b(alabama|alaska|arizona|arkansas|california|colorado|connecticut|delaware|florida|georgia|hawaii|idaho|illinois|indiana|iowa|kansas|kentucky|louisiana|maine|maryland|massachusetts|michigan|minnesota|mississippi|missouri|montana|nebraska|nevada|new hampshire|new jersey|new mexico|new york|north carolina|north dakota|ohio|oklahoma|oregon|pennsylvania|rhode island|south carolina|south dakota|tennessee|texas|utah|vermont|virginia|washington|west virginia|wisconsin|wyoming)\b/.test(lower)) return 'US';
     return '';
   }
@@ -180,9 +150,6 @@
   }
 
   /* ── Chart helpers ───────────────────────────────────────────────── */
-  var charts = [];
-  function destroyCharts() { charts.forEach(function(c) { c.destroy(); }); charts = []; }
-
   function allYears(items) {
     var yrs = {};
     items.forEach(function(d) { for (var y in d.years) yrs[y] = true; });
@@ -191,173 +158,160 @@
 
   /* ── Render: Continental donut ───────────────────────────────────── */
   function renderContinentDonut(continents) {
+    var el = document.getElementById('chartContinentDonut');
+    if (!el) return;
     var sorted = continents.slice().sort(function(a,b) { return b.artifacts - a.artifacts; });
-    charts.push(new Chart(document.getElementById('chartContinentDonut'), {
-      type: 'doughnut',
-      data: {
-        labels: sorted.map(function(c) { return c.name; }),
-        datasets: [{
-          data: sorted.map(function(c) { return c.artifacts; }),
-          backgroundColor: sorted.map(function(c) { return CONTINENT_COLORS[c.name] || '#999'; })
-        }]
-      },
-      options: {
-        responsive: true, maintainAspectRatio: false,
-        interaction: { mode: 'nearest', intersect: true },
-        plugins: {
-          title: { display: false },
-          legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } },
-          tooltip: { enabled: true }
-        }
-      }
-    }));
+    var chart = ReproDB.initEChart(el);
+    chart.setOption({
+      tooltip: { trigger: 'item', formatter: '{b}: {c} ({d}%)' },
+      legend: { bottom: 0, type: 'scroll' },
+      series: [{
+        type: 'pie', radius: ['40%', '70%'], center: ['50%', '45%'],
+        data: sorted.map(function(c) { return { name: c.name, value: c.artifacts, itemStyle: { color: CONTINENT_COLORS[c.name] || '#999' } }; }),
+        label: { show: false }, emphasis: { label: { show: true, fontSize: 13 } }
+      }]
+    });
+    ReproDB.registerEChart(chart);
   }
 
   /* ── Render: Continental stacked bar ─────────────────────────────── */
   function renderContinentBar(continents) {
+    var el = document.getElementById('chartContinentBar');
+    if (!el) return;
     var sorted = continents.slice().sort(function(a,b) { return b.combined - a.combined; });
-    charts.push(new Chart(document.getElementById('chartContinentBar'), {
-      type: 'bar',
-      data: {
-        labels: sorted.map(function(c) { return c.name; }),
-        datasets: [
-          { label: 'Artifacts', data: sorted.map(function(c) { return c.artifacts; }), backgroundColor: '#2563eb' },
-          { label: 'AE Service', data: sorted.map(function(c) { return c.ae; }), backgroundColor: '#16a34a' },
-          { label: 'Chairs', data: sorted.map(function(c) { return c.chairs; }), backgroundColor: '#f59e0b' }
-        ]
-      },
-      options: {
-        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
-        interaction: { mode: 'index', intersect: false },
-        plugins: { title: { display: false }, legend: { position: 'bottom', labels: { boxWidth: 12 } }, tooltip: { enabled: true } },
-        scales: { x: { stacked: true, beginAtZero: true }, y: { stacked: true } }
-      }
-    }));
+    var labels = sorted.map(function(c) { return c.name; }).reverse();
+    var chart = ReproDB.initEChart(el);
+    chart.setOption({
+      title: { text: 'Contributions by Continent', left: 'center', textStyle: { fontSize: 14 } },
+      tooltip: { trigger: 'axis' },
+      legend: { bottom: 0 },
+      grid: { containLabel: true, left: 20, right: 20, bottom: 50, top: 40 },
+      xAxis: { type: 'value' },
+      yAxis: { type: 'category', data: labels },
+      series: [
+        { name: 'Artifacts', type: 'bar', stack: 'total', data: sorted.map(function(c) { return c.artifacts; }).reverse(), itemStyle: { color: '#2563eb' } },
+        { name: 'AE Service', type: 'bar', stack: 'total', data: sorted.map(function(c) { return c.ae; }).reverse(), itemStyle: { color: '#16a34a' } },
+        { name: 'Chairs', type: 'bar', stack: 'total', data: sorted.map(function(c) { return c.chairs; }).reverse(), itemStyle: { color: '#f59e0b' } }
+      ]
+    });
+    ReproDB.registerEChart(chart);
   }
 
   /* ── Render: Top 15 countries bar ────────────────────────────────── */
   function renderCountryBar(countries) {
+    var el = document.getElementById('chartCountryBar');
+    if (!el) return;
     var top = countries.slice().sort(function(a,b) { return b.combined - a.combined; }).slice(0, 15);
-    charts.push(new Chart(document.getElementById('chartCountryBar'), {
-      type: 'bar',
-      data: {
-        labels: top.map(function(c) { return c.name; }),
-        datasets: [
-          { label: 'Artifact Score', data: top.map(function(c) { return c.artifacts; }), backgroundColor: '#2563eb' },
-          { label: 'AE Service', data: top.map(function(c) { return c.ae; }), backgroundColor: '#16a34a' }
-        ]
-      },
-      options: {
-        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
-        interaction: { mode: 'index', intersect: false },
-        plugins: { title: { display: false }, legend: { position: 'bottom', labels: { boxWidth: 12 } }, tooltip: { enabled: true } },
-        scales: { x: { stacked: true, beginAtZero: true }, y: { stacked: true } }
-      }
-    }));
+    var labels = top.map(function(c) { return c.name; }).reverse();
+    var chart = ReproDB.initEChart(el);
+    chart.setOption({
+      title: { text: 'Top 15 Countries by Combined Score', left: 'center', textStyle: { fontSize: 14 } },
+      tooltip: { trigger: 'axis' },
+      legend: { bottom: 0 },
+      grid: { containLabel: true, left: 20, right: 20, bottom: 50, top: 40 },
+      xAxis: { type: 'value' },
+      yAxis: { type: 'category', data: labels },
+      series: [
+        { name: 'Artifact Score', type: 'bar', stack: 'total', data: top.map(function(c) { return c.artifacts; }).reverse(), itemStyle: { color: '#2563eb' } },
+        { name: 'AE Service', type: 'bar', stack: 'total', data: top.map(function(c) { return c.ae; }).reverse(), itemStyle: { color: '#16a34a' } }
+      ]
+    });
+    ReproDB.registerEChart(chart);
   }
 
-  /* ── Render: Availability vs Reproducibility bubble ──────────────── */
+  /* ── Render: Availability vs Reproducibility scatter ─────────────── */
   function renderReproBubble(countries) {
+    var el = document.getElementById('chartReproBubble');
+    if (!el) return;
     var filtered = countries.filter(function(c) { return c.artifacts >= 5; });
-    var points = filtered.map(function(c) {
+    var scatterData = filtered.map(function(c) {
       var availPct = c.papers > 0 ? Math.round(c.artifacts / c.papers * 100) : 0;
       var reproPct = c.artifacts > 0 ? Math.round(c.reproducible / c.artifacts * 100) : 0;
-      return { x: availPct, y: reproPct, r: Math.max(4, Math.sqrt(c.institutions) * 3), label: c.name, code: c.code };
+      var col = CONTINENT_COLORS[CODE_TO_CONTINENT[c.code]] || '#999';
+      return {
+        value: [availPct, reproPct],
+        symbolSize: Math.max(8, Math.sqrt(c.institutions) * 6),
+        itemStyle: { color: col + '88', borderColor: col, borderWidth: 1 },
+        label: c.name, code: c.code, inst: c.institutions
+      };
     });
-    charts.push(new Chart(document.getElementById('chartReproBubble'), {
-      type: 'bubble',
-      data: {
-        datasets: [{
-          label: 'Countries',
-          data: points,
-          backgroundColor: points.map(function(p) {
-            var col = CONTINENT_COLORS[CODE_TO_CONTINENT[p.code]] || '#999';
-            return col + '88';
-          }),
-          borderColor: points.map(function(p) { return CONTINENT_COLORS[CODE_TO_CONTINENT[p.code]] || '#999'; }),
-          borderWidth: 1
-        }]
-      },
-      options: {
-        responsive: true, maintainAspectRatio: false,
-        interaction: { mode: 'nearest', intersect: true },
-        plugins: {
-          title: { display: false },
-          legend: { display: false },
-          tooltip: { enabled: true, callbacks: { label: function(ctx) { var p = ctx.raw; return p.label + ': ' + p.x + '% available, ' + p.y + '% repro, ' + Math.round(p.r*p.r/9) + ' inst'; } } }
-        },
-        scales: {
-          x: { title: { display: true, text: 'Artifact Availability %' }, beginAtZero: true, max: 100 },
-          y: { title: { display: true, text: 'Reproducibility %' }, beginAtZero: true, max: 100 }
-        }
-      }
-    }));
+
+    var chart = ReproDB.initEChart(el);
+    chart.setOption({
+      title: { text: 'Artifact Availability vs. Reproducibility', left: 'center', textStyle: { fontSize: 14 } },
+      tooltip: { formatter: function(p) { var d = p.data; return d.label + ': ' + d.value[0] + '% available, ' + d.value[1] + '% repro, ' + d.inst + ' inst'; } },
+      grid: { containLabel: true, left: 40, right: 20, bottom: 50, top: 40 },
+      xAxis: { type: 'value', name: 'Artifact Availability %', min: 0, max: 100, nameLocation: 'center', nameGap: 25 },
+      yAxis: { type: 'value', name: 'Reproducibility %', min: 0, max: 100 },
+      series: [{ type: 'scatter', data: scatterData }]
+    });
+    ReproDB.registerEChart(chart);
   }
 
   /* ── Render: Activity over time by continent ─────────────────────── */
   function renderContinentTrend(continents) {
+    var el = document.getElementById('chartContinentTrend');
+    if (!el) return;
     var years = allYears(continents);
     var sorted = continents.slice().sort(function(a,b) { return b.combined - a.combined; });
-    charts.push(new Chart(document.getElementById('chartContinentTrend'), {
-      type: 'line',
-      data: {
-        labels: years,
-        datasets: sorted.map(function(c, i) {
-          return { label: c.name, data: years.map(function(y) { return c.years[y] || 0; }),
-            borderColor: CONTINENT_COLORS[c.name] || PALETTE[i], fill: false, tension: 0.3, pointRadius: 3 };
-        })
-      },
-      options: {
-        responsive: true, maintainAspectRatio: false,
-        interaction: { mode: 'index', intersect: false },
-        plugins: { title: { display: false }, legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } }, tooltip: { enabled: true } },
-        scales: { y: { beginAtZero: true, title: { display: true, text: 'Active contributions' } }, x: { title: { display: true, text: 'Year' } } }
-      }
-    }));
+    var chart = ReproDB.initEChart(el);
+    chart.setOption({
+      title: { text: 'Activity by Continent Over Time', left: 'center', textStyle: { fontSize: 14 } },
+      tooltip: { trigger: 'axis' },
+      legend: { bottom: 0, type: 'scroll' },
+      grid: { containLabel: true, left: 40, right: 20, bottom: 50, top: 40 },
+      xAxis: { type: 'category', data: years.map(String), name: 'Year', nameLocation: 'center', nameGap: 25 },
+      yAxis: { type: 'value', name: 'Active contributions', min: 0 },
+      series: sorted.map(function(c) {
+        return { name: c.name, type: 'line', data: years.map(function(y) { return c.years[y] || 0; }),
+          itemStyle: { color: CONTINENT_COLORS[c.name] || '#999' }, smooth: 0.3, symbolSize: 5 };
+      })
+    });
+    ReproDB.registerEChart(chart);
   }
 
   /* ── Render: Top 8 countries trend ───────────────────────────────── */
   function renderCountryTrend(countries) {
+    var el = document.getElementById('chartCountryTrend');
+    if (!el) return;
     var top8 = countries.slice().sort(function(a,b) { return b.combined - a.combined; }).slice(0, 8);
     var years = allYears(top8);
-    charts.push(new Chart(document.getElementById('chartCountryTrend'), {
-      type: 'line',
-      data: {
-        labels: years,
-        datasets: top8.map(function(c, i) {
-          return { label: c.name, data: years.map(function(y) { return c.years[y] || 0; }),
-            borderColor: PALETTE[i], borderWidth: 2, fill: false, tension: 0.2, pointRadius: 3, spanGaps: true };
-        })
-      },
-      options: {
-        responsive: true, maintainAspectRatio: false,
-        interaction: { mode: 'index', intersect: false },
-        plugins: { title: { display: false }, legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } }, tooltip: { enabled: true } },
-        scales: { y: { beginAtZero: true, title: { display: true, text: 'Active contributions' } }, x: { title: { display: true, text: 'Year' } } }
-      }
-    }));
+    var chart = ReproDB.initEChart(el);
+    chart.setOption({
+      title: { text: 'Top 8 Countries Over Time', left: 'center', textStyle: { fontSize: 14 } },
+      tooltip: { trigger: 'axis' },
+      legend: { bottom: 0, type: 'scroll' },
+      grid: { containLabel: true, left: 40, right: 20, bottom: 50, top: 40 },
+      xAxis: { type: 'category', data: years.map(String), name: 'Year', nameLocation: 'center', nameGap: 25 },
+      yAxis: { type: 'value', name: 'Active contributions', min: 0 },
+      series: top8.map(function(c, i) {
+        return { name: c.name, type: 'line', data: years.map(function(y) { return c.years[y] || 0; }),
+          itemStyle: { color: PALETTE[i] }, lineStyle: { width: 2 }, smooth: 0.2, symbolSize: 5, connectNulls: true };
+      })
+    });
+    ReproDB.registerEChart(chart);
   }
 
   /* ── Render: AE committee trends ─────────────────────────────────── */
   function renderAETrend(aeData) {
+    var el = document.getElementById('chartAETrend');
+    if (!el) return;
     var years = allYears(aeData.continents);
     var sorted = aeData.continents.slice().sort(function(a,b) { return b.total - a.total; });
-    charts.push(new Chart(document.getElementById('chartAETrend'), {
-      type: 'line',
-      data: {
-        labels: years,
-        datasets: sorted.map(function(c, i) {
-          return { label: c.name, data: years.map(function(y) { return c.years[y] || 0; }),
-            borderColor: CONTINENT_COLORS[c.name] || PALETTE[i], borderWidth: 2, fill: false, tension: 0.2, pointRadius: 3, spanGaps: true };
-        })
-      },
-      options: {
-        responsive: true, maintainAspectRatio: false,
-        interaction: { mode: 'index', intersect: false },
-        plugins: { title: { display: false }, legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } }, tooltip: { enabled: true } },
-        scales: { y: { beginAtZero: true, title: { display: true, text: 'AE memberships' } }, x: { title: { display: true, text: 'Year' } } }
-      }
-    }));
+    var chart = ReproDB.initEChart(el);
+    chart.setOption({
+      title: { text: 'AE Committee Service by Continent', left: 'center', textStyle: { fontSize: 14 } },
+      tooltip: { trigger: 'axis' },
+      legend: { bottom: 0, type: 'scroll' },
+      grid: { containLabel: true, left: 40, right: 20, bottom: 50, top: 40 },
+      xAxis: { type: 'category', data: years.map(String), name: 'Year', nameLocation: 'center', nameGap: 25 },
+      yAxis: { type: 'value', name: 'AE memberships', min: 0 },
+      series: sorted.map(function(c, i) {
+        return { name: c.name, type: 'line', data: years.map(function(y) { return c.years[y] || 0; }),
+          itemStyle: { color: CONTINENT_COLORS[c.name] || PALETTE[i] }, lineStyle: { width: 2 }, smooth: 0.2, symbolSize: 5, connectNulls: true };
+      })
+    });
+    ReproDB.registerEChart(chart);
   }
 
   /* ── Render: Country cards ───────────────────────────────────────── */
@@ -373,7 +327,7 @@
       return '<div class="rdb-country-card">' +
         '<span class="flag fi fi-' + c.code.toLowerCase() + '"></span>' +
         '<div class="info"><div class="name">' + c.name + '</div>' +
-        '<div class="stats">' + c.institutions + ' inst · ' + c.artifacts + ' artifacts · ' + reproPct + '% repro · ' + partPct + '% participation</div></div></div>';
+        '<div class="stats">' + c.institutions + ' inst \u00b7 ' + c.artifacts + ' artifacts \u00b7 ' + reproPct + '% repro \u00b7 ' + partPct + '% participation</div></div></div>';
     }
 
     function render(filter) {
@@ -399,17 +353,14 @@
 
     render('');
     if (searchInput) {
-      var _t = null;
-      searchInput.addEventListener('input', function() {
-        clearTimeout(_t); _t = setTimeout(function() { render(searchInput.value); }, 200);
-      });
+      searchInput.addEventListener('input', ReproDB.debounce(function() { render(searchInput.value); }));
     }
   }
 
   /* ── Load and render ─────────────────────────────────────────────── */
   Promise.all([
-    fetch(instUrl).then(function(r) { return r.json(); }),
-    fetch(aeUrl).then(function(r) { return r.json(); })
+    ReproDB.fetchJSON(instUrl),
+    ReproDB.fetchJSON(aeUrl)
   ]).then(function(results) {
     var institutions = results[0];
     var aeMembers = results[1];
@@ -418,18 +369,15 @@
     var continents = aggregateByContinent(countries);
     var aeData = aggregateAE(aeMembers);
 
-    // Show content
     document.getElementById('geo-loading').classList.add('rdb-hidden');
     document.getElementById('geo-content').classList.remove('rdb-hidden');
 
-    // Render summary numbers
     document.getElementById('statCountries').textContent = countries.length;
     document.getElementById('statContinents').textContent = continents.length;
     document.getElementById('statInstitutions').textContent = institutions.length;
     var totalArt = countries.reduce(function(s,c) { return s + c.artifacts; }, 0);
     document.getElementById('statArtifacts').textContent = totalArt;
 
-    // Render charts
     requestAnimationFrame(function() { requestAnimationFrame(function() {
       renderContinentDonut(continents);
       renderContinentBar(continents);

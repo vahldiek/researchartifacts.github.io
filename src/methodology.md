@@ -10,15 +10,15 @@ This page explains how we collect, process, and analyze artifact evaluation data
 
 ## Overview
 
-| | |
-|---|---|
-| **Data Schema Version** | {{ site.data.summary.schema_version }} |
-| **Total Artifacts** | {{ site.data.summary.total_artifacts }} |
-| **Conferences Tracked** | {{ site.data.summary.total_conferences }} ({{ site.data.summary.conferences_list | join: ", " }}) |
-| **Years Covered** | {{ site.data.summary.year_range }} |
-| **Total Authors** | {{ site.data.author_summary.total_authors }} |
-| **AE Committee Members** | {{ site.data.committee_stats.total_members }} ({{ site.data.committee_stats.unique_members }} unique) |
-| **Last Updated** | {{ site.data.summary.last_updated }} |
+<table class="page__content">
+<tr><td><strong>Data Schema Version</strong></td><td>{{ site.data.summary.schema_version }}</td></tr>
+<tr><td><strong>Total Artifacts</strong></td><td>{{ site.data.summary.total_artifacts }}</td></tr>
+<tr><td><strong>Conferences Tracked</strong></td><td>{{ site.data.summary.total_conferences }} ({{ site.data.summary.conferences_list | join: ", " }})</td></tr>
+<tr><td><strong>Years Covered</strong></td><td>{{ site.data.summary.year_range }}</td></tr>
+<tr><td><strong>Total Authors</strong></td><td>{{ site.data.author_summary.total_authors }}</td></tr>
+<tr><td><strong>AE Committee Members</strong></td><td>{{ site.data.committee_stats.total_members }} ({{ site.data.committee_stats.unique_members }} unique)</td></tr>
+<tr><td><strong>Last Updated</strong></td><td><a href="https://github.com/ReproDB/reprodb-pipeline-results">{{ site.data.summary.last_updated }}</a></td></tr>
+</table>
 
 {% endif %}
 

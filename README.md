@@ -100,6 +100,22 @@ Contributions welcome! Please:
 3. Make your changes
 4. Submit a pull request
 
+### PR Checks
+
+Every pull request runs three automated checks (see `.github/workflows/pr-checks.yml`):
+
+| Check | What it does | When it fails |
+|---|---|---|
+| **Jekyll Build** | Builds the full site with `jekyll-build-pages` | Liquid syntax errors, missing includes, bad YAML front matter |
+| **JSON Schema Validation** | Validates `src/assets/data/*.json` against schemas in [ReproDB/data-schemas](https://github.com/ReproDB/data-schemas) | Data files don't match expected schema (missing fields, wrong types) |
+| **Data Immutability** | Blocks PRs that modify `src/assets/data/` or `src/_data/` | Data changes should come from the [reprodb-pipeline](https://github.com/reprodb/reprodb-pipeline), not manual edits |
+
+### Guidelines
+
+- **Pages**: Keep pages as `.md` where possible. Alpine.js/Tabulator controls live in `_includes/*.html` partials.
+- **Data**: Do not manually edit JSON files in `src/assets/data/`. If data needs updating, run the pipeline.
+- **Schemas**: If the pipeline produces a new field, update the schema in [data-schemas](https://github.com/ReproDB/data-schemas) first.
+
 For data issues, please report them in the [reprodb-pipeline](https://github.com/reprodb/reprodb-pipeline) repository.
 
 ## License

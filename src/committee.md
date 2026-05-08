@@ -40,7 +40,7 @@ A cross-community analysis of Artifact Evaluation Committee composition, retenti
 Darker cells indicate larger committees. Cells below 5 members (likely incomplete data) are omitted.
 
 <div class="rdb-chart-wide" style="overflow-x:auto;">
-  <canvas id="committeeSizesHeatmap"></canvas>
+  <div id="committeeSizesHeatmap" style="height:300px"></div>
 </div>
 
 ---
@@ -50,7 +50,7 @@ Darker cells indicate larger committees. Cells below 5 members (likely incomplet
 Total committee assignments per year, split by area. Growth reflects both new conferences adopting AE processes and existing committees scaling up.
 
 <div class="rdb-chart-wide rdb-chart-wrap--xl">
-  <canvas id="committeeGrowthChart"></canvas>
+  <div id="committeeGrowthChart" style="width:100%;height:100%"></div>
 </div>
 
 ---
@@ -60,7 +60,7 @@ Total committee assignments per year, split by area. Growth reflects both new co
 How many terms do evaluators serve? Most serve once, but a growing cohort returns repeatedly — building institutional knowledge.
 
 <div class="rdb-chart-wide rdb-chart-wrap--lg">
-  <canvas id="serviceFrequencyChart"></canvas>
+  <div id="serviceFrequencyChart" style="width:100%;height:100%"></div>
 </div>
 
 ---
@@ -70,7 +70,17 @@ How many terms do evaluators serve? Most serve once, but a growing cohort return
 Year-over-year retention: what fraction of each year's committee served the previous year? The "overall" line tracks retention across area boundaries (e.g., a security evaluator who switches to systems counts as retained).
 
 <div class="rdb-chart-wide rdb-chart-wrap--lg">
-  <canvas id="retentionChart"></canvas>
+  <div id="retentionChart" style="width:100%;height:100%"></div>
+</div>
+
+---
+
+## AE Committee Flow
+
+How do AE committee members flow between conferences? This Sankey diagram shows shared members between conference AECs in consecutive years — revealing which conferences share evaluator pools and how members move across venues.
+
+<div class="rdb-chart-wide">
+  <div id="memberFlowSankey" style="width:100%;height:700px"></div>
 </div>
 
 ---
@@ -80,17 +90,17 @@ Year-over-year retention: what fraction of each year's committee served the prev
 <div class="rdb-chart-row">
   <div class="rdb-chart-col">
     <div class="rdb-chart-wrap rdb-chart-wrap--sm">
-      <canvas id="continentSysChart"></canvas>
+      <div id="continentSysChart" style="width:100%;height:100%"></div>
     </div>
   </div>
   <div class="rdb-chart-col">
     <div class="rdb-chart-wrap rdb-chart-wrap--sm">
-      <canvas id="continentSecChart"></canvas>
+      <div id="continentSecChart" style="width:100%;height:100%"></div>
     </div>
   </div>
 </div>
 
-<div style="display:none;"><canvas id="committeeContinentsChart"></canvas></div>
+<div style="display:none;"><div id="committeeContinentsChart" style="height:1px"></div></div>
 
 ---
 
@@ -99,7 +109,7 @@ Year-over-year retention: what fraction of each year's committee served the prev
 North America dominates both areas, but geographic profiles differ: Europe has a larger share in security committees.
 
 <div class="rdb-chart-wide rdb-chart-wrap--xl">
-  <canvas id="committeeCountriesChart"></canvas>
+  <div id="committeeCountriesChart" style="width:100%;height:100%"></div>
 </div>
 
 ---
@@ -109,17 +119,17 @@ North America dominates both areas, but geographic profiles differ: Europe has a
 <div class="rdb-chart-row">
   <div class="rdb-chart-col">
     <div class="rdb-chart-wrap rdb-chart-wrap--lg">
-      <canvas id="instSysChart"></canvas>
+      <div id="instSysChart" style="width:100%;height:100%"></div>
     </div>
   </div>
   <div class="rdb-chart-col">
     <div class="rdb-chart-wrap rdb-chart-wrap--lg">
-      <canvas id="instSecChart"></canvas>
+      <div id="instSecChart" style="width:100%;height:100%"></div>
     </div>
   </div>
 </div>
 
-<div style="display:none;"><canvas id="committeeInstitutionsChart"></canvas></div>
+<div style="display:none;"><div id="committeeInstitutionsChart" style="height:1px"></div></div>
 
 ---
 
@@ -128,7 +138,7 @@ North America dominates both areas, but geographic profiles differ: Europe has a
 Only a small fraction of evaluators serve in both systems and security — the two communities have largely separate AE member pools.
 
 <div class="rdb-chart-wide rdb-chart-wrap--md">
-  <canvas id="crossOverlapChart"></canvas>
+  <div id="crossOverlapChart" style="width:100%;height:100%"></div>
 </div>
 
 {% else %}

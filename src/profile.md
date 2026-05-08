@@ -6,11 +6,15 @@ layout: default
 
 {% include profile_common.html %}
 
-
-
-<div class="rdb-search-box-wrap">
-  <input type="text" id="profile-search-box" class="profile-search-box" placeholder="Search for an author or institution..." autocomplete="off">
-  <ul id="search-results" class="profile-search-results rdb-hidden"></ul>
+<div id="profile-search-hero" class="profile-search-hero">
+  <div class="profile-search-hero-inner">
+    <h2 class="profile-search-heading">Find a researcher or institution</h2>
+    <div class="rdb-search-box-wrap">
+      <input type="text" id="profile-search-box" class="profile-search-box" placeholder="Search by name, affiliation, or institution…" autocomplete="off">
+      <svg class="profile-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <ul id="search-results" class="profile-search-results rdb-hidden"></ul>
+    </div>
+  </div>
 </div>
 
 <div id="loading-msg" class="profile-loading">Loading profile data…</div>
@@ -26,39 +30,30 @@ layout: default
 
   <div id="chart-section" class="rdb-hidden">
     <h3>Contributions Over Time</h3>
-    <div class="chart-container"><canvas id="timelineChart"></canvas></div>
+    <div class="chart-container"><div id="timelineChart" style="height:300px"></div></div>
   </div>
 
   <div id="papers-section" class="rdb-hidden">
     <h3>Artifact Papers</h3>
-    <table class="profile-table">
-      <thead><tr><th>#</th><th>Title</th><th>Conference</th><th>Year</th><th>Badges</th></tr></thead>
-      <tbody id="papers-body"></tbody>
-    </table>
+    <div id="papers-table"></div>
   </div>
 
   <div id="ae-section" class="rdb-hidden">
     <h3>AE Committee Service</h3>
     <div id="ae-summary"></div>
-    <table class="ae-table rdb-hidden" id="ae-table">
-      <thead><tr><th>Conference</th><th>Year</th><th>Role</th></tr></thead>
-      <tbody id="ae-body"></tbody>
-    </table>
+    <div id="ae-table-body"></div>
   </div>
 
   <div id="citations-section" class="rdb-hidden">
     <h3>Cited Artifacts</h3>
     <p id="citations-summary"></p>
-    <table class="profile-table" id="citations-table">
-      <thead><tr><th>#</th><th>Artifact Title</th><th>Conference</th><th>Year</th><th>Citations</th></tr></thead>
-      <tbody id="citations-body"></tbody>
-    </table>
+    <div id="citations-table-body"></div>
   </div>
 
   <div id="author-history-section" class="rdb-hidden">
     <details class="ranking-history-details">
       <summary><h3>Ranking History</h3></summary>
-      <div class="chart-container"><canvas id="authorHistoryChart"></canvas></div>
+      <div class="chart-container"><div id="authorHistoryChart" style="height:300px"></div></div>
     </details>
   </div>
 </div>
@@ -73,75 +68,28 @@ layout: default
 
   <div id="inst-contributors-section" class="rdb-hidden">
     <h3>Top Contributors</h3>
-    <table class="inst-table" id="contributors-table">
-      <thead><tr>
-        <th data-col="rank">#</th>
-        <th data-col="name">Researcher</th>
-        <th data-col="combined_score">Score</th>
-        <th data-col="artifact_score">Artifact</th>
-        <th data-col="ae_score">AE</th>
-        <th data-col="artifacts">Artifacts</th>
-        <th data-col="total_papers">Papers</th>
-        <th data-col="ae_memberships">AE Svc</th>
-        <th data-col="chair_count">Chair</th>
-      </tr></thead>
-      <tbody id="contributors-body"></tbody>
-    </table>
-    <div class="pag-controls">
-      <button id="contrib-prev">&laquo; Prev</button>
-      <span id="contrib-info"></span>
-      <button id="contrib-next">Next &raquo;</button>
-    </div>
+    <div id="contributors-table"></div>
   </div>
 
   <div id="inst-artifacts-section" class="rdb-hidden">
     <h3>Artifact Papers</h3>
-    <table class="inst-table" id="artifacts-table">
-      <thead><tr>
-        <th>#</th>
-        <th>Title</th>
-        <th>Authors</th>
-        <th>Conference</th>
-        <th>Year</th>
-        <th>Badges</th>
-      </tr></thead>
-      <tbody id="artifacts-body"></tbody>
-    </table>
-    <div class="pag-controls">
-      <button id="art-prev">&laquo; Prev</button>
-      <span id="art-info"></span>
-      <button id="art-next">Next &raquo;</button>
-    </div>
+    <div id="artifacts-table"></div>
   </div>
 
   <div id="inst-ae-section" class="rdb-hidden">
     <h3>AE Committee Involvement</h3>
     <div id="ae-summary-text"></div>
-    <table class="inst-table" id="ae-detail-table">
-      <thead><tr>
-        <th>Researcher</th>
-        <th>Conference</th>
-        <th>Year</th>
-        <th>Role</th>
-      </tr></thead>
-      <tbody id="ae-detail-body"></tbody>
-    </table>
-    <div class="pag-controls">
-      <button id="ae-prev">&laquo; Prev</button>
-      <span id="ae-info"></span>
-      <button id="ae-next">Next &raquo;</button>
-    </div>
+    <div id="ae-detail-table"></div>
   </div>
 
   <div id="inst-history-section" class="rdb-hidden">
     <details class="ranking-history-details">
       <summary><h3>Ranking History</h3></summary>
-      <div class="chart-container"><canvas id="instHistoryChart"></canvas></div>
+      <div class="chart-container"><div id="instHistoryChart" style="height:300px"></div></div>
     </details>
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
 <div id="profile-data-urls" class="rdb-hidden"
   data-base-url='{{ "" | relative_url }}'
   data-author-profiles='{{ "/assets/data/author_profiles.json" | relative_url }}'

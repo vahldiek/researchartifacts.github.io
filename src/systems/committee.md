@@ -27,7 +27,7 @@ Composition, retention, and geographic diversity of Artifact Evaluation Committe
 Darker cells indicate larger committees. Cells below 5 members (likely incomplete data) are omitted.
 
 <div class="rdb-chart-wide" style="overflow-x:auto;">
-  <canvas id="committeeSizesHeatmap"></canvas>
+  <div id="committeeSizesHeatmap" style="height:300px"></div>
 </div>
 
 ---
@@ -37,7 +37,7 @@ Darker cells indicate larger committees. Cells below 5 members (likely incomplet
 Total committee assignments per year. Growth reflects both new conferences adopting AE processes and existing committees scaling up.
 
 <div class="rdb-chart-wide rdb-chart-wrap--xl">
-  <canvas id="committeeGrowthChart"></canvas>
+  <div id="committeeGrowthChart" style="width:100%;height:100%"></div>
 </div>
 
 ---
@@ -47,7 +47,7 @@ Total committee assignments per year. Growth reflects both new conferences adopt
 How many terms do evaluators serve? Most serve once, but a growing cohort returns repeatedly — building institutional knowledge.
 
 <div class="rdb-chart-wide rdb-chart-wrap--lg">
-  <canvas id="serviceFrequencyChart"></canvas>
+  <div id="serviceFrequencyChart" style="width:100%;height:100%"></div>
 </div>
 
 ---
@@ -57,7 +57,7 @@ How many terms do evaluators serve? Most serve once, but a growing cohort return
 Year-over-year retention: what fraction of each year's committee served the previous year? The dashed line tracks retention across area boundaries (e.g., a systems evaluator who also served in security counts as retained).
 
 <div class="rdb-chart-wide rdb-chart-wrap--lg">
-  <canvas id="retentionChart"></canvas>
+  <div id="retentionChart" style="width:100%;height:100%"></div>
 </div>
 
 ---
@@ -67,7 +67,7 @@ Year-over-year retention: what fraction of each year's committee served the prev
 Geographic distribution of systems AE committee members by continent.
 
 <div class="rdb-chart-wide rdb-chart-wrap--sm" style="max-width:500px;">
-  <canvas id="committeeContinentsChart"></canvas>
+  <div id="committeeContinentsChart" style="width:100%;height:100%"></div>
 </div>
 
 ---
@@ -75,7 +75,7 @@ Geographic distribution of systems AE committee members by continent.
 ## Top Countries
 
 <div class="rdb-chart-wide rdb-chart-wrap--xl">
-  <canvas id="committeeCountriesChart"></canvas>
+  <div id="committeeCountriesChart" style="width:100%;height:100%"></div>
 </div>
 
 ---
@@ -83,7 +83,7 @@ Geographic distribution of systems AE committee members by continent.
 ## Top Institutions
 
 <div class="rdb-chart-wide rdb-chart-wrap--xl">
-  <canvas id="committeeInstitutionsChart"></canvas>
+  <div id="committeeInstitutionsChart" style="width:100%;height:100%"></div>
 </div>
 
 {% else %}

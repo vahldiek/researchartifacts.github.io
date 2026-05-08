@@ -38,7 +38,7 @@ A side-by-side longitudinal comparison of artifact evaluation across **systems**
 Total evaluated artifacts per year, split by area. Security adopted AE earlier (2017) than systems (2019) and grew faster, though much of the gap reflects venue expansion rather than per-venue increases.
 
 <div class="rdb-chart-wide rdb-chart-wrap--xl">
-  <canvas id="artifactGrowthChart"></canvas>
+  <div id="artifactGrowthChart" style="width:100%;height:100%"></div>
 </div>
 
 ---
@@ -51,13 +51,13 @@ Percentage of artifacts receiving each badge type (top row) and badge rates as a
   <div class="rdb-chart-col">
     <h4>Systems — % of AE Artifacts</h4>
     <div class="rdb-chart-wrap rdb-chart-wrap--sm">
-      <canvas id="badgeChartSys"></canvas>
+      <div id="badgeChartSys" style="width:100%;height:100%"></div>
     </div>
   </div>
   <div class="rdb-chart-col">
     <h4>Security — % of AE Artifacts</h4>
     <div class="rdb-chart-wrap rdb-chart-wrap--sm">
-      <canvas id="badgeChartSec"></canvas>
+      <div id="badgeChartSec" style="width:100%;height:100%"></div>
     </div>
   </div>
 </div>
@@ -65,11 +65,11 @@ Percentage of artifacts receiving each badge type (top row) and badge rates as a
 ### Available, Functional & Reproduced: Systems vs. Security
 
 <div class="rdb-chart-wide rdb-chart-wrap--lg">
-  <canvas id="badgeRateCompareChart"></canvas>
+  <div id="badgeRateCompareChart" style="width:100%;height:100%"></div>
 </div>
 
 <div class="rdb-chart-wide rdb-chart-wrap--lg">
-  <canvas id="partRateChartCombined"></canvas>
+  <div id="partRateChartCombined" style="width:100%;height:100%"></div>
 </div>
 
 ---
@@ -79,7 +79,7 @@ Percentage of artifacts receiving each badge type (top row) and badge rates as a
 Artifact counts by conference and year. Darker cells indicate more artifacts evaluated that year.
 
 <div class="rdb-chart-wide">
-  <canvas id="timelineHeatmap"></canvas>
+  <div id="timelineHeatmap" style="height:400px"></div>
 </div>
 
 ---
@@ -90,15 +90,15 @@ Top-10 institutions by combined score (artifact creation + AE service) for each 
 
 <div class="rdb-chart-row">
   <div class="rdb-chart-col">
-    <canvas id="instChartSys" height="340"></canvas>
+    <div id="instChartSys" style="height:340px"></div>
   </div>
   <div class="rdb-chart-col">
-    <canvas id="instChartSec" height="340"></canvas>
+    <div id="instChartSec" style="height:340px"></div>
   </div>
 </div>
 
 <div class="rdb-chart-wide rdb-chart-wrap--xl">
-  <canvas id="instScatterChart"></canvas>
+  <div id="instScatterChart" style="width:100%;height:100%"></div>
 </div>
 <div class="rdb-scatter-legend">
   <span>Security</span>

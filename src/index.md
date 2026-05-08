@@ -22,11 +22,10 @@ skip_chartjs: true
     <select id="venueFilter">
       <option value="">All Venues</option>
     </select>
-    <select id="areaFilter">
-      <option value="">All Areas</option>
-      <option value="systems">Systems</option>
-      <option value="security">Security</option>
-    </select>
+    <span class="rdb-area-checks">
+      <label><input type="checkbox" class="areaCheck" value="systems" checked> Systems</label>
+      <label><input type="checkbox" class="areaCheck" value="security" checked> Security</label>
+    </span>
   </div>
   <div id="searchStatus">Loading artifact data…</div>
   <button id="downloadBtn" class="rdb-search-action-btn rdb-hidden" onclick="downloadResults()">⬇ Download JSON</button>

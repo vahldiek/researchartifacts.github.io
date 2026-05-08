@@ -1,25 +1,15 @@
 /**
- * reprodb-committee.js — Chart logic for AE Committee pages.
- *
- * Depends on: Chart.js v4 (loaded globally via head/custom.html)
+ * reprodb-committee.js — Chart logic for AE Committee pages (ECharts).
  *
  * Reads inline JSON from <script id="committee-page-data" type="application/json">
  * injected by the Jekyll template.
- *
- * Data shape:
- * {
- *   area: 'overall' | 'systems' | 'security',
- *   committeeStatsUrl: '/assets/data/committee_stats.json',
- *   aeMembersUrl: '/assets/data/ae_members.json',
- *   summary: { total_members, total_systems, total_security, unique_members, ... }
- * }
  */
 (function() {
   'use strict';
 
-  var SYS_COLOR  = '#2980b9';
-  var SEC_COLOR  = '#c0392b';
-  var BOTH_COLOR = '#8e44ad';
+  var SYS_COLOR  = ReproDB.COLORS.systems;
+  var SEC_COLOR  = ReproDB.COLORS.security;
+  var BOTH_COLOR = ReproDB.COLORS.both;
 
   document.addEventListener('DOMContentLoaded', function() {
     var dataEl = document.getElementById('committee-page-data');
@@ -30,8 +20,8 @@
     var AREA = D.area || 'overall';
 
     Promise.all([
-      fetch(D.committeeStatsUrl).then(function(r) { return r.json(); }),
-      fetch(D.aeMembersUrl).then(function(r) { return r.json(); })
+      ReproDB.fetchJSON(D.committeeStatsUrl),
+      ReproDB.fetchJSON(D.aeMembersUrl)
     ]).then(function(results) {
       var stats = results[0];
       var aeMembers = results[1];
@@ -46,145 +36,146 @@
     renderGrowthChart(stats, area);
     renderServiceFrequency(aeMembers, area);
     renderRetention(aeMembers, area);
+    renderMemberFlow(aeMembers, area);
     renderContinents(stats, area);
     renderCountries(stats, area);
     renderInstitutions(stats, area);
     if (area === 'overall') {
       renderCrossOverlap(aeMembers);
     }
-    // Register for runtime theme changes (redraw heatmap canvas)
-    ReproDB.onThemeChange(function() {
-      renderSizesHeatmap(stats, area);
-    });
   }
 
-  /* ===== Committee Sizes Heatmap ===== */
+  /* ===== Committee Sizes Heatmap (ECharts) ===== */
   function renderSizesHeatmap(stats, area) {
-    var canvas = document.getElementById('committeeSizesHeatmap');
-    if (!canvas) return;
+    var el = document.getElementById('committeeSizesHeatmap');
+    if (!el) return;
 
     var sizes = stats.committee_sizes || [];
     if (area !== 'overall') {
       sizes = sizes.filter(function(s) { return s.area === area; });
     }
 
-    var yearSet = {}, confSet = {};
-    sizes.forEach(function(s) { yearSet[s.year] = true; confSet[s.conference] = true; });
+    var yearSet = {}, confAreaMap = {};
+    sizes.forEach(function(s) { yearSet[s.year] = true; confAreaMap[s.conference] = s.area; });
     var years = Object.keys(yearSet).sort();
-    var confs = Object.keys(confSet).sort(function(a, b) {
-      /* Sort by area then name */
-      var aArea = '', bArea = '';
-      sizes.forEach(function(s) { if (s.conference === a) aArea = s.area; if (s.conference === b) bArea = s.area; });
-      if (aArea !== bArea) return aArea === 'systems' ? -1 : 1;
+    var confs = Object.keys(confAreaMap).sort(function(a, b) {
+      var aA = confAreaMap[a] || '', bA = confAreaMap[b] || '';
+      if (aA !== bA) return aA === 'systems' ? -1 : 1;
       return a.localeCompare(b);
     });
 
-    /* Build lookup */
     var lookup = {};
     var maxVal = 0;
     sizes.forEach(function(s) {
-      if (s.size < 5) return; /* skip incomplete */
-      var key = s.conference + '|' + s.year;
-      lookup[key] = s.size;
+      if (s.size < 5) return;
+      lookup[s.conference + '|' + s.year] = s.size;
       if (s.size > maxVal) maxVal = s.size;
     });
 
-    var cellW = 44, cellH = 26, padL = 100, padT = 32, padB = 10, padR = 10;
-    var canvasW = padL + years.length * cellW + padR;
-    var canvasH = padT + confs.length * cellH + padB;
+    var confAreas = confs.map(function(c) { return confAreaMap[c]; });
 
-    canvas.width  = canvasW * 2;
-    canvas.height = canvasH * 2;
-    canvas.style.width  = canvasW + 'px';
-    canvas.style.height = canvasH + 'px';
-    var ctx = canvas.getContext('2d');
-    ctx.scale(2, 2);
-
-    var tc = ReproDB.themeColors();
-    /* Year headers */
-    ctx.font = '11px sans-serif';
-    ctx.textAlign = 'center';
-    ctx.fillStyle = tc.text;
-    years.forEach(function(y, yi) {
-      ctx.fillText(y, padL + yi * cellW + cellW / 2, padT - 10);
-    });
-
-    /* Rows */
-    var sysCount = 0;
+    var rawData = [];
     confs.forEach(function(conf, ci) {
-      var rowY = padT + ci * cellH;
-      var confArea = '';
-      sizes.forEach(function(s) { if (s.conference === conf) confArea = s.area; });
-      if (confArea === 'systems') sysCount = ci + 1;
-
-      ctx.font = '11px sans-serif';
-      ctx.fillStyle = tc.text;
-      ctx.textAlign = 'right';
-      ctx.fillText(conf, padL - 6, rowY + cellH / 2 + 4);
-
       years.forEach(function(y, yi) {
         var v = lookup[conf + '|' + y] || 0;
-        var cellX = padL + yi * cellW;
-        ctx.fillStyle = heatColor(v, maxVal, confArea);
-        ctx.fillRect(cellX + 1, rowY + 1, cellW - 2, cellH - 2);
-        ctx.strokeStyle = 'rgba(150,150,150,0.3)';
-        ctx.lineWidth = 0.5;
-        ctx.strokeRect(cellX + 1, rowY + 1, cellW - 2, cellH - 2);
-        if (v > 0) {
-          ctx.font = '10px sans-serif';
-          var textThreshold = ReproDB.isDark() ? 0.25 : 0.6;
-          ctx.fillStyle = v / maxVal > textThreshold ? '#fff' : tc.text;
-          ctx.textAlign = 'center';
-          ctx.fillText(v, cellX + cellW / 2, rowY + cellH / 2 + 4);
-        }
+        rawData.push({ x: yi, y: ci, v: v, area: confAreas[ci] });
       });
     });
 
-    /* Separator line between areas */
-    if (area === 'overall' && sysCount > 0 && sysCount < confs.length) {
-      var sepY = padT + sysCount * cellH;
-      ctx.strokeStyle = tc.separator;
-      ctx.lineWidth = 1.5;
-      ctx.beginPath();
-      ctx.moveTo(padL, sepY);
-      ctx.lineTo(padL + years.length * cellW, sepY);
-      ctx.stroke();
-    }
-  }
-
-  function heatColor(v, maxVal, confArea) {
-    if (v === 0) return ReproDB.isDark() ? 'rgba(50,55,65,0.4)' : 'rgba(220,220,220,0.2)';
-    var t = v / maxVal;
-    var dark = ReproDB.isDark();
-    if (confArea === 'security') {
-      if (dark) {
-        // Dark mode: muted dark red → bright red
-        var r = Math.round(80 + 140 * t);
-        var g = Math.round(20 + 20 * t);
-        var b = Math.round(20 + 15 * t);
-        return 'rgb(' + r + ',' + g + ',' + b + ')';
+    function cellColor(v, category) {
+      var dark = ReproDB.isDark();
+      if (v === 0) return dark ? 'rgba(50,55,65,0.5)' : 'rgba(220,220,220,0.3)';
+      var t = v / maxVal;
+      if (category === 'security') {
+        if (dark) {
+          var r = Math.round(80 + 140 * t);
+          var g = Math.round(20 + 20 * t);
+          var b = Math.round(20 + 15 * t);
+          return 'rgb(' + r + ',' + g + ',' + b + ')';
+        }
+        return 'rgba(192,57,43,' + (0.15 + t * 0.7) + ')';
       }
-      return 'rgba(192,57,43,' + (0.15 + t * 0.7) + ')';
+      if (dark) {
+        var r2 = Math.round(20 + 20 * t);
+        var g2 = Math.round(50 + 70 * t);
+        var b2 = Math.round(80 + 130 * t);
+        return 'rgb(' + r2 + ',' + g2 + ',' + b2 + ')';
+      }
+      return 'rgba(41,128,185,' + (0.15 + t * 0.7) + ')';
     }
-    if (dark) {
-      // Dark mode: muted dark blue → bright blue
-      var r = Math.round(20 + 20 * t);
-      var g = Math.round(50 + 70 * t);
-      var b = Math.round(80 + 130 * t);
-      return 'rgb(' + r + ',' + g + ',' + b + ')';
+
+    function labelColor(v) {
+      var dark = ReproDB.isDark();
+      var tc = ReproDB.themeColors();
+      var t = maxVal > 0 ? v / maxVal : 0;
+      var textThreshold = dark ? 0.25 : 0.6;
+      return (v > 0 && t > textThreshold) ? '#fff' : tc.text;
     }
-    return 'rgba(41,128,185,' + (0.15 + t * 0.7) + ')';
+
+    function buildHeatData() {
+      return rawData.map(function(d) {
+        return { value: [d.x, d.y, d.v], itemStyle: { color: cellColor(d.v, d.area) }, label: { color: labelColor(d.v) } };
+      });
+    }
+
+    var hmChart = ReproDB.initEChart(el);
+
+    function setOption() {
+      var dark = ReproDB.isDark();
+      var tc = ReproDB.themeColors();
+      var legendItems = [];
+      if (area === 'overall') {
+        legendItems = [
+          { type: 'rect', left: 'center', bottom: 28, shape: { width: 120, height: 12 }, z: 100,
+            style: { fill: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+              { offset: 0, color: dark ? 'rgba(50,55,65,0.5)' : 'rgba(220,220,220,0.3)' },
+              { offset: 1, color: dark ? 'rgb(40,120,210)' : 'rgba(41,128,185,0.85)' }
+            ]) } },
+          { type: 'text', left: 'center', bottom: 42, z: 100,
+            style: { text: 'Systems', fill: tc.text, fontSize: 11, textAlign: 'center' } },
+          { type: 'rect', left: 'center', bottom: 4, shape: { width: 120, height: 12 }, z: 100,
+            style: { fill: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+              { offset: 0, color: dark ? 'rgba(50,55,65,0.5)' : 'rgba(220,220,220,0.3)' },
+              { offset: 1, color: dark ? 'rgb(220,40,35)' : 'rgba(192,57,43,0.85)' }
+            ]) } },
+          { type: 'text', left: 'center', bottom: 18, z: 100,
+            style: { text: 'Security', fill: tc.text, fontSize: 11, textAlign: 'center' } }
+        ];
+      }
+      hmChart.setOption({
+        tooltip: { formatter: function(p) { return confs[p.value[1]] + ' (' + years[p.value[0]] + '): ' + p.value[2] + ' members'; } },
+        grid: { containLabel: true, left: 20, right: 20, bottom: area === 'overall' ? 80 : 30, top: 30 },
+        xAxis: { type: 'category', data: years, splitArea: { show: false } },
+        yAxis: { type: 'category', data: confs, splitArea: { show: false }, inverse: true },
+        graphic: legendItems,
+        series: [{
+          type: 'heatmap', data: buildHeatData(),
+          label: { show: true, fontSize: 10,
+            formatter: function(p) { return p.value[2] > 0 ? p.value[2] : ''; }
+          },
+          itemStyle: {
+            borderColor: dark ? '#333' : '#fff', borderWidth: 1
+          }
+        }]
+      });
+    }
+
+    setOption();
+    ReproDB.registerEChart(hmChart);
+    ReproDB.onThemeChange(setOption);
   }
 
   /* ===== Committee Growth (stacked bar) ===== */
   function renderGrowthChart(stats, area) {
-    var canvas = document.getElementById('committeeGrowthChart');
-    if (!canvas) return;
+    var el = document.getElementById('committeeGrowthChart');
+    if (!el) return;
 
     var sizes = stats.committee_sizes || [];
     var yearSet = {};
     sizes.forEach(function(s) { if (s.size >= 5) yearSet[s.year] = true; });
     var years = Object.keys(yearSet).sort();
+
+    var chart = ReproDB.initEChart(el);
 
     if (area === 'overall') {
       var sysByYear = {}, secByYear = {};
@@ -194,24 +185,17 @@
         if (s.area === 'systems') sysByYear[s.year] = (sysByYear[s.year] || 0) + s.size;
         else secByYear[s.year] = (secByYear[s.year] || 0) + s.size;
       });
-      var tc = ReproDB.themeColors();
-      new Chart(canvas, {
-        type: 'bar',
-        data: {
-          labels: years,
-          datasets: [
-            { label: 'Systems', data: years.map(function(y) { return sysByYear[y]; }), backgroundColor: SYS_COLOR, stack: 's' },
-            { label: 'Security', data: years.map(function(y) { return secByYear[y]; }), backgroundColor: SEC_COLOR, stack: 's' }
-          ]
-        },
-        options: {
-          responsive: true, maintainAspectRatio: false,
-          color: tc.text,
-          plugins: { title: { display: true, text: 'Total Committee Assignments per Year', color: tc.text },
-                     legend: { labels: { color: tc.text } } },
-          scales: { x: { stacked: true, ticks: { color: tc.text }, grid: { color: tc.grid } },
-                    y: { stacked: true, beginAtZero: true, ticks: { color: tc.text }, grid: { color: tc.grid }, title: { display: true, text: 'Members', color: tc.text } } }
-        }
+      chart.setOption({
+        title: { text: 'Total Committee Assignments per Year', left: 'center', textStyle: { fontSize: 14 } },
+        tooltip: { trigger: 'axis' },
+        legend: { bottom: 0 },
+        grid: { containLabel: true, left: 40, right: 20, bottom: 50, top: 40 },
+        xAxis: { type: 'category', data: years },
+        yAxis: { type: 'value', name: 'Members', min: 0 },
+        series: [
+          { name: 'Systems', type: 'bar', stack: 's', data: years.map(function(y) { return sysByYear[y]; }), itemStyle: { color: SYS_COLOR } },
+          { name: 'Security', type: 'bar', stack: 's', data: years.map(function(y) { return secByYear[y]; }), itemStyle: { color: SEC_COLOR } }
+        ]
       });
     } else {
       var byYear = {};
@@ -221,29 +205,23 @@
         byYear[s.year] = (byYear[s.year] || 0) + s.size;
       });
       var color = area === 'systems' ? SYS_COLOR : SEC_COLOR;
-      var tc = ReproDB.themeColors();
-      new Chart(canvas, {
-        type: 'bar',
-        data: {
-          labels: years,
-          datasets: [{ label: 'Members', data: years.map(function(y) { return byYear[y]; }), backgroundColor: color }]
-        },
-        options: {
-          responsive: true, maintainAspectRatio: false,
-          color: tc.text,
-          plugins: { title: { display: true, text: 'Total Committee Assignments per Year', color: tc.text },
-                     legend: { labels: { color: tc.text } } },
-          scales: { x: { ticks: { color: tc.text }, grid: { color: tc.grid } },
-                    y: { beginAtZero: true, ticks: { color: tc.text }, grid: { color: tc.grid }, title: { display: true, text: 'Members', color: tc.text } } }
-        }
+      chart.setOption({
+        title: { text: 'Total Committee Assignments per Year', left: 'center', textStyle: { fontSize: 14 } },
+        tooltip: { trigger: 'axis' },
+        legend: { bottom: 0 },
+        grid: { containLabel: true, left: 40, right: 20, bottom: 50, top: 40 },
+        xAxis: { type: 'category', data: years },
+        yAxis: { type: 'value', name: 'Members', min: 0 },
+        series: [{ name: 'Members', type: 'bar', data: years.map(function(y) { return byYear[y]; }), itemStyle: { color: color } }]
       });
     }
+    ReproDB.registerEChart(chart);
   }
 
   /* ===== Service Frequency Histogram ===== */
   function renderServiceFrequency(aeMembers, area) {
-    var canvas = document.getElementById('serviceFrequencyChart');
-    if (!canvas) return;
+    var el = document.getElementById('serviceFrequencyChart');
+    if (!el) return;
 
     var bins = { '1': 0, '2-3': 0, '4-5': 0, '6-10': 0, '11+': 0 };
     var binsSys = { '1': 0, '2-3': 0, '4-5': 0, '6-10': 0, '11+': 0 };
@@ -258,49 +236,53 @@
     });
 
     var labels = Object.keys(bins);
-    var datasets;
-    if (area === 'overall') {
-      datasets = [
-        { label: 'Systems', data: labels.map(function(l) { return binsSys[l]; }), backgroundColor: SYS_COLOR },
-        { label: 'Security', data: labels.map(function(l) { return binsSec[l]; }), backgroundColor: SEC_COLOR }
-      ];
-    } else {
-      var target = area === 'systems' ? binsSys : binsSec;
-      var color = area === 'systems' ? SYS_COLOR : SEC_COLOR;
-      datasets = [{ label: 'Members', data: labels.map(function(l) { return target[l]; }), backgroundColor: color }];
+
+    var chart = ReproDB.initEChart(el);
+
+    function setOption() {
+      var tc = ReproDB.themeColors();
+      var labelOpt = { show: true, position: 'top', fontSize: 11, color: tc.text, textBorderColor: 'transparent' };
+      var series;
+      if (area === 'overall') {
+        series = [
+          { name: 'Systems', type: 'bar', data: labels.map(function(l) { return binsSys[l]; }), itemStyle: { color: SYS_COLOR }, label: labelOpt },
+          { name: 'Security', type: 'bar', data: labels.map(function(l) { return binsSec[l]; }), itemStyle: { color: SEC_COLOR }, label: labelOpt }
+        ];
+      } else {
+        var target = area === 'systems' ? binsSys : binsSec;
+        var color = area === 'systems' ? SYS_COLOR : SEC_COLOR;
+        series = [{ name: 'Members', type: 'bar', data: labels.map(function(l) { return target[l]; }), itemStyle: { color: color }, label: labelOpt }];
+      }
+
+      chart.setOption({
+        title: { text: 'Service Frequency \u2014 Terms Served per Member', left: 'center', textStyle: { fontSize: 14 } },
+        tooltip: { trigger: 'axis' },
+        legend: { bottom: 0 },
+        grid: { containLabel: true, left: 40, right: 20, bottom: 60, top: 40 },
+        xAxis: { type: 'category', data: labels, name: 'Terms', nameLocation: 'center', nameGap: 25 },
+        yAxis: { type: 'value', name: 'Members', min: 0 },
+        series: series
+      });
     }
 
-    var tc = ReproDB.themeColors();
-    new Chart(canvas, {
-      type: 'bar',
-      data: { labels: labels, datasets: datasets },
-      options: {
-        responsive: true, maintainAspectRatio: false,
-        plugins: {
-          title: { display: true, text: 'Service Frequency — Terms Served per Member', color: tc.text },
-          legend: { labels: { color: tc.text } },
-          datalabels: { display: true, anchor: 'end', align: 'end', color: tc.text, font: { size: 11 } }
-        },
-        scales: { y: { beginAtZero: true, ticks: { color: tc.text }, grid: { color: tc.grid }, title: { display: true, text: 'Members', color: tc.text } },
-                  x: { ticks: { color: tc.text }, grid: { color: tc.grid }, title: { display: true, text: 'Terms', color: tc.text } } }
-      }
-    });
+    setOption();
+    ReproDB.registerEChart(chart);
+    ReproDB.onThemeChange(setOption);
   }
 
   /* ===== Retention Trends ===== */
   function renderRetention(aeMembers, area) {
-    var canvas = document.getElementById('retentionChart');
-    if (!canvas) return;
+    var el = document.getElementById('retentionChart');
+    if (!el) return;
 
-    /* Build year→set-of-members for each area and overall (any area) */
-    var sysYears = {}, secYears = {}, allYears = {};
+    var sysYears = {}, secYears = {}, allYearsMap = {};
     aeMembers.forEach(function(m) {
       var isSys = m.area === 'systems' || m.area === 'both';
       var isSec = m.area === 'security' || m.area === 'both';
       if (m.years) {
         Object.keys(m.years).forEach(function(y) {
-          if (!allYears[y]) allYears[y] = {};
-          allYears[y][m.name] = true;
+          if (!allYearsMap[y]) allYearsMap[y] = {};
+          allYearsMap[y][m.name] = true;
           if (isSys) { if (!sysYears[y]) sysYears[y] = {}; sysYears[y][m.name] = true; }
           if (isSec) { if (!secYears[y]) secYears[y] = {}; secYears[y][m.name] = true; }
         });
@@ -322,7 +304,6 @@
       return { labels: labels, data: data };
     }
 
-    /* Cross-area retention: did member serve anywhere last year? */
     function crossRetentionSeries(areaYearMap, allYearMap) {
       var yrs = Object.keys(areaYearMap).sort();
       var labels = [], data = [];
@@ -340,9 +321,8 @@
 
     var sysRet = retentionSeries(sysYears);
     var secRet = retentionSeries(secYears);
-    var allRet = retentionSeries(allYears);
+    var allRet = retentionSeries(allYearsMap);
 
-    /* Merge labels */
     var allLabels = {};
     sysRet.labels.forEach(function(l) { allLabels[l] = true; });
     secRet.labels.forEach(function(l) { allLabels[l] = true; });
@@ -355,121 +335,268 @@
       return labels.map(function(l) { return map[l] !== undefined ? map[l] : null; });
     }
 
-    var datasets;
+    var seriesArr;
     if (area === 'overall') {
-      datasets = [
-        { label: 'Overall — Retained %', data: alignToLabels(allRet), borderColor: ReproDB.themeColors().totalLine, borderWidth: 2, borderDash: [5, 3], fill: false, tension: 0.3, spanGaps: true },
-        { label: 'Systems — Retained %', data: alignToLabels(sysRet), borderColor: SYS_COLOR, borderWidth: 2, fill: false, tension: 0.3, spanGaps: true },
-        { label: 'Security — Retained %', data: alignToLabels(secRet), borderColor: SEC_COLOR, borderWidth: 2, fill: false, tension: 0.3, spanGaps: true }
+      seriesArr = [
+        { name: 'Overall \u2014 Retained %', type: 'line', data: alignToLabels(allRet), itemStyle: { color: ReproDB.themeColors().totalLine }, lineStyle: { type: 'dashed', width: 2 }, smooth: 0.3, connectNulls: true, symbolSize: 5 },
+        { name: 'Systems \u2014 Retained %', type: 'line', data: alignToLabels(sysRet), itemStyle: { color: SYS_COLOR }, lineStyle: { width: 2 }, smooth: 0.3, connectNulls: true, symbolSize: 5 },
+        { name: 'Security \u2014 Retained %', type: 'line', data: alignToLabels(secRet), itemStyle: { color: SEC_COLOR }, lineStyle: { width: 2 }, smooth: 0.3, connectNulls: true, symbolSize: 5 }
       ];
     } else {
       var areaYears = area === 'systems' ? sysYears : secYears;
       var sameAreaRet = area === 'systems' ? sysRet : secRet;
-      var crossRet = crossRetentionSeries(areaYears, allYears);
+      var crossRet = crossRetentionSeries(areaYears, allYearsMap);
       var color = area === 'systems' ? SYS_COLOR : SEC_COLOR;
       crossRet.labels.forEach(function(l) { allLabels[l] = true; });
       labels = Object.keys(allLabels).sort();
-      datasets = [
-        { label: 'Retained (same area) %', data: alignToLabels(sameAreaRet), borderColor: color, borderWidth: 2, fill: false, tension: 0.3, spanGaps: true },
-        { label: 'Retained (any area) %', data: alignToLabels(crossRet), borderColor: color, borderWidth: 2, borderDash: [5, 3], fill: false, tension: 0.3, spanGaps: true }
+      seriesArr = [
+        { name: 'Retained (same area) %', type: 'line', data: alignToLabels(sameAreaRet), itemStyle: { color: color }, lineStyle: { width: 2 }, smooth: 0.3, connectNulls: true, symbolSize: 5 },
+        { name: 'Retained (any area) %', type: 'line', data: alignToLabels(crossRet), itemStyle: { color: color }, lineStyle: { type: 'dashed', width: 2 }, smooth: 0.3, connectNulls: true, symbolSize: 5 }
       ];
     }
 
-    var tc = ReproDB.themeColors();
-    new Chart(canvas, {
-      type: 'line',
-      data: { labels: labels, datasets: datasets },
-      options: {
-        responsive: true, maintainAspectRatio: false,
-        plugins: { title: { display: true, text: 'Year-over-Year Retention — % of Committee from Prior Year', color: tc.text },
-                   legend: { labels: { color: tc.text } } },
-        scales: { x: { ticks: { color: tc.text }, grid: { color: tc.grid } },
-                  y: { beginAtZero: true, max: 100, ticks: { color: tc.text }, grid: { color: tc.grid }, title: { display: true, text: '% Retained', color: tc.text } } }
-      }
+    var chart = ReproDB.initEChart(el);
+    chart.setOption({
+      title: { text: 'Year-over-Year Retention \u2014 % of Committee from Prior Year', left: 'center', textStyle: { fontSize: 13 } },
+      tooltip: { trigger: 'axis' },
+      legend: { bottom: 0 },
+      grid: { containLabel: true, left: 40, right: 20, bottom: 50, top: 50 },
+      xAxis: { type: 'category', data: labels },
+      yAxis: { type: 'value', name: '% Retained', min: 0, max: 100 },
+      series: seriesArr
     });
+    ReproDB.registerEChart(chart);
+  }
+
+  /* ===== AE Committee Flow (Sankey) ===== */
+  var CONF_COLORS = {
+    'ATC': '#2563eb', 'OSDI': '#1d4ed8', 'EUROSYS': '#3b82f6',
+    'SOSP': '#60a5fa', 'FAST': '#93c5fd', 'SC': '#7dd3fc',
+    'USENIXSEC': '#dc2626', 'NDSS': '#ef4444', 'ACSAC': '#f87171',
+    'CHES': '#fb923c', 'PETS': '#f97316', 'WOOT': '#fdba74',
+    'SYSTEX': '#a78bfa', 'VEHICLESEC': '#c084fc', 'CAIS': '#e9d5ff'
+  };
+
+  function confColor(name) {
+    return CONF_COLORS[name] || '#6b7280';
+  }
+
+  function renderMemberFlow(aeMembers, area) {
+    var el = document.getElementById('memberFlowSankey');
+    if (!el) return;
+
+    // Build per-conference-year membership sets
+    var confYear = {}; // "CONF|YEAR" -> { name: true }
+    var confAreas = {}; // CONF -> area
+
+    aeMembers.forEach(function(m) {
+      if (area !== 'overall') {
+        if (m.area !== area && m.area !== 'both') return;
+      }
+      (m.conferences || []).forEach(function(c) {
+        var key = c.conference + '|' + c.year;
+        if (!confYear[key]) confYear[key] = {};
+        confYear[key][m.name] = true;
+        confAreas[c.conference] = m.area;
+      });
+    });
+
+    // Collect years
+    var yearSet = {};
+    Object.keys(confYear).forEach(function(k) {
+      yearSet[k.split('|')[1]] = true;
+    });
+    var years = Object.keys(yearSet).map(Number).sort(function(a, b) { return a - b; });
+    if (years.length < 2) return;
+
+    var nodes = [];
+    var links = [];
+    var nodeSet = {};
+
+    function addNode(name, depth) {
+      if (!nodeSet[name]) {
+        nodeSet[name] = true;
+        nodes.push({ name: name, depth: depth });
+      }
+    }
+
+    // Create a node per conference-year
+    var MIN_SIZE = 5; // skip tiny committees
+    Object.keys(confYear).forEach(function(key) {
+      var parts = key.split('|');
+      var conf = parts[0], yr = Number(parts[1]);
+      if (Object.keys(confYear[key]).length < MIN_SIZE) return;
+      var depth = years.indexOf(yr);
+      var label = conf + ' ' + yr;
+      addNode(label, depth);
+    });
+
+    // Build links between consecutive years
+    for (var i = 0; i < years.length - 1; i++) {
+      var y1 = years[i], y2 = years[i + 1];
+      // Find all conferences in both years
+      var confs1 = [], confs2 = [];
+      Object.keys(confYear).forEach(function(key) {
+        var parts = key.split('|');
+        if (Number(parts[1]) === y1 && Object.keys(confYear[key]).length >= MIN_SIZE) confs1.push(parts[0]);
+        if (Number(parts[1]) === y2 && Object.keys(confYear[key]).length >= MIN_SIZE) confs2.push(parts[0]);
+      });
+
+      confs1.forEach(function(c1) {
+        var members1 = confYear[c1 + '|' + y1] || {};
+        confs2.forEach(function(c2) {
+          var members2 = confYear[c2 + '|' + y2] || {};
+          var shared = 0;
+          Object.keys(members1).forEach(function(n) {
+            if (members2[n]) shared++;
+          });
+          if (shared >= 2) {
+            links.push({
+              source: c1 + ' ' + y1,
+              target: c2 + ' ' + y2,
+              value: shared
+            });
+          }
+        });
+      });
+    }
+
+    // Prune nodes with no links
+    var linkedNodes = {};
+    links.forEach(function(l) { linkedNodes[l.source] = true; linkedNodes[l.target] = true; });
+    nodes = nodes.filter(function(n) { return linkedNodes[n.name]; });
+
+    if (nodes.length === 0 || links.length === 0) return;
+
+    var chart = ReproDB.initEChart(el);
+
+    function setOption() {
+      var tc = ReproDB.themeColors();
+      chart.setOption({
+        title: {
+          text: 'AE Committee Flow Across Conferences',
+          subtext: 'Shared members between conference AECs in consecutive years (min. 2 shared)',
+          left: 'center',
+          textStyle: { fontSize: 14, color: tc.text },
+          subtextStyle: { fontSize: 11, color: tc.textMuted }
+        },
+        tooltip: {
+          trigger: 'item',
+          formatter: function(params) {
+            if (params.dataType === 'edge') {
+              return params.data.source + ' \u2192 ' + params.data.target + '<br/>' + params.data.value + ' shared members';
+            }
+            return params.name + '<br/>' + params.value + ' members linked';
+          }
+        },
+        series: [{
+          type: 'sankey',
+          top: 60,
+          bottom: 20,
+          left: 60,
+          right: 60,
+          nodeGap: 14,
+          nodeWidth: 18,
+          emphasis: { focus: 'adjacency' },
+          data: nodes.map(function(n) {
+            var conf = n.name.split(' ')[0];
+            return {
+              name: n.name,
+              depth: n.depth,
+              itemStyle: { color: confColor(conf) }
+            };
+          }),
+          links: links,
+          lineStyle: { color: 'source', opacity: 0.25, curveness: 0.5 },
+          label: {
+            show: true,
+            fontSize: 10,
+            color: tc.text
+          }
+        }]
+      });
+    }
+
+    setOption();
+    ReproDB.registerEChart(chart);
+    ReproDB.onThemeChange(setOption);
   }
 
   /* ===== Geographic: Continents ===== */
   var CONTINENT_COLORS = {
-    'North America': 'rgba(37,99,235,0.75)',
-    'Europe': 'rgba(220,38,38,0.75)',
-    'Asia': 'rgba(22,163,74,0.75)',
-    'Oceania': 'rgba(147,51,234,0.75)',
-    'South America': 'rgba(234,88,12,0.75)',
-    'Africa': 'rgba(14,165,233,0.75)',
-    'Antarctica': 'rgba(168,85,247,0.75)'
+    'North America': '#2563eb',
+    'Europe': '#dc2626',
+    'Asia': '#16a34a',
+    'Oceania': '#9333ea',
+    'South America': '#ea580c',
+    'Africa': '#0ea5e9',
+    'Antarctica': '#a855f7'
   };
-  var CONTINENT_FALLBACK = 'rgba(120,120,120,0.6)';
 
   function continentColor(name) {
-    return CONTINENT_COLORS[name] || CONTINENT_FALLBACK;
+    return CONTINENT_COLORS[name] || '#787878';
   }
 
   function renderContinents(stats, area) {
-    var canvas = document.getElementById('committeeContinentsChart');
-    if (!canvas) return;
+    var el = document.getElementById('committeeContinentsChart');
+    if (!el) return;
 
     var key = area === 'overall' ? 'overall' : area;
     var continents = (stats.by_continent || {})[key] || [];
 
-    var tc = ReproDB.themeColors();
-    new Chart(canvas, {
-      type: 'doughnut',
-      data: {
-        labels: continents.map(function(c) { return c.name; }),
-        datasets: [{
-          data: continents.map(function(c) { return c.count; }),
-          backgroundColor: continents.map(function(c) { return continentColor(c.name); })
-        }]
-      },
-      options: {
-        responsive: true, maintainAspectRatio: false,
-        plugins: {
-          title: { display: true, text: 'Members by Continent', color: tc.text },
-          legend: { position: 'right', labels: { color: tc.text, boxWidth: 14, font: { size: 12 } } }
-        }
-      }
+    var chart = ReproDB.initEChart(el);
+    chart.setOption({
+      title: { text: 'Members by Continent', left: 'center', textStyle: { fontSize: 14 } },
+      tooltip: { trigger: 'item', formatter: '{b}: {c} ({d}%)' },
+      legend: { orient: 'vertical', right: 10, top: 'center' },
+      series: [{
+        type: 'pie', radius: ['40%', '70%'], center: ['40%', '55%'],
+        data: continents.map(function(c) { return { name: c.name, value: c.count, itemStyle: { color: continentColor(c.name) } }; }),
+        label: { show: false }, emphasis: { label: { show: true, fontSize: 13 } }
+      }]
     });
+    ReproDB.registerEChart(chart);
 
-    /* Side-by-side doughnut for overall */
     if (area === 'overall') {
-      var sysCanvas = document.getElementById('continentSysChart');
-      var secCanvas = document.getElementById('continentSecChart');
-      if (sysCanvas) {
+      var sysEl = document.getElementById('continentSysChart');
+      var secEl = document.getElementById('continentSecChart');
+      if (sysEl) {
         var sysCont = (stats.by_continent || {}).systems || [];
-        new Chart(sysCanvas, {
-          type: 'doughnut',
-          data: {
-            labels: sysCont.map(function(c) { return c.name; }),
-            datasets: [{ data: sysCont.map(function(c) { return c.count; }), backgroundColor: sysCont.map(function(c) { return continentColor(c.name); }) }]
-          },
-          options: { responsive: true, maintainAspectRatio: false, plugins: { title: { display: true, text: 'Systems', color: tc.text }, legend: { position: 'bottom', labels: { color: tc.text, boxWidth: 12, font: { size: 11 } } } } }
+        var sc = ReproDB.initEChart(sysEl);
+        sc.setOption({
+          title: { text: 'Systems', left: 'center', textStyle: { fontSize: 13 } },
+          tooltip: { trigger: 'item', formatter: '{b}: {c} ({d}%)' },
+          legend: { bottom: 0, type: 'scroll' },
+          series: [{ type: 'pie', radius: ['35%', '65%'], center: ['50%', '45%'],
+            data: sysCont.map(function(c) { return { name: c.name, value: c.count, itemStyle: { color: continentColor(c.name) } }; }),
+            label: { show: false } }]
         });
+        ReproDB.registerEChart(sc);
       }
-      if (secCanvas) {
+      if (secEl) {
         var secCont = (stats.by_continent || {}).security || [];
-        new Chart(secCanvas, {
-          type: 'doughnut',
-          data: {
-            labels: secCont.map(function(c) { return c.name; }),
-            datasets: [{ data: secCont.map(function(c) { return c.count; }), backgroundColor: secCont.map(function(c) { return continentColor(c.name); }) }]
-          },
-          options: { responsive: true, maintainAspectRatio: false, plugins: { title: { display: true, text: 'Security', color: tc.text }, legend: { display: false } } }
+        var sc2 = ReproDB.initEChart(secEl);
+        sc2.setOption({
+          title: { text: 'Security', left: 'center', textStyle: { fontSize: 13 } },
+          tooltip: { trigger: 'item', formatter: '{b}: {c} ({d}%)' },
+          legend: { bottom: 0, type: 'scroll' },
+          series: [{ type: 'pie', radius: ['35%', '65%'], center: ['50%', '45%'],
+            data: secCont.map(function(c) { return { name: c.name, value: c.count, itemStyle: { color: continentColor(c.name) } }; }),
+            label: { show: false } }]
         });
+        ReproDB.registerEChart(sc2);
       }
     }
   }
 
   /* ===== Top Countries ===== */
   function renderCountries(stats, area) {
-    var canvas = document.getElementById('committeeCountriesChart');
-    if (!canvas) return;
+    var el = document.getElementById('committeeCountriesChart');
+    if (!el) return;
 
-    var key = area === 'overall' ? 'overall' : area;
-    var countries = ((stats.by_country || {})[key] || []).slice(0, 15);
+    var chart = ReproDB.initEChart(el);
 
     if (area === 'overall') {
-      /* Comparative bar: top-10 countries, systems vs security */
       var sysCountries = ((stats.by_country || {}).systems || []).slice(0, 15);
       var secCountries = ((stats.by_country || {}).security || []).slice(0, 15);
       var countrySet = {};
@@ -478,91 +605,82 @@
         if (!countrySet[c.name]) countrySet[c.name] = { sys: 0, sec: 0 };
         countrySet[c.name].sec = c.count;
       });
-      /* Sort by total */
       var sorted = Object.keys(countrySet).map(function(n) { return { name: n, sys: countrySet[n].sys, sec: countrySet[n].sec, total: countrySet[n].sys + countrySet[n].sec }; });
       sorted.sort(function(a, b) { return b.total - a.total; });
       sorted = sorted.slice(0, 12);
-
-      var tc = ReproDB.themeColors();
-      new Chart(canvas, {
-        type: 'bar',
-        data: {
-          labels: sorted.map(function(c) { return c.name.length > 20 ? c.name.substring(0, 18) + '…' : c.name; }),
-          datasets: [
-            { label: 'Systems', data: sorted.map(function(c) { return c.sys; }), backgroundColor: SYS_COLOR },
-            { label: 'Security', data: sorted.map(function(c) { return c.sec; }), backgroundColor: SEC_COLOR }
-          ]
-        },
-        options: {
-          indexAxis: 'y', responsive: true, maintainAspectRatio: false,
-          plugins: { title: { display: true, text: 'Top Countries — Systems vs Security', color: tc.text }, legend: { position: 'bottom', labels: { color: tc.text } } },
-          scales: { x: { stacked: true, beginAtZero: true, ticks: { color: tc.text }, grid: { color: tc.grid }, title: { display: true, text: 'Members', color: tc.text } }, y: { stacked: true, ticks: { color: tc.text }, grid: { color: tc.grid } } }
-        }
+      var labels = sorted.map(function(c) { return c.name.length > 20 ? c.name.substring(0, 18) + '\u2026' : c.name; }).reverse();
+      chart.setOption({
+        title: { text: 'Top Countries \u2014 Systems vs Security', left: 'center', textStyle: { fontSize: 14 } },
+        tooltip: { trigger: 'axis' },
+        legend: { bottom: 0 },
+        grid: { containLabel: true, left: 20, right: 20, bottom: 50, top: 40 },
+        xAxis: { type: 'value', name: 'Members', nameLocation: 'center', nameGap: 25 },
+        yAxis: { type: 'category', data: labels },
+        series: [
+          { name: 'Systems', type: 'bar', stack: 'total', data: sorted.map(function(c) { return c.sys; }).reverse(), itemStyle: { color: SYS_COLOR } },
+          { name: 'Security', type: 'bar', stack: 'total', data: sorted.map(function(c) { return c.sec; }).reverse(), itemStyle: { color: SEC_COLOR } }
+        ]
       });
     } else {
+      var key = area === 'overall' ? 'overall' : area;
+      var countries = ((stats.by_country || {})[key] || []).slice(0, 15);
       var color = area === 'systems' ? SYS_COLOR : SEC_COLOR;
-      var tc = ReproDB.themeColors();
-      new Chart(canvas, {
-        type: 'bar',
-        data: {
-          labels: countries.map(function(c) { return c.name.length > 25 ? c.name.substring(0, 23) + '…' : c.name; }),
-          datasets: [{ label: 'Members', data: countries.map(function(c) { return c.count; }), backgroundColor: color }]
-        },
-        options: {
-          indexAxis: 'y', responsive: true, maintainAspectRatio: false,
-          plugins: { title: { display: true, text: 'Top 15 Countries', color: tc.text }, legend: { display: false } },
-          scales: { x: { beginAtZero: true, ticks: { color: tc.text }, grid: { color: tc.grid }, title: { display: true, text: 'Members', color: tc.text } }, y: { ticks: { color: tc.text }, grid: { color: tc.grid } } }
-        }
+      var labels = countries.map(function(c) { return c.name.length > 25 ? c.name.substring(0, 23) + '\u2026' : c.name; }).reverse();
+      chart.setOption({
+        title: { text: 'Top 15 Countries', left: 'center', textStyle: { fontSize: 14 } },
+        tooltip: { trigger: 'axis' },
+        legend: { show: false },
+        grid: { containLabel: true, left: 20, right: 20, bottom: 50, top: 40 },
+        xAxis: { type: 'value', name: 'Members', nameLocation: 'center', nameGap: 25 },
+        yAxis: { type: 'category', data: labels },
+        series: [{ name: 'Members', type: 'bar', data: countries.map(function(c) { return c.count; }).reverse(), itemStyle: { color: color } }]
       });
     }
+    ReproDB.registerEChart(chart);
   }
 
   /* ===== Top Institutions ===== */
   function renderInstitutions(stats, area) {
-    var canvas = document.getElementById('committeeInstitutionsChart');
-    if (!canvas) return;
+    var el = document.getElementById('committeeInstitutionsChart');
+    if (!el) return;
 
     if (area === 'overall') {
-      /* Side-by-side: use separate canvases */
-      var sysCanvas = document.getElementById('instSysChart');
-      var secCanvas = document.getElementById('instSecChart');
+      var sysEl = document.getElementById('instSysChart');
+      var secEl = document.getElementById('instSecChart');
       var sysInst = ((stats.by_institution || {}).systems || []).slice(0, 10);
       var secInst = ((stats.by_institution || {}).security || []).slice(0, 10);
 
-      if (sysCanvas) makeInstBar(sysCanvas, sysInst, 'Systems — Top 10', SYS_COLOR);
-      if (secCanvas) makeInstBar(secCanvas, secInst, 'Security — Top 10', SEC_COLOR);
+      if (sysEl) makeInstBar(sysEl, sysInst, 'Systems \u2014 Top 10', SYS_COLOR);
+      if (secEl) makeInstBar(secEl, secInst, 'Security \u2014 Top 10', SEC_COLOR);
 
-      /* Overall chart hidden if separate ones exist */
-      canvas.parentElement.style.display = 'none';
+      el.parentElement.style.display = 'none';
     } else {
       var key = area;
       var institutions = ((stats.by_institution || {})[key] || []).slice(0, 15);
       var color = area === 'systems' ? SYS_COLOR : SEC_COLOR;
-      makeInstBar(canvas, institutions, 'Top 15 Institutions', color);
+      makeInstBar(el, institutions, 'Top 15 Institutions', color);
     }
   }
 
-  function makeInstBar(canvas, data, title, color) {
-    var labels = data.map(function(i) { var n = i.name; return n.length > 35 ? n.substring(0, 33) + '…' : n; });
-    var tc = ReproDB.themeColors();
-    new Chart(canvas, {
-      type: 'bar',
-      data: {
-        labels: labels,
-        datasets: [{ label: 'Members', data: data.map(function(i) { return i.count; }), backgroundColor: color }]
-      },
-      options: {
-        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
-        plugins: { title: { display: true, text: title, color: tc.text }, legend: { display: false } },
-        scales: { x: { beginAtZero: true, ticks: { color: tc.text }, grid: { color: tc.grid }, title: { display: true, text: 'Members', color: tc.text } }, y: { ticks: { color: tc.text }, grid: { color: tc.grid } } }
-      }
+  function makeInstBar(el, data, title, color) {
+    var labels = data.map(function(i) { var n = i.name; return n.length > 35 ? n.substring(0, 33) + '\u2026' : n; }).reverse();
+    var chart = ReproDB.initEChart(el);
+    chart.setOption({
+      title: { text: title, left: 'center', textStyle: { fontSize: 13 } },
+      tooltip: { trigger: 'axis' },
+      legend: { show: false },
+      grid: { containLabel: true, left: 20, right: 20, bottom: 50, top: 50 },
+      xAxis: { type: 'value', name: 'Members', nameLocation: 'center', nameGap: 25 },
+      yAxis: { type: 'category', data: labels },
+      series: [{ name: 'Members', type: 'bar', data: data.map(function(i) { return i.count; }).reverse(), itemStyle: { color: color } }]
     });
+    ReproDB.registerEChart(chart);
   }
 
   /* ===== Cross-Community Overlap ===== */
   function renderCrossOverlap(aeMembers) {
-    var canvas = document.getElementById('crossOverlapChart');
-    if (!canvas) return;
+    var el = document.getElementById('crossOverlapChart');
+    if (!el) return;
 
     var sysOnly = 0, secOnly = 0, both = 0;
     aeMembers.forEach(function(m) {
@@ -571,22 +689,23 @@
       else if (m.area === 'security') secOnly++;
     });
 
-    var tc = ReproDB.themeColors();
-    new Chart(canvas, {
-      type: 'bar',
-      data: {
-        labels: ['Systems Only', 'Both Areas', 'Security Only'],
-        datasets: [{
-          data: [sysOnly, both, secOnly],
-          backgroundColor: [SYS_COLOR, BOTH_COLOR, SEC_COLOR]
-        }]
-      },
-      options: {
-        responsive: true, maintainAspectRatio: false,
-        plugins: { title: { display: true, text: 'Cross-Community Membership', color: tc.text }, legend: { display: false } },
-        scales: { x: { ticks: { color: tc.text }, grid: { color: tc.grid } }, y: { beginAtZero: true, ticks: { color: tc.text }, grid: { color: tc.grid }, title: { display: true, text: 'Members', color: tc.text } } }
-      }
+    var chart = ReproDB.initEChart(el);
+    chart.setOption({
+      title: { text: 'Cross-Community Membership', left: 'center', textStyle: { fontSize: 14 } },
+      tooltip: { trigger: 'axis' },
+      grid: { containLabel: true, left: 40, right: 20, bottom: 30, top: 40 },
+      xAxis: { type: 'category', data: ['Systems Only', 'Both Areas', 'Security Only'] },
+      yAxis: { type: 'value', name: 'Members', min: 0 },
+      series: [{
+        type: 'bar',
+        data: [
+          { value: sysOnly, itemStyle: { color: SYS_COLOR } },
+          { value: both, itemStyle: { color: BOTH_COLOR } },
+          { value: secOnly, itemStyle: { color: SEC_COLOR } }
+        ]
+      }]
     });
+    ReproDB.registerEChart(chart);
   }
 
 })();

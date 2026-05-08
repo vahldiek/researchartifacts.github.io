@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Institution Ranking
+permalink: /institution_rankings.html
 skip_chartjs: true
 institution_data_url: /assets/data/institution_rankings.json
 systems_data_url: /assets/data/systems_institution_rankings.json
@@ -13,9 +14,7 @@ Institutions ranked by aggregate contributions of their researchers. Filter by c
 
 ---
 
-<div markdown="0">
 {% include institution_ranking_table.html %}
-</div>
 
 ---
 
