@@ -1,207 +1,133 @@
 {% comment %}
-  Dynamic institution ranking table loaded from JSON using Tabulator + Alpine.js.
-  Shows institutions ranked by combined_score (aggregated artifacts + AE committee memberships).
-
-  Required page variables:
-    page.institution_data_url  — path to the overall JSON file
-    page.systems_data_url      — path to the systems JSON file
-    page.security_data_url     — path to the security JSON file
+  Institution ranking table — uses shared shell for controls/table/pagination.
+  Script below provides the institutionRanking() Alpine component.
 {% endcomment %}
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.0.0/css/flag-icons.min.css"
-      integrity="sha384-aQuvIWWIbpu/mSqULLDiUveyYiPoJzPKAWjUmGJ+Elm+N/LJhzfZqsutsfw870JS"
-      crossorigin="anonymous">
-
-<div markdown="0" x-data="institutionRanking()" x-init="boot()">
-  <div class="rdb-controls" x-show="loaded" x-cloak>
-    <div class="rdb-controls-row">
-      <div class="rdb-control-group">
-        <label class="rdb-label">Area:</label>
-        <span class="rdb-area-checks" role="group" aria-label="Area filter">
-          <label><input type="checkbox" x-model="areaSystems" @change="onAreaChange()"> Systems</label>
-          <label><input type="checkbox" x-model="areaSecurity" @change="onAreaChange()"> Security</label>
-        </span>
-      </div>
-      <div class="rdb-control-group">
-        <label class="rdb-label">Contribution:</label>
-        <span class="rdb-area-checks" role="group" aria-label="Contribution filter">
-          <label><input type="checkbox" x-model="contribArtifacts" @change="onContribChange()"> Artifacts</label>
-          <label><input type="checkbox" x-model="contribAE" @change="onContribChange()"> AE Service</label>
-        </span>
-      </div>
-      <div class="rdb-control-group">
-        <label class="rdb-label">Geo:</label>
-        <select class="rdb-select" x-model="geoFilter" @change="applyFilters()" aria-label="Geographic filter">
-          <option value="world">World</option>
-          <template x-for="c in continentList" :key="c">
-            <option :value="'continent:'+c" x-text="c"></option>
-          </template>
-          <template x-for="cc in countryList" :key="cc">
-            <option :value="'country:'+cc" x-text="countryName(cc)"></option>
-          </template>
-        </select>
-      </div>
-      <div class="rdb-control-group">
-        <label class="rdb-label">Search:</label>
-        <input type="text" placeholder="Filter by institution name..." class="rdb-input"
-               x-ref="searchInput" @input="onSearchInput()" aria-label="Search institutions">
-      </div>
-    </div>
-  </div>
-
-  <div class="rdb-legend" x-show="loaded" x-cloak>
-    Legend: #=Rank, Δ=Rank Change, S=Combined Score, AS=Artifact Score, AES=AE Service Score, A:E=Artifact:Evaluation Ratio, R=Researchers, Ar=Artifacts, P=Papers, AR%=Artifact Rate, RR%=Repro. Rate, AE=AE Memberships, Ch=Chairs
-  </div>
-
-  <div x-ref="loading" x-show="!loaded">
-    <em x-text="loadingMsg"></em>
-  </div>
-
-  <div x-ref="tableEl" x-show="loaded" x-cloak></div>
-</div>
+{% include ranking_table_shell.html
+   type="institution"
+   func_name="institutionRanking"
+   legend="Legend: #=Rank, Δ=Rank Change, S=Combined Score, AS=Artifact Score, AES=AE Service Score, A:E=Artifact:Evaluation Ratio, R=Researchers, Ar=Artifacts, P=Papers, AR%=Artifact Rate, RR%=Repro. Rate, AE=AE Memberships, Ch=Chairs"
+   search_placeholder="Name or country…"
+%}
 
 <script>
 function institutionRanking() {
   var escHtml = ReproDB.escHtml;
+  var baseUrl = '{{ "" | relative_url }}';
   var dataUrls = {
-    all:      '{{ page.institution_data_url | default: "/assets/data/institution_rankings.json" | relative_url }}',
-    systems:  '{{ page.systems_data_url | default: "/assets/data/systems_institution_rankings.json" | relative_url }}',
-    security: '{{ page.security_data_url | default: "/assets/data/security_institution_rankings.json" | relative_url }}'
+    all: '{{ page.data_url_all | default: "/assets/data/institution_rankings.json" | relative_url }}',
+    systems: '{{ page.data_url_systems | default: "/assets/data/systems_institution_rankings.json" | relative_url }}',
+    security: '{{ page.data_url_security | default: "/assets/data/security_institution_rankings.json" | relative_url }}'
   };
-  var historyUrl = '{{ "/assets/data/institution_ranking_history.json" | relative_url }}';
-  var baseUrl    = '{{ "" | relative_url }}';
 
   var codeToName = ReproDB.CODE_TO_NAME;
   var codeToContinent = ReproDB.CODE_TO_CONTINENT;
 
-  function flagHtml(code) { return ReproDB.flagHtml(code); }
-
-  return {
-    area: 'all',
-    areaSystems: true,
-    areaSecurity: true,
-    contribArtifacts: true,
-    contribAE: true,
-    contribFilter: 'both',
+  return ReproDB.rankingMixin({
+    /* ── config ────────────────────────────────────────────────────── */
+    _historyUrl: '{{ "/assets/data/institution_ranking_history.json" | relative_url }}',
+    _rankKey: 'affiliation',
+    _sortField: 'combined_score',
+    _dataUrls: dataUrls,
+    _geoLookup: null,
+    area: '{{ page.default_area | default: "all" }}',
+    areaSystems: {% if page.default_area == "security" %}false{% else %}true{% endif %},
+    areaSecurity: {% if page.default_area == "systems" %}false{% else %}true{% endif %},
     geoFilter: 'world',
-    _searchTimer: null,
-    loaded: false,
-    loadingMsg: 'Loading institution ranking data…',
-    table: null,
-    allData: [],
-    prevSnapshot: null,
-    yearColumns: [],
     continentList: [],
     countryList: [],
 
     countryName: function(code) { return codeToName[code] || code; },
 
-    /* ── lifecycle ─────────────────────────────────────────────────── */
-
+    /* ── boot override: ensure "all" loads first for geo lookup ────── */
     boot: function() {
       var self = this;
-      var el = this.$refs.loading;
-      if ('IntersectionObserver' in window && el) {
-        var io = new IntersectionObserver(function(entries) {
-          for (var i = 0; i < entries.length; i++) {
-            if (entries[i].isIntersecting) { io.disconnect(); self._doLoad(); break; }
+      /* Apply ?area= URL parameter if present */
+      var params = new URLSearchParams(window.location.search);
+      var areaParam = params.get('area');
+      if (areaParam === 'systems') {
+        this.areaSystems = true;
+        this.areaSecurity = false;
+        this.area = 'systems';
+      } else if (areaParam === 'security') {
+        this.areaSystems = false;
+        this.areaSecurity = true;
+        this.area = 'security';
+      }
+      var contribParam = params.get('contrib');
+      if (contribParam === 'artifacts') {
+        this.contribArtifacts = true;
+        this.contribAE = false;
+        this.contribFilter = 'artifacts_only';
+      } else if (contribParam === 'ae') {
+        this.contribArtifacts = false;
+        this.contribAE = true;
+        this.contribFilter = 'ae_only';
+      }
+      ReproDB.fetchJSON(dataUrls.all)
+        .then(function(allData) {
+          self._geoLookup = {};
+          allData.forEach(function(d) {
+            if (d.country_code) {
+              self._geoLookup[d.affiliation] = { code: d.country_code, name: d.country || '' };
+            }
+          });
+          self._dataCache.all = allData;
+          self._doLoad();
+        })
+        .catch(function() { self._doLoad(); });
+    },
+
+    /* ── geo backfill hook ─────────────────────────────────────────── */
+    _onDataLoaded: function(data, area) {
+      // Build geo lookup from the "all" file
+      if (area === 'all' && !this._geoLookup) {
+        this._geoLookup = {};
+        var lookup = this._geoLookup;
+        data.forEach(function(d) {
+          if (d.country_code) {
+            lookup[d.affiliation] = { code: d.country_code, name: d.country || '' };
           }
-        }, { rootMargin: '300px 0px' });
-        io.observe(el);
-      } else {
-        this._doLoad();
+        });
+      }
+      // Backfill country_code from geo lookup if missing
+      if (this._geoLookup && data.length && !data[0].country_code) {
+        var lookup = this._geoLookup;
+        data.forEach(function(d) {
+          var geo = lookup[d.affiliation];
+          if (geo) { d.country_code = geo.code; d.country = geo.name; }
+        });
       }
     },
 
-    _doLoad: function() {
-      this.loadArea();
-      this._loadHistory();
-    },
-
+    /* ── area change override: reset geo filter ────────────────────── */
     onAreaChange: function() {
+      this.geoFilter = 'world';
       if (this.areaSystems && this.areaSecurity) this.area = 'all';
       else if (this.areaSystems) this.area = 'systems';
       else if (this.areaSecurity) this.area = 'security';
-      else this.area = 'all'; // neither checked → show all
+      else this.area = 'all';
       this.loadArea();
     },
 
-    _loadHistory: function() {
-      var self = this;
-      if (!historyUrl) return;
-      fetch(historyUrl).then(function(r) { return r.json(); }).catch(function() { return []; })
-        .then(function(h) {
-          if (h && h.length >= 2) {
-            self.prevSnapshot = h[h.length - 2].entries;
-            if (self.table) self.table.redraw(true);
-          }
-        });
-    },
-
-    /* ── data loading ──────────────────────────────────────────────── */
-
-    loadArea: function() {
-      var self = this;
-      this.geoFilter = 'world';
-      if (!this.table) {
-        this.loaded = false;
-        this.loadingMsg = 'Loading ' + this.area + ' ranking data…';
-      }
-      ReproDB.fetchJSON(dataUrls[this.area])
-        .then(function(data) { self._initTable(data); })
-        .catch(function(e) { self.loadingMsg = 'Failed to load data: ' + e; });
-    },
-
-    _initTable: function(data) {
+    /* ── table-specific init hook ──────────────────────────────────── */
+    _initTableHook: function(data) {
       // Filter out unknown affiliations
       this.allData = data.filter(function(inst) {
         var aff = (inst.affiliation || '').toLowerCase();
         return aff && aff !== 'unknown' && !aff.startsWith('_unknown');
       });
-
       // Compute repro_rate
       this.allData.forEach(function(d) {
-        var total_badges = (d.badges_functional || 0) + (d.badges_reproducible || 0);
-        d.repro_rate = total_badges > 0 ? Math.round((d.badges_reproducible || 0) / total_badges * 100) : 0;
+        var total = (d.badges_functional || 0) + (d.badges_reproducible || 0);
+        d.repro_rate = total > 0 ? Math.round((d.badges_reproducible || 0) / total * 100) : 0;
       });
-
-      // Extract year columns
-      var yrs = {};
-      this.allData.forEach(function(d) {
-        if (d.years) Object.keys(d.years).forEach(function(y) { yrs[y] = true; });
-      });
-      this.yearColumns = Object.keys(yrs).map(function(y) { return parseInt(y) || y; })
-        .sort(function(a, b) { return b - a; });
-
       // Build geo filter options
       this._buildGeoOptions();
-
-      // Assign dense ranks
-      ReproDB.assignDenseRanks(this.allData, 'affiliation');
-
-      var cols = this._buildColumns();
-      var rows = this._processData();
-
-      if (this.table) {
-        this.table.setColumns(cols);
-        this.table.replaceData(rows);
-      } else {
-        this.table = ReproDB.createTable(this.$refs.tableEl, {
-          columns: cols,
-          data: rows,
-          initialSort: [{ column: 'combined_score', dir: 'desc' }],
-          layout: 'fitColumns'
-        });
-      }
-      this.loaded = true;
-      this.applyFilters();
-      var tbl = this.table;
-      this.$nextTick(function() { tbl.redraw(true); });
     },
 
     _buildGeoOptions: function() {
-      var countries = {};
-      var continents = {};
+      var countries = {}, continents = {};
       this.allData.forEach(function(inst) {
         var code = inst.country_code || '';
         if (!code) return;
@@ -215,12 +141,13 @@ function institutionRanking() {
     },
 
     /* ── data processing ───────────────────────────────────────────── */
-
     _processData: function() {
       var yrs = this.yearColumns;
       return this.allData.map(function(d) {
         var row = Object.assign({}, d);
         row._rank = d._baseRank || 0;
+        row._affLower = (d.affiliation || '').toLowerCase();
+        row._countryLower = (codeToName[d.country_code] || '').toLowerCase();
         for (var i = 0; i < yrs.length; i++) {
           var y = yrs[i];
           row['yr_' + y] = (d.years && (d.years[y] || d.years[String(y)])) || 0;
@@ -230,17 +157,16 @@ function institutionRanking() {
     },
 
     /* ── column definitions ────────────────────────────────────────── */
-
     _buildColumns: function() {
       var self = this;
       var dash = '\u2013';
 
       var cols = [
-        { title: '#', field: '_rank', sorter: 'number', width: 40,
-          tooltip: 'Rank' },
+        { title: '#', field: '_rank', sorter: 'number', width: 40, tooltip: 'Rank' },
         { title: '\u0394', field: '_rank', sorter: 'number', width: 40,
           tooltip: 'Rank change from previous month',
           formatter: function(cell) {
+            if (self.area !== 'all' || self.contribFilter !== 'both') return '';
             var d = cell.getRow().getData();
             var old = self.prevSnapshot && self.prevSnapshot[d.affiliation]
                     ? self.prevSnapshot[d.affiliation].rank : undefined;
@@ -252,7 +178,7 @@ function institutionRanking() {
           formatter: function(cell) {
             var d = cell.getRow().getData();
             var aff = (d.affiliation || 'Unknown').replace(/^_/, '');
-            var flag = flagHtml(d.country_code || '');
+            var flag = ReproDB.flagHtml(d.country_code || '');
             var url = baseUrl + '/profile.html?type=institution&name=' + encodeURIComponent(d.affiliation);
             return flag + '<a href="' + url + '">' + escHtml(aff) + '</a>';
           }
@@ -334,65 +260,32 @@ function institutionRanking() {
           });
         })(this.yearColumns[i]);
       }
-
       return cols;
     },
 
     /* ── filtering ─────────────────────────────────────────────────── */
-
-    onContribChange: function() {
-      if (this.contribArtifacts && this.contribAE) this.contribFilter = 'both';
-      else if (this.contribArtifacts) this.contribFilter = 'artifacts_only';
-      else if (this.contribAE) this.contribFilter = 'ae_only';
-      else this.contribFilter = 'both';
-      if (!this.table) return;
-      var sortField = this.contribFilter === 'artifacts_only' ? 'artifact_score' :
-                      this.contribFilter === 'ae_only' ? 'ae_score' : 'combined_score';
-      this.table.blockRedraw();
-      this.table.setSort(sortField, 'desc');
-      this.applyFilters();
-      this.table.restoreRedraw();
-    },
-
-    applyFilters: function() {
-      if (!this.table) return;
-      var self = this;
+    _matchesFilter: function(data) {
       var fm = this.contribFilter;
-
-      // Build an array of functions for custom filtering
-      this.table.setFilter(function(data) {
-        // Contribution type
-        if (fm === 'artifacts_only' && !(data.artifact_score > 0)) return false;
-        if (fm === 'ae_only' && !(data.ae_score > 0)) return false;
-        if (fm === 'both' && !(data.combined_score > 0)) return false;
-
-        // Text search
-        var searchVal = (self.$refs.searchInput ? self.$refs.searchInput.value : '').trim();
-        if (searchVal) {
-          var lower = searchVal.toLowerCase();
-          if ((data.affiliation || '').toLowerCase().indexOf(lower) === -1) return false;
+      if (fm === 'artifacts_only' && !(data.artifact_score > 0)) return false;
+      if (fm === 'ae_only' && !(data.ae_score > 0)) return false;
+      if (fm === 'both' && !(data.combined_score > 0)) return false;
+      var searchVal = (this.$refs.searchInput ? this.$refs.searchInput.value : '').trim().toLowerCase();
+      if (searchVal) {
+        if (data._affLower.indexOf(searchVal) === -1 &&
+            data._countryLower.indexOf(searchVal) === -1) return false;
+      }
+      var geo = this.geoFilter;
+      if (geo !== 'world') {
+        var code = data.country_code || '';
+        if (!code) return false;
+        if (geo.indexOf('continent:') === 0) {
+          if ((codeToContinent[code] || 'Unknown') !== geo.slice(10)) return false;
+        } else if (geo.indexOf('country:') === 0) {
+          if (code !== geo.slice(8)) return false;
         }
-
-        // Geo filter
-        if (self.geoFilter !== 'world') {
-          var code = data.country_code || '';
-          if (!code) return false;
-          if (self.geoFilter.indexOf('continent:') === 0) {
-            if ((codeToContinent[code] || 'Unknown') !== self.geoFilter.slice(10)) return false;
-          } else if (self.geoFilter.indexOf('country:') === 0) {
-            if (code !== self.geoFilter.slice(8)) return false;
-          }
-        }
-
-        return true;
-      });
-    },
-
-    onSearchInput: function() {
-      var self = this;
-      clearTimeout(this._searchTimer);
-      this._searchTimer = setTimeout(function() { self.applyFilters(); }, 200);
+      }
+      return true;
     }
-  };
+  });
 }
 </script>

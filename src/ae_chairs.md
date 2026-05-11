@@ -21,6 +21,10 @@ A dedicated view of **Artifact Evaluation Committee chairs** — the people who 
     <div class="rdb-card-label">Repeat Chairs</div>
   </div>
   <div class="rdb-card">
+    <div class="rdb-card-value">{{ site.data.committee_stats.chair_stats.avg_chairs_per_edition }}</div>
+    <div class="rdb-card-label">Avg. Chairs/Edition</div>
+  </div>
+  <div class="rdb-card">
     <div class="rdb-card-value">{{ site.data.committee_stats.chair_stats.cross_conference_chairs }}</div>
     <div class="rdb-card-label">Cross-Conference</div>
   </div>
@@ -29,12 +33,6 @@ A dedicated view of **Artifact Evaluation Committee chairs** — the people who 
     <div class="rdb-card-label">Promoted from Member</div>
   </div>
 </div>
-
-| | All | Systems | Security |
-|---|:---:|:---:|:---:|
-| **Unique Chairs** | {{ site.data.committee_stats.chair_stats.total_chairs }} | {{ site.data.committee_stats.chair_stats.total_chairs_systems }} | {{ site.data.committee_stats.chair_stats.total_chairs_security }} |
-| **Repeat Chairs** | {{ site.data.committee_stats.chair_stats.repeat_chairs }} | {{ site.data.committee_stats.chair_stats.repeat_chairs_systems }} | {{ site.data.committee_stats.chair_stats.repeat_chairs_security }} |
-| **Avg. Chairs/Edition** | {{ site.data.committee_stats.chair_stats.avg_chairs_per_edition }} | {{ site.data.committee_stats.chair_stats.avg_chairs_per_edition_systems }} | {{ site.data.committee_stats.chair_stats.avg_chairs_per_edition_security }} |
 
 ---
 

@@ -1,0 +1,87 @@
+{% comment %}
+  Shared HTML shell for ranking tables (author + institution).
+  Provides: controls (area, contribution, search), loading state,
+  table wrapper, and pagination.
+
+  Parameters:
+    include.func_name     — Alpine.js x-data function name (e.g. "combinedRanking")
+    include.type          — "author" or "institution"
+    include.legend        — legend text
+    include.search_placeholder — placeholder for search input
+{% endcomment %}
+
+{% if include.type == "institution" %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.0.0/css/flag-icons.min.css"
+      integrity="sha384-aQuvIWWIbpu/mSqULLDiUveyYiPoJzPKAWjUmGJ+Elm+N/LJhzfZqsutsfw870JS"
+      crossorigin="anonymous">
+{% endif %}
+
+{::nomarkdown}
+<div x-data="{{ include.func_name }}()" x-init="boot()">
+  <div class="rdb-controls">
+    <div class="rdb-controls-row">
+      <div class="rdb-control-group">
+        <label class="rdb-label">Area:</label>
+        <span class="rdb-area-checks" role="group" aria-label="Area filter">
+          <label><input type="checkbox" {% if page.default_area != "security" %}checked{% endif %} x-model="areaSystems" @change="onAreaChange()"> Systems</label>
+          <label><input type="checkbox" {% if page.default_area != "systems" %}checked{% endif %} x-model="areaSecurity" @change="onAreaChange()"> Security</label>
+        </span>
+      </div>
+      <div class="rdb-control-group">
+        <label class="rdb-label">Contribution:</label>
+        <span class="rdb-area-checks" role="group" aria-label="Contribution filter">
+          <label><input type="checkbox" checked x-model="contribArtifacts" @change="onContribChange()"> Artifacts</label>
+          <label><input type="checkbox" checked x-model="contribAE" @change="onContribChange()"> AE Service</label>
+        </span>
+      </div>
+      {% if include.type == "institution" %}
+      <div class="rdb-control-group">
+        <label class="rdb-label">Geo:</label>
+        <select class="rdb-select" x-model="geoFilter" @change="applyFilters()" aria-label="Geographic filter">
+          <option value="world">World</option>
+          <template x-for="c in continentList" :key="c">
+            <option :value="'continent:'+c" x-text="c"></option>
+          </template>
+          <template x-for="cc in countryList" :key="cc">
+            <option :value="'country:'+cc" x-text="countryName(cc)"></option>
+          </template>
+        </select>
+      </div>
+      {% endif %}
+      <div class="rdb-control-group">
+        <label class="rdb-label">Search:</label>
+        <input type="text" placeholder="{{ include.search_placeholder }}" class="rdb-input"
+               x-ref="searchInput" @input="onSearchInput()" aria-label="Search rankings">
+      </div>
+    </div>
+  </div>
+
+  <div class="rdb-legend" x-show="loaded" x-cloak>
+    <span>{{ include.legend }}</span>
+  </div>
+
+  <div x-ref="loading" x-show="!loaded">
+    <em x-text="loadingMsg"></em>
+  </div>
+
+  <div x-ref="tableWrap" x-show="loaded" x-cloak style="overflow-x:auto">
+    <div x-ignore data-table></div>
+  </div>
+
+  <div x-show="loaded && totalPages > 1" x-cloak class="rdb-pagination">
+    <button @click="goPage(1)" :disabled="_page <= 1" class="rdb-page-btn" title="First page">&laquo;</button>
+    <button @click="prevPage()" :disabled="_page <= 1" class="rdb-page-btn" title="Previous page">&lsaquo;</button>
+    <span class="rdb-page-info">Page <strong x-text="_page"></strong> of <span x-text="totalPages"></span></span>
+    <button @click="nextPage()" :disabled="_page >= totalPages" class="rdb-page-btn" title="Next page">&rsaquo;</button>
+    <button @click="goPage(totalPages)" :disabled="_page >= totalPages" class="rdb-page-btn" title="Last page">&raquo;</button>
+    <span class="rdb-page-sep">|</span>
+    <span class="rdb-page-info" x-text="totalRows + ' rows'"></span>
+    <select class="rdb-select rdb-page-size" @change="setPageSize($event.target.value)" title="Rows per page">
+      <option value="10">10</option>
+      <option value="25">25</option>
+      <option value="50" selected>50</option>
+      <option value="100">100</option>
+    </select>
+  </div>
+</div>
+{:/nomarkdown}

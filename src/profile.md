@@ -26,7 +26,7 @@ layout: default
     <div class="affil" id="prof-affil"></div>
   </div>
 
-  <div class="score-cards" id="score-cards"></div>
+  <div class="rdb-cards" id="score-cards"></div>
 
   <div id="chart-section" class="rdb-hidden">
     <h3>Contributions Over Time</h3>
@@ -64,7 +64,7 @@ layout: default
     <h2 id="inst-name"></h2><span id="inst-share-btn" class="share-btn rdb-hidden" title="Copy link to this profile">&#128279; Share<span class="share-tip">Link copied!</span></span>
   </div>
 
-  <div class="score-cards" id="inst-score-cards"></div>
+  <div class="rdb-cards" id="inst-score-cards"></div>
 
   <div id="inst-contributors-section" class="rdb-hidden">
     <h3>Top Contributors</h3>

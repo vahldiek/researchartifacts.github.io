@@ -25,7 +25,7 @@ var ReproDBProfile = (function() {
   }
 
   function card(value, label) {
-    return '<div class="score-card"><div class="val">' + value + '</div><div class="lbl">' + label + '</div></div>';
+    return '<div class="rdb-card"><div class="rdb-card-value">' + value + '</div><div class="rdb-card-label">' + label + '</div></div>';
   }
 
   /**

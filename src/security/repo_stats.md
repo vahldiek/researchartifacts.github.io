@@ -10,12 +10,30 @@ GitHub stars and forks for artifact repositories from security conferences ({{ s
 
 {% if site.data.repo_stats.by_conference.size > 0 %}
 
+{% assign _sec_repos = 0 %}{% assign _sec_stars = 0 %}{% assign _sec_forks = 0 %}{% assign _sec_max = 0 %}{% for c in site.data.repo_stats.by_conference %}{% assign _is_sec = false %}{% for conf in site.data.artifacts_by_conference %}{% if conf.name == c.name and conf.category == "security" %}{% assign _is_sec = true %}{% endif %}{% endfor %}{% if _is_sec %}{% assign _sec_repos = _sec_repos | plus: c.github_repos %}{% assign _sec_stars = _sec_stars | plus: c.total_stars %}{% assign _sec_forks = _sec_forks | plus: c.total_forks %}{% if c.max_stars > _sec_max %}{% assign _sec_max = c.max_stars %}{% endif %}{% endif %}{% endfor %}
+
+<div class="rdb-cards">
+  <div class="rdb-card">
+    <div class="rdb-card-value">{{ _sec_repos }}</div>
+    <div class="rdb-card-label">GitHub Repos</div>
+  </div>
+  <div class="rdb-card">
+    <div class="rdb-card-value">{{ _sec_stars }}</div>
+    <div class="rdb-card-label">Total Stars</div>
+  </div>
+  <div class="rdb-card">
+    <div class="rdb-card-value">{{ _sec_forks }}</div>
+    <div class="rdb-card-label">Total Forks</div>
+  </div>
+  <div class="rdb-card">
+    <div class="rdb-card-value">{{ _sec_max }}</div>
+    <div class="rdb-card-label">Max Stars</div>
+  </div>
+</div>
+
 ## By Conference
 
-| Conference | GitHub Repos | Total Stars | Median Stars | P25 Stars | P75 Stars | Total Forks | Median Forks | P25 Forks | P75 Forks | Max Stars |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-{% for c in site.data.repo_stats.by_conference %}{% assign _is_sec = false %}{% for conf in site.data.artifacts_by_conference %}{% if conf.name == c.name and conf.category == "security" %}{% assign _is_sec = true %}{% endif %}{% endfor %}{% if _is_sec %}| **{{ c.name }}** | {{ c.github_repos }} | {{ c.total_stars }} | {{ c.median_stars }} | {{ c.p25_stars }} | {{ c.p75_stars }} | {{ c.total_forks }} | {{ c.median_forks }} | {{ c.p25_forks }} | {{ c.p75_forks }} | {{ c.max_stars }} |
-{% endif %}{% endfor %}
+{% include repo_stats_summary_table.html type="conference" category="security" %}
 
 ## Top Repositories
 

@@ -28,10 +28,6 @@ A cross-community analysis of Artifact Evaluation Committee composition, retenti
   </div>
 </div>
 
-| | Systems | Security |
-|---|:---:|:---:|
-| **Total Assignments** | {{ site.data.committee_stats.total_systems }} | {{ site.data.committee_stats.total_security }} |
-| **Unique Members** | {{ site.data.committee_stats.unique_members_systems }} | {{ site.data.committee_stats.unique_members_security }} |
 
 ---
 
@@ -158,4 +154,4 @@ Only a small fraction of evaluators serve in both systems and security — the t
 
 ---
 
-**Data:** [Committee Statistics]({{ '/assets/data/committee_stats.json' | relative_url }}) | [AE Members]({{ '/assets/data/ae_members.json' | relative_url }})
+{% include data_footer.html %}

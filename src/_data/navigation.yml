@@ -19,8 +19,6 @@ main:
     children:
       - title: "Overview"
         url: security/
-      - title: "Security Ranking"
-        url: security/authors.html
       - title: "ACSAC"
         url: security/acsac.html
       - title: "CHES"
@@ -40,8 +38,6 @@ main:
     children:
       - title: "Overview"
         url: systems/
-      - title: "Systems Ranking"
-        url: systems/authors.html
       - title: "ATC"
         url: systems/atc.html
       - title: "EuroSys"
@@ -60,17 +56,13 @@ main:
       - title: "Overview"
         url: committee.html
       - title: "Ranking"
-        url: ae_members.html
+        url: combined_rankings.html?contrib=ae
       - title: "Chair Statistics"
         url: ae_chairs.html
       - title: "Systems Statistics"
         url: systems/committee.html
-      - title: "Systems Ranking"
-        url: systems/ae_members.html
       - title: "Security Statistics"
         url: security/committee.html
-      - title: "Security Ranking"
-        url: security/ae_members.html
   - title: "Repository Stats"
     url: repo_stats.html
     children:

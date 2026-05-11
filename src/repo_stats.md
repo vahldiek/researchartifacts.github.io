@@ -10,9 +10,28 @@ GitHub stars and forks for artifact repositories across all tracked conferences.
 
 {% if site.data.repo_stats.overall %}
 
-| GitHub Repos | Total Stars | Median Stars | P25 Stars | P75 Stars | Max Stars | Total Forks | Median Forks | P25 Forks | P75 Forks |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| {{ site.data.repo_stats.overall.github_repos }} | {{ site.data.repo_stats.overall.total_stars }} | {{ site.data.repo_stats.overall.median_stars }} | {{ site.data.repo_stats.overall.p25_stars }} | {{ site.data.repo_stats.overall.p75_stars }} | {{ site.data.repo_stats.overall.max_stars }} | {{ site.data.repo_stats.overall.total_forks }} | {{ site.data.repo_stats.overall.median_forks }} | {{ site.data.repo_stats.overall.p25_forks }} | {{ site.data.repo_stats.overall.p75_forks }} |
+<div class="rdb-cards">
+  <div class="rdb-card">
+    <div class="rdb-card-value">{{ site.data.repo_stats.overall.github_repos }}</div>
+    <div class="rdb-card-label">GitHub Repos</div>
+  </div>
+  <div class="rdb-card">
+    <div class="rdb-card-value">{{ site.data.repo_stats.overall.total_stars }}</div>
+    <div class="rdb-card-label">Total Stars</div>
+  </div>
+  <div class="rdb-card">
+    <div class="rdb-card-value">{{ site.data.repo_stats.overall.median_stars }}</div>
+    <div class="rdb-card-label">Median Stars</div>
+  </div>
+  <div class="rdb-card">
+    <div class="rdb-card-value">{{ site.data.repo_stats.overall.total_forks }}</div>
+    <div class="rdb-card-label">Total Forks</div>
+  </div>
+  <div class="rdb-card">
+    <div class="rdb-card-value">{{ site.data.repo_stats.overall.max_stars }}</div>
+    <div class="rdb-card-label">Max Stars</div>
+  </div>
+</div>
 
 {% endif %}
 
@@ -20,10 +39,7 @@ GitHub stars and forks for artifact repositories across all tracked conferences.
 
 ## By Area
 
-| Area | GitHub Repos | Total Stars | Median Stars | P25 Stars | P75 Stars | Total Forks | Median Forks | P25 Forks | P75 Forks | Max Stars |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-{% for a in site.data.repo_stats.by_area %}| **[{{ a.name | capitalize }}]({{ '/' | append: a.name | append: '/repo_stats.html' | relative_url }})** | {{ a.github_repos }} | {{ a.total_stars }} | {{ a.median_stars }} | {{ a.p25_stars }} | {{ a.p75_stars }} | {{ a.total_forks }} | {{ a.median_forks }} | {{ a.p25_forks }} | {{ a.p75_forks }} | {{ a.max_stars }} |
-{% endfor %}
+{% include repo_stats_summary_table.html type="area" %}
 
 ## Top Repositories
 

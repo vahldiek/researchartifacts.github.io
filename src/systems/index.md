@@ -5,13 +5,65 @@ permalink: /systems/
 
 Artifact evaluation statistics for systems conferences ({{ site.data.summary.systems_conferences | join: ", " }}).
 
-Each cell shows **total (available, functional, reproduced)**.
-
 {% if site.data.artifacts_by_conference %}
+
+<div class="rdb-cards">
+  <div class="rdb-card">
+    <div class="rdb-card-value">{{ site.data.summary.systems_artifacts }}</div>
+    <div class="rdb-card-label">Total Artifacts</div>
+  </div>
+  <div class="rdb-card">
+    <div class="rdb-card-value">{{ site.data.summary.systems_conferences | size }}</div>
+    <div class="rdb-card-label">Conferences</div>
+  </div>
+  <div class="rdb-card">
+    <div class="rdb-card-value">{{ site.data.summary.year_range }}</div>
+    <div class="rdb-card-label">Year Range</div>
+  </div>
+  {% if site.data.committee_stats %}
+  <div class="rdb-card">
+    <div class="rdb-card-value">{{ site.data.committee_stats.unique_members_systems }}</div>
+    <div class="rdb-card-label">AE Members</div>
+  </div>
+  {% endif %}
+</div>
+
+<div class="rdb-cards">
+  <div class="rdb-card">
+    <a href="{{ '/combined_rankings.html' | relative_url }}?area=systems&contrib=artifacts">
+      <div class="rdb-card-value">👤</div>
+      <div class="rdb-card-label">Author Rankings</div>
+    </a>
+  </div>
+  <div class="rdb-card">
+    <a href="{{ '/institution_rankings.html' | relative_url }}?area=systems&contrib=artifacts">
+      <div class="rdb-card-value">🏛</div>
+      <div class="rdb-card-label">Institution Rankings</div>
+    </a>
+  </div>
+  <div class="rdb-card">
+    <a href="{{ '/combined_rankings.html' | relative_url }}?area=systems&contrib=ae">
+      <div class="rdb-card-value">📋</div>
+      <div class="rdb-card-label">AE Service</div>
+    </a>
+  </div>
+  <div class="rdb-card">
+    <a href="{{ '/systems/committee.html' | relative_url }}">
+      <div class="rdb-card-value">📊</div>
+      <div class="rdb-card-label">AE Statistics</div>
+    </a>
+  </div>
+  <div class="rdb-card">
+    <a href="{{ '/systems/repo_stats.html' | relative_url }}">
+      <div class="rdb-card-value">📦</div>
+      <div class="rdb-card-label">Repositories</div>
+    </a>
+  </div>
+</div>
 
 ## Artifacts per Conference
 
-<div class="rdb-md-chart" style="max-width:600px;">
+<div class="rdb-md-chart" id="sysConfChartWrap" style="max-width:600px;display:none;">
 <div id="sysConfChart" style="height:300px"></div>
 </div>
 
@@ -23,57 +75,6 @@ Each cell shows **total (available, functional, reproduced)**.
 
 *Statistics data is being generated. Please check back soon.*
 
-{% endif %}
-
-
-## Top 10 Most Prolific Contributors
-
-Ranked by combined score (artifacts published + AE committee memberships) at systems conferences. See the full [systems combined rankings]({{ '/systems/combined_rankings.html' | relative_url }}) for more.
-
-<div id="sysTop10Table"></div>
-
-<script>
-(function(){
-  var escHtml = ReproDB.escHtml;
-  fetch('{{ "/assets/data/systems_combined_rankings.json" | relative_url }}')
-    .then(function(r){ return r.json(); })
-    .then(function(data){
-      data.sort(function(a,b){ return (b.combined_score||0) - (a.combined_score||0); });
-      ReproDB.createTable('#sysTop10Table', {
-        data: data.slice(0, 10),
-        pagination: false,
-        columns: [
-          { title: '#', formatter: 'rownum', width: 40, headerSort: false },
-          { title: 'Name', field: 'name', formatter: function(cell) {
-            var d = cell.getData(), n = (d.name||'').replace(/\t/g,' ').replace(/\s+\d{4}$/,'');
-            return '<a href="/profile.html?name=' + encodeURIComponent(d.name) + '">' + escHtml(n) + '</a>';
-          }},
-          { title: 'Affiliation', field: 'affiliation', formatter: function(cell) {
-            var d = cell.getData(), a = (d.affiliation||'').replace(/^_/,'');
-            return '<a href="/profile.html?type=institution&name=' + encodeURIComponent(d.affiliation) + '">' + escHtml(a) + '</a>';
-          }},
-          { title: 'Artifacts', field: 'artifact_count', sorter: 'number' },
-          { title: 'AE Memberships', field: 'ae_memberships', sorter: 'number' },
-          { title: 'AE Chair', field: 'chair_count', sorter: 'number' },
-          { title: 'Score', field: 'combined_score', sorter: 'number', formatter: function(cell) { return '<strong>' + (cell.getValue()||0) + '</strong>'; } },
-          { title: 'Conferences', field: 'conferences', formatter: function(cell) { return (cell.getValue()||[]).join(', '); }, headerSort: false }
-        ]
-      });
-    });
-})();
-</script>
-
-## Repository Statistics
-
-{% if site.data.repo_stats.by_conference.size > 0 %}
-High-level GitHub repository metrics for systems conferences. See the full [systems repository statistics]({{ '/systems/repo_stats.html' | relative_url }}) for charts and details.
-
-| Conference | GitHub Repos | Total Stars | Median Stars | Total Forks | Median Forks | Max Stars |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
-{% for c in site.data.repo_stats.by_conference %}{% assign _is_sys = false %}{% for conf in site.data.artifacts_by_conference %}{% if conf.name == c.name and conf.category == "systems" %}{% assign _is_sys = true %}{% endif %}{% endfor %}{% if _is_sys %}| **{{ c.name }}** | {{ c.github_repos }} | {{ c.total_stars }} | {{ c.median_stars }} | {{ c.total_forks }} | {{ c.median_forks }} | {{ c.max_stars }} |
-{% endif %}{% endfor %}
-{% else %}
-*Repository statistics not yet available.*
 {% endif %}
 
 {% if site.data.artifacts_by_conference %}
@@ -91,19 +92,23 @@ document.addEventListener('DOMContentLoaded', function() {
   })();
   {% assign ci = ci | plus: 1 %}{% endif %}{% endfor %}
 
-  var chart = ReproDB.initEChart('sysConfChart');
-  chart.setOption({
-    title: { text: 'Systems: Artifacts per Conference', left: 'center' },
-    tooltip: { trigger: 'axis' },
-    legend: { bottom: 0, type: 'scroll' },
-    grid: { containLabel: true, left: 40, right: 20, bottom: 50, top: 40 },
-    xAxis: { type: 'category', data: years },
-    yAxis: { type: 'value', name: 'Artifacts', min: 0 },
-    series: confDatasets.map(function(ds) {
-      return { name: ds.label, type: 'line', data: ds.data, smooth: 0.2, itemStyle: { color: ds.borderColor } };
-    })
-  });
-  ReproDB.registerEChart(chart);
+  /* Show line chart only when many years of data exist */
+  if (years.length > 15) {
+    document.getElementById('sysConfChartWrap').style.display = '';
+    var chart = ReproDB.initEChart('sysConfChart');
+    chart.setOption({
+      title: { text: 'Systems: Artifacts per Conference', left: 'center' },
+      tooltip: { trigger: 'axis' },
+      legend: { bottom: 0, type: 'scroll' },
+      grid: { containLabel: true, left: 40, right: 20, bottom: 50, top: 40 },
+      xAxis: { type: 'category', data: years },
+      yAxis: { type: 'value', name: 'Artifacts', min: 0 },
+      series: confDatasets.map(function(ds) {
+        return { name: ds.label, type: 'line', data: ds.data, smooth: 0.2, itemStyle: { color: ds.borderColor } };
+      })
+    });
+    ReproDB.registerEChart(chart);
+  }
 
   /* ── Heatmap: Artifacts per Conference ── */
   var hmEl = document.getElementById('sysConfHeatmap');
@@ -180,6 +185,4 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 {% endif %}
 
----
-
-**Data:** [Artifacts by Conference]({{ '/assets/data/artifacts.json' | relative_url }}) | [Rankings]({{ '/assets/data/systems_combined_rankings.json' | relative_url }}) | [Repository Stats]({{ '/assets/data/systems_top_repos.json' | relative_url }})
+{% include data_footer.html files="artifacts.json,systems_combined_rankings.json,systems_top_repos.json" %}

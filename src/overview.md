@@ -30,6 +30,7 @@ A side-by-side longitudinal comparison of artifact evaluation across **systems**
 | **Conferences** | {{ site.data.summary.systems_conferences | size }} ({{ site.data.summary.systems_conferences | join: ", " }}) | {{ site.data.summary.security_conferences | size }} ({{ site.data.summary.security_conferences | join: ", " }}) |
 {% if site.data.committee_stats %}| **AE Committee Members** | {{ site.data.committee_stats.total_systems }} | {{ site.data.committee_stats.total_security }} |
 | **Unique AE Members** | {{ site.data.committee_stats.unique_members_systems }} | {{ site.data.committee_stats.unique_members_security }} |{% endif %}
+{: .rdb-table--centered}
 
 ---
 

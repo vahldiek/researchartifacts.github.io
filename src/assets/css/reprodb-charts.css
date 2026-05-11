@@ -17,18 +17,45 @@
 }
 .rdb-card {
   flex: 1;
-  min-width: 200px;
-  padding: 16px;
+  min-width: 140px;
+  padding: 12px 16px;
   border: 1px solid var(--rdb-border);
   border-radius: 8px;
   text-align: center;
+  background: #f7f7f7;
 }
 .rdb-card-value {
-  font-size: 2em;
+  font-size: 1.6em;
   font-weight: bold;
 }
 .rdb-card-label {
+  font-size: 0.85em;
   color: var(--rdb-muted);
+  margin-top: 2px;
+}
+
+/* ── Compact cards (inline summary bar) ─────────────────────────── */
+.rdb-cards--compact {
+  gap: 8px;
+  margin: 0.5em 0;
+}
+.rdb-cards--compact .rdb-card {
+  min-width: 120px;
+  padding: 8px 12px;
+}
+.rdb-cards--compact .rdb-card-value {
+  font-size: 1.3em;
+}
+.rdb-cards--compact .rdb-card-label {
+  font-size: 0.8em;
+}
+.rdb-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.rdb-card a:hover {
+  opacity: 0.7;
 }
 
 /* ── Chart row — two side-by-side charts ───────────────────────────── */
@@ -168,6 +195,7 @@
     --rdb-row-alt: #23272d;
     --rdb-hover: #2a3038;
   }
+  html:not([data-theme="light"]) .rdb-card { background: #23272d; }
 }
 html[data-theme="dark"] {
   --rdb-border: #4a4f57;
@@ -175,3 +203,4 @@ html[data-theme="dark"] {
   --rdb-row-alt: #23272d;
   --rdb-hover: #2a3038;
 }
+html[data-theme="dark"] .rdb-card { background: #23272d; }

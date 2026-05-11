@@ -1,0 +1,84 @@
+{% comment %}
+  Tabulator-based summary table for repo stats (by area or by conference).
+
+  Required include params:
+    type       — "area" or "conference"
+    category   — nil/blank (all), "systems", or "security" (only for type=conference)
+{% endcomment %}
+
+{% assign _rs_type = include.type | default: "area" %}
+{% assign _rs_cat  = include.category %}
+
+{% if _rs_type == "area" %}
+  {% assign _rs_data = site.data.repo_stats.by_area %}
+{% else %}
+  {% assign _rs_data = site.data.repo_stats.by_conference %}
+{% endif %}
+
+{% capture _rs_id %}repo-stats-summary-{{ _rs_type }}-{{ _rs_cat | default: "all" }}{% endcapture %}
+
+<div id="{{ _rs_id }}"></div>
+
+<script>
+(function() {
+  var allRows = [
+  {% for item in _rs_data %}
+    {% if _rs_type == "conference" and _rs_cat != blank %}
+      {% assign _match = false %}
+      {% for conf in site.data.artifacts_by_conference %}
+        {% if conf.name == item.name and conf.category == _rs_cat %}
+          {% assign _match = true %}
+        {% endif %}
+      {% endfor %}
+      {% unless _match %}{% continue %}{% endunless %}
+    {% endif %}
+    {
+      name: {{ item.name | jsonify }},
+      github_repos: {{ item.github_repos | default: 0 }},
+      total_stars: {{ item.total_stars | default: 0 }},
+      median_stars: {{ item.median_stars | default: 0 }},
+      p25_stars: {{ item.p25_stars | default: 0 }},
+      p75_stars: {{ item.p75_stars | default: 0 }},
+      total_forks: {{ item.total_forks | default: 0 }},
+      median_forks: {{ item.median_forks | default: 0 }},
+      p25_forks: {{ item.p25_forks | default: 0 }},
+      p75_forks: {{ item.p75_forks | default: 0 }},
+      max_stars: {{ item.max_stars | default: 0 }}
+    },
+  {% endfor %}
+  ];
+
+  var type = {{ _rs_type | jsonify }};
+  var firstColTitle = type === 'area' ? 'Area' : 'Conference';
+
+  function nameFormatter(cell) {
+    var v = cell.getValue();
+    if (type === 'area') {
+      var label = v.charAt(0).toUpperCase() + v.slice(1);
+      return '<a href="' + ReproDB.escHtml('/' + v + '/repo_stats.html') + '">' + ReproDB.escHtml(label) + '</a>';
+    }
+    return '<strong>' + ReproDB.escHtml(v) + '</strong>';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    ReproDB.createTable('#{{ _rs_id }}', {
+      columns: [
+        { title: firstColTitle, field: 'name', sorter: 'string', minWidth: 100, widthGrow: 2, formatter: nameFormatter },
+        { title: 'GH Repos', field: 'github_repos', sorter: 'number', width: 80, hozAlign: 'right' },
+        { title: 'Total Stars', field: 'total_stars', sorter: 'number', width: 90, hozAlign: 'right' },
+        { title: 'Median Stars', field: 'median_stars', sorter: 'number', width: 100, hozAlign: 'right' },
+        { title: 'P25 Stars', field: 'p25_stars', sorter: 'number', width: 80, hozAlign: 'right' },
+        { title: 'P75 Stars', field: 'p75_stars', sorter: 'number', width: 80, hozAlign: 'right' },
+        { title: 'Total Forks', field: 'total_forks', sorter: 'number', width: 90, hozAlign: 'right' },
+        { title: 'Median Forks', field: 'median_forks', sorter: 'number', width: 100, hozAlign: 'right' },
+        { title: 'P25 Forks', field: 'p25_forks', sorter: 'number', width: 80, hozAlign: 'right' },
+        { title: 'P75 Forks', field: 'p75_forks', sorter: 'number', width: 80, hozAlign: 'right' },
+        { title: 'Max Stars', field: 'max_stars', sorter: 'number', width: 80, hozAlign: 'right' }
+      ],
+      data: allRows,
+      pagination: false,
+      initialSort: [{ column: 'total_stars', dir: 'desc' }]
+    });
+  });
+})();
+</script>

@@ -1,48 +1,14 @@
 {% comment %}
-  Dynamic combined ranking table loaded from JSON using Tabulator + Alpine.js.
-  Shows people ranked by combined_score (artifacts + AE committee memberships).
-
-  Required page variables:
-    page.combined_data_url  — path to the overall JSON file
-    page.systems_data_url   — path to the systems JSON file
-    page.security_data_url  — path to the security JSON file
+  Author ranking table — uses shared shell for controls/table/pagination.
+  Script below provides the combinedRanking() Alpine component.
 {% endcomment %}
 
-<div markdown="0" x-data="combinedRanking()" x-init="boot()">
-  <div class="rdb-controls" x-show="loaded" x-cloak>
-    <div class="rdb-controls-row">
-      <div class="rdb-control-group">
-        <label class="rdb-label">Area:</label>
-        <span class="rdb-area-checks" role="group" aria-label="Area filter">
-          <label><input type="checkbox" x-model="areaSystems" @change="onAreaChange()"> Systems</label>
-          <label><input type="checkbox" x-model="areaSecurity" @change="onAreaChange()"> Security</label>
-        </span>
-      </div>
-      <div class="rdb-control-group">
-        <label class="rdb-label">Contribution:</label>
-        <span class="rdb-area-checks" role="group" aria-label="Contribution filter">
-          <label><input type="checkbox" x-model="contribArtifacts" @change="onContribChange()"> Artifacts</label>
-          <label><input type="checkbox" x-model="contribAE" @change="onContribChange()"> AE Service</label>
-        </span>
-      </div>
-      <div class="rdb-control-group">
-        <label class="rdb-label">Search:</label>
-        <input type="text" placeholder="Name or affiliation…" class="rdb-input"
-               x-ref="searchInput" @input="onSearchInput()" aria-label="Search rankings">
-      </div>
-    </div>
-  </div>
-
-  <div class="rdb-legend" x-show="loaded" x-cloak>
-    <span>Legend: #=Rank, Δ=Rank Change, S=Combined Score, AS=Artifact Score, AES=AE Service Score, A:E=Artifact:Evaluation Ratio, Ar=Artifacts, P=Papers, AR%=Artifact Rate, RR%=Repro Rate, AE=AE Service, Ch=Chaired</span>
-  </div>
-
-  <div x-ref="loading" x-show="!loaded">
-    <em x-text="loadingMsg"></em>
-  </div>
-
-  <div x-ref="tableEl" x-show="loaded" x-cloak></div>
-</div>
+{% include ranking_table_shell.html
+   type="author"
+   func_name="combinedRanking"
+   legend="Legend: #=Rank, Δ=Rank Change, S=Combined Score, AS=Artifact Score, AES=AE Service Score, A:E=Artifact:Evaluation Ratio, Ar=Artifacts, P=Papers, AR%=Artifact Rate, RR%=Repro Rate, AE=AE Service, Ch=Chaired"
+   search_placeholder="Name or affiliation…"
+%}
 
 <script>
 function combinedRanking() {
@@ -52,121 +18,32 @@ function combinedRanking() {
     systems:  '{{ page.systems_data_url  | relative_url }}',
     security: '{{ page.security_data_url | relative_url }}'
   };
-  var historyUrl = '{{ "/assets/data/ranking_history.json" | relative_url }}';
-  var baseUrl    = '{{ "" | relative_url }}';
+  var baseUrl = '{{ "" | relative_url }}';
 
-  return {
+  return ReproDB.rankingMixin({
+    /* ── config ────────────────────────────────────────────────────── */
     area: '{{ page.default_area | default: "all" }}',
     areaSystems: {% if page.default_area == "security" %}false{% else %}true{% endif %},
     areaSecurity: {% if page.default_area == "systems" %}false{% else %}true{% endif %},
-    contribArtifacts: true,
-    contribAE: true,
-    contribFilter: 'both',
-    _searchTimer: null,
-    loaded: false,
-    loadingMsg: 'Loading combined ranking data…',
-    table: null,
-    allData: [],
-    prevSnapshot: null,
-    yearColumns: [],
+    _historyUrl: '{{ "/assets/data/ranking_history.json" | relative_url }}',
+    _rankKey: 'name',
+    _sortField: 'combined_score',
+    _dataUrls: dataUrls,
 
-    /* ── lifecycle ─────────────────────────────────────────────────── */
-
-    boot: function() {
-      var self = this;
-      var el = this.$refs.loading;
-      if ('IntersectionObserver' in window && el) {
-        var io = new IntersectionObserver(function(entries) {
-          for (var i = 0; i < entries.length; i++) {
-            if (entries[i].isIntersecting) { io.disconnect(); self._doLoad(); break; }
-          }
-        }, { rootMargin: '300px 0px' });
-        io.observe(el);
-      } else {
-        this._doLoad();
-      }
-    },
-
-    _doLoad: function() {
-      this.loadArea();
-      this._loadHistory();
-    },
-
-    onAreaChange: function() {
-      if (this.areaSystems && this.areaSecurity) this.area = 'all';
-      else if (this.areaSystems) this.area = 'systems';
-      else if (this.areaSecurity) this.area = 'security';
-      else this.area = 'all'; // neither checked → show all
-      this.loadArea();
-    },
-
-    _loadHistory: function() {
-      var self = this;
-      if (!historyUrl) return;
-      fetch(historyUrl).then(function(r) { return r.json(); }).catch(function() { return []; })
-        .then(function(h) {
-          if (h && h.length >= 2) {
-            self.prevSnapshot = h[h.length - 2].entries;
-            if (self.table) self.table.redraw(true);
-          }
-        });
-    },
-
-    /* ── data loading ──────────────────────────────────────────────── */
-
-    loadArea: function() {
-      var self = this;
-      if (!this.table) {
-        this.loaded = false;
-        this.loadingMsg = 'Loading ' + this.area + ' ranking data…';
-      }
-      ReproDB.fetchJSON(dataUrls[this.area])
-        .then(function(data) { self._initTable(data); })
-        .catch(function(e)   { self.loadingMsg = 'Failed to load data: ' + e; });
-    },
-
-    _initTable: function(data) {
+    /* ── table-specific init hook ──────────────────────────────────── */
+    _initTableHook: function(data) {
       this.allData = data;
-
-      // Extract year columns
-      var yrs = {};
-      data.forEach(function(d) {
-        if (d.years) Object.keys(d.years).forEach(function(y) { yrs[y] = true; });
-      });
-      this.yearColumns = Object.keys(yrs).map(function(y) { return parseInt(y) || y; })
-        .sort(function(a, b) { return b - a; });
-
-      // Assign dense ranks on full dataset (stable across filters)
-      ReproDB.assignDenseRanks(data, 'name');
-
-      var cols = this._buildColumns();
-      var rows = this._processData();
-
-      if (this.table) {
-        this.table.setColumns(cols);
-        this.table.replaceData(rows);
-      } else {
-        this.table = ReproDB.createTable(this.$refs.tableEl, {
-          columns: cols,
-          data: rows,
-          initialSort: [{ column: 'combined_score', dir: 'desc' }],
-          layout: 'fitColumns'
-        });
-      }
-      this.loaded = true;
-      this.applyFilters();
-      var tbl = this.table;
-      this.$nextTick(function() { tbl.redraw(true); });
     },
 
     /* ── data processing ───────────────────────────────────────────── */
-
     _processData: function() {
       var yrs = this.yearColumns;
       return this.allData.map(function(d) {
         var row = Object.assign({}, d);
         row._rank = d._baseRank || 0;
-        // Flatten years into yr_YYYY columns
+        row._nameLower = (d.name || '').toLowerCase();
+        row._displayNameLower = (d.display_name || '').toLowerCase();
+        row._affLower = (d.affiliation || '').toLowerCase();
         for (var i = 0; i < yrs.length; i++) {
           var y = yrs[i];
           row['yr_' + y] = (d.years && (d.years[y] || d.years[String(y)])) || 0;
@@ -176,17 +53,16 @@ function combinedRanking() {
     },
 
     /* ── column definitions ────────────────────────────────────────── */
-
     _buildColumns: function() {
       var self = this;
       var dash = '\u2013';
 
       var cols = [
-        { title: '#', field: '_rank', sorter: 'number', width: 40,
-          tooltip: 'Rank', headerSort: true },
+        { title: '#', field: '_rank', sorter: 'number', width: 40, tooltip: 'Rank' },
         { title: '\u0394', field: '_rank', sorter: 'number', width: 40,
           tooltip: 'Rank change from previous month',
           formatter: function(cell) {
+            if (self.area !== 'all' || self.contribFilter !== 'both') return '';
             var d = cell.getRow().getData();
             var old = self.prevSnapshot && self.prevSnapshot[d.name]
                     ? self.prevSnapshot[d.name].rank : undefined;
@@ -275,7 +151,6 @@ function combinedRanking() {
         }
       ];
 
-      // Dynamic year columns
       for (var i = 0; i < this.yearColumns.length; i++) {
         (function(yr) {
           cols.push({
@@ -284,51 +159,23 @@ function combinedRanking() {
           });
         })(this.yearColumns[i]);
       }
-
       return cols;
     },
 
     /* ── filtering ─────────────────────────────────────────────────── */
-
-    onContribChange: function() {
-      if (this.contribArtifacts && this.contribAE) this.contribFilter = 'both';
-      else if (this.contribArtifacts) this.contribFilter = 'artifacts_only';
-      else if (this.contribAE) this.contribFilter = 'ae_only';
-      else this.contribFilter = 'both';
-      if (!this.table) return;
-      var sortField = this.contribFilter === 'artifacts_only' ? 'artifact_score' :
-                      this.contribFilter === 'ae_only' ? 'ae_score' : 'combined_score';
-      this.table.blockRedraw();
-      this.table.setSort(sortField, 'desc');
-      this.applyFilters();
-      this.table.restoreRedraw();
-    },
-
-    applyFilters: function() {
-      if (!this.table) return;
+    _matchesFilter: function(data) {
       var fm = this.contribFilter;
       var scoreField = fm === 'artifacts_only' ? 'artifact_score' :
                        fm === 'ae_only'        ? 'ae_score' : 'combined_score';
+      if (!(data[scoreField] > 0)) return false;
       var searchVal = (this.$refs.searchInput ? this.$refs.searchInput.value : '').trim().toLowerCase();
-
-      this.table.setFilter(function(data) {
-        // Contribution type
-        if (!(data[scoreField] > 0)) return false;
-        // Text search
-        if (searchVal) {
-          if ((data.name || '').toLowerCase().indexOf(searchVal) < 0 &&
-              (data.display_name || '').toLowerCase().indexOf(searchVal) < 0 &&
-              (data.affiliation || '').toLowerCase().indexOf(searchVal) < 0) return false;
-        }
-        return true;
-      });
-    },
-
-    onSearchInput: function() {
-      var self = this;
-      clearTimeout(this._searchTimer);
-      this._searchTimer = setTimeout(function() { self.applyFilters(); }, 200);
+      if (searchVal) {
+        if (data._nameLower.indexOf(searchVal) < 0 &&
+            data._displayNameLower.indexOf(searchVal) < 0 &&
+            data._affLower.indexOf(searchVal) < 0) return false;
+      }
+      return true;
     }
-  };
+  });
 }
 </script>

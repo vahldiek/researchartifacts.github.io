@@ -103,4 +103,4 @@ Geographic distribution of security AE committee members by continent.
 
 ---
 
-**Data:** [Committee Statistics]({{ '/assets/data/committee_stats.json' | relative_url }}) | [AE Members]({{ '/assets/data/ae_members.json' | relative_url }})
+{% include data_footer.html %}

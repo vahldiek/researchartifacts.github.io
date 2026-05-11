@@ -190,11 +190,7 @@
     document.getElementById('inst-profile').classList.remove('rdb-hidden');
 
     // Header
-    var roleTag = '';
-    if (inst.role === 'Balanced') roleTag = '<span class="role-tag role-balanced">Balanced</span>';
-    else if (inst.role === 'Artifact-focused') roleTag = '<span class="role-tag role-artifact">Artifact-focused</span>';
-    else if (inst.role === 'Evaluation-focused') roleTag = '<span class="role-tag role-evaluation">Evaluation-focused</span>';
-    document.getElementById('inst-name').innerHTML = escHtml(inst.affiliation) + roleTag;
+    document.getElementById('inst-name').textContent = inst.affiliation;
 
     var affProfiles = allProfiles.filter(function(p) { return p.affiliation === inst.affiliation; });
 
@@ -421,6 +417,20 @@
   }
 
   // === LOAD DATA =========================================================
+
+  // If URL already specifies a name, immediately move search box to top
+  // and show the name — don't wait for data to load.
+  (function earlyLayout() {
+    var params = new URLSearchParams(window.location.search);
+    var nameP = params.get('name');
+    if (!nameP) return;
+    nameP = nameP.replace(/[\t\n\r]+/g, ' ').replace(/  +/g, ' ').trim();
+    if (!nameP) return;
+    var box = document.getElementById('profile-search-box');
+    if (box) box.value = nameP;
+    var hero = document.getElementById('profile-search-hero');
+    if (hero) hero.classList.add('has-profile');
+  })();
 
   Promise.all([
     ReproDB.ready,

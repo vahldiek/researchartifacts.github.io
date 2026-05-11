@@ -9,16 +9,39 @@
 
 {% if conf_data %}
 
+{% assign _t = 0 %}{% assign _a = 0 %}{% assign _f = 0 %}{% assign _r = 0 %}{% assign _u = 0 %}{% for yd in conf_data.years %}{% assign _t = _t | plus: yd.total %}{% assign _a = _a | plus: yd.available %}{% assign _f = _f | plus: yd.functional %}{% assign _r = _r | plus: yd.reproducible %}{% assign _u = _u | plus: yd.reusable %}{% endfor %}
+{% assign _year_first = conf_data.years | first %}{% assign _year_last = conf_data.years | last %}
+{% assign _avail_pct = _a | times: 100 | divided_by: _t %}
+{% assign _repro_pct = _r | times: 100 | divided_by: _t %}
+
+<div class="rdb-cards">
+  <div class="rdb-card">
+    <div class="rdb-card-value">{{ _t }}</div>
+    <div class="rdb-card-label">Total Artifacts</div>
+  </div>
+  <div class="rdb-card">
+    <div class="rdb-card-value">{{ _year_first.year }}–{{ _year_last.year }}</div>
+    <div class="rdb-card-label">Years</div>
+  </div>
+  <div class="rdb-card">
+    <div class="rdb-card-value">{{ conf_data.years | size }}</div>
+    <div class="rdb-card-label">Editions</div>
+  </div>
+  <div class="rdb-card">
+    <div class="rdb-card-value">{{ _avail_pct }}%</div>
+    <div class="rdb-card-label">Availability Rate</div>
+  </div>
+  <div class="rdb-card">
+    <div class="rdb-card-value">{{ _repro_pct }}%</div>
+    <div class="rdb-card-label">Reproduced Rate</div>
+  </div>
+</div>
+
 ## Statistics
 
 <div class="rdb-chart-container">
 <div id="confYearChart" style="height:300px"></div>
 </div>
-
-| Year | Total | Available | Functional | Reproduced | Reusable |
-|:---:|:---:|:---:|:---:|:---:|:---:|
-{% for yd in conf_data.years reversed %}| {{ yd.year }} | **{{ yd.total }}** | {{ yd.available }} | {{ yd.functional }} | {{ yd.reproducible }} | {{ yd.reusable }} |
-{% endfor %}| **All** | {% assign _t = 0 %}{% assign _a = 0 %}{% assign _f = 0 %}{% assign _r = 0 %}{% assign _u = 0 %}{% for yd in conf_data.years %}{% assign _t = _t | plus: yd.total %}{% assign _a = _a | plus: yd.available %}{% assign _f = _f | plus: yd.functional %}{% assign _r = _r | plus: yd.reproducible %}{% assign _u = _u | plus: yd.reusable %}{% endfor %}**{{ _t }}** | **{{ _a }}** | **{{ _f }}** | **{{ _r }}** | **{{ _u }}** |
 
 {% else %}
 
@@ -30,6 +53,7 @@
 
 Authors who contributed evaluated artifacts at {{ conf_display }}, ranked by artifact score.
 
+{::nomarkdown}
 <div x-data="confSection('author')" x-init="boot()">
   <div class="rdb-controls" x-show="loaded" x-cloak>
     <div class="rdb-controls-row">
@@ -50,11 +74,13 @@ Authors who contributed evaluated artifacts at {{ conf_display }}, ranked by art
   </div>
   <div x-ref="tableEl" x-show="loaded" x-cloak></div>
 </div>
+{:/nomarkdown}
 
 ## Institutions
 
 Institutions at {{ conf_display }}, ranked by conference-specific artifact score.
 
+{::nomarkdown}
 <div x-data="confSection('inst')" x-init="boot()">
   <div class="rdb-controls" x-show="loaded" x-cloak>
     <div class="rdb-controls-row">
@@ -75,83 +101,9 @@ Institutions at {{ conf_display }}, ranked by conference-specific artifact score
   </div>
   <div x-ref="tableEl" x-show="loaded" x-cloak></div>
 </div>
+{:/nomarkdown}
 
-## AE Committee
-
-Artifact evaluation committee members at {{ conf_display }}, ranked by number of service terms.
-
-<div x-data="confSection('ae')" x-init="boot()">
-  <div class="rdb-controls" x-show="loaded" x-cloak>
-    <div class="rdb-controls-row">
-      <div class="rdb-control-group">
-        <label class="rdb-label">Search:</label>
-        <input type="text" placeholder="Name or affiliation…" class="rdb-input"
-               x-ref="searchInput" @input="onSearchInput()">
-      </div>
-    </div>
-  </div>
-
-  <div class="rdb-legend" x-show="loaded" x-cloak>
-    Legend: #=Rank, Terms=AE Memberships, Ch=Times Chaired (★), First/Last=Year Range
-  </div>
-
-  <div x-show="!loaded" x-ref="loading">
-    <em x-text="loadingMsg"></em>
-  </div>
-  <div x-ref="tableEl" x-show="loaded" x-cloak></div>
-</div>
-
-## Repository Statistics
-
-{% assign conf_repo = false %}
-{% for cr in site.data.repo_stats.by_conference %}
-  {% if cr.name == conf_name %}
-    {% assign conf_repo = cr %}
-  {% endif %}
-{% endfor %}
-
-{% if conf_repo %}
-{% if conf_repo.github_repos > 0 %}
-
-| Metric | Value |
-|---|:---:|
-| **GitHub Repositories** | {{ conf_repo.github_repos }} |
-| **Total Stars** | {{ conf_repo.total_stars }} |
-| **Median Stars** | {{ conf_repo.median_stars }} |
-| **Total Forks** | {{ conf_repo.total_forks }} |
-| **Median Forks** | {{ conf_repo.median_forks }} |
-| **Max Stars** | {{ conf_repo.max_stars }} |
-
-{% if conf_repo.top_repos.size > 0 %}
-### Top {{ conf_repo.top_repos.size }} Repositories by Stars
-
-<div id="topReposTable"></div>
-<script id="topReposData" type="application/json">
-[{% for repo in conf_repo.top_repos %}{"title":{{ repo.title | jsonify }},"url":{{ repo.url | jsonify }},"year":{{ repo.year | jsonify }},"stars":{{ repo.stars | default: 0 }},"forks":{{ repo.forks | default: 0 }},"pushed_at":{{ repo.pushed_at | date: "%Y-%m-%d" | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]
-</script>
-{% endif %}
-
-{% else %}
-*Repository statistics not yet available for {{ conf_display }}.*
-{% endif %}
-{% else %}
-*Repository statistics not yet available for {{ conf_display }}.*
-{% endif %}
-
-## Data Files
-
-Download the underlying data as JSON for further analysis:
-
-{% assign cat = page.conf_category %}
-| Dataset | Download |
-|---|---|
-| **Artifacts** | [artifacts.json]({{ '/assets/data/artifacts.json' | relative_url }}) |
-| **Authors** | [authors.json]({{ '/assets/data/authors.json' | relative_url }}) |
-| **Combined Rankings** | [combined_rankings.json]({{ '/assets/data/combined_rankings.json' | relative_url }}) |
-| **AE Members** | [ae_members.json]({{ '/assets/data/ae_members.json' | relative_url }}) |
-| **Institution Rankings** | [institution_rankings.json]({{ '/assets/data/institution_rankings.json' | relative_url }}) |
-
-*Filter by `conference: "{{ conf_name }}"` for {{ conf_display }}-specific data.*
+{% include data_footer.html %}
 
 {% if conf_data %}
 <script>

@@ -2,24 +2,50 @@
    Loaded globally via _includes/head/custom.html. */
 
 /* ── Markdown-rendered tables (committee pages, overview pages) ─────── */
-/* These style bare <table> elements output by Jekyll/Kramdown. */
-.page__content table {
+/* These style bare <table> elements output by Jekyll/Kramdown.
+   Exclude .rdb-table which has its own tabulator_simple-matching styles. */
+.page__content table:not(.rdb-table) {
   font-size: 0.85em;
   white-space: nowrap;
   border-collapse: collapse;
 }
-.page__content table th,
-.page__content table td {
+.page__content table:not(.rdb-table) th,
+.page__content table:not(.rdb-table) td {
   padding: 3px 8px;
   border: 1px solid #ddd;
 }
-.page__content table th {
+.page__content table:not(.rdb-table) th {
   background-color: #f2f2f2;
   position: sticky;
   top: 0;
 }
-.page__content table tr:nth-child(even) { background-color: #f9f9f9; }
-.page__content table tr:hover { background-color: #e8f4f8; }
+.page__content table:not(.rdb-table) tr:nth-child(even) { background-color: #f9f9f9; }
+.page__content table:not(.rdb-table) tr:hover { background-color: #e8f4f8; }
+
+/* ── Centered summary tables (overview, comparisons) ───────────────── */
+.rdb-table--centered {
+  margin: 1em auto;
+  width: auto;
+  min-width: 0;
+  table-layout: auto;
+  font-size: 0.95em;
+  border-collapse: collapse;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+.rdb-table--centered th,
+.rdb-table--centered td {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  white-space: nowrap;
+}
+.rdb-table--centered th {
+  background-color: #f2f2f2;
+  font-weight: 700;
+}
+.rdb-table--centered tbody tr:nth-child(even) { background-color: #f9f9f9; }
+.rdb-table--centered tbody tr:hover { background-color: #e8f4f8; }
 
 /* ── Utility classes ───────────────────────────────────────────────────── */
 
@@ -43,21 +69,33 @@
 .rdb-rank-num { }
 .rdb-rank-indicator { }
 
+/* ── Tabulator: narrow-screen horizontal scroll ────────────────────────── */
+/* fitColumns distributes width proportionally; min-width prevents columns
+   from being crushed below readable widths on narrow viewports. */
+.tabulator {
+  min-width: 800px;
+}
+
+/* ── Tabulator: hover performance ──────────────────────────────────────── */
+.tabulator-row {
+  contain: layout style;
+}
+
 /* ── Tabulator: allow text wrapping in cells ───────────────────────────── */
 /* Prevents horizontal scrolling by letting long content (titles, names) wrap. */
 .tabulator .tabulator-header .tabulator-col .tabulator-col-content .tabulator-col-title {
-  white-space: normal;
-  overflow: visible;
-  text-overflow: clip;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
 }
 /* Sortable cols get padding-right:25px for the sort arrow — remove it since we hide arrows */
 .tabulator .tabulator-header .tabulator-col.tabulator-sortable .tabulator-col-title {
-  padding-right: 0;
+  padding-right: 0 !important;
 }
 .tabulator-row .tabulator-cell {
-  white-space: normal;
-  overflow: visible;
-  text-overflow: clip;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
 }
 
 /* ── Sort arrows: overlay instead of consuming column width ────────────── */
@@ -130,17 +168,20 @@
     background-color: #2a3038;
   }
   /* Kramdown markdown tables */
-  html:not([data-theme="light"]) .page__content table th {
+  html:not([data-theme="light"]) .page__content table:not(.rdb-table) th {
     background-color: #23272d; color: #d6d9dc; border-color: #4a4f57;
   }
-  html:not([data-theme="light"]) .page__content table td {
+  html:not([data-theme="light"]) .page__content table:not(.rdb-table) td {
     border-color: #4a4f57; color: #d6d9dc;
   }
-  html:not([data-theme="light"]) .page__content table tr:nth-child(even) {
+  html:not([data-theme="light"]) .page__content table:not(.rdb-table) tr:nth-child(even) {
     background-color: #23272d;
   }
-  html:not([data-theme="light"]) .page__content table tr:hover {
+  html:not([data-theme="light"]) .page__content table:not(.rdb-table) tr:hover {
     background-color: #2a3038;
+  }
+  html:not([data-theme="light"]) .rdb-table--centered {
+    background-color: #1e2127; border-color: #4a4f57;
   }
 }
 html[data-theme="dark"] .tabulator {
@@ -198,18 +239,149 @@ html[data-theme="dark"] .tabulator .tabulator-footer .tabulator-page:hover:not(.
   background-color: #2a3038;
 }
 /* Kramdown markdown tables */
-html[data-theme="dark"] .page__content table th {
+html[data-theme="dark"] .page__content table:not(.rdb-table) th {
   background-color: #23272d; color: #d6d9dc; border-color: #4a4f57;
 }
-html[data-theme="dark"] .page__content table td {
+html[data-theme="dark"] .page__content table:not(.rdb-table) td {
   border-color: #4a4f57; color: #d6d9dc;
 }
-html[data-theme="dark"] .page__content table tr:nth-child(even) {
+html[data-theme="dark"] .page__content table:not(.rdb-table) tr:nth-child(even) {
   background-color: #23272d;
 }
-html[data-theme="dark"] .page__content table tr:hover {
+html[data-theme="dark"] .page__content table:not(.rdb-table) tr:hover {
   background-color: #2a3038;
 }
+html[data-theme="dark"] .rdb-table--centered {
+  background-color: #1e2127; border-color: #4a4f57;
+}
+
+/* ── Manual pagination controls ────────────────────────────────────────── */
+
+/* ── Plain HTML ranking table (.rdb-table) ─────────────────────────────── */
+/* Matches the tabulator_simple theme so ranking tables look identical to
+   Tabulator-rendered tables (repo_stats, top_repos, etc.). */
+.rdb-table {
+  width: 100%;
+  min-width: 800px;
+  border-collapse: collapse;
+  font-size: 14px;
+  table-layout: fixed;
+  background-color: #fff;
+  color: #333;
+  border: none;
+}
+.rdb-table th {
+  background-color: #fff;
+  font-weight: 700;
+  color: #555;
+  padding: 4px;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #999;
+  position: sticky;
+  top: 0;
+  cursor: pointer;
+  user-select: none;
+  white-space: normal;
+  z-index: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.rdb-table th:last-child { border-right: none; }
+.rdb-table th:hover { background-color: #e6e6e6; cursor: pointer; }
+.rdb-table td {
+  padding: 4px;
+  border-right: 1px solid #ddd;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  vertical-align: middle;
+  white-space: normal;
+}
+.rdb-table td:last-child { border-right: none; }
+.rdb-table tbody tr { border-bottom: 1px solid #ddd; }
+.rdb-table tbody tr:hover { background-color: #bbb; cursor: pointer; }
+.rdb-table a { color: #2563eb; text-decoration: none; }
+.rdb-table a:hover { text-decoration: underline; }
+
+/* Dark mode for .rdb-table — matches Tabulator dark overrides exactly */
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .rdb-table {
+    background-color: #1e2127; color: #d6d9dc; border-color: #4a4f57;
+  }
+  html:not([data-theme="light"]) .rdb-table th {
+    background-color: #23272d; color: #d6d9dc; border-color: #4a4f57;
+  }
+  html:not([data-theme="light"]) .rdb-table th:hover { background-color: #2a3038; }
+  html:not([data-theme="light"]) .rdb-table td {
+    border-color: #4a4f57; color: #d6d9dc;
+  }
+  html:not([data-theme="light"]) .rdb-table tbody tr {
+    background-color: #1e2127; color: #d6d9dc; border-color: #4a4f57;
+  }
+  html:not([data-theme="light"]) .rdb-table tbody tr:nth-child(even) {
+    background-color: #23272d;
+  }
+  html:not([data-theme="light"]) .rdb-table tbody tr:hover {
+    background-color: #2a3038;
+  }
+  html:not([data-theme="light"]) .rdb-table a { color: #60a5fa; }
+}
+html[data-theme="dark"] .rdb-table {
+  background-color: #1e2127; color: #d6d9dc; border-color: #4a4f57;
+}
+html[data-theme="dark"] .rdb-table th {
+  background-color: #23272d; color: #d6d9dc; border-color: #4a4f57;
+}
+html[data-theme="dark"] .rdb-table th:hover { background-color: #2a3038; }
+html[data-theme="dark"] .rdb-table td {
+  border-color: #4a4f57; color: #d6d9dc;
+}
+html[data-theme="dark"] .rdb-table tbody tr {
+  background-color: #1e2127; color: #d6d9dc; border-color: #4a4f57;
+}
+html[data-theme="dark"] .rdb-table tbody tr:nth-child(even) {
+  background-color: #23272d;
+}
+html[data-theme="dark"] .rdb-table tbody tr:hover {
+  background-color: #2a3038;
+}
+html[data-theme="dark"] .rdb-table a { color: #60a5fa; }
+
+/* ── Manual pagination controls ────────────────────────────────────────── */
+.rdb-pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em 0;
+  font-size: 0.85em;
+  flex-wrap: wrap;
+}
+.rdb-page-btn {
+  padding: 0.15em 0.45em;
+  border: 1px solid #ccc;
+  background: #f5f5f5;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 1em;
+  line-height: 1.2;
+}
+.rdb-page-btn:hover:not(:disabled) { background: #e0e0e0; }
+.rdb-page-btn:disabled { opacity: 0.35; cursor: default; }
+.rdb-page-sep { color: #999; }
+.rdb-page-size { margin-left: auto; }
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .rdb-page-btn {
+    background: #23272d; border-color: #4a4f57; color: #d6d9dc;
+  }
+  html:not([data-theme="light"]) .rdb-page-btn:hover:not(:disabled) { background: #2a3038; }
+  html:not([data-theme="light"]) .rdb-page-sep { color: #6b7280; }
+}
+html[data-theme="dark"] .rdb-page-btn {
+  background: #23272d; border-color: #4a4f57; color: #d6d9dc;
+}
+html[data-theme="dark"] .rdb-page-btn:hover:not(:disabled) { background: #2a3038; }
+html[data-theme="dark"] .rdb-page-sep { color: #6b7280; }
 
 /* ── Chart container ───────────────────────────────────────────────────── */
 .rdb-chart-container { width: 100%; max-width: 600px; margin: 1em 0; }

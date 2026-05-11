@@ -17,4 +17,4 @@ Artifact Evaluation committee members across all tracked systems and security co
 
 ---
 
-**Data:** [All Conferences]({{ '/assets/data/ae_members.json' | relative_url }}) | [Systems]({{ '/assets/data/systems_ae_members.json' | relative_url }}) | [Security]({{ '/assets/data/security_ae_members.json' | relative_url }})
+{% include data_footer.html %}

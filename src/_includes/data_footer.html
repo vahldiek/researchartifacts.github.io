@@ -1,0 +1,73 @@
+{% comment %}
+  Auto-generated "Data files" footer.
+
+  Usage:
+    {% include data_footer.html %}
+      — auto-detects fetched .json URLs via fetch() hook (for Alpine/JS pages)
+
+    {% include data_footer.html files="artifacts.json,systems_combined_rankings.json" %}
+      — renders explicit list of files from /assets/data/ (for Jekyll-data pages)
+{% endcomment %}
+<hr>
+<div id="rdb-data-footer" style="margin-top:1em;font-size:0.9em;color:var(--rdb-muted,#666);">
+  <strong>Data:</strong>
+  {% if include.files %}
+  <span id="rdb-data-links">
+    {%- assign file_list = include.files | split: "," -%}
+    {%- for f in file_list -%}
+      {%- assign fname = f | strip -%}
+      {%- assign label = fname | replace: ".json", "" | replace: "_", " " | capitalize -%}
+      <a href="{{ '/assets/data/' | append: fname | relative_url }}">{{ label }}</a>
+      {%- unless forloop.last %} · {% endunless -%}
+    {%- endfor -%}
+  </span>
+  {% else %}
+  <span id="rdb-data-links"><em>loading…</em></span>
+  {% endif %}
+</div>
+{% unless include.files %}
+<script>
+(function() {
+  /* ── track every fetched .json URL ───────────────────────────── */
+  var seen = {};
+  var origFetch = window.fetch;
+  window.fetch = function(url) {
+    var s = (typeof url === 'string') ? url : (url && url.url ? url.url : '');
+    if (s && /\.json(\?|$)/i.test(s) && !seen[s]) {
+      seen[s] = true;
+      if (window.ReproDB && ReproDB._fetchedUrls && ReproDB._fetchedUrls.indexOf(s) === -1) {
+        ReproDB._fetchedUrls.push(s);
+      }
+    }
+    return origFetch.apply(this, arguments);
+  };
+
+  /* ── render links once page is idle ──────────────────────────── */
+  function render() {
+    var urls = (window.ReproDB && ReproDB._fetchedUrls) ? ReproDB._fetchedUrls.slice() : [];
+    /* also pick up any we caught via the fetch hook */
+    Object.keys(seen).forEach(function(u) {
+      if (urls.indexOf(u) === -1) urls.push(u);
+    });
+    if (!urls.length) {
+      document.getElementById('rdb-data-links').textContent = 'none';
+      return;
+    }
+    var html = urls.map(function(u) {
+      var name = u.split('/').pop().replace(/\.json.*$/, '').replace(/_/g, ' ');
+      /* title-case */
+      name = name.replace(/\b\w/g, function(c) { return c.toUpperCase(); });
+      return '<a href="' + u + '">' + name + '</a>';
+    }).join(' · ');
+    document.getElementById('rdb-data-links').innerHTML = html;
+  }
+
+  /* Wait for data fetches to finish, then render */
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() { setTimeout(render, 800); });
+  } else {
+    setTimeout(render, 800);
+  }
+})();
+</script>
+{% endunless %}

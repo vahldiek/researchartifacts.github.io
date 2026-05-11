@@ -18,7 +18,9 @@
   };
 
   /** Fetch JSON with consistent error handling. */
+  R._fetchedUrls = [];
   R.fetchJSON = function(url) {
+    if (R._fetchedUrls.indexOf(url) === -1) R._fetchedUrls.push(url);
     return fetch(url).then(function(r) {
       if (!r.ok) throw new Error('HTTP ' + r.status + ' for ' + url);
       return r.json();
@@ -255,19 +257,21 @@
   /* ─── Ranking helpers (used by ranking table formatters) ──────────── */
 
   R.assignDenseRanks = function(items, nameKey) {
+    // Pre-compute sort keys to avoid repeated toLowerCase in comparator
+    var n = items.length;
+    for (var k = 0; k < n; k++) {
+      items[k]._sortName = (items[k][nameKey] || '').toLowerCase();
+    }
     var sorted = items.slice();
     sorted.sort(function(a, b) {
       var av = a.combined_score || 0, bv = b.combined_score || 0;
-      if (av > bv) return -1;
-      if (av < bv) return 1;
-      var an = (a[nameKey] || '').toLowerCase();
-      var bn = (b[nameKey] || '').toLowerCase();
-      if (an < bn) return -1;
-      if (an > bn) return 1;
+      if (av !== bv) return bv - av;
+      if (a._sortName < b._sortName) return -1;
+      if (a._sortName > b._sortName) return 1;
       return 0;
     });
     var rank = 1;
-    for (var i = 0; i < sorted.length; i++) {
+    for (var i = 0; i < n; i++) {
       if (i > 0 && (sorted[i].combined_score || 0) < (sorted[i - 1].combined_score || 0)) rank++;
       sorted[i]._baseRank = rank;
     }
@@ -306,6 +310,473 @@
     };
     var merged = Object.assign({}, defaults, opts);
     return new Tabulator(el, merged);
+  };
+
+  /* ─── Shared ranking table mixin ─────────────────────────────────── */
+
+  /**
+   * Base methods shared by combined + institution ranking tables.
+   * Call R.rankingMixin(target) to mix into an Alpine component object.
+   *
+   * Manual pagination: we handle sorting, filtering and slicing in JS,
+   * and feed Tabulator only the current page (~50 rows) via replaceData().
+   * This keeps every operation O(pageSize) regardless of total dataset size.
+   *
+   * The target MUST define: _buildColumns(), _processData(), _matchesFilter(row)
+   * and should define _initTableHook(data) for table-specific init logic.
+   *
+   * Optional hooks:
+   *   _dataUrls        — { all, systems, security } URL map (REQUIRED)
+   *   _onDataLoaded(data, area) — transform fetched data before caching
+   */
+  R.rankingMixin = function(target) {
+    // Heavy data lives OUTSIDE Alpine's reactive proxy to avoid
+    // O(n) proxy-trap overhead on every property access.
+    var _store = {
+      dataCache: {},       // area → raw JSON array
+      rowCache: {},        // area → processed row array
+      filteredCache: null, // current filtered+sorted rows
+      allData: [],         // raw data for current area
+      prevSnapshot: null,  // history snapshot for rank-change
+      yearColumns: [],     // extracted year columns
+      columns: null,       // column definitions from _buildColumns
+      tbody: null          // <tbody> element for direct HTML rendering
+    };
+
+    var base = {
+      area: 'all',
+      areaSystems: true,
+      areaSecurity: true,
+      contribArtifacts: true,
+      contribAE: true,
+      contribFilter: 'both',
+      _searchTimer: null,
+      _tableReady: false,
+      _page: 1,
+      _pageSize: 50,
+      _sortCol: null,
+      _sortDir: 'desc',
+      totalPages: 1,
+      totalRows: 0,
+      loaded: false,
+      loadingMsg: 'Loading data…',
+
+      /* ── lifecycle ─────────────────────────────────────────────── */
+
+      boot: function() {
+        var self = this;
+        /* Apply ?area= URL parameter if present */
+        var params = new URLSearchParams(window.location.search);
+        var areaParam = params.get('area');
+        if (areaParam === 'systems') {
+          this.areaSystems = true;
+          this.areaSecurity = false;
+          this.area = 'systems';
+        } else if (areaParam === 'security') {
+          this.areaSystems = false;
+          this.areaSecurity = true;
+          this.area = 'security';
+        }
+        var contribParam = params.get('contrib');
+        if (contribParam === 'artifacts') {
+          this.contribArtifacts = true;
+          this.contribAE = false;
+          this.contribFilter = 'artifacts_only';
+        } else if (contribParam === 'ae') {
+          this.contribArtifacts = false;
+          this.contribAE = true;
+          this.contribFilter = 'ae_only';
+        }
+        var el = this.$refs.loading;
+        if ('IntersectionObserver' in window && el) {
+          var io = new IntersectionObserver(function(entries) {
+            for (var i = 0; i < entries.length; i++) {
+              if (entries[i].isIntersecting) { io.disconnect(); self._doLoad(); break; }
+            }
+          }, { rootMargin: '300px 0px' });
+          io.observe(el);
+        } else {
+          this._doLoad();
+        }
+      },
+
+      _doLoad: function() {
+        _store._alpineRef = this;
+        this.loadArea();
+        this._loadHistory();
+      },
+
+      onAreaChange: function() {
+        if (this.areaSystems && this.areaSecurity) this.area = 'all';
+        else if (this.areaSystems) this.area = 'systems';
+        else if (this.areaSecurity) this.area = 'security';
+        else this.area = 'all';
+        this.loadArea();
+      },
+
+      /* ── data loading ──────────────────────────────────────────── */
+
+      loadArea: function() {
+        var self = this;
+        if (_store.rowCache[this.area]) {
+          this._swapData(_store.rowCache[this.area]);
+          return;
+        }
+        if (_store.dataCache[this.area]) {
+          this._initTable(_store.dataCache[this.area]);
+          return;
+        }
+        if (!_store.tbody) {
+          this.loaded = false;
+          this.loadingMsg = 'Loading ' + this.area + ' ranking data\u2026';
+        }
+        R.fetchJSON(this._dataUrls[this.area])
+          .then(function(data) {
+            if (self._onDataLoaded) self._onDataLoaded(data, self.area);
+            _store.dataCache[self.area] = data;
+            self._initTable(data);
+            self._prefetchAreaFiles();
+          })
+          .catch(function(e) { self.loadingMsg = 'Failed to load data: ' + e; });
+      },
+
+      _prefetchAreaFiles: function() {
+        var self = this;
+        var areas = ['all', 'systems', 'security'];
+        areas.forEach(function(a) {
+          if (_store.dataCache[a]) return;
+          R.fetchJSON(self._dataUrls[a]).then(function(data) {
+            if (self._onDataLoaded) self._onDataLoaded(data, a);
+            _store.dataCache[a] = data;
+            self._prefetchOtherAreas();
+          });
+        });
+      },
+
+      _loadHistory: function() {
+        var url = this._historyUrl;
+        if (!url) return;
+        fetch(url).then(function(r) { return r.json(); }).catch(function() { return []; })
+          .then(function(h) {
+            if (h && h.length >= 2) {
+              _store.prevSnapshot = h[h.length - 2].entries;
+              // Re-render to pick up rank-change indicators
+              if (_store.tbody && _store.filteredCache) {
+                var self2 = _store._alpineRef;
+                if (self2 && self2._tableReady) self2._renderPage();
+              }
+            }
+          });
+      },
+
+      /* ── manual pagination helpers ────────────────────────────── */
+
+      /** Sort rows in place by _sortCol / _sortDir. */
+      _sortRows: function(rows) {
+        var col = this._sortCol || this._sortField || 'combined_score';
+        var dir = this._sortDir === 'asc' ? 1 : -1;
+        rows.sort(function(a, b) {
+          var va = a[col], vb = b[col];
+          if (va == null) return 1;
+          if (vb == null) return -1;
+          if (typeof va === 'string') return dir * va.localeCompare(vb);
+          return dir * (va - vb);
+        });
+      },
+
+      /** Slice _filteredCache for current page and render as HTML. */
+      _renderPage: function() {
+        var fc = _store.filteredCache;
+        this.totalRows = fc ? fc.length : 0;
+        this.totalPages = Math.max(1, Math.ceil(this.totalRows / this._pageSize));
+        if (this._page > this.totalPages) this._page = this.totalPages;
+        if (this._page < 1) this._page = 1;
+        var start = (this._page - 1) * this._pageSize;
+        var slice = fc ? fc.slice(start, start + this._pageSize) : [];
+        if (!_store.tbody || !this._tableReady) return;
+        var t0 = performance.now();
+        var cols = _store.columns;
+        var html = '';
+        for (var r = 0; r < slice.length; r++) {
+          var row = slice[r];
+          html += '<tr>';
+          for (var c = 0; c < cols.length; c++) {
+            var col = cols[c];
+            var val = row[col.field];
+            var content;
+            if (col.formatter) {
+              var proxy = {
+                getValue: function() { return val; },
+                getRow: function() { return { getData: function() { return row; } }; }
+              };
+              content = col.formatter(proxy);
+            } else {
+              content = val != null ? val : '';
+            }
+            html += '<td>' + content + '</td>';
+          }
+          html += '</tr>';
+        }
+        var t1 = performance.now();
+        _store.tbody.innerHTML = html;
+        var t2 = performance.now();
+        console.log('[ReproDB ' + this.area + '] _renderPage: build=' + (t1 - t0).toFixed(1) + 'ms DOM=' + (t2 - t1).toFixed(1) + 'ms (' + slice.length + ' rows, page ' + this._page + '/' + this.totalPages + ')');
+      },
+
+      goPage: function(p) {
+        p = parseInt(p) || 1;
+        p = Math.max(1, Math.min(p, this.totalPages));
+        if (p === this._page) return;
+        this._page = p;
+        this._renderPage();
+      },
+      nextPage: function() { this.goPage(this._page + 1); },
+      prevPage: function() { this.goPage(this._page - 1); },
+
+      setPageSize: function(size) {
+        this._pageSize = parseInt(size) || 50;
+        this._page = 1;
+        this._renderPage();
+      },
+
+      /* ── swap data (area switch) ───────────────────────────────── */
+
+      _swapData: function(rows) {
+        var t0 = performance.now();
+        this._filterRankAndCache(rows);
+        this._page = 1;
+        this._renderPage();
+        console.log('[ReproDB ' + this.area + '] _swapData: ' + (performance.now() - t0).toFixed(1) + 'ms (' + rows.length + ' rows, ' + _store.filteredCache.length + ' filtered)');
+      },
+
+      /* ── init table ────────────────────────────────────────────── */
+
+      _initTable: function(data) {
+        var t0 = performance.now();
+        if (this._initTableHook) this._initTableHook(data);
+
+        // Extract year columns
+        var yrs = {};
+        _store.allData.forEach(function(d) {
+          if (d.years) Object.keys(d.years).forEach(function(y) { yrs[y] = true; });
+        });
+        _store.yearColumns = Object.keys(yrs).map(function(y) { return parseInt(y) || y; })
+          .sort(function(a, b) { return b - a; });
+
+        var t1 = performance.now();
+        R.assignDenseRanks(_store.allData, this._rankKey || 'name');
+        var t2 = performance.now();
+
+        var rows = this._processData();
+        var t3 = performance.now();
+        _store.rowCache[this.area] = rows;
+
+        // Apply initial filter + sort + rank
+        this._filterRankAndCache(rows);
+
+        if (_store.tbody) {
+          // Table exists — just render page 1 with new filtered data
+          this._page = 1;
+          this._renderPage();
+        } else {
+          var cols = this._buildColumns();
+          _store.columns = cols;
+          var self = this;
+          var tableEl = this.$refs.tableWrap.querySelector('[data-table]');
+
+          // Build a plain HTML <table> — no Tabulator overhead.
+          var headerHtml = '<table class="rdb-table"><thead><tr>';
+          for (var ci = 0; ci < cols.length; ci++) {
+            var col = cols[ci];
+            var style = '';
+            if (col.width) style = 'width:' + col.width + 'px;min-width:' + col.width + 'px;max-width:' + col.width + 'px;';
+            else if (col.minWidth) style = 'min-width:' + col.minWidth + 'px;';
+            var tip = col.tooltip ? ' title="' + col.tooltip.replace(/"/g, '&quot;') + '"' : '';
+            headerHtml += '<th data-field="' + (col.field || '') + '"' + tip
+              + ' style="' + style + '" class="rdb-sortable">' + col.title + '</th>';
+          }
+          headerHtml += '</tr></thead><tbody></tbody></table>';
+          tableEl.innerHTML = headerHtml;
+          _store.tbody = tableEl.querySelector('tbody');
+
+          // Header click → manual sort
+          var ths = tableEl.querySelectorAll('th[data-field]');
+          for (var hi = 0; hi < ths.length; hi++) {
+            ths[hi].addEventListener('click', function() {
+              var field = this.getAttribute('data-field');
+              if (!field) return;
+              if (field === self._sortCol) {
+                self._sortDir = self._sortDir === 'desc' ? 'asc' : 'desc';
+              } else {
+                self._sortCol = field;
+                self._sortDir = 'desc';
+              }
+              self._sortRows(_store.filteredCache);
+              self._page = 1;
+              self._renderPage();
+            });
+          }
+
+          self._tableReady = true;
+          self._renderPage();
+        }
+        var t4 = performance.now();
+        this.loaded = true;
+
+        console.log('[ReproDB ' + this.area + '] _initTable: prep=' + (t1 - t0).toFixed(1) + 'ms rank=' + (t2 - t1).toFixed(1) + 'ms process=' + (t3 - t2).toFixed(1) + 'ms DOM=' + (t4 - t3).toFixed(1) + 'ms total=' + (t4 - t0).toFixed(1) + 'ms (' + rows.length + ' rows)');
+
+        this._prefetchOtherAreas();
+      },
+
+      /**
+       * Pre-process remaining areas during idle time so switching
+       * hits the _rowCache fast path immediately.
+       */
+      _prefetchOtherAreas: function() {
+        var self = this;
+        var areas = ['all', 'systems', 'security'];
+        var pending = areas.filter(function(a) { return !_store.rowCache[a] && _store.dataCache[a]; });
+        if (!pending.length) return;
+
+        var schedule = window.requestIdleCallback || function(cb) { setTimeout(cb, 50); };
+        var idx = 0;
+        function processNext() {
+          if (idx >= pending.length) return;
+          var area = pending[idx++];
+          var savedArea = self.area;
+          var savedAllData = _store.allData;
+          var savedYears = _store.yearColumns;
+          self.area = area;
+          if (self._initTableHook) self._initTableHook(_store.dataCache[area]);
+          var yrs = {};
+          _store.allData.forEach(function(d) {
+            if (d.years) Object.keys(d.years).forEach(function(y) { yrs[y] = true; });
+          });
+          _store.yearColumns = Object.keys(yrs).map(function(y) { return parseInt(y) || y; })
+            .sort(function(a, b) { return b - a; });
+          R.assignDenseRanks(_store.allData, self._rankKey || 'name');
+          _store.rowCache[area] = self._processData();
+          self.area = savedArea;
+          _store.allData = savedAllData;
+          _store.yearColumns = savedYears;
+          schedule(processNext);
+        }
+        schedule(processNext);
+      },
+
+      /* ── filtering ─────────────────────────────────────────────── */
+
+      /**
+       * Filter rows through _matchesFilter.
+       */
+      _applyFilterToRows: function(rows) {
+        var self = this;
+        return rows.filter(function(d) { return self._matchesFilter(d); });
+      },
+
+      /**
+       * Re-assign dense ranks based on the active score field.
+       * Operates on the provided array of rows (mutates _rank in place).
+       */
+      _assignViewRanks: function(rows) {
+        if (!rows || !rows.length) return;
+        var scoreField = this._sortCol || this._sortField || 'combined_score';
+        // Sort a copy by score desc + name asc for ranking
+        var ranked = rows.slice().sort(function(a, b) {
+          var av = a[scoreField] || 0, bv = b[scoreField] || 0;
+          if (av !== bv) return bv - av;
+          var an = a._nameLower || a._affLower || '', bn = b._nameLower || b._affLower || '';
+          return an < bn ? -1 : an > bn ? 1 : 0;
+        });
+        var rank = 1;
+        for (var i = 0; i < ranked.length; i++) {
+          if (i > 0 && (ranked[i][scoreField] || 0) < (ranked[i - 1][scoreField] || 0)) rank++;
+          ranked[i]._rank = rank;
+        }
+      },
+
+      /**
+       * Two-phase filter: rank on structural filters, then narrow by search.
+       * Sets _store.filteredCache and sorts it.
+       */
+      _filterRankAndCache: function(rows) {
+        // Phase 1: structural filters (everything except search) → rank
+        var savedSearch = this.$refs.searchInput ? this.$refs.searchInput.value : '';
+        if (this.$refs.searchInput) this.$refs.searchInput.value = '';
+        var structural = this._applyFilterToRows(rows);
+        if (this.$refs.searchInput) this.$refs.searchInput.value = savedSearch;
+        this._assignViewRanks(structural);
+
+        // Phase 2: narrow by search (ranks already set on row objects)
+        var searchVal = savedSearch.trim().toLowerCase();
+        if (searchVal) {
+          _store.filteredCache = structural.filter(function(d) {
+            return (d._nameLower && d._nameLower.indexOf(searchVal) >= 0) ||
+                   (d._displayNameLower && d._displayNameLower.indexOf(searchVal) >= 0) ||
+                   (d._affLower && d._affLower.indexOf(searchVal) >= 0) ||
+                   (d._countryLower && d._countryLower.indexOf(searchVal) >= 0);
+          });
+        } else {
+          _store.filteredCache = structural;
+        }
+        this._sortRows(_store.filteredCache);
+      },
+
+      /**
+       * Called when filters change — re-filter cached rows and refresh.
+       */
+      applyFilters: function() {
+        var rows = _store.rowCache[this.area];
+        if (!rows || !this._tableReady) return;
+        this._filterRankAndCache(rows);
+        this._page = 1;
+        this._renderPage();
+      },
+
+      /* ── contribution filter ───────────────────────────────────── */
+
+      onContribChange: function() {
+        if (this.contribArtifacts && this.contribAE) this.contribFilter = 'both';
+        else if (this.contribArtifacts) this.contribFilter = 'artifacts_only';
+        else if (this.contribAE) this.contribFilter = 'ae_only';
+        else this.contribFilter = 'both';
+        var sortField = this.contribFilter === 'artifacts_only' ? 'artifact_score' :
+                        this.contribFilter === 'ae_only' ? 'ae_score' : 'combined_score';
+        this._sortCol = sortField;
+        this._sortDir = 'desc';
+        this.applyFilters();
+      },
+
+      /* ── search ────────────────────────────────────────────────── */
+
+      onSearchInput: function() {
+        var self = this;
+        clearTimeout(this._searchTimer);
+        this._searchTimer = setTimeout(function() { self.applyFilters(); }, R.DEBOUNCE_MS);
+      }
+    };
+
+    // Mix base into target (target overrides take precedence)
+    for (var key in base) {
+      if (base.hasOwnProperty(key) && !target.hasOwnProperty(key)) {
+        target[key] = base[key];
+      }
+    }
+
+    // Install getter/setter proxies that redirect heavy data
+    // properties to the non-reactive _store closure.  Alpine's
+    // Object.assign doesn't copy accessor descriptors, but Alpine 3
+    // respects defineProperty on the data object returned from x-data.
+    var storeProps = {
+      allData:      { get: function() { return _store.allData; },      set: function(v) { _store.allData = v; },      enumerable: true, configurable: true },
+      yearColumns:  { get: function() { return _store.yearColumns; },  set: function(v) { _store.yearColumns = v; },  enumerable: true, configurable: true },
+      prevSnapshot: { get: function() { return _store.prevSnapshot; }, set: function(v) { _store.prevSnapshot = v; }, enumerable: true, configurable: true },
+      _dataCache:   { get: function() { return _store.dataCache; },    enumerable: true, configurable: true },
+      _rowCache:    { get: function() { return _store.rowCache; },     enumerable: true, configurable: true }
+    };
+    Object.defineProperties(target, storeProps);
+
+    return target;
   };
 
   /**
