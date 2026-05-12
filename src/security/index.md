@@ -67,9 +67,13 @@ Artifact evaluation statistics for security conferences ({{ site.data.summary.se
 <div id="secConfChart" style="height:300px"></div>
 </div>
 
-<div class="rdb-chart-wide rdb-chart-wrap--xl">
+<div class="rdb-chart-wide rdb-chart-wrap--lg">
 <div id="secConfHeatmap" style="width:100%;height:100%"></div>
 </div>
+
+## Conference Overview
+
+{% include conference_overview_table.html category="security" %}
 
 {% else %}
 
@@ -185,4 +189,4 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 {% endif %}
 
-{% include data_footer.html files="artifacts.json,security_combined_rankings.json,security_top_repos.json" %}
+{% include data_footer.html files="artifacts.json,security_combined_rankings.json,security_top_repos.json,participation_stats.json" %}

@@ -1,0 +1,153 @@
+{% comment %}
+  Per-conference overview table showing AE participation, badge rates, and repo stats.
+
+  Required include params:
+    category — "systems" or "security"
+{% endcomment %}
+
+{% assign _cot_cat = include.category %}
+{% capture _cot_id %}conf-overview-{{ _cot_cat }}{% endcapture %}
+
+<div id="{{ _cot_id }}"></div>
+
+<script>
+(function() {
+  /* ── Participation data per conference-year ── */
+  var partData = [
+  {% for entry in site.data.participation_stats.by_conference_year %}
+    {% if entry.category == _cot_cat %}
+    { conf: {{ entry.conference | jsonify }}, year: {{ entry.year }}, total_papers: {{ entry.total_papers }}, ae_papers: {{ entry.ae_papers }}, available: {{ entry.available | default: 0 }}, reproduced: {{ entry.reproduced | default: 0 }} },
+    {% endif %}
+  {% endfor %}
+  ];
+
+  /* ── Repo stats per conference ── */
+  var repoByConf = {};
+  {% for item in site.data.repo_stats.by_conference %}
+    {% assign _match = false %}
+    {% for conf in site.data.artifacts_by_conference %}
+      {% if conf.name == item.name and conf.category == _cot_cat %}
+        {% assign _match = true %}
+      {% endif %}
+    {% endfor %}
+    {% if _match %}
+    repoByConf[{{ item.name | jsonify }}] = { github_repos: {{ item.github_repos | default: 0 }}, median_stars: {{ item.median_stars | default: 0 }}, median_forks: {{ item.median_forks | default: 0 }} };
+    {% endif %}
+  {% endfor %}
+
+  /* ── Artifact counts per conference (covers conferences without participation data) ── */
+  var artifactByConf = {};
+  {% for conf in site.data.artifacts_by_conference %}
+    {% if conf.category == _cot_cat %}
+    artifactByConf[{{ conf.name | jsonify }}] = { total: {{ conf.total_artifacts | default: 0 }}, byYear: { {% for yd in conf.years %}{{ yd.year }}: {{ yd.total }}{% unless forloop.last %}, {% endunless %}{% endfor %} }, years: [{% for yd in conf.years %}{{ yd.year }}{% unless forloop.last %},{% endunless %}{% endfor %}] };
+    {% endif %}
+  {% endfor %}
+
+  /* ── Discover conference pages (catches pages with no data yet) ── */
+  {% assign _area_prefix = "/" | append: _cot_cat | append: "/" %}
+  {% for pg in site.pages %}
+    {% if pg.conf_name and pg.permalink contains _area_prefix %}
+  if (!artifactByConf[{{ pg.conf_name | jsonify }}]) artifactByConf[{{ pg.conf_name | jsonify }}] = { total: 0, byYear: {}, years: [] };
+    {% endif %}
+  {% endfor %}
+
+  /* ── Aggregate by conference ── */
+  var confMap = {};
+
+  /* Seed from artifacts_by_conference so every conference appears */
+  Object.keys(artifactByConf).forEach(function(name) {
+    confMap[name] = { years: artifactByConf[name].years.slice(), total_papers: 0, ae_papers: artifactByConf[name].total, available: 0, reproduced: 0 };
+  });
+
+  /* Override with participation stats where available */
+  partData.forEach(function(e) {
+    if (!confMap[e.conf]) confMap[e.conf] = { years: [], total_papers: 0, ae_papers: 0, available: 0, reproduced: 0 };
+    var c = confMap[e.conf];
+    /* Replace seed years with participation years on first entry */
+    if (!c._seenPart) { c.years = []; c.ae_papers = 0; c._seenPart = true; }
+    c.years.push(e.year);
+    c.total_papers += e.total_papers;
+    c.ae_papers += e.ae_papers;
+    c.available += e.available;
+    c.reproduced += e.reproduced;
+    /* Store last year's data for "Last" columns */
+    c.last_total_papers = e.total_papers;
+    c.last_ae_papers = e.ae_papers;
+    c.last_available = e.available;
+    c.last_reproduced = e.reproduced;
+  });
+
+  function pct(num, denom) { return denom > 0 ? Math.round(num / denom * 1000) / 10 : 0; }
+
+  var rows = [];
+  Object.keys(confMap).sort().forEach(function(conf) {
+    var c = confMap[conf];
+    var yrs = c.years.slice().sort();
+    var repo = repoByConf[conf] || {};
+    var art = artifactByConf[conf] || {};
+    /* When participation data exists, only count artifacts for those years */
+    var artCount;
+    if (c._seenPart && art.byYear) {
+      artCount = 0;
+      c.years.forEach(function(y) { artCount += (art.byYear[y] || 0); });
+    } else {
+      artCount = art.total || c.ae_papers;
+    }
+    rows.push({
+      name: conf,
+      year_range: yrs[0] + '–' + yrs[yrs.length-1],
+      num_years: yrs.length,
+      total_artifacts: artCount,
+      total_papers: c.total_papers,
+      ae_papers: c.ae_papers,
+      participation_pct: pct(c.ae_papers, c.total_papers),
+      last_participation_pct: pct(c.last_ae_papers, c.last_total_papers),
+      available_pct: pct(c.available, c.total_papers),
+      last_available_pct: pct(c.last_available, c.last_total_papers),
+      reproduced_pct: pct(c.reproduced, c.total_papers),
+      last_reproduced_pct: pct(c.last_reproduced, c.last_total_papers),
+      github_repos: repo.github_repos || 0,
+      median_stars: repo.median_stars || 0,
+      median_forks: repo.median_forks || 0
+    });
+  });
+
+  function pctFormatter(cell) {
+    var v = cell.getValue();
+    return v > 0 ? v.toFixed(1) + '%' : '—';
+  }
+
+  function nameFormatter(cell) {
+    var v = cell.getValue();
+    var slug = v.toLowerCase();
+    return '<a href="' + ReproDB.escHtml('/' + {{ _cot_cat | jsonify }} + '/' + slug + '.html') + '"><strong>' + ReproDB.escHtml(v) + '</strong></a>';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    ReproDB.createTable('#{{ _cot_id }}', {
+      layout: 'fitColumns',
+      columns: [
+        { title: 'Conf.', field: 'name', sorter: 'string', minWidth: 70, widthGrow: 1.2, formatter: nameFormatter, headerTooltip: 'Conference name (click to visit conference page)' },
+        { title: 'Years', field: 'year_range', sorter: 'string', minWidth: 75, widthGrow: 1, hozAlign: 'center', headerTooltip: 'Year range covered by the AE participation data' },
+        { title: '#Papers', field: 'total_papers', sorter: 'number', minWidth: 50, widthGrow: 0.8, hozAlign: 'right', headerTooltip: 'Sum of accepted papers across all covered years' },
+        { title: '#Artif.', field: 'total_artifacts', sorter: 'number', minWidth: 50, widthGrow: 0.8, hozAlign: 'right', headerTooltip: 'Sum of evaluated artifacts across all covered years' },
+        { title: 'Part.%', field: 'participation_pct', sorter: 'number', minWidth: 55, widthGrow: 1, hozAlign: 'right', formatter: pctFormatter, headerTooltip: 'Participation rate = #Artif. / #Papers across all covered years' },
+        { title: 'Last Part.%', field: 'last_participation_pct', sorter: 'number', minWidth: 70, widthGrow: 1, hozAlign: 'right', formatter: pctFormatter, headerTooltip: 'Participation rate in the last available year' },
+        { title: 'Avail.%', field: 'available_pct', sorter: 'number', minWidth: 55, widthGrow: 1, hozAlign: 'right', formatter: pctFormatter, headerTooltip: 'Available rate = artifacts with "available" badge / #Papers across all covered years' },
+        { title: 'Last Avail.%', field: 'last_available_pct', sorter: 'number', minWidth: 70, widthGrow: 1, hozAlign: 'right', formatter: pctFormatter, headerTooltip: 'Available rate in the last available year' },
+        { title: 'Repro.%', field: 'reproduced_pct', sorter: 'number', minWidth: 55, widthGrow: 1, hozAlign: 'right', formatter: pctFormatter, headerTooltip: 'Reproduced rate = artifacts with "reproduced" badge / #Papers across all covered years' },
+        { title: 'Last Repro.%', field: 'last_reproduced_pct', sorter: 'number', minWidth: 75, widthGrow: 1, hozAlign: 'right', formatter: pctFormatter, headerTooltip: 'Reproduced rate in the last available year' },
+        { title: 'Repos', field: 'github_repos', sorter: 'number', minWidth: 45, widthGrow: 0.7, hozAlign: 'right', headerTooltip: 'Number of GitHub repositories linked to this conference\'s artifacts' },
+        { title: 'Med ★', field: 'median_stars', sorter: 'number', minWidth: 45, widthGrow: 0.7, hozAlign: 'right', headerTooltip: 'Median GitHub stars across this conference\'s repositories' },
+        { title: 'Med F', field: 'median_forks', sorter: 'number', minWidth: 45, widthGrow: 0.7, hozAlign: 'right', headerTooltip: 'Median GitHub forks across this conference\'s repositories' }
+      ],
+      data: rows,
+      pagination: false,
+      initialSort: [{ column: 'name', dir: 'asc' }]
+    });
+  });
+})();
+</script>
+<p class="text-muted" style="font-size:0.85em; margin-top:0.3em;">
+  <em>#Papers and #Artif. are scoped to years with AE participation data. Totals may differ from individual conference pages, which include all years.</em>
+</p>

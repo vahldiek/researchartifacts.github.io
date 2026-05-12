@@ -67,9 +67,13 @@ Artifact evaluation statistics for systems conferences ({{ site.data.summary.sys
 <div id="sysConfChart" style="height:300px"></div>
 </div>
 
-<div class="rdb-chart-wide rdb-chart-wrap--xl">
+<div class="rdb-chart-wide rdb-chart-wrap--lg">
 <div id="sysConfHeatmap" style="width:100%;height:100%"></div>
 </div>
+
+## Conference Overview
+
+{% include conference_overview_table.html category="systems" %}
 
 {% else %}
 
@@ -185,4 +189,4 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 {% endif %}
 
-{% include data_footer.html files="artifacts.json,systems_combined_rankings.json,systems_top_repos.json" %}
+{% include data_footer.html files="artifacts.json,systems_combined_rankings.json,systems_top_repos.json,participation_stats.json" %}
