@@ -11,6 +11,9 @@
   var t = localStorage.getItem('reprodb-theme');
   if (t === 'dark' || t === 'light') {
     document.documentElement.setAttribute('data-theme', t);
+  } else {
+    document.documentElement.setAttribute('data-theme',
+      window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   }
 })();
 </script>

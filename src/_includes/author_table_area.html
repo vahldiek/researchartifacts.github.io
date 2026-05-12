@@ -138,7 +138,7 @@
 
     document.getElementById('authorLoading').classList.add('rdb-hidden');
     var tbl = ReproDB.createTable('#authorTable', {
-      columns: cols, data: rawData, paginationSize: 10,
+      columns: cols, data: rawData,
       initialSort: [{ column: 'combined_score', dir: 'desc' }]
     });
     wireSearch('authorSearch', tbl, ['_display', 'affiliation']);
@@ -189,7 +189,7 @@
 
     document.getElementById('instLoading').classList.add('rdb-hidden');
     var tbl = ReproDB.createTable('#instTable', {
-      columns: cols, data: rawData, paginationSize: 10,
+      columns: cols, data: rawData,
       initialSort: [{ column: 'combined_score', dir: 'desc' }]
     });
     wireSearch('instSearch', tbl, ['affiliation']);

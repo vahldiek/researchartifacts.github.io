@@ -258,7 +258,7 @@ document.addEventListener('DOMContentLoaded', function() {
     rawData.forEach(function(d, i) { d._rank = i + 1; });
 
     var tbl = ReproDB.createTable(ctx.$refs.tableEl, {
-      columns: cols, data: rawData, paginationSize: 10,
+      columns: cols, data: rawData,
       initialSort: [{ column: 'combined_score', dir: 'desc' }]
     });
     wireSearch(ctx.$refs.searchInput, tbl, ['_display', 'affiliation']);
@@ -321,7 +321,7 @@ document.addEventListener('DOMContentLoaded', function() {
     rawData.forEach(function(d, i) { d._rank = i + 1; });
 
     var tbl = ReproDB.createTable(ctx.$refs.tableEl, {
-      columns: cols, data: rawData, paginationSize: 10,
+      columns: cols, data: rawData,
       initialSort: [{ column: 'combined_score', dir: 'desc' }]
     });
     wireSearch(ctx.$refs.searchInput, tbl, ['affiliation']);
@@ -384,7 +384,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { title: 'First', field: 'first_year', sorter: 'number', tooltip: 'First year' },
         { title: 'Last', field: 'last_year', sorter: 'number', tooltip: 'Last year' }
       ],
-      data: filtered, paginationSize: 10,
+      data: filtered,
       initialSort: [{ column: 'terms', dir: 'desc' }]
     });
     wireSearch(ctx.$refs.searchInput, tbl, ['_display', 'affiliation']);
@@ -465,7 +465,7 @@ document.addEventListener('DOMContentLoaded', function() {
   /* ── Init top repos table after Tabulator loads (deferred) ──────── */
   document.addEventListener('DOMContentLoaded', function() {
     initTopRepos();
-    dataPromise.then(function(r) { enrichTopRepos(r[3]); });
+    dataPromise.then(function(r) { enrichTopRepos(r[3]); }).catch(function(e) { console.error('Failed to enrich top repos:', e); });
   });
 
   /* ── Alpine.js component factory for each section ──────────────── */

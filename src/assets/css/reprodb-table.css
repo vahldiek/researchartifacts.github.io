@@ -111,79 +111,9 @@
 }
 
 /* ── Dark-mode overrides ────────────────────────────────────────────────── */
+/* data-theme is always set by the FOUC-prevention script in head/custom.html,
+   so html[data-theme="dark"] is the single dark-mode selector.              */
 /* Tabulator tables */
-@media (prefers-color-scheme: dark) {
-  html:not([data-theme="light"]) .tabulator {
-    background-color: #1e2127; color: #d6d9dc; border-color: #4a4f57;
-  }
-  html:not([data-theme="light"]) .tabulator .tabulator-header {
-    background-color: #23272d; color: #d6d9dc; border-color: #4a4f57;
-  }
-  html:not([data-theme="light"]) .tabulator .tabulator-header .tabulator-col {
-    background-color: #23272d; border-color: #4a4f57;
-  }
-  html:not([data-theme="light"]) .tabulator .tabulator-header .tabulator-col .tabulator-col-content .tabulator-col-title {
-    color: #d6d9dc;
-  }
-  html:not([data-theme="light"]) .tabulator .tabulator-header .tabulator-col.tabulator-sortable .tabulator-col-title {
-    color: #d6d9dc;
-  }
-  html:not([data-theme="light"]) .tabulator .tabulator-header .tabulator-col .tabulator-col-content .tabulator-arrow {
-    border-bottom-color: #d6d9dc;
-  }
-  html:not([data-theme="light"]) .tabulator .tabulator-tableholder .tabulator-table .tabulator-row {
-    background-color: #1e2127; color: #d6d9dc; border-color: #4a4f57;
-  }
-  html:not([data-theme="light"]) .tabulator .tabulator-tableholder .tabulator-table .tabulator-row:nth-child(even) {
-    background-color: #23272d;
-  }
-  html:not([data-theme="light"]) .tabulator .tabulator-tableholder .tabulator-table .tabulator-row:hover {
-    background-color: #2a3038;
-  }
-  html:not([data-theme="light"]) .tabulator-row.tabulator-selectable:hover {
-    background-color: #2a3038;
-  }
-  html:not([data-theme="light"]) .tabulator-row.tabulator-selected {
-    background-color: #2a3a4a;
-  }
-  html:not([data-theme="light"]) .tabulator-row.tabulator-selected:hover {
-    background-color: #30404f;
-  }
-  html:not([data-theme="light"]) .tabulator-row .tabulator-cell.tabulator-range-selected:not(.tabulator-range-only-cell-selected) {
-    background-color: #2a3a4a;
-  }
-  html:not([data-theme="light"]) .tabulator .tabulator-tableholder .tabulator-table .tabulator-row .tabulator-cell {
-    border-color: #4a4f57;
-  }
-  html:not([data-theme="light"]) .tabulator .tabulator-footer {
-    background-color: #23272d; color: #d6d9dc; border-color: #4a4f57;
-  }
-  html:not([data-theme="light"]) .tabulator .tabulator-footer .tabulator-page {
-    color: #d6d9dc; border-color: #4a4f57; background-color: #1e2127;
-  }
-  html:not([data-theme="light"]) .tabulator .tabulator-footer .tabulator-page.active {
-    background-color: #2563eb; color: #fff; border-color: #2563eb;
-  }
-  html:not([data-theme="light"]) .tabulator .tabulator-footer .tabulator-page:hover:not(.active):not(.disabled) {
-    background-color: #2a3038;
-  }
-  /* Kramdown markdown tables */
-  html:not([data-theme="light"]) .page__content table:not(.rdb-table) th {
-    background-color: #23272d; color: #d6d9dc; border-color: #4a4f57;
-  }
-  html:not([data-theme="light"]) .page__content table:not(.rdb-table) td {
-    border-color: #4a4f57; color: #d6d9dc;
-  }
-  html:not([data-theme="light"]) .page__content table:not(.rdb-table) tr:nth-child(even) {
-    background-color: #23272d;
-  }
-  html:not([data-theme="light"]) .page__content table:not(.rdb-table) tr:hover {
-    background-color: #2a3038;
-  }
-  html:not([data-theme="light"]) .rdb-table--centered {
-    background-color: #1e2127; border-color: #4a4f57;
-  }
-}
 html[data-theme="dark"] .tabulator {
   background-color: #1e2127; color: #d6d9dc; border-color: #4a4f57;
 }
@@ -304,28 +234,6 @@ html[data-theme="dark"] .rdb-table--centered {
 .rdb-table a:hover { text-decoration: underline; }
 
 /* Dark mode for .rdb-table — matches Tabulator dark overrides exactly */
-@media (prefers-color-scheme: dark) {
-  html:not([data-theme="light"]) .rdb-table {
-    background-color: #1e2127; color: #d6d9dc; border-color: #4a4f57;
-  }
-  html:not([data-theme="light"]) .rdb-table th {
-    background-color: #23272d; color: #d6d9dc; border-color: #4a4f57;
-  }
-  html:not([data-theme="light"]) .rdb-table th:hover { background-color: #2a3038; }
-  html:not([data-theme="light"]) .rdb-table td {
-    border-color: #4a4f57; color: #d6d9dc;
-  }
-  html:not([data-theme="light"]) .rdb-table tbody tr {
-    background-color: #1e2127; color: #d6d9dc; border-color: #4a4f57;
-  }
-  html:not([data-theme="light"]) .rdb-table tbody tr:nth-child(even) {
-    background-color: #23272d;
-  }
-  html:not([data-theme="light"]) .rdb-table tbody tr:hover {
-    background-color: #2a3038;
-  }
-  html:not([data-theme="light"]) .rdb-table a { color: #60a5fa; }
-}
 html[data-theme="dark"] .rdb-table {
   background-color: #1e2127; color: #d6d9dc; border-color: #4a4f57;
 }
@@ -370,13 +278,6 @@ html[data-theme="dark"] .rdb-table a { color: #60a5fa; }
 .rdb-page-sep { color: #999; }
 .rdb-page-size { margin-left: auto; }
 /* Dark mode */
-@media (prefers-color-scheme: dark) {
-  html:not([data-theme="light"]) .rdb-page-btn {
-    background: #23272d; border-color: #4a4f57; color: #d6d9dc;
-  }
-  html:not([data-theme="light"]) .rdb-page-btn:hover:not(:disabled) { background: #2a3038; }
-  html:not([data-theme="light"]) .rdb-page-sep { color: #6b7280; }
-}
 html[data-theme="dark"] .rdb-page-btn {
   background: #23272d; border-color: #4a4f57; color: #d6d9dc;
 }

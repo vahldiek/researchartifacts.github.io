@@ -70,7 +70,7 @@ var ReproDBProfile = (function() {
     function flashCopied() {
       if (!shareBtn) return;
       shareBtn.classList.add('copied');
-      setTimeout(function() { shareBtn.classList.remove('copied'); }, 1500);
+      setTimeout(function() { shareBtn.classList.remove('copied'); }, ReproDB.COPIED_FLASH_MS);
     }
 
     function showResults(matches) {

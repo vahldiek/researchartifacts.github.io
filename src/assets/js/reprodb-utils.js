@@ -17,14 +17,26 @@
     return d.innerHTML;
   };
 
+  /** Duration (ms) for "Copied!" flash feedback. */
+  R.COPIED_FLASH_MS = 1500;
+
+  /** Default rows per page for Tabulator and ranking tables. */
+  R.DEFAULT_PAGE_SIZE = 50;
+
+  /** Page-size selector options shown in table footers. */
+  R.PAGE_SIZE_OPTIONS = [10, 25, 50, 100];
+
   /** Fetch JSON with consistent error handling. */
   R._fetchedUrls = [];
+  R._pendingFetches = [];
   R.fetchJSON = function(url) {
     if (R._fetchedUrls.indexOf(url) === -1) R._fetchedUrls.push(url);
-    return fetch(url).then(function(r) {
+    var p = fetch(url).then(function(r) {
       if (!r.ok) throw new Error('HTTP ' + r.status + ' for ' + url);
       return r.json();
     });
+    R._pendingFetches.push(p);
+    return p;
   };
 
   /* ─── Dark-mode theme helpers ─────────────────────────────────────── */
@@ -298,17 +310,33 @@
     if (typeof Tabulator === 'undefined') {
       throw new Error('Tabulator not loaded yet — ensure createTable is called after DOMContentLoaded');
     }
+    /* Auto-size pagination: only show selector options ≤ data length,
+       and default to the largest option that fits. */
+    var dataLen = (opts.data || []).length;
+    var sizeOpts = dataLen > 0
+      ? R.PAGE_SIZE_OPTIONS.filter(function(s) { return s <= dataLen; })
+      : R.PAGE_SIZE_OPTIONS.slice();
+    if (sizeOpts.length === 0) sizeOpts = [R.PAGE_SIZE_OPTIONS[0]];
+    var effectiveSize = sizeOpts.indexOf(R.DEFAULT_PAGE_SIZE) >= 0
+      ? R.DEFAULT_PAGE_SIZE
+      : sizeOpts[sizeOpts.length - 1];
     var defaults = {
       layout: 'fitColumns',
       pagination: true,
-      paginationSize: opts.paginationSize || 50,
-      paginationSizeSelector: [10, 25, 50, 100],
+      paginationSize: effectiveSize,
+      paginationSizeSelector: sizeOpts,
       paginationCounter: 'rows',
       movableColumns: false,
       placeholder: 'No data available',
       headerSortClickElement: 'header'
     };
     var merged = Object.assign({}, defaults, opts);
+    /* Remove caller's paginationSize — use the computed one unless
+       pagination is explicitly disabled. */
+    if (!opts.paginationSize) {
+      merged.paginationSize = effectiveSize;
+      merged.paginationSizeSelector = sizeOpts;
+    }
     return new Tabulator(el, merged);
   };
 
@@ -353,7 +381,7 @@
       _searchTimer: null,
       _tableReady: false,
       _page: 1,
-      _pageSize: 50,
+      _pageSize: R.DEFAULT_PAGE_SIZE,
       _sortCol: null,
       _sortDir: 'desc',
       totalPages: 1,
@@ -449,7 +477,7 @@
             if (self._onDataLoaded) self._onDataLoaded(data, a);
             _store.dataCache[a] = data;
             self._prefetchOtherAreas();
-          });
+          }).catch(function(e) { console.error('Prefetch failed for ' + a + ':', e); });
         });
       },
 
@@ -511,7 +539,7 @@
               };
               content = col.formatter(proxy);
             } else {
-              content = val != null ? val : '';
+              content = val != null ? R.escHtml(String(val)) : '';
             }
             html += '<td>' + content + '</td>';
           }
@@ -534,7 +562,7 @@
       prevPage: function() { this.goPage(this._page - 1); },
 
       setPageSize: function(size) {
-        this._pageSize = parseInt(size) || 50;
+        this._pageSize = parseInt(size) || R.DEFAULT_PAGE_SIZE;
         this._page = 1;
         this._renderPage();
       },

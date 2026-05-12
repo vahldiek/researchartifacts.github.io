@@ -28,6 +28,8 @@
       renderAll(stats, aeMembers, AREA);
     }).catch(function(err) {
       console.error('Failed to load committee data:', err);
+      var el = document.getElementById('committeeGrowthChart');
+      if (el) el.innerHTML = '<em class="rdb-error">Failed to load committee data.</em>';
     });
   });
 

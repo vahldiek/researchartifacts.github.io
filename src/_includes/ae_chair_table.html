@@ -99,7 +99,7 @@
 
     document.getElementById('chairLoading').classList.add('rdb-hidden');
     var tbl = ReproDB.createTable('#chairTable', {
-      columns: cols, data: data, paginationSize: 50,
+      columns: cols, data: data,
       initialSort: [{ column: 'chair_count', dir: 'desc' }]
     });
     wireSearch('chairSearch', tbl);

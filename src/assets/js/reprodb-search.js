@@ -9,7 +9,7 @@
   var allData = [];
   var filtered = [];
   var currentPage = 1;
-  var pageSize = 25;
+  var pageSize = ReproDB.DEFAULT_PAGE_SIZE;
   var sortField = 'year';
   var sortAsc = false;
   var urlAccessible = {};  // url -> boolean
@@ -313,7 +313,7 @@
       navigator.clipboard.writeText(url).then(function() {
         var btn = document.getElementById('shareBtn');
         btn.textContent = '✓ Copied!';
-        setTimeout(function() { btn.textContent = '🔗 Share'; }, 1500);
+        setTimeout(function() { btn.textContent = '🔗 Share'; }, ReproDB.COPIED_FLASH_MS);
       });
     } else {
       prompt('Copy this URL to share:', url);

@@ -162,7 +162,8 @@
       ReproDB.fetchJSON(D.participationUrl)
         .then(function(data) {
           if (data.by_area) makeCombinedParticipationChart(data.by_area.systems, data.by_area.security);
-        });
+        })
+        .catch(function(e) { console.error('Failed to load participation data:', e); });
     }
 
     /* ===== 4. Top Institutions by Area ===== */
@@ -275,7 +276,7 @@
         makeInstBar('instChartSys', sysInst, 'Systems', SYS_COLOR);
         makeInstBar('instChartSec', secInst, 'Security', SEC_COLOR);
         makeInstScatter(sysInst, secInst);
-      });
+      }).catch(function(e) { console.error('Failed to load institution data:', e); });
     }
 
     /* ===== 5. Conference Timeline Heatmap (ECharts) ===== */

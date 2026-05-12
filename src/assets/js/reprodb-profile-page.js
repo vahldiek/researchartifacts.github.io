@@ -76,7 +76,6 @@
       papers.sort(function(a, b) { return (b.year || 0) - (a.year || 0); });
       ReproDB.createTable('#papers-table', {
         data: papers,
-        paginationSize: 25,
         columns: [
           { title: '#', formatter: 'rownum', width: 50, headerSort: false },
           { title: 'Title', field: 'title', formatter: function(cell) {
@@ -112,7 +111,6 @@
         });
         ReproDB.createTable('#ae-table-body', {
           data: entries,
-          paginationSize: 50,
           columns: [
             { title: 'Conference', field: 'conference' },
             { title: 'Year', field: 'year', sorter: 'number' },
@@ -134,7 +132,6 @@
       var arts = ad.cited_artifacts.slice().sort(function(a, b) { return (b.citations || 0) - (a.citations || 0); });
       ReproDB.createTable('#citations-table-body', {
         data: arts,
-        paginationSize: 25,
         columns: [
           { title: '#', formatter: 'rownum', width: 50, headerSort: false },
           { title: 'Artifact Title', field: 'title' },
@@ -223,7 +220,6 @@
       document.getElementById('inst-contributors-section').classList.remove('rdb-hidden');
       ReproDB.createTable('#contributors-table', {
         data: contribData,
-        paginationSize: 10,
         initialSort: [{ column: 'combined_score', dir: 'desc' }],
         columns: [
           { title: '#', formatter: 'rownum', width: 50, headerSort: false },
@@ -260,7 +256,6 @@
       document.getElementById('inst-artifacts-section').classList.remove('rdb-hidden');
       ReproDB.createTable('#artifacts-table', {
         data: artData,
-        paginationSize: 15,
         columns: [
           { title: '#', formatter: 'rownum', width: 50, headerSort: false },
           { title: 'Title', field: 'title', formatter: function(cell) {
@@ -301,7 +296,6 @@
       document.getElementById('ae-summary-text').innerHTML = s;
       ReproDB.createTable('#ae-detail-table', {
         data: aeData,
-        paginationSize: 20,
         columns: [
           { title: 'Researcher', field: 'authorName', formatter: function(cell) {
             return '<a href="' + profLink(cell.getValue()) + '">' + escHtml(cleanName(cell.getValue())) + '</a>';
@@ -408,7 +402,7 @@
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(url).then(function() {
           instShareBtn.classList.add('copied');
-          setTimeout(function() { instShareBtn.classList.remove('copied'); }, 1500);
+          setTimeout(function() { instShareBtn.classList.remove('copied'); }, ReproDB.COPIED_FLASH_MS);
         });
       } else {
         prompt('Copy link:', url);

@@ -42,7 +42,7 @@
     return origFetch.apply(this, arguments);
   };
 
-  /* ── render links once page is idle ──────────────────────────── */
+  /* ── render links once all fetches settle ────────────────────── */
   function render() {
     var urls = (window.ReproDB && ReproDB._fetchedUrls) ? ReproDB._fetchedUrls.slice() : [];
     /* also pick up any we caught via the fetch hook */
@@ -62,11 +62,24 @@
     document.getElementById('rdb-data-links').innerHTML = html;
   }
 
-  /* Wait for data fetches to finish, then render */
+  /* Wait for all tracked fetches to settle, then render */
+  function waitAndRender() {
+    var pending = (window.ReproDB && ReproDB._pendingFetches) ? ReproDB._pendingFetches : [];
+    if (pending.length) {
+      Promise.all(pending.map(function(p) {
+        return p.then(function() {}, function() {});
+      })).then(render);
+    } else {
+      /* No fetches tracked yet — brief fallback for pages that
+         don't use ReproDB.fetchJSON (shouldn't happen). */
+      setTimeout(render, 200);
+    }
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() { setTimeout(render, 800); });
+    document.addEventListener('DOMContentLoaded', waitAndRender);
   } else {
-    setTimeout(render, 800);
+    waitAndRender();
   }
 })();
 </script>
