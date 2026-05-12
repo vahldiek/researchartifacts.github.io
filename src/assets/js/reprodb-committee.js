@@ -69,7 +69,6 @@
     var lookup = {};
     var maxVal = 0;
     sizes.forEach(function(s) {
-      if (s.size < 5) return;
       lookup[s.conference + '|' + s.year] = s.size;
       if (s.size > maxVal) maxVal = s.size;
     });
@@ -119,6 +118,11 @@
         return { value: [d.x, d.y, d.v], itemStyle: { color: cellColor(d.v, d.area) }, label: { color: labelColor(d.v) } };
       });
     }
+
+    var ROW_HEIGHT = 24;
+    var extraH = (area === 'overall' ? 80 : 30) + 30;
+    var minHeight = confs.length * ROW_HEIGHT + extraH;
+    el.style.height = Math.max(minHeight, 300) + 'px';
 
     var hmChart = ReproDB.initEChart(el);
 
