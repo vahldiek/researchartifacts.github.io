@@ -20,6 +20,11 @@
 
   var escHtml = ReproDB.escHtml;
 
+  function normalizeUrl(u) {
+    if (u && !u.match(/^https?:\/\//i) && /^10\.\d{4,}\//.test(u)) return 'https://doi.org/' + u;
+    return u;
+  }
+
   function normalizeText(s) {
     return (s || '').toLowerCase().replace(/[^a-z0-9 ]/g, ' ');
   }
@@ -199,8 +204,8 @@
       entry.className = 'rdb-result-entry';
 
       // Line 1: Bold title (linked to artifact)
-      var artUrls = d.artifact_urls || [];
-      var titleLink = artUrls.length > 0 ? artUrls[0] : (d.repository_url || d.artifact_url || '');
+      var artUrls = (d.artifact_urls || []).map(normalizeUrl);
+      var titleLink = artUrls.length > 0 ? artUrls[0] : normalizeUrl(d.repository_url || d.artifact_url || '');
       var titleHtml = titleLink
         ? '<a href="' + escHtml(titleLink) + '" target="_blank" rel="noopener">' + escHtml(d.title) + '</a>'
         : escHtml(d.title);
@@ -224,12 +229,12 @@
       var links = [];
       // Paper link: prefer doi_url, fall back to paper_url
       if (d.doi_url) {
-        links.push('<a href="' + escHtml(d.doi_url) + '" target="_blank" rel="noopener">📄 Paper</a>');
+        links.push('<a href="' + escHtml(normalizeUrl(d.doi_url)) + '" target="_blank" rel="noopener">📄 Paper</a>');
       } else if (d.paper_url) {
-        links.push('<a href="' + escHtml(d.paper_url) + '" target="_blank" rel="noopener">📄 Paper</a>');
+        links.push('<a href="' + escHtml(normalizeUrl(d.paper_url)) + '" target="_blank" rel="noopener">📄 Paper</a>');
       }
       // Artifact URLs (unified list)
-      var artUrlList = d.artifact_urls || [];
+      var artUrlList = artUrls;
       if (artUrlList.length === 1) {
         var isGH = artUrlList[0].indexOf('github.com') !== -1;
         var lbl = isGH ? '💻 GitHub' : '📦 Artifact';
@@ -246,7 +251,7 @@
           }
         });
       }
-      if (d.appendix_url) links.push('<a href="' + escHtml(d.appendix_url) + '" target="_blank" rel="noopener">📋 Appendix</a>');
+      if (d.appendix_url) links.push('<a href="' + escHtml(normalizeUrl(d.appendix_url)) + '" target="_blank" rel="noopener">📋 Appendix</a>');
       var linksLine = links.length > 0 ? links.join(' &middot; ') : '';
 
       entry.innerHTML =
