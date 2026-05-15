@@ -61,7 +61,12 @@
     else if (p.category === 'systems') catTag = '<span class="category-tag cat-systems">Systems</span>';
     else if (p.category === 'security') catTag = '<span class="category-tag cat-security">Security</span>';
     document.getElementById('prof-name').innerHTML = escHtml(cleanName(p.name)) + catTag;
-    document.getElementById('prof-affil').textContent = p.affiliation || '';
+    var affilEl = document.getElementById('prof-affil');
+    if (p.affiliation) {
+      affilEl.innerHTML = '<a href="' + baseUrl + '/profile.html?type=institution&name=' + encodeURIComponent(p.affiliation) + '">' + escHtml(p.affiliation) + '</a>';
+    } else {
+      affilEl.textContent = '';
+    }
 
     // Score cards
     var c = '';
