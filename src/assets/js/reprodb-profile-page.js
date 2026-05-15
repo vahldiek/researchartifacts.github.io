@@ -24,6 +24,13 @@
     return u;
   }
 
+  function normalizeTitle(t) {
+    return t.replace(/\.+$/, '').toLowerCase()
+      .replace(/[\u2013\u2014]/g, '-')
+      .replace(/[\u2018\u2019\u2032]/g, "'")
+      .replace(/[\u201c\u201d]/g, '"');
+  }
+
   function availTag(url) {
     if (!url) return '';
     var n = url.replace(/\/+$/, '');
@@ -89,7 +96,7 @@
         columns: [
           { title: '#', formatter: 'rownum', width: 50, headerSort: false },
           { title: 'Title', field: 'title', formatter: function(cell) {
-            var d = cell.getData(), t = d.title.replace(/\.+$/, '').toLowerCase(), u = artifactUrlMap[t] || '';
+            var d = cell.getData(), t = normalizeTitle(d.title), u = artifactUrlMap[t] || '';
             return (u ? '<a href="' + escHtml(u) + '" target="_blank" rel="noopener">' + escHtml(d.title) + '</a>' : escHtml(d.title)) + availTag(u);
           }, headerSort: false },
           { title: 'Conference', field: 'conference' },
@@ -255,8 +262,8 @@
     affProfiles.forEach(function(p) {
       (p.papers || []).forEach(function(paper) {
         if (!paperMap[paper.title]) {
-          var t = paper.title.replace(/\.+$/, '');
-          paperMap[paper.title] = { title: paper.title, authors: [], conference: paper.conference, year: paper.year, badges: paper.badges, url: artifactUrlMap[t.toLowerCase()] || '' };
+          var t = normalizeTitle(paper.title);
+          paperMap[paper.title] = { title: paper.title, authors: [], conference: paper.conference, year: paper.year, badges: paper.badges, url: artifactUrlMap[t] || '' };
         }
         paperMap[paper.title].authors.push(p.name);
       });
@@ -451,11 +458,11 @@
     citedArtifactsMap = res[2] || {};
     authorRankHistory = res[3] || [];
 
-    // Build artifact URL map (lowercase keys for case-insensitive lookup)
+    // Build artifact URL map (normalizeTitle for case+unicode-insensitive lookup)
     (res[4] || []).forEach(function(a) {
       var urls = a.artifact_urls || [];
       var u = urls.length ? urls[0] : (a.artifact_url || a.repository_url || '');
-      if (a.title && u) artifactUrlMap[a.title.replace(/\.+$/, '').toLowerCase()] = normalizeUrl(u);
+      if (a.title && u) artifactUrlMap[normalizeTitle(a.title)] = normalizeUrl(u);
     });
 
     // Build paper index
