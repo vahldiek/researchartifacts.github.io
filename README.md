@@ -127,7 +127,6 @@ Apache License 2.0 — see [LICENSE](LICENSE) for details.
 - [reprodb-pipeline](https://github.com/reprodb/reprodb-pipeline) — Data collection and analysis pipeline
 - [sysartifacts.github.io](https://github.com/sysartifacts/sysartifacts.github.io) — Systems artifact evaluation results
 - [secartifacts.github.io](https://github.com/secartifacts/secartifacts.github.io) — Security artifact evaluation results
-- [secartifacts.github.io](https://github.com/secartifacts/secartifacts.github.io) - Security artifact evaluation results
 
 ## Acknowledgments
 
