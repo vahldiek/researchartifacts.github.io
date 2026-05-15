@@ -83,7 +83,9 @@ function combinedRanking() {
           tooltip: 'Affiliation',
           formatter: function(cell) {
             var d = cell.getRow().getData();
-            return escHtml((d.display_affiliation || d.affiliation || '').replace(/^_/, ''));
+            var aff = (d.display_affiliation || d.affiliation || '').replace(/^_/, '');
+            var url = baseUrl + '/profile.html?type=institution&name=' + encodeURIComponent(d.affiliation || '');
+            return '<a href="' + url + '">' + escHtml(aff) + '</a>';
           }
         },
         { title: 'S', field: 'combined_score', sorter: 'number', width: 45,
